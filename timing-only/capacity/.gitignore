@@ -1,0 +1,8 @@
+/build/*/*
+!/build/*/.gitkeep
+*.u64
+*.u64.gz
+/data/**/*.bin
+__pycache__/
+*.pyc
+.venv/
