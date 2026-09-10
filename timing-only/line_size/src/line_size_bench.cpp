@@ -40,9 +40,12 @@ struct Config {
     uint32_t seed;          // for reproducible randomization
     std::string mode;       // "random_lines", "sequential_lines", "fully_random"
     std::string outfile;    // output CSV file
+    size_t group_window;    // grouping window in bytes for random_lines/sequential_lines
+                             // traversal ordering (NOT a line-size assumption -- see build_chain)
 };
 
 bool parse_args(int argc, char** argv, Config& cfg) {
+    cfg.group_window = 0; // 0 = not set; validated below
     for (int i = 1; i < argc; ++i) {
         std::string arg = argv[i];
         if (arg == "--stride" && i+1 < argc) cfg.stride = std::stoul(argv[++i]);
@@ -53,6 +56,7 @@ bool parse_args(int argc, char** argv, Config& cfg) {
         else if (arg == "--warmup" && i+1 < argc) cfg.warmup = std::stoul(argv[++i]);
         else if (arg == "--seed" && i+1 < argc) cfg.seed = std::stoul(argv[++i]);
         else if (arg == "--mode" && i+1 < argc) cfg.mode = argv[++i];
+        else if (arg == "--group_window" && i+1 < argc) cfg.group_window = std::stoul(argv[++i]);
         else if (arg == "--output" && i+1 < argc) cfg.outfile = argv[++i];
         else { std::cerr << "Unknown or incomplete argument: " << arg << "\n"; return false; }
     }
@@ -61,13 +65,24 @@ bool parse_args(int argc, char** argv, Config& cfg) {
         return false;
     }
     if (cfg.mode.empty()) cfg.mode = "random_lines";
+    // group_window must be explicitly sized to (at least) the largest stride in your sweep
+    // (e.g. 512 if you sweep up to 512B) -- see build_chain() for why this must not be a
+    // guessed cache-line size. Refuse to silently default to something that could bias results.
+    if ((cfg.mode == "random_lines" || cfg.mode == "sequential_lines") &&
+        (cfg.group_window == 0 || cfg.group_window < cfg.stride)) {
+        std::cerr << "For --mode random_lines/sequential_lines, --group_window is required and "
+                     "must be >= --stride (size it to your largest swept stride, not a guessed "
+                     "line size).\n";
+        return false;
+    }
     return true;
 }
 
 // =============== Build the pointer chain ===============
 // We treat each node as a uintptr_t cell located at base + i * stride.
 // The chain is built as a circular linked list.
-void build_chain(uintptr_t* base, size_t num_nodes, size_t stride, uint32_t seed, const std::string& mode) {
+void build_chain(uintptr_t* base, size_t num_nodes, size_t stride, uint32_t seed, const std::string& mode,
+                  size_t group_window) {
     // Create a vector of node indices 0 .. num_nodes-1
     std::vector<size_t> indices(num_nodes);
     for (size_t i = 0; i < num_nodes; ++i) indices[i] = i;
@@ -88,11 +103,19 @@ void build_chain(uintptr_t* base, size_t num_nodes, size_t stride, uint32_t seed
         return;
     }
 
-    // For random_lines or sequential_lines, we group nodes into cache lines of 64 bytes.
-    // This is a guess; we use 64 because that's the expected line size.
-    const size_t LINE_SIZE = 64;
-    size_t nodes_per_line = LINE_SIZE / stride;
-    if (nodes_per_line == 0) nodes_per_line = 1; // if stride > line_size, each node is its own line
+    // For random_lines or sequential_lines, we group nodes into fixed-size "grouping
+    // windows" purely to control traversal order (sequential inside a window, randomized
+    // window order) and defeat stream prefetchers.
+    //
+    // IMPORTANT: this window size must NOT be the candidate cache-line size we are trying
+    // to discover -- hardcoding it (e.g. to 64) would guarantee the grouping collapses to
+    // one node per window for every stride >= that constant, which mechanically flattens
+    // the latency curve at that stride regardless of the true hardware line size. Instead
+    // we size the window to the largest stride ever tested (passed in via group_window),
+    // so every candidate stride in the sweep still gets >=2 nodes per window and the
+    // resulting plateau reflects real cache behavior, not code structure.
+    size_t nodes_per_line = group_window / stride;
+    if (nodes_per_line == 0) nodes_per_line = 1; // if stride > group_window, each node is its own group
 
     size_t num_lines = (num_nodes + nodes_per_line - 1) / nodes_per_line;
 
@@ -138,7 +161,8 @@ int main(int argc, char** argv) {
     if (num_nodes < 2) { std::cerr << "Too few nodes\n"; return 1; }
 
     // Build the pointer chain
-    build_chain(reinterpret_cast<uintptr_t*>(base), num_nodes, cfg.stride, cfg.seed, cfg.mode);
+    build_chain(reinterpret_cast<uintptr_t*>(base), num_nodes, cfg.stride, cfg.seed, cfg.mode,
+                cfg.group_window);
 
     // Find the first node (base)
     uintptr_t* p = reinterpret_cast<uintptr_t*>(base);
