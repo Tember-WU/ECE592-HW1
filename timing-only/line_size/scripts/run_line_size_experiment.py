@@ -22,6 +22,16 @@ from scipy import stats
 
 # ============ Configuration ============
 BENCH_EXE = "../src/line_size_bench"
+
+# Pinning (handout §5 "Global Measurement Requirements": pin to one logical CPU on every
+# test; §8.2 repeats this per-experiment). Chosen from `lscpu -e=CPU,CORE,SOCKET,NODE`:
+#   CPU 4 == CORE 4, SOCKET 0, NODE 0 -- no SMT sibling on this machine (CPU==CORE for all
+#   rows), so there is no sibling-interference concern to document beyond "none present."
+PINNED_CPU = 4
+PINNED_CORE = 4
+PINNED_SOCKET = 0
+PINNED_NODE = 0
+
 BASE_PARAMS = {
     "footprint": 262144,   # 256 KiB
     "batch": 1024,
@@ -29,6 +39,12 @@ BASE_PARAMS = {
     "warmup": 1000,
     "seed": 701,
 }
+
+# Grouping window (bytes) used to control traversal order in random_lines/sequential_lines
+# mode. This must be >= the largest stride tested anywhere in the sweeps below (512 B here).
+# It is NOT a guess at the real cache-line size -- see line_size_bench.cpp build_chain() for
+# why hardcoding this to the candidate answer (e.g. 64) would bias the result.
+GROUP_WINDOW = 512
 
 # Sweeps: (name, list_of_strides, alignments, mode)
 SWEEPS = {
@@ -70,6 +86,7 @@ os.makedirs(PLOT_DIR, exist_ok=True)
 def run_bench(stride, alignment, mode, seed_offset, outfile):
     seed = BASE_PARAMS["seed"] + seed_offset
     cmd = [
+        "taskset", "-c", str(PINNED_CPU),
         BENCH_EXE,
         "--stride", str(stride),
         "--alignment", str(alignment),
@@ -79,12 +96,23 @@ def run_bench(stride, alignment, mode, seed_offset, outfile):
         "--warmup", str(BASE_PARAMS["warmup"]),
         "--seed", str(seed),
         "--mode", mode,
+        "--group_window", str(GROUP_WINDOW),
         "--output", outfile,
     ]
     print(f"Running: {' '.join(cmd)}")
     subprocess.check_call(cmd)
 
 def collect_data():
+    # Record the affinity/topology info once per run for traceability (handout §12:
+    # "record CPU, core, socket/package, and NUMA node" next to the raw data).
+    manifest_path = os.path.join(RAW_DIR, "pinning_manifest.txt")
+    with open(manifest_path, "w") as f:
+        f.write(f"pinned_cpu={PINNED_CPU}\n")
+        f.write(f"pinned_core={PINNED_CORE}\n")
+        f.write(f"pinned_socket={PINNED_SOCKET}\n")
+        f.write(f"pinned_node={PINNED_NODE}\n")
+        f.write("smt_sibling=none (CPU==CORE for all rows in lscpu -e topology)\n")
+        f.write(f"affinity_method=taskset -c {PINNED_CPU}\n")
     for sweep_name, sweep in SWEEPS.items():
         for stride in sweep["strides"]:
             for alignment in sweep["alignments"]:
@@ -202,10 +230,31 @@ def plot_boxplots_representative(df_stats):
         print("Warning: Not enough data to plot boxplots. Skipping.")
         return
 
-    fig, ax = plt.subplots(figsize=(8,6))
-    bp = ax.boxplot([data[56], data[64], data[72]], labels=["56 B", "64 B", "72 B"], showmeans=True)
+    labels = ["56 B", "64 B", "72 B"]
+    series = [data[56], data[64], data[72]]
+
+    # Outlier counts (IQR rule) are computed and reported separately -- the required "number
+    # of outliers" per §5 -- rather than rendered as hundreds of overlapping circles, which
+    # crushed the box+whisker detail against the axis before.
+    outlier_counts = []
+    for vals in series:
+        q1, q3 = np.percentile(vals, [25, 75])
+        iqr = q3 - q1
+        lo, hi = q1 - 1.5 * iqr, q3 + 1.5 * iqr
+        outlier_counts.append(int(np.sum((vals < lo) | (vals > hi))))
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    # showfliers=False: outliers are excluded from the drawing only, not from the stats;
+    # median/mean/Q1/Q3/whiskers below are still computed from the full 1e6-sample dataset.
+    bp = ax.boxplot(series, labels=labels, showmeans=True, showfliers=False)
+    # Zoom the y-axis to the p1-p99 range across all three so the boxes stay readable.
+    all_vals = np.concatenate(series)
+    ax.set_ylim(np.percentile(all_vals, 1) * 0.95, np.percentile(all_vals, 99) * 1.05)
     ax.set_ylabel("Latency (TSC ticks / access)")
     ax.set_title("Latency distributions near candidate line size")
+    for i, (lab, n_out) in enumerate(zip(labels, outlier_counts), start=1):
+        ax.annotate(f"n_outliers={n_out}", xy=(i, ax.get_ylim()[1]), xytext=(0, -14),
+                    textcoords="offset points", ha="center", fontsize=8, color="gray")
     fig.savefig(os.path.join(PLOT_DIR, "boxplots_representative.pdf"), bbox_inches='tight')
     plt.close(fig)
 
