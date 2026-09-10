@@ -1,4 +1,4 @@
-"""Check migration behavior using synthetic samples and mocked collection."""
+"""Check adaptive planning and raw-data provenance using synthetic measurements."""
 import contextlib
 import copy
 import gzip
@@ -19,19 +19,22 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import run_capacity as runner
 import analyze_capacity as analyzer
+import plan_capacity as planner
 
 
 class CapacityTests(unittest.TestCase):
     def setUp(self):
-        self.config = json.loads((ROOT / 'configs/artemisia.json').read_text())
+        self.config = runner.load_config(ROOT / 'configs/artemisia.json')
 
-    def test_plan_retains_all_sweeps_and_is_deterministic(self):
+    def test_shared_first_round_is_broad_and_deterministic(self):
         original = copy.deepcopy(self.config)
         jobs = runner.plan(self.config, ['all'])
-        self.assertEqual(len(jobs), 167)
+        self.assertEqual(len(jobs), 39)
         self.assertEqual(jobs, runner.plan(self.config, ['all']))
         self.assertEqual(self.config, original)
-        self.assertEqual(sum(j['parameters']['samples'] for j in jobs), 167000000)
+        self.assertEqual(sum(j['parameters']['samples'] for j in jobs), 39000000)
+        self.assertEqual({j['parameters']['bytes'] for j in jobs}, {2**i for i in range(11, 30)})
+        self.assertEqual(list(self.config['capacity']['sweeps']), ['coarse'])
 
     def test_invalid_points_are_rejected_before_collection(self):
         for changes in ({'samples': 999999}, {'batch': 17}, {'spacing': 7},
@@ -64,8 +67,7 @@ class CapacityTests(unittest.TestCase):
     def test_multiple_collected_points_keep_cpu_and_separate_raw_from_analysis(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            for name in ('src/cache_bench.c', 'Makefile',
-                         'scripts/run_capacity.py', 'scripts/analyze_capacity.py', 'requirements.txt'):
+            for name in runner.SOURCE_FILES:
                 dest = root / name
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(ROOT / name, dest)
@@ -139,6 +141,128 @@ class CapacityTests(unittest.TestCase):
             (data / 'raw/point0.u64.gz').write_bytes(gzip.compress(b'corrupted'))
             with self.assertRaisesRegex(ValueError, 'checksum'):
                 analyzer.load_records(data, 'custom')
+
+    def test_affinity_checks_actual_permission_and_restores_inherited_mask(self):
+        with patch.object(runner.os, 'sched_getaffinity', return_value={0, 1}), \
+                patch.object(runner.os, 'sched_setaffinity') as bind:
+            runner.check_affinity(32)
+        self.assertEqual([call.args for call in bind.call_args_list], [(0, {32}), (0, {0, 1})])
+        with patch.object(runner.os, 'sched_getaffinity', return_value={0, 1}), \
+                patch.object(runner.os, 'sched_setaffinity', side_effect=OSError('restricted')):
+            with self.assertRaisesRegex(ValueError, 'Cannot bind'):
+                runner.check_affinity(32)
+
+    def test_round2_uses_measured_intervals_and_combines_controls(self):
+        records = [dict(parameters=j['parameters']) for j in runner.plan(self.config, ['coarse'])]
+        # Synthetic choices deliberately differ from the old Artemisia answer.
+        intervals = dict(l1=(16 * 1024, 32 * 1024), l2=(512 * 1024, 1024 * 1024),
+                         llc=(8 * 1024**2, 16 * 1024**2))
+        config = planner.make_plan(self.config, records, 2, intervals)
+        jobs = runner.plan(config, ['all'])
+        self.assertEqual(len(jobs), 57)
+        self.assertTrue(all(j['suite'] == 'round2' for j in jobs))
+        self.assertEqual({j['parameters']['samples'] for j in jobs}, {1000000})
+        self.assertEqual({j['parameters']['spacing'] for j in jobs}, {8, 64})
+        self.assertEqual({j['parameters']['batch'] for j in jobs}, {256, 1024})
+        self.assertEqual({j['parameters']['pages'] for j in jobs}, {'huge', 'base'})
+        for level in ('l1', 'l2'):
+            lo, hi = intervals[level]
+            primary = [j['parameters'] for j in jobs if lo <= j['parameters']['bytes'] <= hi and
+                       analyzer.family(j) == (64, 256, 'huge') and j['parameters']['mode'] == 'random']
+            self.assertEqual(len(primary), 12)  # 9 sizes plus 3 independently rebuilt rings
+            self.assertEqual(len({p['bytes'] for p in primary}), 9)
+        with self.assertRaisesRegex(ValueError, 'must be measured'):
+            planner.make_plan(self.config, records, 2, dict(intervals, l1=(17 * 1024, 32 * 1024)))
+        with self.assertRaisesRegex(ValueError, 'needs the observed'):
+            planner.make_plan(self.config, records, 2, {'llc': intervals['llc']})
+        expanded = planner.make_plan(self.config, records, 2, intervals, [1024**3])
+        self.assertEqual(len(runner.plan(expanded, ['all'])), 59)
+
+    def test_round3_only_refines_selected_interval(self):
+        records = [dict(parameters=j['parameters']) for j in runner.plan(self.config, ['coarse'])]
+        config = planner.make_plan(self.config, records, 3, dict(l1=(16 * 1024, 32 * 1024)))
+        jobs = runner.plan(config, ['all'])
+        self.assertEqual(len(jobs), 11)
+        self.assertTrue(all(16 * 1024 <= j['parameters']['bytes'] <= 32 * 1024 for j in jobs))
+        self.assertEqual(planner.interval('2MiB:2.0625MiB'), (2097152, 2162688))
+
+    def test_combining_rounds_preserves_repeat_identity_and_rejects_environment_changes(self):
+        def record(run_id, cpu=32):
+            return dict(name='same_point_name', record_id=f'{run_id}/same_point_name', run_id=run_id,
+                        suite='round2', parameters=dict(bytes=32768, seed=1),
+                        stats=dict(median=5 if run_id == 'r1' else 8),
+                        environment=dict(cpu=cpu, numa_node=1, source_sha256='same source', timer='TSC',
+                                         flags='-O0', model='synthetic', kernel='synthetic', page_size=4096))
+        with patch.object(analyzer, 'load_records', side_effect=[[record('r1')], [record('r2')]]):
+            ds = analyzer.load_study(ROOT, 'artemisia', ['r1', 'r2'])
+        points = analyzer.representative(ds)
+        self.assertEqual(points[0]['runs'], ['r1/same_point_name', 'r2/same_point_name'])
+        self.assertEqual((points[0]['repeat_low'], points[0]['repeat_high']), (5, 8))
+        with patch.object(analyzer, 'load_records', side_effect=[[record('r1')], [record('r2', cpu=4)]]):
+            with self.assertRaisesRegex(ValueError, 'Incompatible rounds'):
+                analyzer.load_study(ROOT, 'artemisia', ['r1', 'r2'])
+        with self.assertRaisesRegex(ValueError, 'same run ID'):
+            analyzer.load_study(ROOT, 'artemisia', ['r1', 'r1'])
+
+    def test_planner_cli_and_combined_analysis_from_verified_raw_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            data = root / 'data/artemisia/r1'
+            (data / 'raw').mkdir(parents=True)
+            (data / 'logs').mkdir()
+            (root / 'scripts').mkdir()
+            shutil.copyfile(ROOT / 'scripts/run_capacity.py', root / 'scripts/run_capacity.py')
+            config = copy.deepcopy(self.config)
+            sizes = [16 * 1024, 32 * 1024, 512 * 1024, 1024**2, 8 * 1024**2, 16 * 1024**2]
+            config['capacity']['sweeps']['coarse']['points'] = [dict(bytes=w) for w in sizes]
+            jobs = runner.plan(config, ['coarse'])
+            payload = np.full(1000000, 1280, dtype='<u8').tobytes()
+            for j in jobs:
+                filename = f'raw/{j["name"]}.u64.gz'
+                (data / filename).write_bytes(gzip.compress(payload))
+                d = dict(**j, machine='artemisia', elapsed_seconds=1, raw_file=filename,
+                         raw_sha256=hashlib.sha256(payload).hexdigest(),
+                         environment=dict(cpu=32, numa_node=1, source_sha256='synthetic', timer='TSC',
+                                          flags='-O0', model='synthetic', kernel='synthetic', page_size=4096))
+                (data / 'logs' / f'{j["name"]}.json').write_text(json.dumps(d))
+                j['status'] = 'complete'
+            manifest = dict(status='complete', jobs=jobs)
+            (data / 'manifest.json').write_text(json.dumps(manifest))
+            (data / 'config.json').write_text(json.dumps(config))
+            generated = root / 'configs/round2.json'
+            argv = ['plan_capacity.py', '--machine', 'artemisia', '--from-runs', 'r1', '--round', '2',
+                    '--l1', '16KiB:32KiB', '--l2', '512KiB:1MiB', '--llc', '8MiB:16MiB',
+                    '--output', str(generated)]
+            with patch.object(planner, 'ROOT', root), patch.object(sys, 'argv', argv), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                planner.main()
+                resolved = runner.load_config(generated)
+                self.assertEqual(len(runner.plan(resolved, ['all'])), 57)
+                self.assertEqual(len(resolved['planning']['evidence']), 6)
+                with self.assertRaises(FileExistsError):
+                    planner.main()
+                generated.unlink()
+                manifest['status'] = 'failed'
+                (data / 'manifest.json').write_text(json.dumps(manifest))
+                with self.assertRaisesRegex(ValueError, 'incomplete'):
+                    planner.main()
+                self.assertFalse(generated.exists())
+            manifest['status'] = 'complete'
+            (data / 'manifest.json').write_text(json.dumps(manifest))
+            # Same point filenames across separate runs must remain distinct.
+            shutil.copytree(data, root / 'data/artemisia/r2')
+            argv = ['analyze_capacity.py', '--machine', 'artemisia', '--run-id', 'r1', 'r2', '--output-id', 'combined']
+            with patch.object(analyzer, 'ROOT', root), patch.object(sys, 'argv', argv), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                analyzer.main()
+            output = root / 'results/artemisia/combined'
+            provenance = json.loads((output / 'provenance.json').read_text())
+            self.assertEqual(provenance['run_ids'], ['r1', 'r2'])
+            self.assertEqual(len(provenance['inputs']), 12)
+            points = json.loads((output / 'capacity_points.json').read_text())["(64, 256, 'huge')"]['random']
+            self.assertTrue(all(len(p['runs']) == 2 and p['runs'][0] != p['runs'][1] for p in points))
+            self.assertTrue((output / 'transitions.csv').exists())
+            self.assertTrue((output / 'figures/temporal_stability.pdf').exists())
 
 
 if __name__ == '__main__':

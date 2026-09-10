@@ -1,124 +1,135 @@
-# Cache Levels and Capacity
+# Cache levels and capacity: two main rounds and an optional third round
 
-This experiment implements **PROJECT 1.pdf §8.2: Cache levels and capacity**. The original measurement kernel is preserved; all supporting files now live in the self-contained `timing-only-V3/capacity/` directory. Paths below are relative to this directory. It measures dependent-load timing across working-set sizes so that cache-level plateaus and capacity transitions can be inferred from new data.
+This directory is the entry point for rerunning the Artemisia experiment: `/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/capacity`. It covers only cache levels and capacity, corresponding to assignment §8.2. Linux x86-64 is currently the only supported platform.
 
-**Migration map**
+`src/cache_bench.c` is identical to `timing-only-V2/cache_bench.c`. The V2 dependent-load kernel and timing method are retained, while configuration, point selection, analysis, and record keeping have been updated. Historical V2 data and reports remain in their original location. This directory does not read the old capacity conclusions or assume that there must be three cache levels.
 
-| V2 file | Location within `capacity/` | Changes |
-|---|---|---|
-| `cache_bench.c` | `src/cache_bench.c` | Byte-for-byte copy of the final V2 source; no changes to the measurement kernel. |
-| `configs/*.json` | `configs/artemisia.json` | All seven sweeps, point values, and order seeds preserved in `capacity.sweeps`; CPU 32, NUMA node 1, hostname, ISA, and point defaults made explicit. |
-| `run.py` | `scripts/run_capacity.py` | Machine config selection, paths under `data/<machine>/<run-id>/`, validation before collection, build/source snapshots, and an explicit dry run. Each collection uses a new run ID. |
-| `analyze.py` | `scripts/analyze_capacity.py` | Reads V3 raw data and writes only to the matching results directory; regenerates statistics from verified raw samples. Machine labels and layout groups come from the data. |
-| `Makefile` | `Makefile` | Builds `build/<machine>/cache_capacity` and its disassembly with the original compiler flags. |
-| `requirements.txt` | `requirements.txt` | Original NumPy and Matplotlib version pins retained. |
+## Experiment plan
 
-V2 remains unchanged. Historical results, raw data, figures, binaries, reports, `FREEZE.md`, `SHA256SUMS`, and `boundaries.json` were not copied. The V2 boundary file contains prior conclusions; a V3 run needs its own timing-based interpretation.
+| Round | Configuration source | Measurements | Configurations |
+|---|---|---|---:|
+| Round 1 | `configs/common/round1.json`, referenced by the machine config | A powers-of-two sweep from 2 KiB to 512 MiB; random and sequential chains at each of 19 sizes, plus an empty-timer control | 39 |
+| Round 2 | `configs/artemisia-round2.json`, generated from the new results | For each of L1/L2: 9 dense points, 3 repeats with a new seed, 3 sequential points, 3 compact-layout controls, and 1 longer-batch control; bounded LLC refinement with layout and base-page controls | Usually 57 |
+| Round 3, optional | `configs/artemisia-round3.json`, generated from round 2 | Only for unresolved boundaries: 5 dense points, 3 repeats with a new seed, and 3 sequential controls | 11 per selected boundary |
 
-**Machine configuration**
+The default two-round plan totals **96 configurations and 96,000,000 timed batches**. Without an LLC interval, round 2 contains 38 configurations, bringing the two-round total to 77; the report must still explain the LLC region observed in the coarse scan. Each larger footprint supplied through `--extend` adds one random and one sequential configuration. There is no automatic loop that keeps adding experiments to seek an exact LLC capacity.
 
-`configs/artemisia.json` contains `machine`, `hostname`, `isa`, `cpu`, `numa_node`, and `capacity`. The latter contains `defaults` and the following named `sweeps`:
+Every point preserves **1,000,000 timed batches**, excluding warm-up. The default batch contains 256 dependent loads; longer-batch controls use 1024. A repeat with a new seed starts a new process, reallocates memory, and rebuilds the pointer cycle. Consecutive batches are not independent experiments.
 
-| Sweep | Points | Purpose inherited from V2 |
-|---|---:|---|
-| `coarse` | 39 | Broad working-set sweep, random/sequential comparison, and an empty-timer control. |
-| `dense` | 56 | Denser candidate-boundary sampling and seed/order comparisons. |
-| `refine` | 12 | Further local refinement and repeatability checks. |
-| `controls` | 15 | Node-spacing, batch-length, and base-page controls. |
-| `llc_layout` | 8 | Large working sets with 32-byte node spacing. |
-| `llc_dense` | 18 | Larger-footprint refinement and compact 8-byte pointer layouts. |
-| `llc_final` | 19 | Additional compact-layout refinement and repeat seeds/orders. |
+Round-1 measurement parameters are shared across machines. Machine identity, CPU, and NUMA node are stored separately in `configs/<machine>.json`. Artemisia is currently configured for CPU 32 / NUMA node 1. This configuration is not a CPU reservation; machine load and page allocation must still be interpreted using the logs. To add another compatible x86-64 machine, reference the same `common/round1.json` and select follow-up intervals from that machine's new curves. Arm support is not implemented at this stage.
 
-The full plan has 167 points, each with 1,000,000 timed batches. Its uncompressed sample payload is 1,336,000,000 bytes; source snapshots, logs, and processed figures are additional. The default batch contains 256 dependent loads, and the batch-length controls use 1,024. A fixed `order_seed` shuffles points within each sweep; selected sweeps run in the requested order. `--sweep all` uses the configuration's stored sweep order.
+## Preparation and round 1
 
-To add another compatible Linux x86-64 machine, create `configs/<machine>.json`, set its identity and local CPU/NUMA placement, and choose its experimental points. The scripts create its build/data/results directories automatically. Begin with a broad scan and refine from that machine's timing evidence; Artemisia's dense sweeps are historical experimental choices, not universal cache sizes. No benchmark source edit is needed for another machine that supports the same timer and page-control interfaces.
-
-**Build, collect, and analyze**
-
-Run the commands from `timing-only-V3/capacity/`. Dependencies are Linux x86-64, GCC, make, objdump, numactl, Python 3, NumPy, and Matplotlib. The `huge` policy needs the kernel's `MADV_COLLAPSE` support and full 2 MiB transparent-huge-page backing. The C program rejects an unsupported or incomplete huge-page allocation. A separately configured `base` run explicitly requests ordinary pages and should be interpreted as such. AArch64 is not yet implemented.
+Dependencies: GCC, make, objdump, numactl, Python 3, NumPy, and Matplotlib. Python dependency versions are recorded in `requirements.txt`. The `huge` policy requires Linux support for `MADV_COLLAPSE` and actual, complete backing by 2 MiB transparent huge pages. On failure, the collector preserves the logs and stops; it does not silently switch to base pages.
 
 ```bash
+cd /home/swu35/ECE592-Project1/ECE592-HW1/timing-only/capacity
 python3 -m pip install -r requirements.txt
 make MACHINE=artemisia capacity assembly
 make check
 
-# Validate the entire config without building or measuring.
-python3 scripts/run_capacity.py --machine artemisia --sweep all --run-id capacity01 --dry-run
+# Check configuration and output paths only; do not collect data or check live page allocation/load.
+python3 scripts/run_capacity.py --machine artemisia --run-id round1 --dry-run
 
-# Collect all seven sweeps serially on Artemisia, then analyze this new run.
-python3 scripts/run_capacity.py --machine artemisia --sweep all --run-id capacity01
-python3 scripts/analyze_capacity.py --machine artemisia --run-id capacity01
+# Collect round 1; coarse is the default sweep.
+python3 scripts/run_capacity.py --machine artemisia --run-id round1
+python3 scripts/analyze_capacity.py --machine artemisia --run-id round1
 ```
 
-For a shorter starting scan, use `--sweep coarse --run-id coarse01`. Several sweeps may be selected together, for example `--sweep coarse dense controls`. Use `--config /path/to/config.json` to select an alternative config whose machine ID matches `--machine`. Settings such as CPU, node, and sample count belong in that config.
+First inspect `results/artemisia/round1/figures/capacity_s64_b256_huge.png`, the corresponding box plots, and `transitions.csv`. The latter lists median ratios and repeat ranges at adjacent working-set sizes. It assists point selection but does not automatically infer cache levels or capacities.
 
-The normal collector verifies the actual hostname, ISA, allowed CPU, and CPU/NUMA relationship. CPU 32 / node 1 are inherited run settings, not a new reservation. Confirm availability before a real run and record any SMT or shared-machine interference. Run timing jobs serially. The collector rebuilds automatically, preserves every sample, and stops on a failed point while retaining its logs. It refuses to overwrite any existing raw or processed run ID; interrupted runs stay in place, and a retry uses a new ID. There is no automatic resume or merge of separate runs.
+Before collection, the runner checks the hostname, ISA, CPU/NUMA relationship, and permission to bind to the target CPU. An inherited affinity mask can be narrower than the range of CPUs actually available for binding, so the runner briefly attempts to bind to the target CPU and then restores the original mask. The benchmark subprocess performs the actual measurement binding. Run timing jobs serially. Every collection uses a new run ID; an existing data or results directory with the same ID is never overwritten. Interrupted data are preserved. Automatic resume is not currently implemented.
 
-**Files produced by a new run**
+## Generate round 2 from round 1
 
-```text
-data/<machine>/<run-id>/
-    config.json                # Machine config used for this collection
-    manifest.json              # Resolved points, commands, completion/failure status
-    environment.json           # Model, CPU/core/socket/node, timer, build info, environment
-    commands.txt               # Exact build and per-point commands
-    build.log
-    disassembly.txt
-    cache_capacity.bin         # Executable snapshot used for every point in this run
-    source/                    # C source, Makefile, runner/analyzer, dependency pins
-    raw/<point>.u64.gz          # All batch-total timing intervals, losslessly compressed
-    logs/<point>.json          # Parameters, sample checksum, statistics, environment
-    logs/<point>.txt           # Mapping/NUMA evidence and benchmark diagnostics
+Select L1 and L2 transition intervals from the **new** random-chain curve. You may also select a broad LLC candidate interval. Both endpoints must be previously measured random points with the same primary layout, batch length, and page policy. The intervals specify where to measure next; they are not established capacity estimates.
 
-results/<machine>/<run-id>/
-    summary.csv                # Recomputed statistics for every completed point
-    capacity_points.json       # Representative runs and ranges of repeat medians
-    temporal_medians.csv       # Median of each consecutive tenth of every run
-    provenance.json            # Input hashes, analysis command, script hashes, annotations
-    figures/
-        capacity_s<spacing>_b<batch>_<pages>.pdf / .png
-        boxplots_s<spacing>_b<batch>_<pages>.pdf
-        method.pdf / .png
-        temporal_stability.pdf # When matching points have repeat runs
-        boundary_zoom.pdf / .png       # When --boundaries is supplied
-        boundary_boxplots.pdf / .png   # When --boundaries is supplied
-```
-
-Raw files are little-endian `uint64` arrays of **batch-total TSC ticks**. Divide each element by its recorded `batch` to obtain TSC ticks per dependent load. Empty-timer controls are kept in ticks per timer interval and are never divided by the batch length. The interval is not automatically a core-cycle measurement, and each batch mean is not an individual-load latency sample.
-
-```python
-import gzip
-import json
-from pathlib import Path
-import numpy as np
-
-run = Path('data/artemisia/capacity01')
-record = json.loads(next((run / 'logs').glob('*.json')).read_text())
-with gzip.open(run / record['raw_file'], 'rb') as f:
-    ticks = np.frombuffer(f.read(), dtype='<u8')
-p = record['parameters']
-latency = ticks / (1 if p['mode'] == 'empty' else p['batch'])
-```
-
-Large raw arrays and generated binaries are ignored by Git. Keep them backed up and include the required raw data in the final submission. Run metadata and source snapshots remain available to commit. A Git revision alone may not describe uncommitted source, so each collection also preserves the actual files.
-
-**Analysis and inference**
-
-Analysis checks raw checksums and sample counts and recomputes the mean, sample standard deviation, median, Q1/Q3, P05/P95/P99, extrema, Tukey outlier count/whiskers, and ten temporal medians. No samples are discarded. Each box is one run; outlier markers are hidden for readability while their counts and raw values remain available. Every completed nonempty point appears in a box-plot PDF. Empty-timer statistics remain in the summary table.
-
-Curves keep spacing, batch length, and page policy separate. The original V2 selection rule is retained when several sweeps measure the same point: prefer `dense`, `refine`, or `llc_final`, followed by `llc_dense`, then `coarse`/`llc_layout`, then `controls`; within a priority use the lowest seed, with input-name order breaking ties. Other sweep names receive the same priority as `llc_dense`. Selection never depends on which measured median looks preferable. The range of repeat medians is shown separately from each selected run's P05–P95 band.
-
-New curves carry no preset cache capacities or level count. After inspecting a run, write an optional boundary JSON file and pass it with `--boundaries`. It is a list of objects with `level`, `estimate` (bytes or `null`), `interval` (two byte values), `zoom` (two byte values), `unit` (axis divisor), `box_points` (measured byte values), `spacing`, `batch`, and `pages`. Choose actual random measurements immediately below, near, and above each observed transition. The old V2 boundary schema is compatible, but its old numbers are not automatically adopted. The analyzer records the supplied annotations in `provenance.json`.
+The following commands prompt for intervals from the new curves. Use `LOWER:UPPER`, with integer bytes or KiB, MiB, or GiB units; exact decimal values are supported. Do not simply substitute the old V2 answers.
 
 ```bash
-python3 scripts/analyze_capacity.py --machine artemisia --run-id capacity01 \
-    --boundaries results/artemisia/capacity01/boundaries.json
+read -r -p 'L1 interval from the new curve (LOWER:UPPER, with KiB/MiB units): ' CAPACITY_L1
+read -r -p 'L2 interval from the new curve (LOWER:UPPER, with KiB/MiB units): ' CAPACITY_L2
+read -r -p 'LLC candidate interval from the new curve (LOWER:UPPER, with MiB units): ' CAPACITY_LLC
+python3 scripts/plan_capacity.py --machine artemisia --from-runs round1 --round 2 \
+    --l1 "$CAPACITY_L1" --l2 "$CAPACITY_L2" --llc "$CAPACITY_LLC" \
+    --output configs/artemisia-round2.json
+
+python3 scripts/run_capacity.py --machine artemisia \
+    --config configs/artemisia-round2.json --sweep all --run-id round2 --dry-run
+python3 scripts/run_capacity.py --machine artemisia \
+    --config configs/artemisia-round2.json --sweep all --run-id round2
+
+# Plot both rounds together while preserving separate raw data for each round.
+python3 scripts/analyze_capacity.py --machine artemisia \
+    --run-id round1 round2 --output-id combined12
 ```
 
-**Preserved measurement method and limits**
+The LLC measurements comprise 5 primary-layout points, 5 compact 8 B-layout points, 3 compact-layout repeats with a new seed, 3 primary-layout sequential points, and 3 base-page points: 19 configurations in total. The L1/L2 compact-layout controls also use 8 B spacing, which is the pointer size rather than an assumed cache-line size. If the primary configuration is later changed to 8 B spacing, the alternative layout uses 32 B spacing. Base-page and huge-page results are always analyzed separately.
 
-The unchanged C program binds the CPU, allocates an aligned mapping, first-touches memory after binding, and constructs one cycle through every node. It warms at least four full traversals and at least 1,048,576 dependent loads. The output buffer is touched before timing. Each timed batch uses serialized x86 timestamps and groups of 16 mutually dependent loads in inline assembly so `-O0` does not insert stack traffic into the chain. File writing and compression happen after timing; page backing is checked before and after measurement.
+If a reasonable LLC candidate interval cannot be selected, omit `--llc` and document the limitation in the report. If the largest round-1 footprint does not sufficiently cover a clear memory-access region, add larger points with an option such as `--extend 1GiB`. Extension points must exceed the largest previously measured primary-layout footprint.
 
-Node spacing is an access-layout parameter. The swept byte count is the traversed address span, excluding rounded-up unused mapping space; it is not automatically the number of distinct cache bytes occupied. Compare the preserved 64-, 32-, and 8-byte layouts and base/huge-page controls before attributing a step to cache capacity. Consecutive batches are not independent trials. LLC behavior may support a broad effective transition rather than a unique physical capacity. This experiment does not yet implement line-size, associativity, inclusion policy, a separate latency-state experiment, or the software hit-rate estimator.
+The planner checks completion of the source runs, raw-sample checksums, measured endpoints, and the relationship between rounds. The generated config records source run IDs, raw-sample hashes, selected intervals, and the planner's hash. Use `--note` to record the reason for selecting the intervals. Generated files are never overwritten; choose another output filename when revising a plan.
 
-Build and synthetic pipeline checks validate the migration. They do not establish new cache measurements or validate the kernel on another architecture.
+## Decide whether round 3 is needed
+
+After two rounds, a capacity estimate or empirical interval can be reported if distribution changes on both sides of the L1/L2 boundaries are distinguishable, repeats with new seeds support similar boundaries, and the controls do not contradict the interpretation. If an L1/L2 interval remains too broad or repeats disagree, collect additional points only around that boundary. A broad LLC transition may remain uncertain.
+
+For example, to refine only L1, enter a narrower interval that remains unresolved after round 2:
+
+```bash
+read -r -p 'L1 interval that still needs refinement (LOWER:UPPER, with units): ' CAPACITY_L1_REFINE
+python3 scripts/plan_capacity.py --machine artemisia --from-runs round1 round2 --round 3 \
+    --l1 "$CAPACITY_L1_REFINE" --output configs/artemisia-round3.json
+python3 scripts/run_capacity.py --machine artemisia \
+    --config configs/artemisia-round3.json --sweep all --run-id round3 --dry-run
+python3 scripts/run_capacity.py --machine artemisia \
+    --config configs/artemisia-round3.json --sweep all --run-id round3
+python3 scripts/analyze_capacity.py --machine artemisia \
+    --run-id round1 round2 round3 --output-id combined123
+```
+
+Use `--l2` when only L2 needs refinement. Supply both intervals when both boundaries need refinement, for a total of 22 points. After round 3, report any remaining uncertainty according to the evidence. The plan does not guarantee an exact value for every boundary.
+
+## Data, figures, and reporting
+
+```text
+data/artemisia/<run-id>/
+  config.json                  # Fully resolved config, independent of later changes to the shared config
+  manifest.json                # Per-point commands and completion/failure status
+  environment.json             # Machine, CPU/NUMA, compiler, page policy, and related settings
+  source/                      # Snapshots of the C source, scripts, Makefile, and dependencies
+  cache_capacity.bin           # Executable used for this run
+  disassembly.txt              # Disassembly for this run
+  build.log / commands.txt
+  raw/<point>.u64.gz           # Little-endian uint64 values: total TSC ticks per batch
+  logs/<point>.json / .txt     # Per-point statistics, hashes, page backing, CPU activity, faults, and switches
+
+results/artemisia/<run-id-or-combined-id>/
+  summary.csv                  # Includes run_id; all statistics recomputed from raw samples
+  transitions.csv              # Adjacent random-footprint comparisons, not automatic inference
+  capacity_points.json         # Representative runs and ranges of individual run medians
+  temporal_medians.csv         # Medians for ten consecutive time blocks at each point
+  provenance.json              # Analysis inputs, run IDs, sample/script hashes, and manual boundaries
+  figures/
+    capacity_s<spacing>_b<batch>_<pages>.png / .pdf
+    boxplots_s<spacing>_b<batch>_<pages>.pdf
+    layout_comparison_b<batch>_<pages>.png / .pdf
+    temporal_stability.pdf
+    method.png / .pdf
+```
+
+Statistics include the mean, sample standard deviation, median, Q1/Q3, P05/P95/P99, minimum/maximum, Tukey outlier count, and ten temporal medians. No samples are removed. Each run has its own box plot. Curve values are **TSC ticks / dependent load**, computed by dividing batch-total ticks by the recorded batch length. Empty-timer measurements remain in ticks/interval. TSC ticks are not treated as validated core cycles.
+
+Combined analysis rejects runs that differ in CPU, NUMA node, C source, timing method, compiler flags, processor model, kernel, or base-page size; such runs should be analyzed separately. Different spacing, batch, and page settings always remain in separate groups. Representative runs are selected using the predetermined priority `round3 → round2 → coarse`, with ties resolved by seed and run identifier rather than measured performance. The range of all repeat medians is shown separately with error bars; repeats are not pooled into new cache plateaus. Reanalysis may update a results directory for the same inputs. Different inputs require a new output ID.
+
+For boundary zoom plots, create a JSON list based on the new data. Each entry contains `level`, `estimate` (bytes or null), `interval`, `zoom`, `unit`, `box_points`, `spacing`, `batch`, and `pages`. Every `box_points` value must be a measured random-access point. Pass the file to the analyzer with `--boundaries PATH`. The planner does not automatically write final capacity conclusions.
+
+The report should state the distinguishable cache levels, L1/L2 estimates, and supporting boundary evidence. For LLC, it may state that an effective transition region was observed but the exact physical capacity was not uniquely determined, accompanied by the actual curves and controls. Layout, TLB behavior, shared workloads, and other factors that have not been isolated should be discussed only as possible explanations, not established causes. Do not force the result to contain three levels if three plateaus cannot be distinguished.
+
+## Kernel and validation scope
+
+The C kernel is compiled with `-O0`. Its timed region uses inline assembly for a single dependency chain; the 16 unrolled loads remain mutually dependent. The benchmark binds the CPU, uses `numactl --membind` to bind memory, and first-touches that memory after CPU binding. Warm-up covers at least four full traversals and at least 1,048,576 loads. Complete huge-page backing is checked before and after measurement; base-page controls use `MADV_NOHUGEPAGE`. The output buffer is touched in advance, and raw-file output and compression occur only after measurement.
+
+`make check` uses synthetic data and mocked collection to validate configuration, raw-data checks, combined analysis, and point selection. Building and running these checks does not establish new capacity measurements. Actual page-allocation success must still be demonstrated by the measurement logs.
+
+Commit the experiment code, configurations, compressed raw samples (`.u64.gz`), per-run source and executable snapshots, build and measurement logs, environment records, statistics, figures, and analysis notes. These files preserve the evidence needed for the report and allow the distributions and plots to be regenerated. The Git ignore policy excludes rebuildable working files under `build/`, temporary uncompressed samples (`.u64`), Python caches, and local virtual environments. Keep the raw samples in the assignment submission as well as the repository.

@@ -1,22 +1,24 @@
-# Timing-only V3: Experiments
+# ECE592 HW1: Timing-only Experiments
 
-This project groups the timing-only work in [PROJECT 1.pdf](../PROJECT%201.pdf) into independent experiment directories. **All code, configurations, scripts, dependencies, tests, documentation, and outputs for Cache levels and capacity are now under [`capacity/`](capacity/README.md).** The remaining experiment directories are placeholders for later implementation.
+This project groups the timing-only work in [PROJECT 1.pdf](../../PROJECT%201.pdf) into independent experiment directories. **All code, configurations, scripts, dependencies, tests, documentation, and outputs for Cache levels and capacity are under [`capacity/`](capacity/README.md).** Capacity uses a shared first-round scan, a second round selected from each machine's new timing data, and an optional focused third round. The remaining experiment directories are placeholders for later implementation.
 
 **Directory layout**
 
 ```text
-timing-only-V3/
+ECE592-HW1/timing-only/
 ├── README.md
 ├── capacity/
 │   ├── README.md                 # Method, commands, data format, and limitations
 │   ├── Makefile
 │   ├── requirements.txt
 │   ├── configs/
-│   │   └── artemisia.json
+│   │   ├── artemisia.json
+│   │   └── common/round1.json
 │   ├── src/
 │   │   └── cache_bench.c
 │   ├── scripts/
 │   │   ├── run_capacity.py
+│   │   ├── plan_capacity.py
 │   │   └── analyze_capacity.py
 │   ├── tests/
 │   │   └── test_capacity.py
@@ -35,24 +37,24 @@ The eight machine directories under `capacity/build/`, `capacity/data/`, and `ca
 
 **Run capacity**
 
-Starting in `timing-only-V3/`:
+Starting in `ECE592-HW1/timing-only/`:
 
 ```bash
 cd capacity
 python3 -m pip install -r requirements.txt
 make MACHINE=artemisia capacity assembly
 make check
-python3 scripts/run_capacity.py --machine artemisia --sweep all --run-id capacity01 --dry-run
+python3 scripts/run_capacity.py --machine artemisia --run-id round1 --dry-run
 ```
 
-The dry run validates the seven migrated sweeps and their 167 points without collecting measurements. After confirming that CPU 32 / NUMA node 1 are appropriate for the new Artemisia run, collect and analyze from the same directory:
+The dry run validates the 39-point shared coarse scan without collecting measurements. CPU 32 / NUMA node 1 are the configured Artemisia placement; collect and analyze the new scan:
 
 ```bash
-python3 scripts/run_capacity.py --machine artemisia --sweep all --run-id capacity01
-python3 scripts/analyze_capacity.py --machine artemisia --run-id capacity01
+python3 scripts/run_capacity.py --machine artemisia --run-id round1
+python3 scripts/analyze_capacity.py --machine artemisia --run-id round1
 ```
 
-Use `--sweep coarse` for the 39-point coarse scan, or name several sweeps. Every collection needs a new run ID. See the [capacity README](capacity/README.md) for the complete workflow. Its C measurement kernel and all seven sweep definitions retain the V2 values; historical data and frozen conclusions have not been imported.
+After inspecting the new curve, use `plan_capacity.py` to generate a targeted round-2 config. Every collection needs a new run ID; the analyzer can combine multiple compatible rounds while retaining each run's distributions. See the [capacity README](capacity/README.md) for the complete two-to-three-round workflow. The C measurement kernel retains the V2 implementation; historical data and frozen conclusions have not been imported.
 
 **How to organize each experiment**
 

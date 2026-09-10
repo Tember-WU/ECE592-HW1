@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "validation_scope": "Data integrity and compatibility of combined inputs; scheduling interference remains a documented limitation.",
+  "machine": "artemisia",
+  "run_ids": [
+    "round1",
+    "round2"
+  ],
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "raw_bytes": 768000000,
+  "raw_gzip_bytes": 137719168,
+  "same_measurement_environment_verified": true,
+  "per_run_validation": [
+    "../round1/validation.json",
+    "../round2/validation.json"
+  ],
+  "quality_caveats": [
+    "Substantial involuntary context switching: 115454 total, up to 16359 per point.",
+    "LLC timing varies with layout, run, and time; no unique physical LLC capacity inferred."
+  ],
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d"
+}

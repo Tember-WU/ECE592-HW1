@@ -1,0 +1,68 @@
+[
+  {
+    "level": "L1D",
+    "estimate": 49152,
+    "interval": [
+      45056,
+      53248
+    ],
+    "zoom": [
+      32768,
+      65536
+    ],
+    "unit": 1024,
+    "box_points": [
+      45056,
+      49152,
+      53248
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximate 48 KiB capacity; 44-52 KiB is the sampled transition neighborhood, not a confidence interval."
+  },
+  {
+    "level": "L2",
+    "estimate": 2097152,
+    "interval": [
+      2097152,
+      2359296
+    ],
+    "zoom": [
+      1048576,
+      3145728
+    ],
+    "unit": 1048576,
+    "box_points": [
+      2097152,
+      2359296,
+      3145728
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 2 MiB; 2 MiB remains near the second plateau and 2.25 MiB has risen. The sampled onset bracket is not a confidence interval."
+  },
+  {
+    "level": "LLC effective transition",
+    "estimate": null,
+    "interval": [
+      33554432,
+      67108864
+    ],
+    "zoom": [
+      33554432,
+      67108864
+    ],
+    "unit": 1048576,
+    "box_points": [
+      33554432,
+      50331648,
+      67108864
+    ],
+    "spacing": 8,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Broad layout- and run-dependent transition in 32-64 MiB, with substantial scheduling interference. This interval does not bound nominal physical cache capacity."
+  }
+]

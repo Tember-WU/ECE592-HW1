@@ -1,0 +1,3 @@
+mkdir -p build/artemisia
+gcc -O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/cache_bench.c -o build/artemisia/cache_capacity
+objdump -d -Mintel build/artemisia/cache_capacity > build/artemisia/cache_capacity.dis
