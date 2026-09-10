@@ -1,0 +1,22 @@
+{
+  "functional_tests_passed": 6,
+  "x86_timed_loops": {
+    "time_batch": {
+      "loads": 16,
+      "stack_accesses": 0
+    },
+    "time_independent": {
+      "loads": 16,
+      "stack_accesses": 0
+    }
+  },
+  "aarch64_validation": "Timer/load assembly cross-compilation only; no AArch64 execution in this run",
+  "commands": [
+    "make MACHINE=artemisia all check",
+    "clang --target=aarch64-none-elf -ffreestanding -O0 -std=c11 -Wall -Wextra -Werror -c /tmp/latency-arm-compile-9660hb5d/check.c -o /tmp/latency-arm-compile-9660hb5d/check.o"
+  ],
+  "source_hashes": {
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093"
+  }
+}

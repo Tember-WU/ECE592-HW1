@@ -1,6 +1,6 @@
 # ECE592 HW1: Timing-only Experiments
 
-This project groups the timing-only work in [PROJECT 1.pdf](../../PROJECT%201.pdf) into independent experiment directories. **All code, configurations, scripts, dependencies, tests, documentation, and outputs for Cache levels and capacity are under [`capacity/`](capacity/README.md).** Capacity uses a shared first-round scan, a second round selected from each machine's new timing data, and an optional focused third round. The remaining experiment directories are placeholders for later implementation.
+This project groups the timing-only work in [PROJECT 1.pdf](../../PROJECT%201.pdf) into independent experiment directories. **Cache levels and capacity live under [`capacity/`](capacity/README.md); hit and next-level latency live under [`latency/`](latency/README.md).** Capacity uses a shared first-round scan, a second round selected from each machine's new timing data, and an optional focused third round. Latency uses seven groups with machine-specific residency and working-set pressure configurations. The remaining experiment directories are placeholders for later implementation.
 
 **Directory layout**
 
@@ -33,7 +33,7 @@ ECE592-HW1/timing-only/
 └── docs/                        # Project-wide research, freezes, and report planning
 ```
 
-The eight machine directories under `capacity/build/`, `capacity/data/`, and `capacity/results/` already exist: `artemisia`, `charnwood`, `crux`, `ookay`, `skylark`, `sunbird`, `thunderbird`, and `upgrade`. The collector creates run directories when collecting new measurements. Artemisia and Crux have supplied configurations; see the [Crux two-round results](capacity/results/crux/README.md). The current capacity kernel supports Linux x86-64; AArch64 needs its own implementation.
+The eight machine IDs are `artemisia`, `charnwood`, `crux`, `ookay`, `skylark`, `sunbird`, `thunderbird`, and `upgrade`. Both implemented experiments have configurations for these machines and Linux x86-64/AArch64 source paths. The collectors create run directories when collecting new measurements. A supplied configuration or source path is not evidence that a latency run has already been completed on that machine; consult its saved manifests.
 
 **Run capacity**
 
