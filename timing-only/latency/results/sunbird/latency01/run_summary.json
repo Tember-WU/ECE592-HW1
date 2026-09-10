@@ -1,0 +1,182 @@
+{
+  "machine": "sunbird",
+  "run_id": "latency01",
+  "started_utc": "2026-09-10T20:53:04.471496+00:00",
+  "finished_utc": "2026-09-10T20:55:53.727582+00:00",
+  "collection_seconds": 169.256086,
+  "groups": {
+    "calibration": {
+      "expected_configurations": 12,
+      "completed_configurations": 12,
+      "footprints_bytes": [
+        8192,
+        65536,
+        4194304,
+        268435456
+      ],
+      "recorded_intervals": 12000000
+    },
+    "l1_hit": {
+      "expected_configurations": 3,
+      "completed_configurations": 3,
+      "footprints_bytes": [
+        8192,
+        16384
+      ],
+      "recorded_intervals": 3000000,
+      "first_median_range": [
+        4.15625,
+        4.15625
+      ]
+    },
+    "l2_hit": {
+      "expected_configurations": 3,
+      "completed_configurations": 3,
+      "footprints_bytes": [
+        65536,
+        131072
+      ],
+      "recorded_intervals": 3000000,
+      "first_median_range": [
+        12.140625,
+        12.15625
+      ]
+    },
+    "llc_hit": {
+      "expected_configurations": 3,
+      "completed_configurations": 3,
+      "footprints_bytes": [
+        4194304,
+        8388608
+      ],
+      "recorded_intervals": 3000000,
+      "first_median_range": [
+        41.703125,
+        41.734375
+      ]
+    },
+    "l1_miss": {
+      "expected_configurations": 3,
+      "completed_configurations": 3,
+      "footprints_bytes": [
+        65536,
+        131072
+      ],
+      "recorded_intervals": 6000000,
+      "first_median_range": [
+        12.125,
+        12.171875
+      ],
+      "reread_median_range": [
+        4.15625,
+        4.4375
+      ],
+      "first_minus_reread_median_range": [
+        7.6875,
+        8.0
+      ],
+      "first_minus_previous_resident_median_range": [
+        7.96875,
+        8.015625
+      ]
+    },
+    "l2_miss": {
+      "expected_configurations": 3,
+      "completed_configurations": 3,
+      "footprints_bytes": [
+        4194304,
+        8388608
+      ],
+      "recorded_intervals": 6000000,
+      "first_median_range": [
+        41.703125,
+        41.71875
+      ],
+      "reread_median_range": [
+        4.484375,
+        4.53125
+      ],
+      "first_minus_reread_median_range": [
+        37.125,
+        37.1875
+      ],
+      "first_minus_previous_resident_median_range": [
+        29.546875,
+        29.5625
+      ]
+    },
+    "llc_miss": {
+      "expected_configurations": 3,
+      "completed_configurations": 3,
+      "footprints_bytes": [
+        268435456,
+        536870912
+      ],
+      "recorded_intervals": 6000000,
+      "first_median_range": [
+        209.796875,
+        211.0
+      ],
+      "reread_median_range": [
+        10.59375,
+        11.59375
+      ],
+      "first_minus_reread_median_range": [
+        199.171875,
+        199.375
+      ],
+      "first_minus_previous_resident_median_range": [
+        168.0625,
+        169.265625
+      ]
+    }
+  },
+  "total_timed_batches": 30000000,
+  "total_recorded_intervals": 39000000,
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 25585102,
+  "cpu": 32,
+  "numa_node": 0,
+  "smt_sibling": 8,
+  "smt_busy_percent_range": [
+    0.0,
+    0.0
+  ],
+  "existing_governor": "schedutil",
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "total": 0,
+      "minimum": 0,
+      "maximum": 0
+    },
+    "major_faults": {
+      "total": 0,
+      "minimum": 0,
+      "maximum": 0
+    },
+    "voluntary_switches": {
+      "total": 0,
+      "minimum": 0,
+      "maximum": 0
+    },
+    "involuntary_switches": {
+      "total": 41,
+      "minimum": 0,
+      "maximum": 7
+    }
+  },
+  "first_column_temporal_drift_flags": [
+    {
+      "name": "calibration__l1_independent",
+      "temporal_median_ratio": 1.25
+    },
+    {
+      "name": "calibration__timer",
+      "temporal_median_ratio": 1.3392857142857142
+    }
+  ],
+  "assembly_verified_for_collected_binary": true,
+  "capacity_basis_snapshot_hash_verified": true,
+  "formal_collection_retries": 0,
+  "specification_disclosure": "No new cache-geometry or hardware latency-specification lookup in this latency execution. Existing configuration uses saved timing capacity evidence. Cache specifications had already been seen during the earlier capacity task, so the full investigation is not a blind study."
+}

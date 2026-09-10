@@ -1,0 +1,115 @@
+{
+  "created_utc": "2026-09-10T20:53:45.647284+00:00",
+  "host": "sunbird.ece.ncsu.edu",
+  "cpu": 32,
+  "numa_node": 0,
+  "python_executable": "/home/swu35/ECE592-HW1/timing-only/latency/../capacity/.venv/bin/python",
+  "python_version": "3.9.25",
+  "numactl_executable": "/home/swu35/ECE592-HW1/timing-only/capacity/build/sunbird/deps/usr/bin/numactl",
+  "numactl_sha256": "78b354422e1b5359f3a8dab3cc3c7b3f930e5f46f5804504fc6e0cb544ad6dd8",
+  "numactl_version": "2.0.19",
+  "system_libnuma_sha256": "49ca4e1bc4a0c103989aac979b7aa930f961517105a925013d82134490dfd1d4",
+  "config_file": "configs/sunbird.json",
+  "config_sha256": "4e1e70db865011d55bc9520160a2024a17c7881517c719a99a6070a0516b8dcb",
+  "capacity_basis_file": "/home/swu35/ECE592-HW1/timing-only/capacity/results/sunbird/combined12/inference.json",
+  "capacity_basis_expected_sha256": "1073a70d07ecb247e0ac44e5ee4cb6e3c70ede412bcbe671ff03cc43b4f86e41",
+  "capacity_basis_actual_sha256": "1073a70d07ecb247e0ac44e5ee4cb6e3c70ede412bcbe671ff03cc43b4f86e41",
+  "source_identical_to_artemisia_snapshot": {
+    "src/latency_bench.c": true,
+    "src/timing.h": true
+  },
+  "selected_footprint_evidence": [
+    {
+      "run_id": "round1_retry1",
+      "bytes": "131072",
+      "seed": "59201",
+      "median": "12.15625",
+      "p05": "12.125",
+      "p95": "12.171875",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round1_retry1",
+      "bytes": "16384",
+      "seed": "59201",
+      "median": "4.15625",
+      "p05": "4.15625",
+      "p95": "4.53125",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round1_retry1",
+      "bytes": "268435456",
+      "seed": "59201",
+      "median": "209.203125",
+      "p05": "202.875",
+      "p95": "214.296875",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round1_retry1",
+      "bytes": "4194304",
+      "seed": "59201",
+      "median": "41.71875",
+      "p05": "41.015625",
+      "p95": "42.3125",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round1_retry1",
+      "bytes": "536870912",
+      "seed": "59201",
+      "median": "210.390625",
+      "p05": "204.015625",
+      "p95": "215.421875",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round1_retry1",
+      "bytes": "65536",
+      "seed": "59201",
+      "median": "12.125",
+      "p05": "12.09375",
+      "p95": "12.15625",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round1_retry1",
+      "bytes": "8192",
+      "seed": "59201",
+      "median": "4.15625",
+      "p05": "4.15625",
+      "p95": "4.53125",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round1_retry1",
+      "bytes": "8388608",
+      "seed": "59201",
+      "median": "41.71875",
+      "p05": "41.125",
+      "p95": "42.3125",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round2",
+      "bytes": "65536",
+      "seed": "59202",
+      "median": "12.140625",
+      "p05": "12.109375",
+      "p95": "12.15625",
+      "units": "TSC ticks / dependent load"
+    },
+    {
+      "run_id": "round2",
+      "bytes": "65536",
+      "seed": "59203",
+      "median": "12.15625",
+      "p05": "12.09375",
+      "p95": "12.171875",
+      "units": "TSC ticks / dependent load"
+    }
+  ],
+  "specification_disclosure": "This latency execution made no new cache-geometry queries or PMU measurements. It uses the existing Sunbird config based on saved timing capacity results. During the earlier capacity task, lscpu cache specifications had been viewed; this inherited context means the full investigation was not blind to specifications.",
+  "command_environment": "PATH=/home/swu35/ECE592-HW1/timing-only/capacity/.venv/bin:/home/swu35/ECE592-HW1/timing-only/capacity/build/sunbird/deps/usr/bin:$PATH"
+}

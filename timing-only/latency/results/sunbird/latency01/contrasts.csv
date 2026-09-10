@@ -1,0 +1,10 @@
+name,intended_destination,first_median,first_p05,first_p95,reread_median,reference_name,reference_median,difference_of_medians,paired_first_minus_reread_median,first_slower_fraction,units
+l1_miss__alternate,L2 candidate,12.15625,12.125,12.1875,4.4375,l1_hit__primary,4.15625,8.0,7.6875,0.999516,TSC ticks / dependent load
+l1_miss__primary,L2 candidate,12.171875,12.140625,12.1875,4.15625,l1_hit__primary,4.15625,8.015625,8.0,0.999504,TSC ticks / dependent load
+l1_miss__repeat,L2 candidate,12.125,12.09375,12.15625,4.4375,l1_hit__primary,4.15625,7.96875,7.828125,0.999477,TSC ticks / dependent load
+l2_miss__alternate,LLC candidate,41.71875,41.109375,42.328125,4.5,l2_hit__primary,12.15625,29.5625,37.1875,0.999993,TSC ticks / dependent load
+l2_miss__primary,LLC candidate,41.71875,41.15625,42.28125,4.484375,l2_hit__primary,12.15625,29.5625,37.1875,0.999998,TSC ticks / dependent load
+l2_miss__repeat,LLC candidate,41.703125,41.125,42.296875,4.53125,l2_hit__primary,12.15625,29.546875,37.125,0.999995,TSC ticks / dependent load
+llc_miss__alternate,Memory candidate,211.0,204.734375,215.828125,11.59375,llc_hit__primary,41.734375,169.265625,199.375,1.0,TSC ticks / dependent load
+llc_miss__primary,Memory candidate,209.796875,203.4375,215.03125,10.59375,llc_hit__primary,41.734375,168.0625,199.171875,1.0,TSC ticks / dependent load
+llc_miss__repeat,Memory candidate,209.8125,203.390625,215.171875,10.59375,llc_hit__primary,41.734375,168.078125,199.203125,1.0,TSC ticks / dependent load
