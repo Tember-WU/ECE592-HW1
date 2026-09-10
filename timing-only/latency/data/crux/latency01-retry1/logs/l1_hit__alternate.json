@@ -1,0 +1,94 @@
+{
+  "name": "l1_hit__alternate",
+  "group": "l1_hit",
+  "machine": "crux",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge",
+    "mode": "chase",
+    "bytes": 16384
+  },
+  "columns": [
+    "first"
+  ],
+  "raw_format": "little-endian uint64, row-major interleaved columns",
+  "raw_file": "raw/l1_hit__alternate.u64.gz",
+  "raw_sha256": "ee5a3870c5073efef5375b07379c93ece98dd50518c6ddc8403fe8b7553085bc",
+  "stats": {
+    "first": {
+      "n": 1000000,
+      "mean": 2.77144819140625,
+      "std": 3.0494873437349184,
+      "median": 2.7265625,
+      "q1": 2.68359375,
+      "q3": 2.734375,
+      "p05": 2.6640625,
+      "p95": 2.859375,
+      "p99": 3.0625,
+      "minimum": 2.6484375,
+      "maximum": 570.203125,
+      "whisker_low": 2.6484375,
+      "whisker_high": 2.80859375,
+      "outliers": 68454,
+      "decile_medians": [
+        2.671875,
+        2.73046875,
+        2.73046875,
+        2.73046875,
+        2.7265625,
+        2.671875,
+        2.67578125,
+        2.8515625,
+        2.73046875,
+        2.73046875
+      ]
+    }
+  },
+  "start_utc": "2026-09-10T20:52:59.837617+00:00",
+  "elapsed_seconds": 0.2619965998455882,
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/crux/latency01-retry1/latency_bench.bin",
+    "16384",
+    "64",
+    "chase",
+    "1000000",
+    "256",
+    "59221",
+    "6",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/crux/latency01-retry1/raw/l1_hit__alternate.u64"
+  ],
+  "cpu_busy_percent": {
+    "cpu0": 100.0,
+    "cpu4": 0.0,
+    "cpu3": 0.0,
+    "cpu1": 0.0,
+    "cpu6": 96.154,
+    "cpu7": 0.0,
+    "cpu2": 11.538,
+    "cpu5": 0.0
+  },
+  "cpu_frequency_before": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "800000",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4700000"
+  },
+  "cpu_frequency_after": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "4599997",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4700000"
+  },
+  "runtime_events": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 2
+  }
+}

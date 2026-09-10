@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-09-10T20:52:25.768702+00:00",
+  "machine": "crux",
+  "functional_tests_passed": 6,
+  "x86_timed_loops": {
+    "time_batch": {
+      "loads": 16,
+      "stack_accesses": 0,
+      "register_dependency_verified": true
+    },
+    "time_independent": {
+      "loads": 16,
+      "stack_accesses": 0,
+      "register_dependency_verified": true
+    }
+  },
+  "capacity_evidence_sha256_verified": "dc61993ef547fa55811bdf396ec722be8cecf91a583ef78dde4e638e65143d88",
+  "source_hashes": {
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093"
+  },
+  "commands": [
+    "make MACHINE=crux all check",
+    "objdump -d -Mintel --disassemble=time_batch build/crux/latency_bench",
+    "objdump -d -Mintel --disassemble=time_independent build/crux/latency_bench"
+  ],
+  "aarch64_validation": "Not repeated on Crux; this run executes x86-64 only.",
+  "recorded_at_utc": "2026-09-10T20:56:53.154522+00:00",
+  "run_id": "latency01-retry2",
+  "binary_sha256": "d24cebb97d9c57b6ad91784901eb69b116a7beca793fe2a43eef86e1e8e8823b",
+  "same_c_kernel_as_artemisia": true,
+  "same_point_order_as_artemisia": true
+}
