@@ -1,0 +1,4 @@
+Machine: skylark; CPU: 32; NUMA node: 1
+39 points; 39,000,000 timed batches; 312,000,000 raw bytes before compression
+Raw data: /home/swu35/ECE592-HW1/timing-only/capacity/data/skylark/round1
+Analysis output: /home/swu35/ECE592-HW1/timing-only/capacity/results/skylark/round1

@@ -1,0 +1,12 @@
+{
+  "/sys/devices/system/clocksource/clocksource0/current_clocksource": "tsc",
+  "/sys/devices/system/clocksource/clocksource0/available_clocksource": "tsc hpet acpi_pm",
+  "/sys/devices/system/cpu/cpu32/cpufreq/scaling_governor": null,
+  "/sys/devices/system/cpu/cpu32/cpufreq/scaling_driver": null,
+  "/sys/devices/system/cpu/cpu32/cpufreq/scaling_min_freq": null,
+  "/sys/devices/system/cpu/cpu32/cpufreq/scaling_max_freq": null,
+  "/sys/devices/system/cpu/smt/active": "0",
+  "/proc/sys/kernel/numa_balancing": "1",
+  "recorded_at_utc": "2026-09-10T17:01:26.167315+00:00",
+  "settings_changed": false
+}
