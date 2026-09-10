@@ -1,0 +1,59 @@
+{
+  "machine": "ookay",
+  "source_runs": [
+    "round1-retry1",
+    "round2"
+  ],
+  "excluded_failed_run_ids": [
+    "round1"
+  ],
+  "scope": "Timing-only cache levels and capacity; interpretation of two completed rounds, without specification validation.",
+  "interpreted_at_utc": "2026-09-10T17:03:42.757294+00:00",
+  "measurable_data_cache_levels": 3,
+  "capacity_estimates": [
+    {
+      "level": "L1D",
+      "approximate_bytes": 32768,
+      "sampled_onset_interval_bytes": [
+        32768,
+        36864
+      ],
+      "evidence": "64 B random, huge pages: round-2 32 KiB medians 3.90625/4.0; 36 KiB 10.671875 TSC ticks/load. At 16 KiB the coarse median is 3.671875."
+    },
+    {
+      "level": "L2",
+      "approximate_bytes": 262144,
+      "sampled_onset_interval_bytes": [
+        262144,
+        294912
+      ],
+      "evidence": "64 B random, huge pages: round-2 256 KiB medians 10.921875/10.8828125; 288 KiB 17.40625; 320 KiB 23.2265625 TSC ticks/load."
+    },
+    {
+      "level": "LLC/L3",
+      "approximate_bytes": null,
+      "nominal_physical_capacity_bytes": null,
+      "round2_planning_interval_bytes": [
+        4194304,
+        8388608
+      ],
+      "observed_effective_transition_region_bytes": [
+        5242880,
+        8388608
+      ],
+      "evidence": "64 B random, huge pages at 5/6/7/8 MiB: 33.1796875/36.7421875/113.3359375/170.5859375 ticks/load. At 8 MiB the compact 8 B layout repeat medians are 87.9375/87.9453125. Primary-layout 7 MiB temporal block medians span 99.0703125-217.234375.",
+      "interpretation": "Broad effective transition after the plateau at 5 MiB; not a bound on nominal physical capacity."
+    }
+  ],
+  "timer_unit": "TSC ticks / dependent load",
+  "cpu": 2,
+  "numa_node": 0,
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "caveats": [
+    "Other benchmarks were observed on CPUs 0/4 before both rounds; shared-cache and memory-system interference was not isolated.",
+    "LLC timing depends on layout/page policy and varies over time; no unique nominal physical LLC capacity is inferred.",
+    "Intervals are empirical sampling neighborhoods, not statistical confidence intervals or hardware specification bounds."
+  ],
+  "third_round": "Not run. The requested two rounds are complete; narrower L1/L2 empirical brackets would require separately selected refinement."
+}

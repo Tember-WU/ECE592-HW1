@@ -1,0 +1,575 @@
+{
+  "scope": "Descriptive diagnostics; the 1.2 temporal-ratio flag is not a significance test or rejection rule.",
+  "records": [
+    {
+      "name": "calibration__l1_independent",
+      "temporal_median_ratio": 1.0075757575757576,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 52.632,
+        "cpu1": 90.476,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__l1_long",
+      "temporal_median_ratio": 1.0,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 3,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 31.132,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__l1_sequential",
+      "temporal_median_ratio": 1.0,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 3.448,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__l2_independent",
+      "temporal_median_ratio": 1.0374331550802138,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 4.0,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__l2_long",
+      "temporal_median_ratio": 1.002026902524415,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 1,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 31.818,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__l2_sequential",
+      "temporal_median_ratio": 1.001310615989515,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 2.222,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__llc_independent",
+      "temporal_median_ratio": 1.019213174748399,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 29.688,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__llc_long",
+      "temporal_median_ratio": 1.009589737076083,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 4,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 39.751,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__llc_sequential",
+      "temporal_median_ratio": 1.0108161258603736,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 51.613,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__memory_independent",
+      "temporal_median_ratio": 1.0236943307281976,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 2,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 34.602,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__memory_sequential",
+      "temporal_median_ratio": 1.0479041916167664,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 30.332,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "calibration__timer",
+      "temporal_median_ratio": 1.0,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 83.333,
+        "cpu1": 20.0,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l1_hit__alternate",
+      "temporal_median_ratio": 1.0,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 6.667,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l1_hit__primary",
+      "temporal_median_ratio": 1.0,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 3.448,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l1_hit__repeat",
+      "temporal_median_ratio": 1.0,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 3.448,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l1_miss__alternate",
+      "temporal_median_ratio": 1.0714806710430342,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 28.571,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l1_miss__primary",
+      "temporal_median_ratio": 1.0021865889212829,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 54.955,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l1_miss__repeat",
+      "temporal_median_ratio": 1.001457725947522,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 32.11,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l2_hit__alternate",
+      "temporal_median_ratio": 1.0021881838074398,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 98.78,
+        "cpu1": 37.805,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l2_hit__primary",
+      "temporal_median_ratio": 1.00072939460248,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 38.75,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l2_hit__repeat",
+      "temporal_median_ratio": 1.0014587892049598,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 95.238,
+        "cpu1": 38.095,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l2_miss__alternate",
+      "temporal_median_ratio": 1.0424242424242425,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 0,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 35.075,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l2_miss__primary",
+      "temporal_median_ratio": 1.0124082046087617,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 1,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 24.514,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "l2_miss__repeat",
+      "temporal_median_ratio": 1.0165184243964422,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 1,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 39.453,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "llc_hit__alternate",
+      "temporal_median_ratio": 1.0293333333333334,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 1,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 36.709,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "llc_hit__primary",
+      "temporal_median_ratio": 1.0111364211592002,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 2,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 99.556,
+        "cpu1": 36.0,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "llc_hit__repeat",
+      "temporal_median_ratio": 1.016531027466938,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 1,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 41.778,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "llc_miss__alternate",
+      "temporal_median_ratio": 1.0051086847640989,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 5,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 99.951,
+        "cpu1": 34.617,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.099
+      }
+    },
+    {
+      "name": "llc_miss__primary",
+      "temporal_median_ratio": 1.0046036493161732,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 5,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 38.515,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    },
+    {
+      "name": "llc_miss__repeat",
+      "temporal_median_ratio": 1.0025878873428782,
+      "drift_flag": false,
+      "measurement_minor_faults": 0,
+      "major_faults": 0,
+      "voluntary_switches": 0,
+      "involuntary_switches": 6,
+      "cpu_busy_percent": {
+        "cpu0": 100.0,
+        "cpu4": 0.0,
+        "cpu2": 100.0,
+        "cpu1": 36.456,
+        "cpu5": 0.0,
+        "cpu3": 0.0,
+        "cpu7": 0.0,
+        "cpu6": 0.0
+      }
+    }
+  ]
+}

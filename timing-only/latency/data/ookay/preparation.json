@@ -1,0 +1,70 @@
+{
+  "recorded_utc": "2026-09-10T20:52:46.290463+00:00",
+  "host": "ookay.ece.ncsu.edu",
+  "cpu": 2,
+  "numa_node": 0,
+  "smt_sibling": 6,
+  "inherited_affinity": [
+    0,
+    1
+  ],
+  "three_second_cpu_busy_percent": {
+    "cpu0": 100.0,
+    "cpu1": 33.445,
+    "cpu2": 0.0,
+    "cpu3": 0.0,
+    "cpu4": 0.0,
+    "cpu5": 0.0,
+    "cpu6": 0.333,
+    "cpu7": 0.0
+  },
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "python_executable": "/home/swu35/ECE592-HW1/timing-only/latency/../capacity/.venv/bin/python",
+  "packages": [
+    "contourpy==1.3.3",
+    "cycler==0.12.1",
+    "fonttools==4.65.0",
+    "kiwisolver==1.5.1",
+    "matplotlib==3.9.4",
+    "numpy==1.26.3",
+    "packaging==26.3",
+    "pillow==12.3.0",
+    "pyparsing==3.3.2",
+    "python-dateutil==2.9.0.post0",
+    "six==1.17.0"
+  ],
+  "capacity_basis": {
+    "inference_file": "capacity/results/ookay/combined12/inference.json",
+    "inference_sha256": "e9e14be7e86b498d02a25bd8dfe2422455601aa77e66ca7cd36e9c014645693a",
+    "source_runs": [
+      "round1-retry1",
+      "round2"
+    ],
+    "selection": "Resident points inside observed plateaus; paired footprints set full-cycle reuse distance. Intended levels are timing hypotheses, not verified per-access hit classes.",
+    "spacing_note": "64 bytes is an access-layout parameter inherited from capacity, not a measured line size.",
+    "memory_note": "256/512 MiB are observed large-footprint regions. Their first-pass timings need not be pure DRAM latency.",
+    "snapshot": "capacity_basis_inference.json",
+    "snapshot_sha256": "e9e14be7e86b498d02a25bd8dfe2422455601aa77e66ca7cd36e9c014645693a"
+  },
+  "process_snapshot": [
+    "    PID PSR %CPU COMMAND",
+    "1026795   0 99.5 cache_bench",
+    " 445288   1  1.4 CrashPlanServic",
+    "1044199   1  0.6 python",
+    "1036205   1  0.4 claude",
+    "1035600   1  0.3 MainThread",
+    "1038755   0  0.2 code-645f29cc31",
+    "1035093   1  0.2 MainThread",
+    "1036037   1  0.2 MainThread",
+    "1024172   1  0.1 MainThread",
+    "   2105   1  0.1 gnome-shell",
+    "1022140   1  0.1 MainThread"
+  ],
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:            15Gi       5.2Gi       205Mi        49Mi        10Gi        10Gi\nSwap:          4.0Gi       748Mi       3.3Gi\n",
+  "functional_tests": "All six existing tests passed; see preparation-checks.log.",
+  "timing_assembly": "Verified locally; see assembly-verification.json.",
+  "limitations": [
+    "Another benchmark was observed on CPU 0; CPU binding is not an exclusive cache or memory reservation.",
+    "Footprints use saved Ookay timing-only capacity evidence; cache geometry was not queried."
+  ]
+}

@@ -1,0 +1,630 @@
+{
+  "machine": "ookay",
+  "experiment": "latency",
+  "run_id": "latency01-retry1",
+  "phase": "timing-only",
+  "started_utc": "2026-09-10T20:53:38.970022+00:00",
+  "status": "failed",
+  "command": [
+    "scripts/run_latency.py",
+    "--machine",
+    "ookay",
+    "--run-id",
+    "latency01-retry1"
+  ],
+  "jobs": [
+    {
+      "name": "l1_miss__alternate",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 131072
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin",
+        "131072",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/l1_miss__alternate.u64"
+      ],
+      "raw_sha256": "8731e51eab43b3e14d8bbcafb25411f6f26914589dd148fb06386e34875b40b6"
+    },
+    {
+      "name": "l2_miss__repeat",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin",
+        "1048576",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/l2_miss__repeat.u64"
+      ],
+      "raw_sha256": "b13199fe932c7506a55d289a0ae4fea3b5b1239f39bc56762d74477fad5639f8"
+    },
+    {
+      "name": "calibration__l1_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin",
+        "8192",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/calibration__l1_independent.u64"
+      ],
+      "raw_sha256": "7ad96a7ca2e89b8c38b63721c5faaecbc5f881708ecfed88a18cb28abe09618b"
+    },
+    {
+      "name": "calibration__l1_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin",
+        "8192",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/calibration__l1_sequential.u64"
+      ],
+      "raw_sha256": "f12cc0af2b11fcc5086a4b430389f65f06048b38775b9b75544de2c766801da0"
+    },
+    {
+      "name": "l1_hit__alternate",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin",
+        "16384",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/l1_hit__alternate.u64"
+      ],
+      "raw_sha256": "90ca231e9677711c7732fa5b5b844727319c1e80f5755383cb9a5a47944a0a9e"
+    },
+    {
+      "name": "calibration__timer",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "empty",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin",
+        "8192",
+        "64",
+        "empty",
+        "1000000",
+        "256",
+        "59221",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/calibration__timer.u64"
+      ],
+      "raw_sha256": "1e6af52a54fc617b5644776d0cba12701fe90aa3251b8c1df8f34ee8dc213f98"
+    },
+    {
+      "name": "calibration__memory_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "failed",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin",
+        "268435456",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/calibration__memory_sequential.u64"
+      ]
+    },
+    {
+      "name": "calibration__l1_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "calibration__l2_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "calibration__llc_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "llc_hit__alternate",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 2097152
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "llc_miss__alternate",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 536870912
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "llc_hit__repeat",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l2_miss__alternate",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 2097152
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "l2_hit__alternate",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 131072
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l2_hit__repeat",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l1_hit__primary",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "calibration__memory_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l2_hit__primary",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "calibration__llc_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l1_miss__repeat",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 65536
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "llc_miss__repeat",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "calibration__l2_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "calibration__l2_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "llc_miss__primary",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "l2_miss__primary",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "llc_hit__primary",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l1_hit__repeat",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l1_miss__primary",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 65536
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "calibration__llc_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    }
+  ],
+  "source_snapshot_hashes": {
+    "requirements.txt": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+    "README.md": "55aeafbcc3310d5aeca289876d2879eb9bb4189dd8e19e2f2089d6038622d3ff",
+    "Makefile": "580dba2b0895ba4a7e6e4c66f619c0ca4c76308834468f4c7ca3752da0b7ca49",
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093",
+    "scripts/common.py": "bacb509745fc0a41c8c00d5cb946e279ceb8887c465c5d263702452942908e86",
+    "scripts/run_latency.py": "36882314f22a52d2c29ae7afaf8e9654cb3ded6c968311a622ce4ea6808681ba",
+    "scripts/analyze_latency.py": "b2d9d9336612146e7a373925b6d3da371c5efd7a0e8e05b2a3d74aee4878b6bf"
+  },
+  "environment_sha256": "b955e3ff8973574d4e3e6bcac3aedd597dcb6ce9fb1cb9aa026bbf778c134660",
+  "error": "calibration__memory_sequential: MADV_COLLAPSE: full THP backing unavailable: Cannot allocate memory\n",
+  "finished_utc": "2026-09-10T20:53:46.623686+00:00"
+}

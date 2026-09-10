@@ -1,0 +1,24 @@
+{
+  "time_batch": {
+    "unrolled_loads": 16,
+    "dependent_loads_per_register": {
+      "rdi": 16
+    },
+    "no_stack_references_or_calls_between_timestamps": true,
+    "lfence_count": 3
+  },
+  "time_independent": {
+    "unrolled_loads": 16,
+    "dependent_loads_per_register": {
+      "r11": 4,
+      "r10": 4,
+      "r9": 4,
+      "rdi": 4
+    },
+    "no_stack_references_or_calls_between_timestamps": true,
+    "lfence_count": 3
+  },
+  "passed": true,
+  "binary_sha256": "d24cebb97d9c57b6ad91784901eb69b116a7beca793fe2a43eef86e1e8e8823b",
+  "disassembly_sha256": "bb979c2a3ecc3530bdf3daf083ccafda6bbf391db4875739f7634013a4ed0522"
+}

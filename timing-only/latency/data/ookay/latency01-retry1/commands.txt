@@ -1,0 +1,9 @@
+Build directory: /home/swu35/ECE592-HW1/timing-only/latency
+make -B MACHINE=ookay CC=gcc 'CFLAGS=-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer' all
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin 131072 64 paired 1000000 256 59221 2 huge /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/l1_miss__alternate.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin 1048576 64 paired 1000000 256 59222 2 huge /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/l2_miss__repeat.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin 8192 64 independent 1000000 256 59221 2 huge /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/calibration__l1_independent.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin 8192 64 sequential 1000000 256 59221 2 huge /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/calibration__l1_sequential.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin 16384 64 chase 1000000 256 59221 2 huge /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/l1_hit__alternate.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin 8192 64 empty 1000000 256 59221 2 huge /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/calibration__timer.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/latency_bench.bin 268435456 64 sequential 1000000 256 59221 2 huge /home/swu35/ECE592-HW1/timing-only/latency/data/ookay/latency01-retry1/raw/calibration__memory_sequential.u64
