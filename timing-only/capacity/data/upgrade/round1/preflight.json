@@ -1,0 +1,43 @@
+{
+  "checked_at_utc": "2026-09-10T16:52:04.667861+00:00",
+  "host": "upgrade.ece.ncsu.edu",
+  "cpu": 2,
+  "numa_node": 0,
+  "smt_sibling": 8,
+  "cpu_busy_percent": {
+    "cpu0": 100.0,
+    "cpu1": 0.664,
+    "cpu2": 0.332,
+    "cpu3": 0.0,
+    "cpu4": 0.667,
+    "cpu5": 0.333,
+    "cpu6": 0.662,
+    "cpu7": 0.993,
+    "cpu8": 0.997,
+    "cpu9": 0.0,
+    "cpu10": 0.333,
+    "cpu11": 0.662
+  },
+  "observation_seconds": 3,
+  "selection_note": "CPU 2/8 was among the quietest physical cores during initial observation; another cache_bench process was busy on CPU 0. No other processes were modified.",
+  "processes": [
+    "    PID PSR %CPU COMMAND",
+    " 115706   0 97.3 cache_bench",
+    "   1755  10  4.5 CrashPlanServic",
+    "    115   6  0.7 kswapd0",
+    " 115431   7  0.7 claude",
+    " 118579   3  0.6 python3",
+    " 113770   5  0.3 MainThread",
+    " 115267   6  0.3 MainThread",
+    " 113321   5  0.2 MainThread",
+    " 116051   7  0.2 MainThread",
+    "   1144   4  0.1 systemd-oomd",
+    "   1258   8  0.1 polkitd",
+    "  60287   4  0.1 sssd_be",
+    "  60303   1  0.1 sssd_nss",
+    " 112266   1  0.1 MainThread",
+    " 113287   5  0.1 code-645f29cc31"
+  ],
+  "numactl_source": "Ubuntu jammy numactl 2.0.14-3ubuntu2 amd64, extracted locally under .venv/native/root",
+  "python": "3.10.12"
+}

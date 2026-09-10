@@ -1,0 +1,3 @@
+mkdir -p build/upgrade
+gcc -O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/cache_bench.c -o build/upgrade/cache_capacity
+objdump -d -Mintel build/upgrade/cache_capacity > build/upgrade/cache_capacity.dis

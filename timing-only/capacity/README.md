@@ -4,6 +4,8 @@ This directory is the entry point for rerunning the Artemisia experiment: `/home
 
 `src/cache_bench.c` is identical to `timing-only-V2/cache_bench.c`. The V2 dependent-load kernel and timing method are retained, while configuration, point selection, analysis, and record keeping have been updated. Historical V2 data and reports remain in their original location. This directory does not read the old capacity conclusions or assume that there must be three cache levels.
 
+Upgrade uses `configs/upgrade.json` (CPU 2 / NUMA node 0). Its run IDs, local dependency setup, results and reproduction commands are recorded in [the Upgrade experiment record](results/upgrade/README.md).
+
 ## Experiment plan
 
 | Round | Configuration source | Measurements | Configurations |

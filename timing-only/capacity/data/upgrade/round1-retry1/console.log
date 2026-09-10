@@ -1,0 +1,22 @@
+Machine: upgrade; CPU: 2; NUMA node: 0
+39 points; 39,000,000 timed batches; 312,000,000 raw bytes before compression
+Raw data: /home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1
+Analysis output: /home/swu35/ECE592-HW1/timing-only/capacity/results/upgrade/round1-retry1
+[1/39] running coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000
+  median=6.5469, p05–p95=6.4023–6.7305, elapsed=0.6s; saved all 1,000,000 samples
+[2/39] running coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000
+  median=6.5273, p05–p95=6.4141–6.7227, elapsed=0.6s; saved all 1,000,000 samples
+[3/39] running coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000
+  median=3.0391, p05–p95=3.0234–3.0469, elapsed=0.3s; saved all 1,000,000 samples
+[4/39] running coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000
+  median=6.5078, p05–p95=6.4102–6.6133, elapsed=0.6s; saved all 1,000,000 samples
+[5/39] running coarse_w536870912_s64_random_b256_seed59201_huge_n1000000
+Traceback (most recent call last):
+  File "/home/swu35/ECE592-HW1/timing-only/capacity/scripts/run_capacity.py", line 276, in <module>
+    main()
+  File "/home/swu35/ECE592-HW1/timing-only/capacity/scripts/run_capacity.py", line 191, in main
+    collect(config, jobs, out, manifest)
+  File "/home/swu35/ECE592-HW1/timing-only/capacity/scripts/run_capacity.py", line 249, in collect
+    raise RuntimeError(process.stderr)
+RuntimeError: MADV_COLLAPSE: Cannot allocate memory
+

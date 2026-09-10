@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-09-10T16:53:48.675613+00:00",
+  "purpose": "Bounded page-allocation diagnostic only; no timing samples. Retry collapse on one 512 MiB scratch mapping, then release it. No system settings changed.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": -1,
+      "errno": 12,
+      "error": "Cannot allocate memory",
+      "huge_bytes": 515899392,
+      "elapsed_seconds": 0.0017797399923438206
+    },
+    {
+      "attempt": 2,
+      "result": -1,
+      "errno": 12,
+      "error": "Cannot allocate memory",
+      "huge_bytes": 515899392,
+      "elapsed_seconds": 0.0015458429988939315
+    },
+    {
+      "attempt": 3,
+      "result": -1,
+      "errno": 12,
+      "error": "Cannot allocate memory",
+      "huge_bytes": 515899392,
+      "elapsed_seconds": 0.0013338069984456524
+    }
+  ],
+  "finished_utc": "2026-09-10T16:53:48.747660+00:00"
+}
