@@ -1,0 +1,52 @@
+{
+  "machine": "crux",
+  "run_id": "round1",
+  "observed_at_utc": "2026-09-10T16:52:29.133741+00:00",
+  "observation_seconds": 3,
+  "cpu": 6,
+  "numa_node": 0,
+  "cpu_busy_percent": {
+    "cpu0": 100.0,
+    "cpu1": 0.334,
+    "cpu2": 0.333,
+    "cpu3": 100.0,
+    "cpu4": 0.664,
+    "cpu5": 1.0,
+    "cpu6": 0.667,
+    "cpu7": 1.338
+  },
+  "inherited_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "dependencies": {
+    "numpy": "1.26.3",
+    "matplotlib": "3.9.4"
+  },
+  "processes": [
+    "    PID USER     PSR %CPU COMMAND",
+    " 951245 rsivaku3   3 99.9 cache_bench",
+    " 853509 hbsu       0 97.8 cache_bench",
+    " 959651 swu35      4 18.1 python",
+    " 952066 swu35      7  0.3 MainThread",
+    " 951651 swu35      2  0.3 MainThread",
+    " 954138 rqashou    6  0.1 MainThread",
+    "   2068 gdm        6  0.1 gnome-shell",
+    " 951633 swu35      7  0.1 code-645f29cc31",
+    " 952037 swu35      1  0.0 code-645f29cc31",
+    " 870934 rsivaku3   2  0.0 MainThread",
+    " 952239 swu35      2  0.0 codex",
+    " 952078 swu35      7  0.0 MainThread",
+    " 950046 rqashou    7  0.0 MainThread",
+    " 958856 root       6  0.0 kworker/6:2-i915-unordered",
+    "   1317 syslog     7  0.0 rsyslogd"
+  ],
+  "note": "CPU6 selected after a prior 3-second observation found it idle. Other users have active cache_bench processes. Initial environment inspection used unfiltered lscpu and exposed OS cache-size fields before the protocol was read; follow-up intervals and conclusions must cite the new timing data, so this run is not a blind cache-specification inference. No PMU measurements were taken."
+}

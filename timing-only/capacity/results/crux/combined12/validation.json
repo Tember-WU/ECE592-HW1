@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "errors": [],
+  "machine": "crux",
+  "source_runs": [
+    "round1-retry1",
+    "round2"
+  ],
+  "checked_at_utc": "2026-09-10T17:03:09.093747+00:00",
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "raw_bytes": 768000000,
+  "raw_gzip_bytes": 141486652,
+  "collection_wall_seconds": 360.67129,
+  "run_validation_files": [
+    "../round1-retry1/validation.json",
+    "../round2/validation.json"
+  ],
+  "runtime_event_totals": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 1037
+  },
+  "checks": [
+    "Complete manifests and matching single-run audits",
+    "Combined analyzer verified raw files and compatible environments",
+    "Combined inputs exactly equal the union of the two complete runs",
+    "All 96 million batches represented; no failed-run records included",
+    "Manual boundaries match analysis provenance"
+  ],
+  "excluded_runs": {
+    "round1": "Incomplete THP-allocation attempt; retained separately"
+  },
+  "limitation": "Integrity checks do not remove shared-machine interference or the disclosed initial cache-specification exposure."
+}

@@ -1,0 +1,467 @@
+{
+  "machine": "crux",
+  "hostname": "crux",
+  "isa": "x86_64",
+  "cpu": 6,
+  "numa_node": 0,
+  "capacity": {
+    "defaults": {
+      "samples": 1000000,
+      "batch": 256,
+      "spacing": 64,
+      "seed": 59201,
+      "pages": "huge",
+      "mode": "random"
+    },
+    "sweeps": {
+      "round2": {
+        "order_seed": 594,
+        "points": [
+          {
+            "bytes": 32768,
+            "seed": 59202
+          },
+          {
+            "bytes": 36864,
+            "seed": 59202
+          },
+          {
+            "bytes": 40960,
+            "seed": 59202
+          },
+          {
+            "bytes": 45056,
+            "seed": 59202
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202
+          },
+          {
+            "bytes": 53248,
+            "seed": 59202
+          },
+          {
+            "bytes": 57344,
+            "seed": 59202
+          },
+          {
+            "bytes": 61440,
+            "seed": 59202
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202
+          },
+          {
+            "bytes": 32768,
+            "seed": 59203
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 49152,
+            "seed": 59203
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 65536,
+            "seed": 59203
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "batch": 1024
+          },
+          {
+            "bytes": 262144,
+            "seed": 59202
+          },
+          {
+            "bytes": 294912,
+            "seed": 59202
+          },
+          {
+            "bytes": 327680,
+            "seed": 59202
+          },
+          {
+            "bytes": 360448,
+            "seed": 59202
+          },
+          {
+            "bytes": 393216,
+            "seed": 59202
+          },
+          {
+            "bytes": 425984,
+            "seed": 59202
+          },
+          {
+            "bytes": 458752,
+            "seed": 59202
+          },
+          {
+            "bytes": 491520,
+            "seed": 59202
+          },
+          {
+            "bytes": 524288,
+            "seed": 59202
+          },
+          {
+            "bytes": 262144,
+            "seed": 59203
+          },
+          {
+            "bytes": 262144,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 262144,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 393216,
+            "seed": 59203
+          },
+          {
+            "bytes": 393216,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 393216,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 524288,
+            "seed": 59203
+          },
+          {
+            "bytes": 524288,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 524288,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 262144,
+            "seed": 59202,
+            "batch": 1024
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202
+          },
+          {
+            "bytes": 7340032,
+            "seed": 59202
+          },
+          {
+            "bytes": 10485760,
+            "seed": 59202
+          },
+          {
+            "bytes": 13631488,
+            "seed": 59202
+          },
+          {
+            "bytes": 16777216,
+            "seed": 59202
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 7340032,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 10485760,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 13631488,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 16777216,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202,
+            "pages": "base"
+          },
+          {
+            "bytes": 10485760,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 10485760,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 10485760,
+            "seed": 59202,
+            "pages": "base"
+          },
+          {
+            "bytes": 16777216,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 16777216,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 16777216,
+            "seed": 59202,
+            "pages": "base"
+          }
+        ]
+      }
+    }
+  },
+  "planning": {
+    "round": 2,
+    "intervals_bytes": {
+      "l1": [
+        32768,
+        65536
+      ],
+      "l2": [
+        262144,
+        524288
+      ],
+      "llc": [
+        4194304,
+        16777216
+      ]
+    },
+    "extension_bytes": [],
+    "interpretation": "Intervals select measurements, not final capacity estimates.",
+    "created_utc": "2026-09-10T16:56:47.696535+00:00",
+    "note": "Crux round1-retry1 primary random medians (TSC ticks/load): 32 KiB 2.8672 to 64 KiB 7.9609; 256 KiB 8.1133 to 512 KiB 22.9023; 4 MiB 27.9297, 8 MiB 99.3008, 16 MiB 172.3633. Select bounded refinement of the two early transitions and a broad LLC effective transition across 4-16 MiB. CPU0 and CPU3 were fully busy throughout collection; physical LLC capacity is not inferred from these endpoints. Initial lscpu inspection exposed OS cache sizes, as disclosed in the preflight record; endpoints are justified by the measured timing curve. Failed run round1 is excluded.",
+    "source_runs": [
+      {
+        "run_id": "round1-retry1",
+        "config_sha256": "79916c6c10597f851b964567e1896a2daf9453599d4272b84e6cc2d4f67de98a",
+        "manifest_sha256": "702051138436a71faf374bf674b8fabaa33ba60dd265b1f8c42a3c7efb215ab8"
+      }
+    ],
+    "planner_sha256": "3723f74a3d97063c8af6a9311c290de97807680d4d817f4b898e7f583c67339a",
+    "evidence": [
+      {
+        "record_id": "round1-retry1/coarse_w1048576_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "85bd4ded409fc1b3470085a2b7b997972e67fb14bb1d003ed64583a3d4fc672a"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "bbf7b966068f57484bbe16c3b773b4645c54701d8c4d1a70e55d9404ee686b87"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w131072_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "1125ff96dcd4ccc0a564219f37e857064a20c67957b7cd5e605b85732f53ddf3"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w131072_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "356e0a1c7c00925cc15fa7db8e3d9aa831dba06d8793fba7e28732a24f32182d"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w134217728_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "1ba0654c53af5ad55e1534f68e01b3c0768f0d25bb54b3f1e9a4f8aad8938b02"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w134217728_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "472a3a2676d89e0d01e2f195df38d3742f7bccbb830a05c99e70404ec84d74e4"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w16384_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "bdfc39ee9e10f3f252a9ee9805006e39bb7b1608b12a8dc7604b453d10ee7659"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w16384_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "6717494fa36a67110da90b73bf925dca37804f1b978ed0a1d3611484cd8c12b3"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w16777216_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "edf6dc65ede2203631b742b762c42d71328b3b745e421f6f7a3a271a0bdf8173"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w16777216_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "ea16aa4897acf41e46bf09c9e8eb873afad122d2455b995852d01b604943197b"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w2048_s64_empty_b256_seed59201_huge_n1000000",
+        "raw_sha256": "9e96dfa08d2dbf9b9349e31f1c21e09d24cae5d7b1fd4cde589e356e988f51f4"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w2048_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "9202622a513ce493af1a63cd452bb2502d1ae15a9abc3576e4155cfef3651b6d"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w2048_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "38564a6789513bba3d8eeca82ac92f25f98dfea4b87dd202150a172ea7130e79"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w2097152_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "022e5943fe9df74cfb9fcfbf8684e4262213c8ac9ac01d360b826deb77b725ea"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "5b43c2b3b4a90d4cbbfaec1210a38059a65e9b732e062245b7ace8dc5c359dd3"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w262144_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "34b55775494458f0d7e6ba3fd02d972802f1a94fef94d510c64b3dc4c992a466"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w262144_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "ff3065e4f9cbae6fd157f4951c10c9a455fa727f47d761366609e0138c05dfc7"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w268435456_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "6154646f42a30d2794a93a191cd90b6a6a3cff082fba36a021a248bb9f97c6b3"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w268435456_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "80d407948ce13dcce622006e3d387dad622d5d7a790f3e97cba65b13be0d1019"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w32768_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "d0b2acfc2d1fc09147440197ddffb6dfd10f13cf37888d85f07ed7a5e6534e98"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w32768_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "5464a56901d5a461f15efb9ca70bd8a571140293a12923525c471e0138cc098e"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w33554432_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "cfba0dd28c955cd443293f1c6dd8b8c84442433d83eea5d46a5a460b6c337961"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w33554432_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "5e2477b8ec854c5f461ae30a24b41428722dbef6a590c13086e42b19998df190"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w4096_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "4187a93b8c15f9021cd138bcf11efa5bebef857e00406874b660e120f42cb1e0"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w4096_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "4d60f80c13286eb920d9caec88d40f8476a938673a98cf842e1fb54ebdf6a99d"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w4194304_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "79e60b68ff46680d6d5335be6d47084ba22609d20500007c1fa59ab705afab0f"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w4194304_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "0dc2fcf20414d8e118bac63751880662d62d19bc3d13524c2551233b3853c701"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w524288_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "5eeca10e186664fdac3d463ac424466d2aad7c041e3ecc0f6308514191eed5c8"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "8fd60b870441dc62108957f0e707dca0b2a87246483887d288f8b0bee34703ae"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w536870912_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "3d75e6809148076592774e5fa479918a3185629483550675f14d3aa001ed4f35"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w536870912_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "da99c044ff83ea3aaae311231e203a96bf0cf909b2c259d0a4b99f43ae28455c"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w65536_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "2d222d10763e240f28ee644044c4b34e4a4bb580ce69a500e4ca59f47aa31676"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w65536_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "12d560635f9ada73413c3dc2a145bf535a3c2c4212c4ed397e2c9508e2e30528"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w67108864_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "aaf0f0bc9129b3be4beeab07fd3195528f806ac4363a4b186f529c5963efb271"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w67108864_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "b0a12c4ae4b679701c2ab07cbfd10db71812d8e990609be4f30010fbc2a8eead"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w8192_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "df158175160b761c13a6ea2539227e5e76d8cd5a05b6d083634e6dfcd483e648"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "431e390923c2e433f3a26d1735a777eb9156b39aaee54b37e0b90e2fc4c30554"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w8388608_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "cee67e4de84740a8c037e827952b510f9a1496889deea11fac28893d43485322"
+      },
+      {
+        "record_id": "round1-retry1/coarse_w8388608_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "0d4f6ebc638abee931bd4e367e348059ab1a63c7c52ddcbbf277d0d6c570284b"
+      }
+    ]
+  }
+}

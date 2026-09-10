@@ -1,0 +1,38 @@
+[
+  {
+    "level": "L1D",
+    "estimate": 32768,
+    "interval": [32768, 36864],
+    "zoom": [16384, 65536],
+    "unit": 1024,
+    "box_points": [16384, 32768, 36864],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 32 KiB from the timing curve. Random medians at 32 KiB are 2.8672-2.9141, and 36 KiB rises to 7.9297 TSC ticks/load. The sampled transition bracket is not a confidence interval."
+  },
+  {
+    "level": "L2",
+    "estimate": 262144,
+    "interval": [262144, 294912],
+    "zoom": [131072, 524288],
+    "unit": 1024,
+    "box_points": [131072, 262144, 294912],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 256 KiB from the timing curve. Random medians at 256 KiB are 8.0586-8.1133, and 288 KiB rises to 13.8164 TSC ticks/load. The sampled onset bracket is not a confidence interval."
+  },
+  {
+    "level": "LLC effective transition",
+    "estimate": null,
+    "interval": [4194304, 16777216],
+    "zoom": [2097152, 33554432],
+    "unit": 1048576,
+    "box_points": [4194304, 7340032, 16777216],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Broad observed transition across 4-16 MiB under shared-machine load, with a sampled onset between 4 and 7 MiB. Compact layout and page-policy controls differ. This region does not bound nominal physical LLC capacity."
+  }
+]

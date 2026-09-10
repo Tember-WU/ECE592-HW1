@@ -33,7 +33,7 @@ ECE592-HW1/timing-only/
 └── docs/                        # Project-wide research, freezes, and report planning
 ```
 
-The eight machine directories under `capacity/build/`, `capacity/data/`, and `capacity/results/` already exist: `artemisia`, `charnwood`, `crux`, `ookay`, `skylark`, `sunbird`, `thunderbird`, and `upgrade`. The collector creates run directories when collecting new measurements. Only Artemisia has a supplied configuration. The current capacity kernel supports Linux x86-64; AArch64 needs its own implementation.
+The eight machine directories under `capacity/build/`, `capacity/data/`, and `capacity/results/` already exist: `artemisia`, `charnwood`, `crux`, `ookay`, `skylark`, `sunbird`, `thunderbird`, and `upgrade`. The collector creates run directories when collecting new measurements. Artemisia and Crux have supplied configurations; see the [Crux two-round results](capacity/results/crux/README.md). The current capacity kernel supports Linux x86-64; AArch64 needs its own implementation.
 
 **Run capacity**
 

@@ -2,6 +2,12 @@
 
 This directory is the entry point for rerunning the Artemisia experiment: `/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/capacity`. It covers only cache levels and capacity, corresponding to assignment §8.2. Linux x86-64 is currently the only supported platform.
 
+Crux has also completed the two-round workflow using `configs/crux.json`
+(CPU 6 / NUMA node 0). Its complete runs are `round1-retry1` and `round2`;
+the initial incomplete `round1` is preserved separately. See the
+[Crux run inventory and reproduction commands](results/crux/README.md) and
+[combined interpretation](results/crux/combined12/RUN_NOTES.md).
+
 `src/cache_bench.c` is identical to `timing-only-V2/cache_bench.c`. The V2 dependent-load kernel and timing method are retained, while configuration, point selection, analysis, and record keeping have been updated. Historical V2 data and reports remain in their original location. This directory does not read the old capacity conclusions or assume that there must be three cache levels.
 
 Upgrade uses `configs/upgrade.json` (CPU 2 / NUMA node 0). Its run IDs, local dependency setup, results and reproduction commands are recorded in [the Upgrade experiment record](results/upgrade/README.md).
@@ -18,7 +24,7 @@ The default two-round plan totals **96 configurations and 96,000,000 timed batch
 
 Every point preserves **1,000,000 timed batches**, excluding warm-up. The default batch contains 256 dependent loads; longer-batch controls use 1024. A repeat with a new seed starts a new process, reallocates memory, and rebuilds the pointer cycle. Consecutive batches are not independent experiments.
 
-Round-1 measurement parameters are shared across machines. Machine identity, CPU, and NUMA node are stored separately in `configs/<machine>.json`. Artemisia is currently configured for CPU 32 / NUMA node 1. This configuration is not a CPU reservation; machine load and page allocation must still be interpreted using the logs. To add another compatible x86-64 machine, reference the same `common/round1.json` and select follow-up intervals from that machine's new curves. Arm support is not implemented at this stage.
+Round-1 measurement parameters are shared across machines. Machine identity, CPU, and NUMA node are stored separately in `configs/<machine>.json`. Artemisia is configured for CPU 32 / NUMA node 1, and Crux for CPU 6 / NUMA node 0. These configurations are not CPU reservations; machine load and page allocation must still be interpreted using the logs. To add another compatible x86-64 machine, reference the same `common/round1.json` and select follow-up intervals from that machine's new curves. Arm support is not implemented at this stage.
 
 ## Preparation and round 1
 
