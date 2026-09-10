@@ -1,0 +1,53 @@
+{
+  "utc": "2026-09-10T16:57:07.599197+00:00",
+  "cpu": 3,
+  "numa_node": 0,
+  "smt_sibling": 7,
+  "observation_seconds": 3,
+  "cpu_busy_percent": {
+    "cpu0": 100.0,
+    "cpu1": 1.689,
+    "cpu2": 1.0,
+    "cpu3": 0.669,
+    "cpu4": 100.0,
+    "cpu5": 1.333,
+    "cpu6": 100.0,
+    "cpu7": 0.669
+  },
+  "loadavg": "4.66 4.64 4.58 5/1547 1164145",
+  "processes": [
+    "    PID USER     PSR %CPU COMMAND",
+    "1156442 506694     4 99.9 cache_levels_si",
+    "1089233 326169     6 98.3 cache_latency_s",
+    "1121977 374601     0 93.7 cache_bench",
+    "1164001 370129     6 50.0 cache_bench",
+    "   1886 root       1  1.6 CrashPlanServic",
+    "1164142 476811     5  1.2 python",
+    "1158834 476811     7  0.6 MainThread",
+    "1158398 476811     3  0.4 MainThread",
+    "1160351 371080     1  0.4 MainThread",
+    "1159902 506694     1  0.3 MainThread",
+    "1159015 476811     2  0.2 codex",
+    "1160273 371080     2  0.1 MainThread",
+    "1158379 476811     3  0.1 code-645f29cc31",
+    "1158799 476811     2  0.1 code-645f29cc31",
+    "1158846 476811     1  0.1 MainThread",
+    "1160357 371080     3  0.1 MainThread",
+    "1155597 506694     1  0.1 MainThread",
+    "1105075 473180     5  0.1 MainThread",
+    "   2173 gdm        3  0.0 gnome-shell"
+  ],
+  "command": [
+    "/home/swu35/ECE592-HW1/timing-only/capacity/.venv/bin/python",
+    "scripts/run_capacity.py",
+    "--machine",
+    "charnwood",
+    "--config",
+    "configs/charnwood-round2.json",
+    "--sweep",
+    "all",
+    "--run-id",
+    "round2"
+  ],
+  "python": "Python 3.12.3"
+}

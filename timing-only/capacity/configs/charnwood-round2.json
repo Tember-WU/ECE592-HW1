@@ -1,0 +1,467 @@
+{
+  "machine": "charnwood",
+  "hostname": "charnwood",
+  "isa": "x86_64",
+  "cpu": 3,
+  "numa_node": 0,
+  "capacity": {
+    "defaults": {
+      "samples": 1000000,
+      "batch": 256,
+      "spacing": 64,
+      "seed": 59201,
+      "pages": "huge",
+      "mode": "random"
+    },
+    "sweeps": {
+      "round2": {
+        "order_seed": 594,
+        "points": [
+          {
+            "bytes": 32768,
+            "seed": 59202
+          },
+          {
+            "bytes": 36864,
+            "seed": 59202
+          },
+          {
+            "bytes": 40960,
+            "seed": 59202
+          },
+          {
+            "bytes": 45056,
+            "seed": 59202
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202
+          },
+          {
+            "bytes": 53248,
+            "seed": 59202
+          },
+          {
+            "bytes": 57344,
+            "seed": 59202
+          },
+          {
+            "bytes": 61440,
+            "seed": 59202
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202
+          },
+          {
+            "bytes": 32768,
+            "seed": 59203
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 49152,
+            "seed": 59203
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 65536,
+            "seed": 59203
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "batch": 1024
+          },
+          {
+            "bytes": 262144,
+            "seed": 59202
+          },
+          {
+            "bytes": 294912,
+            "seed": 59202
+          },
+          {
+            "bytes": 327680,
+            "seed": 59202
+          },
+          {
+            "bytes": 360448,
+            "seed": 59202
+          },
+          {
+            "bytes": 393216,
+            "seed": 59202
+          },
+          {
+            "bytes": 425984,
+            "seed": 59202
+          },
+          {
+            "bytes": 458752,
+            "seed": 59202
+          },
+          {
+            "bytes": 491520,
+            "seed": 59202
+          },
+          {
+            "bytes": 524288,
+            "seed": 59202
+          },
+          {
+            "bytes": 262144,
+            "seed": 59203
+          },
+          {
+            "bytes": 262144,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 262144,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 393216,
+            "seed": 59203
+          },
+          {
+            "bytes": 393216,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 393216,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 524288,
+            "seed": 59203
+          },
+          {
+            "bytes": 524288,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 524288,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 262144,
+            "seed": 59202,
+            "batch": 1024
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202
+          },
+          {
+            "bytes": 5242880,
+            "seed": 59202
+          },
+          {
+            "bytes": 6291456,
+            "seed": 59202
+          },
+          {
+            "bytes": 7340032,
+            "seed": 59202
+          },
+          {
+            "bytes": 8388608,
+            "seed": 59202
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 5242880,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 6291456,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 7340032,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 8388608,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202,
+            "pages": "base"
+          },
+          {
+            "bytes": 6291456,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 6291456,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 6291456,
+            "seed": 59202,
+            "pages": "base"
+          },
+          {
+            "bytes": 8388608,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 8388608,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 8388608,
+            "seed": 59202,
+            "pages": "base"
+          }
+        ]
+      }
+    }
+  },
+  "planning": {
+    "round": 2,
+    "intervals_bytes": {
+      "l1": [
+        32768,
+        65536
+      ],
+      "l2": [
+        262144,
+        524288
+      ],
+      "llc": [
+        4194304,
+        8388608
+      ]
+    },
+    "extension_bytes": [],
+    "interpretation": "Intervals select measurements, not final capacity estimates.",
+    "created_utc": "2026-09-10T16:56:45.519957+00:00",
+    "note": "Selected from charnwood round1 random-chain medians only: 32-64 KiB rises from 6.7734 to 16.0000 TSC ticks/load; 256-512 KiB rises from 18.4688 to 45.4141; 4-8 MiB rises from 57.7109 to 258.8750. The 16-512 MiB region is already memory-like, so no extension is needed. Intervals guide bounded refinement and are not physical capacity estimates. Other users are running benchmarks; repeats and layout/page controls will assess robustness.",
+    "source_runs": [
+      {
+        "run_id": "round1",
+        "config_sha256": "57fe93e8302a958e5ac6491943b6fd6f41edae479d90c9603dac0814d58b81f5",
+        "manifest_sha256": "015161ac4cf991c295992101da9b3eb7989bb74ef88bce04148f649e3dc63435"
+      }
+    ],
+    "planner_sha256": "3723f74a3d97063c8af6a9311c290de97807680d4d817f4b898e7f583c67339a",
+    "evidence": [
+      {
+        "record_id": "round1/coarse_w1048576_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "9c47c91f59be5e98a4ec3119b318e560c87c0cf8f8a1b0d531828740e6d6bdd9"
+      },
+      {
+        "record_id": "round1/coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "a3aa2a0434400b12eb290362e25530b6bb69665898c21bb838e37a0ecee8e074"
+      },
+      {
+        "record_id": "round1/coarse_w131072_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "690214340ba082ff7fc5ffb12ff93d4f988230930bbbbad10b976e94233a30bb"
+      },
+      {
+        "record_id": "round1/coarse_w131072_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "565d375ad7ca8c254340caf1811f0a417161f7454868db443b0f12350b837052"
+      },
+      {
+        "record_id": "round1/coarse_w134217728_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "5241a69004d478e328db79abac66addba81075bd23c326c01c35de083ca92026"
+      },
+      {
+        "record_id": "round1/coarse_w134217728_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "26696578016355f94a2a788a825bc63e4223dc07869264767462844272a82b47"
+      },
+      {
+        "record_id": "round1/coarse_w16384_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "14eca29df909fe63f6a8fe4a93606b2727a96324114eccbbed1ebdc3e8e74b32"
+      },
+      {
+        "record_id": "round1/coarse_w16384_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "3b3541732be2753c2c917c7bac9ea5f366a50b4449e0b1bb19e766214539f329"
+      },
+      {
+        "record_id": "round1/coarse_w16777216_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "f6fca22cea0b49208d5a48f886bc1695c42789f6b41e73c85ea6f3e27c4922c4"
+      },
+      {
+        "record_id": "round1/coarse_w16777216_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "dd88ceb10f7f5493061c588a5af55a2388cfbff99c17e6805fcbc36ea1429bf5"
+      },
+      {
+        "record_id": "round1/coarse_w2048_s64_empty_b256_seed59201_huge_n1000000",
+        "raw_sha256": "44918a8bc0cd6c0cbf33e1758d76230c9a4c0c7f872654f1493c549f1b1b6477"
+      },
+      {
+        "record_id": "round1/coarse_w2048_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "ea4e2f8d1d7ce18e9e8b7a02579720fdc6dc39e8bb00d9fa3205a8f83f6b59ed"
+      },
+      {
+        "record_id": "round1/coarse_w2048_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "c57a53eeef5eace121be6176eb6bfff20aa408ae0819a4da600b6ceb9e3fbb88"
+      },
+      {
+        "record_id": "round1/coarse_w2097152_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "e7792dd765b9b8e06f3142ed3cfce3686295c945704ad384d699a9cbd5a91cb3"
+      },
+      {
+        "record_id": "round1/coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "ccf1d6599c54b06fa19962547964af0c8b7fa22fb51438ee8bce014bd2c872c9"
+      },
+      {
+        "record_id": "round1/coarse_w262144_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "b122f39c3cad35d0b905d4c3f495fc330daaa2571df0b61069c20ba20e7c4db0"
+      },
+      {
+        "record_id": "round1/coarse_w262144_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "4b9fd0a5c5beb6e025b61590a671d4d47c8c848b5c894b099b736b73f4c7d342"
+      },
+      {
+        "record_id": "round1/coarse_w268435456_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "6013a27df41f84811bac230dc597dee8803bc8846a5b4d4656aba265ea92e4b3"
+      },
+      {
+        "record_id": "round1/coarse_w268435456_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "38912fc0d18789e652788003fb2266163eefeeba0ee5e9ee99ecf9803e0a5d2d"
+      },
+      {
+        "record_id": "round1/coarse_w32768_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "df00418a8e782046d8641fc0c40b6d72352ec9532ab158e154e4b0d08b8a4c6c"
+      },
+      {
+        "record_id": "round1/coarse_w32768_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "e04e4c7924847ce3949f94ef0cc60b2e3bbc040dea56d0f7529afac7c3d7779c"
+      },
+      {
+        "record_id": "round1/coarse_w33554432_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "b16889f80b481b321a525b37c1a063e71dd46300109c2df6f953d6729e1e9390"
+      },
+      {
+        "record_id": "round1/coarse_w33554432_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "8ad6db631fa409483cd5e0da7439641929fb15a7a961de8416a42bd19417ee4a"
+      },
+      {
+        "record_id": "round1/coarse_w4096_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "ed1f45db8258d39e7735b7d83f12176db4abbd939e5b851cd5b41cf3be655f34"
+      },
+      {
+        "record_id": "round1/coarse_w4096_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "00ac276bac54644e58f11235e8252ea41b05f07fef260feb6d197fe534671e02"
+      },
+      {
+        "record_id": "round1/coarse_w4194304_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "4ac9647c3a40dd0fbcdb9c0cd206a39b83839f90ba0e6838e66cdb1baa034619"
+      },
+      {
+        "record_id": "round1/coarse_w4194304_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "c944164c78c7a65b2e5d1f939cf2c6c28fb3d7351d38f2cb134d4386c14654e7"
+      },
+      {
+        "record_id": "round1/coarse_w524288_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "fbe33b6d1b9e72fffda5c7a57ca0ead507561d20ff5977f81c6261fa0f190c48"
+      },
+      {
+        "record_id": "round1/coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "f569fafc42afa5a4744c3fb533fdf15a342657599cab72995f0ffa9130249143"
+      },
+      {
+        "record_id": "round1/coarse_w536870912_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "4ce2371d099bc27bf70cefc5d7316de7e0e20336c0d22f8cbeabd9c5af148104"
+      },
+      {
+        "record_id": "round1/coarse_w536870912_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "d0a8aea92a57a122d54988c7e46e45864fa2dc4a0309f7f877e754fe57b33b48"
+      },
+      {
+        "record_id": "round1/coarse_w65536_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "55e2c98be56e367824f95a352a9c717faab4f38fb93a9f492e7a072fe5562b46"
+      },
+      {
+        "record_id": "round1/coarse_w65536_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "924168e421bb1861444c57a7bd800930e96cf483131fc36363ff1e63c1816173"
+      },
+      {
+        "record_id": "round1/coarse_w67108864_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "bee092dd75a14361b0c09695fc61af3442285e524ca60fd8c78dc8fc8ad420c9"
+      },
+      {
+        "record_id": "round1/coarse_w67108864_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "5a1a12929308e439928bbef380a185818492ba5b38aa6585450cfc63edfb1298"
+      },
+      {
+        "record_id": "round1/coarse_w8192_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "a0603d3984d3b75d40f9d4a6713c79418ac38a94250bd770eb37e491507c2eec"
+      },
+      {
+        "record_id": "round1/coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "19dcfc215793788b0b418b6e5f1e68d1cf3259659f31acf720dc191f2b453a3c"
+      },
+      {
+        "record_id": "round1/coarse_w8388608_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "f8f844c58a9a17b322fe23675c93e984bf114b5464fa4850034d3f7f1b79bcbf"
+      },
+      {
+        "record_id": "round1/coarse_w8388608_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "ab5e199c7c66491cdcea9d35cc2cb58487fb398a231fdd2ba732f4c471a33550"
+      }
+    ]
+  }
+}
