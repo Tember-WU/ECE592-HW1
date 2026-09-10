@@ -1,0 +1,97 @@
+
+build/charnwood/latency_bench:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+000000000000167c <time_independent>:
+    167c:	f3 0f 1e fa          	endbr64
+    1680:	55                   	push   rbp
+    1681:	48 89 e5             	mov    rbp,rsp
+    1684:	48 89 7d c8          	mov    QWORD PTR [rbp-0x38],rdi
+    1688:	48 89 75 c0          	mov    QWORD PTR [rbp-0x40],rsi
+    168c:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+    1690:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    1693:	48 89 45 d8          	mov    QWORD PTR [rbp-0x28],rax
+    1697:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+    169b:	48 8b 40 08          	mov    rax,QWORD PTR [rax+0x8]
+    169f:	48 89 45 e0          	mov    QWORD PTR [rbp-0x20],rax
+    16a3:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+    16a7:	48 8b 40 10          	mov    rax,QWORD PTR [rax+0x10]
+    16ab:	48 89 45 e8          	mov    QWORD PTR [rbp-0x18],rax
+    16af:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+    16b3:	48 8b 40 18          	mov    rax,QWORD PTR [rax+0x18]
+    16b7:	48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+    16bb:	48 8b 7d d8          	mov    rdi,QWORD PTR [rbp-0x28]
+    16bf:	48 8b 75 e0          	mov    rsi,QWORD PTR [rbp-0x20]
+    16c3:	48 8b 4d e8          	mov    rcx,QWORD PTR [rbp-0x18]
+    16c7:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+    16cb:	48 8b 45 c0          	mov    rax,QWORD PTR [rbp-0x40]
+    16cf:	49 89 fb             	mov    r11,rdi
+    16d2:	49 89 f2             	mov    r10,rsi
+    16d5:	49 89 c9             	mov    r9,rcx
+    16d8:	48 89 d7             	mov    rdi,rdx
+    16db:	48 89 c6             	mov    rsi,rax
+    16de:	0f ae e8             	lfence
+    16e1:	0f 31                	rdtsc
+    16e3:	48 c1 e2 20          	shl    rdx,0x20
+    16e7:	48 09 d0             	or     rax,rdx
+    16ea:	49 89 c0             	mov    r8,rax
+    16ed:	0f ae e8             	lfence
+    16f0:	4d 8b 1b             	mov    r11,QWORD PTR [r11]
+    16f3:	4d 8b 12             	mov    r10,QWORD PTR [r10]
+    16f6:	4d 8b 09             	mov    r9,QWORD PTR [r9]
+    16f9:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    16fc:	4d 8b 1b             	mov    r11,QWORD PTR [r11]
+    16ff:	4d 8b 12             	mov    r10,QWORD PTR [r10]
+    1702:	4d 8b 09             	mov    r9,QWORD PTR [r9]
+    1705:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    1708:	4d 8b 1b             	mov    r11,QWORD PTR [r11]
+    170b:	4d 8b 12             	mov    r10,QWORD PTR [r10]
+    170e:	4d 8b 09             	mov    r9,QWORD PTR [r9]
+    1711:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    1714:	4d 8b 1b             	mov    r11,QWORD PTR [r11]
+    1717:	4d 8b 12             	mov    r10,QWORD PTR [r10]
+    171a:	4d 8b 09             	mov    r9,QWORD PTR [r9]
+    171d:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    1720:	48 ff ce             	dec    rsi
+    1723:	75 cb                	jne    16f0 <time_independent+0x74>
+    1725:	0f 01 f9             	rdtscp
+    1728:	48 c1 e2 20          	shl    rdx,0x20
+    172c:	48 09 d0             	or     rax,rdx
+    172f:	4c 29 c0             	sub    rax,r8
+    1732:	0f ae e8             	lfence
+    1735:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    1739:	4c 89 5d d8          	mov    QWORD PTR [rbp-0x28],r11
+    173d:	4c 89 55 e0          	mov    QWORD PTR [rbp-0x20],r10
+    1741:	4c 89 4d e8          	mov    QWORD PTR [rbp-0x18],r9
+    1745:	48 89 7d f0          	mov    QWORD PTR [rbp-0x10],rdi
+    1749:	48 89 75 c0          	mov    QWORD PTR [rbp-0x40],rsi
+    174d:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+    1751:	48 8b 55 d8          	mov    rdx,QWORD PTR [rbp-0x28]
+    1755:	48 89 10             	mov    QWORD PTR [rax],rdx
+    1758:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+    175c:	48 8d 50 08          	lea    rdx,[rax+0x8]
+    1760:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+    1764:	48 89 02             	mov    QWORD PTR [rdx],rax
+    1767:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+    176b:	48 8d 50 10          	lea    rdx,[rax+0x10]
+    176f:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    1773:	48 89 02             	mov    QWORD PTR [rdx],rax
+    1776:	48 8b 45 c8          	mov    rax,QWORD PTR [rbp-0x38]
+    177a:	48 8d 50 18          	lea    rdx,[rax+0x18]
+    177e:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
+    1782:	48 89 02             	mov    QWORD PTR [rdx],rax
+    1785:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1789:	5d                   	pop    rbp
+    178a:	c3                   	ret
+
+Disassembly of section .fini:

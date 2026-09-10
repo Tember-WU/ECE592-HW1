@@ -1,0 +1,94 @@
+{
+  "name": "calibration__timer",
+  "group": "calibration",
+  "machine": "charnwood",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge",
+    "mode": "empty",
+    "bytes": 8192
+  },
+  "columns": [
+    "first"
+  ],
+  "raw_format": "little-endian uint64, row-major interleaved columns",
+  "raw_file": "raw/calibration__timer.u64.gz",
+  "raw_sha256": "dfd028af42d43eb73c825959fd63eba24631ff216bde47463ea4c6641bc66ad4",
+  "stats": {
+    "first": {
+      "n": 1000000,
+      "mean": 60.186648,
+      "std": 85.25078494782574,
+      "median": 60.0,
+      "q1": 58.0,
+      "q3": 62.0,
+      "p05": 56.0,
+      "p95": 64.0,
+      "p99": 66.0,
+      "minimum": 50.0,
+      "maximum": 40446.0,
+      "whisker_low": 52.0,
+      "whisker_high": 68.0,
+      "outliers": 5781,
+      "decile_medians": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "start_utc": "2026-09-10T20:53:25.537108+00:00",
+  "elapsed_seconds": 0.06302741914987564,
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+    "8192",
+    "64",
+    "empty",
+    "1000000",
+    "256",
+    "59221",
+    "3",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/calibration__timer.u64"
+  ],
+  "cpu_busy_percent": {
+    "cpu3": 100.0,
+    "cpu1": 0.0,
+    "cpu5": 0.0,
+    "cpu7": 14.286,
+    "cpu0": 0.0,
+    "cpu4": 0.0,
+    "cpu6": 100.0,
+    "cpu2": 0.0
+  },
+  "cpu_frequency_before": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "800000",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "cpu_frequency_after": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "2699989",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "runtime_events": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 0
+  }
+}

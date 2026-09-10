@@ -1,0 +1,15 @@
+mkdir -p build/charnwood
+gcc -O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/latency_bench.c -o build/charnwood/latency_bench
+objdump -d -Mintel build/charnwood/latency_bench > build/charnwood/latency_bench.dis
+python3 -m unittest discover -s tests -v
+test_all_machine_configurations (test_latency.DataTests.test_all_machine_configurations) ... ok
+test_paired_columns_and_signed_differences (test_latency.DataTests.test_paired_columns_and_signed_differences) ... ok
+test_reject_underfilled_and_ambiguous_configs (test_latency.DataTests.test_reject_underfilled_and_ambiguous_configs) ... ok
+test_tampered_archive_rejected (test_latency.DataTests.test_tampered_archive_rejected) ... ok
+test_zero_intervals_only_for_empty_timer (test_latency.DataTests.test_zero_intervals_only_for_empty_timer) ... ok
+test_kernel_modes_and_cursor_verification (test_latency.KernelTests.test_kernel_modes_and_cursor_verification) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.044s
+
+OK

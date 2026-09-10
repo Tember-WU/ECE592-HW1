@@ -1,0 +1,50 @@
+{
+  "machine": "charnwood",
+  "host": "charnwood.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "6.8.0-101-generic",
+  "model": "Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz",
+  "cpu": 3,
+  "numa_node": 0,
+  "core": "3",
+  "package": "0",
+  "siblings": "3,7",
+  "nodes": {
+    "node0": "0-7"
+  },
+  "inherited_affinity": [
+    1,
+    5
+  ],
+  "page_size": 4096,
+  "thp": "always [madvise] never",
+  "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "flags": "-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+  "python_version": "3.12.3",
+  "numpy_version": "1.26.3",
+  "source_hashes": {
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093"
+  },
+  "binary_sha256": "d24cebb97d9c57b6ad91784901eb69b116a7beca793fe2a43eef86e1e8e8823b",
+  "cpu_frequency": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "2699999",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "timer_unit": "TSC ticks",
+  "timer_frequency_hz": null,
+  "timer": "LFENCE/RDTSC/LFENCE ... RDTSCP/LFENCE",
+  "build_command": [
+    "make",
+    "-B",
+    "MACHINE=charnwood",
+    "CC=gcc",
+    "CFLAGS=-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+    "all"
+  ],
+  "git_head": "59dc6857c0c2a42feec7823b34f7e18ccdbb870c",
+  "git_status": "?? data/charnwood/\n?? results/charnwood/\n",
+  "memory_policy": "numactl --membind=0; first touch after CPU binding"
+}

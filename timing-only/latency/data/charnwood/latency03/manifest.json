@@ -1,0 +1,998 @@
+{
+  "machine": "charnwood",
+  "experiment": "latency",
+  "run_id": "latency03",
+  "phase": "timing-only",
+  "started_utc": "2026-09-10T20:57:36.058712+00:00",
+  "status": "complete",
+  "command": [
+    "scripts/run_latency.py",
+    "--machine",
+    "charnwood",
+    "--run-id",
+    "latency03"
+  ],
+  "jobs": [
+    {
+      "name": "l1_miss__alternate",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 131072
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "131072",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l1_miss__alternate.u64"
+      ],
+      "raw_sha256": "c78a548ea4e4a0f953f5229dc04ea811ea12cdb84aea419d13054f89f5b57d89"
+    },
+    {
+      "name": "l2_miss__repeat",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "1048576",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l2_miss__repeat.u64"
+      ],
+      "raw_sha256": "b1f1e3af2e66f66a62e7cc30e7095e02a0056224eb33bda7ca69cc5cb2d02f62"
+    },
+    {
+      "name": "calibration__l1_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "8192",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__l1_independent.u64"
+      ],
+      "raw_sha256": "421e4ba449678214a515c9a7269c7c285a516bafc8581e59abdcdc1f927374aa"
+    },
+    {
+      "name": "calibration__l1_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "8192",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__l1_sequential.u64"
+      ],
+      "raw_sha256": "1e0ea5a6ad503feeccdd2775c9c640ed8c4b1a381b3338c16686406018900336"
+    },
+    {
+      "name": "l1_hit__alternate",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "16384",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l1_hit__alternate.u64"
+      ],
+      "raw_sha256": "d3170ea90a507a0d5418b6861f98c74d1442c945086b7132a03b1bffc83d2fbd"
+    },
+    {
+      "name": "calibration__timer",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "empty",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "8192",
+        "64",
+        "empty",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__timer.u64"
+      ],
+      "raw_sha256": "a2862a5300037953e9819e169a48fdab2f1409afd636c7a20a46bca39439ffb6"
+    },
+    {
+      "name": "calibration__memory_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "268435456",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__memory_sequential.u64"
+      ],
+      "raw_sha256": "2d7292fd97dcd11ba4d7347dc2d9a7abb4247be0a00d27057c6b2443d8a9d51f"
+    },
+    {
+      "name": "calibration__l1_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "8192",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__l1_long.u64"
+      ],
+      "raw_sha256": "2cf5c92e51c7462c283320b7ba4dddceb56fb30263491c998bff43be6cd4c0f3"
+    },
+    {
+      "name": "calibration__l2_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "65536",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__l2_long.u64"
+      ],
+      "raw_sha256": "46c7103828e24400c936266fb6159da713fbf7bb421120f4353c575944e3086e"
+    },
+    {
+      "name": "calibration__llc_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "1048576",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__llc_long.u64"
+      ],
+      "raw_sha256": "c8f60343ecfc3aab00614c413a3977e326b49183fa92123c1c23f920e0768689"
+    },
+    {
+      "name": "llc_hit__alternate",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 2097152
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "2097152",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/llc_hit__alternate.u64"
+      ],
+      "raw_sha256": "65d01cc961c45d63d48c3b8b77470ffa20dbc1c7e405e4b03fecc1aafedfd494"
+    },
+    {
+      "name": "llc_miss__alternate",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 536870912
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "536870912",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/llc_miss__alternate.u64"
+      ],
+      "raw_sha256": "84e8d1e390508e5f8f5b43dce99709597b7862b495d1fa61db23e2906e2e6327"
+    },
+    {
+      "name": "llc_hit__repeat",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "1048576",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/llc_hit__repeat.u64"
+      ],
+      "raw_sha256": "18fdda6ade562d28211eba316e14d2cd7149a5cbdfb1eaced77d6d6266d4a318"
+    },
+    {
+      "name": "l2_miss__alternate",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 2097152
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "2097152",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l2_miss__alternate.u64"
+      ],
+      "raw_sha256": "682dcb3c431856b6cc2cc6cad9fafe706b503c822da8963df2bade0b2da528fa"
+    },
+    {
+      "name": "l2_hit__alternate",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 131072
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "131072",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l2_hit__alternate.u64"
+      ],
+      "raw_sha256": "35e5f86a7f48c653391c2635a4825fc77585ea0e42b40d546e3f9bd0f7666868"
+    },
+    {
+      "name": "l2_hit__repeat",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "65536",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l2_hit__repeat.u64"
+      ],
+      "raw_sha256": "b57e2fe2913409bc0ce5410d425450eae448ad3df1bcae97a17dd644f692d677"
+    },
+    {
+      "name": "l1_hit__primary",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "8192",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l1_hit__primary.u64"
+      ],
+      "raw_sha256": "a4779a0b265be85c28b10a8db32bc3fce4d90b2d96cbbdc1635f601e3445370d"
+    },
+    {
+      "name": "calibration__memory_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "268435456",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__memory_independent.u64"
+      ],
+      "raw_sha256": "1704b7fadf29224123442ad075fb6cd8754f70127aa585da9f2cf8a822cf3b4e"
+    },
+    {
+      "name": "l2_hit__primary",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "65536",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l2_hit__primary.u64"
+      ],
+      "raw_sha256": "1cec3d2ad27634cccb57e25966da272298c73b6a0b8a2d95fb2e79599afc404d"
+    },
+    {
+      "name": "calibration__llc_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "1048576",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__llc_sequential.u64"
+      ],
+      "raw_sha256": "86e2530c30aa331eaf4c3418e9c53bfe625122776af3d596bea38c71be1a08f9"
+    },
+    {
+      "name": "l1_miss__repeat",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 65536
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "65536",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l1_miss__repeat.u64"
+      ],
+      "raw_sha256": "29935e327e8b43231bad9c41d0e80555ce1fd26e33a38e6d3d350ff210d14a03"
+    },
+    {
+      "name": "llc_miss__repeat",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "268435456",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/llc_miss__repeat.u64"
+      ],
+      "raw_sha256": "74d80fcb99949c0933aeef387ad6d6d184f2aad838e45a71051449861305b59d"
+    },
+    {
+      "name": "calibration__l2_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "65536",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__l2_independent.u64"
+      ],
+      "raw_sha256": "37a6f6f715793428488cc78a101ea2db0e5c16419a49ff582fac44310b2a4c7a"
+    },
+    {
+      "name": "calibration__l2_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "65536",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__l2_sequential.u64"
+      ],
+      "raw_sha256": "bc53ee8ad43e9de2a71c9d587399ef24fd4526c7519755b5e0106e77ac79048f"
+    },
+    {
+      "name": "llc_miss__primary",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "268435456",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/llc_miss__primary.u64"
+      ],
+      "raw_sha256": "1790b0d89ae6db2ec521df086338373577ac216884696f37d3c8d3edef4fe712"
+    },
+    {
+      "name": "l2_miss__primary",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "1048576",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l2_miss__primary.u64"
+      ],
+      "raw_sha256": "f69d73f0e7962a34d0043e89991ff1f6cb7787a60f2d3d41ff1ab03aedf4d2af"
+    },
+    {
+      "name": "llc_hit__primary",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "1048576",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/llc_hit__primary.u64"
+      ],
+      "raw_sha256": "deeda315f20d4aaaa85a03368247f729b455c39d0d0d63079a4b030d2930191e"
+    },
+    {
+      "name": "l1_hit__repeat",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "8192",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l1_hit__repeat.u64"
+      ],
+      "raw_sha256": "b7be5d697f66c6d7ce2a07bd3ccc96b08012238a70401b395de8aeea172fa197"
+    },
+    {
+      "name": "l1_miss__primary",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 65536
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "65536",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l1_miss__primary.u64"
+      ],
+      "raw_sha256": "98548ba2aea89549f667d011db1596a74a457266f0bbe1343fcfc8b390552c86"
+    },
+    {
+      "name": "calibration__llc_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+        "1048576",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__llc_independent.u64"
+      ],
+      "raw_sha256": "4772e747a7b62444c7c1bcbbd044620855d0dbd352912ba290325d370c38a315"
+    }
+  ],
+  "source_snapshot_hashes": {
+    "requirements.txt": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+    "Makefile": "580dba2b0895ba4a7e6e4c66f619c0ca4c76308834468f4c7ca3752da0b7ca49",
+    "README.md": "55aeafbcc3310d5aeca289876d2879eb9bb4189dd8e19e2f2089d6038622d3ff",
+    "scripts/run_latency.py": "36882314f22a52d2c29ae7afaf8e9654cb3ded6c968311a622ce4ea6808681ba",
+    "scripts/common.py": "bacb509745fc0a41c8c00d5cb946e279ceb8887c465c5d263702452942908e86",
+    "scripts/analyze_latency.py": "b2d9d9336612146e7a373925b6d3da371c5efd7a0e8e05b2a3d74aee4878b6bf",
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093"
+  },
+  "environment_sha256": "db2561b39503b2f9081ac3166a5c34fcb4eec6dc8045a4d8efa49fd858a1916b",
+  "finished_utc": "2026-09-10T21:00:25.063700+00:00"
+}

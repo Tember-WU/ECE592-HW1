@@ -1,0 +1,34 @@
+{
+  "recorded_utc": "2026-09-10T20:57:34.885051+00:00",
+  "reason": "Full retry after two THP-allocation failures at 512 MiB. Set glibc allocation thresholds so large temporary collector allocations use mmap and released heap space can be trimmed. Same config, point order, C source, page policy and timed kernel.",
+  "allocator_environment": {
+    "MALLOC_TRIM_THRESHOLD_": "0",
+    "MALLOC_MMAP_THRESHOLD_": "131072"
+  },
+  "loadavg": "1.19 1.29 1.18 2/1391 1184932",
+  "processes": [
+    "    PID USER     PSR %CPU COMMAND",
+    "1089233 dchen27    6 96.9 cache_latency_s",
+    "1184915 swu35      1 14.2 python",
+    "   1886 root       1  1.7 CrashPlanServic",
+    "1165983 root       0  0.5 sssd_be",
+    "1179018 rqashou    7  0.4 MainThread",
+    "1167223 swu35      3  0.4 MainThread",
+    "1165997 root       5  0.2 sssd_nss",
+    "1105075 rsivaku3   2  0.1 MainThread",
+    "1167300 swu35      5  0.1 codex",
+    "1183025 nmannam    0  0.1 ssh",
+    "1182898 nmannam    0  0.1 sshd",
+    "   2173 gdm        7  0.0 gnome-shell",
+    "1155597 rqashou    5  0.0 MainThread",
+    "1166392 swu35      2  0.0 MainThread",
+    "1155679 rqashou    1  0.0 MainThread"
+  ],
+  "runner_affinity": [
+    1,
+    5
+  ],
+  "measurement_cpu": 3,
+  "numa_node": 0,
+  "smt_sibling": 7
+}

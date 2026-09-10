@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-09-10T20:55:21.860606+00:00",
+  "reason": "Complete retry after latency01 stopped at 512 MiB THP allocation; unchanged seven-group config and timing kernel. The subsequent 16-sample allocation diagnostic obtained full 512 MiB THP backing.",
+  "loadavg": "1.28 1.25 1.15 4/1389 1184320",
+  "processes": [
+    "    PID USER     PSR %CPU COMMAND",
+    "1184321 swu35      1  300 ps",
+    "1089233 dchen27    6 96.9 cache_latency_s",
+    "1184303 root       0 15.8 sshd",
+    "1184319 swu35      5 15.0 python",
+    "1184304 sshd       3  3.2 sshd",
+    "   1886 root       1  1.7 CrashPlanServic",
+    "1165983 root       0  0.5 sssd_be",
+    "1179018 rqashou    2  0.4 MainThread",
+    "1167223 swu35      7  0.4 MainThread",
+    "1165997 root       4  0.2 sssd_nss",
+    "1183025 nmannam    5  0.1 ssh",
+    "1182898 nmannam    4  0.1 sshd",
+    "1105075 rsivaku3   1  0.1 MainThread",
+    "1167300 swu35      5  0.1 codex",
+    "   2173 gdm        2  0.0 gnome-shell"
+  ],
+  "runner_affinity": [
+    1,
+    5
+  ],
+  "measurement_cpu": 3,
+  "numa_node": 0,
+  "smt_sibling": 7
+}

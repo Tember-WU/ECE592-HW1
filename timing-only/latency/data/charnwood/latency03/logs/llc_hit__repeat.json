@@ -1,0 +1,94 @@
+{
+  "name": "llc_hit__repeat",
+  "group": "llc_hit",
+  "machine": "charnwood",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59222,
+    "pages": "huge",
+    "mode": "chase",
+    "bytes": 1048576
+  },
+  "columns": [
+    "first"
+  ],
+  "raw_format": "little-endian uint64, row-major interleaved columns",
+  "raw_file": "raw/llc_hit__repeat.u64.gz",
+  "raw_sha256": "18fdda6ade562d28211eba316e14d2cd7149a5cbdfb1eaced77d6d6266d4a318",
+  "stats": {
+    "first": {
+      "n": 1000000,
+      "mean": 43.6095178984375,
+      "std": 10.036961771415582,
+      "median": 43.3984375,
+      "q1": 42.9453125,
+      "q3": 43.8515625,
+      "p05": 42.1953125,
+      "p95": 44.5703125,
+      "p99": 45.4765625,
+      "minimum": 36.9375,
+      "maximum": 5139.9609375,
+      "whisker_low": 41.5859375,
+      "whisker_high": 45.2109375,
+      "outliers": 29921,
+      "decile_medians": [
+        43.4140625,
+        43.3984375,
+        43.390625,
+        43.40625,
+        43.3984375,
+        43.390625,
+        43.390625,
+        43.3984375,
+        43.3984375,
+        43.3984375
+      ]
+    }
+  },
+  "start_utc": "2026-09-10T20:58:45.228747+00:00",
+  "elapsed_seconds": 3.3354899836704135,
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+    "1048576",
+    "64",
+    "chase",
+    "1000000",
+    "256",
+    "59222",
+    "3",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/llc_hit__repeat.u64"
+  ],
+  "cpu_busy_percent": {
+    "cpu3": 100.0,
+    "cpu5": 0.599,
+    "cpu2": 0.898,
+    "cpu7": 0.601,
+    "cpu0": 0.303,
+    "cpu1": 0.3,
+    "cpu6": 100.0,
+    "cpu4": 0.898
+  },
+  "cpu_frequency_before": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "2700660",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "cpu_frequency_after": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "2699991",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "runtime_events": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 23
+  }
+}

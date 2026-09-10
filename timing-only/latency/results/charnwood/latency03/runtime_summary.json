@@ -1,0 +1,72 @@
+{
+  "machine": "charnwood",
+  "formal_run": "latency03",
+  "excluded_incomplete_runs": [
+    "latency01",
+    "latency02"
+  ],
+  "excluded_diagnostic": "../preparation/thp-probe.json",
+  "groups": {
+    "calibration": 12,
+    "llc_hit": 3,
+    "l2_hit": 3,
+    "l1_miss": 3,
+    "llc_miss": 3,
+    "l1_hit": 3,
+    "l2_miss": 3
+  },
+  "started_utc": "2026-09-10T20:57:36.058712+00:00",
+  "finished_utc": "2026-09-10T21:00:25.063700+00:00",
+  "wall_seconds": 169.004988,
+  "cpu": 3,
+  "numa_node": 0,
+  "smt_sibling": 7,
+  "smt_busy_percent_range": [
+    0.0,
+    18.082
+  ],
+  "highest_smt_busy_points": [
+    {
+      "name": "llc_miss__primary",
+      "busy_percent": 18.082
+    },
+    {
+      "name": "calibration__timer",
+      "busy_percent": 14.286
+    },
+    {
+      "name": "calibration__llc_independent",
+      "busy_percent": 5.0
+    }
+  ],
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "total": 0,
+      "minimum": 0,
+      "maximum": 0
+    },
+    "major_faults": {
+      "total": 0,
+      "minimum": 0,
+      "maximum": 0
+    },
+    "voluntary_switches": {
+      "total": 0,
+      "minimum": 0,
+      "maximum": 0
+    },
+    "involuntary_switches": {
+      "total": 917,
+      "minimum": 0,
+      "maximum": 170
+    }
+  },
+  "first_pass_drift_flags": [],
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 51639665,
+  "allocator_environment": {
+    "MALLOC_TRIM_THRESHOLD_": "0",
+    "MALLOC_MMAP_THRESHOLD_": "131072"
+  },
+  "launch_context_sha256": "644593edc57d45926d9f28ffb80d994ecef230e176af8d87d4db08fb19442eb1"
+}
