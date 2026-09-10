@@ -1,0 +1,14 @@
+KernelPageSize:        4 kB
+AnonHugePages:     32768 kB
+numa_mapping: ffffb6600000 bind:0 anon=8192 dirty=8192 active=0 N0=8192 kernelpagesize_kB=4
+timer=CNTVCT_EL0 timer_frequency_hz=25000000
+mapping_before:
+KernelPageSize:        4 kB
+AnonHugePages:     32768 kB
+numa_mapping: ffffb6600000 bind:0 anon=8192 dirty=8192 active=0 N0=8192 kernelpagesize_kB=4
+mapping_after:
+KernelPageSize:        4 kB
+AnonHugePages:     32768 kB
+numa_mapping: ffffb6600000 bind:0 anon=8192 dirty=8192 active=0 N0=8192 kernelpagesize_kB=4
+bytes=33554432 spacing=8 mode=random samples=1000000 batch=256 seed=59202 cpu_start=32 cpu_end=32 warm_loads=16777216 base=0xffffb6600000 mapped_bytes=33554432
+measurement_minor_faults=0 major_faults=0 voluntary_switches=0 involuntary_switches=2

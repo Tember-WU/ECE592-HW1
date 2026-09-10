@@ -1,6 +1,6 @@
 # Cache levels and capacity: two main rounds and an optional third round
 
-This directory is the entry point for rerunning the Artemisia experiment: `/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/capacity`. It covers only cache levels and capacity, corresponding to assignment §8.2. Linux x86-64 is currently the only supported platform.
+This directory is the entry point for rerunning the capacity experiment. It covers only cache levels and capacity, corresponding to assignment §8.2. Linux x86-64 and little-endian AArch64 are supported. See [Thunderbird instructions and architecture changes](THUNDERBIRD.md) for the ARM run.
 
 Crux has also completed the two-round workflow using `configs/crux.json`
 (CPU 6 / NUMA node 0). Its complete runs are `round1-retry1` and `round2`;
@@ -24,14 +24,18 @@ The default two-round plan totals **96 configurations and 96,000,000 timed batch
 
 Every point preserves **1,000,000 timed batches**, excluding warm-up. The default batch contains 256 dependent loads; longer-batch controls use 1024. A repeat with a new seed starts a new process, reallocates memory, and rebuilds the pointer cycle. Consecutive batches are not independent experiments.
 
+<<<<<<< HEAD
 Round-1 measurement parameters are shared across machines. Machine identity, CPU, and NUMA node are stored separately in `configs/<machine>.json`. Artemisia is configured for CPU 32 / NUMA node 1, and Crux for CPU 6 / NUMA node 0. These configurations are not CPU reservations; machine load and page allocation must still be interpreted using the logs. To add another compatible x86-64 machine, reference the same `common/round1.json` and select follow-up intervals from that machine's new curves. Arm support is not implemented at this stage.
+=======
+Round-1 measurement parameters are shared across machines. Machine identity, CPU, and NUMA node are stored separately in `configs/<machine>.json`. Artemisia uses CPU 32 / NUMA node 1; Thunderbird uses CPU 32 / NUMA node 0. This configuration is not a CPU reservation; machine load and page allocation must still be interpreted using the logs. Reference the same `common/round1.json` and select follow-up intervals from each machine's new curves. The original x86 kernel and all Artemisia source/data snapshots are retained unchanged; AArch64 uses the separate `src/cache_bench_aarch64.c` kernel.
+>>>>>>> 4005d19 (Add two-round capacity Thunderbird experiments)
 
 ## Preparation and round 1
 
-Dependencies: GCC, make, objdump, numactl, Python 3, NumPy, and Matplotlib. Python dependency versions are recorded in `requirements.txt`. The `huge` policy requires Linux support for `MADV_COLLAPSE` and actual, complete backing by 2 MiB transparent huge pages. On failure, the collector preserves the logs and stops; it does not silently switch to base pages.
+Dependencies: GCC, make, objdump, numactl, Python 3, NumPy, and Matplotlib. Python dependency versions are recorded in `requirements.txt`. The original x86 `huge` path requires `MADV_COLLAPSE` and complete 2 MiB transparent huge-page backing. The ARM path queries the PMD page size and also accepts already-complete first-touch THP, invoking collapse only when needed. On failure, the collector preserves the logs and stops; it does not silently switch to base pages.
 
 ```bash
-cd /home/swu35/ECE592-Project1/ECE592-HW1/timing-only/capacity
+cd /home/swu35/ECE592-HW1/timing-only/capacity
 python3 -m pip install -r requirements.txt
 make MACHINE=artemisia capacity assembly
 make check
@@ -109,7 +113,7 @@ data/artemisia/<run-id>/
   cache_capacity.bin           # Executable used for this run
   disassembly.txt              # Disassembly for this run
   build.log / commands.txt
-  raw/<point>.u64.gz           # Little-endian uint64 values: total TSC ticks per batch
+  raw/<point>.u64.gz           # Little-endian uint64 values: total timer ticks per batch
   logs/<point>.json / .txt     # Per-point statistics, hashes, page backing, CPU activity, faults, and switches
 
 results/artemisia/<run-id-or-combined-id>/
@@ -126,7 +130,7 @@ results/artemisia/<run-id-or-combined-id>/
     method.png / .pdf
 ```
 
-Statistics include the mean, sample standard deviation, median, Q1/Q3, P05/P95/P99, minimum/maximum, Tukey outlier count, and ten temporal medians. No samples are removed. Each run has its own box plot. Curve values are **TSC ticks / dependent load**, computed by dividing batch-total ticks by the recorded batch length. Empty-timer measurements remain in ticks/interval. TSC ticks are not treated as validated core cycles.
+Statistics include the mean, sample standard deviation, median, Q1/Q3, P05/P95/P99, minimum/maximum, Tukey outlier count, and ten temporal medians. No samples are removed. Each run has its own box plot. Curve values are **TSC ticks / dependent load** on x86 or **CNTVCT ticks / dependent load** on ARM, computed by dividing batch-total ticks by the recorded batch length. Empty-timer measurements remain in ticks/interval; zero ticks are allowed only for empty controls. Neither timer is treated as validated core cycles. ARM records CNTFRQ_EL0 and checks its rate against CLOCK_MONOTONIC_RAW; runs with different timer frequencies cannot be combined.
 
 Combined analysis rejects runs that differ in CPU, NUMA node, C source, timing method, compiler flags, processor model, kernel, or base-page size; such runs should be analyzed separately. Different spacing, batch, and page settings always remain in separate groups. Representative runs are selected using the predetermined priority `round3 → round2 → coarse`, with ties resolved by seed and run identifier rather than measured performance. The range of all repeat medians is shown separately with error bars; repeats are not pooled into new cache plateaus. Reanalysis may update a results directory for the same inputs. Different inputs require a new output ID.
 

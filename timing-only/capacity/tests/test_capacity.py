@@ -26,6 +26,33 @@ class CapacityTests(unittest.TestCase):
     def setUp(self):
         self.config = runner.load_config(ROOT / 'configs/artemisia.json')
 
+    def test_arm_uses_the_same_round1_protocol(self):
+        arm = runner.load_config(ROOT / 'configs/thunderbird.json')
+        self.assertEqual(runner.plan(arm, ['all']), runner.plan(self.config, ['all']))
+        arm['isa'] = 'unsupported'
+        with self.assertRaisesRegex(ValueError, 'supports'):
+            runner.plan(arm, ['all'])
+
+    def test_timer_quantization_allows_zero_only_for_empty_controls(self):
+        raw = np.array([0, 1, 0, 2], dtype='<u8')
+        self.assertTrue(runner.valid_intervals(raw, dict(samples=4, mode='empty')))
+        self.assertFalse(runner.valid_intervals(raw, dict(samples=4, mode='random')))
+        self.assertFalse(runner.valid_intervals(raw, dict(samples=4, mode='sequential')))
+        self.assertFalse(runner.valid_intervals(raw, dict(samples=5, mode='empty')))
+
+    def test_arm_units_and_frequency_mismatch_are_not_treated_as_tsc(self):
+        env = dict(cpu=32, numa_node=0, source_sha256='arm', timer='CNTVCT', flags='-O0',
+                   model='arm', kernel='test', page_size=4096,
+                   timer_unit='CNTVCT ticks', timer_frequency_hz=25000000)
+        first = dict(record_id='r1/p', environment=env)
+        second = dict(record_id='r2/p', environment=dict(env, timer_frequency_hz=100000000))
+        self.assertEqual(analyzer.timing_units(first), 'CNTVCT ticks / dependent load')
+        self.assertEqual(analyzer.timing_units(first, empty=True), 'CNTVCT ticks / timer interval')
+        self.assertEqual(analyzer.timing_units({}), 'TSC ticks / dependent load')
+        with patch.object(analyzer, 'load_records', side_effect=[[first], [second]]):
+            with self.assertRaisesRegex(ValueError, 'timer_frequency_hz'):
+                analyzer.load_study(ROOT, 'thunderbird', ['r1', 'r2'])
+
     def test_shared_first_round_is_broad_and_deterministic(self):
         original = copy.deepcopy(self.config)
         jobs = runner.plan(self.config, ['all'])

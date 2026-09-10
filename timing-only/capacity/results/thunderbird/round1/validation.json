@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "machine": "thunderbird",
+  "run_ids": [
+    "round1"
+  ],
+  "checked_at_utc": "2026-09-10T17:03:07.455428+00:00",
+  "validation_scope": "Raw hashes, sample counts, recomputed statistics, completed manifests, source/binary snapshots, compatible environments, CPU/NUMA and page backing. Passing these checks does not establish absence of measurement interference.",
+  "configurations": 39,
+  "total_timed_batches": 39000000,
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 15683378,
+  "rounds": [
+    {
+      "run_id": "round1",
+      "configurations": 39,
+      "wall_seconds": 180.061122,
+      "started_utc": "2026-09-10T16:59:46.823947+00:00",
+      "finished_utc": "2026-09-10T17:02:46.885069+00:00"
+    }
+  ],
+  "page_policies": {
+    "huge": 39
+  },
+  "all_mappings_local_and_policy_matched": true,
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "major_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "voluntary_switches": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "involuntary_switches": {
+      "minimum": 0,
+      "maximum": 240,
+      "total": 2717
+    }
+  },
+  "cpu_frequency_khz": {
+    "before": [
+      1000000,
+      3000000
+    ],
+    "after": [
+      3000000,
+      3000000
+    ]
+  },
+  "original_artemisia_files_preserved": 386,
+  "validator_sha256": "ebf75f47613d16b6faf11dcbaedd36361de4537b0d6b6aca1ffdb893161f0b5f"
+}

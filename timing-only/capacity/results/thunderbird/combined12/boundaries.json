@@ -1,0 +1,68 @@
+[
+  {
+    "level": "L1D (~64 KiB)",
+    "estimate": 65536,
+    "interval": [
+      65536,
+      73728
+    ],
+    "zoom": [
+      32768,
+      131072
+    ],
+    "unit": 1024,
+    "box_points": [
+      32768,
+      65536,
+      73728,
+      81920
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge"
+  },
+  {
+    "level": "L2 (~1 MiB)",
+    "estimate": 1048576,
+    "interval": [
+      1048576,
+      1179648
+    ],
+    "zoom": [
+      524288,
+      2097152
+    ],
+    "unit": 1048576,
+    "box_points": [
+      524288,
+      1048576,
+      1179648,
+      1310720
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge"
+  },
+  {
+    "level": "LLC effective transition",
+    "estimate": null,
+    "interval": [
+      33554432,
+      67108864
+    ],
+    "zoom": [
+      16777216,
+      134217728
+    ],
+    "unit": 1048576,
+    "box_points": [
+      33554432,
+      41943040,
+      50331648,
+      67108864
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge"
+  }
+]

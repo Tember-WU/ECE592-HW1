@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "timer": {
+    "timer_frequency_hz": 25000000,
+    "timer_tick_ns": 40.0,
+    "calibration_seconds": 0.20034368,
+    "calibration_ticks": 5008557,
+    "observed_frequency_hz": 24999825.3
+  },
+  "checks": [
+    {
+      "name": "w65536_s64_random_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/cache_capacity",
+        "65536",
+        "64",
+        "random",
+        "10000",
+        "256",
+        "59201",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/preflight/w65536_s64_random_b256_huge.u64"
+      ],
+      "samples": 10000,
+      "zero_count": 0,
+      "median_ticks": 11.0,
+      "sha256": "632975b03356478f32c703d8ab74be5077a3c144aaa27dde175c9c14af7fa6c6"
+    },
+    {
+      "name": "w65536_s64_random_b1024_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/cache_capacity",
+        "65536",
+        "64",
+        "random",
+        "10000",
+        "1024",
+        "59201",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/preflight/w65536_s64_random_b1024_huge.u64"
+      ],
+      "samples": 10000,
+      "zero_count": 0,
+      "median_ticks": 41.0,
+      "sha256": "9bc0b42dbf8b156be2a7ae1f7d4f163ab19763e8a735989709acd73b6b39f5d9"
+    },
+    {
+      "name": "w2048_s64_empty_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/cache_capacity",
+        "2048",
+        "64",
+        "empty",
+        "10000",
+        "256",
+        "59201",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/preflight/w2048_s64_empty_b256_huge.u64"
+      ],
+      "samples": 10000,
+      "zero_count": 2337,
+      "median_ticks": 1.0,
+      "sha256": "01a796c915effb2a1708affcdfb272df3ce29fc06ddcbb0370315f896d508925"
+    },
+    {
+      "name": "w2097152_s64_random_b256_base",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/cache_capacity",
+        "2097152",
+        "64",
+        "random",
+        "10000",
+        "256",
+        "59201",
+        "32",
+        "base",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/preflight/w2097152_s64_random_b256_base.u64"
+      ],
+      "samples": 10000,
+      "zero_count": 0,
+      "median_ticks": 248.0,
+      "sha256": "513be1d5bb49ab376cb0c2f5158ab093f8863b33eaddacad6b0a9cb04551e054"
+    },
+    {
+      "name": "w2097152_s8_random_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/cache_capacity",
+        "2097152",
+        "8",
+        "random",
+        "10000",
+        "256",
+        "59201",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/preflight/w2097152_s8_random_b256_huge.u64"
+      ],
+      "samples": 10000,
+      "zero_count": 0,
+      "median_ticks": 146.0,
+      "sha256": "2f4797ce5ce8d01800b5015041f81915a62751d02ac0a10f9845a4a64e997e47"
+    },
+    {
+      "name": "w536870912_s64_random_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/cache_capacity",
+        "536870912",
+        "64",
+        "random",
+        "10000",
+        "256",
+        "59201",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/preflight/w536870912_s64_random_b256_huge.u64"
+      ],
+      "samples": 10000,
+      "zero_count": 0,
+      "median_ticks": 633.0,
+      "sha256": "d1eba2fe573cc73e2cb8982f27de6b31c2dfa67c8cb3c3ba77d5c93704d0907f"
+    }
+  ],
+  "assembly": "16 dependent loads; no stack traffic or calls between counter reads"
+}

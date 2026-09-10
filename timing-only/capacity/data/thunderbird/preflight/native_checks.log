@@ -1,0 +1,6 @@
+w65536_s64_random_b256_huge 11.0
+w65536_s64_random_b1024_huge 41.0
+w2048_s64_empty_b256_huge 1.0
+w2097152_s64_random_b256_base 248.0
+w2097152_s8_random_b256_huge 146.0
+w536870912_s64_random_b256_huge 633.0
