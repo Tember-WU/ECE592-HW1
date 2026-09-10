@@ -1,0 +1,30 @@
+{
+  "functional_tests_passed": 6,
+  "x86_timed_loops": {
+    "time_batch": {
+      "loads": 16,
+      "stack_accesses": 0
+    },
+    "time_independent": {
+      "loads": 16,
+      "stack_accesses": 0
+    }
+  },
+  "aarch64_validation": "Not applicable to this x86-64 machine; no additional Arm test claimed.",
+  "commands": [
+    "make MACHINE=upgrade all",
+    "make MACHINE=upgrade check",
+    "objdump -d -Mintel --disassemble=time_batch build/upgrade/latency_bench",
+    "objdump -d -Mintel --disassemble=time_independent build/upgrade/latency_bench"
+  ],
+  "source_hashes": {
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093",
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4"
+  },
+  "binary_sha256": "e14c85ca2653dcd1c04da49519a0b7f4c4cd4b0d1b3294cf5f92df5d9dbb0c29",
+  "capacity_evidence_hash_verified": true,
+  "analyzer_matches_artemisia_analysis_snapshot": true,
+  "collection_binary_matches_checked_binary": true,
+  "capacity_inference_snapshot": "../../../data/upgrade/latency01/capacity_inference.json",
+  "capacity_inference_sha256": "b80b7f3696615cad013f284f4eb904348a3ffaad2a3e4085a4b7ae148171294a"
+}

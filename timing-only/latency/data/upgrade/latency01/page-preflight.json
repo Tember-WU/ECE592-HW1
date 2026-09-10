@@ -1,0 +1,24 @@
+{
+  "started_utc": "2026-09-10T20:53:06.087741+00:00",
+  "purpose": "Page-only preflight for the largest configured footprint; no benchmark timing samples or system tuning.",
+  "cpu": 2,
+  "attempts": [
+    {
+      "attempt": 1,
+      "collapse_return": -1,
+      "errno": 12,
+      "huge_bytes": 243269632,
+      "required_bytes": 536870912
+    },
+    {
+      "attempt": 2,
+      "collapse_return": 0,
+      "errno": 0,
+      "huge_bytes": 536870912,
+      "required_bytes": 536870912
+    }
+  ],
+  "preparation": "Allocated, touched and released a bounded 1 GiB anonymous base-page scratch mapping, as in the earlier successful capacity preparation.",
+  "passed": true,
+  "finished_utc": "2026-09-10T20:53:07.124444+00:00"
+}

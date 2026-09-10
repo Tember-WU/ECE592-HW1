@@ -2,8 +2,6 @@
 
 This directory covers assignment Section 8.2 items 5 and 6: hit latency and miss/next-level latency. It contains one Linux benchmark with x86-64 and AArch64 timer paths, one collector, and one analyzer. The capacity experiment remains a separate input source. No performance counters or cache-geometry queries are used.
 
-Completed Upgrade run: [seven-group results and reproduction instructions](results/upgrade/README.md).
-
 ## Experiment design
 
 The supplied machine configurations contain **30 points in seven groups**. Every point collects 1,000,000 batches after warm-up. There are 21 single-column points and 9 paired points, so a complete run preserves 39,000,000 timer intervals (312,000,000 uncompressed bytes).
