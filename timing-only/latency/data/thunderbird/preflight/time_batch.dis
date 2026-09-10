@@ -1,0 +1,47 @@
+
+  400e44:	d100c3ff 	sub	sp, sp, #0x30
+  400e48:	f90007e0 	str	x0, [sp, #8]
+  400e4c:	f90003e1 	str	x1, [sp]
+  400e50:	f94007e0 	ldr	x0, [sp, #8]
+  400e54:	f9400000 	ldr	x0, [x0]
+  400e58:	f90017e0 	str	x0, [sp, #40]
+  400e5c:	f94017e1 	ldr	x1, [sp, #40]
+  400e60:	f94003e0 	ldr	x0, [sp]
+  400e64:	d5033b9f 	dsb	ish
+  400e68:	d5033fdf 	isb
+  400e6c:	d53be042 	mrs	x2, cntvct_el0
+  400e70:	d5033fdf 	isb
+  400e74:	b4000260 	cbz	x0, 400ec0 <time_batch+0x7c>
+  400e78:	f9400021 	ldr	x1, [x1]
+  400e7c:	f9400021 	ldr	x1, [x1]
+  400e80:	f9400021 	ldr	x1, [x1]
+  400e84:	f9400021 	ldr	x1, [x1]
+  400e88:	f9400021 	ldr	x1, [x1]
+  400e8c:	f9400021 	ldr	x1, [x1]
+  400e90:	f9400021 	ldr	x1, [x1]
+  400e94:	f9400021 	ldr	x1, [x1]
+  400e98:	f9400021 	ldr	x1, [x1]
+  400e9c:	f9400021 	ldr	x1, [x1]
+  400ea0:	f9400021 	ldr	x1, [x1]
+  400ea4:	f9400021 	ldr	x1, [x1]
+  400ea8:	f9400021 	ldr	x1, [x1]
+  400eac:	f9400021 	ldr	x1, [x1]
+  400eb0:	f9400021 	ldr	x1, [x1]
+  400eb4:	f9400021 	ldr	x1, [x1]
+  400eb8:	f1000400 	subs	x0, x0, #0x1
+  400ebc:	54fffde1 	b.ne	400e78 <time_batch+0x34>  // b.any
+  400ec0:	d503399f 	dsb	ishld
+  400ec4:	d5033fdf 	isb
+  400ec8:	d53be043 	mrs	x3, cntvct_el0
+  400ecc:	d5033fdf 	isb
+  400ed0:	cb020063 	sub	x3, x3, x2
+  400ed4:	f90013e3 	str	x3, [sp, #32]
+  400ed8:	f9000fe2 	str	x2, [sp, #24]
+  400edc:	f90017e1 	str	x1, [sp, #40]
+  400ee0:	f90003e0 	str	x0, [sp]
+  400ee4:	f94007e0 	ldr	x0, [sp, #8]
+  400ee8:	f94017e1 	ldr	x1, [sp, #40]
+  400eec:	f9000001 	str	x1, [x0]
+  400ef0:	f94013e0 	ldr	x0, [sp, #32]
+  400ef4:	9100c3ff 	add	sp, sp, #0x30
+  400ef8:	d65f03c0 	ret

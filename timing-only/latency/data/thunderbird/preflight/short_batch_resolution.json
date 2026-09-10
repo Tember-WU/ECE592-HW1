@@ -1,0 +1,92 @@
+[
+  {
+    "mode": "chase",
+    "batch": 16,
+    "intervals": 1000,
+    "zero_intervals": 0,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "chase",
+      "1000",
+      "16",
+      "59221",
+      "32",
+      "base",
+      "build/thunderbird/short_chase.u64"
+    ]
+  },
+  {
+    "mode": "sequential",
+    "batch": 16,
+    "intervals": 1000,
+    "zero_intervals": 0,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "sequential",
+      "1000",
+      "16",
+      "59221",
+      "32",
+      "base",
+      "build/thunderbird/short_sequential.u64"
+    ]
+  },
+  {
+    "mode": "paired",
+    "batch": 16,
+    "intervals": 2000,
+    "zero_intervals": 0,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "paired",
+      "1000",
+      "16",
+      "59221",
+      "32",
+      "base",
+      "build/thunderbird/short_paired.u64"
+    ]
+  },
+  {
+    "mode": "independent",
+    "batch": 16,
+    "intervals": 1000,
+    "zero_intervals": 0,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "independent",
+      "1000",
+      "16",
+      "59221",
+      "32",
+      "base",
+      "build/thunderbird/short_independent.u64"
+    ]
+  },
+  {
+    "mode": "empty",
+    "batch": 16,
+    "intervals": 1000,
+    "zero_intervals": 0,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "empty",
+      "1000",
+      "16",
+      "59221",
+      "32",
+      "base",
+      "build/thunderbird/short_empty.u64"
+    ]
+  }
+]

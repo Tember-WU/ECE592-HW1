@@ -69,14 +69,10 @@ class KernelTests(unittest.TestCase):
     def test_kernel_modes_and_cursor_verification(self):
         binary = ROOT / 'build' / os.environ.get('MACHINE', os.uname().nodename.split('.')[0]) / 'latency_bench'
         cpu = min(os.sched_getaffinity(0))
-        # Sixteen fast loads can finish within one 40 ns ARM counter tick.
-        # Use the formal batch length on ARM; paired mode still has four
-        # distinct batches in this 64 KiB / 64 B fixture.
-        batch = 256 if os.uname().machine == 'aarch64' else 16
         with tempfile.TemporaryDirectory() as tmp:
             for mode in ('chase', 'sequential', 'paired', 'independent', 'empty'):
                 target = Path(tmp) / (mode + '.u64')
-                cmd = [str(binary), '65536', '64', mode, '1000', str(batch), '59221', str(cpu), 'base', str(target)]
+                cmd = [str(binary), '65536', '64', mode, '1000', '16', '59221', str(cpu), 'base', str(target)]
                 result = subprocess.run(cmd, capture_output=True, text=True, check=True)
                 self.assertIn('dependency_result_verified=1', result.stderr)
                 raw = decode(target.read_bytes(), dict(mode=mode, samples=1000))

@@ -1,0 +1,9 @@
+w65536_chase_b256_huge passed [15.0]
+w65536_sequential_b256_huge passed [13.0]
+w65536_independent_b256_huge passed [4.0]
+w65536_paired_b256_huge passed [13.0, 12.0]
+w65536_empty_b256_huge passed [1.0]
+w4194304_chase_b1024_huge passed [982.0]
+w536870912_paired_b256_huge passed [627.0, 18.0]
+w65536_paired_b256_base passed [14.0, 14.0]
+All native checks passed

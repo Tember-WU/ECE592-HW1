@@ -1,0 +1,998 @@
+{
+  "machine": "thunderbird",
+  "experiment": "latency",
+  "run_id": "latency01",
+  "phase": "timing-only",
+  "started_utc": "2026-09-10T21:06:42.036590+00:00",
+  "status": "complete",
+  "command": [
+    "scripts/run_latency.py",
+    "--machine",
+    "thunderbird",
+    "--run-id",
+    "latency01"
+  ],
+  "jobs": [
+    {
+      "name": "l1_miss__alternate",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 524288
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l1_miss__alternate.u64"
+      ],
+      "raw_sha256": "eb995c68c569954e3aec3e21363bc4e02192e3fdd14b7f40ec1614408a995f2b"
+    },
+    {
+      "name": "l2_miss__repeat",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 4194304
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "4194304",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l2_miss__repeat.u64"
+      ],
+      "raw_sha256": "c86b74e02dfc14e916659093b26688561dde51fc8fde05b570209cd557a0f887"
+    },
+    {
+      "name": "calibration__l1_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "16384",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__l1_independent.u64"
+      ],
+      "raw_sha256": "5b36a004fea037486a01f38589e34b7f4a56a00c1873bca88078e2bd97ea504a"
+    },
+    {
+      "name": "calibration__l1_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "16384",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__l1_sequential.u64"
+      ],
+      "raw_sha256": "d9a1b1df44bb873da149a1879aba1b1bb8a7e3a59efad67a5568b54216ebb93f"
+    },
+    {
+      "name": "l1_hit__alternate",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 32768
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "32768",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l1_hit__alternate.u64"
+      ],
+      "raw_sha256": "9a9336295b6ca9686d20b12dd8a69e96521fe8af09d6a8d1d33b34bf19bc408e"
+    },
+    {
+      "name": "calibration__timer",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "empty",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "16384",
+        "64",
+        "empty",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__timer.u64"
+      ],
+      "raw_sha256": "3135b64f5d77388d71f566d1fe74b026ab85437cb9d63bbf2aad8619f4f00e22"
+    },
+    {
+      "name": "calibration__memory_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__memory_sequential.u64"
+      ],
+      "raw_sha256": "c1bbcc9a8941b82d3870a2a78d3bc10057712e82b2ef48a583e5e1562b1c00d9"
+    },
+    {
+      "name": "calibration__l1_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "16384",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__l1_long.u64"
+      ],
+      "raw_sha256": "efc2923c45cdcaf82ea879287f9a160caf24bb5cfbaf278f2cc7ac9d23888b75"
+    },
+    {
+      "name": "calibration__l2_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 262144
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "262144",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__l2_long.u64"
+      ],
+      "raw_sha256": "2a438feae99c42ecafb1b8444b3b3e7f96870648fc9cdcac4220b5481659b2a0"
+    },
+    {
+      "name": "calibration__llc_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 4194304
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "4194304",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__llc_long.u64"
+      ],
+      "raw_sha256": "e609cac8db9323e0b9552395ddec2da393fab87d33cc55effbaa3e7a9478bd35"
+    },
+    {
+      "name": "llc_hit__alternate",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/llc_hit__alternate.u64"
+      ],
+      "raw_sha256": "dade700315bae75b8414620529d367671b9edff80c613d7a9ef8c2b2f5488b79"
+    },
+    {
+      "name": "llc_miss__alternate",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 536870912
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "536870912",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/llc_miss__alternate.u64"
+      ],
+      "raw_sha256": "173de15d5cf029df25e91d44cee6f055e7790ded6dd0309ac1f2279bd969e748"
+    },
+    {
+      "name": "llc_hit__repeat",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 4194304
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "4194304",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/llc_hit__repeat.u64"
+      ],
+      "raw_sha256": "dd9516e9af4589a6d1ce8874294754e6707c1b6c5950d4c86481e50d5979339a"
+    },
+    {
+      "name": "l2_miss__alternate",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l2_miss__alternate.u64"
+      ],
+      "raw_sha256": "b9d94ba059ce65821274a2702f6c8094e1ea546a5c8f882ed07475e595cf77c3"
+    },
+    {
+      "name": "l2_hit__alternate",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 524288
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l2_hit__alternate.u64"
+      ],
+      "raw_sha256": "5559d46959a5aaacc41b5480f260cc9fa18362aa91a292c92e922dbc229bf5ac"
+    },
+    {
+      "name": "l2_hit__repeat",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 262144
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "262144",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l2_hit__repeat.u64"
+      ],
+      "raw_sha256": "b09abffe4710de5ae9a64636e940a812bb903b02a7877ffbff71a423af381e07"
+    },
+    {
+      "name": "l1_hit__primary",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "16384",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l1_hit__primary.u64"
+      ],
+      "raw_sha256": "6d7d01fc39f4c52cc3aefcab22ed03c5e2299e29ec897633a9cd0b505c86ef0c"
+    },
+    {
+      "name": "calibration__memory_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__memory_independent.u64"
+      ],
+      "raw_sha256": "b5f53ce4ba979371b189ba19cf6b00422c78bc71eef36592b140325aabc66fae"
+    },
+    {
+      "name": "l2_hit__primary",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 262144
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "262144",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l2_hit__primary.u64"
+      ],
+      "raw_sha256": "0a4d2c2a4a47dce9c83ae44c003b8e4d3586f79052e4ab19b83d07d81c5d2501"
+    },
+    {
+      "name": "calibration__llc_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 4194304
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "4194304",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__llc_sequential.u64"
+      ],
+      "raw_sha256": "776c4b22cccaf1a2e97267e64ea83e80eb9674e4a67398294418afc95c189191"
+    },
+    {
+      "name": "l1_miss__repeat",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 262144
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "262144",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l1_miss__repeat.u64"
+      ],
+      "raw_sha256": "b2cad8c7f002e076459fdee498f341e9beb5aab1e52c1fafe03186c0b5da18ac"
+    },
+    {
+      "name": "llc_miss__repeat",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/llc_miss__repeat.u64"
+      ],
+      "raw_sha256": "67de2bbb889211b0270e173d249caabe507642ccfc965bfb447490c99b3724e6"
+    },
+    {
+      "name": "calibration__l2_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 262144
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "262144",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__l2_independent.u64"
+      ],
+      "raw_sha256": "2706483f69c7d7889cc100a1611fcf7552e9a170115f469addf9d43fc9312823"
+    },
+    {
+      "name": "calibration__l2_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 262144
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "262144",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__l2_sequential.u64"
+      ],
+      "raw_sha256": "13369568ce346380f752502d42ad9df8a3ffb5cefb7e74cb59271b28b3e668bd"
+    },
+    {
+      "name": "llc_miss__primary",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/llc_miss__primary.u64"
+      ],
+      "raw_sha256": "48d84ec68920ebcb61cce51795e8fae56eb5e8172214e70d23a1a547e4c06b21"
+    },
+    {
+      "name": "l2_miss__primary",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 4194304
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "4194304",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l2_miss__primary.u64"
+      ],
+      "raw_sha256": "de592938363446e883bfddca3b8ffbda9836a7f8599f4dd7bd7d66384ac167a1"
+    },
+    {
+      "name": "llc_hit__primary",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 4194304
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "4194304",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/llc_hit__primary.u64"
+      ],
+      "raw_sha256": "da702af9eaaf244a1b31283f8fbc9eb9812c2ec2dd5d24d2dd684bdf64df04d0"
+    },
+    {
+      "name": "l1_hit__repeat",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "16384",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l1_hit__repeat.u64"
+      ],
+      "raw_sha256": "15350e837538c04e7d7bcb04755cd80b922b88ca56c7618b7624a4346f6c5a1b"
+    },
+    {
+      "name": "l1_miss__primary",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 262144
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "262144",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/l1_miss__primary.u64"
+      ],
+      "raw_sha256": "d794ad7ffbd2782d43db82296c30391e35d5ffac82b5f3050bb6d38b9817339d"
+    },
+    {
+      "name": "calibration__llc_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 4194304
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/latency_bench.bin",
+        "4194304",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/latency01/raw/calibration__llc_independent.u64"
+      ],
+      "raw_sha256": "3f12d827e65e179d5e27cc3ddb06308390f719d9ff508a433273932b7e52932c"
+    }
+  ],
+  "source_snapshot_hashes": {
+    "Makefile": "580dba2b0895ba4a7e6e4c66f619c0ca4c76308834468f4c7ca3752da0b7ca49",
+    "requirements.txt": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+    "README.md": "55aeafbcc3310d5aeca289876d2879eb9bb4189dd8e19e2f2089d6038622d3ff",
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093",
+    "scripts/analyze_latency.py": "b2d9d9336612146e7a373925b6d3da371c5efd7a0e8e05b2a3d74aee4878b6bf",
+    "scripts/common.py": "bacb509745fc0a41c8c00d5cb946e279ceb8887c465c5d263702452942908e86",
+    "scripts/run_latency.py": "36882314f22a52d2c29ae7afaf8e9654cb3ded6c968311a622ce4ea6808681ba"
+  },
+  "environment_sha256": "cd31cfc0ed3cdf7ad32135c94cdfcb3ef12de5311b27fe95113df313c38e7bea",
+  "finished_utc": "2026-09-10T21:10:25.448159+00:00"
+}

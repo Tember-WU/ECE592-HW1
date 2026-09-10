@@ -1,0 +1,288 @@
+{
+  "passed": true,
+  "timer": {
+    "timer_unit": "CNTVCT ticks",
+    "timer_frequency_hz": 25000000,
+    "observed_frequency_hz": 24999880.066,
+    "timer": "DSB ISH/ISB/CNTVCT/ISB ... DSB ISHLD/ISB/CNTVCT/ISB"
+  },
+  "kernels": {
+    "time_batch": {
+      "load_instructions": 16,
+      "dependency_streams": 1,
+      "no_timed_stack_access_or_calls": true
+    },
+    "time_independent": {
+      "load_instructions": 16,
+      "dependency_streams": 4,
+      "no_timed_stack_access_or_calls": true
+    }
+  },
+  "checks": [
+    {
+      "name": "w65536_chase_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/build/thunderbird/latency_bench",
+        "65536",
+        "64",
+        "chase",
+        "10000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/preflight/w65536_chase_b256_huge.u64"
+      ],
+      "shape": [
+        10000,
+        1
+      ],
+      "zero_intervals": 0,
+      "median_ticks": [
+        15.0
+      ],
+      "events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 35
+      },
+      "raw_sha256": "e9b30cafc649bde6d4591f69a1b3bedee4ad5b560737f4950720d006b810053e"
+    },
+    {
+      "name": "w65536_sequential_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/build/thunderbird/latency_bench",
+        "65536",
+        "64",
+        "sequential",
+        "10000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/preflight/w65536_sequential_b256_huge.u64"
+      ],
+      "shape": [
+        10000,
+        1
+      ],
+      "zero_intervals": 0,
+      "median_ticks": [
+        13.0
+      ],
+      "events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 0
+      },
+      "raw_sha256": "d21f33f04209f0752dbf699ec170774c185029ac15edd5b3506ebe40f1d9326a"
+    },
+    {
+      "name": "w65536_independent_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/build/thunderbird/latency_bench",
+        "65536",
+        "64",
+        "independent",
+        "10000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/preflight/w65536_independent_b256_huge.u64"
+      ],
+      "shape": [
+        10000,
+        1
+      ],
+      "zero_intervals": 0,
+      "median_ticks": [
+        4.0
+      ],
+      "events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 0
+      },
+      "raw_sha256": "ab47911d5437643727d5342bfed78ed9816e149d56bfc2d80c3fd6f302d86910"
+    },
+    {
+      "name": "w65536_paired_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/build/thunderbird/latency_bench",
+        "65536",
+        "64",
+        "paired",
+        "10000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/preflight/w65536_paired_b256_huge.u64"
+      ],
+      "shape": [
+        10000,
+        2
+      ],
+      "zero_intervals": 0,
+      "median_ticks": [
+        13.0,
+        12.0
+      ],
+      "events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 35
+      },
+      "raw_sha256": "d2ccb4f02c65965304392177a2d2860e8381d0f5bdbaabf6d214a4e3f959b48d"
+    },
+    {
+      "name": "w65536_empty_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/build/thunderbird/latency_bench",
+        "65536",
+        "64",
+        "empty",
+        "10000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/preflight/w65536_empty_b256_huge.u64"
+      ],
+      "shape": [
+        10000,
+        1
+      ],
+      "zero_intervals": 575,
+      "median_ticks": [
+        1.0
+      ],
+      "events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 0
+      },
+      "raw_sha256": "71110adf0cee83b3b0afc335e03c29adc876e280f59b5c10c8fa5fd4385f6be8"
+    },
+    {
+      "name": "w4194304_chase_b1024_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/build/thunderbird/latency_bench",
+        "4194304",
+        "64",
+        "chase",
+        "10000",
+        "1024",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/preflight/w4194304_chase_b1024_huge.u64"
+      ],
+      "shape": [
+        10000,
+        1
+      ],
+      "zero_intervals": 0,
+      "median_ticks": [
+        982.0
+      ],
+      "events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 44
+      },
+      "raw_sha256": "2633c8fed48802963ad9216e5342f784c17976202e87ce95ecd463c2c7413d20"
+    },
+    {
+      "name": "w536870912_paired_b256_huge",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/build/thunderbird/latency_bench",
+        "536870912",
+        "64",
+        "paired",
+        "10000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/preflight/w536870912_paired_b256_huge.u64"
+      ],
+      "shape": [
+        10000,
+        2
+      ],
+      "zero_intervals": 0,
+      "median_ticks": [
+        627.0,
+        18.0
+      ],
+      "events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 0
+      },
+      "raw_sha256": "8116f9473e38bb3ae280f64c7716b7025c1b899be049b47a55aa2ae344b7410d"
+    },
+    {
+      "name": "w65536_paired_b256_base",
+      "command": [
+        "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/build/thunderbird/latency_bench",
+        "65536",
+        "64",
+        "paired",
+        "10000",
+        "256",
+        "59221",
+        "32",
+        "base",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/thunderbird/preflight/w65536_paired_b256_base.u64"
+      ],
+      "shape": [
+        10000,
+        2
+      ],
+      "zero_intervals": 0,
+      "median_ticks": [
+        14.0,
+        14.0
+      ],
+      "events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 36
+      },
+      "raw_sha256": "c0b0cd2c11109a2d891de7fafe23ea01b0828aafec1d1828238fe53c421985a3"
+    }
+  ],
+  "numactl_path": "/home/swu35/ECE592-HW1/timing-only/capacity/build/thunderbird/deps/usr/bin/numactl",
+  "numactl_sha256": "84b2cef96caeda3460b6dc72bc42bd95fa6dfc6005b43f0bbf26abc040831a87",
+  "python": "/home/swu35/ECE592-HW1/timing-only/latency/../capacity/.venv/bin/python",
+  "numpy_version": "1.26.3",
+  "cpu": 32,
+  "numa_node": 0
+}
