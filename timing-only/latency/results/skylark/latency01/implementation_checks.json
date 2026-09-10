@@ -1,0 +1,145 @@
+{
+  "functional_tests_passed": 6,
+  "x86_timed_loops": {
+    "time_batch": {
+      "loads": 16,
+      "stack_accesses": 0,
+      "instructions": [
+        "lfence",
+        "rdtsc",
+        "shl    rdx,0x20",
+        "or     rax,rdx",
+        "mov    r8,rax",
+        "lfence",
+        "test   rsi,rsi",
+        "je     401317 <time_batch+0x71>",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "dec    rsi",
+        "jne    4012e2 <time_batch+0x3c>",
+        "rdtscp",
+        "shl    rdx,0x20",
+        "or     rax,rdx",
+        "sub    rax,r8",
+        "lfence"
+      ]
+    },
+    "time_independent": {
+      "loads": 16,
+      "stack_accesses": 0,
+      "instructions": [
+        "lfence",
+        "rdtsc",
+        "shl    rdx,0x20",
+        "or     rax,rdx",
+        "mov    r8,rax",
+        "lfence",
+        "mov    r11,QWORD PTR [r11]",
+        "mov    r10,QWORD PTR [r10]",
+        "mov    r9,QWORD PTR [r9]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    r11,QWORD PTR [r11]",
+        "mov    r10,QWORD PTR [r10]",
+        "mov    r9,QWORD PTR [r9]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    r11,QWORD PTR [r11]",
+        "mov    r10,QWORD PTR [r10]",
+        "mov    r9,QWORD PTR [r9]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "mov    r11,QWORD PTR [r11]",
+        "mov    r10,QWORD PTR [r10]",
+        "mov    r9,QWORD PTR [r9]",
+        "mov    rdi,QWORD PTR [rdi]",
+        "dec    rsi",
+        "jne    4014e8 <time_independent+0x70>",
+        "rdtscp",
+        "shl    rdx,0x20",
+        "or     rax,rdx",
+        "sub    rax,r8",
+        "lfence"
+      ]
+    }
+  },
+  "source_identical_to_artemisia": true,
+  "source_hashes": {
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093"
+  },
+  "probes": [
+    {
+      "command": [
+        "numactl",
+        "--membind=1",
+        "build/skylark/latency_bench",
+        "536870912",
+        "64",
+        "paired",
+        "1000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "build/skylark/probe-paired.u64"
+      ],
+      "returncode": 0,
+      "samples": 1000,
+      "shape": [
+        1000,
+        2
+      ],
+      "runtime_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 0
+      },
+      "diagnostic_only": true
+    },
+    {
+      "command": [
+        "numactl",
+        "--membind=1",
+        "build/skylark/latency_bench",
+        "131072",
+        "64",
+        "independent",
+        "1000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "build/skylark/probe-independent.u64"
+      ],
+      "returncode": 0,
+      "samples": 1000,
+      "shape": [
+        1000,
+        1
+      ],
+      "runtime_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "diagnostic_only": true
+    }
+  ],
+  "timer_unit": "TSC ticks, not calibrated core cycles",
+  "capacity_preflight_reference": "../capacity/data/skylark/preflight/kernel-compatibility.json",
+  "scope": "Native x86-64 execution on Skylark; AArch64 execution is not part of this run."
+}
