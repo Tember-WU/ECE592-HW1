@@ -1,0 +1,3 @@
+mkdir -p build/sunbird
+gcc -O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/cache_bench.c -o build/sunbird/cache_capacity
+objdump -d -Mintel build/sunbird/cache_capacity > build/sunbird/cache_capacity.dis

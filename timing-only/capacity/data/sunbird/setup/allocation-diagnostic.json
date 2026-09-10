@@ -1,0 +1,35 @@
+{
+  "started_utc": "2026-09-10T16:30:08.995172+00:00",
+  "purpose": "Untimed allocation diagnostic, no capacity samples",
+  "cpu": 32,
+  "numa_node": 0,
+  "buddyinfo_before": "Node 0, zone      DMA      0      0      0      0      0      0      0      0      1      1      2 \nNode 0, zone    DMA32    387    200    279    122     86     66     26     17      8      4     48 \nNode 0, zone   Normal   8121   1980   2234   1181    397    149     73     41     36     11      5 \nNode 1, zone   Normal   2233   1557   2509   1865    739    305     34     26     14      7     10 \n",
+  "trials": [
+    {
+      "bytes": 2097152,
+      "collapse_rc": 0,
+      "errno": 0,
+      "elapsed_seconds": 0.0007468000985682011
+    },
+    {
+      "bytes": 536870912,
+      "collapse_rc": -1,
+      "errno": 12,
+      "elapsed_seconds": 0.6089573428034782
+    },
+    {
+      "bytes": 2097152,
+      "collapse_rc": 0,
+      "errno": 0,
+      "elapsed_seconds": 0.0005562230944633484
+    },
+    {
+      "bytes": 536870912,
+      "collapse_rc": 0,
+      "errno": 0,
+      "elapsed_seconds": 0.2923938548192382
+    }
+  ],
+  "buddyinfo_after": "Node 0, zone      DMA      0      0      0      0      0      0      0      0      1      1      2 \nNode 0, zone    DMA32    510    267    317    153     97     73     33     17      8      4     48 \nNode 0, zone   Normal  49928  10673   3355   1461    485    229     93     56     34    128     62 \nNode 1, zone   Normal   2386   1629   2541   1896    746    305     34     26     14      7     10 \n",
+  "finished_utc": "2026-09-10T16:30:09.907721+00:00"
+}

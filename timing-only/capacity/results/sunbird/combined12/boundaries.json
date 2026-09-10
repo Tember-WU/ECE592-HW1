@@ -1,0 +1,38 @@
+[
+  {
+    "level": "L1D",
+    "estimate": 32768,
+    "interval": [32768, 36864],
+    "zoom": [16384, 65536],
+    "unit": 1024,
+    "box_points": [32768, 36864, 40960],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 32 KiB; the sampled major transition is between 32 and 36 KiB. This empirical interval is not a statistical confidence interval."
+  },
+  {
+    "level": "L2",
+    "estimate": 262144,
+    "interval": [262144, 294912],
+    "zoom": [131072, 393216],
+    "unit": 1024,
+    "box_points": [262144, 294912, 327680],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 256 KiB; the sampled major transition is between 256 and 288 KiB. This empirical interval is not a statistical confidence interval."
+  },
+  {
+    "level": "LLC effective transition",
+    "estimate": null,
+    "interval": [16777216, 67108864],
+    "zoom": [16777216, 67108864],
+    "unit": 1048576,
+    "box_points": [29360128, 41943040, 67108864],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Observed broad rise across the 16-64 MiB measurement region, with clear growth from 28 to 40 MiB and layout/page dependence. This does not bound nominal physical LLC capacity."
+  }
+]

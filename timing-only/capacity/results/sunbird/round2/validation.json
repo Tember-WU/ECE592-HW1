@@ -1,0 +1,54 @@
+{
+  "machine": "sunbird",
+  "run_id": "round2",
+  "passed": true,
+  "errors": [],
+  "checked_at_utc": "2026-09-10T16:41:33.382142+00:00",
+  "collection_status": "complete",
+  "expected_configurations": 57,
+  "complete_configurations": 57,
+  "total_timed_batches": 57000000,
+  "raw_bytes": 456000000,
+  "raw_gzip_bytes": 57030291,
+  "started_utc": "2026-09-10T16:35:38.034031+00:00",
+  "finished_utc": "2026-09-10T16:40:57.587201+00:00",
+  "wall_seconds": 319.55317,
+  "cpu": 32,
+  "numa_node": 0,
+  "smt_siblings": [
+    8
+  ],
+  "smt_busy_percent_range": [
+    0.0,
+    0.0
+  ],
+  "huge_configurations": 54,
+  "base_configurations": 3,
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "major_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "voluntary_switches": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "involuntary_switches": {
+      "minimum": 0,
+      "maximum": 7,
+      "total": 91
+    }
+  },
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+  "binary_sha256": "1812acb1265cf7b491677c33058b76a7c8547091e4c60d619436a7e36b9d8bd1",
+  "audit_script_sha256": "1da4edee6c95864620c7bf28bcd3523995bf1e684c2024861a7a7e0ef0f059d9",
+  "raw_checks": "Counts, positive samples, and hashes independently checked; analysis provenance matched. All statistics recomputed by analyze_capacity.py.",
+  "caveat": "Data integrity and page checks do not establish freedom from machine interference."
+}

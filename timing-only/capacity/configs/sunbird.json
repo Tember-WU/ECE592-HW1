@@ -1,0 +1,8 @@
+{
+  "machine": "sunbird",
+  "hostname": "sunbird",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 0,
+  "capacity": "common/round1.json"
+}

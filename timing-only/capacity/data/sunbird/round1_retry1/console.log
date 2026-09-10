@@ -1,0 +1,82 @@
+Machine: sunbird; CPU: 32; NUMA node: 0
+39 points; 39,000,000 timed batches; 312,000,000 raw bytes before compression
+Raw data: /home/swu35/ECE592-HW1/timing-only/capacity/data/sunbird/round1_retry1
+Analysis output: /home/swu35/ECE592-HW1/timing-only/capacity/results/sunbird/round1_retry1
+[1/39] running coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000
+  median=9.1094, p05–p95=8.7969–9.4531, elapsed=1.0s; saved all 1,000,000 samples
+[2/39] running coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000
+  median=9.0781, p05–p95=8.7969–9.4531, elapsed=1.0s; saved all 1,000,000 samples
+[3/39] running coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5312, elapsed=0.5s; saved all 1,000,000 samples
+[4/39] running coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000
+  median=9.0938, p05–p95=8.7969–9.4375, elapsed=1.0s; saved all 1,000,000 samples
+[5/39] running coarse_w536870912_s64_random_b256_seed59201_huge_n1000000
+  median=210.3906, p05–p95=204.0156–215.4219, elapsed=25.6s; saved all 1,000,000 samples
+[6/39] running coarse_w33554432_s64_random_b256_seed59201_huge_n1000000
+  median=98.1875, p05–p95=81.5781–190.6570, elapsed=11.7s; saved all 1,000,000 samples
+[7/39] running coarse_w4194304_s64_random_b256_seed59201_huge_n1000000
+  median=41.7188, p05–p95=41.0156–42.3125, elapsed=4.4s; saved all 1,000,000 samples
+[8/39] running coarse_w268435456_s64_random_b256_seed59201_huge_n1000000
+  median=209.2031, p05–p95=202.8750–214.2969, elapsed=23.5s; saved all 1,000,000 samples
+[9/39] running coarse_w4194304_s64_sequential_b256_seed59201_huge_n1000000
+  median=9.0781, p05–p95=8.7969–9.4531, elapsed=1.0s; saved all 1,000,000 samples
+[10/39] running coarse_w1048576_s64_random_b256_seed59201_huge_n1000000
+  median=41.6719, p05–p95=41.2344–42.1250, elapsed=4.3s; saved all 1,000,000 samples
+[11/39] running coarse_w32768_s64_random_b256_seed59201_huge_n1000000
+  median=4.4062, p05–p95=4.3750–4.7812, elapsed=0.5s; saved all 1,000,000 samples
+[12/39] running coarse_w536870912_s64_sequential_b256_seed59201_huge_n1000000
+  median=26.7344, p05–p95=23.6406–31.3438, elapsed=3.5s; saved all 1,000,000 samples
+[13/39] running coarse_w524288_s64_random_b256_seed59201_huge_n1000000
+  median=41.6094, p05–p95=41.0000–42.5469, elapsed=4.3s; saved all 1,000,000 samples
+[14/39] running coarse_w4096_s64_random_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5312, elapsed=0.5s; saved all 1,000,000 samples
+[15/39] running coarse_w262144_s64_random_b256_seed59201_huge_n1000000
+  median=12.6094, p05–p95=12.2500–13.4219, elapsed=1.4s; saved all 1,000,000 samples
+[16/39] running coarse_w2048_s64_sequential_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5312, elapsed=0.5s; saved all 1,000,000 samples
+[17/39] running coarse_w16777216_s64_sequential_b256_seed59201_huge_n1000000
+  median=9.0781, p05–p95=8.7812–9.4531, elapsed=1.0s; saved all 1,000,000 samples
+[18/39] running coarse_w16777216_s64_random_b256_seed59201_huge_n1000000
+  median=41.7188, p05–p95=41.1406–42.4062, elapsed=4.4s; saved all 1,000,000 samples
+[19/39] running coarse_w4096_s64_sequential_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5312, elapsed=0.5s; saved all 1,000,000 samples
+[20/39] running coarse_w262144_s64_sequential_b256_seed59201_huge_n1000000
+  median=6.5312, p05–p95=6.0312–7.0312, elapsed=0.7s; saved all 1,000,000 samples
+[21/39] running coarse_w131072_s64_random_b256_seed59201_huge_n1000000
+  median=12.1562, p05–p95=12.1250–12.1719, elapsed=1.3s; saved all 1,000,000 samples
+[22/39] running coarse_w8388608_s64_sequential_b256_seed59201_huge_n1000000
+  median=9.0781, p05–p95=8.7969–9.4531, elapsed=1.0s; saved all 1,000,000 samples
+[23/39] running coarse_w67108864_s64_sequential_b256_seed59201_huge_n1000000
+  median=26.6562, p05–p95=23.5938–31.2188, elapsed=2.9s; saved all 1,000,000 samples
+[24/39] running coarse_w16384_s64_random_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5312, elapsed=0.5s; saved all 1,000,000 samples
+[25/39] running coarse_w134217728_s64_sequential_b256_seed59201_huge_n1000000
+  median=26.7500, p05–p95=23.6406–31.3438, elapsed=3.0s; saved all 1,000,000 samples
+[26/39] running coarse_w67108864_s64_random_b256_seed59201_huge_n1000000
+  median=202.5469, p05–p95=196.4062–208.0625, elapsed=21.3s; saved all 1,000,000 samples
+[27/39] running coarse_w65536_s64_sequential_b256_seed59201_huge_n1000000
+  median=6.5312, p05–p95=6.0312–6.5781, elapsed=0.7s; saved all 1,000,000 samples
+[28/39] running coarse_w268435456_s64_sequential_b256_seed59201_huge_n1000000
+  median=26.7500, p05–p95=23.6406–31.3438, elapsed=3.2s; saved all 1,000,000 samples
+[29/39] running coarse_w2048_s64_random_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5312, elapsed=0.5s; saved all 1,000,000 samples
+[30/39] running coarse_w16384_s64_sequential_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5312, elapsed=0.5s; saved all 1,000,000 samples
+[31/39] running coarse_w8388608_s64_random_b256_seed59201_huge_n1000000
+  median=41.7188, p05–p95=41.1250–42.3125, elapsed=4.4s; saved all 1,000,000 samples
+[32/39] running coarse_w2097152_s64_random_b256_seed59201_huge_n1000000
+  median=41.7188, p05–p95=41.0469–42.3594, elapsed=4.3s; saved all 1,000,000 samples
+[33/39] running coarse_w131072_s64_sequential_b256_seed59201_huge_n1000000
+  median=6.5312, p05–p95=6.0312–6.6719, elapsed=0.7s; saved all 1,000,000 samples
+[34/39] running coarse_w32768_s64_sequential_b256_seed59201_huge_n1000000
+  median=4.1875, p05–p95=4.1562–4.5625, elapsed=0.5s; saved all 1,000,000 samples
+[35/39] running coarse_w2048_s64_empty_b256_seed59201_huge_n1000000
+  median=56.0000, p05–p95=52.0000–75.0000, elapsed=0.1s; saved all 1,000,000 samples
+[36/39] running coarse_w65536_s64_random_b256_seed59201_huge_n1000000
+  median=12.1250, p05–p95=12.0938–12.1562, elapsed=1.3s; saved all 1,000,000 samples
+[37/39] running coarse_w134217728_s64_random_b256_seed59201_huge_n1000000
+  median=207.0938, p05–p95=200.7969–212.2969, elapsed=22.2s; saved all 1,000,000 samples
+[38/39] running coarse_w33554432_s64_sequential_b256_seed59201_huge_n1000000
+  median=18.8281, p05–p95=15.5312–23.5312, elapsed=2.0s; saved all 1,000,000 samples
+[39/39] running coarse_w8192_s64_random_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5312, elapsed=0.5s; saved all 1,000,000 samples
