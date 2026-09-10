@@ -1,0 +1,38 @@
+[
+  {
+    "level": "L1D",
+    "estimate": 32768,
+    "interval": [32768, 36864],
+    "zoom": [16384, 49152],
+    "unit": 1024,
+    "box_points": [32768, 36864, 40960],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 32 KiB. The 32-36 KiB sampled onset bracket is an empirical neighborhood, not a confidence interval or specification."
+  },
+  {
+    "level": "L2",
+    "estimate": 262144,
+    "interval": [262144, 294912],
+    "zoom": [131072, 393216],
+    "unit": 1024,
+    "box_points": [262144, 294912, 327680],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 256 KiB. The 256 KiB repeat medians remain near the second plateau, while 288 KiB has risen. This sampled onset bracket is not a confidence interval."
+  },
+  {
+    "level": "LLC effective transition",
+    "estimate": null,
+    "interval": [5242880, 8388608],
+    "zoom": [4194304, 8388608],
+    "unit": 1048576,
+    "box_points": [5242880, 6291456, 7340032, 8388608],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "The median remains near its previous plateau at 5 MiB, begins rising at 6 MiB and is much higher at 7-8 MiB. This 5-8 MiB effective transition depends on layout and time; it does not bound nominal physical capacity."
+  }
+]

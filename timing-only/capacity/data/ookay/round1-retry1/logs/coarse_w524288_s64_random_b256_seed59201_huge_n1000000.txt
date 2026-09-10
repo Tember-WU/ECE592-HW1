@@ -1,0 +1,10 @@
+mapping_before:
+KernelPageSize:        4 kB
+AnonHugePages:      2048 kB
+numa_mapping: 7e524a600000 bind:0 anon=512 dirty=512 active=0 N0=512 kernelpagesize_kB=4
+mapping_after:
+KernelPageSize:        4 kB
+AnonHugePages:      2048 kB
+numa_mapping: 7e524a600000 bind:0 anon=512 dirty=512 active=0 N0=512 kernelpagesize_kB=4
+bytes=524288 spacing=64 mode=random samples=1000000 batch=256 seed=59201 cpu_start=2 cpu_end=2 warm_loads=1048576 base=0x7e524a600000 mapped_bytes=2097152
+measurement_minor_faults=0 major_faults=0 voluntary_switches=0 involuntary_switches=0

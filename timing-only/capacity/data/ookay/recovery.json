@@ -1,0 +1,15 @@
+{
+  "machine": "ookay",
+  "failed_run_id": "round1",
+  "status": "failed",
+  "started_utc": "2026-09-10T16:52:06.330119+00:00",
+  "finished_utc": "2026-09-10T16:52:11.003624+00:00",
+  "error": "MADV_COLLAPSE: Cannot allocate memory\n",
+  "completed_configurations": 4,
+  "failed_configurations": [
+    "coarse_w536870912_s64_random_b256_seed59201_huge_n1000000"
+  ],
+  "replacement_run_id": "round1-retry1",
+  "handling": "Preserved all failed-run files. Started the complete 39-point protocol again with a new run ID and unchanged settings. Failed-run samples are excluded from the two-round analysis.",
+  "cause": "MADV_COLLAPSE reported ENOMEM for a 512 MiB mapping. The underlying resource/fragmentation cause was not isolated; no system settings or other processes were changed."
+}
