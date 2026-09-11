@@ -1,15 +1,31 @@
+# Skylark, Artemisia (x86_64) and the AArch64 machine (Thunderbird / Ampere Altra).
+#
+# Usage: make all   (or just 'make')
+#        make clean
+
 CXX = g++
+UNAME_M := $(shell uname -m)
 
-CXXFLAGS = -O0 -g -std=c++11 -m64 -Wall -Wextra
+COMMON_FLAGS = -O0 -g -std=c++11 -Wall -Wextra -fno-omit-frame-pointer
 
-TARGET = line_size_bench
+# -m64 is an x86-only flag; aarch64-linux-gnu-g++ does not understand it and will error.
+ifeq ($(UNAME_M),x86_64)
+    CXXFLAGS = $(COMMON_FLAGS) -m64
+else
+    CXXFLAGS = $(COMMON_FLAGS)
+endif
 
-SOURCES = line_size_bench.cpp
+TARGETS = line_size_bench
 
-all: $(TARGET)
+all: $(TARGETS)
 
-$(TARGET): $(SOURCES)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES)
+# associativity_bench: associativity_bench.cpp timer_compat.h
+#	$(CXX) $(CXXFLAGS) -o $@ associativity_bench.cpp
+
+line_size_bench: line_size_bench.cpp timer_compat.h
+	$(CXX) $(CXXFLAGS) -o $@ line_size_bench.cpp
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGETS)
+
+.PHONY: all clean

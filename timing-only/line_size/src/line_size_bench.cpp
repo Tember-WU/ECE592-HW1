@@ -11,23 +11,16 @@
 #include <algorithm>
 #include <random>
 #include <chrono>
-#include <x86intrin.h>   // _rdtsc, _rdtscp, _mm_lfence
+#if defined(__x86_64__) || defined(_M_X64)
+#include <x86intrin.h>   // _rdtsc, _rdtscp, _mm_lfence -- x86 only, unused on AArch64
+#endif
+#include "timer_compat.h"
 
 // =============== Timer ===============
-static inline uint64_t tsc_start() {
-    _mm_lfence();
-    uint64_t t = __rdtsc();
-    _mm_lfence();
-    return t;
-}
-
-static inline uint64_t tsc_stop() {
-    unsigned aux;
-    _mm_lfence();                    // ensure prior insns complete
-    uint64_t t = __rdtscp(&aux);    // waits for prior loads
-    _mm_lfence();                    // prevent later insns hoisting
-    return t;
-}
+// Forwards to the portable backend so this file compiles on both x86-64 and AArch64
+// (Thunderbird) without touching x86 intrinsics directly.
+static inline uint64_t tsc_start() { return timer_start(); }
+static inline uint64_t tsc_stop()  { return timer_stop(); }
 
 // =============== Parameter parsing ===============
 struct Config {

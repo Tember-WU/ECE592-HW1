@@ -14,6 +14,8 @@ import subprocess
 import os
 import sys
 import glob
+import socket
+import json
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -23,14 +25,40 @@ from scipy import stats
 # ============ Configuration ============
 BENCH_EXE = "../src/line_size_bench"
 
-# Pinning (handout §5 "Global Measurement Requirements": pin to one logical CPU on every
-# test; §8.2 repeats this per-experiment). Chosen from `lscpu -e=CPU,CORE,SOCKET,NODE`:
-#   CPU 4 == CORE 4, SOCKET 0, NODE 0 -- no SMT sibling on this machine (CPU==CORE for all
-#   rows), so there is no sibling-interference concern to document beyond "none present."
-PINNED_CPU = 4
-PINNED_CORE = 4
-PINNED_SOCKET = 0
-PINNED_NODE = 0
+def load_machine_config():
+    """Load configs/<hostname>.json. Every machine (Sunbird, Charnwood, Ookay, Upgrade,
+    Crux, Skylark, Thunderbird, Artemisia) needs its own file -- see configs/skylark.json
+    for a filled-in example and the other configs/*.json files for templates. Pinning
+    (§5) and cache-geometry assumptions (§8.2) are per-machine, not shared across hosts."""
+    hostname = socket.gethostname().split(".")[0].lower()
+    path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "..",
+        "configs",
+        f"{hostname}.json"
+    )   
+    if not os.path.exists(path):
+        raise SystemExit(
+            f"No config found at {path}. Copy a template from configs/, run "
+            f"`lscpu -e=CPU,CORE,SOCKET,NODE` on this host, and fill in pinned_cpu/core/"
+            f"socket/node before running here."
+        )
+    with open(path) as f:
+        cfg = json.load(f)
+    if cfg.get("pinned_cpu") is None:
+        raise SystemExit(f"configs/{hostname}.json has pinned_cpu=null -- fill it in first.")
+    return cfg
+
+CFG = load_machine_config()
+PINNED_CPU = CFG["pinned_cpu"]
+PINNED_CORE = CFG.get("pinned_core")
+PINNED_SOCKET = CFG.get("pinned_socket")
+PINNED_NODE = CFG.get("pinned_node")
+# Grouping window (bytes) for random_lines/sequential_lines traversal order -- must be >=
+# the largest stride tested anywhere in the sweeps below. NOT a guess at the real
+# cache-line size (see line_size_bench.cpp build_chain() for why hardcoding this to the
+# candidate answer, e.g. 64, would bias the result).
+GROUP_WINDOW = CFG.get("line_size_group_window", 512)
 
 BASE_PARAMS = {
     "footprint": 262144,   # 256 KiB
