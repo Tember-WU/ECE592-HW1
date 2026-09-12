@@ -19,7 +19,6 @@ import json
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 from scipy import stats
 
 # ============ Configuration ============
@@ -36,7 +35,7 @@ def load_machine_config():
         "..",
         "configs",
         f"{hostname}.json"
-    )   
+    )
     if not os.path.exists(path):
         raise SystemExit(
             f"No config found at {path}. Copy a template from configs/, run "
@@ -83,7 +82,7 @@ SWEEPS = {
         "seed_offset": 0,
     },
     "dense": {
-        "strides": [48, 56, 60, 64, 68, 72, 80, 96],
+        "strides": [40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 96],
         "alignments": [0, 16, 32, 48],
         "mode": "random_lines",
         "seed_offset": 10,
@@ -216,22 +215,12 @@ def plot_latency_vs_stride(df_stats):
         # Aggregate over alignments: use median of medians, and range of Q1/Q3 across alignments
         grouped = sub.groupby("stride").agg({
             "median": "median",
-            "q1": "min",
-            "q3": "max",
+            "q1": "min",    # min over alignments
+            "q3": "max",    # max over alignments
         }).reset_index()
-
-        # Error bars represent the Q1-Q3 range
-        yerr = np.vstack([
-            grouped["median"] - grouped["q1"],
-            grouped["q3"] - grouped["median"]
-        ])
-        ax.errorbar(
-            grouped["stride"].to_numpy(),
-            grouped["median"].to_numpy(),
-            yerr=yerr,
-            fmt='o-',
-            label=sweep
-        )
+        ax.errorbar(grouped["stride"], grouped["median"],
+                    yerr=[grouped["median"]-grouped["q1"], grouped["q3"]-grouped["median"]],
+                    marker='o', capsize=3, label=sweep)
     ax.set_xscale('log', base=2)
     ax.set_xlabel("Stride (bytes)")
     ax.set_ylabel("Median latency (TSC ticks / access)")
