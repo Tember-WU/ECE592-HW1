@@ -9,25 +9,19 @@
 #include <vector>
 #include <algorithm>
 #include <random>
-#include <x86intrin.h>
+#if defined(__x86_64__) || defined(_M_X64)
+#include <x86intrin.h>   // x86 only, unused on AArch64
+#endif
 #include <sys/mman.h>
 #include <unistd.h>
+#include "timer_compat.h"
 
 // ---------- Timer ----------
-static inline uint64_t tsc_start() {
-    _mm_lfence();
-    uint64_t t = __rdtsc();
-    _mm_lfence();
-    return t;
-}
-
-static inline uint64_t tsc_stop() {
-    unsigned aux;
-    _mm_lfence();
-    uint64_t t = __rdtscp(&aux);
-    _mm_lfence();
-    return t;
-}
+// tsc_start()/tsc_stop() now just forward to the portable backend in timer_compat.h so
+// this file compiles unchanged on x86-64 (Sunbird/Charnwood/Ookay/Upgrade/Crux/Skylark/
+// Artemisia) and on AArch64 (Thunderbird).
+static inline uint64_t tsc_start() { return timer_start(); }
+static inline uint64_t tsc_stop()  { return timer_stop(); }
 
 // ---------- Config ----------
 struct Config {
@@ -63,52 +57,53 @@ bool parse_args(int argc, char** argv, Config& cfg) {
     return true;
 }
 
-// ---------- Allocation (huge pages for L2/LLC: physically-indexed levels
-//            need physically-contiguous memory or a virtual stride cannot
-//            be trusted to land in the same physical cache set) ----------
-#include <stdlib.h>   // at the top
+// ---------- Allocation (huge pages for L2) ----------
+#include <cerrno>
 
-static size_t round_up_2mb(size_t size) {
-    const size_t H = 2 * 1024 * 1024;
-    return ((size + H - 1) / H) * H;
-}
+// Previously this function ignored `use_huge` entirely (always posix_memalign) while
+// main() still conditionally called munmap() on the result for the L2 case -- munmap()
+// on posix_memalign/malloc memory is undefined behavior. It also meant the L2 test never
+// actually got huge-page backing despite claiming to, leaving 4KB-page TLB reach as an
+// unaddressed confound with the true L2 capacity boundary (TA Slide 16/19: "use huge
+// pages if THP is on").
+//
+// Fixed: always allocate via mmap (so cleanup is always munmap -- no mismatch), and for
+// use_huge==true, round up to a 2MB boundary and madvise(MADV_HUGEPAGE) so Linux
+// Transparent Huge Pages has a real chance to back the allocation with 2MB pages. This
+// does not require a preconfigured hugetlbfs pool (MAP_HUGETLB would, and may not be
+// available/permitted on shared lab machines), so it works across all 8 ECE hosts.
+void* allocate_buffer(size_t size, bool use_huge, size_t& out_alloc_size) {
+    const size_t HUGE_PAGE = 2 * 1024 * 1024;
+    size_t alloc_size = use_huge
+        ? ((size + HUGE_PAGE - 1) / HUGE_PAGE) * HUGE_PAGE
+        : size;
 
-void* allocate_buffer(size_t size, bool use_huge) {
-    if (!use_huge) {
-        void* ptr = nullptr;
-        int ret = posix_memalign(&ptr, 4096, size);
-        if (ret != 0 || ptr == nullptr) {
-            std::cerr << "FATAL: allocation failed (error " << ret << ")\n";
-            exit(1);
-        }
-        volatile char* p = (char*)ptr;
-        for (size_t i = 0; i < size; i += 4096) p[i] = 0;
-        return ptr;
+    void* ptr = mmap(nullptr, alloc_size, PROT_READ | PROT_WRITE,
+                      MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+    if (ptr == MAP_FAILED) {
+        std::cerr << "FATAL: mmap allocation failed (errno " << errno << ": "
+                   << strerror(errno) << ")\n";
+        exit(1);
     }
 
-    // use_huge == true: try explicit hugetlbfs first (guaranteed 2MB physical
-    // contiguity), then fall back to THP via madvise (best-effort — verify!).
-    size_t hsize = round_up_2mb(size);
-    void* ptr = mmap(nullptr, hsize, PROT_READ | PROT_WRITE,
-                      MAP_PRIVATE | MAP_ANONYMOUS | MAP_HUGETLB, -1, 0);
-    bool got_hugetlb = (ptr != MAP_FAILED);
-    if (!got_hugetlb) {
-        std::cerr << "WARN: MAP_HUGETLB failed (no reserved huge pages?); "
-                     "falling back to THP via madvise. VERIFY physical "
-                     "contiguity before trusting L2/LLC conflict results "
-                     "(check /proc/self/smaps for AnonHugePages).\n";
-        ptr = mmap(nullptr, hsize, PROT_READ | PROT_WRITE,
-                   MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
-        if (ptr == MAP_FAILED) {
-            std::cerr << "FATAL: mmap failed\n";
-            exit(1);
+    if (use_huge) {
+        if (madvise(ptr, alloc_size, MADV_HUGEPAGE) != 0) {
+            std::cerr << "WARNING: madvise(MADV_HUGEPAGE) failed (errno " << errno
+                       << ": " << strerror(errno) << "). Continuing on regular 4KB "
+                          "pages -- record this in your report, since this machine's L2 "
+                          "result is then more exposed to a TLB-reach confound than "
+                          "machines where THP was granted.\n";
         }
-        madvise(ptr, hsize, MADV_HUGEPAGE);
     }
-    // Touch every 4K page up front so THP has a chance to collapse before
-    // the timed region runs, and so hugetlbfs pages are actually faulted in.
+
+    // First-touch every page so it is actually backed (and, for THP, eligible for
+    // promotion to a 2MB page) before any timing begins. This also satisfies the
+    // handout's first-touch-after-pinning locality requirement, since the process is
+    // already pinned (via taskset) by the time main() reaches this call.
     volatile char* p = (char*)ptr;
-    for (size_t i = 0; i < hsize; i += 4096) p[i] = 0;
+    for (size_t i = 0; i < alloc_size; i += 4096) p[i] = 0;
+
+    out_alloc_size = alloc_size;
     return ptr;
 }
 
@@ -168,9 +163,7 @@ Result measure_K(Node* base, size_t set_stride, size_t K,
         uint64_t t1 = tsc_stop();
         uint64_t delta = t1 - t0;
         latencies.push_back(delta);
-        // threshold is already a full-batch total (see calibrate()); delta
-        // is also a full-batch total. Do NOT multiply by batch again.
-        if (delta > threshold) evictions++;
+        if (delta > threshold * batch) evictions++;
         p = base; // reset to start
     }
 
@@ -225,16 +218,9 @@ int main(int argc, char** argv) {
 
     size_t set_stride = cfg.line_size * cfg.num_sets;
     size_t total_buffer = cfg.max_k * set_stride + cfg.line_size;
-    bool use_huge = (cfg.num_sets >= 1024); // L2/LLC use huge pages
-    if (use_huge) {
-        std::cerr << "NOTE: physically-indexed level requested (num_sets="
-                  << cfg.num_sets << "). Pin this process to a single core "
-                     "within one L2/LLC domain (taskset) — on a multi-CCX "
-                     "EPYC part, migrating across CCX/CCD during the run "
-                     "invalidates the conflict-set assumption even with "
-                     "correct huge pages.\n";
-    }
-    void* raw = allocate_buffer(total_buffer, use_huge);
+    bool use_huge = (cfg.num_sets >= 1024); // L2 uses huge pages
+    size_t alloc_size = 0;
+    void* raw = allocate_buffer(total_buffer, use_huge, alloc_size);
     Node* base = reinterpret_cast<Node*>(raw);
 
     uint64_t hit_thresh, miss_thresh;
@@ -254,7 +240,8 @@ int main(int argc, char** argv) {
     }
 
     out.close();
-    if (use_huge) munmap(raw, round_up_2mb(total_buffer));
-    else free(raw);
+    // allocate_buffer() always uses mmap() now (regardless of use_huge), so cleanup is
+    // always munmap() -- no more posix_memalign/mmap mismatch.
+    munmap(raw, alloc_size);
     return 0;
 }

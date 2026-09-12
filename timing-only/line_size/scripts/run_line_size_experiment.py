@@ -216,12 +216,22 @@ def plot_latency_vs_stride(df_stats):
         # Aggregate over alignments: use median of medians, and range of Q1/Q3 across alignments
         grouped = sub.groupby("stride").agg({
             "median": "median",
-            "q1": "min",    # min over alignments
-            "q3": "max",    # max over alignments
+            "q1": "min",
+            "q3": "max",
         }).reset_index()
-        ax.errorbar(grouped["stride"], grouped["median"],
-                    yerr=[grouped["median"]-grouped["q1"], grouped["q3"]-grouped["median"]],
-                    marker='o', capsize=3, label=sweep)
+
+        # Error bars represent the Q1-Q3 range
+        yerr = np.vstack([
+            grouped["median"] - grouped["q1"],
+            grouped["q3"] - grouped["median"]
+        ])
+        ax.errorbar(
+            grouped["stride"].to_numpy(),
+            grouped["median"].to_numpy(),
+            yerr=yerr,
+            fmt='o-',
+            label=sweep
+        )
     ax.set_xscale('log', base=2)
     ax.set_xlabel("Stride (bytes)")
     ax.set_ylabel("Median latency (TSC ticks / access)")
