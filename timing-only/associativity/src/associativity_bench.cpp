@@ -163,7 +163,14 @@ Result measure_K(Node* base, size_t set_stride, size_t K,
         uint64_t t1 = tsc_stop();
         uint64_t delta = t1 - t0;
         latencies.push_back(delta);
-        if (delta > threshold * batch) evictions++;
+        // BUG FIX: hit_threshold/miss_threshold (and therefore `threshold`) are already
+        // raw batch-total tick counts, the same units as `delta` -- both come from timing
+        // one full batch of `batch` dependent accesses. The previous comparison
+        // `delta > threshold * batch` multiplied by batch a second time, inflating the
+        // threshold by ~100x and making it essentially unreachable, so
+        // eviction_probability stayed near 0 regardless of true cache behavior. Compare
+        // directly instead.
+        if (delta > threshold) evictions++;
         p = base; // reset to start
     }
 
@@ -218,7 +225,17 @@ int main(int argc, char** argv) {
 
     size_t set_stride = cfg.line_size * cfg.num_sets;
     size_t total_buffer = cfg.max_k * set_stride + cfg.line_size;
-    bool use_huge = (cfg.num_sets >= 1024); // L2 uses huge pages
+    // Always request huge-page backing, not just when num_sets looked "L2-sized".
+    // Reasoning: the L1 conflict-set trick (candidate addresses spaced at multiples of
+    // num_sets*line_size) is only guaranteed to land in the same real L1 set when the
+    // machine's TRUE index+offset bit width fits inside whatever low-address-bit range
+    // is guaranteed identical between virtual and physical addresses. A 4KB page only
+    // guarantees the low 12 bits; if a machine's real L1 has more sets than assumed
+    // (e.g. a 64KiB L1D with more index bits than a typical 32KiB design), a 4KB-page
+    // stride is not enough. A 2MB huge page guarantees the low 21 bits, which comfortably
+    // covers any plausible L1 design, so requesting huge pages here removes that
+    // uncertainty at negligible cost for a small L1 buffer.
+    bool use_huge = true;
     size_t alloc_size = 0;
     void* raw = allocate_buffer(total_buffer, use_huge, alloc_size);
     Node* base = reinterpret_cast<Node*>(raw);

@@ -1,0 +1,41 @@
+{
+    "machine": "skylark",
+    "hostname": "skylark",
+    "isa": "x86_64",
+    "experiment": "line_size",
+    "fixed_params": {
+      "cpu": 0,
+      "numa_node": 0,
+      "affinity": "taskset -c 0",
+      "timer": "rdtsc + lfence/rdtscp",
+      "samples": 1000000,
+      "batch_size": 1024,
+      "warmup_batches": 1000,
+      "footprint_bytes": 262144,
+      "alignment": 64,
+      "pages": "huge",                
+      "mode": "randomized_lines"    
+    },
+    "initial_sweep": {
+      "order_seed": 701,
+      "strides": [8, 16, 32, 64, 128, 256, 512],
+      "alignments": [0, 16, 32, 48]
+    },
+    "dense_sweep": {
+      "order_seed": 702,
+      "strides": [48, 56, 60, 64, 68, 72, 80, 96],
+      "alignments": [0, 16, 32, 48]
+    },
+    "control_sequential": {
+      "order_seed": 703,
+      "strides": [8, 16, 32, 64, 128, 256, 512, 56, 72],
+      "alignments": [0],
+      "mode": "sequential_lines"  
+    },
+    "control_random_without_spatial": {
+      "order_seed": 704,
+      "strides": [8, 64],
+      "alignments": [0],
+      "mode": "fully_random"      
+    }
+  }

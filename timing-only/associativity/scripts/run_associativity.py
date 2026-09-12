@@ -13,8 +13,8 @@ BENCH = "../src/associativity_bench"
 # bound per the assignment rather than forcing a clean number.
 LEVELS = {
     "L1":  {"num_sets": 64,    "max_k": 16, "out": "raw_data/l1_associativity.csv"},
-    "L2":  {"num_sets": 512,  "max_k": 20, "out": "raw_data/l2_associativity.csv"},
-    "LLC": {"num_sets": 2048, "max_k": 24, "out": "raw_data/llc_associativity.csv"},
+    "L2":  {"num_sets": 1024,  "max_k": 20, "out": "raw_data/l2_associativity.csv"},
+    "LLC": {"num_sets": 16384, "max_k": 24, "out": "raw_data/llc_associativity.csv"},
 }
 BASE = {"samples": 1000000, "warmup": 1000, "seed": 701, "line_size": 64, "batch": 128}
 
