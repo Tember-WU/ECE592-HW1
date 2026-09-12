@@ -273,8 +273,7 @@ def plot_boxplots_representative(df_stats):
     fig, ax = plt.subplots(figsize=(8, 6))
     # showfliers=False: outliers are excluded from the drawing only, not from the stats;
     # median/mean/Q1/Q3/whiskers below are still computed from the full 1e6-sample dataset.
-    bp = ax.boxplot(series, labels=labels, showmeans=True, showfliers=False)
-    # Zoom the y-axis to the p1-p99 range across all three so the boxes stay readable.
+    bp = ax.boxplot(series, tick_labels=labels, showmeans=True, showfliers=False)    # Zoom the y-axis to the p1-p99 range across all three so the boxes stay readable.
     all_vals = np.concatenate(series)
     ax.set_ylim(np.percentile(all_vals, 1) * 0.95, np.percentile(all_vals, 99) * 1.05)
     ax.set_ylabel("Latency (TSC ticks / access)")
