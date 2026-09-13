@@ -1,4 +1,6 @@
-# Skylark, Artemisia (x86_64) and the AArch64 machine (Thunderbird / Ampere Altra).
+# Makefile for associativity_bench + line_size_bench
+# Portable across the x86-64 lab machines (Sunbird, Charnwood, Ookay, Upgrade, Crux,
+# Skylark, Artemisia) and the AArch64 machine (Thunderbird / Ampere Altra).
 #
 # Usage: make all   (or just 'make')
 #        make clean
@@ -15,15 +17,12 @@ else
     CXXFLAGS = $(COMMON_FLAGS)
 endif
 
-TARGETS = line_size_bench
+TARGETS = associativity_bench line_size_bench
 
 all: $(TARGETS)
 
-# associativity_bench: associativity_bench.cpp timer_compat.h
-#	$(CXX) $(CXXFLAGS) -o $@ associativity_bench.cpp
-
-line_size_bench: line_size_bench.cpp timer_compat.h
-	$(CXX) $(CXXFLAGS) -o $@ line_size_bench.cpp
+associativity_bench: associativity_bench.cpp timer_compat.h
+	$(CXX) $(CXXFLAGS) -o $@ associativity_bench.cpp
 
 clean:
 	rm -f $(TARGETS)

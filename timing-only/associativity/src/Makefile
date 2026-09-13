@@ -1,18 +1,30 @@
-# Makefile for associativity_bench
-# Usage: make all  (or just 'make')
+# Makefile for associativity_bench + line_size_bench
+# Portable across the x86-64 lab machines (Sunbird, Charnwood, Ookay, Upgrade, Crux,
+# Skylark, Artemisia) and the AArch64 machine (Thunderbird / Ampere Altra).
+#
+# Usage: make all   (or just 'make')
 #        make clean
 
 CXX = g++
-CXXFLAGS = -O0 -g -std=c++11 -m64 -Wall -Wextra -fno-omit-frame-pointer
-TARGET = associativity_bench
-SOURCES = associativity_bench.cpp
+UNAME_M := $(shell uname -m)
 
-all: $(TARGET)
+COMMON_FLAGS = -O0 -g -std=c++11 -Wall -Wextra -fno-omit-frame-pointer
 
-$(TARGET): $(SOURCES)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+# -m64 is an x86-only flag; aarch64-linux-gnu-g++ does not understand it and will error.
+ifeq ($(UNAME_M),x86_64)
+    CXXFLAGS = $(COMMON_FLAGS) -m64
+else
+    CXXFLAGS = $(COMMON_FLAGS)
+endif
+
+TARGETS = associativity_bench
+
+all: $(TARGETS)
+
+associativity_bench: associativity_bench.cpp timer_compat.h
+	$(CXX) $(CXXFLAGS) -o $@ associativity_bench.cpp
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGETS)
 
 .PHONY: all clean
