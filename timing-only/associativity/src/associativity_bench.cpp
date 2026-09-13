@@ -182,7 +182,7 @@ Result measure_K(Node* base, size_t set_stride, size_t K,
 // ---------- Calibration (using batched latencies) ----------
 void calibrate(Node* base, size_t set_stride, size_t max_k, size_t warmup, size_t batch,
                uint64_t& hit_threshold, uint64_t& miss_threshold, uint32_t seed) {
-    const size_t CAL_SAMPLES = 10000;
+    const size_t CAL_SAMPLES = 100000;
     // Hit: K=1
     build_conflict_cycle(base, set_stride, 1, seed);
     Node* p = base;
