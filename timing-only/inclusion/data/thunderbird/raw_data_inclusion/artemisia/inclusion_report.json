@@ -1,0 +1,16 @@
+{
+  "machine": "artemisia",
+  "n_trials": 40000,
+  "fraction_L2_hit": 0.999325,
+  "fraction_LLC_hit": 0.0,
+  "fraction_DRAM": 0.000675,
+  "l2_median_ticks": 1.0,
+  "llc_median_ticks": 2.0,
+  "dram_median_ticks": 3.0,
+  "l2_dram_boundary_ticks": 1.5,
+  "llc_dram_boundary_ticks": 2.5,
+  "llc_conflict_stride_bytes": 32768,
+  "pressure_k_used": 32,
+  "possibly_l2_contaminated_target_regions": 40000,
+  "verdict": "Evidence consistent with NON-INCLUSIVE / exclusive-like LLC (inner copy survived)"
+}
