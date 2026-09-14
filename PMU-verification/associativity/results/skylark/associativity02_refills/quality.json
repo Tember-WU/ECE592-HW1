@@ -1,0 +1,74 @@
+{
+  "preflight_busy_percent": {
+    "4": 0.0
+  },
+  "max_sibling_busy_percent": null,
+  "total_involuntary_switches": 17,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "L2_candidate_k8": 1.0,
+    "L1_k10": 1.0185185185185186,
+    "L1_k8": 1.032258064516129,
+    "L2_candidate_k7": 1.0,
+    "L2_candidate_k13": 1.0,
+    "L2_candidate_k12": 1.0273972602739727,
+    "L2_candidate_k11": 1.1368421052631579,
+    "L1_k9": 1.0,
+    "L1_k7": 1.0,
+    "L1_k6": 1.0,
+    "L2_candidate_k9": 1.0,
+    "L2_candidate_k10": 1.0
+  },
+  "huge_kib": {
+    "L2_candidate_k8": [
+      2048,
+      2048
+    ],
+    "L1_k10": [
+      2048,
+      2048
+    ],
+    "L1_k8": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k7": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k13": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k12": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k11": [
+      2048,
+      2048
+    ],
+    "L1_k9": [
+      2048,
+      2048
+    ],
+    "L1_k7": [
+      2048,
+      2048
+    ],
+    "L1_k6": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k9": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k10": [
+      2048,
+      2048
+    ]
+  },
+  "caveat": "CPU 4/node 0 matches the saved candidate-sweep pinning_manifest. Compare the explicitly selected candidate64/candidate1024 CSVs inside raw_data/raw_data, not the separate outer CSV generation. PMU loop totals include helper loads; AMD request/allocation counters are not retired-load miss counters."
+}

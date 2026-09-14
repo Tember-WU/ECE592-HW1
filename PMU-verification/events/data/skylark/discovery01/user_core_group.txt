@@ -1,0 +1,4 @@
+743,,ls_mab_alloc.loads:u,1056101,100.00,,
+3272,,l2_cache_req_stat.ls_rd_blk_c:u,1056101,100.00,,
+9,,ls_refills_from_sys.ls_mabresp_lcl_dram:u,1056101,100.00,,
+212140,,ls_dispatch.ld_dispatch:u,1056101,100.00,,

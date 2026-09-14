@@ -1,0 +1,111 @@
+event,description,encoding,usable
+bp_l1_tlb_fetch_hit,The number of instruction fetches that hit in the L1 ITLB. Unit: cpu,"cpu/event=0x94,umask=0xff/",listed; not individually probed
+bp_l1_tlb_fetch_hit.if1g,The number of instruction fetches that hit in the L1 ITLB. Instruction fetches to a 1GB page. Unit: cpu,"cpu/event=0x94,umask=0x4/",listed; not individually probed
+bp_l1_tlb_fetch_hit.if2m,The number of instruction fetches that hit in the L1 ITLB. Instruction fetches to a 2MB page. Unit: cpu,"cpu/event=0x94,umask=0x2/",listed; not individually probed
+bp_l1_tlb_fetch_hit.if4k,The number of instruction fetches that hit in the L1 ITLB. Instruction fetches to a 4KB page. Unit: cpu,"cpu/event=0x94,umask=0x1/",listed; not individually probed
+bp_tlb_rel,The number of ITLB reload requests. Unit: cpu,cpu/event=0x99/,listed; not individually probed
+bp_l1_tlb_miss_l2_hit,The number of instruction fetches that miss in the L1 ITLB but hit in the L2 ITLB. Unit: cpu,cpu/event=0x84/,listed; not individually probed
+bp_l1_tlb_miss_l2_tlb_miss,The number of instruction fetches that miss in both the L1 and L2 TLBs. Unit: cpu,"cpu/event=0x85,umask=0xff/",listed; not individually probed
+bp_l1_tlb_miss_l2_tlb_miss.if1g,The number of instruction fetches that miss in both the L1 and L2 TLBs. Instruction fetches to a 1GB page. Unit: cpu,"cpu/event=0x85,umask=0x4/",listed; not individually probed
+bp_l1_tlb_miss_l2_tlb_miss.if2m,The number of instruction fetches that miss in both the L1 and L2 TLBs. Instruction fetches to a 2MB page. Unit: cpu,"cpu/event=0x85,umask=0x2/",listed; not individually probed
+bp_l1_tlb_miss_l2_tlb_miss.if4k,The number of instruction fetches that miss in both the L1 and L2 TLBs. Instruction fetches to a 4KB page. Unit: cpu,"cpu/event=0x85,umask=0x1/",listed; not individually probed
+ic_cache_fill_l2,The number of 64 byte instruction cache line was fulfilled from the L2 cache. Unit: cpu,cpu/event=0x82/,listed; not individually probed
+ic_cache_fill_sys,The number of 64 byte instruction cache line fulfilled from system memory or another cache. Unit: cpu,cpu/event=0x83/,listed; not individually probed
+ic_cache_inval.fill_invalidated,"IC line invalidated due to overwriting fill response. The number of instruction cache lines invalidated. A non-SMC event is CMC (cross modifying code),either from the other thread of the core or another core. Unit: cpu","cpu/event=0x8c,umask=0x1/",listed; not individually probed
+ic_cache_inval.l2_invalidating_probe,"IC line invalidated due to L2 invalidating probe (external or LS). The number of instruction cache lines invalidated. A non-SMC event is CMC (cross modifying code),either from the other thread of the core or another core. Unit: cpu","cpu/event=0x8c,umask=0x2/",listed; not individually probed
+ic_fw32,The number of 32B fetch windows transferred from IC pipe to DE instruction decoder (includes non-cacheable and cacheable fill responses). Unit: cpu,cpu/event=0x80/,listed; not individually probed
+l2_cache_req_stat.ic_access_in_l2,Core to L2 cacheable request access status (not including L2 Prefetch). Instruction cache requests in L2. Unit: cpu,"cpu/event=0x64,umask=0x7/",listed; not individually probed
+l2_cache_req_stat.ic_dc_hit_in_l2,Core to L2 cacheable request access status (not including L2 Prefetch). Instruction cache request hit in L2 and Data cache request hit in L2 (all types). Unit: cpu,"cpu/event=0x64,umask=0xf6/",listed; not individually probed
+l2_cache_req_stat.ic_dc_miss_in_l2,Core to L2 cacheable request access status (not including L2 Prefetch). Instruction cache request miss in L2 and Data cache request miss in L2 (all types). Unit: cpu,"cpu/event=0x64,umask=0x9/",listed; not individually probed
+l2_cache_req_stat.ic_fill_hit_s,Core to L2 cacheable request access status (not including L2 Prefetch). Instruction cache hit clean line in L2. Unit: cpu,"cpu/event=0x64,umask=0x2/",listed; not individually probed
+l2_cache_req_stat.ic_fill_hit_x,Core to L2 cacheable request access status (not including L2 Prefetch). Instruction cache hit modifiable line in L2. Unit: cpu,"cpu/event=0x64,umask=0x4/",listed; not individually probed
+l2_cache_req_stat.ic_fill_miss,Core to L2 cacheable request access status (not including L2 Prefetch). Instruction cache request miss in L2. Unit: cpu,"cpu/event=0x64,umask=0x1/",listed; not individually probed
+l2_cache_req_stat.ls_rd_blk_c,Core to L2 cacheable request access status (not including L2 Prefetch). Data cache request miss in L2 (all types). Unit: cpu,"cpu/event=0x64,umask=0x8/",True
+l2_cache_req_stat.ls_rd_blk_cs,Core to L2 cacheable request access status (not including L2 Prefetch). Data cache shared read hit in L2. Unit: cpu,"cpu/event=0x64,umask=0x80/",listed; not individually probed
+l2_cache_req_stat.ls_rd_blk_l_hit_s,Core to L2 cacheable request access status (not including L2 Prefetch). Data cache read hit on shared line in L2. Unit: cpu,"cpu/event=0x64,umask=0x20/",listed; not individually probed
+l2_cache_req_stat.ls_rd_blk_l_hit_x,Core to L2 cacheable request access status (not including L2 Prefetch). Data cache read hit in L2. Unit: cpu,"cpu/event=0x64,umask=0x40/",listed; not individually probed
+l2_cache_req_stat.ls_rd_blk_x,Core to L2 cacheable request access status (not including L2 Prefetch). Data cache store or state change hit in L2. Unit: cpu,"cpu/event=0x64,umask=0x10/",listed; not individually probed
+l2_pf_hit_l2,L2 prefetch hit in L2. Use l2_cache_hits_from_l2_hwpf instead. Unit: cpu,"cpu/event=0x70,umask=0xff/",listed; not individually probed
+l2_pf_miss_l2_hit_l3,L2 prefetcher hits in L3. Counts all L2 prefetches accepted by the L2 pipeline which miss the L2 cache and hit the L3. Unit: cpu,"cpu/event=0x71,umask=0xff/",listed; not individually probed
+l2_pf_miss_l2_l3,L2 prefetcher misses in L3. All L2 prefetches accepted by the L2 pipeline which miss the L2 and the L3 caches. Unit: cpu,"cpu/event=0x72,umask=0xff/",listed; not individually probed
+l2_request_g1.cacheable_ic_read,All L2 Cache Requests (Breakdown 1 - Common). Instruction cache reads. Unit: cpu,"cpu/event=0x60,umask=0x10/",listed; not individually probed
+l2_request_g1.change_to_x,"All L2 Cache Requests (Breakdown 1 - Common). Data cache state change requests. Request change to writable,check L2 for current state. Unit: cpu","cpu/event=0x60,umask=0x8/",listed; not individually probed
+l2_request_g1.l2_hw_pf,"All L2 Cache Requests (Breakdown 1 - Common). L2 Prefetcher. All prefetches accepted by L2 pipeline,hit or miss. Types of PF and L2 hit/miss broken out in a separate perfmon event. Unit: cpu","cpu/event=0x60,umask=0x2/",listed; not individually probed
+l2_request_g1.ls_rd_blk_c_s,All L2 Cache Requests (Breakdown 1 - Common). Data cache shared reads. Unit: cpu,"cpu/event=0x60,umask=0x20/",listed; not individually probed
+l2_request_g1.prefetch_l2_cmd,All L2 Cache Requests (Breakdown 1 - Common). PrefetchL2Cmd. Unit: cpu,"cpu/event=0x60,umask=0x4/",listed; not individually probed
+l2_request_g1.rd_blk_l,All L2 Cache Requests (Breakdown 1 - Common). Data cache reads (including hardware and software prefetch). Unit: cpu,"cpu/event=0x60,umask=0x80/",listed; not individually probed
+l2_request_g1.rd_blk_x,All L2 Cache Requests (Breakdown 1 - Common). Data cache stores. Unit: cpu,"cpu/event=0x60,umask=0x40/",listed; not individually probed
+l2_request_g2.bus_locks_originator,All L2 Cache Requests (Breakdown 2 - Rare). Bus locks. Unit: cpu,"cpu/event=0x61,umask=0x2/",listed; not individually probed
+l2_request_g2.bus_locks_responses,All L2 Cache Requests (Breakdown 2 - Rare). Bus lock response. Unit: cpu,"cpu/event=0x61,umask=0x1/",listed; not individually probed
+l2_request_g2.ic_rd_sized,All L2 Cache Requests (Breakdown 2 - Rare). Instruction cache read sized. Unit: cpu,"cpu/event=0x61,umask=0x10/",listed; not individually probed
+l2_request_g2.ic_rd_sized_nc,All L2 Cache Requests (Breakdown 2 - Rare). Instruction cache read sized non-cacheable. Unit: cpu,"cpu/event=0x61,umask=0x8/",listed; not individually probed
+l2_request_g2.ls_rd_sized,All L2 Cache Requests (Breakdown 2 - Rare). Data cache read sized. Unit: cpu,"cpu/event=0x61,umask=0x40/",listed; not individually probed
+l2_request_g2.ls_rd_sized_nc,All L2 Cache Requests (Breakdown 2 - Rare). Data cache read sized non-cacheable. Unit: cpu,"cpu/event=0x61,umask=0x20/",listed; not individually probed
+l2_request_g2.smc_inval,All L2 Cache Requests (Breakdown 2 - Rare). Self-modifying code invalidates. Unit: cpu,"cpu/event=0x61,umask=0x4/",listed; not individually probed
+l2_wcb_req.cl_zero,LS to L2 WCB cache line zeroing requests. LS (Load/Store unit) to L2 WCB (Write Combining Buffer) cache line zeroing requests. Unit: cpu,"cpu/event=0x63,umask=0x1/",listed; not individually probed
+l2_wcb_req.wcb_close,LS to L2 WCB close requests. LS (Load/Store unit) to L2 WCB (Write Combining Buffer) close requests. Unit: cpu,"cpu/event=0x63,umask=0x20/",listed; not individually probed
+l2_wcb_req.wcb_write,LS to L2 WCB write requests. LS (Load/Store unit) to L2 WCB (Write Combining Buffer) write requests. Unit: cpu,"cpu/event=0x63,umask=0x40/",listed; not individually probed
+l2_wcb_req.zero_byte_store,LS to L2 WCB zero byte store requests. LS (Load/Store unit) to L2 WCB (Write Combining Buffer) zero byte store requests. Unit: cpu,"cpu/event=0x63,umask=0x4/",listed; not individually probed
+l3_comb_clstr_state.request_miss,L3 cache misses. Unit: amd_l3,"amd_l3/event=0x6,umask=0x1/",False
+l3_request_g1.caching_l3_cache_accesses,Caching: L3 cache accesses. Unit: amd_l3,"amd_l3/event=0x1,umask=0x80/",listed; not individually probed
+xi_sys_fill_latency,L3 Cache Miss Latency. Total cycles for all transactions divided by 16. Ignores SliceMask and ThreadMask. Unit: amd_l3,amd_l3/event=0x90/,listed; not individually probed
+ls_bad_status2.stli_other,"Non-forwardable conflict; used to reduce STLI's via software. All reasons. Store To Load Interlock (STLI) are loads that were unable to complete because of a possible match with an older store,and the older store could not do STLF for some reason. Unit: cpu","cpu/event=0x24,umask=0x2/",listed; not individually probed
+ls_dc_accesses,Number of accesses to the dcache for load/store references. Unit: cpu,cpu/event=0x40/,True
+ls_dispatch.ld_dispatch,Number of loads dispatched. Counts the number of operations dispatched to the LS unit. Unit Masks ADDed. Unit: cpu,"cpu/event=0x29,umask=0x1/",True
+ls_dispatch.ld_st_dispatch,Dispatch of a single op that performs a load from and store to the same memory address. Number of single ops that do load/store to an address. Unit: cpu,"cpu/event=0x29,umask=0x4/",listed; not individually probed
+ls_hw_pf_dc_fill.ls_mabresp_lcl_cache,Hardware Prefetch Data Cache Fills by Data Source. From another cache (home node local). Unit: cpu,"cpu/event=0x5a,umask=0x2/",listed; not individually probed
+ls_hw_pf_dc_fill.ls_mabresp_lcl_dram,Hardware Prefetch Data Cache Fills by Data Source. From DRAM (home node local). Unit: cpu,"cpu/event=0x5a,umask=0x8/",listed; not individually probed
+ls_hw_pf_dc_fill.ls_mabresp_lcl_l2,Hardware Prefetch Data Cache Fills by Data Source. Local L2 hit. Unit: cpu,"cpu/event=0x5a,umask=0x1/",listed; not individually probed
+ls_hw_pf_dc_fill.ls_mabresp_rmt_cache,Hardware Prefetch Data Cache Fills by Data Source. From another cache (home node remote). Unit: cpu,"cpu/event=0x5a,umask=0x10/",listed; not individually probed
+ls_hw_pf_dc_fill.ls_mabresp_rmt_dram,Hardware Prefetch Data Cache Fills by Data Source. From DRAM (home node remote). Unit: cpu,"cpu/event=0x5a,umask=0x40/",listed; not individually probed
+ls_l1_d_tlb_miss.all,All L1 DTLB Misses or Reloads. Unit: cpu,"cpu/event=0x45,umask=0xff/",True
+ls_l1_d_tlb_miss.tlb_reload_1g_l2_hit,L1 DTLB Miss. DTLB reload to a 1G page that hit in the L2 TLB. Unit: cpu,"cpu/event=0x45,umask=0x8/",listed; not individually probed
+ls_l1_d_tlb_miss.tlb_reload_1g_l2_miss,L1 DTLB Miss. DTLB reload to a 1G page that miss in the L2 TLB. Unit: cpu,"cpu/event=0x45,umask=0x80/",listed; not individually probed
+ls_l1_d_tlb_miss.tlb_reload_2m_l2_hit,L1 DTLB Miss. DTLB reload to a 2M page that hit in the L2 TLB. Unit: cpu,"cpu/event=0x45,umask=0x4/",listed; not individually probed
+ls_l1_d_tlb_miss.tlb_reload_2m_l2_miss,L1 DTLB Miss. DTLB reload to a 2M page that miss in the L2 TLB. Unit: cpu,"cpu/event=0x45,umask=0x40/",listed; not individually probed
+ls_l1_d_tlb_miss.tlb_reload_4k_l2_hit,L1 DTLB Miss. DTLB reload to a 4K page that hit in the L2 TLB. Unit: cpu,"cpu/event=0x45,umask=0x1/",listed; not individually probed
+ls_l1_d_tlb_miss.tlb_reload_4k_l2_miss,L1 DTLB Miss. DTLB reload to a 4K page that miss the L2 TLB. Unit: cpu,"cpu/event=0x45,umask=0x10/",listed; not individually probed
+ls_l1_d_tlb_miss.tlb_reload_coalesced_page_hit,L1 DTLB Miss. DTLB reload hit a coalesced page. Unit: cpu,"cpu/event=0x45,umask=0x2/",listed; not individually probed
+ls_l1_d_tlb_miss.tlb_reload_coalesced_page_miss,L1 DTLB Miss. DTLB reload coalesced page miss. Unit: cpu,"cpu/event=0x45,umask=0x20/",listed; not individually probed
+ls_locks.bus_lock,Retired lock instructions. Bus lock when a locked operations crosses a cache boundary or is done on an uncacheable memory type. Comparable to legacy bus lock. Unit: cpu,"cpu/event=0x25,umask=0x1/",listed; not individually probed
+ls_locks.spec_lock_hi_spec,Retired lock instructions. High speculative cacheable lock speculation succeeded. Unit: cpu,"cpu/event=0x25,umask=0x8/",listed; not individually probed
+ls_locks.spec_lock_lo_spec,Retired lock instructions. Low speculative cacheable lock speculation succeeded. Unit: cpu,"cpu/event=0x25,umask=0x4/",listed; not individually probed
+ls_mab_alloc.dc_prefetcher,LS MAB Allocates by Type. DC prefetcher. Unit: cpu,"cpu/event=0x41,umask=0x8/",listed; not individually probed
+ls_mab_alloc.loads,LS MAB Allocates by Type. Loads. Unit: cpu,"cpu/event=0x41,umask=0x1/",True
+ls_mab_alloc.stores,LS MAB Allocates by Type. Stores. Unit: cpu,"cpu/event=0x41,umask=0x2/",listed; not individually probed
+ls_misal_accesses,Misaligned loads. Unit: cpu,cpu/event=0x47/,listed; not individually probed
+ls_refills_from_sys.ls_mabresp_lcl_cache,"Demand Data Cache Fills by Data Source. Hit in cache; local CCX (not Local L2),or Remote CCX and the address's Home Node is on this thread's die. Unit: cpu","cpu/event=0x43,umask=0x2/",True
+ls_refills_from_sys.ls_mabresp_lcl_dram,Demand Data Cache Fills by Data Source. DRAM or IO from this thread's die. Unit: cpu,"cpu/event=0x43,umask=0x8/",True
+ls_refills_from_sys.ls_mabresp_lcl_l2,Demand Data Cache Fills by Data Source. Local L2 hit. Unit: cpu,"cpu/event=0x43,umask=0x1/",True
+ls_refills_from_sys.ls_mabresp_rmt_cache,Demand Data Cache Fills by Data Source. Hit in cache; Remote CCX and the address's Home Node is on a different die. Unit: cpu,"cpu/event=0x43,umask=0x10/",listed; not individually probed
+ls_refills_from_sys.ls_mabresp_rmt_dram,Demand Data Cache Fills by Data Source. DRAM or IO from different die. Unit: cpu,"cpu/event=0x43,umask=0x40/",True
+ls_st_commit_cancel2.st_commit_cancel_wcb_full,A non-cacheable store and the non-cacheable commit buffer is full. Unit: cpu,cpu/event=0x37/,listed; not individually probed
+ls_sw_pf_dc_fill.ls_mabresp_lcl_cache,Software Prefetch Data Cache Fills by Data Source. From another cache (home node local). Unit: cpu,"cpu/event=0x59,umask=0x2/",listed; not individually probed
+ls_sw_pf_dc_fill.ls_mabresp_lcl_dram,Software Prefetch Data Cache Fills by Data Source. DRAM or IO from this thread's die. From DRAM (home node local). Unit: cpu,"cpu/event=0x59,umask=0x8/",listed; not individually probed
+ls_sw_pf_dc_fill.ls_mabresp_lcl_l2,Software Prefetch Data Cache Fills by Data Source. Local L2 hit. Unit: cpu,"cpu/event=0x59,umask=0x1/",listed; not individually probed
+ls_sw_pf_dc_fill.ls_mabresp_rmt_cache,Software Prefetch Data Cache Fills by Data Source. From another cache (home node remote). Unit: cpu,"cpu/event=0x59,umask=0x10/",listed; not individually probed
+ls_sw_pf_dc_fill.ls_mabresp_rmt_dram,Software Prefetch Data Cache Fills by Data Source. From DRAM (home node remote). Unit: cpu,"cpu/event=0x59,umask=0x40/",listed; not individually probed
+ls_tlb_flush,All TLB Flushes. Unit: cpu,cpu/event=0x78/,listed; not individually probed
+de_dis_dispatch_token_stalls1.load_queue_token_stall,Cycles where a dispatch group is valid but does not get dispatched due to a token stall. Load queue resource stall. Applies to all ops with load semantics. Unit: cpu,"cpu/event=0xae,umask=0x2/",listed; not individually probed
+de_dis_uops_from_decoder,"Ops dispatched from either the decoders,OpCache or both. Unit: cpu","cpu/event=0xaa,umask=0xff/",listed; not individually probed
+de_dis_uops_from_decoder.opcache_dispatched,Count of dispatched Ops from OpCache. Unit: cpu,"cpu/event=0xaa,umask=0x2/",listed; not individually probed
+all_dc_accesses,All L1 Data Cache Accesses. Unit: cpu,"cpu/event=0x29,umask=0x7/",listed; not individually probed
+all_tlbs_flushed,All TLBs Flushed. Unit: cpu,"cpu/event=0x78,umask=0xdf/",listed; not individually probed
+l1_dtlb_misses,L1 DTLB Misses. Unit: cpu,"cpu/event=0x45,umask=0xff/",listed; not individually probed
+l2_cache_accesses_from_dc_misses,L2 Cache Accesses from L1 Data Cache Misses (including prefetch). Unit: cpu,"cpu/event=0x60,umask=0xc8/",listed; not individually probed
+l2_cache_accesses_from_ic_misses,L2 Cache Accesses from L1 Instruction Cache Misses (including prefetch). Unit: cpu,"cpu/event=0x60,umask=0x10/",listed; not individually probed
+l2_cache_hits_from_dc_misses,L2 Cache Hits from L1 Data Cache Misses. Unit: cpu,"cpu/event=0x64,umask=0x70/",listed; not individually probed
+l2_cache_hits_from_ic_misses,L2 Cache Hits from L1 Instruction Cache Misses. Unit: cpu,"cpu/event=0x64,umask=0x6/",listed; not individually probed
+l2_cache_hits_from_l2_hwpf,L2 Cache Hits from L2 HWPF. Unit: cpu,"cpu/event=0x70,umask=0xff/",listed; not individually probed
+l2_cache_misses_from_dc_misses,L2 Cache Misses from L1 Data Cache Misses. Unit: cpu,"cpu/event=0x64,umask=0x8/",listed; not individually probed
+l2_cache_misses_from_ic_miss,L2 Cache Misses from L1 Instruction Cache Misses. Unit: cpu,"cpu/event=0x64,umask=0x1/",listed; not individually probed
+l2_dtlb_misses,L2 DTLB Misses & Data page walks. Unit: cpu,"cpu/event=0x45,umask=0xf0/",listed; not individually probed
+l2_itlb_misses,L2 ITLB Misses & Instruction page walks. Unit: cpu,"cpu/event=0x85,umask=0x7/",listed; not individually probed
+nps1_die_to_dram,Approximate: Combined DRAM B/bytes of all channels on a NPS1 node (die),,listed; not individually probed
+all_l2_cache_accesses,All L2 Cache Accesses,,listed; not individually probed
+all_l2_cache_hits,All L2 Cache Hits,,listed; not individually probed
+all_l2_cache_misses,All L2 Cache Misses,,listed; not individually probed
+ic_fetch_miss_ratio,L1 Instruction Cache (32B) Fetch Miss Ratio,,listed; not individually probed
+l2_cache_accesses_from_l2_hwpf,L2 Cache Accesses from L2 HWPF,,listed; not individually probed
+l2_cache_misses_from_l2_hwpf,L2 Cache Misses from L2 HWPF,,listed; not individually probed
+l1_itlb_misses,L1 ITLB Misses,,listed; not individually probed

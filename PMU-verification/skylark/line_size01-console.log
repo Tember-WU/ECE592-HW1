@@ -1,0 +1,22 @@
+line_size: 12 configurations, 1,000,000 batches each
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Preflight: {'0': 0.0}
+[1/12] random_s64_a16: 9.1875 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [2.247, 47.618, 0.0]
+[2/12] random_s96_a0: 10.9219 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [2.178, 50.671, 0.0]
+[3/12] random_s64_a0: 8.9531 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.032, 50.337, 0.0]
+[4/12] random_s56_a16: 8.6719 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.041, 0.947, 0.0]
+[5/12] fully_random_s64: 12.6328 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.073, 48.639, 0.0]
+[6/12] sequential_s72: 7.1953 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.281, 0.115, 0.0]
+[7/12] sequential_s64: 6.8906 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [1.755, 0.103, 0.0]
+[8/12] random_s72_a0: 9.1172 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [2.125, 0.661, 0.0]
+[9/12] random_s56_a0: 8.8594 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.056, 39.21, 0.0]
+[10/12] random_s32_a0: 7.7578 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.027, 23.908, 0.0]
+[11/12] random_s72_a16: 9.1875 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [2.524, 0.301, 0.0]
+[12/12] sequential_s56: 6.8203 ticks/timed load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.025, 0.176, 0.0]

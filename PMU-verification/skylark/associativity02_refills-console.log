@@ -1,0 +1,22 @@
+associativity: 12 configurations, 1,000,000 batches each
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Preflight: {'4': 0.0}
+[1/12] L2_candidate_k8: 6.1395 ticks/timed load; Configured first three events per 1000 chain loads [0.365, 0.094, 1.257]
+[2/12] L1_k10: 10.2326 ticks/timed load; Configured first three events per 1000 chain loads [942.275, 0.001, 943.06]
+[3/12] L1_k8: 5.7674 ticks/timed load; Configured first three events per 1000 chain loads [66.196, 0.001, 59.641]
+[4/12] L2_candidate_k7: 6.1395 ticks/timed load; Configured first three events per 1000 chain loads [0.022, 0.017, 0.954]
+[5/12] L2_candidate_k13: 29.7674 ticks/timed load; Configured first three events per 1000 chain loads [0.207, 977.752, 978.702]
+[6/12] L2_candidate_k12: 27.1628 ticks/timed load; Configured first three events per 1000 chain loads [0.352, 847.284, 848.389]
+[7/12] L2_candidate_k11: 17.8605 ticks/timed load; Configured first three events per 1000 chain loads [0.287, 590.371, 591.424]
+[8/12] L1_k9: 18.7907 ticks/timed load; Configured first three events per 1000 chain loads [983.092, 0.001, 983.871]
+[9/12] L1_k7: 6.1395 ticks/timed load; Configured first three events per 1000 chain loads [0.039, 0.0, 0.96]
+[10/12] L1_k6: 6.1395 ticks/timed load; Configured first three events per 1000 chain loads [0.027, 0.001, 0.952]
+[11/12] L2_candidate_k9: 16.0000 ticks/timed load; Configured first three events per 1000 chain loads [389.681, 252.83, 635.574]
+[12/12] L2_candidate_k10: 17.4884 ticks/timed load; Configured first three events per 1000 chain loads [0.38, 443.512, 444.667]

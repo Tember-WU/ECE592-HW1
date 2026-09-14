@@ -1,0 +1,25 @@
+
+memory:
+  ls_mab_alloc.loads
+       [LS MAB Allocates by Type. Loads. Unit: cpu]
+        cpu/event=0x41,umask=0x1/
+
+cache:
+  l2_cache_req_stat.ls_rd_blk_c
+       [Core to L2 cacheable request access status (not including L2
+        Prefetch). Data cache request miss in L2 (all types). Unit: cpu]
+        cpu/event=0x64,umask=0x8/
+  l2_cache_req_stat.ls_rd_blk_cs
+       [Core to L2 cacheable request access status (not including L2
+        Prefetch). Data cache shared read hit in L2. Unit: cpu]
+        cpu/event=0x64,umask=0x80/
+
+memory:
+  ls_refills_from_sys.ls_mabresp_lcl_dram
+       [Demand Data Cache Fills by Data Source. DRAM or IO from this thread's
+        die. Unit: cpu]
+        cpu/event=0x43,umask=0x8/
+  ls_dispatch.ld_dispatch
+       [Number of loads dispatched. Counts the number of operations dispatched
+        to the LS unit. Unit Masks ADDed. Unit: cpu]
+        cpu/event=0x29,umask=0x1/

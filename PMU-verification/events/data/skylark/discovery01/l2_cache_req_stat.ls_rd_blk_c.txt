@@ -1,0 +1,1 @@
+3759,,l2_cache_req_stat.ls_rd_blk_c:u,897363,100.00,,

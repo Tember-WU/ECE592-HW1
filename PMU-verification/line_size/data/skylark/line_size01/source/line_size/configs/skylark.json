@@ -1,0 +1,143 @@
+{
+  "machine": "skylark",
+  "isa": "x86_64",
+  "cpu": 0,
+  "numa_node": 0,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "ls_mab_alloc.loads",
+      "config": "0x0141",
+      "field": "l1_load_mab_allocs_per_1000_chain_loads",
+      "label": "L1 load MAB allocations",
+      "meaning": "Load miss-address-buffer allocations; request/allocation evidence, not retired-load misses."
+    },
+    {
+      "name": "l2_cache_req_stat.ls_rd_blk_c",
+      "config": "0x0864",
+      "field": "l2_dc_request_misses_per_1000_chain_loads",
+      "label": "L2 data-cache request misses",
+      "meaning": "Core-to-L2 data-cache request misses, all types, excluding L2 prefetch. Includes more than retired demand loads."
+    },
+    {
+      "name": "ls_refills_from_sys.ls_mabresp_lcl_dram",
+      "config": "0x0843",
+      "field": "local_dram_io_fills_per_1000_chain_loads",
+      "label": "Local DRAM/IO demand fills",
+      "meaning": "Demand data-cache fills from DRAM or IO on this thread die. Indirect beyond-cache evidence, not a direct L3 miss count."
+    },
+    {
+      "name": "ls_dispatch.ld_dispatch",
+      "config": "0x0129",
+      "field": "load_dispatches_per_1000_chain_loads",
+      "label": "Load dispatches",
+      "meaning": "Dispatched load operations including helper/stack work and speculative activity; not retired loads."
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "line_size",
+  "footprint": 262144,
+  "batch": 1024,
+  "group_window": 512,
+  "points": [
+    {
+      "name": "random_s32_a0",
+      "group": "random_alignment0",
+      "stride": 32,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 701
+    },
+    {
+      "name": "random_s56_a0",
+      "group": "random_alignment0",
+      "stride": 56,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s64_a0",
+      "group": "random_alignment0",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s72_a0",
+      "group": "random_alignment0",
+      "stride": 72,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s96_a0",
+      "group": "random_alignment0",
+      "stride": 96,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s56_a16",
+      "group": "random_alignment16",
+      "stride": 56,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s64_a16",
+      "group": "random_alignment16",
+      "stride": 64,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s72_a16",
+      "group": "random_alignment16",
+      "stride": 72,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "sequential_s56",
+      "group": "sequential_control",
+      "stride": 56,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "sequential_s64",
+      "group": "sequential_control",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "sequential_s72",
+      "group": "sequential_control",
+      "stride": 72,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "fully_random_s64",
+      "group": "fully_random_control",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "fully_random",
+      "seed": 721
+    }
+  ],
+  "placement_note": "Use CPU 0/node 0 from the saved Skylark line-size fixed_params; no collection-time pinning manifest is present, so original actual binding cannot be independently verified. Same footprint/stride/order/seed/batch; PMU version retains the previously disclosed buffered-output change.",
+  "phase1_freeze": "skylark/phase1_frozen.json"
+}

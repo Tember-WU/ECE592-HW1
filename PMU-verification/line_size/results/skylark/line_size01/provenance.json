@@ -1,0 +1,47 @@
+{
+  "generated_utc": "2026-09-14T15:43:41.326686+00:00",
+  "analysis_sha256": "44dfe30dfb6d5e82447340d06ca246e3af3ec8bf636f13ebf0a5cbbee59d6fe4",
+  "manifest_sha256": "cc3e72ce536550f598b26354da5fd04c2ea81f65fb8b65e04111a2fc087bb254",
+  "config_sha256": "48e246ae6193622c7145a826ecdbc31a453fb00d87545dcd560b8cc2f451093d",
+  "frozen_phase1_unchanged": true,
+  "all_source_and_executable_snapshots_verified": true,
+  "event_definitions": [
+    {
+      "name": "ls_mab_alloc.loads",
+      "config": "0x0141",
+      "field": "l1_load_mab_allocs_per_1000_chain_loads",
+      "label": "L1 load MAB allocations",
+      "meaning": "Load miss-address-buffer allocations; request/allocation evidence, not retired-load misses."
+    },
+    {
+      "name": "l2_cache_req_stat.ls_rd_blk_c",
+      "config": "0x0864",
+      "field": "l2_dc_request_misses_per_1000_chain_loads",
+      "label": "L2 data-cache request misses",
+      "meaning": "Core-to-L2 data-cache request misses, all types, excluding L2 prefetch. Includes more than retired demand loads."
+    },
+    {
+      "name": "ls_refills_from_sys.ls_mabresp_lcl_dram",
+      "config": "0x0843",
+      "field": "local_dram_io_fills_per_1000_chain_loads",
+      "label": "Local DRAM/IO demand fills",
+      "meaning": "Demand data-cache fills from DRAM or IO on this thread die. Indirect beyond-cache evidence, not a direct L3 miss count."
+    },
+    {
+      "name": "ls_dispatch.ld_dispatch",
+      "config": "0x0129",
+      "field": "load_dispatches_per_1000_chain_loads",
+      "label": "Load dispatches",
+      "meaning": "Dispatched load operations including helper/stack work and speculative activity; not retired loads."
+    }
+  ],
+  "analysis_source_hashes": {
+    "run_capacity.py": "b5c06fa8cda3a9bf71a5a939020298947472dc5a26f84bab359b5051f777eecf",
+    "run_verification.py": "12be8f32a5091274ee7ffa9d59826366bfbb229b07741a9efc7f585ac5ffe9d0",
+    "support.py": "085f12e59d4baef5de2d153210c96cc805efac6726a1d1d73f675dd805f274b1",
+    "discover_events.py": "898d25119406871e91f355c94f1aef2fcc4d08937d3946b077e525daa2b3ce8f",
+    "analyze_capacity.py": "3208d729da2cc641bbbd36a69aeabc3c677cf1b0f639e86633ad7ebb195493df",
+    "analyze_verification.py": "44dfe30dfb6d5e82447340d06ca246e3af3ec8bf636f13ebf0a5cbbee59d6fe4",
+    "test_skylark.py": "6c72073ca99b6fcd01faa7c722de1f256d32dda68bbbf2c0c75c732fe9c390a2"
+  }
+}

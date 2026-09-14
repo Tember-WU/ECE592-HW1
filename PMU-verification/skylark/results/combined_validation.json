@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "distinct_workload_points": 38,
+  "event_groups": 2,
+  "distinct_events": 8,
+  "total_timed_batches": 76000000,
+  "formal_collections_serial": true,
+  "no_counts_combined_into_same_run_probabilities": true,
+  "experiments": [
+    {
+      "experiment": "capacity",
+      "points": 14,
+      "samples_per_point_per_pass": 1000000,
+      "same_workload_and_binary_between_passes": true,
+      "max_absolute_median_change_percent": 4.184100418410042,
+      "source_hashes": {
+        "capacity/results/skylark/capacity01/summary.csv": "eb0dd1a68d858cf8d2bc6274782502030097e8a5df9a29f2335037c5ab595133",
+        "capacity/results/skylark/capacity01/validation.json": "624782b4133050ef5394154bf7d66f90ec008ef3befcbf869e20aad2c5454ff2",
+        "capacity/results/skylark/capacity01/provenance.json": "ae3f928f67a1d25037a42d595ecb58ffd2526b28c7ca2ee481887ed5c12b8aba",
+        "capacity/results/skylark/capacity02_refills/summary.csv": "349d788257bd111dd8b67fdce7af8edd682d247b5249c54a2f4d043d46e00092",
+        "capacity/results/skylark/capacity02_refills/validation.json": "624782b4133050ef5394154bf7d66f90ec008ef3befcbf869e20aad2c5454ff2",
+        "capacity/results/skylark/capacity02_refills/provenance.json": "908df82733b4f4af83c36ee9f1d69a5fd3a2fd41f81ee6bd9b4267f52e6386a9"
+      }
+    },
+    {
+      "experiment": "line_size",
+      "points": 12,
+      "samples_per_point_per_pass": 1000000,
+      "same_workload_and_binary_between_passes": true,
+      "max_absolute_median_change_percent": 16.309012875536478,
+      "source_hashes": {
+        "line_size/results/skylark/line_size01/summary.csv": "16a9454e1a22f9e445ca3406bda7e239a520bc434e58c6aef12747ecc3df16bc",
+        "line_size/results/skylark/line_size01/validation.json": "93967c7489895061c75b0b5ea7cfe87930f88711a73f8cdcfa3142313e1da1d4",
+        "line_size/results/skylark/line_size01/provenance.json": "9534485331312611082d9716350877b351e2c49b62b1d2b744104949f11d0274",
+        "line_size/results/skylark/line_size02_refills/summary.csv": "6c50f972b8e13f22588d637d79baaf452e02b40705371386d070b6e5b77566df",
+        "line_size/results/skylark/line_size02_refills/validation.json": "93967c7489895061c75b0b5ea7cfe87930f88711a73f8cdcfa3142313e1da1d4",
+        "line_size/results/skylark/line_size02_refills/provenance.json": "4fa62bdcb6cbdee93a905df8919a2ea8f3845fc08824a874e1453ba88351c507"
+      }
+    },
+    {
+      "experiment": "associativity",
+      "points": 12,
+      "samples_per_point_per_pass": 1000000,
+      "same_workload_and_binary_between_passes": true,
+      "max_absolute_median_change_percent": 21.126760563380277,
+      "source_hashes": {
+        "associativity/results/skylark/associativity01/summary.csv": "c49bf74f665f381e5553db893535ba301d9b7d87c1b30f043967f3da8778b3fa",
+        "associativity/results/skylark/associativity01/validation.json": "93967c7489895061c75b0b5ea7cfe87930f88711a73f8cdcfa3142313e1da1d4",
+        "associativity/results/skylark/associativity01/provenance.json": "9b44c6e9f89db36b0363e65f25f88e1aaf37f035945e27180ade1250db044f15",
+        "associativity/results/skylark/associativity02_refills/summary.csv": "e26f7307da059674ecf4cf22d7c9f714660fa4be90be02353baacb2302800848",
+        "associativity/results/skylark/associativity02_refills/validation.json": "93967c7489895061c75b0b5ea7cfe87930f88711a73f8cdcfa3142313e1da1d4",
+        "associativity/results/skylark/associativity02_refills/provenance.json": "d8ad8d0eb92809e7a0a61293fdf752407e8036f55ef8fbc1f67058a579f2c2f3"
+      }
+    }
+  ]
+}

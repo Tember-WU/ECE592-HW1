@@ -1,0 +1,70 @@
+Short 10,000-sample native diagnostic, excluded from formal results. Config/commands below.
+{
+  "machine": "skylark",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 1,
+  "samples": 10000,
+  "batch": 256,
+  "spacing": 64,
+  "seed": 59202,
+  "pages": "huge",
+  "mode": "random",
+  "order_seed": 59283,
+  "events": [
+    {
+      "name": "ls_refills_from_sys.ls_mabresp_lcl_l2",
+      "config": "0x0143",
+      "field": "local_l2_demand_fills_per_1000_chain_loads",
+      "label": "Demand fills from local L2",
+      "meaning": "Demand data-cache fills satisfied by local L2; L1 refill evidence rather than a retired L1 miss count."
+    },
+    {
+      "name": "ls_refills_from_sys.ls_mabresp_lcl_cache",
+      "config": "0x0243",
+      "field": "local_cache_demand_fills_per_1000_chain_loads",
+      "label": "Demand fills from local cache domain",
+      "meaning": "Demand fills from a local CCX cache excluding local L2, or remote CCX with address home on this die; not a pure L3-hit count."
+    },
+    {
+      "name": "l2_request_g1.rd_blk_l",
+      "config": "0x8060",
+      "field": "l2_data_read_requests_per_1000_chain_loads",
+      "label": "L2 data-read requests incl. prefetch",
+      "meaning": "Data cache reads received by L2, including hardware and software prefetch; not a retired-load miss event."
+    },
+    {
+      "name": "ls_l1_d_tlb_miss.all",
+      "config": "0xff45",
+      "field": "l1_dtlb_misses_reloads_per_1000_chain_loads",
+      "label": "L1 DTLB misses or reloads",
+      "meaning": "All L1 data-TLB misses or reloads; translation-control evidence, not necessarily page walks."
+    }
+  ],
+  "regions": {
+    "L1": [
+      32768,
+      36864,
+      40960,
+      49152,
+      65536
+    ],
+    "L2": [
+      524288,
+      589824,
+      786432,
+      1048576
+    ],
+    "LLC": [
+      16777216,
+      20971520,
+      25165824,
+      29360128,
+      33554432
+    ]
+  },
+  "phase1_freeze": "skylark/phase1_frozen.json",
+  "selection_note": "14 representative points already measured with identical seed 59202, layout, batch, pages and CPU/node in Skylark capacity round2; bracket its frozen timing transitions.",
+  "counter_pass": "Supplemental refill/translation group; same workload and order as pass 1. Added because MAB allocations did not track the L1 timing transition."
+}
+["numactl", "--membind=1", "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/skylark/cache_capacity_pmu", "65536", "64", "random", "10000", "256", "59202", "32", "huge", "events/data/skylark/refills-native-probe/65536.u64", "0x0143,0x0243,0x8060,0xff45", "events/data/skylark/refills-native-probe/65536.json"]

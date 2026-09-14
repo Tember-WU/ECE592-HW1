@@ -1,0 +1,48 @@
+{
+  "generated_utc": "2026-09-14T15:46:32.729340+00:00",
+  "analysis_sha256": "44dfe30dfb6d5e82447340d06ca246e3af3ec8bf636f13ebf0a5cbbee59d6fe4",
+  "manifest_sha256": "67df7b8e3736334873dd917d1f9bf8d0fe37895de804c8b3078d1d72163eba3b",
+  "config_sha256": "b1e6c721a4df163b0eabd95ef10a5e31327636a30782d0d9e3ca10de5b1fc3df",
+  "frozen_phase1_unchanged": true,
+  "all_source_and_executable_snapshots_verified": true,
+  "event_definitions": [
+    {
+      "name": "ls_refills_from_sys.ls_mabresp_lcl_l2",
+      "config": "0x0143",
+      "field": "local_l2_demand_fills_per_1000_chain_loads",
+      "label": "Demand fills from local L2",
+      "meaning": "Demand data-cache fills satisfied by local L2; L1 refill evidence rather than a retired L1 miss count."
+    },
+    {
+      "name": "ls_refills_from_sys.ls_mabresp_lcl_cache",
+      "config": "0x0243",
+      "field": "local_cache_demand_fills_per_1000_chain_loads",
+      "label": "Demand fills from local cache domain",
+      "meaning": "Demand fills from a local CCX cache excluding local L2, or remote CCX with address home on this die; not a pure L3-hit count."
+    },
+    {
+      "name": "l2_request_g1.rd_blk_l",
+      "config": "0x8060",
+      "field": "l2_data_read_requests_per_1000_chain_loads",
+      "label": "L2 data-read requests incl. prefetch",
+      "meaning": "Data cache reads received by L2, including hardware and software prefetch; not a retired-load miss event."
+    },
+    {
+      "name": "ls_l1_d_tlb_miss.all",
+      "config": "0xff45",
+      "field": "l1_dtlb_misses_reloads_per_1000_chain_loads",
+      "label": "L1 DTLB misses or reloads",
+      "meaning": "All L1 data-TLB misses or reloads; translation-control evidence, not necessarily page walks."
+    }
+  ],
+  "analysis_source_hashes": {
+    "run_capacity.py": "b5c06fa8cda3a9bf71a5a939020298947472dc5a26f84bab359b5051f777eecf",
+    "run_verification.py": "12be8f32a5091274ee7ffa9d59826366bfbb229b07741a9efc7f585ac5ffe9d0",
+    "support.py": "085f12e59d4baef5de2d153210c96cc805efac6726a1d1d73f675dd805f274b1",
+    "discover_events.py": "898d25119406871e91f355c94f1aef2fcc4d08937d3946b077e525daa2b3ce8f",
+    "analyze_capacity.py": "3208d729da2cc641bbbd36a69aeabc3c677cf1b0f639e86633ad7ebb195493df",
+    "analyze_verification.py": "44dfe30dfb6d5e82447340d06ca246e3af3ec8bf636f13ebf0a5cbbee59d6fe4",
+    "test_skylark.py": "6c72073ca99b6fcd01faa7c722de1f256d32dda68bbbf2c0c75c732fe9c390a2",
+    "combine_results.py": "098b64a127acab42e42110003fd7ff0949ee3c9abfe55a8ba63034f349018491"
+  }
+}

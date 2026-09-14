@@ -1,0 +1,24 @@
+14 configurations, 1,000,000 timed batches each, four simultaneous events.
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Preflight CPU busy %: {'32': 0.0}
+[1/14] LLC_w29360128: median 202.4062 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [30.69, 998.05, 700.52]
+[2/14] L1_w36864: median 5.0625 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.24, 0.01, 0.0]
+[3/14] L1_w32768: median 3.4688 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [19.52, 0.03, 0.0]
+[4/14] L2_w1048576: median 23.4375 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [1.25, 761.81, 0.0]
+[5/14] L1_w40960: median 5.7188 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.25, 0.01, 0.0]
+[6/14] LLC_w20971520: median 141.5625 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [29.76, 994.96, 437.22]
+[7/14] LLC_w16777216: median 30.0938 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [28.99, 991.39, 9.14]
+[8/14] LLC_w25165824: median 184.4062 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [30.19, 996.77, 627.18]
+[9/14] LLC_w33554432: median 211.8750 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [30.61, 999.3, 738.61]
+[10/14] L2_w524288: median 9.1875 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.1, 21.53, 0.0]
+[11/14] L2_w786432: median 22.4062 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.93, 710.41, 0.03]
+[12/14] L1_w49152: median 6.4688 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.28, 0.01, 0.0]
+[13/14] L2_w589824: median 15.8438 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.11, 368.39, 0.0]
+[14/14] L1_w65536: median 7.3125 ticks/load; AMD load-MAB/L2-request-miss/local-DRAM-fill events per 1000 chain loads [0.65, 0.01, 0.0]

@@ -1,0 +1,74 @@
+{
+  "preflight_busy_percent": {
+    "0": 0.0
+  },
+  "max_sibling_busy_percent": null,
+  "total_involuntary_switches": 212,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "random_s64_a16": 1.0266666666666666,
+    "random_s96_a0": 1.0155844155844156,
+    "random_s64_a0": 1.023936170212766,
+    "random_s56_a16": 1.0081521739130435,
+    "fully_random_s64": 1.0335305719921104,
+    "sequential_s72": 1.0,
+    "sequential_s64": 1.0,
+    "random_s72_a0": 1.0154241645244215,
+    "random_s56_a0": 1.0081521739130435,
+    "random_s32_a0": 1.003030303030303,
+    "random_s72_a16": 1.0102564102564102,
+    "sequential_s56": 1.0316901408450705
+  },
+  "huge_kib": {
+    "random_s64_a16": [
+      0,
+      0
+    ],
+    "random_s96_a0": [
+      0,
+      0
+    ],
+    "random_s64_a0": [
+      0,
+      0
+    ],
+    "random_s56_a16": [
+      0,
+      0
+    ],
+    "fully_random_s64": [
+      0,
+      0
+    ],
+    "sequential_s72": [
+      0,
+      0
+    ],
+    "sequential_s64": [
+      0,
+      0
+    ],
+    "random_s72_a0": [
+      0,
+      0
+    ],
+    "random_s56_a0": [
+      0,
+      0
+    ],
+    "random_s32_a0": [
+      0,
+      0
+    ],
+    "random_s72_a16": [
+      0,
+      0
+    ],
+    "sequential_s56": [
+      0,
+      0
+    ]
+  },
+  "caveat": "Use CPU 0/node 0 from the saved Skylark line-size fixed_params; no collection-time pinning manifest is present, so original actual binding cannot be independently verified. Same footprint/stride/order/seed/batch; PMU version retains the previously disclosed buffered-output change. PMU loop totals include helper loads; AMD request/allocation counters are not retired-load miss counters."
+}

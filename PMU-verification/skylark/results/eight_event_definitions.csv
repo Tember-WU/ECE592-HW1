@@ -1,0 +1,9 @@
+group,name,config,field,label,meaning
+A,ls_mab_alloc.loads,0x0141,l1_load_mab_allocs_per_1000_chain_loads,L1 load MAB allocations,"Load miss-address-buffer allocations; request/allocation evidence, not retired-load misses."
+A,l2_cache_req_stat.ls_rd_blk_c,0x0864,l2_dc_request_misses_per_1000_chain_loads,L2 data-cache request misses,"Core-to-L2 data-cache request misses, all types, excluding L2 prefetch. Includes more than retired demand loads."
+A,ls_refills_from_sys.ls_mabresp_lcl_dram,0x0843,local_dram_io_fills_per_1000_chain_loads,Local DRAM/IO demand fills,"Demand data-cache fills from DRAM or IO on this thread die. Indirect beyond-cache evidence, not a direct L3 miss count."
+A,ls_dispatch.ld_dispatch,0x0129,load_dispatches_per_1000_chain_loads,Load dispatches,Dispatched load operations including helper/stack work and speculative activity; not retired loads.
+B,ls_refills_from_sys.ls_mabresp_lcl_l2,0x0143,local_l2_demand_fills_per_1000_chain_loads,Demand fills from local L2,Demand data-cache fills satisfied by local L2; L1 refill evidence rather than a retired L1 miss count.
+B,ls_refills_from_sys.ls_mabresp_lcl_cache,0x0243,local_cache_demand_fills_per_1000_chain_loads,Demand fills from local cache domain,"Demand fills from a local CCX cache excluding local L2, or remote CCX with address home on this die; not a pure L3-hit count."
+B,l2_request_g1.rd_blk_l,0x8060,l2_data_read_requests_per_1000_chain_loads,L2 data-read requests incl. prefetch,"Data cache reads received by L2, including hardware and software prefetch; not a retired-load miss event."
+B,ls_l1_d_tlb_miss.all,0xff45,l1_dtlb_misses_reloads_per_1000_chain_loads,L1 DTLB misses or reloads,"All L1 data-TLB misses or reloads; translation-control evidence, not necessarily page walks."

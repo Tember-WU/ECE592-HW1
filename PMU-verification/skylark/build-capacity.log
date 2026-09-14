@@ -1,0 +1,5 @@
+make: Entering directory '/home/swu35/ECE592-HW1/PMU-verification/capacity'
+mkdir -p build/skylark
+gcc -O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/cache_bench.c -o build/skylark/cache_capacity_pmu
+objdump -d -Mintel build/skylark/cache_capacity_pmu > build/skylark/cache_capacity_pmu.dis
+make: Leaving directory '/home/swu35/ECE592-HW1/PMU-verification/capacity'
