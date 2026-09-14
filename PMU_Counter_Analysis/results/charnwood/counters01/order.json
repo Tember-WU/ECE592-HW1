@@ -1,0 +1,407 @@
+[
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "timing"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "stores_or_replacements"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "stores_or_replacements"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "timing"
+  },
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "timing"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "timing"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "timing"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "timing"
+  },
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "timing"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "stores_or_replacements"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "stores_or_replacements"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "stores_or_replacements"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "stores_or_replacements"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 1,
+    "workload": "llc_sized",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "timing"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "cache_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "cache_references"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "llc_loads"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "beyond_llc",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 1,
+    "workload": "beyond_llc",
+    "slot": "llc_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "beyond_llc",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "l1_loads"
+  },
+  {
+    "repeat": 0,
+    "workload": "llc_sized",
+    "slot": "timing"
+  },
+  {
+    "repeat": 1,
+    "workload": "l1_resident",
+    "slot": "l1_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "dtlb_misses"
+  },
+  {
+    "repeat": 0,
+    "workload": "l1_resident",
+    "slot": "stores_or_replacements"
+  },
+  {
+    "repeat": 2,
+    "workload": "l1_resident",
+    "slot": "stores_or_replacements"
+  },
+  {
+    "repeat": 2,
+    "workload": "llc_sized",
+    "slot": "stores_or_replacements"
+  }
+]

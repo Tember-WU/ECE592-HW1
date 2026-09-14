@@ -1,0 +1,166 @@
+{
+  "host": "thunderbird",
+  "year": 2020,
+  "vendor": "Arm",
+  "microarchitecture": "Neoverse N1",
+  "model_contains": "0xd0c",
+  "isa": "aarch64",
+  "events": [
+    {
+      "slot": "cache_references",
+      "candidates": [
+        {
+          "name": "cache-references",
+          "type": 0,
+          "config": "0x2",
+          "meaning": "Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l2d_cache",
+          "type": 4,
+          "config": "0x16",
+          "meaning": "L2 cache accesses; proxy for cache references.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "cache_misses",
+      "candidates": [
+        {
+          "name": "cache-misses",
+          "type": 0,
+          "config": "0x3",
+          "meaning": "Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l2d_cache_refill_rd",
+          "type": 4,
+          "config": "0x52",
+          "meaning": "L2 read refills including store allocation; proxy for cache misses.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "l1_loads",
+      "candidates": [
+        {
+          "name": "L1-dcache-loads",
+          "type": 3,
+          "config": "0x0",
+          "meaning": "Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.",
+          "comparability": "generic_mapping_requires_review",
+          "skip_reason": "The Arm base generic L1-load mapping can alias cache-references and include writes. Select the locally documented read-specific 0x40 event to preserve a distinct, explicit meaning."
+        },
+        {
+          "name": "l1d_cache_rd",
+          "type": 4,
+          "config": "0x40",
+          "meaning": "Speculative L1D read accesses.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "l1_misses",
+      "candidates": [
+        {
+          "name": "L1-dcache-load-misses",
+          "type": 3,
+          "config": "0x10000",
+          "meaning": "Kernel L1D read-miss mapping; may count refills rather than retired misses.",
+          "comparability": "generic_mapping_requires_review",
+          "skip_reason": "The Arm base generic L1-miss mapping can alias cache-misses. Select the locally documented read-specific 0x42 refill event to preserve a distinct, explicit meaning."
+        },
+        {
+          "name": "l1d_cache_refill_rd",
+          "type": 4,
+          "config": "0x42",
+          "meaning": "L1D line allocations caused by speculative load misses.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "stores_or_replacements",
+      "candidates": [
+        {
+          "name": "L1-dcache-stores",
+          "type": 3,
+          "config": "0x100",
+          "meaning": "Kernel L1D write-access mapping; the read-only kernel should have little store activity.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l1d_cache_wr",
+          "type": 4,
+          "config": "0x41",
+          "meaning": "Speculative L1D write accesses.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "llc_loads",
+      "candidates": [
+        {
+          "name": "LLC-loads",
+          "type": 3,
+          "config": "0x2",
+          "meaning": "Kernel last-level read-access mapping; do not assume identical LLC domains across CPUs.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "ll_cache_rd",
+          "type": 4,
+          "config": "0x36",
+          "meaning": "Last-level read event; EXTLLC/firmware dependent. Existing 8.3 results did NOT validate SLC boundary.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "llc_misses",
+      "candidates": [
+        {
+          "name": "LLC-load-misses",
+          "type": 3,
+          "config": "0x10002",
+          "meaning": "Kernel last-level read-miss mapping; interpretation depends on CPU and firmware.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "ll_cache_miss_rd",
+          "type": 4,
+          "config": "0x37",
+          "meaning": "Last-level read miss event; existing 8.3 results track L2 refills, NOT verified SLC misses.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "dtlb_misses",
+      "candidates": [
+        {
+          "name": "dTLB-load-misses",
+          "type": 3,
+          "config": "0x10003",
+          "meaning": "Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l1d_tlb_refill",
+          "type": 4,
+          "config": "0x5",
+          "meaning": "L1D TLB refills, including speculative activity; not page walks.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    }
+  ],
+  "llc_bytes_if_sysfs_omits_l3": 33554432,
+  "llc_source": "Ampere Altra datasheet sections 2.1 p.8 and 2.5 p.9: socket-shared 32 MiB SLC; docs/event_evidence/thunderbird/ampere-altra-datasheet.pdf; absent in archived sysfs/lscpu"
+}

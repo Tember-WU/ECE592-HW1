@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/charnwood/counters01/source/bench",
+    "2",
+    "16384",
+    "64",
+    "1000000",
+    "64",
+    "59284",
+    "3",
+    "0x10000",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/charnwood/counters01/raw/l1_resident__r0__l1_misses",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}

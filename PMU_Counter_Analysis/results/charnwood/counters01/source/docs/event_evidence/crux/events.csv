@@ -1,0 +1,272 @@
+event,category,description,encoding,availability
+l1d.replacement,cache,L1D data line replacements,"default_core/event=0x51,period=0x1e8483,umask=0x1/",counted in user mode
+l1d_pend_miss.fb_full,cache,"Number of times a request needed a FB entry but there was no entry available for it. That is the FB unavailability was dominant reason for blocking the request. A request includes cacheable/uncacheable demands that is load, store or SW prefetch","default_core/event=0x48,period=0x1e8483,umask=0x2/",listed; not individually tested
+l1d_pend_miss.pending,cache,L1D miss outstandings duration in cycles,"default_core/event=0x48,period=0x1e8483,umask=0x1/",listed; not individually tested
+l1d_pend_miss.pending_cycles,cache,Cycles with L1D load Misses outstanding,"default_core/event=0x48,cmask=0x1,period=0x1e8483,umask=0x1/",listed; not individually tested
+l1d_pend_miss.pending_cycles_any,cache,Cycles with L1D load Misses outstanding from any thread on physical core,"default_core/event=0x48,any=0x1,cmask=0x1,period=0x1e8483,umask=0x1/",listed; not individually tested
+l2_lines_in.all,cache,L2 cache lines filling L2,"default_core/event=0xf1,period=0x186a3,umask=0x1f/",listed; not individually tested
+l2_lines_out.non_silent,cache,Counts the number of lines that are evicted by L2 cache when triggered by an L2 cache fill. Those lines are in Modified state. Modified lines are written back to L3,"default_core/event=0xf2,period=0x30d43,umask=0x2/",listed; not individually tested
+l2_lines_out.silent,cache,Counts the number of lines that are silently dropped by L2 cache when triggered by an L2 cache fill. These lines are typically in Shared or Exclusive state. A non-threaded event,"default_core/event=0xf2,period=0x30d43,umask=0x1/",listed; not individually tested
+l2_lines_out.useless_hwpf,cache,Counts the number of lines that have been hardware prefetched but not used and now evicted by L2 cache,"default_core/event=0xf2,period=0x30d43,umask=0x4/",listed; not individually tested
+l2_rqsts.all_code_rd,cache,L2 code requests,"default_core/event=0x24,period=0x30d43,umask=0xe4/",listed; not individually tested
+l2_rqsts.all_demand_data_rd,cache,Demand Data Read requests,"default_core/event=0x24,period=0x30d43,umask=0xe1/",counted in user mode
+l2_rqsts.all_demand_miss,cache,Demand requests that miss L2 cache,"default_core/event=0x24,period=0x30d43,umask=0x27/",listed; not individually tested
+l2_rqsts.all_demand_references,cache,Demand requests to L2 cache,"default_core/event=0x24,period=0x30d43,umask=0xe7/",listed; not individually tested
+l2_rqsts.all_pf,cache,Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches,"default_core/event=0x24,period=0x30d43,umask=0xf8/",listed; not individually tested
+l2_rqsts.all_rfo,cache,RFO requests to L2 cache,"default_core/event=0x24,period=0x30d43,umask=0xe2/",listed; not individually tested
+l2_rqsts.code_rd_hit,cache,"L2 cache hits when fetching instructions, code reads","default_core/event=0x24,period=0x30d43,umask=0xc4/",listed; not individually tested
+l2_rqsts.code_rd_miss,cache,L2 cache misses when fetching instructions,"default_core/event=0x24,period=0x30d43,umask=0x24/",listed; not individually tested
+l2_rqsts.demand_data_rd_hit,cache,Demand Data Read requests that hit L2 cache,"default_core/event=0x24,period=0x30d43,umask=0xc1/",listed; not individually tested
+l2_rqsts.demand_data_rd_miss,cache,"Demand Data Read miss L2, no rejects","default_core/event=0x24,period=0x30d43,umask=0x21/",counted in user mode
+l2_rqsts.miss,cache,All requests that miss L2 cache,"default_core/event=0x24,period=0x30d43,umask=0x3f/",counted in user mode
+l2_rqsts.pf_hit,cache,Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that hit L2 cache,"default_core/event=0x24,period=0x30d43,umask=0xd8/",listed; not individually tested
+l2_rqsts.pf_miss,cache,Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that miss L2 cache,"default_core/event=0x24,period=0x30d43,umask=0x38/",listed; not individually tested
+l2_rqsts.references,cache,All L2 requests,"default_core/event=0x24,period=0x30d43,umask=0xff/",counted in user mode
+l2_rqsts.rfo_hit,cache,RFO requests that hit L2 cache,"default_core/event=0x24,period=0x30d43,umask=0xc2/",listed; not individually tested
+l2_rqsts.rfo_miss,cache,RFO requests that miss L2 cache,"default_core/event=0x24,period=0x30d43,umask=0x22/",listed; not individually tested
+l2_trans.l2_wb,cache,L2 writebacks that access L2 cache,"default_core/event=0xf0,period=0x30d43,umask=0x40/",listed; not individually tested
+longest_lat_cache.miss,cache,Core-originated cacheable demand requests missed L3 Spec update: SKL057,"default_core/event=0x2e,period=0x186a3,umask=0x41/",listed; not individually tested
+longest_lat_cache.reference,cache,Core-originated cacheable demand requests that refer to L3 Spec update: SKL057,"default_core/event=0x2e,period=0x186a3,umask=0x4f/",listed; not individually tested
+mem_inst_retired.all_loads,cache,Retired load instructions Supports address when precise (Precise event),"default_core/event=0xd0,period=0x1e8483,umask=0x81/",counted in user mode
+mem_inst_retired.all_stores,cache,Retired store instructions Supports address when precise (Precise event),"default_core/event=0xd0,period=0x1e8483,umask=0x82/",listed; not individually tested
+mem_inst_retired.any,cache,All retired memory instructions Supports address when precise (Precise event),"default_core/event=0xd0,period=0x1e8483,umask=0x83/",listed; not individually tested
+mem_inst_retired.lock_loads,cache,Retired load instructions with locked access Supports address when precise (Precise event),"default_core/event=0xd0,period=0x186a7,umask=0x21/",listed; not individually tested
+mem_inst_retired.split_loads,cache,Retired load instructions that split across a cacheline boundary Supports address when precise (Precise event),"default_core/event=0xd0,period=0x186a3,umask=0x41/",listed; not individually tested
+mem_inst_retired.split_stores,cache,Retired store instructions that split across a cacheline boundary Supports address when precise (Precise event),"default_core/event=0xd0,period=0x186a3,umask=0x42/",listed; not individually tested
+mem_inst_retired.stlb_miss_loads,cache,Retired load instructions that miss the STLB Supports address when precise (Precise event),"default_core/event=0xd0,period=0x186a3,umask=0x11/",listed; not individually tested
+mem_inst_retired.stlb_miss_stores,cache,Retired store instructions that miss the STLB Supports address when precise (Precise event),"default_core/event=0xd0,period=0x186a3,umask=0x12/",listed; not individually tested
+mem_load_l3_hit_retired.xsnp_hit,cache,Retired load instructions which data sources were L3 and cross-core snoop hits in on-pkg core cache Supports address when precise (Precise event),"default_core/event=0xd2,period=0x4e2b,umask=0x2/",listed; not individually tested
+mem_load_l3_hit_retired.xsnp_hitm,cache,Retired load instructions which data sources were HitM responses from shared L3 Supports address when precise (Precise event),"default_core/event=0xd2,period=0x4e2b,umask=0x4/",listed; not individually tested
+mem_load_l3_hit_retired.xsnp_miss,cache,Retired load instructions which data sources were L3 hit and cross-core snoop missed in on-pkg core cache Supports address when precise (Precise event),"default_core/event=0xd2,period=0x4e2b,umask=0x1/",listed; not individually tested
+mem_load_l3_hit_retired.xsnp_none,cache,Retired load instructions which data sources were hits in L3 without snoops required Supports address when precise (Precise event),"default_core/event=0xd2,period=0x186a3,umask=0x8/",listed; not individually tested
+mem_load_misc_retired.uc,cache,Retired instructions with at least 1 uncacheable load or lock Supports address when precise (Precise event),"default_core/event=0xd4,period=0x186a7,umask=0x4/",listed; not individually tested
+mem_load_retired.fb_hit,cache,Retired load instructions which data sources were load missed L1 but hit FB due to preceding miss to the same cache line with data not ready Supports address when precise (Precise event),"default_core/event=0xd1,period=0x186a7,umask=0x40/",counted in user mode
+mem_load_retired.l1_hit,cache,Retired load instructions with L1 cache hits as data sources Supports address when precise (Precise event),"default_core/event=0xd1,period=0x1e8483,umask=0x1/",counted in user mode
+mem_load_retired.l1_miss,cache,Retired load instructions missed L1 cache as data sources Supports address when precise (Precise event),"default_core/event=0xd1,period=0x186a3,umask=0x8/",counted in user mode
+mem_load_retired.l2_hit,cache,Retired load instructions with L2 cache hits as data sources Supports address when precise (Precise event),"default_core/event=0xd1,period=0x186a3,umask=0x2/",counted in user mode
+mem_load_retired.l2_miss,cache,Retired load instructions missed L2 cache as data sources Supports address when precise (Precise event),"default_core/event=0xd1,period=0xc365,umask=0x10/",counted in user mode
+mem_load_retired.l3_hit,cache,Retired load instructions with L3 cache hits as data sources Supports address when precise (Precise event),"default_core/event=0xd1,period=0xc365,umask=0x4/",counted in user mode
+mem_load_retired.l3_miss,cache,Retired load instructions missed L3 cache as data sources Supports address when precise (Precise event),"default_core/event=0xd1,period=0x186a7,umask=0x20/",counted in user mode
+offcore_requests.all_data_rd,cache,Demand and prefetch data reads,"default_core/event=0xb0,period=0x186a3,umask=0x8/",listed; not individually tested
+offcore_requests.all_requests,cache,Any memory transaction that reached the SQ,"default_core/event=0xb0,period=0x186a3,umask=0x80/",listed; not individually tested
+offcore_requests.demand_code_rd,cache,Cacheable and non-cacheable code read requests,"default_core/event=0xb0,period=0x186a3,umask=0x2/",listed; not individually tested
+offcore_requests.demand_data_rd,cache,Demand Data Read requests sent to uncore,"default_core/event=0xb0,period=0x186a3,umask=0x1/",listed; not individually tested
+offcore_requests.demand_rfo,cache,"Demand RFO requests including regular RFOs, locks, ItoM","default_core/event=0xb0,period=0x186a3,umask=0x4/",listed; not individually tested
+offcore_requests_buffer.sq_full,cache,Offcore requests buffer cannot take more entries for this thread core,"default_core/event=0xb2,period=0x1e8483,umask=0x1/",listed; not individually tested
+offcore_requests_outstanding.all_data_rd,cache,"Offcore outstanding cacheable Core Data Read transactions in SuperQueue (SQ), queue to uncore","default_core/event=0x60,period=0x1e8483,umask=0x8/",listed; not individually tested
+offcore_requests_outstanding.cycles_with_data_rd,cache,"Cycles when offcore outstanding cacheable Core Data Read transactions are present in SuperQueue (SQ), queue to uncore","default_core/event=0x60,cmask=0x1,period=0x1e8483,umask=0x8/",listed; not individually tested
+offcore_requests_outstanding.cycles_with_demand_code_rd,cache,"Cycles with offcore outstanding Code Reads transactions in the SuperQueue (SQ), queue to uncore","default_core/event=0x60,cmask=0x1,period=0x1e8483,umask=0x2/",listed; not individually tested
+offcore_requests_outstanding.cycles_with_demand_data_rd,cache,"Cycles when offcore outstanding Demand Data Read transactions are present in SuperQueue (SQ), queue to uncore","default_core/event=0x60,cmask=0x1,period=0x1e8483,umask=0x1/",listed; not individually tested
+offcore_requests_outstanding.cycles_with_demand_rfo,cache,"Cycles with offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore","default_core/event=0x60,cmask=0x1,period=0x1e8483,umask=0x4/",listed; not individually tested
+offcore_requests_outstanding.demand_code_rd,cache,"Offcore outstanding Code Reads transactions in the SuperQueue (SQ), queue to uncore, every cycle","default_core/event=0x60,period=0x1e8483,umask=0x2/",listed; not individually tested
+offcore_requests_outstanding.demand_data_rd,cache,Offcore outstanding Demand Data Read transactions in uncore queue,"default_core/event=0x60,period=0x1e8483,umask=0x1/",listed; not individually tested
+offcore_requests_outstanding.demand_data_rd_ge_6,cache,Cycles with at least 6 offcore outstanding Demand Data Read transactions in uncore queue,"default_core/event=0x60,cmask=0x6,period=0x1e8483,umask=0x1/",listed; not individually tested
+offcore_requests_outstanding.demand_rfo,cache,"Offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore, every cycle","default_core/event=0x60,period=0x1e8483,umask=0x4/",listed; not individually tested
+offcore_response,cache,"Offcore response can be programmed only with a specific pair of event select and counter MSR, and with specific event codes and predefine mask bit value in a dedicated MSR to specify attributes of the offcore transaction","default_core/event=0xb7,period=0x186a3,umask=0x1/",listed; not individually tested
+offcore_response.demand_code_rd.any_response,cache,Counts all demand code reads have any response type,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x10004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit.any_snoop,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc01c0004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit.snoop_hit_no_fwd,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x4001c0004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit.snoop_hitm,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x10001c0004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit.snoop_miss,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x2001c0004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit.snoop_none,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x801c0004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit.snoop_not_needed,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1001c0004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit.spl_hit,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x401c0004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_e.any_snoop,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0080004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_e.snoop_hit_no_fwd,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400080004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_e.snoop_hitm,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000080004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_e.snoop_miss,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200080004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_e.snoop_none,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80080004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_e.snoop_not_needed,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100080004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_e.spl_hit,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40080004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_m.any_snoop,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0040004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_m.snoop_hit_no_fwd,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400040004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_m.snoop_hitm,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000040004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_m.snoop_miss,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200040004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_m.snoop_none,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80040004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_m.snoop_not_needed,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100040004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_m.spl_hit,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40040004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_s.any_snoop,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0100004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_s.snoop_hit_no_fwd,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400100004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_s.snoop_hitm,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000100004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_s.snoop_miss,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200100004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_s.snoop_none,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80100004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_s.snoop_not_needed,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100100004/",listed; not individually tested
+offcore_response.demand_code_rd.l3_hit_s.spl_hit,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40100004/",listed; not individually tested
+offcore_response.demand_code_rd.l4_hit_local_l4.any_snoop,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0400004/",listed; not individually tested
+offcore_response.demand_code_rd.l4_hit_local_l4.snoop_hit_no_fwd,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400400004/",listed; not individually tested
+offcore_response.demand_code_rd.l4_hit_local_l4.snoop_hitm,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000400004/",listed; not individually tested
+offcore_response.demand_code_rd.l4_hit_local_l4.snoop_miss,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200400004/",listed; not individually tested
+offcore_response.demand_code_rd.l4_hit_local_l4.snoop_none,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80400004/",listed; not individually tested
+offcore_response.demand_code_rd.l4_hit_local_l4.snoop_not_needed,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100400004/",listed; not individually tested
+offcore_response.demand_code_rd.l4_hit_local_l4.spl_hit,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40400004/",listed; not individually tested
+offcore_response.demand_code_rd.supplier_none.any_snoop,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0020004/",listed; not individually tested
+offcore_response.demand_code_rd.supplier_none.snoop_hit_no_fwd,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400020004/",listed; not individually tested
+offcore_response.demand_code_rd.supplier_none.snoop_hitm,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000020004/",listed; not individually tested
+offcore_response.demand_code_rd.supplier_none.snoop_miss,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200020004/",listed; not individually tested
+offcore_response.demand_code_rd.supplier_none.snoop_none,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80020004/",listed; not individually tested
+offcore_response.demand_code_rd.supplier_none.snoop_not_needed,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100020004/",listed; not individually tested
+offcore_response.demand_code_rd.supplier_none.spl_hit,cache,Counts all demand code reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40020004/",listed; not individually tested
+offcore_response.demand_data_rd.any_response,cache,Counts demand data reads have any response type,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x10001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit.any_snoop,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc01c0001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit.snoop_hit_no_fwd,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x4001c0001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit.snoop_hitm,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x10001c0001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit.snoop_miss,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x2001c0001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit.snoop_none,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x801c0001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit.snoop_not_needed,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1001c0001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit.spl_hit,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x401c0001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_e.any_snoop,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0080001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_e.snoop_hit_no_fwd,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400080001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_e.snoop_hitm,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000080001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_e.snoop_miss,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200080001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_e.snoop_none,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80080001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_e.snoop_not_needed,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100080001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_e.spl_hit,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40080001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_m.any_snoop,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0040001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_m.snoop_hit_no_fwd,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400040001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_m.snoop_hitm,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000040001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_m.snoop_miss,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200040001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_m.snoop_none,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80040001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_m.snoop_not_needed,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100040001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_m.spl_hit,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40040001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_s.any_snoop,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0100001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_s.snoop_hit_no_fwd,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400100001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_s.snoop_hitm,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000100001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_s.snoop_miss,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200100001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_s.snoop_none,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80100001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_s.snoop_not_needed,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100100001/",listed; not individually tested
+offcore_response.demand_data_rd.l3_hit_s.spl_hit,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40100001/",listed; not individually tested
+offcore_response.demand_data_rd.l4_hit_local_l4.any_snoop,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0400001/",listed; not individually tested
+offcore_response.demand_data_rd.l4_hit_local_l4.snoop_hit_no_fwd,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400400001/",listed; not individually tested
+offcore_response.demand_data_rd.l4_hit_local_l4.snoop_hitm,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000400001/",listed; not individually tested
+offcore_response.demand_data_rd.l4_hit_local_l4.snoop_miss,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200400001/",listed; not individually tested
+offcore_response.demand_data_rd.l4_hit_local_l4.snoop_none,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80400001/",listed; not individually tested
+offcore_response.demand_data_rd.l4_hit_local_l4.snoop_not_needed,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100400001/",listed; not individually tested
+offcore_response.demand_data_rd.l4_hit_local_l4.spl_hit,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40400001/",listed; not individually tested
+offcore_response.demand_data_rd.supplier_none.any_snoop,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0020001/",listed; not individually tested
+offcore_response.demand_data_rd.supplier_none.snoop_hit_no_fwd,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400020001/",listed; not individually tested
+offcore_response.demand_data_rd.supplier_none.snoop_hitm,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000020001/",listed; not individually tested
+offcore_response.demand_data_rd.supplier_none.snoop_miss,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200020001/",listed; not individually tested
+offcore_response.demand_data_rd.supplier_none.snoop_none,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80020001/",listed; not individually tested
+offcore_response.demand_data_rd.supplier_none.snoop_not_needed,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100020001/",listed; not individually tested
+offcore_response.demand_data_rd.supplier_none.spl_hit,cache,Counts demand data reads,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40020001/",listed; not individually tested
+offcore_response.demand_rfo.any_response,cache,Counts all demand data writes (RFOs) have any response type,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x10002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit.any_snoop,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc01c0002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit.snoop_hit_no_fwd,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x4001c0002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit.snoop_hitm,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x10001c0002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit.snoop_miss,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x2001c0002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit.snoop_none,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x801c0002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit.snoop_not_needed,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1001c0002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit.spl_hit,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x401c0002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_e.any_snoop,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0080002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_e.snoop_hit_no_fwd,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400080002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_e.snoop_hitm,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000080002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_e.snoop_miss,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200080002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_e.snoop_none,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80080002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_e.snoop_not_needed,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100080002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_e.spl_hit,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40080002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_m.any_snoop,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0040002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_m.snoop_hit_no_fwd,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400040002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_m.snoop_hitm,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000040002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_m.snoop_miss,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200040002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_m.snoop_none,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80040002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_m.snoop_not_needed,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100040002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_m.spl_hit,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40040002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_s.any_snoop,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0100002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_s.snoop_hit_no_fwd,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400100002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_s.snoop_hitm,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000100002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_s.snoop_miss,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200100002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_s.snoop_none,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80100002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_s.snoop_not_needed,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100100002/",listed; not individually tested
+offcore_response.demand_rfo.l3_hit_s.spl_hit,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40100002/",listed; not individually tested
+offcore_response.demand_rfo.l4_hit_local_l4.any_snoop,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0400002/",listed; not individually tested
+offcore_response.demand_rfo.l4_hit_local_l4.snoop_hit_no_fwd,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400400002/",listed; not individually tested
+offcore_response.demand_rfo.l4_hit_local_l4.snoop_hitm,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000400002/",listed; not individually tested
+offcore_response.demand_rfo.l4_hit_local_l4.snoop_miss,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200400002/",listed; not individually tested
+offcore_response.demand_rfo.l4_hit_local_l4.snoop_none,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80400002/",listed; not individually tested
+offcore_response.demand_rfo.l4_hit_local_l4.snoop_not_needed,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100400002/",listed; not individually tested
+offcore_response.demand_rfo.l4_hit_local_l4.spl_hit,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40400002/",listed; not individually tested
+offcore_response.demand_rfo.supplier_none.any_snoop,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0020002/",listed; not individually tested
+offcore_response.demand_rfo.supplier_none.snoop_hit_no_fwd,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400020002/",listed; not individually tested
+offcore_response.demand_rfo.supplier_none.snoop_hitm,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000020002/",listed; not individually tested
+offcore_response.demand_rfo.supplier_none.snoop_miss,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200020002/",listed; not individually tested
+offcore_response.demand_rfo.supplier_none.snoop_none,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80020002/",listed; not individually tested
+offcore_response.demand_rfo.supplier_none.snoop_not_needed,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100020002/",listed; not individually tested
+offcore_response.demand_rfo.supplier_none.spl_hit,cache,Counts all demand data writes (RFOs),"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40020002/",listed; not individually tested
+offcore_response.other.any_response,cache,Counts any other requests have any response type,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x18000/",listed; not individually tested
+offcore_response.other.l3_hit.any_snoop,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc01c8000/",listed; not individually tested
+offcore_response.other.l3_hit.snoop_hit_no_fwd,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x4001c8000/",listed; not individually tested
+offcore_response.other.l3_hit.snoop_hitm,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x10001c8000/",listed; not individually tested
+offcore_response.other.l3_hit.snoop_miss,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x2001c8000/",listed; not individually tested
+offcore_response.other.l3_hit.snoop_none,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x801c8000/",listed; not individually tested
+offcore_response.other.l3_hit.snoop_not_needed,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1001c8000/",listed; not individually tested
+offcore_response.other.l3_hit.spl_hit,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x401c8000/",listed; not individually tested
+offcore_response.other.l3_hit_e.any_snoop,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0088000/",listed; not individually tested
+offcore_response.other.l3_hit_e.snoop_hit_no_fwd,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400088000/",listed; not individually tested
+offcore_response.other.l3_hit_e.snoop_hitm,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000088000/",listed; not individually tested
+offcore_response.other.l3_hit_e.snoop_miss,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200088000/",listed; not individually tested
+offcore_response.other.l3_hit_e.snoop_none,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80088000/",listed; not individually tested
+offcore_response.other.l3_hit_e.snoop_not_needed,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100088000/",listed; not individually tested
+offcore_response.other.l3_hit_e.spl_hit,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40088000/",listed; not individually tested
+offcore_response.other.l3_hit_m.any_snoop,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0048000/",listed; not individually tested
+offcore_response.other.l3_hit_m.snoop_hit_no_fwd,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400048000/",listed; not individually tested
+offcore_response.other.l3_hit_m.snoop_hitm,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000048000/",listed; not individually tested
+offcore_response.other.l3_hit_m.snoop_miss,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200048000/",listed; not individually tested
+offcore_response.other.l3_hit_m.snoop_none,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80048000/",listed; not individually tested
+offcore_response.other.l3_hit_m.snoop_not_needed,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100048000/",listed; not individually tested
+offcore_response.other.l3_hit_m.spl_hit,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40048000/",listed; not individually tested
+offcore_response.other.l3_hit_s.any_snoop,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0108000/",listed; not individually tested
+offcore_response.other.l3_hit_s.snoop_hit_no_fwd,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400108000/",listed; not individually tested
+offcore_response.other.l3_hit_s.snoop_hitm,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000108000/",listed; not individually tested
+offcore_response.other.l3_hit_s.snoop_miss,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200108000/",listed; not individually tested
+offcore_response.other.l3_hit_s.snoop_none,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80108000/",listed; not individually tested
+offcore_response.other.l3_hit_s.snoop_not_needed,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100108000/",listed; not individually tested
+offcore_response.other.l3_hit_s.spl_hit,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40108000/",listed; not individually tested
+offcore_response.other.l4_hit_local_l4.any_snoop,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0408000/",listed; not individually tested
+offcore_response.other.l4_hit_local_l4.snoop_hit_no_fwd,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400408000/",listed; not individually tested
+offcore_response.other.l4_hit_local_l4.snoop_hitm,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000408000/",listed; not individually tested
+offcore_response.other.l4_hit_local_l4.snoop_miss,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200408000/",listed; not individually tested
+offcore_response.other.l4_hit_local_l4.snoop_none,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80408000/",listed; not individually tested
+offcore_response.other.l4_hit_local_l4.snoop_not_needed,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100408000/",listed; not individually tested
+offcore_response.other.l4_hit_local_l4.spl_hit,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40408000/",listed; not individually tested
+offcore_response.other.supplier_none.any_snoop,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x3fc0028000/",listed; not individually tested
+offcore_response.other.supplier_none.snoop_hit_no_fwd,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x400028000/",listed; not individually tested
+offcore_response.other.supplier_none.snoop_hitm,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x1000028000/",listed; not individually tested
+offcore_response.other.supplier_none.snoop_miss,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x200028000/",listed; not individually tested
+offcore_response.other.supplier_none.snoop_none,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x80028000/",listed; not individually tested
+offcore_response.other.supplier_none.snoop_not_needed,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x100028000/",listed; not individually tested
+offcore_response.other.supplier_none.spl_hit,cache,Counts any other requests,"default_core/event=0xb7,period=0x186a3,umask=0x1,offcore_rsp=0x40028000/",listed; not individually tested
+sq_misc.split_lock,cache,Number of cache line split locks sent to uncore,"default_core/event=0xf4,period=0x186a3,umask=0x10/",listed; not individually tested
+sw_prefetch_access.nta,cache,Number of PREFETCHNTA instructions executed,"default_core/event=0x32,period=0x1e8483,umask=0x1/",listed; not individually tested
+sw_prefetch_access.prefetchw,cache,Number of PREFETCHW instructions executed,"default_core/event=0x32,period=0x1e8483,umask=0x8/",listed; not individually tested
+sw_prefetch_access.t0,cache,Number of PREFETCHT0 instructions executed,"default_core/event=0x32,period=0x1e8483,umask=0x2/",listed; not individually tested
+sw_prefetch_access.t1_t2,cache,Number of PREFETCHT1 or PREFETCHT2 instructions executed,"default_core/event=0x32,period=0x1e8483,umask=0x4/",listed; not individually tested
+dtlb_load_misses.miss_causes_a_walk,virtual memory,Load misses in all DTLB levels that cause page walks,"default_core/event=0x8,period=0x186a3,umask=0x1/",listed; not individually tested
+dtlb_load_misses.stlb_hit,virtual memory,Loads that miss the DTLB and hit the STLB,"default_core/event=0x8,period=0x1e8483,umask=0x20/",listed; not individually tested
+dtlb_load_misses.walk_active,virtual memory,Cycles when at least one PMH is busy with a page walk for a load. EPT page walk duration are excluded in Skylake,"default_core/event=0x8,cmask=0x1,period=0x186a3,umask=0x10/",listed; not individually tested
+dtlb_load_misses.walk_completed,virtual memory,Load miss in all TLB levels causes a page walk that completes. (All page sizes),"default_core/event=0x8,period=0x186a3,umask=0xe/",counted in user mode
+dtlb_load_misses.walk_completed_1g,virtual memory,Page walk completed due to a demand data load to a 1G page,"default_core/event=0x8,period=0x1e8483,umask=0x8/",listed; not individually tested
+dtlb_load_misses.walk_completed_2m_4m,virtual memory,Page walk completed due to a demand data load to a 2M/4M page,"default_core/event=0x8,period=0x1e8483,umask=0x4/",listed; not individually tested
+dtlb_load_misses.walk_completed_4k,virtual memory,Page walk completed due to a demand data load to a 4K page,"default_core/event=0x8,period=0x1e8483,umask=0x2/",listed; not individually tested
+dtlb_load_misses.walk_pending,virtual memory,Counts 1 per cycle for each PMH that is busy with a page walk for a load. EPT page walk duration are excluded in Skylake,"default_core/event=0x8,period=0x1e8483,umask=0x10/",listed; not individually tested
+dtlb_store_misses.miss_causes_a_walk,virtual memory,Store misses in all DTLB levels that cause page walks,"default_core/event=0x49,period=0x186a3,umask=0x1/",listed; not individually tested
+dtlb_store_misses.stlb_hit,virtual memory,Stores that miss the DTLB and hit the STLB,"default_core/event=0x49,period=0x186a3,umask=0x20/",listed; not individually tested
+dtlb_store_misses.walk_active,virtual memory,Cycles when at least one PMH is busy with a page walk for a store. EPT page walk duration are excluded in Skylake,"default_core/event=0x49,cmask=0x1,period=0x186a3,umask=0x10/",listed; not individually tested
+dtlb_store_misses.walk_completed,virtual memory,Store misses in all TLB levels causes a page walk that completes. (All page sizes),"default_core/event=0x49,period=0x186a3,umask=0xe/",listed; not individually tested
+dtlb_store_misses.walk_completed_1g,virtual memory,Page walk completed due to a demand data store to a 1G page,"default_core/event=0x49,period=0x186a3,umask=0x8/",listed; not individually tested
+dtlb_store_misses.walk_completed_2m_4m,virtual memory,Page walk completed due to a demand data store to a 2M/4M page,"default_core/event=0x49,period=0x186a3,umask=0x4/",listed; not individually tested
+dtlb_store_misses.walk_completed_4k,virtual memory,Page walk completed due to a demand data store to a 4K page,"default_core/event=0x49,period=0x186a3,umask=0x2/",listed; not individually tested
+dtlb_store_misses.walk_pending,virtual memory,Counts 1 per cycle for each PMH that is busy with a page walk for a store. EPT page walk duration are excluded in Skylake,"default_core/event=0x49,period=0x1e8483,umask=0x10/",listed; not individually tested
+ept.walk_pending,virtual memory,Counts 1 per cycle for each PMH that is busy with a EPT (Extended Page Table) walk for any request type,"default_core/event=0x4f,period=0x1e8483,umask=0x10/",listed; not individually tested
+itlb.itlb_flush,virtual memory,"Flushing of the Instruction TLB (ITLB) pages, includes 4k/2M/4M pages","default_core/event=0xae,period=0x186a7,umask=0x1/",listed; not individually tested
+itlb_misses.miss_causes_a_walk,virtual memory,Misses at all ITLB levels that cause page walks,"default_core/event=0x85,period=0x186a3,umask=0x1/",listed; not individually tested
+itlb_misses.stlb_hit,virtual memory,Instruction fetch requests that miss the ITLB and hit the STLB,"default_core/event=0x85,period=0x186a3,umask=0x20/",listed; not individually tested
+itlb_misses.walk_active,virtual memory,Cycles when at least one PMH is busy with a page walk for code (instruction fetch) request. EPT page walk duration are excluded in Skylake,"default_core/event=0x85,cmask=0x1,period=0x186a3,umask=0x10/",listed; not individually tested
+itlb_misses.walk_completed,virtual memory,Code miss in all TLB levels causes a page walk that completes. (All page sizes),"default_core/event=0x85,period=0x186a3,umask=0xe/",listed; not individually tested
+itlb_misses.walk_completed_1g,virtual memory,Code miss in all TLB levels causes a page walk that completes. (1G),"default_core/event=0x85,period=0x186a3,umask=0x8/",listed; not individually tested
+itlb_misses.walk_completed_2m_4m,virtual memory,Code miss in all TLB levels causes a page walk that completes. (2M/4M),"default_core/event=0x85,period=0x186a3,umask=0x4/",listed; not individually tested
+itlb_misses.walk_completed_4k,virtual memory,Code miss in all TLB levels causes a page walk that completes. (4K),"default_core/event=0x85,period=0x186a3,umask=0x2/",listed; not individually tested
+itlb_misses.walk_pending,virtual memory,Counts 1 per cycle for each PMH that is busy with a page walk for an instruction fetch request. EPT page walk duration are excluded in Skylake,"default_core/event=0x85,period=0x186a3,umask=0x10/",listed; not individually tested
+tlb_flush.dtlb_thread,virtual memory,DTLB flush attempts of the thread-specific entries,"default_core/event=0xbd,period=0x186a7,umask=0x1/",listed; not individually tested
+tlb_flush.stlb_any,virtual memory,STLB flush attempts,"default_core/event=0xbd,period=0x186a7,umask=0x20/",listed; not individually tested
+cache-references,generic,Generic Linux hardware alias; do not assume a specific cache level.,,counted in user mode
+cache-misses,generic,Generic Linux hardware alias; do not assume a specific cache level.,,counted in user mode
