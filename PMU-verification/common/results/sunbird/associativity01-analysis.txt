@@ -1,0 +1,1 @@
+associativity: validated 24 configurations; wrote statistics and two PNG/PDF figures.

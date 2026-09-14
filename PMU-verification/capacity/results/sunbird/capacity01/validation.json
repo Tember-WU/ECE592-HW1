@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "points": 28,
+  "unique_workloads": 14,
+  "timing_only_summary": "/home/swu35/ECE592-HW1/PMU-verification/phase1-freeze/sunbird/freeze01/snapshot/timing-only/capacity/results/sunbird/combined12/summary.csv",
+  "timing_only_summary_sha256": "45051217460590777511888eb1f504e97ed1e508c58020724c0df6a102982eb7",
+  "event_passes": [
+    {
+      "name": "l1_l2",
+      "event_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "l3_loads",
+      "event_indices": [
+        2,
+        3
+      ]
+    }
+  ],
+  "timed_batches": 28000000,
+  "all_raw_and_count_hashes_match": true,
+  "all_statistics_recomputed": true,
+  "all_groups_without_multiplexing": true,
+  "matching_timing_only_workload_for_every_point": true,
+  "note": "Integrity and comparability checks; not proof of an uncontended or pure cache state."
+}

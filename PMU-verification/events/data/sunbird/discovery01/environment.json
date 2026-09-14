@@ -1,0 +1,16 @@
+{
+  "hostname": "sunbird.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "5.14.0-611.54.1.el9_7.x86_64",
+  "cpu": 32,
+  "collected_utc": "2026-09-14T15:31:41.977128+00:00",
+  "perf_version": "perf version 5.14.0-687.31.1.el9_8.x86_64",
+  "perf_event_paranoid": "2",
+  "processor_identification": [
+    "vendor_id\t: GenuineIntel",
+    "cpu family\t: 6",
+    "model\t\t: 63",
+    "model name\t: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
+    "stepping\t: 2"
+  ]
+}

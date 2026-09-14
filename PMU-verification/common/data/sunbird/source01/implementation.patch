@@ -1,0 +1,724 @@
+diff --git a/PMU-verification/capacity/scripts/analyze_capacity.py b/PMU-verification/capacity/scripts/analyze_capacity.py
+index c9217a06..8aa7e50e 100644
+--- a/PMU-verification/capacity/scripts/analyze_capacity.py
++++ b/PMU-verification/capacity/scripts/analyze_capacity.py
+@@ -9,7 +9,7 @@ import numpy as np
+ import matplotlib
+ matplotlib.use('Agg')
+ import matplotlib.pyplot as plt
+-from common import ROOT, identifier, plan, save, sha, summarize, validate_counts
++from common import ROOT, identifier, plan, save, sha, summarize, validate_counts, selected_events
+ 
+ 
+ def write_csv(path, rows):
+@@ -31,8 +31,9 @@ def main():
+     if manifest['status'] != 'complete':
+         raise ValueError('Run is not complete')
+     expected = plan(config)
+-    if [(j['name'], j['bytes'], j['region']) for j in expected] != [
+-            (j['name'], j['bytes'], j['region']) for j in manifest['jobs']]:
++    if len(expected) != len(manifest['jobs']) or any(
++            any(actual.get(k) != v for k, v in wanted.items())
++            for wanted, actual in zip(expected, manifest['jobs'])):
+         raise ValueError('Plan/manifest mismatch')
+     out.mkdir(parents=True, exist_ok=True)
+     figures = out / 'figures'; figures.mkdir(exist_ok=True)
+@@ -53,12 +54,14 @@ def main():
+         stats = summarize(raw, config['batch'])
+         if stats != job['statistics']:
+             raise ValueError('Recomputed statistics differ')
+-        counts = json.loads(counts_path.read_text()); validate_counts(counts, config)
++        counts = json.loads(counts_path.read_text()); validate_counts(counts, config, job)
+         row = dict(name=job['name'], region=job['region'], bytes=job['bytes'],
++                   point_name=job.get('point_name', job['name']), pmu_pass=job.get('pmu_pass', 'all'),
+                    **{k: v for k, v in stats.items() if k != 'decile_medians'},
+                    units='TSC ticks / dependent load',
+                    **job['measurement_events'])
+-        for i, (event, actual) in enumerate(zip(config['events'], counts['events'])):
++        row.update({e['name'] + '_per_1000_chain_loads': None for e in config['events']})
++        for event, actual in zip(selected_events(config, job), counts['events']):
+             per1000 = actual['count'] / counts['chain_loads'] * 1000
+             row[event['name'] + '_per_1000_chain_loads'] = per1000
+             counters.append(dict(name=job['name'], bytes=job['bytes'], event=event['name'],
+@@ -74,9 +77,11 @@ def main():
+     write_csv(out / 'summary.csv', rows)
+     write_csv(out / 'pmu_counts.csv', counters)
+     write_csv(out / 'temporal_medians.csv', temporal)
+-    # Read the existing timing-only summary in place. No baseline snapshot,
+-    # Git checkpoint, or separate prior-result reference file is created.
++    # New runs may reference a frozen baseline; legacy configurations read in place.
+     baseline_path = ROOT.parents[1] / 'timing-only' / 'capacity' / 'results' / args.machine / 'combined12' / 'summary.csv'
++    if config.get('phase1_freeze'):
++        freeze = ROOT.parent / config['phase1_freeze']['manifest']
++        baseline_path = freeze.parent / 'snapshot/timing-only/capacity/results' / args.machine / 'combined12/summary.csv'
+     with baseline_path.open() as f:
+         baseline = list(csv.DictReader(f))
+     before = {}
+@@ -90,7 +95,8 @@ def main():
+     plt.rcParams.update({'font.size': 10, 'axes.grid': False, 'pdf.fonttype': 42})
+     fig, axes = plt.subplots(2, 3, figsize=(13, 7), layout='constrained')
+     for col, region in enumerate(config['regions']):
+-        selected = [r for r in rows if r['region'] == region]
++        event = config['events'][col]['name']
++        selected = [r for r in rows if r['region'] == region and r[event + '_per_1000_chain_loads'] is not None]
+         divisor = 1024 if region == 'L1' else 1024**2
+         x = [r['bytes'] / divisor for r in selected]
+         ax = axes[0, col]
+@@ -101,7 +107,6 @@ def main():
+         ax.set_title(region + ' capacity region')
+         ax.set_ylabel('TSC ticks / dependent load')
+         ax.legend(fontsize=8)
+-        event = config['events'][col]['name']
+         axes[1, col].plot(x, [r[event + '_per_1000_chain_loads'] for r in selected],
+                           'o-', color='#bd3c36')
+         axes[1, col].set_ylabel(region + ' misses / 1,000 chain loads')
+@@ -110,7 +115,7 @@ def main():
+             a.set_xlabel('Working set (' + ('KiB' if region == 'L1' else 'MiB') + ')')
+             a.set_xticks(x)
+             a.tick_params(axis='x', labelsize=8)
+-    fig.suptitle('Artemisia: same capacity workloads, timing and PMU evidence')
++    fig.suptitle(f'{args.machine}: same capacity workloads, timing and PMU evidence')
+     for extension in ('png', 'pdf'):
+         fig.savefig(figures / ('capacity_pmu_validation.' + extension), dpi=180)
+     plt.close(fig)
+@@ -119,8 +124,10 @@ def main():
+         selected = [r for r in rows if r['region'] == region]
+         divisor = 1024 if region == 'L1' else 1024**2
+         boxes = [dict(med=r['median'], q1=r['q1'], q3=r['q3'], whislo=r['whisker_low'],
+-                      whishi=r['whisker_high'], fliers=[], label=f"{r['bytes'] / divisor:g}") for r in selected]
++                      whishi=r['whisker_high'], fliers=[], label=f"{r['bytes'] / divisor:g}" +
++                      ('\n' + r['pmu_pass'] if config.get('event_passes') else '')) for r in selected]
+         ax.bxp(boxes, showfliers=False)
++        ax.tick_params(axis='x', labelsize=7)
+         ax.set_title(region)
+         ax.set_xlabel('Working set (' + ('KiB' if region == 'L1' else 'MiB') + ')')
+         ax.set_ylabel('TSC ticks / dependent load')
+@@ -151,6 +158,9 @@ def main():
+                    note='CPU busy time during a run includes this benchmark. Shared-cache/memory interference is not isolated.')
+     save(out / 'quality.json', quality)
+     save(out / 'validation.json', dict(status='passed', points=len(rows),
++         unique_workloads=len({r['point_name'] for r in rows}),
++         timing_only_summary=str(baseline_path), timing_only_summary_sha256=sha(baseline_path),
++         event_passes=config.get('event_passes'),
+          timed_batches=sum(r['n'] for r in rows), all_raw_and_count_hashes_match=True,
+          all_statistics_recomputed=True, all_groups_without_multiplexing=True,
+          matching_timing_only_workload_for_every_point=True,
+diff --git a/PMU-verification/capacity/scripts/common.py b/PMU-verification/capacity/scripts/common.py
+index 0b6e044b..c84a24bb 100644
+--- a/PMU-verification/capacity/scripts/common.py
++++ b/PMU-verification/capacity/scripts/common.py
+@@ -23,6 +23,30 @@ def identifier(value):
+     return value
+ 
+ 
++def expand_event_passes(config, jobs):
++    """Repeat each unchanged workload for explicitly partitioned event groups."""
++    passes = config.get('event_passes')
++    if passes is None:
++        return jobs
++    if not passes or len({p['name'] for p in passes}) != len(passes):
++        raise ValueError('Event passes must be nonempty and uniquely named')
++    indices = []
++    for p in passes:
++        identifier(p['name'])
++        if not p['event_indices'] or any(type(i) is not int for i in p['event_indices']):
++            raise ValueError('Each event pass needs integer event indices')
++        indices.extend(p['event_indices'])
++    if sorted(indices) != list(range(len(config['events']))):
++        raise ValueError('Event passes must partition the configured events exactly once')
++    return [dict(job, name=job['name'] + '__' + p['name'], point_name=job['name'],
++                 pmu_pass=p['name'], event_indices=p['event_indices'].copy())
++            for job in jobs for p in passes]
++
++
++def selected_events(config, job=None):
++    return [config['events'][i] for i in (job or {}).get('event_indices', range(len(config['events'])))]
++
++
+ def plan(config):
+     identifier(config['machine'])
+     if config['isa'] != 'x86_64':
+@@ -51,7 +75,7 @@ def plan(config):
+     if not jobs or len({j['bytes'] for j in jobs}) != len(jobs):
+         raise ValueError('Empty or duplicate working sets')
+     random.Random(config['order_seed']).shuffle(jobs)
+-    return jobs
++    return expand_event_passes(config, jobs)
+ 
+ 
+ def summarize(raw, batch):
+@@ -67,14 +91,15 @@ def summarize(raw, batch):
+                 decile_medians=[float(np.median(a)) for a in np.array_split(x, 10)])
+ 
+ 
+-def validate_counts(counts, config):
++def validate_counts(counts, config, job=None):
+     if counts['chain_loads'] != config['samples'] * config['batch']:
+         raise ValueError('Wrong PMU normalization denominator')
+     if not counts['time_running_ns'] or counts['time_enabled_ns'] != counts['time_running_ns']:
+         raise ValueError('Unscheduled or multiplexed counter group')
+-    if len(counts['events']) != len(config['events']):
++    events = selected_events(config, job)
++    if len(counts['events']) != len(events):
+         raise ValueError('Wrong PMU event count')
+-    for actual, requested in zip(counts['events'], config['events']):
++    for actual, requested in zip(counts['events'], events):
+         if actual['config'] != int(requested['config'], 0) or type(actual['count']) is not int or actual['count'] < 0:
+             raise ValueError('Wrong PMU event encoding or invalid count')
+ 
+diff --git a/PMU-verification/capacity/scripts/run_capacity.py b/PMU-verification/capacity/scripts/run_capacity.py
+index af64fcb8..7eb12dfb 100644
+--- a/PMU-verification/capacity/scripts/run_capacity.py
++++ b/PMU-verification/capacity/scripts/run_capacity.py
+@@ -13,7 +13,7 @@ import subprocess
+ import sys
+ import time
+ import numpy as np
+-from common import ROOT, activity, cpu_stat, frequency, identifier, plan, save, sha, summarize, validate_counts
++from common import ROOT, activity, cpu_stat, frequency, identifier, plan, save, sha, summarize, validate_counts, selected_events
+ 
+ 
+ def now():
+@@ -32,7 +32,7 @@ def main():
+     if config['machine'] != args.machine:
+         raise ValueError('Machine/config mismatch')
+     jobs = plan(config)
+-    print(f'{len(jobs)} configurations, {config["samples"]:,} timed batches each, four simultaneous events.', flush=True)
++    print(f'{len(jobs)} measurement passes, {config["samples"]:,} timed batches each; pinned event groups.', flush=True)
+     if args.dry_run:
+         print(json.dumps(jobs, indent=2)); return
+     if platform.node().split('.')[0] != args.machine or platform.machine() != config['isa']:
+@@ -98,7 +98,7 @@ def main():
+             cmd = ['numactl', '--membind=' + str(node), str(executable), str(job['bytes']),
+                    str(config['spacing']), config['mode'], str(config['samples']),
+                    str(config['batch']), str(config['seed']), str(cpu), config['pages'],
+-                   str(raw_path), ','.join(e['config'] for e in config['events']), str(count_path)]
++                   str(raw_path), ','.join(e['config'] for e in selected_events(config, job)), str(count_path)]
+             job.update(command=cmd, status='running', started_utc=now(), frequency_before=frequency(cpu))
+             save(out / 'manifest.json', manifest)
+             before = cpu_stat(); t0 = time.monotonic()
+@@ -120,7 +120,7 @@ def main():
+             raw = np.fromfile(raw_path, dtype='<u8')
+             if raw_path.stat().st_size != config['samples'] * 8 or len(raw) != config['samples'] or not np.all(raw > 0):
+                 raise ValueError('Invalid raw timing samples')
+-            counts = json.loads(count_path.read_text()); validate_counts(counts, config)
++            counts = json.loads(count_path.read_text()); validate_counts(counts, config, job)
+             job['statistics'] = summarize(raw, config['batch'])
+             compressed = raw_path.with_suffix('.u64.gz')
+             with raw_path.open('rb') as source, gzip.open(compressed, 'wb', compresslevel=6) as target:
+@@ -129,9 +129,10 @@ def main():
+             job.update(status='complete', finished_utc=now(), raw_file=str(compressed.relative_to(out)),
+                        raw_sha256=sha(compressed), counts_file=str(count_path.relative_to(out)),
+                        counts_sha256=sha(count_path), log_file=str(log_path.relative_to(out)))
+-            rates = [round(e['count'] / counts['chain_loads'] * 1000, 2) for e in counts['events'][:3]]
++            rates = {event['name']: round(actual['count'] / counts['chain_loads'] * 1000, 2)
++                     for event, actual in zip(selected_events(config, job), counts['events'])}
+             print(f'[{index}/{len(jobs)}] {name}: median {job["statistics"]["median"]:.4f} ticks/load; '
+-                  f'L1/L2/L3 misses per 1000 chain loads {rates}', flush=True)
++                  f'counts per 1000 chain loads {rates}', flush=True)
+         manifest['status'] = 'complete'
+     except BaseException as error:
+         manifest.update(status='failed', error=str(error))
+diff --git a/PMU-verification/capacity/src/pmu.h b/PMU-verification/capacity/src/pmu.h
+index 61770e7d..6170f1b8 100644
+--- a/PMU-verification/capacity/src/pmu.h
++++ b/PMU-verification/capacity/src/pmu.h
+@@ -4,9 +4,10 @@
+ #include <sys/ioctl.h>
+ #include <sys/syscall.h>
+ 
+-/* Four per-thread raw events, specified in the machine config. Keep them
+- * together and pinned: an unschedulable group must fail, never silently scale. */
++/* Up to four per-thread raw events. Identical workloads may be repeated with
++ * smaller pinned groups; an unschedulable group must fail, never scale. */
+ enum { EVENT_COUNT = 4 };
++static int pmu_event_count;
+ static int pmu_fds[EVENT_COUNT];
+ static uint64_t pmu_ids[EVENT_COUNT], pmu_configs[EVENT_COUNT];
+ static struct {
+@@ -15,14 +16,19 @@ static struct {
+ } pmu_counts;
+ 
+ static void pmu_open(const char *spec) {
++    pmu_event_count = 1;
++    for (const char *s = spec; *s; ++s) if (*s == ',') ++pmu_event_count;
++    if (pmu_event_count > EVENT_COUNT) {
++        fprintf(stderr, "Expected one to four raw event configs\n"); exit(1);
++    }
+     const char *p = spec;
+-    for (int i = 0; i < EVENT_COUNT; ++i) {
++    for (int i = 0; i < pmu_event_count; ++i) {
+         char *end;
+         errno = 0;
+         pmu_configs[i] = strtoull(p, &end, 0);
+         if (errno || end == p || *p == '-' ||
+-            (i < EVENT_COUNT - 1 ? *end != ',' : *end != '\0')) {
+-            fprintf(stderr, "Expected exactly four comma-separated raw event configs\n");
++            (i < pmu_event_count - 1 ? *end != ',' : *end != '\0')) {
++            fprintf(stderr, "Invalid comma-separated raw event configs\n");
+             exit(1);
+         }
+         p = *end ? end + 1 : end;
+@@ -54,7 +60,8 @@ static void pmu_stop(void) {
+     __asm__ volatile("" ::: "memory");
+     if (ioctl(pmu_fds[0], PERF_EVENT_IOC_DISABLE, PERF_IOC_FLAG_GROUP)) fail("PMU disable");
+     ssize_t got = read(pmu_fds[0], &pmu_counts, sizeof(pmu_counts));
+-    if (got != (ssize_t)sizeof(pmu_counts) || pmu_counts.nr != EVENT_COUNT ||
++    if (got != (ssize_t)((3 + 2 * pmu_event_count) * sizeof(uint64_t)) ||
++        pmu_counts.nr != (uint64_t)pmu_event_count ||
+         !pmu_counts.time_enabled || !pmu_counts.time_running ||
+         pmu_counts.time_running != pmu_counts.time_enabled) {
+         fprintf(stderr, "PMU group unscheduled, multiplexed, or invalid: bytes=%zd enabled=%" PRIu64
+@@ -69,9 +76,9 @@ static void pmu_save(const char *path, uint64_t loads) {
+     fprintf(f, "{\"time_enabled_ns\":%" PRIu64 ",\"time_running_ns\":%" PRIu64
+                ",\"chain_loads\":%" PRIu64 ",\"events\":[", pmu_counts.time_enabled,
+                pmu_counts.time_running, loads);
+-    for (int i = 0; i < EVENT_COUNT; ++i) {
++    for (int i = 0; i < pmu_event_count; ++i) {
+         int found = -1;
+-        for (int j = 0; j < EVENT_COUNT; ++j)
++        for (int j = 0; j < pmu_event_count; ++j)
+             if (pmu_counts.events[j].id == pmu_ids[i]) found = j;
+         if (found < 0) { fprintf(stderr, "PMU event ID missing\n"); exit(1); }
+         fprintf(f, "%s{\"config\":%" PRIu64 ",\"count\":%" PRIu64 "}",
+diff --git a/PMU-verification/capacity/tests/test_capacity.py b/PMU-verification/capacity/tests/test_capacity.py
+index 8935a0df..2fa467c7 100644
+--- a/PMU-verification/capacity/tests/test_capacity.py
++++ b/PMU-verification/capacity/tests/test_capacity.py
+@@ -10,7 +10,7 @@ import numpy as np
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ sys.path.insert(0, str(ROOT / 'scripts'))
+-from common import plan, summarize, validate_counts
++from common import plan, summarize, validate_counts, selected_events
+ 
+ 
+ class CapacityTests(unittest.TestCase):
+@@ -40,6 +40,22 @@ class CapacityTests(unittest.TestCase):
+         bad = copy.deepcopy(counts); bad['events'][0]['config'] = 1
+         with self.assertRaises(ValueError): validate_counts(bad, c)
+ 
++    def test_split_passes_preserve_workloads_and_reject_wrong_events(self):
++        c = json.loads((ROOT / 'configs/sunbird.json').read_text())
++        jobs = plan(c)
++        self.assertEqual(len(jobs), 28)
++        self.assertEqual(len({j['point_name'] for j in jobs}), 14)
++        for a, b in zip(jobs[::2], jobs[1::2]):
++            self.assertEqual((a['point_name'], a['bytes']), (b['point_name'], b['bytes']))
++            counts = dict(chain_loads=c['samples'] * c['batch'], time_enabled_ns=10,
++                          time_running_ns=10, events=[dict(config=int(e['config'], 0), count=1)
++                          for e in selected_events(c, a)])
++            validate_counts(counts, c, a)
++            with self.assertRaises(ValueError): validate_counts(counts, c, b)
++        for indices in ([1, 3], [2], [2, 4]):
++            bad = copy.deepcopy(c); bad['event_passes'][1]['event_indices'] = indices
++            with self.assertRaises(ValueError): plan(bad)
++
+     def test_stats_keep_outliers(self):
+         raw = np.array([16] * 19 + [1600], dtype=np.uint64)
+         s = summarize(raw, 16)
+@@ -49,24 +65,32 @@ class CapacityTests(unittest.TestCase):
+         self.assertEqual(s['outliers'], 1)
+         self.assertGreater(s['mean'], s['median'])
+ 
+-    @unittest.skipUnless(platform.node().split('.')[0] == 'artemisia', 'Artemisia hardware smoke test')
+     def test_live_counter_group_and_raw_samples(self):
+-        c = dict(self.config, samples=1000, pages='base')
++        machine = platform.node().split('.')[0]
++        c = json.loads((ROOT / 'configs' / (machine + '.json')).read_text())
++        jobs = plan(c)[:len(c.get('event_passes', [None]))]
++        c.update(samples=1000, pages='base')
++        for job in jobs:
++            self.live_group(c, job)
++
++    def live_group(self, c, job):
+         with tempfile.TemporaryDirectory() as directory:
+             p = Path(directory)
+             cmd = ['numactl', '--membind=' + str(c['numa_node']),
+-                   str(ROOT / 'build' / 'artemisia' / 'cache_capacity_pmu'), '8192',
++                   str(ROOT / 'build' / c['machine'] / 'cache_capacity_pmu'), '8192',
+                    str(c['spacing']), c['mode'], str(c['samples']), str(c['batch']),
+                    str(c['seed']), str(c['cpu']), c['pages'], str(p / 'raw.u64'),
+-                   ','.join(e['config'] for e in c['events']), str(p / 'counts.json')]
++                   ','.join(e['config'] for e in selected_events(c, job)), str(p / 'counts.json')]
+             run = subprocess.run(cmd, text=True, capture_output=True)
+             self.assertEqual(run.returncode, 0, run.stderr)
+             raw = np.fromfile(p / 'raw.u64', dtype='<u8')
+             self.assertEqual(len(raw), c['samples'])
+             self.assertTrue(np.all(raw > 0))
+             counts = json.loads((p / 'counts.json').read_text())
+-            validate_counts(counts, c)
+-            self.assertGreater(counts['events'][3]['count'], counts['chain_loads'])
++            validate_counts(counts, c, job)
++            for event, actual in zip(selected_events(c, job), counts['events']):
++                if event['name'].endswith('all_loads'):
++                    self.assertGreater(actual['count'], counts['chain_loads'])
+ 
+ 
+ if __name__ == '__main__':
+diff --git a/PMU-verification/common/analyze_verification.py b/PMU-verification/common/analyze_verification.py
+index c4a6cb64..aff409a7 100644
+--- a/PMU-verification/common/analyze_verification.py
++++ b/PMU-verification/common/analyze_verification.py
+@@ -20,6 +20,9 @@ def write_csv(path, rows):
+ 
+ def baseline(c, p):
+     root = PMU.parent / 'timing-only' / c['experiment'] / 'data' / c['machine']
++    if c.get('phase1_freeze'):
++        freeze = PMU / c['phase1_freeze']['manifest']
++        root = freeze.parent / 'snapshot/timing-only' / c['experiment'] / 'data' / c['machine']
+     if c['experiment'] == 'line_size':
+         sweep = {701: 'initial', 711: 'dense', 721: 'control_random', 731: 'control_sequential'}[p['seed']]
+         with (root / 'stats/all_stats.csv').open() as f:
+@@ -47,6 +50,9 @@ def figure_save(fig, folder, name):
+ def plots(c, rows, folder):
+     plt.rcParams.update({'font.size': 10, 'axes.grid': False, 'pdf.fonttype': 42})
+     if c['experiment'] == 'line_size':
++        # Plot each metric only from the pass that actually counted it.
++        all_rows = rows
++        rows = [r for r in rows if r['l1_misses_per_1000_chain_loads'] is not None]
+         fig, ax = plt.subplots(2, 2, figsize=(12, 8), layout='constrained')
+         for alignment, color in [(0, '#166aa0'), (16, '#d08014')]:
+             selected = sorted([r for r in rows if r['mode'] == 'random_lines' and r['alignment'] == alignment],
+@@ -67,7 +73,7 @@ def plots(c, rows, folder):
+         ax[1, 1].bar(labels, [r['l1_misses_per_1000_chain_loads'] for r in selected], color=['#166aa0', '#d08014', '#547f3a'])
+         ax[1, 0].set(title='Traversal controls at 64 B stride', ylabel='TSC ticks / timed chain load')
+         ax[1, 1].set(title='Traversal controls at 64 B stride', ylabel='L1 misses / 1,000 chain loads', ylim=(0, 1100))
+-        fig.suptitle('Artemisia line-size verification (256 KiB footprint)')
++        fig.suptitle(f'{c["machine"]} line-size verification ({c["footprint"] / 1024:g} KiB footprint)')
+         figure_save(fig, folder, 'line_size_pmu_validation')
+         groups = [('Random windows, offset 0 B', sorted([r for r in rows if r['mode'] == 'random_lines' and r['alignment'] == 0], key=lambda r: r['stride']), 'stride'),
+                   ('Random windows, offset 16 B', sorted([r for r in rows if r['mode'] == 'random_lines' and r['alignment'] == 16], key=lambda r: r['stride']), 'stride')]
+@@ -76,25 +82,37 @@ def plots(c, rows, folder):
+         groups = []
+         for col, group in enumerate(('L1', 'L2_candidate')):
+             selected = sorted([r for r in rows if r['group'] == group], key=lambda r: r['k'])
+-            x = [r['k'] for r in selected]
+-            label = '4 KiB address spacing' if group == 'L1' else '128 KiB address spacing (L2 candidate)'
+-            ax[0, col].plot(x, [r['median'] for r in selected], 'o-', color='#166aa0', label='With PMU')
+-            old = [r for r in selected if r['baseline_median'] is not None]
++            x = sorted({r['k'] for r in selected})
++            spacing = selected[0]['num_sets'] * c['line_size'] / 1024
++            label = f'{spacing:g} KiB address spacing' + (' (L2 candidate)' if group != 'L1' else '')
++            pass_names = list(dict.fromkeys(r['pmu_pass'] for r in selected))
++            for pass_name in pass_names:
++                subset = [r for r in selected if r['pmu_pass'] == pass_name]
++                ax[0, col].plot([r['k'] for r in subset], [r['median'] for r in subset], 'o-',
++                                label='With PMU: ' + pass_name)
++            old = [r for r in selected if r['baseline_median'] is not None and r['pmu_pass'] == pass_names[0]]
+             ax[0, col].plot([r['k'] for r in old], [r['baseline_median'] for r in old], 's-', color='0.55', label='Timing-only (divisor corrected)')
+             ax[0, col].set(title=label, ylabel='TSC ticks / timed chain load', xlabel='K (addresses)')
+             for level, color in [(1, '#48834b'), (2, '#b93c37'), (3, '#72559b')]:
+-                ax[1, col].plot(x, [r[f'l{level}_misses_per_1000_chain_loads'] for r in selected],
++                subset = [r for r in selected if r[f'l{level}_misses_per_1000_chain_loads'] is not None]
++                ax[1, col].plot([r['k'] for r in subset], [r[f'l{level}_misses_per_1000_chain_loads'] for r in subset],
+                                 'o-', color=color, label=f'L{level} misses')
+             ax[1, col].set(ylabel='Misses / 1,000 chain loads (including preparation)', xlabel='K (addresses)', ylim=(0, 1100))
+             for a in ax[:, col]: a.legend(fontsize=8); a.set_xticks(x)
+             groups.append((label, selected, 'k'))
+-        fig.suptitle('Artemisia associativity: identify which cache actually misses')
++        fig.suptitle(f'{c["machine"]} associativity: identify which cache actually misses')
+         figure_save(fig, folder, 'associativity_pmu_validation')
++    if c['experiment'] == 'line_size' and c.get('event_passes'):
++        groups = [(title, sorted([r for r in all_rows if r['mode'] == 'random_lines' and r['alignment'] == alignment],
++                                key=lambda r: r['stride']), 'stride')
++                  for title, alignment in [('Random windows, offset 0 B', 0), ('Random windows, offset 16 B', 16)]]
+     fig, axes = plt.subplots(1, len(groups), figsize=(12, 4.5), layout='constrained')
+     for ax, (label, selected, key) in zip(np.atleast_1d(axes), groups):
+         boxes = [dict(med=r['median'], q1=r['q1'], q3=r['q3'], whislo=r['whisker_low'],
+-                      whishi=r['whisker_high'], fliers=[], label=str(r[key])) for r in selected]
++                      whishi=r['whisker_high'], fliers=[], label=str(r[key]) +
++                      ('\n' + r['pmu_pass'] if c.get('event_passes') else '')) for r in selected]
+         ax.bxp(boxes, showfliers=False)
++        ax.tick_params(axis='x', labelsize=7)
+         ax.set(title=label, ylabel='TSC ticks / timed chain load', xlabel='Stride (B)' if key == 'stride' else 'K (addresses)')
+     fig.suptitle('With-PMU distributions: Tukey whiskers; all outliers retained in raw data')
+     figure_save(fig, folder, 'latency_boxplots')
+@@ -134,11 +152,15 @@ def main():
+         if stats != p['statistics']: raise ValueError('Statistics mismatch')
+         counts = json.loads(count_path.read_text()); validate_counts(counts, c, p)
+         row = {k: p[k] for k in ('name', 'group') + (('stride', 'alignment', 'mode', 'seed') if args.experiment == 'line_size' else ('num_sets', 'k', 'max_k'))}
++        row.update(point_name=p.get('point_name', p['name']), pmu_pass=p.get('pmu_pass', 'all'))
+         row.update({k: v for k, v in stats.items() if k != 'decile_medians'})
+         row.update(timed_loads_per_batch=divisor, counted_chain_loads=counted,
+                    legacy_median=p['legacy_median'], baseline_median=baseline(c, p),
+                    units='TSC ticks / timed chain load', **p['measurement_events'])
+-        for i, (event, count) in enumerate(zip(c['events'], counts['events'])):
++        row.update({f'l{i}_misses_per_1000_chain_loads': None for i in (1, 2, 3)})
++        row['all_loads_per_1000_chain_loads'] = None
++        for i, count in zip(p.get('event_indices', range(len(c['events']))), counts['events']):
++            event = c['events'][i]
+             rate = count['count'] * 1000 / counted
+             row[f'l{i+1}_misses_per_1000_chain_loads' if i < 3 else 'all_loads_per_1000_chain_loads'] = rate
+             events.append(dict(name=p['name'], event=event['name'], raw_config=event['config'], count=count['count'],
+@@ -157,9 +179,11 @@ def main():
+                    total_major_faults=sum(p['measurement_events']['major_faults'] for p in m['jobs']),
+                    temporal_max_min={p['name']:max(p['statistics']['decile_medians'])/min(p['statistics']['decile_medians']) for p in m['jobs']},
+                    huge_kib={p['name']:p['anon_huge_kib_before_after'] for p in m['jobs']},
+-                   caveat='Different CPU/socket from the original timing-only run; PMU loop totals include helper loads.')
++                   caveat=c.get('placement_note', 'Prior placement not specified.') + ' PMU loop totals include helper loads.')
+     save(out / 'quality.json', quality)
+     save(out / 'validation.json', dict(status='passed', configurations=len(rows), timed_batches=sum(r['n'] for r in rows),
++         unique_workloads=len({r['point_name'] for r in rows}), event_passes=c.get('event_passes'),
++         phase1_freeze=c.get('phase1_freeze'),
+          raw_hashes_lengths_and_statistics_verified=True, actual_load_denominators_verified=True,
+          all_pmu_groups_without_multiplexing=True, note='Integrity checks, not proof of exact physical geometry.'))
+     print(f'{args.experiment}: validated {len(rows)} configurations; wrote statistics and two PNG/PDF figures.')
+diff --git a/PMU-verification/common/pmu.hpp b/PMU-verification/common/pmu.hpp
+index 27d81ca0..69571c82 100644
+--- a/PMU-verification/common/pmu.hpp
++++ b/PMU-verification/common/pmu.hpp
+@@ -13,9 +13,10 @@ static void fail(const char *what) { perror(what); exit(1); }
+ #include <sys/ioctl.h>
+ #include <sys/syscall.h>
+ 
+-/* Four per-thread raw events, specified in the machine config. Keep them
+- * together and pinned: an unschedulable group must fail, never silently scale. */
++/* Up to four per-thread raw events. Identical workloads may be repeated with
++ * smaller pinned groups; an unschedulable group must fail, never scale. */
+ enum { EVENT_COUNT = 4 };
++static int pmu_event_count;
+ static int pmu_fds[EVENT_COUNT];
+ static uint64_t pmu_ids[EVENT_COUNT], pmu_configs[EVENT_COUNT];
+ static struct {
+@@ -24,14 +25,19 @@ static struct {
+ } pmu_counts;
+ 
+ static void pmu_open(const char *spec) {
++    pmu_event_count = 1;
++    for (const char *s = spec; *s; ++s) if (*s == ',') ++pmu_event_count;
++    if (pmu_event_count > EVENT_COUNT) {
++        fprintf(stderr, "Expected one to four raw event configs\n"); exit(1);
++    }
+     const char *p = spec;
+-    for (int i = 0; i < EVENT_COUNT; ++i) {
++    for (int i = 0; i < pmu_event_count; ++i) {
+         char *end;
+         errno = 0;
+         pmu_configs[i] = strtoull(p, &end, 0);
+         if (errno || end == p || *p == '-' ||
+-            (i < EVENT_COUNT - 1 ? *end != ',' : *end != '\0')) {
+-            fprintf(stderr, "Expected exactly four comma-separated raw event configs\n");
++            (i < pmu_event_count - 1 ? *end != ',' : *end != '\0')) {
++            fprintf(stderr, "Invalid comma-separated raw event configs\n");
+             exit(1);
+         }
+         p = *end ? end + 1 : end;
+@@ -63,7 +69,8 @@ static void pmu_stop(void) {
+     __asm__ volatile("" ::: "memory");
+     if (ioctl(pmu_fds[0], PERF_EVENT_IOC_DISABLE, PERF_IOC_FLAG_GROUP)) fail("PMU disable");
+     ssize_t got = read(pmu_fds[0], &pmu_counts, sizeof(pmu_counts));
+-    if (got != (ssize_t)sizeof(pmu_counts) || pmu_counts.nr != EVENT_COUNT ||
++    if (got != (ssize_t)((3 + 2 * pmu_event_count) * sizeof(uint64_t)) ||
++        pmu_counts.nr != (uint64_t)pmu_event_count ||
+         !pmu_counts.time_enabled || !pmu_counts.time_running ||
+         pmu_counts.time_running != pmu_counts.time_enabled) {
+         fprintf(stderr, "PMU group unscheduled, multiplexed, or invalid: bytes=%zd enabled=%" PRIu64
+@@ -78,9 +85,9 @@ static void pmu_save(const char *path, uint64_t loads) {
+     fprintf(f, "{\"time_enabled_ns\":%" PRIu64 ",\"time_running_ns\":%" PRIu64
+                ",\"chain_loads\":%" PRIu64 ",\"events\":[", pmu_counts.time_enabled,
+                pmu_counts.time_running, loads);
+-    for (int i = 0; i < EVENT_COUNT; ++i) {
++    for (int i = 0; i < pmu_event_count; ++i) {
+         int found = -1;
+-        for (int j = 0; j < EVENT_COUNT; ++j)
++        for (int j = 0; j < pmu_event_count; ++j)
+             if (pmu_counts.events[j].id == pmu_ids[i]) found = j;
+         if (found < 0) { fprintf(stderr, "PMU event ID missing\n"); exit(1); }
+         fprintf(f, "%s{\"config\":%" PRIu64 ",\"count\":%" PRIu64 "}",
+diff --git a/PMU-verification/common/run_verification.py b/PMU-verification/common/run_verification.py
+index 1382c7b2..2bd31745 100644
+--- a/PMU-verification/common/run_verification.py
++++ b/PMU-verification/common/run_verification.py
+@@ -17,7 +17,7 @@ import numpy as np
+ 
+ PMU = Path(__file__).resolve().parents[1]
+ sys.path.insert(0, str(PMU / 'capacity/scripts'))
+-from common import activity, cpu_stat, frequency, identifier, save, sha, summarize
++from common import activity, cpu_stat, frequency, identifier, save, sha, summarize, expand_event_passes, selected_events
+ 
+ 
+ def plan(c):
+@@ -42,7 +42,7 @@ def plan(c):
+         else:
+             raise ValueError('Unsupported experiment')
+     random.Random(c['order_seed']).shuffle(points)
+-    return points
++    return expand_event_passes(c, points)
+ 
+ 
+ def denominators(c, p):
+@@ -56,9 +56,10 @@ def validate_counts(counts, c, p):
+         raise ValueError('Incorrect chain-load denominator')
+     if not counts['time_enabled_ns'] or counts['time_enabled_ns'] != counts['time_running_ns']:
+         raise ValueError('Counter group was not fully scheduled')
+-    if len(counts['events']) != 4:
++    events = selected_events(c, p)
++    if len(counts['events']) != len(events):
+         raise ValueError('Wrong event count')
+-    for actual, expected in zip(counts['events'], c['events']):
++    for actual, expected in zip(counts['events'], events):
+         if actual['config'] != int(expected['config'], 0) or actual['count'] < 0:
+             raise ValueError('Event encoding/count mismatch')
+ 
+@@ -76,7 +77,7 @@ def worker_command(c, p, data, executable):
+         args.update(num_sets=p['num_sets'], line_size=c['line_size'], max_k=p['max_k'], seed=c['seed'],
+                     only_ks=p['k'], output=data / 'legacy' / (p['name'] + '.csv'))
+         args['ticks-output'] = data / 'raw' / (p['name'] + '.u64')
+-    args['pmu-events'] = ','.join(e['config'] for e in c['events'])
++    args['pmu-events'] = ','.join(e['config'] for e in selected_events(c, p))
+     args['pmu-output'] = data / 'counts' / (p['name'] + '.json')
+     for key, value in args.items():
+         cmd.extend(['--' + key, str(value)])
+@@ -188,9 +189,10 @@ def main():
+             p.update(status='complete', finished_utc=now(), raw_file=str(compressed.relative_to(data)),
+                      raw_sha256=sha(compressed), counts_file=str(count_path.relative_to(data)),
+                      counts_sha256=sha(count_path), log_file=str(log_path.relative_to(data)))
+-            rates = [round(e['count'] / chase_loads * 1000, 3) for e in counts['events'][:3]]
++            rates = {event['name']: round(actual['count'] / chase_loads * 1000, 3)
++                     for event, actual in zip(selected_events(c, p), counts['events'])}
+             print(f'[{index}/{len(jobs)}] {p["name"]}: {p["statistics"]["median"]:.4f} ticks/timed load; '
+-                  f'L1/L2/L3 misses per 1000 chain loads {rates}', flush=True)
++                  f'counts per 1000 chain loads {rates}', flush=True)
+         manifest['status'] = 'complete'
+     except BaseException as error:
+         manifest.update(status='failed', error=str(error))
+diff --git a/PMU-verification/common/test_verification.py b/PMU-verification/common/test_verification.py
+index df97d9ae..efa258e5 100644
+--- a/PMU-verification/common/test_verification.py
++++ b/PMU-verification/common/test_verification.py
+@@ -1,11 +1,12 @@
+ import copy
+ import json
++import platform
+ from pathlib import Path
+ import subprocess
+ import tempfile
+ import unittest
+ import numpy as np
+-from run_verification import PMU, denominators, plan, validate_counts, worker_command
++from run_verification import PMU, denominators, plan, validate_counts, worker_command, selected_events
+ 
+ 
+ class VerificationTests(unittest.TestCase):
+@@ -41,20 +42,47 @@ class VerificationTests(unittest.TestCase):
+ 
+     def test_two_live_kernels(self):
+         for experiment in ('line_size', 'associativity'):
+-            c = self.config(experiment); c['samples'] = 1000
+-            p = c['points'][0]
+-            with tempfile.TemporaryDirectory() as directory:
+-                d = Path(directory)
+-                for sub in ('raw', 'counts', 'legacy'): (d / sub).mkdir()
+-                exe = PMU / experiment / 'build/artemisia' / (experiment + '_pmu')
+-                run = subprocess.run(worker_command(c, p, d, exe), capture_output=True, text=True)
+-                self.assertEqual(run.returncode, 0, run.stderr)
+-                raw = np.fromfile(d / 'raw' / (p['name'] + '.u64'), dtype='<u8')
+-                self.assertEqual(len(raw), 1000)
+-                self.assertTrue(np.all(raw > 0))
+-                counts = json.loads((d / 'counts' / (p['name'] + '.json')).read_text())
+-                validate_counts(counts, c, p)
+-                self.assertGreater(counts['events'][3]['count'], counts['chain_loads'])
++            machine = platform.node().split('.')[0]
++            c = json.loads((PMU / experiment / 'configs' / (machine + '.json')).read_text())
++            jobs = plan(c)[:len(c.get('event_passes', [None]))]
++            c['samples'] = 1000
++            for p in jobs:
++                self.live_kernel(c, p)
++
++    def live_kernel(self, c, p):
++        experiment = c['experiment']
++        with tempfile.TemporaryDirectory() as directory:
++            d = Path(directory)
++            for sub in ('raw', 'counts', 'legacy'): (d / sub).mkdir()
++            exe = PMU / experiment / 'build' / c['machine'] / (experiment + '_pmu')
++            run = subprocess.run(worker_command(c, p, d, exe), capture_output=True, text=True)
++            self.assertEqual(run.returncode, 0, run.stderr)
++            raw = np.fromfile(d / 'raw' / (p['name'] + '.u64'), dtype='<u8')
++            self.assertEqual(len(raw), 1000)
++            self.assertTrue(np.all(raw > 0))
++            counts = json.loads((d / 'counts' / (p['name'] + '.json')).read_text())
++            validate_counts(counts, c, p)
++            for event, count in zip(selected_events(c, p), counts['events']):
++                if event['name'].endswith('all_loads'):
++                    self.assertGreater(count['count'], counts['chain_loads'])
++
++    def test_frozen_baselines_and_split_plans(self):
++        from analyze_verification import baseline
++        for experiment in ('line_size', 'associativity'):
++            c = json.loads((PMU / experiment / 'configs/sunbird.json').read_text())
++            jobs = plan(c)
++            self.assertEqual(len(jobs), 24)
++            self.assertEqual(len({p['point_name'] for p in jobs}), 12)
++            for a, b in zip(jobs[::2], jobs[1::2]):
++                self.assertEqual(a['point_name'], b['point_name'])
++                self.assertEqual(a['event_indices'] + b['event_indices'], [0, 1, 2, 3])
++                self.assertEqual(baseline(c, a), baseline(c, b))
++                self.assertGreater(baseline(c, a), 0)
++                counts = dict(chain_loads=denominators(c, a)[1], time_enabled_ns=10,
++                              time_running_ns=10, events=[dict(config=int(e['config'], 0), count=1)
++                              for e in selected_events(c, a)])
++                validate_counts(counts, c, a)
++                with self.assertRaises(ValueError): validate_counts(counts, c, b)
+ 
+ 
+ if __name__ == '__main__':
+diff --git a/PMU-verification/events/scripts/discover_events.py b/PMU-verification/events/scripts/discover_events.py
+index 8a5cb721..717296d8 100644
+--- a/PMU-verification/events/scripts/discover_events.py
++++ b/PMU-verification/events/scripts/discover_events.py
+@@ -29,7 +29,14 @@ def main():
+     ap.add_argument('--machine', required=True)
+     ap.add_argument('--cpu', type=int, required=True)
+     ap.add_argument('--run-id', required=True)
++    ap.add_argument('--event-config', type=Path,
++                    help='Machine-specific JSON with selected and group event-name lists')
+     args = ap.parse_args()
++    selection = json.loads(args.event_config.read_text()) if args.event_config else dict(selected=SELECTED, group=GROUP)
++    selected, group = selection['selected'], selection['group']
++    if (len(group) != 4 or len(set(group)) != 4 or not set(group) <= set(selected) or
++            len(set(selected)) != len(selected) or any(not re.fullmatch(r'[A-Za-z0-9_.-]+', n) for n in selected)):
++        raise ValueError('Use unique local event names, including four selected group members')
+     for value in (args.machine, args.run_id):
+         if not re.fullmatch(r'[A-Za-z0-9_-]+', value):
+             raise ValueError('Invalid machine or run ID')
+@@ -50,6 +57,7 @@ def main():
+                                       if line.split(':')[0].strip() in
+                                       ('vendor_id', 'cpu family', 'model', 'model name', 'stepping')]
+     (out / 'environment.json').write_text(json.dumps(meta, indent=2) + '\n')
++    (out / 'event-selection.json').write_text(json.dumps(selection, indent=2) + '\n')
+     for name, cmd in [('perf-list.txt', ['perf', 'list']),
+                       ('perf-list-details.txt', ['perf', 'list', '--details'])]:
+         with (out / name).open('w') as f:
+@@ -78,8 +86,8 @@ def main():
+                          encoding=encoding.group(0) if encoding else '',
+                          availability='listed; not individually tested'))
+     probes = []
+-    for name in SELECTED + ['capacity_group']:
+-        spec = '{' + ','.join(x + ':u' for x in GROUP) + '}' if name == 'capacity_group' else name + ':u'
++    for name in selected + ['capacity_group']:
++        spec = '{' + ','.join(x + ':u' for x in group) + '}' if name == 'capacity_group' else name + ':u'
+         cmd = ['perf', 'stat', '--no-big-num', '-x,', '-e', spec,
+                '--', 'taskset', '-c', str(args.cpu), '/usr/bin/true']
+         run = subprocess.run(cmd, text=True, capture_output=True)
+@@ -99,16 +107,16 @@ def main():
+     (out / 'probes.json').write_text(json.dumps(probes, indent=2) + '\n')
+     with (result / 'events.csv').open('w', newline='') as f:
+         w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
+-    text = ['# Artemisia cache-event inventory', '',
++    text = [f'# {args.machine} cache-event inventory', '',
+             'Descriptions and encodings come from this host\'s archived `perf list --details`.',
+             'A listed event is not necessarily usable. Selected probes count a short `/usr/bin/true` process;',
+             'they test access/scheduling, not cache behavior. Formal capacity measurements are separate.', '',
+             '| Event | Local meaning | Probe result |', '|---|---|---|']
+-    for name in SELECTED:
++    for name in selected:
+         r = next(r for r in rows if r['event'] == name)
+         text.append(f"| `{name}` | {r['description'].replace('|', '/')} | {r['availability']} |")
+-    text += ['', 'The capacity run groups the three `mem_load_retired.*_miss` events with',
+-             '`mem_inst_retired.all_loads`, all user mode and per thread. The group probe result is: **' + probes[-1]['status'] + '**.',
++    text += ['', 'The verification group is ' + ', '.join('`' + name + '`' for name in group) + '.',
++             'All events count user mode per thread. The group probe result is: **' + probes[-1]['status'] + '**.',
+              'Raw encodings are specific to this CPU and must be rediscovered on other machines.', '',
+              'Miss counts are normalized per known pointer-chase load. The counters also see user-space',
+              'loop/timer-helper loads within the measured loop. `all_loads` documents that overhead;',

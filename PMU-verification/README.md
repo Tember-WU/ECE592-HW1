@@ -2,6 +2,12 @@
 
 Keep each verification experiment separate, with machine-specific configurations and outputs.
 
+Sunbird's Section 8.3 execution and system/reference comparison are documented in
+[common/results/sunbird/RUN_NOTES.md](common/results/sunbird/RUN_NOTES.md).
+The run order is capacity, line size, then associativity. Sunbird uses two separately
+pinned counter pairs per unchanged workload because the original four-event group
+cannot be scheduled on this host. Each pass retains one million timed batches.
+
 | Directory | Purpose |
 |---|---|
 | [events](events/README.md) | Local `perf list` descriptions, event encodings, and access/scheduling probes. |
@@ -15,11 +21,14 @@ in `tests/`. Every collection requires a new run ID. Data and results include fa
 applicable. Build products and uncompressed temporary arrays are ignored by Git; compressed raw
 samples, counter outputs, configurations, scripts, and figures are retained.
 
-The current work covers event discovery and the three representative Artemisia experiments required
+The current work covers event discovery and the three representative experiments on Artemisia and Sunbird required
 by Section 8.3: capacity, line/stride, and associativity. `common/` holds shared helpers for the latter
 two. The unused latency/inclusion directories are optional placeholders, not additional required runs.
-System/vendor comparison tables are not yet completed here. Section 8.4's
-eight-event cross-generation study is a separate task.
+Sunbird's system/vendor comparison is included in its run notes. Section 8.4's eight-event
+cross-generation study is a separate task.
 
-No pre-run code/result snapshot or freeze checkpoint is created by these scripts. The existing
-timing-only files are read in place for comparison and are not changed.
+Legacy configurations read timing-only files in place. Sunbird configurations reference
+the pre-PMU [Phase-I freeze](phase1-freeze/sunbird/freeze01/README.md); the analyzers read
+its copied summaries. A separate [PMU implementation snapshot](common/data/sunbird/source01/manifest.json)
+records the scripts, kernels, configurations, executables and disassemblies used for this run.
+Phase-I files and Artemisia results are preserved.

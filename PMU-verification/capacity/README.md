@@ -1,5 +1,9 @@
 # Capacity verification with PMU counters
 
+Sunbird: [capacity01](results/sunbird/capacity01/RUN_NOTES.md), covering fourteen
+frozen Phase-I points in two counter passes each on CPU 32/node 0. See the Sunbird
+configuration for its selected sizes and locally verified event encodings.
+
 This small Section 8.3 experiment reruns 14 Artemisia capacity points using the existing randomized,
 dependent pointer-chase workload. It measures the timing distribution and a group of four hardware
 events during the same measurement loop.

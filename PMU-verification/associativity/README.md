@@ -1,5 +1,10 @@
 # Associativity PMU verification
 
+Sunbird: [associativity01](results/sunbird/associativity01/RUN_NOTES.md). Its frozen
+candidate layouts use 4 KiB and 32 KiB spacing, with K=6,7,8,9,10,12 for each;
+CPU 32/node 0; and two PMU pairs per point. No K extension is needed. The historical
+K values, placement and failed `associativity01` discussed below refer to Artemisia.
+
 Artemisia's completed run is [associativity02](results/artemisia/associativity02/RUN_NOTES.md).
 It confirms the L1 conflict threshold and identifies the original L2-labeled 12-to-13 transition
 as an L1 miss transition. Two extension points provide evidence for a later L2 threshold.

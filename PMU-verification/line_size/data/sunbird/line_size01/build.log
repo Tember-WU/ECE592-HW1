@@ -1,0 +1,3 @@
+mkdir -p build/sunbird
+g++ -O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/line_size_bench.cpp -o build/sunbird/line_size_pmu
+objdump -d -Mintel build/sunbird/line_size_pmu > build/sunbird/line_size_pmu.dis

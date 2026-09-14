@@ -1,0 +1,22 @@
+{
+  "retrieved_utc": "2026-09-14T15:45:34.902268+00:00",
+  "sources": [
+    {
+      "file": "agner-microarchitecture.pdf",
+      "url": "https://www.agner.org/optimize/microarchitecture.pdf",
+      "page": 147,
+      "note": "Table 10.2; general Haswell/Broadwell, not exact server LLC geometry",
+      "bytes": 1866514,
+      "sha256": "75bcd395680df4742a3e7200a61525400bc98ca4927cad50cd17dadc7273df5e"
+    },
+    {
+      "file": "intel-runtimeoptblueprint-dclo.pdf",
+      "url": "https://cdrdv2-public.intel.com/671449/runtimeoptblueprint-dclo.pdf",
+      "page": 4,
+      "note": "Figure 2 and Haswell/Broadwell server inclusive-LLC paragraph",
+      "bytes": 806664,
+      "sha256": "eb570afa1539e961849981ed4b550de34202e846dfee63f06a2f129d5c57409f"
+    }
+  ],
+  "intel_sku_url": "https://www.intel.com/content/www/us/en/products/sku/81908/intel-xeon-processor-e52680-v3-30m-cache-2-50-ghz/specifications.html"
+}

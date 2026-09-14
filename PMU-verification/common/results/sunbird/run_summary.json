@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-14T15:58:19.267547+00:00",
+  "runs": [
+    {
+      "experiment": "capacity",
+      "run_id": "capacity01",
+      "unique_workloads": 14,
+      "passes": 28,
+      "timed_batches": 28000000,
+      "raw_payload_bytes": 224000000,
+      "gzip_bytes": 32555169,
+      "started_utc": "2026-09-14T15:42:50.535127+00:00",
+      "finished_utc": "2026-09-14T15:47:11.326410+00:00",
+      "elapsed_seconds": 260.79126794589683,
+      "involuntary_switches": 74,
+      "minor_faults": 0,
+      "major_faults": 0,
+      "max_sibling_busy_percent": 0.0,
+      "temporal_ratio_over_1_2": {
+        "L1_w32768__l1_l2": 1.3356164383561644
+      }
+    },
+    {
+      "experiment": "line_size",
+      "run_id": "line_size01",
+      "unique_workloads": 12,
+      "passes": 24,
+      "timed_batches": 24000000,
+      "raw_payload_bytes": 192000000,
+      "gzip_bytes": 40330971,
+      "started_utc": "2026-09-14T15:47:35.882930+00:00",
+      "finished_utc": "2026-09-14T15:51:29.508901+00:00",
+      "elapsed_seconds": 233.6259709149599,
+      "involuntary_switches": 64,
+      "minor_faults": 3,
+      "major_faults": 0,
+      "max_sibling_busy_percent": 0.0,
+      "temporal_ratio_over_1_2": {}
+    },
+    {
+      "experiment": "associativity",
+      "run_id": "associativity01",
+      "unique_workloads": 12,
+      "passes": 24,
+      "timed_batches": 24000000,
+      "raw_payload_bytes": 192000000,
+      "gzip_bytes": 6980422,
+      "started_utc": "2026-09-14T15:51:46.705210+00:00",
+      "finished_utc": "2026-09-14T15:52:45.871593+00:00",
+      "elapsed_seconds": 59.166376248933375,
+      "involuntary_switches": 26,
+      "minor_faults": 0,
+      "major_faults": 0,
+      "max_sibling_busy_percent": 0.0,
+      "temporal_ratio_over_1_2": {}
+    }
+  ],
+  "total_unique_workloads": 38,
+  "total_passes": 76,
+  "total_timed_batches": 76000000,
+  "total_raw_payload_bytes": 608000000,
+  "total_gzip_bytes": 79866562,
+  "serial_measurement_order_verified": true,
+  "all_groups_fully_scheduled": true,
+  "source_and_build_files_verified": 37,
+  "phase1_integrity": {
+    "status": "passed",
+    "verified_utc": "2026-09-14T15:58:19.267547+00:00",
+    "originals_checked": 769,
+    "snapshots_checked": 694,
+    "bytes_in_originals": 570392222,
+    "all_originals_and_snapshots_unchanged": true,
+    "freeze_manifest_sha256": "90499498719a9aa18cd873971c843f5ee3c9eca26fd37cbc4a587f16d2734e36"
+  },
+  "max_pair_median_ratio": 1.4579714640198511,
+  "pairs_with_different_page_backing": [
+    "associativity/L1_k9"
+  ],
+  "note": "Uses each analyzer raw/statistics validation; audits scheduling, serial order, pass pairing and provenance. Integrity is not proof of isolated hardware state."
+}

@@ -1,0 +1,21 @@
+test_associativity_actual_load_denominators (__main__.VerificationTests) ... ok
+test_frozen_baselines_and_split_plans (__main__.VerificationTests) ... /home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib64/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib64/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib64/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib64/python3.9/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib64/python3.9/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib64/python3.9/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+ok
+test_multiplex_and_wrong_denominator_rejected (__main__.VerificationTests) ... ok
+test_plans (__main__.VerificationTests) ... ok
+test_two_live_kernels (__main__.VerificationTests) ... ok
+test_unsafe_layout_and_missing_samples (__main__.VerificationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.965s
+
+OK

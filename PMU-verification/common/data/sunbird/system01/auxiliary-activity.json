@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-09-14T15:50:33.397865+00:00",
+  "stage": "line_size collection",
+  "action": "One read-only Phase-I hash audit read 570392222 bytes of originals plus copied snapshots while the serial collection was active; no Phase-I files changed. Other session tooling was not isolated from the measurement socket.",
+  "current_jobs": [
+    {
+      "name": "random_s56_a0__l3_loads",
+      "status": "running",
+      "started_utc": "2026-09-14T15:50:33.081956+00:00"
+    }
+  ],
+  "consequence": "Do not claim exclusive or interference-free timing. Final audit is deferred until all measurements finish."
+}

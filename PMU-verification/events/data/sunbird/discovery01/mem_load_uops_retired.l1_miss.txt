@@ -1,0 +1,1 @@
+2676,,mem_load_uops_retired.l1_miss:u,2049649,100.00,,

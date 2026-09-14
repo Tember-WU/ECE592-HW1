@@ -1,0 +1,38 @@
+28 measurement passes, 1,000,000 timed batches each; pinned event groups.
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Preflight CPU busy %: {'8': 0.0, '32': 0.0}
+[1/28] LLC_w54525952__l1_l2: median 203.9062 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1001.14, 'mem_load_uops_retired.l2_miss': 1000.68}
+[2/28] LLC_w54525952__l3_loads: median 203.9062 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 999.42, 'mem_uops_retired.all_loads': 1063.07}
+[3/28] L1_w36864__l1_l2: median 11.6875 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 940.85, 'mem_load_uops_retired.l2_miss': 0.02}
+[4/28] L1_w36864__l3_loads: median 11.6250 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.01, 'mem_uops_retired.all_loads': 1062.53}
+[5/28] L1_w32768__l1_l2: median 4.5938 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 54.4, 'mem_load_uops_retired.l2_miss': 0.01}
+[6/28] L1_w32768__l3_loads: median 4.5938 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.0, 'mem_uops_retired.all_loads': 1062.51}
+[7/28] L2_w524288__l1_l2: median 41.6719 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1000.33, 'mem_load_uops_retired.l2_miss': 998.85}
+[8/28] L2_w524288__l3_loads: median 41.6719 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.02, 'mem_uops_retired.all_loads': 1062.62}
+[9/28] L1_w40960__l1_l2: median 12.0938 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 990.45, 'mem_load_uops_retired.l2_miss': 0.02}
+[10/28] L1_w40960__l3_loads: median 12.1250 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.01, 'mem_uops_retired.all_loads': 1062.54}
+[11/28] LLC_w29360128__l1_l2: median 202.7031 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1000.99, 'mem_load_uops_retired.l2_miss': 1000.59}
+[12/28] LLC_w29360128__l3_loads: median 201.8438 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 986.46, 'mem_uops_retired.all_loads': 1063.06}
+[13/28] LLC_w16777216__l1_l2: median 41.7812 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1000.68, 'mem_load_uops_retired.l2_miss': 1000.31}
+[14/28] LLC_w16777216__l3_loads: median 41.7812 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.74, 'mem_uops_retired.all_loads': 1062.61}
+[15/28] LLC_w41943040__l1_l2: median 203.7656 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1000.98, 'mem_load_uops_retired.l2_miss': 1000.6}
+[16/28] LLC_w41943040__l3_loads: median 204.2656 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 999.08, 'mem_uops_retired.all_loads': 1063.07}
+[17/28] LLC_w67108864__l1_l2: median 204.9688 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1000.97, 'mem_load_uops_retired.l2_miss': 1000.58}
+[18/28] LLC_w67108864__l3_loads: median 205.5469 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 999.63, 'mem_uops_retired.all_loads': 1063.07}
+[19/28] L2_w262144__l1_l2: median 12.5781 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 999.77, 'mem_load_uops_retired.l2_miss': 25.77}
+[20/28] L2_w262144__l3_loads: median 12.5312 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.0, 'mem_uops_retired.all_loads': 1062.54}
+[21/28] L2_w393216__l1_l2: median 41.7344 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1000.58, 'mem_load_uops_retired.l2_miss': 999.09}
+[22/28] L2_w393216__l3_loads: median 41.7344 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.03, 'mem_uops_retired.all_loads': 1062.61}
+[23/28] L1_w49152__l1_l2: median 12.1562 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 997.3, 'mem_load_uops_retired.l2_miss': 0.02}
+[24/28] L1_w49152__l3_loads: median 12.1562 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.02, 'mem_uops_retired.all_loads': 1062.53}
+[25/28] L2_w294912__l1_l2: median 41.6250 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1000.52, 'mem_load_uops_retired.l2_miss': 993.77}
+[26/28] L2_w294912__l3_loads: median 41.6406 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.04, 'mem_uops_retired.all_loads': 1062.61}
+[27/28] L1_w65536__l1_l2: median 12.1406 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 998.08, 'mem_load_uops_retired.l2_miss': 0.02}
+[28/28] L1_w65536__l3_loads: median 12.1406 ticks/load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.02, 'mem_uops_retired.all_loads': 1062.53}

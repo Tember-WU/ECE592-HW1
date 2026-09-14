@@ -1,0 +1,26 @@
+{
+  "selected": [
+    "mem_load_uops_retired.l1_hit",
+    "mem_load_uops_retired.l1_miss",
+    "mem_load_uops_retired.l2_hit",
+    "mem_load_uops_retired.l2_miss",
+    "mem_load_uops_retired.l3_hit",
+    "mem_load_uops_retired.l3_miss",
+    "mem_load_uops_retired.hit_lfb",
+    "mem_uops_retired.all_loads",
+    "l1d.replacement",
+    "l2_rqsts.all_demand_data_rd",
+    "l2_rqsts.demand_data_rd_miss",
+    "l2_rqsts.references",
+    "l2_rqsts.miss",
+    "dtlb_load_misses.walk_completed",
+    "cache-references",
+    "cache-misses"
+  ],
+  "group": [
+    "mem_load_uops_retired.l1_miss",
+    "mem_load_uops_retired.l2_miss",
+    "mem_load_uops_retired.l3_miss",
+    "mem_uops_retired.all_loads"
+  ]
+}

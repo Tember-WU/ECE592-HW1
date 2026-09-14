@@ -1,5 +1,10 @@
 # Line-size PMU verification
 
+Sunbird: [line_size01](results/sunbird/line_size01/RUN_NOTES.md), with the same twelve
+stride/order/offset points, CPU 32/node 0, and two counter pairs per point. Its
+configuration reads the frozen Phase-I summary. The detailed historical parameters
+and placement below describe Artemisia unless stated otherwise.
+
 Artemisia's completed run is [line_size01](results/artemisia/line_size01/RUN_NOTES.md).
 Twelve representative configurations reproduce the existing grouping-window stride experiment
 with four user-mode counters: retired L1/L2/L3 load misses and retired loads in total.
@@ -74,7 +79,8 @@ prefetching. The controls test sensitivity to traversal order.
 mapping/interference logs, PMU counts, and acquisition-order raw `uint64` intervals compressed with gzip.
 `results/<machine>/<run-id>/` contains full timing statistics, raw/normalized event counts, temporal
 medians, quality/validation records, and PNG/PDF comparison and box plots. Outliers are retained.
-Analysis reads the existing timing-only summary in place without creating a prior-result snapshot.
+Legacy analysis reads the timing-only summary in place. Sunbird reads its separately created
+Phase-I freeze, selected through `phase1_freeze` in its configuration.
 
 Collection/analysis helpers live in `../common/` and reuse statistics helpers from
 `../capacity/scripts/common.py`; keep the complete PMU-verification directory when reproducing.

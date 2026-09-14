@@ -1,0 +1,135 @@
+{
+  "recorded_utc": "2026-09-14T15:32:31.955536+00:00",
+  "note": "Short scheduling diagnostics only, not formal capacity samples",
+  "groups": [
+    {
+      "name": "four",
+      "events": [
+        "mem_load_uops_retired.l1_miss",
+        "mem_load_uops_retired.l2_miss",
+        "mem_load_uops_retired.l3_miss",
+        "mem_uops_retired.all_loads"
+      ],
+      "command": [
+        "perf",
+        "stat",
+        "--no-big-num",
+        "-x,",
+        "-e",
+        "{mem_load_uops_retired.l1_miss:u,mem_load_uops_retired.l2_miss:u,mem_load_uops_retired.l3_miss:u,mem_uops_retired.all_loads:u}",
+        "--",
+        "taskset",
+        "-c",
+        "32",
+        "/usr/bin/python3",
+        "-c",
+        "sum(range(2000000))"
+      ],
+      "returncode": 0,
+      "schedulable": false,
+      "output": "<not counted>,,mem_load_uops_retired.l1_miss:u,0,0.00,,\n<not counted>,,mem_load_uops_retired.l2_miss:u,0,0.00,,\n<not counted>,,mem_load_uops_retired.l3_miss:u,0,0.00,,\n<not counted>,,mem_uops_retired.all_loads:u,0,0.00,,\n"
+    },
+    {
+      "name": "misses",
+      "events": [
+        "mem_load_uops_retired.l1_miss",
+        "mem_load_uops_retired.l2_miss",
+        "mem_load_uops_retired.l3_miss"
+      ],
+      "command": [
+        "perf",
+        "stat",
+        "--no-big-num",
+        "-x,",
+        "-e",
+        "{mem_load_uops_retired.l1_miss:u,mem_load_uops_retired.l2_miss:u,mem_load_uops_retired.l3_miss:u}",
+        "--",
+        "taskset",
+        "-c",
+        "32",
+        "/usr/bin/python3",
+        "-c",
+        "sum(range(2000000))"
+      ],
+      "returncode": 0,
+      "schedulable": false,
+      "output": "<not counted>,,mem_load_uops_retired.l1_miss:u,0,0.00,,\n<not counted>,,mem_load_uops_retired.l2_miss:u,0,0.00,,\n<not counted>,,mem_load_uops_retired.l3_miss:u,0,0.00,,\n"
+    },
+    {
+      "name": "l1_l2",
+      "events": [
+        "mem_load_uops_retired.l1_miss",
+        "mem_load_uops_retired.l2_miss"
+      ],
+      "command": [
+        "perf",
+        "stat",
+        "--no-big-num",
+        "-x,",
+        "-e",
+        "{mem_load_uops_retired.l1_miss:u,mem_load_uops_retired.l2_miss:u}",
+        "--",
+        "taskset",
+        "-c",
+        "32",
+        "/usr/bin/python3",
+        "-c",
+        "sum(range(2000000))"
+      ],
+      "returncode": 0,
+      "schedulable": true,
+      "output": "852203,,mem_load_uops_retired.l1_miss:u,78862899,100.00,,\n366641,,mem_load_uops_retired.l2_miss:u,78862899,100.00,,\n"
+    },
+    {
+      "name": "l3_loads",
+      "events": [
+        "mem_load_uops_retired.l3_miss",
+        "mem_uops_retired.all_loads"
+      ],
+      "command": [
+        "perf",
+        "stat",
+        "--no-big-num",
+        "-x,",
+        "-e",
+        "{mem_load_uops_retired.l3_miss:u,mem_uops_retired.all_loads:u}",
+        "--",
+        "taskset",
+        "-c",
+        "32",
+        "/usr/bin/python3",
+        "-c",
+        "sum(range(2000000))"
+      ],
+      "returncode": 0,
+      "schedulable": true,
+      "output": "9391,,mem_load_uops_retired.l3_miss:u,79522996,100.00,,\n130097029,,mem_uops_retired.all_loads:u,79522996,100.00,,\n"
+    },
+    {
+      "name": "l1_l3_loads",
+      "events": [
+        "mem_load_uops_retired.l1_miss",
+        "mem_load_uops_retired.l3_miss",
+        "mem_uops_retired.all_loads"
+      ],
+      "command": [
+        "perf",
+        "stat",
+        "--no-big-num",
+        "-x,",
+        "-e",
+        "{mem_load_uops_retired.l1_miss:u,mem_load_uops_retired.l3_miss:u,mem_uops_retired.all_loads:u}",
+        "--",
+        "taskset",
+        "-c",
+        "32",
+        "/usr/bin/python3",
+        "-c",
+        "sum(range(2000000))"
+      ],
+      "returncode": 0,
+      "schedulable": false,
+      "output": "<not counted>,,mem_load_uops_retired.l1_miss:u,0,0.00,,\n<not counted>,,mem_load_uops_retired.l3_miss:u,0,0.00,,\n<not counted>,,mem_uops_retired.all_loads:u,0,0.00,,\n"
+    }
+  ]
+}

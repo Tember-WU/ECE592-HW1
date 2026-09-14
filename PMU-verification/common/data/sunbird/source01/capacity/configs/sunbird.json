@@ -1,0 +1,75 @@
+{
+  "machine": "sunbird",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 0,
+  "samples": 1000000,
+  "batch": 256,
+  "spacing": 64,
+  "seed": 59202,
+  "pages": "huge",
+  "mode": "random",
+  "order_seed": 59283,
+  "events": [
+    {
+      "name": "mem_load_uops_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_uops_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_uops_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_uops_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "regions": {
+    "L1": [
+      32768,
+      36864,
+      40960,
+      49152,
+      65536
+    ],
+    "L2": [
+      262144,
+      294912,
+      393216,
+      524288
+    ],
+    "LLC": [
+      16777216,
+      29360128,
+      41943040,
+      54525952,
+      67108864
+    ]
+  },
+  "event_passes": [
+    {
+      "name": "l1_l2",
+      "event_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "l3_loads",
+      "event_indices": [
+        2,
+        3
+      ]
+    }
+  ],
+  "phase1_freeze": {
+    "manifest": "phase1-freeze/sunbird/freeze01/manifest.json",
+    "git_head": "f86eecbb6fce590f3d40b64487620888b33dcd93"
+  },
+  "selection_note": "Fourteen exact seed-59202 Phase-I points: sample the frozen Sunbird L1 32-36 KiB and L2 256-288 KiB jumps and the broad LLC 16-64 MiB region. Each point is repeated for two disjoint PMU groups.",
+  "placement_note": "CPU 32 / node 0 matches both Sunbird capacity rounds."
+}
