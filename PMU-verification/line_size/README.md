@@ -14,6 +14,11 @@ Use `configs/ookay.json` / `--machine ookay`; these runs retain CPU4/node0 and d
 Their [Section 8.3 comparison](../results/ookay/SECTION_8_3_REPORT.md) reports partial line-size evidence.
 The remaining run-specific placement and results below describe Artemisia.
 
+Upgrade's completed run is [line_size01](results/upgrade/line_size01/RUN_NOTES.md).
+`configs/upgrade.json` retains the twelve points below and uses CPU 4/node 0, matching Upgrade's
+timing-only placement (SMT sibling CPU 10). Use `--machine upgrade` and a fresh run ID to reproduce.
+Its [Phase-I freeze and system/vendor comparison](../reports/upgrade/README.md) are saved separately.
+
 Artemisia's completed run is [line_size01](results/artemisia/line_size01/RUN_NOTES.md).
 Twelve representative configurations reproduce the existing grouping-window stride experiment
 with four user-mode counters: retired L1/L2/L3 load misses and retired loads in total.

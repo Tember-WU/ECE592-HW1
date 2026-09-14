@@ -1,0 +1,43 @@
+{
+  "started_utc": "2026-09-14T15:37:36.317985+00:00",
+  "phase1_freeze": "phase1_freeze/upgrade/freeze01",
+  "runs": [
+    {
+      "experiment": "capacity",
+      "run_id": "capacity01",
+      "status": "failed",
+      "started_utc": "2026-09-14T15:37:36.318051+00:00",
+      "collection_returncode": 1,
+      "finished_utc": "2026-09-14T15:37:37.644653+00:00",
+      "error": "Benchmark failed: /home/swu35/ECE592-HW1/PMU-verification/capacity/data/upgrade/capacity01/logs/LLC_w7340032.txt"
+    },
+    {
+      "experiment": "capacity",
+      "run_id": "capacity02",
+      "status": "complete",
+      "started_utc": "2026-09-14T15:42:16.093007+00:00",
+      "collection_returncode": 0,
+      "analysis_returncode": 0,
+      "finished_utc": "2026-09-14T15:42:46.469616+00:00"
+    },
+    {
+      "experiment": "line_size",
+      "run_id": "line_size01",
+      "status": "complete",
+      "started_utc": "2026-09-14T15:42:46.469899+00:00",
+      "collection_returncode": 0,
+      "analysis_returncode": 0,
+      "finished_utc": "2026-09-14T15:43:40.168482+00:00"
+    },
+    {
+      "experiment": "associativity",
+      "run_id": "associativity01",
+      "status": "complete",
+      "started_utc": "2026-09-14T15:43:40.168761+00:00",
+      "collection_returncode": 0,
+      "analysis_returncode": 0,
+      "finished_utc": "2026-09-14T15:44:05.209713+00:00"
+    }
+  ],
+  "finished_utc": "2026-09-14T15:44:05.209973+00:00"
+}

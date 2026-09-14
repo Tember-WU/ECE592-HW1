@@ -27,13 +27,16 @@ applicable. Build products and uncompressed temporary arrays are ignored by Git;
 samples, counter outputs, configurations, scripts, and figures are retained.
 
 The current work covers event discovery and the three representative experiments on Artemisia,
-Sunbird, Charnwood and Ookay required by Section 8.3: capacity, line/stride, and associativity. `common/`
+Sunbird, Charnwood, Ookay and Upgrade required by Section 8.3: capacity, line/stride, and associativity. `common/`
 holds shared helpers for the latter two. The unused latency/inclusion directories are optional
 placeholders, not additional required runs.
 Sunbird's system/vendor comparison is included in its run notes. Charnwood's
 [completed report](results/charnwood/REPORT.md) includes the system/vendor comparison,
 PMU evidence and disagreement analysis. Ookay's system/vendor comparison is complete in its
-linked report; Artemisia's is pending. Section 8.4's eight-event cross-generation study is a separate task.
+linked report; Artemisia's is pending.
+Upgrade's [report and system/vendor comparison](reports/upgrade/README.md) records the frozen
+Phase-I inferences, PMU evidence, disagreements, source pages, and reproducibility checks.
+Section 8.4's eight-event cross-generation study is a separate task.
 
 Legacy configurations read timing-only files in place. Sunbird configurations reference
 the pre-PMU [Phase-I freeze](phase1-freeze/sunbird/freeze01/README.md); the analyzers read
@@ -47,6 +50,10 @@ a pre-run Phase-I hash checkpoint and its post-run verification. Existing timing
 in place for comparison and are not changed.
 For Ookay, a separate [pre-discovery Phase-I freeze](results/ookay/phase1-freeze01/manifest.json)
 was created before event discovery and system/vendor lookup; the original hashes were checked again afterward.
+For Upgrade, a separate [Phase-I freeze](phase1_freeze/upgrade/freeze01/manifest.json) was saved before
+formal PMU collection and before system/vendor cache-geometry comparison. It hashes all selected
+original data and copies small results, configurations, and source files. Artemisia's historical runs
+did not have this checkpoint.
 
 Charnwood completed `capacity03` (14 points), `line_size01` (12 points) and `associativity01`
 (12 points) serially on 2026-09-14, with one million samples per point and four simultaneous events.

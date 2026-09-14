@@ -1,0 +1,68 @@
+[
+  {
+    "level": "L1D",
+    "estimate": 32768,
+    "interval": [
+      32768,
+      36864
+    ],
+    "zoom": [
+      16384,
+      49152
+    ],
+    "unit": 1024,
+    "box_points": [
+      32768,
+      36864,
+      49152
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 32 KiB. The sampled transition bracket is 32\u201336 KiB, not a confidence interval."
+  },
+  {
+    "level": "L2",
+    "estimate": 262144,
+    "interval": [
+      262144,
+      294912
+    ],
+    "zoom": [
+      131072,
+      393216
+    ],
+    "unit": 1024,
+    "box_points": [
+      262144,
+      294912,
+      327680
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 256 KiB. The sampled onset bracket is 256\u2013288 KiB, not a confidence interval."
+  },
+  {
+    "level": "LLC effective transition",
+    "estimate": null,
+    "interval": [
+      7340032,
+      8388608
+    ],
+    "zoom": [
+      4194304,
+      16777216
+    ],
+    "unit": 1048576,
+    "box_points": [
+      7340032,
+      8388608,
+      16777216
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "A large latency rise occurs between sampled 7 and 8 MiB points. This is an effective transition on a shared machine; it does not bound nominal physical LLC capacity. Layouts give different miss-region latency."
+  }
+]

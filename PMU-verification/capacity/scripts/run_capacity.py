@@ -13,7 +13,8 @@ import subprocess
 import sys
 import time
 import numpy as np
-from common import ROOT, activity, cpu_stat, frequency, identifier, plan, save, sha, summarize, validate_counts, selected_events
+from common import (ROOT, activity, cpu_stat, frequency, identifier, plan, raw_event_encoding,
+                    save, selected_events, sha, summarize, validate_counts)
 
 
 def now():
@@ -71,9 +72,7 @@ def main():
                                          [e['name'] for e in config['events']], text=True)
         (out / 'selected-events.txt').write_text(listing)
         for event in config['events']:
-            block = re.search(r'^  ' + re.escape(event['name']) + r'\n(.*?)(?=^  \S|\Z)', listing, re.M | re.S)
-            encoding = re.search(r'(?:cpu|default_core)/event=(0x[0-9a-f]+),[^\n]*umask=(0x[0-9a-f]+)', block.group(1)) if block else None
-            if not encoding or int(encoding[1], 16) | (int(encoding[2], 16) << 8) != int(event['config'], 0):
+            if raw_event_encoding(listing, event['name']) != int(event['config'], 0):
                 raise ValueError('Local perf event encoding mismatch: ' + event['name'])
         topology = Path(f'/sys/devices/system/cpu/cpu{cpu}/topology')
         sibling_text = (topology / 'thread_siblings_list').read_text().strip()

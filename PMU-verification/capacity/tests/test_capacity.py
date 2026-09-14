@@ -1,5 +1,6 @@
 import copy
 import json
+import os
 from pathlib import Path
 import platform
 import subprocess
@@ -10,7 +11,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from common import plan, summarize, validate_counts, selected_events
+from common import plan, raw_event_encoding, selected_events, summarize, validate_counts
 
 
 class CapacityTests(unittest.TestCase):
@@ -65,10 +66,21 @@ class CapacityTests(unittest.TestCase):
         self.assertEqual(s['outliers'], 1)
         self.assertGreater(s['mean'], s['median'])
 
-    @unittest.skipUnless((ROOT / 'configs' / (platform.node().split('.')[0] + '.json')).exists(), 'Local hardware configuration required')
+    def test_local_core_event_aliases_and_ambiguity(self):
+        for pmu in ('cpu', 'default_core', 'cpu_core'):
+            listing = f'  mem_load_retired.l1_miss\n    [Local description]\n    {pmu}/event=0xd1,period=0x186a3,umask=0x8/\n'
+            self.assertEqual(raw_event_encoding(listing, 'mem_load_retired.l1_miss'), 0x08d1)
+        with self.assertRaises(ValueError):
+            raw_event_encoding(listing, 'mem_load_retired.l2_miss')
+        with self.assertRaises(ValueError):
+            raw_event_encoding(listing + '    cpu_atom/event=0xd1,umask=0x10/\n', 'mem_load_retired.l1_miss')
+
     def test_live_counter_group_and_raw_samples(self):
-        machine = platform.node().split('.')[0]
-        c = json.loads((ROOT / 'configs' / (machine + '.json')).read_text())
+        machine = os.environ.get('MACHINE', platform.node().split('.')[0])
+        config_path = ROOT / 'configs' / (machine + '.json')
+        if not config_path.exists() or platform.machine() != 'x86_64':
+            self.skipTest('No configured local x86-64 machine')
+        c = json.loads(config_path.read_text())
         jobs = plan(c)[:len(c.get('event_passes', [None]))]
         c.update(samples=1000, pages='base')
         for job in jobs:

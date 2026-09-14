@@ -1,0 +1,6 @@
+{
+  "started_utc": "2026-09-14T15:42:09.712460+00:00",
+  "finished_utc": "2026-09-14T15:42:11.618975+00:00",
+  "action": "Touched and unmapped a 1 GiB process-private anonymous base-page allocation to encourage reclamation before retrying MADV_COLLAPSE. No system setting changed.",
+  "bytes": 1073741824
+}

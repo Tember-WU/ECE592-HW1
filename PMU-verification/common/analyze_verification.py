@@ -20,7 +20,8 @@ def write_csv(path, rows):
 
 def baseline(c, p):
     root = PMU.parent / 'timing-only' / c['experiment'] / 'data' / c['machine']
-    if c.get('phase1_freeze'):
+    # Structured freeze references select copied summaries; string references are provenance only.
+    if isinstance(c.get('phase1_freeze'), dict):
         freeze = PMU / c['phase1_freeze']['manifest']
         root = freeze.parent / 'snapshot/timing-only' / c['experiment'] / 'data' / c['machine']
     if c['experiment'] == 'line_size':
@@ -110,7 +111,7 @@ def plots(c, rows, folder):
         groups = [(title, sorted([r for r in all_rows if r['mode'] == 'random_lines' and r['alignment'] == alignment],
                                 key=lambda r: r['stride']), 'stride')
                   for title, alignment in [('Random windows, offset 0 B', 0), ('Random windows, offset 16 B', 16)]]
-    fig, axes = plt.subplots(1, len(groups), figsize=(12, 4.5), layout='constrained')
+    fig, axes = plt.subplots(1, len(groups), figsize=(6 * len(groups), 4.5), layout='constrained')
     for ax, (label, selected, key) in zip(np.atleast_1d(axes), groups):
         boxes = [dict(med=r['median'], q1=r['q1'], q3=r['q3'], whislo=r['whisker_low'],
                       whishi=r['whisker_high'], fliers=[], label=str(r[key]) +

@@ -77,9 +77,9 @@ def main():
     write_csv(out / 'summary.csv', rows)
     write_csv(out / 'pmu_counts.csv', counters)
     write_csv(out / 'temporal_medians.csv', temporal)
-    # New runs may reference a frozen baseline; legacy configurations read in place.
+    # Structured freeze references select copied summaries; string references are provenance only.
     baseline_path = ROOT.parents[1] / 'timing-only' / 'capacity' / 'results' / args.machine / 'combined12' / 'summary.csv'
-    if config.get('phase1_freeze'):
+    if isinstance(config.get('phase1_freeze'), dict):
         freeze = ROOT.parent / config['phase1_freeze']['manifest']
         baseline_path = freeze.parent / 'snapshot/timing-only/capacity/results' / args.machine / 'combined12/summary.csv'
     with baseline_path.open() as f:

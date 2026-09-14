@@ -14,6 +14,13 @@ Phase-I address spacings. `configs/ookay.json` and `configs/ookay-followup.json`
 See the [Section 8.3 comparison](../results/ookay/SECTION_8_3_REPORT.md) for why the original
 8-way L2 label is unsupported. The run-specific details below describe Artemisia.
 
+Upgrade's completed run is [associativity01](results/upgrade/associativity01/RUN_NOTES.md).
+`configs/upgrade.json` uses CPU 2/node 0 and eighteen points: five at 4 KiB spacing, seven at
+16 KiB spacing, and six controls at the previously measured 32/64 KiB candidate spacings.
+Use `--machine upgrade` and a fresh run ID to reproduce. The
+[Upgrade report](../reports/upgrade/README.md) records the prerequisite timing-only run,
+Phase-I freeze, and system/vendor comparison. The original C++ benchmark kernels are unchanged.
+
 Artemisia's completed run is [associativity02](results/artemisia/associativity02/RUN_NOTES.md).
 It confirms the L1 conflict threshold and identifies the original L2-labeled 12-to-13 transition
 as an L1 miss transition. Two extension points provide evidence for a later L2 threshold.

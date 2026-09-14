@@ -47,6 +47,22 @@ def selected_events(config, job=None):
     return [config['events'][i] for i in (job or {}).get('event_indices', range(len(config['events'])))]
 
 
+def raw_event_encoding(listing, name):
+    """Read one local core event/umask pair across perf's core-PMU aliases."""
+    block = re.search(r'^  ' + re.escape(name) + r'\n(.*?)(?=^  \S|\Z)', listing, re.M | re.S)
+    if not block:
+        raise ValueError('Event missing from local perf listing: ' + name)
+    definitions = re.findall(r'(?:cpu|default_core|cpu_core|cpu_atom)/([^\s]+?)/', block[1])
+    values = set()
+    for definition in definitions:
+        fields = dict(part.split('=', 1) for part in definition.split(',') if '=' in part)
+        if 'event' in fields and 'umask' in fields:
+            values.add(int(fields['event'], 0) | (int(fields['umask'], 0) << 8))
+    if len(values) != 1:
+        raise ValueError('Missing or ambiguous core event encoding: ' + name)
+    return values.pop()
+
+
 def plan(config):
     identifier(config['machine'])
     if config['isa'] != 'x86_64':

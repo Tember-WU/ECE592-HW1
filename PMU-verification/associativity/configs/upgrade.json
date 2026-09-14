@@ -1,0 +1,162 @@
+{
+  "machine": "upgrade",
+  "isa": "x86_64",
+  "cpu": 2,
+  "numa_node": 0,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "mem_load_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_inst_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "associativity",
+  "batch": 128,
+  "line_size": 64,
+  "seed": 701,
+  "points": [
+    {
+      "name": "L1_k6",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 6,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k7",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 7,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k8",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k9",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k10",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k7",
+      "group": "L2_candidate",
+      "num_sets": 256,
+      "k": 7,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k8",
+      "group": "L2_candidate",
+      "num_sets": 256,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k9",
+      "group": "L2_candidate",
+      "num_sets": 256,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k10",
+      "group": "L2_candidate",
+      "num_sets": 256,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k16",
+      "group": "L2_candidate",
+      "num_sets": 256,
+      "k": 16,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k17",
+      "group": "L2_candidate",
+      "num_sets": 256,
+      "k": 17,
+      "max_k": 17
+    },
+    {
+      "name": "L2_candidate_k18",
+      "group": "L2_candidate",
+      "num_sets": 256,
+      "k": 18,
+      "max_k": 18
+    },
+    {
+      "name": "L2_sets512_k8",
+      "group": "L2_sets512",
+      "num_sets": 512,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets512_k9",
+      "group": "L2_sets512",
+      "num_sets": 512,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets512_k10",
+      "group": "L2_sets512",
+      "num_sets": 512,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets1024_k8",
+      "group": "L2_sets1024",
+      "num_sets": 1024,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets1024_k9",
+      "group": "L2_sets1024",
+      "num_sets": 1024,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets1024_k10",
+      "group": "L2_sets1024",
+      "num_sets": 1024,
+      "k": 10,
+      "max_k": 16
+    }
+  ],
+  "placement_note": "CPU 2/node 0 matches the newly completed and frozen Upgrade Phase-I associativity baseline; SMT sibling CPU 8.",
+  "phase1_freeze": "phase1_freeze/upgrade/freeze01",
+  "selection_note": "Main 12-point design follows the original selected candidate: L1 K=6..10 at 4 KiB; selected L2 candidate K=7,8,9,10,16,17,18 at 16 KiB. Six bounded controls at 32/64 KiB repeat observed K=8,9,10 points because the frozen candidate curves disagree. K=17/18 are new PMU extension points; all other points have an unchanged Phase-I baseline."
+}

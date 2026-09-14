@@ -1,0 +1,57 @@
+{
+  "machine": "upgrade",
+  "source_runs": [
+    "round1-retry2",
+    "round2"
+  ],
+  "excluded_incomplete_runs": [
+    "round1",
+    "round1-retry1"
+  ],
+  "scope": "Timing-only cache levels and capacity after the requested two rounds; no cache specifications or PMU measurements consulted.",
+  "interpreted_at_utc": "2026-09-10T17:04:19.863072+00:00",
+  "measurable_data_cache_levels": 3,
+  "capacity_estimates": [
+    {
+      "level": "L1D",
+      "approximate_bytes": 32768,
+      "sampled_transition_neighborhood_bytes": [
+        32768,
+        36864
+      ],
+      "evidence": "64 B random: 32 KiB round-2 repeat medians 3.2500\u20133.2578; coarse median 3.3398. At 36 KiB the median is 8.8242 TSC ticks/load."
+    },
+    {
+      "level": "L2",
+      "approximate_bytes": 262144,
+      "sampled_onset_interval_bytes": [
+        262144,
+        294912
+      ],
+      "evidence": "64 B random: 256 KiB round-2 repeat medians 8.9414\u20138.9453; coarse median 8.9336. At 288 KiB the median is 14.5547 TSC ticks/load."
+    },
+    {
+      "level": "LLC/L3",
+      "approximate_bytes": null,
+      "nominal_physical_capacity_bytes": null,
+      "observed_effective_transition_region_bytes": [
+        7340032,
+        8388608
+      ],
+      "evidence": "64 B random: 7 MiB median 28.4648; 8 MiB 114.1016 (round 2) / 114.5898 (round 1). Compact 8 B layout: 7 MiB 28.8867; 8 MiB repeats 55.7617 / 57.3242 TSC ticks/load.",
+      "interpretation": "Effective transition in the sampled 7\u20138 MiB region on a shared machine. Not a bound on nominal physical LLC capacity."
+    }
+  ],
+  "timer_unit": "TSC ticks / dependent load",
+  "cpu": 2,
+  "numa_node": 0,
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "caveats": [
+    "Another benchmark was observed on CPU 0 before both rounds; potential shared-machine effects were not isolated.",
+    "Round 1 and round 2 recorded 276 and 205 involuntary context switches, respectively; all samples retained.",
+    "LLC miss-region latency depends on layout and page policy, and some compact-layout time blocks vary.",
+    "Intervals are empirical sampling brackets, not statistical confidence intervals or vendor specifications."
+  ],
+  "third_round": "Not run. The two-round request is complete; a narrower bracket or quieter-machine confirmation would require additional measurements."
+}

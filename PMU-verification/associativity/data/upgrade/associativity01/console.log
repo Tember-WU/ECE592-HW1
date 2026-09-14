@@ -1,0 +1,24 @@
+associativity: 18 configurations, 1,000,000 batches each
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Preflight: {'2': 0.0, '8': 0.0}
+[1/18] L2_candidate_k8: 6.4806 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.593, 0.001, 0.0]
+[2/18] L1_k6: 6.3721 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.015, 0.0, 0.0]
+[3/18] L2_sets512_k9: 9.6357 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [287.057, 94.704, 0.0]
+[4/18] L2_candidate_k10: 11.3101 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [942.438, 0.007, 0.0]
+[5/18] L2_candidate_k7: 6.4651 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.031, 0.001, 0.0]
+[6/18] L1_k10: 11.2791 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [942.464, 0.001, 0.0]
+[7/18] L2_candidate_k17: 15.6822 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [979.238, 182.639, 0.0]
+[8/18] L1_k8: 6.3721 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.535, 0.0, 0.0]
+[9/18] L2_candidate_k9: 11.5116 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [984.388, 0.008, 0.0]
+[10/18] L2_sets512_k8: 6.4031 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.533, 0.024, 0.0]
+[11/18] L1_k9: 11.4884 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [984.541, 0.001, 0.0]
+[12/18] L2_sets1024_k8: 6.6667 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.513, 0.384, 0.0]
+[13/18] L2_candidate_k18: 18.0930 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [977.835, 297.129, 0.0]
+[14/18] L2_candidate_k16: 11.2791 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [999.887, 0.126, 0.0]
+[15/18] L2_sets1024_k9: 9.5581 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [119.791, 119.067, 0.0]
+[16/18] L1_k7: 6.3876 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.029, 0.0, 0.0]
+[17/18] L2_sets512_k10: 23.4806 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [928.343, 513.084, 0.0]
+[18/18] L2_sets1024_k10: 32.8062 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [865.364, 865.259, 0.0]

@@ -11,6 +11,12 @@ Ookay: [capacity01](results/ookay/capacity01/RUN_NOTES.md) completes 14 represen
 with `configs/ookay.json`. See the [Section 8.3 comparison](../results/ookay/SECTION_8_3_REPORT.md).
 The parameters below describe Artemisia; select `--machine ookay` for Ookay's own sizes and placement.
 
+Upgrade's completed run is [capacity02](results/upgrade/capacity02/RUN_NOTES.md), using
+`configs/upgrade.json`: CPU 2/node 0; L1 32, 36, 40, 48, 64 KiB; L2 256, 288, 384, 512 KiB;
+LLC 4, 5, 6, 7, 8 MiB. These points follow Upgrade's frozen timing-only boundaries.
+Use `--machine upgrade` and a fresh run ID to reproduce; live checks use `MACHINE=upgrade make check`.
+The [Upgrade report](../reports/upgrade/README.md) includes the system/vendor comparison.
+
 This small Section 8.3 experiment reruns 14 Artemisia capacity points using the existing randomized,
 dependent pointer-chase workload. It measures the timing distribution and a group of four hardware
 events during the same measurement loop.

@@ -17,7 +17,8 @@ import numpy as np
 
 PMU = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PMU / 'capacity/scripts'))
-from common import activity, cpu_stat, frequency, identifier, save, sha, summarize, expand_event_passes, selected_events
+from common import (activity, cpu_stat, expand_event_passes, frequency, identifier, raw_event_encoding,
+                    save, selected_events, sha, summarize)
 
 
 def plan(c):
@@ -127,9 +128,7 @@ def main():
         listing = subprocess.check_output(['perf', 'list', '--details'] + [e['name'] for e in c['events']], text=True)
         (data / 'selected-events.txt').write_text(listing)
         for e in c['events']:
-            block = re.search(r'^  ' + re.escape(e['name']) + r'\n(.*?)(?=^  \S|\Z)', listing, re.M | re.S)
-            raw = re.search(r'(?:cpu|default_core)/event=(0x[0-9a-f]+),[^\n]*umask=(0x[0-9a-f]+)', block[1]) if block else None
-            if not raw or (int(raw[1], 16) | int(raw[2], 16) << 8) != int(e['config'], 0):
+            if raw_event_encoding(listing, e['name']) != int(e['config'], 0):
                 raise ValueError('Local encoding mismatch: ' + e['name'])
         topology = Path(f'/sys/devices/system/cpu/cpu{c["cpu"]}/topology')
         siblings = []

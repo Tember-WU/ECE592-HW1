@@ -1,0 +1,16 @@
+{
+  "hostname": "upgrade.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "6.8.0-138-generic",
+  "cpu": 2,
+  "collected_utc": "2026-09-14T15:36:24.769301+00:00",
+  "perf_version": "perf version 6.8.12",
+  "perf_event_paranoid": "1",
+  "processor_identification": [
+    "vendor_id\t: GenuineIntel",
+    "cpu family\t: 6",
+    "model\t\t: 158",
+    "model name\t: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz",
+    "stepping\t: 10"
+  ]
+}

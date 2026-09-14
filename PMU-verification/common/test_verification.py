@@ -1,5 +1,6 @@
 import copy
 import json
+import os
 import platform
 from pathlib import Path
 import subprocess
@@ -41,11 +42,11 @@ class VerificationTests(unittest.TestCase):
         with self.assertRaises(ValueError): validate_counts(bad, c, p)
 
     def test_two_live_kernels(self):
-        machine = platform.node().split('.')[0]
+        machine = os.environ.get('MACHINE', platform.node().split('.')[0])
         for experiment in ('line_size', 'associativity'):
             path = PMU / experiment / 'configs' / (machine + '.json')
-            if not path.exists():
-                self.skipTest('No local PMU machine configuration')
+            if not path.exists() or platform.machine() != 'x86_64':
+                self.skipTest('No configured local x86-64 machine')
             c = json.loads(path.read_text())
             jobs = plan(c)[:len(c.get('event_passes', [None]))]
             c['samples'] = 1000
@@ -68,6 +69,23 @@ class VerificationTests(unittest.TestCase):
             for event, count in zip(selected_events(c, p), counts['events']):
                 if event['name'].endswith('all_loads'):
                     self.assertGreater(count['count'], counts['chain_loads'])
+
+    def test_string_freeze_references_keep_legacy_baselines(self):
+        from analyze_verification import baseline
+        for machine in ('upgrade', 'ookay'):
+            for experiment in ('line_size', 'associativity'):
+                c = json.loads((PMU / experiment / 'configs' / (machine + '.json')).read_text())
+                self.assertIsInstance(c['phase1_freeze'], str)
+                legacy = copy.deepcopy(c)
+                del legacy['phase1_freeze']
+                for point in plan(c):
+                    with self.subTest(machine=machine, experiment=experiment, point=point['name']):
+                        value = baseline(c, point)
+                        self.assertEqual(value, baseline(legacy, point))
+                        if experiment == 'associativity' and point['k'] > 16:
+                            self.assertIsNone(value)
+                        else:
+                            self.assertGreater(value, 0)
 
     def test_frozen_baselines_and_split_plans(self):
         from analyze_verification import baseline

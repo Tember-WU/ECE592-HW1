@@ -1,0 +1,76 @@
+{
+  "checked_utc": "2026-09-14T15:45:43.032903+00:00",
+  "phase1_file_count": 740,
+  "phase1_bytes": 765410922,
+  "phase1_originals_and_snapshots_unchanged": true,
+  "errors": [],
+  "runs": [
+    {
+      "experiment": "capacity",
+      "run_id": "capacity02",
+      "status": "complete",
+      "points": 14,
+      "timed_batches": 14000000,
+      "chain_loads": 3584000000,
+      "elapsed_seconds": 26.87968529103091,
+      "started_utc": "2026-09-14T15:42:16.221947+00:00",
+      "finished_utc": "2026-09-14T15:42:43.101643+00:00",
+      "all_counters_fully_scheduled": true,
+      "validation": {
+        "status": "passed",
+        "points": 14,
+        "timed_batches": 14000000,
+        "all_raw_and_count_hashes_match": true,
+        "all_statistics_recomputed": true,
+        "all_groups_without_multiplexing": true,
+        "matching_timing_only_workload_for_every_point": true,
+        "note": "Integrity and comparability checks; not proof of an uncontended or pure cache state."
+      }
+    },
+    {
+      "experiment": "line_size",
+      "run_id": "line_size01",
+      "status": "complete",
+      "points": 12,
+      "timed_batches": 12000000,
+      "chain_loads": 12288000000,
+      "elapsed_seconds": 51.05414784804452,
+      "started_utc": "2026-09-14T15:42:46.600562+00:00",
+      "finished_utc": "2026-09-14T15:43:37.654719+00:00",
+      "all_counters_fully_scheduled": true,
+      "validation": {
+        "status": "passed",
+        "configurations": 12,
+        "timed_batches": 12000000,
+        "raw_hashes_lengths_and_statistics_verified": true,
+        "actual_load_denominators_verified": true,
+        "all_pmu_groups_without_multiplexing": true,
+        "note": "Integrity checks, not proof of exact physical geometry."
+      }
+    },
+    {
+      "experiment": "associativity",
+      "run_id": "associativity01",
+      "status": "complete",
+      "points": 18,
+      "timed_batches": 18000000,
+      "chain_loads": 2483000000,
+      "elapsed_seconds": 21.20798319595633,
+      "started_utc": "2026-09-14T15:43:40.295721+00:00",
+      "finished_utc": "2026-09-14T15:44:01.503712+00:00",
+      "all_counters_fully_scheduled": true,
+      "validation": {
+        "status": "passed",
+        "configurations": 18,
+        "timed_batches": 18000000,
+        "raw_hashes_lengths_and_statistics_verified": true,
+        "actual_load_denominators_verified": true,
+        "all_pmu_groups_without_multiplexing": true,
+        "note": "Integrity checks, not proof of exact physical geometry."
+      }
+    }
+  ],
+  "total_timed_batches": 44000000,
+  "total_chain_loads": 18355000000,
+  "all_archived_sources_and_binaries_verified": true
+}

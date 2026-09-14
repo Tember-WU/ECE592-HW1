@@ -80,7 +80,7 @@ def main():
             continue
         content = ' '.join(block['lines'])
         desc = re.search(r'\[(.*?)\]', content)
-        encoding = re.search(r'(?:cpu|default_core)/[^ ]+/', content)
+        encoding = re.search(r'(?:cpu|default_core|cpu_core|cpu_atom)/[^ ]+/', content)
         rows.append(dict(event=name, category=block['section'],
                          description=desc.group(1) if desc else content,
                          encoding=encoding.group(0) if encoding else '',
