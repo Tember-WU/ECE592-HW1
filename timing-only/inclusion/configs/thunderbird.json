@@ -1,0 +1,27 @@
+{
+  "machine": "thunderbird",
+  "pin": "taskset -c 4",
+
+  "line_size": 64,
+
+  "l2_bytes": "auto",
+  "llc_bytes": "auto",
+  "dram_bytes": "auto",
+  "l2_sets": "auto",
+
+  "assumed_llc_ways_upper_bound": "auto",
+  "candidate_llc_strides": "auto",
+  "candidate_k_values": "auto",
+
+  "sweep_min_bytes": 16384,
+  "sweep_max_bytes": 134217728,
+  "sweep_batch": 512,
+  "sweep_samples": 2000,
+
+  "cal_samples": 200000,
+  "fc_samples": 20000,
+  "num_targets": 20,
+  "num_trials": 2000,
+  "warmup_laps": 1000,
+  "seed": 701
+}
