@@ -1,0 +1,15 @@
+{
+  "source_sha256": {
+    "capacity/src/cache_bench.c": "e6be345e4ac5be4d73405a675f61f1eb5ee9f78acb9e5cfd4f4cb35b2d2ddae2",
+    "capacity/src/pmu.h": "8aeaa772c6c16d7487c0c7d83e663f1b3c4cf3d8454bf71ca2231a15d2255504",
+    "capacity/src/cache_bench_aarch64.c": "37a5cd9b04dcb12e98dec44e2af27d3025acc418cd1f56fd420fa440dc224f45",
+    "common/measurement.hpp": "606f58fad2048c893cac3f8ca209b951ae123e55a2fa56e29fad28ef48361060",
+    "common/pmu.hpp": "98df180a618991e9eee63aa7b570dfefe86ce7d0fb0f17452f8ee3724a1492fd",
+    "scripts/thunderbird.py": "3e57c2df3fe31f569734480775040a9031f7bdf272905a120768aa2020acc370",
+    "capacity/scripts/common.py": "610f6e2ec29e59294047309d0813203f0b99b471a50421a978486ef7cf9263d0",
+    "common/run_verification.py": "6a6e9af6da5f95ab1ffb23384fc4da7dc3f905e15a8ed831a867932947125553",
+    "common/analyze_verification.py": "ecbe170ff357e7ffa9c99c6544a7f8aa1b6b3a6f1b3ff0e462cbf3c4aa39693c"
+  },
+  "binary_sha256": "55b7ce1d89b5f86acd99d3da789ef44247b41bd9ef11094f9f79aca4b8e9ad9b",
+  "phase1_freeze_sha256": "5d90fdab034f815f157d66bbeee0e16077f932c86207cfa6390c48661cb65a97"
+}

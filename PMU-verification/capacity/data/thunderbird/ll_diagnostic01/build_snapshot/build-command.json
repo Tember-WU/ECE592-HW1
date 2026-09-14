@@ -1,0 +1,13 @@
+[
+  "gcc",
+  "-O0",
+  "-g",
+  "-std=c11",
+  "-Wall",
+  "-Wextra",
+  "-Werror",
+  "-fno-omit-frame-pointer",
+  "/home/swu35/ECE592-HW1/PMU-verification/capacity/src/cache_bench_aarch64.c",
+  "-o",
+  "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/thunderbird/capacity_pmu"
+]

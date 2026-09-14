@@ -1,0 +1,86 @@
+--- /home/swu35/ECE592-HW1/timing-only/associativity/src/associativity_bench.cpp	2026-09-14 11:19:53.845149639 -0400
++++ /home/swu35/ECE592-HW1/PMU-verification/associativity/src/associativity_bench.cpp	2026-09-14 11:19:53.625149638 -0400
+@@ -15,6 +15,7 @@
+ #include <sys/mman.h>
+ #include <unistd.h>
+ #include "timer_compat.h"
++#include "../../common/measurement.hpp"
+ 
+ // ---------- Timer ----------
+ // tsc_start()/tsc_stop() now just forward to the portable backend in timer_compat.h so
+@@ -25,6 +26,7 @@
+ 
+ // ---------- Config ----------
+ struct Config {
++    std::string pmu_events, pmu_output, ticks_output;
+     size_t num_sets;          // 64 for L1, 1024 for L2
+     size_t line_size;         // 64
+     size_t max_k;             // max conflicting lines
+@@ -40,6 +42,8 @@
+                                    // without re-running the full 1..max_k sweep a second time)
+ };
+ 
++static std::string counts_path, ticks_path;
++
+ static std::vector<size_t> parse_size_list(const std::string& list) {
+     std::vector<size_t> out;
+     size_t pos = 0;
+@@ -58,7 +62,10 @@
+     cfg.batch = 128;   // default batch size
+     for (int i = 1; i < argc; ++i) {
+         std::string arg = argv[i];
+-        if (arg == "--num_sets" && i+1 < argc) cfg.num_sets = std::stoul(argv[++i]);
++        if (arg == "--pmu-events" && i+1 < argc) cfg.pmu_events = argv[++i];
++        else if (arg == "--pmu-output" && i+1 < argc) cfg.pmu_output = argv[++i];
++        else if (arg == "--ticks-output" && i+1 < argc) cfg.ticks_output = argv[++i];
++        else if (arg == "--num_sets" && i+1 < argc) cfg.num_sets = std::stoul(argv[++i]);
+         else if (arg == "--line_size" && i+1 < argc) cfg.line_size = std::stoul(argv[++i]);
+         else if (arg == "--max_k" && i+1 < argc) cfg.max_k = std::stoul(argv[++i]);
+         else if (arg == "--samples" && i+1 < argc) cfg.samples = std::stoul(argv[++i]);
+@@ -167,10 +174,15 @@
+ 
+     uint64_t threshold = (hit_threshold + miss_threshold) / 2;
+     std::vector<uint64_t> latencies;
+-    latencies.reserve(samples);
++    latencies.resize(samples, 0); // prefault output storage before counting
++    latencies.clear();
+     size_t evictions = 0;
+     p = base;
+ 
++    log_mapping(base, "before");
++    struct rusage usage_before{}, usage_after{};
++    getrusage(RUSAGE_SELF, &usage_before);
++    pmu_start();
+     for (size_t s = 0; s < samples; ++s) {
+         // chase K-1 conflicting lines
+         for (size_t i = 0; i < K-1; ++i) p = reinterpret_cast<Node*>(p->next);
+@@ -195,6 +207,13 @@
+         p = base; // reset to start
+     }
+ 
++    pmu_stop();
++    getrusage(RUSAGE_SELF, &usage_after);
++    log_usage(usage_before, usage_after);
++    log_mapping(base, "after");
++    // Counting includes K-1 preparation loads and batch+1 timed loads each sample.
++    pmu_save(counts_path.c_str(), samples * (K + batch));
++    save_ticks(ticks_path.c_str(), latencies.data(), samples); // retain acquisition order
+     std::sort(latencies.begin(), latencies.end());
+     double med = (double)latencies[samples/2] / (double)batch; // per-access latency
+ 
+@@ -253,9 +272,14 @@
+ 
+ // ---------- Main ----------
+ int main(int argc, char** argv) {
+-    Config cfg;
++    Config cfg{};
+     if (!parse_args(argc, argv, cfg)) return 1;
++    if (cfg.pmu_events.empty() || cfg.pmu_output.empty() || cfg.ticks_output.empty() || cfg.only_ks.size() != 1 || cfg.only_ks[0] > cfg.max_k) {
++        std::cerr << "PMU event configs and output are required\n"; return 1;
++    }
++    pmu_open(cfg.pmu_events.c_str());
+ 
++    counts_path = cfg.pmu_output; ticks_path = cfg.ticks_output;
+     size_t set_stride = cfg.line_size * cfg.num_sets;
+     size_t total_buffer = cfg.max_k * set_stride + cfg.line_size;
+     // Always request huge-page backing, not just when num_sets looked "L2-sized".

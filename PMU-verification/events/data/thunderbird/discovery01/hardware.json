@@ -1,0 +1,68 @@
+{
+  "recorded_utc": "2026-09-14T15:41:55.146782+00:00",
+  "hostname": "thunderbird.ece.ncsu.edu",
+  "isa": "aarch64",
+  "kernel": "5.14.0-611.54.1.el9_7.aarch64",
+  "page_size": 4096,
+  "perf_event_paranoid": "2",
+  "caches": {
+    "4": [
+      {
+        "number_of_sets": "256",
+        "ways_of_associativity": "4",
+        "shared_cpu_list": "4",
+        "type": "Data",
+        "size": "64K",
+        "level": "1",
+        "coherency_line_size": "64"
+      },
+      {
+        "number_of_sets": "256",
+        "ways_of_associativity": "4",
+        "shared_cpu_list": "4",
+        "type": "Instruction",
+        "size": "64K",
+        "level": "1",
+        "coherency_line_size": "64"
+      },
+      {
+        "number_of_sets": "2048",
+        "ways_of_associativity": "8",
+        "shared_cpu_list": "4",
+        "type": "Unified",
+        "size": "1024K",
+        "level": "2",
+        "coherency_line_size": "64"
+      }
+    ],
+    "32": [
+      {
+        "number_of_sets": "256",
+        "ways_of_associativity": "4",
+        "shared_cpu_list": "32",
+        "type": "Data",
+        "size": "64K",
+        "level": "1",
+        "coherency_line_size": "64"
+      },
+      {
+        "number_of_sets": "256",
+        "ways_of_associativity": "4",
+        "shared_cpu_list": "32",
+        "type": "Instruction",
+        "size": "64K",
+        "level": "1",
+        "coherency_line_size": "64"
+      },
+      {
+        "number_of_sets": "2048",
+        "ways_of_associativity": "8",
+        "shared_cpu_list": "32",
+        "type": "Unified",
+        "size": "1024K",
+        "level": "2",
+        "coherency_line_size": "64"
+      }
+    ]
+  }
+}

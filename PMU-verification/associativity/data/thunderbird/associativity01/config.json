@@ -1,0 +1,122 @@
+{
+  "machine": "thunderbird",
+  "isa": "aarch64",
+  "cpu": 4,
+  "numa_node": 0,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "l1d_cache_refill_rd",
+      "config": "0x42",
+      "label": "L1D read refills"
+    },
+    {
+      "name": "l2d_cache_refill_rd",
+      "config": "0x52",
+      "label": "L2 read refills"
+    },
+    {
+      "name": "ll_cache_miss_rd",
+      "config": "0x37",
+      "label": "LL/SLC read misses"
+    },
+    {
+      "name": "ld_spec",
+      "config": "0x70",
+      "label": "Speculative loads"
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "associativity",
+  "batch": 128,
+  "line_size": 64,
+  "seed": 701,
+  "points": [
+    {
+      "name": "L1_k2",
+      "group": "L1",
+      "num_sets": 256,
+      "k": 2,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k3",
+      "group": "L1",
+      "num_sets": 256,
+      "k": 3,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k4",
+      "group": "L1",
+      "num_sets": 256,
+      "k": 4,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k5",
+      "group": "L1",
+      "num_sets": 256,
+      "k": 5,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k6",
+      "group": "L1",
+      "num_sets": 256,
+      "k": 6,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k4",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 4,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k5",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 5,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k7",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 7,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k8",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k9",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k10",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k12",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 12,
+      "max_k": 16
+    }
+  ],
+  "placement_note": "Same CPU and NUMA node as Thunderbird Phase I: CPU 4/node 0."
+}

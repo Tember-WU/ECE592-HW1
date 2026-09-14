@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "frozen_phase1_files_unchanged": 810,
+  "original_pmu_files_unchanged": 264,
+  "runs": [
+    {
+      "experiment": "capacity",
+      "run_id": "capacity01",
+      "points": 14,
+      "timed_batches": 14000000,
+      "started_utc": "2026-09-14T15:42:21.827901+00:00",
+      "finished_utc": "2026-09-14T15:44:46.337798+00:00",
+      "validation": "passed"
+    },
+    {
+      "experiment": "line_size",
+      "run_id": "line_size01",
+      "points": 12,
+      "timed_batches": 12000000,
+      "started_utc": "2026-09-14T15:45:18.674967+00:00",
+      "finished_utc": "2026-09-14T15:46:22.261506+00:00",
+      "validation": "passed"
+    },
+    {
+      "experiment": "associativity",
+      "run_id": "associativity01",
+      "points": 12,
+      "timed_batches": 12000000,
+      "started_utc": "2026-09-14T15:47:10.116078+00:00",
+      "finished_utc": "2026-09-14T15:47:38.203341+00:00",
+      "validation": "passed"
+    },
+    {
+      "experiment": "capacity",
+      "run_id": "ll_diagnostic01",
+      "points": 2,
+      "timed_batches": 2000000,
+      "started_utc": "2026-09-14T15:48:46.294192+00:00",
+      "finished_utc": "2026-09-14T15:49:21.512639+00:00",
+      "validation": "passed"
+    }
+  ],
+  "all_runs_serial": true,
+  "source_and_binary_snapshots_verified": true,
+  "capacity_timed_kernel_identical_to_phase1": true,
+  "cpp_timer_headers_identical_to_phase1": true,
+  "primary_timed_batches": 38000000,
+  "diagnostic_timed_batches": 2000000
+}

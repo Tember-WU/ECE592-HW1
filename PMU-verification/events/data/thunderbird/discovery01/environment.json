@@ -1,0 +1,8 @@
+{
+  "host": "thunderbird.ece.ncsu.edu",
+  "isa": "aarch64",
+  "kernel": "5.14.0-611.54.1.el9_7.aarch64",
+  "recorded_utc": "2026-09-14T15:32:08.725860+00:00",
+  "perf_version": "perf version 5.14.0-687.17.1.el9_8.aarch64",
+  "perf_event_paranoid": "2"
+}

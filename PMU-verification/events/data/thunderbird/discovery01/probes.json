@@ -1,0 +1,40 @@
+[
+  {
+    "cpu": 32,
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "{armv8_pmuv3_0/event=0x42/u,armv8_pmuv3_0/event=0x52/u,armv8_pmuv3_0/event=0x37/u,armv8_pmuv3_0/event=0x70/u}",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "3230,,armv8_pmuv3_0/event=0x42/u,1444720,100.00,,\n5121,,armv8_pmuv3_0/event=0x52/u,1444720,100.00,,\n6212,,armv8_pmuv3_0/event=0x37/u,1444720,100.00,,\n157736,,armv8_pmuv3_0/event=0x70/u,1444720,100.00,,\n"
+  },
+  {
+    "cpu": 4,
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "{armv8_pmuv3_0/event=0x42/u,armv8_pmuv3_0/event=0x52/u,armv8_pmuv3_0/event=0x37/u,armv8_pmuv3_0/event=0x70/u}",
+      "--",
+      "taskset",
+      "-c",
+      "4",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "3362,,armv8_pmuv3_0/event=0x42/u,1303320,100.00,,\n5691,,armv8_pmuv3_0/event=0x52/u,1303320,100.00,,\n6800,,armv8_pmuv3_0/event=0x37/u,1303320,100.00,,\n154328,,armv8_pmuv3_0/event=0x70/u,1303320,100.00,,\n"
+  }
+]

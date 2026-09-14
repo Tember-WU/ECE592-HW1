@@ -1,0 +1,28 @@
+{
+  "preflight_busy_percent": {
+    "32": 0.0
+  },
+  "sibling_cpus": [],
+  "max_sibling_busy_percent": null,
+  "faults_and_switches": {
+    "minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 169
+  },
+  "temporal_max_min": {
+    "L2_w2097152": 1.0040816326530613,
+    "LLC_w67108864": 1.262
+  },
+  "huge_kib": {
+    "L2_w2097152": [
+      2048,
+      2048
+    ],
+    "LLC_w67108864": [
+      65536,
+      65536
+    ]
+  },
+  "caveat": "Same CPU and NUMA node as Thunderbird Phase I: CPU 32/node 0. Counts include helper traffic; refill/speculation semantics differ from retired-load misses."
+}

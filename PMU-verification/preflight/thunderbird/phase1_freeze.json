@@ -1,0 +1,3249 @@
+{
+  "machine": "thunderbird",
+  "frozen_utc": "2026-09-14T15:31:35.559182+00:00",
+  "scope": "Existing Thunderbird Phase-I evidence and sources; immutable hash inventory, before PMU discovery and new system/vendor comparison",
+  "files": {
+    "timing-only/associativity/configs/thunderbird.json": {
+      "sha256": "c3f8d3ea0323563e9c1e349b57e97b2a6f640afb59c507327265eaf6dc1b748a",
+      "bytes": 2135
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/associativity_candidate_selection.txt": {
+      "sha256": "e088c87664b9b42ea35933fa2a53297487d8c28654b78273a361cf32a64c5165",
+      "bytes": 698
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/l1_associativity.csv": {
+      "sha256": "9c0a1c29ec1cf15d8769cf96585fe3952ccda6cbb0d4e3ad1f91d1306ca4481e",
+      "bytes": 285
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/l1_associativity_candidate128.csv": {
+      "sha256": "80ddac9fbe952812e4a6dd2df568767f21d50b8500c7499884ce597fc4827281",
+      "bytes": 304
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/l1_associativity_candidate256.csv": {
+      "sha256": "8d9cfe90a32529446e72a34f081c07ca52a13e07a8fbadaeb35b4afa77b02bcc",
+      "bytes": 261
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/l1_associativity_candidate64.csv": {
+      "sha256": "88732286f7a6729a8deb386292bbd0dda8978d9911aaf3bc106290a224971ba6",
+      "bytes": 346
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/l2_associativity.csv": {
+      "sha256": "e0cda64d012bd8497b4d2bc5ab142224aff1a1a4bc5288c7119fcfd6feba015b",
+      "bytes": 305
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/l2_associativity_candidate1024.csv": {
+      "sha256": "75f4c779306c429c34e10b7abc8306c3d61d8fcace16423d565d3f56c6101fd9",
+      "bytes": 267
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/l2_associativity_candidate2048.csv": {
+      "sha256": "ec4ee4c7b7cc9e65062603c3963a909d859ec6fe452cee5a3754028d11a45bd4",
+      "bytes": 289
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/l2_associativity_candidate4096.csv": {
+      "sha256": "f57f01e56c880c387aa58841bdb3110d2069d5209b685105da1b574185465cc7",
+      "bytes": 293
+    },
+    "timing-only/associativity/data/thunderbird/raw_data/pinning_manifest.txt": {
+      "sha256": "5a2ad9aa4b6b509aeb06f31de0e83cdff9c529b83494efe9a2be88c60d6c1383",
+      "bytes": 149
+    },
+    "timing-only/associativity/results/thunderbird/plots/associativity_plot.pdf": {
+      "sha256": "cf89ada14f2e45ce0967c5e0ce456e71eb3e48ffcdde7c01fbba507b14db8d4c",
+      "bytes": 17700
+    },
+    "timing-only/associativity/scripts/associativity_boxplot.py": {
+      "sha256": "4601e1b6f9cf7a38a6084c8e882b99c2ac335496e6c7558e510148104210e4c3",
+      "bytes": 1832
+    },
+    "timing-only/associativity/scripts/run_associativity.py": {
+      "sha256": "053c2cabebea9401267e436664252ecc0d927d619b959fea5d56e3477ec99321",
+      "bytes": 13796
+    },
+    "timing-only/associativity/src/Makefile": {
+      "sha256": "48cbd9159aff28f563160191eabcfd8714ea85f51be98d83a31fa83ec4de73b8",
+      "bytes": 781
+    },
+    "timing-only/associativity/src/associativity_bench": {
+      "sha256": "3eb69bdfdd357e6d2fd563d0d4b6563935f9c35d306b77091e5f727a798fbd6a",
+      "bytes": 232224
+    },
+    "timing-only/associativity/src/associativity_bench.cpp": {
+      "sha256": "fa9d4d7d1bb0c060a8a7e16533921c054f4699b963e72e3cebb32258ec7ebbb3",
+      "bytes": 14303
+    },
+    "timing-only/associativity/src/timer_compat.h": {
+      "sha256": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+      "bytes": 2419
+    },
+    "timing-only/capacity/Makefile": {
+      "sha256": "7578bf3eab6dd1e149fafa0972747f153bd1a25798d307c346ad0d634f6bbf4c",
+      "bytes": 713
+    },
+    "timing-only/capacity/README.md": {
+      "sha256": "94f198abaf855492532959458d0c3e8cb800ef6cbd8295d24a8ce9f5137119de",
+      "bytes": 15506
+    },
+    "timing-only/capacity/configs/thunderbird-round2.json": {
+      "sha256": "efa86cfad1d767efbba8758d5717ddcc417825466a65a19c631a7eed6d4e82f9",
+      "bytes": 14691
+    },
+    "timing-only/capacity/configs/thunderbird.json": {
+      "sha256": "7e5b0ae5809ad0570af7d91fb262cb604363052fe47523f185d361cefd30f612",
+      "bytes": 147
+    },
+    "timing-only/capacity/data/thunderbird/.gitkeep": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "timing-only/capacity/data/thunderbird/combined12-analysis.log": {
+      "sha256": "f6702924b6f4cf1c4fd8d9ca55e3486fbb9e72f7823e2a5d86a1040f181667f7",
+      "bytes": 122
+    },
+    "timing-only/capacity/data/thunderbird/combined12-validation.log": {
+      "sha256": "f59a091a41f4de8f7e3bea9f5f7c118c8e881e9ff6a219c34e52c3f6ca4fba0a",
+      "bytes": 1738
+    },
+    "timing-only/capacity/data/thunderbird/preflight/artemisia_sha256_before.json": {
+      "sha256": "687240a568864aa233b2e09e20027457625e20b8690d8ba407fffe6668cdb4be",
+      "bytes": 58490
+    },
+    "timing-only/capacity/data/thunderbird/preflight/capture_environment.py": {
+      "sha256": "04233b5233fd1d81aeb95eec25ccded399a5bc3f8e40d2af9e2caad456d12eb6",
+      "bytes": 1230
+    },
+    "timing-only/capacity/data/thunderbird/preflight/check_native.py": {
+      "sha256": "561fa260fec42671b19a9bd3d0122abbb230fc3e98ac6506951dc3473b845714",
+      "bytes": 2249
+    },
+    "timing-only/capacity/data/thunderbird/preflight/environment.json": {
+      "sha256": "e5c4aa9b20efc6ad2c77c5f03ac27a2728480b7392fcd8c52d8adb1828bd3696",
+      "bytes": 3939
+    },
+    "timing-only/capacity/data/thunderbird/preflight/native_checks.json": {
+      "sha256": "beed51e3b2933478ec5db0a644af4c653b54ee19031af577fc9fdb2457a8bf34",
+      "bytes": 4485
+    },
+    "timing-only/capacity/data/thunderbird/preflight/native_checks.log": {
+      "sha256": "7971e33db68760ccd0cefc79a22d006f3980c239e6a43721ed547815118c96be",
+      "bytes": 206
+    },
+    "timing-only/capacity/data/thunderbird/preflight/numactl.bin": {
+      "sha256": "84b2cef96caeda3460b6dc72bc42bd95fa6dfc6005b43f0bbf26abc040831a87",
+      "bytes": 69632
+    },
+    "timing-only/capacity/data/thunderbird/preflight/numactl_package.txt": {
+      "sha256": "3241c7abaca013319fab24a7df1c1b82969911975048dbdbba5cb7a538a16538",
+      "bytes": 235
+    },
+    "timing-only/capacity/data/thunderbird/preflight/python_packages.txt": {
+      "sha256": "e470760a310e1873f0202e9236496acbf7b14143a6397e7fd51c364718d453bf",
+      "bytes": 229
+    },
+    "timing-only/capacity/data/thunderbird/preflight/source_before/Makefile": {
+      "sha256": "e78d6e9fc03567186a38c39b57eb95b491b5149211de7f849a86c4ca37196372",
+      "bytes": 543
+    },
+    "timing-only/capacity/data/thunderbird/preflight/source_before/README.md": {
+      "sha256": "110557cfed3b7ec7a354dbfe7aa2900dcc24343057224980fef409d094ca0029",
+      "bytes": 13892
+    },
+    "timing-only/capacity/data/thunderbird/preflight/source_before/requirements.txt": {
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    "timing-only/capacity/data/thunderbird/preflight/source_before/scripts/analyze_capacity.py": {
+      "sha256": "fa5b67a280d31eb022672d5c7ac0b76dde67f94a44f462512f2bac156f6ca0b5",
+      "bytes": 18655
+    },
+    "timing-only/capacity/data/thunderbird/preflight/source_before/scripts/plan_capacity.py": {
+      "sha256": "3723f74a3d97063c8af6a9311c290de97807680d4d817f4b898e7f583c67339a",
+      "bytes": 8603
+    },
+    "timing-only/capacity/data/thunderbird/preflight/source_before/scripts/run_capacity.py": {
+      "sha256": "cd60ca027709089d260127915984a7cf3a4ba20c9541d34a6417c76c1036bd9d",
+      "bytes": 14114
+    },
+    "timing-only/capacity/data/thunderbird/preflight/source_before/src/cache_bench.c": {
+      "sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+      "bytes": 7429
+    },
+    "timing-only/capacity/data/thunderbird/preflight/tests.log": {
+      "sha256": "e554546d76a0a57d24a5187bc4c168af53e97046f4c09b10ca70f687f9175ebe",
+      "bytes": 6496
+    },
+    "timing-only/capacity/data/thunderbird/preflight/time_batch.dis": {
+      "sha256": "5632515e8399a4388f421e851d84a83de0506e3eb9a38dd93aff9a1377895b74",
+      "bytes": 1589
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w2048_s64_empty_b256_huge.log": {
+      "sha256": "6708f0f9ebc7929f7b9035c6fba4a392b9059f829356acf5494af7cdf711f2a5",
+      "bytes": 749
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w2048_s64_empty_b256_huge.u64.gz": {
+      "sha256": "1e7c9a421900e93cfc8fab50372262f195637b608a394ffb3fcef670600d3987",
+      "bytes": 857
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w2097152_s64_random_b256_base.log": {
+      "sha256": "d7f212488bf51192d4379008672dd13aa395d4a9c22e0314b0d2c2e4615cd950",
+      "bytes": 608
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w2097152_s64_random_b256_base.u64.gz": {
+      "sha256": "c376d59ae002822af01a6bb4d0f8a2a9e79e5c36ae48b5bb4b76e95aeecb03dd",
+      "bytes": 7655
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w2097152_s8_random_b256_huge.log": {
+      "sha256": "b6df77e7a0d2f6d7c8f65291f0b4dd98a8a6cd2d4fcf3561b3db8e624994c16e",
+      "bytes": 752
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w2097152_s8_random_b256_huge.u64.gz": {
+      "sha256": "0e56f12da4a8e1a6124dc82f2f54047d170929096a3bed8668527770911f6fe6",
+      "bytes": 9995
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w536870912_s64_random_b256_huge.log": {
+      "sha256": "b1595415bd1a243a9ebd400f64dbf291e54919ee6be16f13434f8ab2fb87d9d6",
+      "bytes": 785
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w536870912_s64_random_b256_huge.u64.gz": {
+      "sha256": "f219b8b425fa874a62fea30e8b41b84e0a997cf90f382b55665c3559802715e7",
+      "bytes": 11834
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w65536_s64_random_b1024_huge.log": {
+      "sha256": "fe788c207adbadbd73ffa72ec74f61ce42fbe34214b486d66c4a7b822b4afae5",
+      "bytes": 753
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w65536_s64_random_b1024_huge.u64.gz": {
+      "sha256": "36285daba163183ed893e228442ad52ca01bb6ede548030af8d8eef2e7aa879b",
+      "bytes": 3181
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w65536_s64_random_b256_huge.log": {
+      "sha256": "346726144321399fcbd51beacab70fc47faf997b71655b56d2224e6d58d3867c",
+      "bytes": 751
+    },
+    "timing-only/capacity/data/thunderbird/preflight/w65536_s64_random_b256_huge.u64.gz": {
+      "sha256": "da918a9b9ab03a7b48284644532715b72536581845ccf03f0f792235bf63dec1",
+      "bytes": 1614
+    },
+    "timing-only/capacity/data/thunderbird/round1/build.log": {
+      "sha256": "bc7b262382da5de89daf08e2929af0276ed138aaa0fd3d4cd1975602043d8b09",
+      "bytes": 239
+    },
+    "timing-only/capacity/data/thunderbird/round1/cache_capacity.bin": {
+      "sha256": "88d664e24543ae9e2806d427a9e88807cbc36af12e797226231ac46b90bfc92b",
+      "bytes": 81912
+    },
+    "timing-only/capacity/data/thunderbird/round1/commands.txt": {
+      "sha256": "20b6828513676420503d7b22db4f34ae4e8ad659ca4232c756c52f405e50e52b",
+      "bytes": 11338
+    },
+    "timing-only/capacity/data/thunderbird/round1/config.json": {
+      "sha256": "5d77b0696d62b35ab3f474ddeb7bca4f0d2076403fef0c2fb27ae10bcf20ba8b",
+      "bytes": 3725
+    },
+    "timing-only/capacity/data/thunderbird/round1/disassembly.txt": {
+      "sha256": "bfbc9d34db3d6f9e9ac0a3b9813b51a0c026261967f59ff4db8428b6550c7850",
+      "bytes": 54563
+    },
+    "timing-only/capacity/data/thunderbird/round1/environment.json": {
+      "sha256": "82d9f54b265e3d47932436f3873037c42a793350694d192ccbaf1ae2ece1f88c",
+      "bytes": 2248
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w1048576_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "eeb0832a3bde0af4705ab047e17d42441d1c1b0c0bb58e3760b176d4c63aab8c",
+      "bytes": 6451
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w1048576_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "b80f4638088be94b782a2cc5572c48607f07ddc2d2a44d48c5fbe29320975545",
+      "bytes": 757
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "b037670d5a4ced6f441513c1675fc65dc2e1f481d62f064b74037180990bdbba",
+      "bytes": 6489
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "188c80610e33aded2d66c46fd0a67399baadf9304ff6e9f4d00423ae3edd8b30",
+      "bytes": 759
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w131072_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "75d85657f9ae176e3aaa7e4adc489943ec9690c96d559c5db7b682d7c45b98a4",
+      "bytes": 6467
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w131072_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "4ae0c9d4483d6216be8534e7f95b28afd05c590608b00ff2bdcfbc6c0135e35a",
+      "bytes": 754
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w131072_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "b01be293c7c8f71c4b0af020582d596fbdae2a88c8cb37694abf78ed7d181f7e",
+      "bytes": 6498
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w131072_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "8db74d332b391154e716a00835e9910605115e5031712feeaae7edb14158a969",
+      "bytes": 760
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w134217728_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "e1f7566327aa0237ae69f8af4f7cfbd813cf489a5bdd8ec0166d714a1a741190",
+      "bytes": 6509
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w134217728_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "a57d464e8bbd42dee631a4049cd4c37063bd9e831e1026a75494c311dfc9a153",
+      "bytes": 777
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w134217728_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "c87c58a28411bf23cfdbbcb84f56b6bfeb308a1cdcbcab6adbcef7e233130cc3",
+      "bytes": 6535
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w134217728_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "a940046bd152e4ae1a85b9ffa63b248c67db2f5d6a2fd226b656efcc40ad44f4",
+      "bytes": 781
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w16384_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "8aabc9b938ed193ece4791623fb25c5933a5663248ed07b47ea3afba524eaea5",
+      "bytes": 6483
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w16384_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "36d4cb4a523c048325b7068431946e718c4fa126fc6bce591fbd0401401d5fbf",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w16384_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "6e42a49333ba82668c26255789140c921968bd74a3ac092e479d1b5cca771c5e",
+      "bytes": 6502
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w16384_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "b89392f9e652dab403cb944effd34281940b3327dbb3a28fe0bc4857c1bc470b",
+      "bytes": 757
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w16777216_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "f1228b9b2d9d6e7d2ddb33c83859fb3f9f7739f336805bdd193f835219d8f611",
+      "bytes": 6497
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w16777216_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "25ba56a477ecd3b1a73e47ed9b77e392cec154f16efa9b5022c075a462187926",
+      "bytes": 766
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w16777216_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "133cc462541a7ae28a8b0227cc7c9507f2fcd2288ff8b8e3db278c7e94019971",
+      "bytes": 6528
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w16777216_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "39e4a7887fa0e973f267699a621638a0c0e59e045562a1d98b0b3b6f68a8f8c8",
+      "bytes": 770
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2048_s64_empty_b256_seed59201_huge_n1000000.json": {
+      "sha256": "cd2dc62412efd9807b9237f9660e24a5b6d5631a66f87980c29dda3deca4b568",
+      "bytes": 6323
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2048_s64_empty_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "f4cd92e37738f32fc0f6e10f4e05566ca422d0ef44f30bf1495b4940cfff0fc9",
+      "bytes": 751
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2048_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "73db684934aaf82e3842a310e396d542600268d44b1e8f954b16b98fb3f3ae9f",
+      "bytes": 6477
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2048_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "95d663875f34851b36c9a7eb26d7d0d82478638514191cf4b0ef81eb6e3a75a7",
+      "bytes": 754
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2048_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "49c40b654880ab21a51b7c8f6612a0fceaafd21df1fefc789118b89e5edd13ad",
+      "bytes": 6498
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2048_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "254f7fe81d2bab832e0399ef1e374dfb9776ada7befcb2357d35feac73005ab0",
+      "bytes": 758
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2097152_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "cac4a7b92558865ba578b5806976cc8bce7ee0425072a87e51d04881b35e9ed1",
+      "bytes": 6493
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2097152_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "602def1638a025514307a0ed767eeb9d763eb81f077e7463c89fb1f35ac27c38",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "da1bcaaa1377cd61c52769a345cf07fc3e2536ad257845d3a66666c8320bbe4b",
+      "bytes": 6519
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "0cf023f3714da3e771ca7faf07a3a4c23d7d6c2fd6a24a254fcac479b82662fc",
+      "bytes": 761
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w262144_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "fd2031163d1c07b9bdaadfa6b61dd0ae1238ec6c9654aea13b48720271eac418",
+      "bytes": 6476
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w262144_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "2c99ab382496d45643a9790564ebf93f3c6a921afcfde6fce378b475974c9bc0",
+      "bytes": 754
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w262144_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "7d878ea7f0e0d68d3e02367b3be7abea8bdea303dd3ff0858d3846d1ddc87fb4",
+      "bytes": 6508
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w262144_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "4a6fc7536b2872d2dd413baae4a8a4adf5648fced816bd16f628b4ca7fc0f577",
+      "bytes": 758
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w268435456_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "c163db314c81b65616213d923b09c5d1ca8794c1132ea8c6e51dd6685edc0630",
+      "bytes": 6518
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w268435456_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "4808e59bff807468ea7ae195e849ec2986f83fcbe26b77edd3d4d83b288754c8",
+      "bytes": 778
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w268435456_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "05a636e8b156a2555360f83b4c1200a00d0e433ceced69b9271309d803d5e2ff",
+      "bytes": 6538
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w268435456_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "663ce4e69b735fab38927de046ba59b44dcfce93c3f433eaed054587a4cbad60",
+      "bytes": 782
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w32768_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "196b673d1511797cb32030cd9eb6e3e6c2b852ed36ee92ef60ca86b86c5af1e9",
+      "bytes": 6485
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w32768_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "ebf41f3bbe862cac155c3912abb6f8e2afa2ca90b415abbc75b9f922bfef3d7d",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w32768_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "fe966f5a22948e94268dadad574d88056512bbbffb76c59117278b881f3a600c",
+      "bytes": 6505
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w32768_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "092e450c262772f97a3f344cea5ea1d1095bbe49eb14b427266bf0095ddcec1b",
+      "bytes": 757
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w33554432_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "c128a32765e816554cd6874d89dcee0cad2cec5be6dc4b10178432c7ec5fd695",
+      "bytes": 6486
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w33554432_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "fb1681ad9411e6554356a4934625e4936e3c3eca509bac3db625aaa9b4057683",
+      "bytes": 766
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w33554432_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "3ee4ff6319b598fbbe8ab39a070edac192d6550a2debb32c6748a8d7b93a8c0a",
+      "bytes": 6525
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w33554432_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "cf5aa8eeef181f17ca2d2943a0cfccf3bba5b1d6c6bd24881624cf328e24d629",
+      "bytes": 771
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w4096_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "59fa01d6e6f27b418901294351e8592862cfede0784cac66c55233a91abfd944",
+      "bytes": 6477
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w4096_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "d8f801fc5fedb1117e5ba2864c4ff290ff1f2fd06cf85710f6500040cabc74df",
+      "bytes": 754
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w4096_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "9d1afed7f9808a4a70d40862dfd7a71331a412c630628b1054f56d491de33343",
+      "bytes": 6500
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w4096_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "215a3598d13e0e92b83e71d803e7a637bd667577f147f2e8530433ce006a7cd6",
+      "bytes": 758
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w4194304_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "ee85c64c7907916bd14e7023df75a09f8003a9d20f09f6a4f25cf26ae6193206",
+      "bytes": 6497
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w4194304_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "1ccb743ce48daf836fe5b0ad91412e597f2e198e9e3603a1185970096f88ebf2",
+      "bytes": 765
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w4194304_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "92c9f0d44f8369486ddcc4f8a0922162a86bc7040d84fc380d53f57bab04eb2e",
+      "bytes": 6518
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w4194304_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "53e81122d2fa701d42b090271d6f1d4d26ed2e26f008a2beb0c0f22354d7a854",
+      "bytes": 770
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w524288_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "e26ba6217cca5cc14ed18efdd2611803047f010f07e3c96e0698d6f3bb05d5fe",
+      "bytes": 6473
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w524288_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "74f493ec0e5396f78c8b43da4c43b8d12eac8a82d51acc1efab03b605d551161",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "714d7ab9014318b4e156fab130f9de3bc7aca8b66074cf5b70811d076304cecb",
+      "bytes": 6494
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "786a485af3d5ab34657e36dc84f605d6281d209291d36e3f8eb73d4112d3b5d2",
+      "bytes": 760
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w536870912_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "ee99afde1e77944f5b7dbcdb68627dce05ec05d909a725b7899a716755a0f12f",
+      "bytes": 6517
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w536870912_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "b12f882c780f61fc2b25ba62520b171d97eeac0d62bbe1a84eabb7699f3011a0",
+      "bytes": 788
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w536870912_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "cf758987405cd3fd25cd7373917404019b1651dff44ac527e156bbd346b96e62",
+      "bytes": 6556
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w536870912_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "5032896848ec10c9dcb0386333ea5fe590fc62b375a1b0b267ba7651380864b6",
+      "bytes": 791
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w65536_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "8400fa8490101662ea80612268d911d43d4a3b7f07034770a8168df6088aa6c2",
+      "bytes": 6467
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w65536_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "9b1fde1f5ec30c9ed0da2fc98b7cc56ec476eb479c2c9b5607d3016aa1b192ab",
+      "bytes": 753
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w65536_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "78ea6d0870b22dcf5ac22609fb8ec0e4028031e495db2cbfde4c06baa85ca60e",
+      "bytes": 6496
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w65536_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "b1723bd3dacedba76793ecda1683d4c9f168bff9f8994d0b1445547e009f58b0",
+      "bytes": 759
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w67108864_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "b357a45bb356fa20821f33d8b6324d29b13851fbfdd0427b693a478ea4dd9772",
+      "bytes": 6505
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w67108864_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "57da2b5714e2b5b167903cde2f3c101cce81db757926f5ab922a5f25a97017c1",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w67108864_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "77a45d980dc5a42cc6bc45013654ea77113cc4aa9dd94b3e4ec29a47f5fdd629",
+      "bytes": 6487
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w67108864_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "51f2d8a946012410ca79f9d9430e13b1b3bc5f5c6baeeb17145de4ac8932e8b3",
+      "bytes": 780
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w8192_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "669cb7f35a7aa41bd15503b4f27d9040e6ca6ece86aa9b45c7358508ca258851",
+      "bytes": 6472
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w8192_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "1e53505c77dc06c347620a14506dd5babfa63c91c60a04d008f389bef3a7a184",
+      "bytes": 754
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "a2fb5d6ed079f6b9c9999ea42f826a8d04b04bb84596170d7dd24955aa335293",
+      "bytes": 6500
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "0d3c68ac736652e81bd56d89389e2ae24ffd7ec49a3f743597f7f369cd82d438",
+      "bytes": 758
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w8388608_s64_random_b256_seed59201_huge_n1000000.json": {
+      "sha256": "4bb8bf1972ed3a61b2c531a39fd4ba883fd32072d7487be48a96c77ad5e8362f",
+      "bytes": 6485
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w8388608_s64_random_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "1acc2262050d6f49b038b4e2e8bc3d9738a70d30e170fb70e7e67774ac053ba5",
+      "bytes": 764
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w8388608_s64_sequential_b256_seed59201_huge_n1000000.json": {
+      "sha256": "08580b7c1cf34204fd99b57c19bd186e193047613b193f77592a388f1a118532",
+      "bytes": 6521
+    },
+    "timing-only/capacity/data/thunderbird/round1/logs/coarse_w8388608_s64_sequential_b256_seed59201_huge_n1000000.txt": {
+      "sha256": "c4f282cff30405b7d6c3ede782add5fd363b1825341cbccc332c4ac5cbfa08a1",
+      "bytes": 770
+    },
+    "timing-only/capacity/data/thunderbird/round1/manifest.json": {
+      "sha256": "ef9928cde197c60e57983f5307f5e7dd8913b700238563c3e1603254925f9eea",
+      "bytes": 31212
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w1048576_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "a4aada2d3e867e71ed5b72397662f689129bbff7c8bc23e1bbd11384704619ee",
+      "bytes": 676626
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "5dab4f4bf7d95fd2d163810e0409424ba59ef4e49ff5b9fdf708dbedb61e60b9",
+      "bytes": 252751
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w131072_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "d10c8db4e6b8aab4e3812795b4d75d41141c5473759b76ad68a2ce78dc8d8200",
+      "bytes": 156401
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w131072_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "d6ea7a138d9f1c2f60e262b3f9ac26e842503a13197519479b2459132b90a748",
+      "bytes": 160805
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w134217728_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "a3f663fe38f8a081c224c27dc8a026bc8e764801afaf051e7c997dc1bf6cc118",
+      "bytes": 1245007
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w134217728_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "4291356a5baa794a3436729f8d85e7d8c6a7aa279fdfd2319ff8fda871ee76f4",
+      "bytes": 648635
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w16384_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "0a998582b5efc1b287e5e1c9b2de69c64ebdd6b12345189a6b6ac6cdfbb19f8a",
+      "bytes": 110581
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w16384_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "bc1aac370f0fabaffa705a6924edbf71a9d2b8ab2293a52f8bfb40011749732a",
+      "bytes": 104735
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w16777216_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "92df3d778cfeb7af881837d3188bea52b5fe0d87578c754460e105a68df4157c",
+      "bytes": 629690
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w16777216_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "b1d0ec50274bd6453e1901f18443c25537378a1791a13df7e8771551e535ae47",
+      "bytes": 232532
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w2048_s64_empty_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "e1f336c22d52fc9159c1ac10a88ea96b8c556850ef6883a0681caa639a26e445",
+      "bytes": 157432
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w2048_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "b4ac51dece21cd241f633626bfde8437cd663b31f24ad59012a8a10c66f1fd48",
+      "bytes": 108663
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w2048_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "d74bc39e0a685c810d37cd6cde4c4cdcbaf3de7a4e63a6cf233402866f3ed797",
+      "bytes": 112425
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w2097152_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "7fb60c68a556ef54e4da8690015d543d8e575ca081d5a410f08b0e1ce99a3526",
+      "bytes": 407951
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "a68ed24e1a06c843e6b4ca49535a0d392aa5c85340d1d0d3c4eafc8b895957a9",
+      "bytes": 261118
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w262144_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "ca71f4201e0f244e49d1d6465e8857c10071772d8c09defb343fed313c6d5b01",
+      "bytes": 162062
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w262144_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "5b1719864fca5d3b46aab1d758a42c0db9b2d161fbe5ed691bbc41ca1f0a753d",
+      "bytes": 172155
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w268435456_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "1826055212ac5b76b8eb1e762385ff917df0187ac3faba94d1b7b0e5824aafee",
+      "bytes": 1223319
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w268435456_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "9fe43204e7e5040bcf9995b07b3a7162d9ab4d0abd3cef82ad641a6a41877449",
+      "bytes": 661964
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w32768_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "8c53fe23ae106c4fff0bf998782bb3846c887c565c77d0ad427e7cd5c478baed",
+      "bytes": 111553
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w32768_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "d17a6186668ec2b703e7f9ecbdceb92de7377c249ad011721d232af3d694726c",
+      "bytes": 111734
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w33554432_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "5d34fe7aaaf5679c82a1634384ec83f70e799fae917e461c6403dd46bb7c3037",
+      "bytes": 990240
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w33554432_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "88076fd0058abf3036318e9eb5a2aa9721b90c97f35de7cda57212e5e3dedb72",
+      "bytes": 482665
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w4096_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "ba37947c94336356a36b5051abee1c968db50c61c4ea0bcc8e139630a1068aa9",
+      "bytes": 110171
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w4096_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "4cd976b8562d71e22f47239f1928c3748ca067283906634ae0e806e9813cf5ca",
+      "bytes": 111429
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w4194304_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "9cc88355e2dddd4ac43babac7df611afc3af7c6f5514d9eb6a060144a1828f2a",
+      "bytes": 468630
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w4194304_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "fd4a857200e4dcba5425e1a76f514daf6b5f450eaee02672a95ce7b6d8216c61",
+      "bytes": 242036
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w524288_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "ad9a38052035eb69a004ad97cacfb2791ffa3e7d6aef5514f237805019974cc5",
+      "bytes": 166956
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "6f471784d9a4a72a091a2bab365c1f4097fb55212510ab7c55a68d2e7ab5d93d",
+      "bytes": 171237
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w536870912_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "874334e037d97f5983294ae5f8aa5f7d8c6e46d3451ba64a0920f515e64f8ea9",
+      "bytes": 1215929
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w536870912_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "a9fc2c9f02813e0320274ede9731947047f011062ab820525c25ed012a27a1c6",
+      "bytes": 659947
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w65536_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "01598cc028a9b1cbad0cf2a29e59129c7d099afc1277d96e7590309c31251e64",
+      "bytes": 191900
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w65536_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "be33e32e332d564c5667c9cabfaf848665617d9041c9af948435162cd11afdec",
+      "bytes": 257904
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w67108864_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "ebddec78db22e078d7644a63dd97864d4b03e8bdf527ab238a3dd8690fc4c0c0",
+      "bytes": 1214080
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w67108864_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "66cdeed07323240423d77be2449b68a60cf50d2e99edfc7bb83d5e5d700156d4",
+      "bytes": 694147
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w8192_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "499a5edccdf794c5e49be32421fd2ee615019c300196515d32de779ebeb7b049",
+      "bytes": 109410
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "fc1d78e57034b0508a5c22a3ce2dee71d00d52d1995c1c3dfc2d29c3bbf7e769",
+      "bytes": 112705
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w8388608_s64_random_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "b99a1700f5b12a8e712f0b3199f7f3e8ce1df6988dddc9768984b49df5f03a91",
+      "bytes": 545613
+    },
+    "timing-only/capacity/data/thunderbird/round1/raw/coarse_w8388608_s64_sequential_b256_seed59201_huge_n1000000.u64.gz": {
+      "sha256": "3eece8db6ee9239136f257b1c50a87c57bc8c33855a6c68175c61775fc298ebd",
+      "bytes": 230240
+    },
+    "timing-only/capacity/data/thunderbird/round1/source/Makefile": {
+      "sha256": "7578bf3eab6dd1e149fafa0972747f153bd1a25798d307c346ad0d634f6bbf4c",
+      "bytes": 713
+    },
+    "timing-only/capacity/data/thunderbird/round1/source/requirements.txt": {
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    "timing-only/capacity/data/thunderbird/round1/source/scripts/analyze_capacity.py": {
+      "sha256": "f88370668a62af4364647382f172b137c350136ff4be96ae230fff8749aaf910",
+      "bytes": 18944
+    },
+    "timing-only/capacity/data/thunderbird/round1/source/scripts/plan_capacity.py": {
+      "sha256": "3723f74a3d97063c8af6a9311c290de97807680d4d817f4b898e7f583c67339a",
+      "bytes": 8603
+    },
+    "timing-only/capacity/data/thunderbird/round1/source/scripts/run_capacity.py": {
+      "sha256": "d6fabfaf86484da2cc6601d4be29ef7ceaecdbd2e2b991f716bd0978f194d98d",
+      "bytes": 16035
+    },
+    "timing-only/capacity/data/thunderbird/round1/source/src/cache_bench.c": {
+      "sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+      "bytes": 7429
+    },
+    "timing-only/capacity/data/thunderbird/round1/source/src/cache_bench_aarch64.c": {
+      "sha256": "187a1ce93b443da5a2d342e4e09a6798414cfb88e6989b87996f2edfe50e7225",
+      "bytes": 9551
+    },
+    "timing-only/capacity/data/thunderbird/round1-driver.log": {
+      "sha256": "add72743af19e68fe848303688b87b29b4a046b0d3311c8147dbb94b6a768494",
+      "bytes": 6620
+    },
+    "timing-only/capacity/data/thunderbird/round1-validation.log": {
+      "sha256": "632811780a333671e19e663e48a8fff14c849c9f56a50152c91226b679dd9bdc",
+      "bytes": 1494
+    },
+    "timing-only/capacity/data/thunderbird/round2/build.log": {
+      "sha256": "bc7b262382da5de89daf08e2929af0276ed138aaa0fd3d4cd1975602043d8b09",
+      "bytes": 239
+    },
+    "timing-only/capacity/data/thunderbird/round2/cache_capacity.bin": {
+      "sha256": "88d664e24543ae9e2806d427a9e88807cbc36af12e797226231ac46b90bfc92b",
+      "bytes": 81912
+    },
+    "timing-only/capacity/data/thunderbird/round2/commands.txt": {
+      "sha256": "3fee1387ca802997917b5a58dbe40a389dc05663dd5355b8f755f1a294579475",
+      "bytes": 16348
+    },
+    "timing-only/capacity/data/thunderbird/round2/config.json": {
+      "sha256": "efa86cfad1d767efbba8758d5717ddcc417825466a65a19c631a7eed6d4e82f9",
+      "bytes": 14691
+    },
+    "timing-only/capacity/data/thunderbird/round2/disassembly.txt": {
+      "sha256": "bfbc9d34db3d6f9e9ac0a3b9813b51a0c026261967f59ff4db8428b6550c7850",
+      "bytes": 54563
+    },
+    "timing-only/capacity/data/thunderbird/round2/environment.json": {
+      "sha256": "d473a4d88d59fba9e60c8adf863ca09f678a9b4b7338b46b90cc1f256d1744b7",
+      "bytes": 2249
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s64_random_b1024_seed59202_huge_n1000000.json": {
+      "sha256": "1a14023dd74a1701a89a4fab9c2f8876b822ddc092554c98e797767e69c2245f",
+      "bytes": 6513
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s64_random_b1024_seed59202_huge_n1000000.txt": {
+      "sha256": "85ccbb6301d16aa90e12e15e1155abec5cfaa4a62569aa567e10932bd4dea6ca",
+      "bytes": 758
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "110e58d6edbb18dcf296b815d4887b845a65c38f529bb7a2c75f5cdd6e60bd05",
+      "bytes": 6451
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "02792fe6c1d0595378a90a5e60b5245c01d987296bdb68cfed48cce05e39f931",
+      "bytes": 757
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s64_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "085563f667b169721b2fef9d7a36ecd6021dfd7bf96e08ac3423b74136fad10d",
+      "bytes": 6457
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s64_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "0aa1fe8370084ec233085a3b6d222bbe76c06923ac74cc128b4b833e31c98ca3",
+      "bytes": 757
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "663566801f71ea32b10cd759ed02c97594bc77ba51326db721eeb107b9379e75",
+      "bytes": 6491
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "cdf8c52208c12c42fe5f5cfebbfc8df4d96459735799a6e5e8d22cf226db32c9",
+      "bytes": 761
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "0bccb2d18e1581d0bd13cad35db5b41713ece4d0390a72f0bd357bfd3acc393a",
+      "bytes": 6457
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1048576_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "f029b88030c4c0a9b3d114079130a8bb9716ac065b711d1be4a084e7b0c0ec3b",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w106496_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "3c4b53001cb8d24c32072885eeaf97b6980d267ba3758fe53dde3b3cd80f2107",
+      "bytes": 6470
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w106496_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "372e70586c71dcd69594610ed1815f854d3d05b465b044d405328cdcb79ed220",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w114688_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "d588bb941b42aaba72b044ae535940cf0ad28defc4c2227977db21a1a2775660",
+      "bytes": 6488
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w114688_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "0329ef759b4a4fb3edb8760a2d0f614b08ec6b4e7536a2641781751890a61afe",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1179648_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "4455e14dff4e406ff1a88a0d1f62c3748c75537a8a27fe4574769e2b8daa3f6e",
+      "bytes": 6478
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1179648_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "85a2a95b36b3deaa4edd143a1113525e42bf0ad088f81a90436ab428893cfaa6",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w122880_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "c019defe44470fe2787a6cc15b6ee7c422634fef444d694a84c8ec63668abac7",
+      "bytes": 6481
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w122880_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "243383b146209d8b52ce4704cb708cbfb43b0ca6a71075699d152d142ec3830d",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1310720_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "985351e282060549420ce2bf7db8478f285efc39e0820f112cf1ce796bd80178",
+      "bytes": 6489
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1310720_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "a107ff120ffc09c1fe815b46587e87b512fd642f1aeb0c64e025b2fa73e0b683",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w131072_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "ff56e7060ae19186e5424e0ce7ea7e3ee10e0f4cae9d7b26406cc9edf645e77d",
+      "bytes": 6473
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w131072_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "a2e1bb17571c0c3eb666be29f9e0135b484f52101f557b8eea7d93e78fe83f53",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w131072_s64_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "d27d8cdf88a4bd32c1484b92c9a04a1b701e5600b35746d41160c2ce6e249e86",
+      "bytes": 6479
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w131072_s64_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "95b367540cc236e49663d67ec3c493066d90b813d4023d2bb2da8bcdcccf1f3c",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w131072_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "607f777fca808b9cdca0cfe6c292f4ede23021265bbacf362aa11367bf284fe6",
+      "bytes": 6499
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w131072_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "79332f0409cd51b04471c1e2f40c873ff9bec278a3eb22b2074fce4f85d0da7e",
+      "bytes": 760
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w131072_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "eba6b8a47c40cd2f1b86aef14a4e03f1f296ff92b6190d9d2fda9f56cd7ae85d",
+      "bytes": 6474
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w131072_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "50759a18924d5f1994cc50113bdd2d3dbae09fda647cf4a788c79915cc4c2003",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1441792_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "4964b0701864eb1f11f21794d14b31cf5421867dcb7bc1338ed862b27ce9cb70",
+      "bytes": 6486
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1441792_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "bbadb09682cefa94f95fe005360c7d8736b006535876cd2e924b74e279a2aea6",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1572864_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "a15c3acc3c9548c06382d72dab604ca147274d6e0cf6d50b6da75896df80e25f",
+      "bytes": 6453
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1572864_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "5c5793a8571e895066b95e1478743918351fa59123ec2ced55283cd2ffce2bd1",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1572864_s64_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "7449a0be77f90c777dc99ea1921b9c2f5be0a65981adcc727151b27b11d43794",
+      "bytes": 6488
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1572864_s64_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "e252836db32c16185f7a64693002d8d72fd64b1f969c63c3dcb0764f74683e76",
+      "bytes": 757
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1572864_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "0633c0f166fb38b46cd6dba74daf9bcba095fc94410e1fc5f7ec83f9b187f301",
+      "bytes": 6511
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1572864_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "c8009de981acd5fb303464e87f39ccd15eaffe8cdae60ed5b73b8a89bff7a023",
+      "bytes": 761
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1572864_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "af8d6cae9b50e5ff053d50ce0897410e19ba5ffe727b9ccf98bd804a03a81d19",
+      "bytes": 6480
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1572864_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "44c973a008d1fd6dde369881cca6cada5dc179e9ec189c4f87af559b6c8d81f7",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1703936_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "64440d679328c8be5eb4eab04862634e8a5470db16b03118e4011722c20ea959",
+      "bytes": 6480
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1703936_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "44b182324ebcc57dabfd5eb241cbf6e5e3266d587868b929e38fbff26aeab082",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1835008_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "5bf9d253d72b684036f067c149da531e8dd09c91e8082bf60bd2cbc0171fe622",
+      "bytes": 6494
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1835008_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "88f000bd9c23d703c018ef30d04992e715bef9f5dc8ee922571170e7cb9bbdff",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1966080_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "984156c9d72c8a07d54fbffcff2355779d8263048666b9cb11f1f881567e62ca",
+      "bytes": 6464
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w1966080_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "e38fd90a209a67c92c025835a410bf9a0f826996e3e0a7b371237ab82535037a",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w2097152_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "5d92e0dd0a94e5cd0becc3a3174a6b48f3546ef4db6e3144e2482abdd0a349d7",
+      "bytes": 6483
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w2097152_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "5d18fef93f2d3ed9a8e53a8833d5f8de7e845c4cbc6e083193d6e35e8f9d2901",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w2097152_s64_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "bf14e143c99a8e6da20cda91bea1d656c660dfc923a5596471e11c312c349575",
+      "bytes": 6489
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w2097152_s64_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "9f0aed6e92a346d1cffde27ef55ec5c78a864e8812a4699cb2157e3cd79baaa6",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w2097152_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "2dcc008b169bbc0ecabb52f7b4c1f5531022a62f1d019334622dd3ed934577d3",
+      "bytes": 6511
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w2097152_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "ecefdb3b333a22e5beab82f23363294933051f262141dac5dfc7572058e2aebf",
+      "bytes": 761
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w2097152_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "b95b78bf7c1c727d2763a63ebc7c2e556ecb7957cb130b2ba3a7cf4f6e92268e",
+      "bytes": 6470
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w2097152_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "6c39159a985f99a1a414190460dd5739a280fba2cf10b10c565dcbb2eeff17c3",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s64_random_b256_seed59202_base_n1000000.json": {
+      "sha256": "6f69199bb75fa130fcc67357e16332aef19223e8bccd048eef61a21244d6c7e3",
+      "bytes": 6346
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s64_random_b256_seed59202_base_n1000000.txt": {
+      "sha256": "de84e270caeb2b8704227ab0d74788845be9c29e2b6c208358463a441205fed9",
+      "bytes": 618
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "15dd2dcfe6ddbe2760d69c175b60c25a92c350316a809dd9eac2b98a2270c31c",
+      "bytes": 6493
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "2321f1b8219b4101f93b9675d4a4b7b1a79847bfc55b91151cea310a0bacdcac",
+      "bytes": 766
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "070497779ff541ebc42cc4bef0da305a6a9bb77a716e613b77f2febef43919c6",
+      "bytes": 6526
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "8cfa3bee8df012a2daeae9279d757cacdb13650e6fa786c6ab08f51dcf78738b",
+      "bytes": 772
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "8f4082442360269d53a198e29f5dad5f08ea9267191904ecdcb30068b0994d27",
+      "bytes": 6495
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "bf6a6542469bc27d2f5291dd7ac99e73874e1671b95bb0bb66ff18bfa32905c8",
+      "bytes": 766
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s8_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "577b9edc13a5a91cce1814540008a885c67abc95096581925485505b88ba24a2",
+      "bytes": 6501
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w33554432_s8_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "3d7408b16817b34cf2813bc6b60ef804ff978f32c0c4fad5efcf14c2b575811a",
+      "bytes": 766
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w41943040_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "1392dd1f55ffa59fda970b69ef7f68dd0158487a433f42e3be408575eb33f9b0",
+      "bytes": 6513
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w41943040_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "99213656027c39e186d8809b4547167c61691da390c10d657405dd1c45be89f6",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w41943040_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "e560803bbc48b3fa0eb6a03399df5adfedddaaf89fcff74721ce99f8cd395d54",
+      "bytes": 6504
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w41943040_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "c26fd2e86d49ab8bb779ca6bc0385c1a6581a00f18262ad31b0cf5953fd44c76",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s64_random_b256_seed59202_base_n1000000.json": {
+      "sha256": "179ab6141ffa087afc074440e75f4b87ae9e5d94f79994f921f2ef8107caf931",
+      "bytes": 6357
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s64_random_b256_seed59202_base_n1000000.txt": {
+      "sha256": "1b7aa786b0c25e736c2bc7c74d6ce365af1cb5d0b4361005f0439c0c3088565b",
+      "bytes": 625
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "16bd0cf8ab956ded7e368466a802ea5a853f8a7626763dcd13b027b66d7a47f4",
+      "bytes": 6497
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "104adeea65a1c682797d3d60846b841afca065fc9ee62596f245889637c2d549",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "89954e1f6b913e82d92e455bfffe6a84b180b6ecd936134caa37f6a75b3cb871",
+      "bytes": 6517
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "8f15d6377b31f766aad93e48659b34a682d812511449606c64a316b17eb9f237",
+      "bytes": 779
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "713b1ae62880888db34d25691ccbaf5135894442f8281f78f0526f6fe0328730",
+      "bytes": 6512
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "a1e6f20fafcac503cdf2de8a1bc8fa4001151b7eaf9fa7ccbf352fff88fbba69",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s8_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "2a441fd85ebf10b8825bdd38d67e5e4791c8d25ed9e0ae1326fc1a4778c52add",
+      "bytes": 6505
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w50331648_s8_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "f7c07d61201e7441b3fa320afb14cc37967fc2fc0949b02b5278ed92ee91f815",
+      "bytes": 776
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w58720256_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "d96fe13f790e0893bbea358072fe8e4101c4adecc69307fb95f4ecccb57e7da2",
+      "bytes": 6511
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w58720256_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "ce7dc4880dfaea59be0f98fe6dd00dc8d8e1c1481a8dbb87ff6cdc66dd1225f3",
+      "bytes": 776
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w58720256_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "d79e9de805730284ca544baf72ce0509b7035d70a7e71be3e193f710ac95f607",
+      "bytes": 6497
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w58720256_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "002680fd0eb641259d29d9e42edf832c14b887665cfb0829966bf8fca6bc64f9",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s64_random_b1024_seed59202_huge_n1000000.json": {
+      "sha256": "9b34badc1982e63250463bb2deae2cc2cb462ffe67ba052a895fd442af8f3cea",
+      "bytes": 6535
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s64_random_b1024_seed59202_huge_n1000000.txt": {
+      "sha256": "55aa21fd2559d06985cf6d4e390beb2444def72c9f37b0bc19dd1face4190c35",
+      "bytes": 756
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "00ad8bc6bfeb70a453df7b61cd5555d4bffdfb0adc2e3391d23b1e91cdd06f0f",
+      "bytes": 6470
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "fdf9e10ec960df5813048fba5b2642ec5d1aaddd29980c91364f8ca3ab264f4e",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s64_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "f363c0607d2d5ab610e726ae5bf0155127fabbd8d524842059ba404184069ce0",
+      "bytes": 6470
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s64_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "45ad1ee23c6cb1d6437fca8e385f80c260b27ed19b8bbc62cd7b1659e10e707e",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "26ca95dea2f9786a8155a76d96ff6be2a7d5cd7687fac9795cc21b338661e291",
+      "bytes": 6497
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "af479f0bd7bfac3c0574824a9a5f202c0c1768eec0b23168623e48bffb6acca7",
+      "bytes": 759
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "2d441596737fd60098d69becae22d2a159a9158a14e9584ea6a7b403e184bc1a",
+      "bytes": 6464
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w65536_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "d4ace7eb23e66e827cc7fad6c968b16d45ed1947963f185b5d0199f2b24994d5",
+      "bytes": 754
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s64_random_b256_seed59202_base_n1000000.json": {
+      "sha256": "7abf75eef696ede5a2aa76fdf680ab30bb734f8ed3edd16215f3409236070606",
+      "bytes": 6352
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s64_random_b256_seed59202_base_n1000000.txt": {
+      "sha256": "455b2e7949ef2129b2069e611a747a19a0def7e902878e61018737cd9d551843",
+      "bytes": 624
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "d9b9b02cd24c02750883b485b05b8ce9da854f7667a4bee1e524468785120807",
+      "bytes": 6511
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "90ffddecbe7405e49408021f01901d99e6e9878908894aea47a792a26deb48ca",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "9cefcb37b3c83a90db4185895e3c46642ae38d56b3a81b2fef98d73f0aecd1f2",
+      "bytes": 6483
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "2274ec3e13579dbbacd6fc9ece965a78834d10e50dfe303356f3ee72e9033534",
+      "bytes": 780
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "721dfa26e415db812c10a15b911d56ba702e53b166bd1758ca118f0d4fb5e4a8",
+      "bytes": 6510
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "85cd348521e0e065039ef2bcd9cb4cb0dddaa03d83ac93e3fefc89ed2062ea82",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s8_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "16d504e80eca3fc5e3227d3fedb4a994ca49cbf81084b1b19a6c9ed1b0db6beb",
+      "bytes": 6508
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w67108864_s8_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "9483e5550b8726e674b33edd7e825546e3f8c2bec527ed131f9c2279ce08b2e3",
+      "bytes": 775
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w73728_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "0a3c9cb713fbb8a8e3668e1136331140897218d8ba539b59b867889f5b33079c",
+      "bytes": 6456
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w73728_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "ae8774f9fff4959e6fc341c62e61aaa9678bbef41f434c559193b98b777a4968",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w81920_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "b4e1fd0cb372a7510a80cc7ab65a0c0ebed00ccf92ec0a88fc1787b9ebf03b79",
+      "bytes": 6475
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w81920_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "3087fbde984e0752ed17cfde31b9862dae04c1669d5a33404e07a6c47117f14a",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w90112_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "7ff9ba6021bc2dd5ef10b58b8c3fc2f40a9b101ce567c8a4ff884a2b7bed54f6",
+      "bytes": 6468
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w90112_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "eecd5f4d2b36194318566e3c1002db846689cf92044d20aee159ba8041ce33f8",
+      "bytes": 753
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w98304_s64_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "1a72947b638dc7a211580a75e66ce889ce77a4960d5bef2d4d5ad68db5a30451",
+      "bytes": 6474
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w98304_s64_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "093e900c8dabf68cdb9778ae549154af9ceb4100a328d36ebf9887b098c3e7c6",
+      "bytes": 755
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w98304_s64_random_b256_seed59203_huge_n1000000.json": {
+      "sha256": "c8db20d03db714457b4eff69d134a747af4a8b3f258ebbdc78c3115acfc5ab03",
+      "bytes": 6463
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w98304_s64_random_b256_seed59203_huge_n1000000.txt": {
+      "sha256": "188745278e994bca8c83c7e7447814e14208616de4e4c1c7ae791299ba564018",
+      "bytes": 753
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w98304_s64_sequential_b256_seed59202_huge_n1000000.json": {
+      "sha256": "cdc9a206131e1b4bb1faeac3f3ad7a061d8a036c592a96d2eedf9bbc045e592c",
+      "bytes": 6486
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w98304_s64_sequential_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "14740f577a77a764bbbbed051a4301373de85e4f8b61024aee5fd729906b0c6c",
+      "bytes": 759
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w98304_s8_random_b256_seed59202_huge_n1000000.json": {
+      "sha256": "18cc47ddf8687e7a9c51690eaf2f51d7132309fcc70808881404dfa36d474e85",
+      "bytes": 6464
+    },
+    "timing-only/capacity/data/thunderbird/round2/logs/round2_w98304_s8_random_b256_seed59202_huge_n1000000.txt": {
+      "sha256": "487d274ecda8a64844084cd5d1161b175131e40a2d9057fe0132e209a1268129",
+      "bytes": 754
+    },
+    "timing-only/capacity/data/thunderbird/round2/manifest.json": {
+      "sha256": "8f8210eae09dcee53fabbda925e1900ec0f186b656f98b4fb40ac45e4b99d0e3",
+      "bytes": 45226
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s64_random_b1024_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "7ae3056d4977588205cc4cc32f8e25c9debf83eb1a53d6a01f14ca43fdca3383",
+      "bytes": 752162
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "4e6116a76ae56b4e2257ef23d0f33ad4e90d3ba49f56a0554e292177e6b32eda",
+      "bytes": 681316
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s64_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "ba925e2d2196452afc9dd05e028d6d98d7e7bbba7ac0a831820451de77b9abe6",
+      "bytes": 675475
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "d425cd6e2e5b26151847cfae798e77ae3507dfc76942d8cd0f28ec98d652412d",
+      "bytes": 254026
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "3f95e25bc81dfa95bb4596d98807f913a71f6550ab596255fce43ca4e49f7a4b",
+      "bytes": 486783
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w106496_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "ff5427cf26d876e1eaf10442048acc196dd33849ca0abf60223056f451782251",
+      "bytes": 161897
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w114688_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "2d5f6e268a254246680369ad3677ead47492293ea32b950fc39697bf362739ff",
+      "bytes": 163913
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1179648_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "23762e5b0749f3968992e397018f9ddbc4e65a6ee53f000a35f9910f32174d6e",
+      "bytes": 978659
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w122880_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "7f0ca183741aa81ac96e41edf9ee69f165b03d873cefd00d156cadb589e3f884",
+      "bytes": 138057
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1310720_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "2ff281c38ceaf63b08194f6239778e482627a7197e755679d5ad5060e8f09b50",
+      "bytes": 1006982
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w131072_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "21504a874724e28bfa1598fb950b1b643be42fc8f4db5cc791bb9f1e57fb9729",
+      "bytes": 134542
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w131072_s64_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "a1c3a90fcb932913414f191c3e688d6a94dad9da6989ff5efe996bdbe3b287eb",
+      "bytes": 163822
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w131072_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "93f0d0c28431529f149d24aa630c491d963d20ef15093bfb4af204f655f20253",
+      "bytes": 147766
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w131072_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "889e18fde708c308d4b9eab0d7f09e0e2c9e7523a62547c39f445fe371c2d9db",
+      "bytes": 262759
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1441792_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "d566ab89cfea9adb3370754d9371105488fe6fd4696999d4e6c2bb4d9dad1491",
+      "bytes": 998309
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1572864_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "e3d96665a9733f7958125247a06a96113863532c45dcb51efc777956202b237a",
+      "bytes": 944848
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1572864_s64_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "863e4e5081692c4cd6370e3d1fee3de7c6a8a71dac8c35749ee5a049e158f0d4",
+      "bytes": 943798
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1572864_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "8585796f24a26d5bd453e8a75b3e282dae221f2ca674e9c857698aaac42a9a8c",
+      "bytes": 254889
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1572864_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "adc19759f884eff405fa4e054678edee01e0f445d0d71594f73cb23f32a6eb11",
+      "bytes": 1001688
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1703936_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "adabe22a78cb025c4a634fc03327cd20a27506dd467b8eeeded381cfeba9d3a4",
+      "bytes": 877703
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1835008_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "d5a4e4f0e1ac105e5e5d0bd7a787e4706be600d0903350bd34456f52eb66ab88",
+      "bytes": 673028
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w1966080_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "3f1dcf28157b65f74a72b35f9c6b96f6f6a314e324c9d4e5653c4c9779a752ce",
+      "bytes": 503945
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w2097152_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "79b25f3cb633c8202f5eab3d1d21df31ddc1ffe324843313a14f74df73eb4f41",
+      "bytes": 418959
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w2097152_s64_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "b6573e0a7fa54165551424118a2ccc5b9171d1afb982930449dfcadc708034b7",
+      "bytes": 425209
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w2097152_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "267b7608fffb55be1365cc50c57b72d25a6e6a855b353f294c36b2f1190c4e5f",
+      "bytes": 260664
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w2097152_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "52cfb58a4963934400464663bba0a86d43440bbd92d7f162d29e06126cbd607c",
+      "bytes": 981522
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s64_random_b256_seed59202_base_n1000000.u64.gz": {
+      "sha256": "e4fb88fafb33cb8e0a6c88e51c7e834ccd88875b58bd980a1eb5bfe9cdbbf51d",
+      "bytes": 1146309
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "714fd78b08d34a5caa3239600c40de1d02808703fe839e8f5204d48961e9a72b",
+      "bytes": 954179
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "492d6a12da5a162a8ffd095f9adb415048e167957facd054e224436ceb79331f",
+      "bytes": 459919
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "5f379d4f05c045ca40a445f6d64f5ea2a47844506ce87883cb3e854ff0c42d3f",
+      "bytes": 919732
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s8_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "68132df6ed09fcaa9942639710a271fcb476cef0d610d18eab1e1c9d16beaec2",
+      "bytes": 914550
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w41943040_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "84e68f93a673062e583c8b7d330ae2cd00bad4e3d97043e23e65812fe26e2e0c",
+      "bytes": 1204643
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w41943040_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "72917b22172832f78073019110b8c42ad8c37a7e06b360d8439c7012ccacd2d5",
+      "bytes": 1213741
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s64_random_b256_seed59202_base_n1000000.u64.gz": {
+      "sha256": "01c4ae8c9f3c10a871b70ea35cccddc633478a006b745079ef759302907e767d",
+      "bytes": 1272203
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "74075a149b3c418a9ea48b8315604e32d1991489827d8e24369b03b260f21623",
+      "bytes": 1261935
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "9d8bcd4025fdfbf5b1070381bf0a3072d7af6da43828114665291f9b19163493",
+      "bytes": 733691
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "338f56804ce344da05a591f2173ac0e8c9f42538cddde124da2461be5b86a35f",
+      "bytes": 1251786
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s8_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "c4d026a21e386a5d1762a787919ac0bd5143fa7e8ccfcdd080291126960d53bf",
+      "bytes": 1254712
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w58720256_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "81c077a409c4a5eaf9ffd70e903db91429cf0f747b2bcdd50d19f1a95484a1c0",
+      "bytes": 1214552
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w58720256_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "ee61d1d94487f8b10e2c4c5fa80c68dd687fd887e04912b1f9c54a770d62f449",
+      "bytes": 1211686
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s64_random_b1024_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "47eaa2757c5d48b2d801225e875f436f0bff76338a1594d75d20e1b6cbc1e9d7",
+      "bytes": 175433
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "5e58736cc4ed9f92b381a0414c5368dc132cfc53112705795dd33c5df4628cde",
+      "bytes": 217699
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s64_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "68bb616e19fea1eecddd971953f4191aab3a24e4247495bdfa7b026d307ab5aa",
+      "bytes": 196947
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "4f1762dd49e96adedd276b85ecb41377ff3585497f65c05177ca252ae40c240d",
+      "bytes": 248920
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "7179774717f9f421df0ed3a4a7057cdbfa96891a2f38bd345831203195e561d5",
+      "bytes": 202850
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s64_random_b256_seed59202_base_n1000000.u64.gz": {
+      "sha256": "0ad28b83828f2a1196a57b0fcc37d48de05cb028e271ae0621ae7a2aa78223a5",
+      "bytes": 1234435
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "35fffe4693bf80b0f0c44cbea9ebc596f37f1b2d554a36dfc2995d6a88b3541b",
+      "bytes": 1222136
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "012ca2216754927e744980c54d0ca32c96f9c4837f0e579180979e576ef28fee",
+      "bytes": 695271
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "2b9c9ae76eaa4f8c07f3997e45534ef3216a3db04e5848acc35f222a9e835c0f",
+      "bytes": 1205878
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s8_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "9c97ebe5ad213dd2e6f95033beed292eed9bb910fde8bc310745804fcc48f560",
+      "bytes": 1205999
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w73728_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "195933b58105dba475ec094b82af2b28ec7b3ec0f632cc4f0c8a01bffa25765b",
+      "bytes": 197399
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w81920_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "c873ccf29b62d72902fe1619322b4739eaecda9fa6b27e9c46c9f08d71afa4e1",
+      "bytes": 161889
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w90112_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "b0ece2b66af0ae63d3b7e4363c63ea8ba78fd1766f928e8110ed200637a4640a",
+      "bytes": 149752
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w98304_s64_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "d862415110f500065253b1214fb3aa8da976e3f164c133958fa0fa8c329e8846",
+      "bytes": 160545
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w98304_s64_random_b256_seed59203_huge_n1000000.u64.gz": {
+      "sha256": "e705a42af73ba1a6e9ad86dad7e4a9e2aa71ca71db264899cf96dc36e07bb515",
+      "bytes": 163269
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w98304_s64_sequential_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "2a7886e1e2c4b4354ec6c6cfca14331c4b8c863ebcdb16188670599cc59ae31c",
+      "bytes": 185851
+    },
+    "timing-only/capacity/data/thunderbird/round2/raw/round2_w98304_s8_random_b256_seed59202_huge_n1000000.u64.gz": {
+      "sha256": "a63938d79d892ee7e71aefb278baa60efe1b5f32a69b3a101deeacd481914685",
+      "bytes": 262182
+    },
+    "timing-only/capacity/data/thunderbird/round2/source/Makefile": {
+      "sha256": "7578bf3eab6dd1e149fafa0972747f153bd1a25798d307c346ad0d634f6bbf4c",
+      "bytes": 713
+    },
+    "timing-only/capacity/data/thunderbird/round2/source/requirements.txt": {
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    "timing-only/capacity/data/thunderbird/round2/source/scripts/analyze_capacity.py": {
+      "sha256": "f88370668a62af4364647382f172b137c350136ff4be96ae230fff8749aaf910",
+      "bytes": 18944
+    },
+    "timing-only/capacity/data/thunderbird/round2/source/scripts/plan_capacity.py": {
+      "sha256": "3723f74a3d97063c8af6a9311c290de97807680d4d817f4b898e7f583c67339a",
+      "bytes": 8603
+    },
+    "timing-only/capacity/data/thunderbird/round2/source/scripts/run_capacity.py": {
+      "sha256": "d6fabfaf86484da2cc6601d4be29ef7ceaecdbd2e2b991f716bd0978f194d98d",
+      "bytes": 16035
+    },
+    "timing-only/capacity/data/thunderbird/round2/source/src/cache_bench.c": {
+      "sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+      "bytes": 7429
+    },
+    "timing-only/capacity/data/thunderbird/round2/source/src/cache_bench_aarch64.c": {
+      "sha256": "187a1ce93b443da5a2d342e4e09a6798414cfb88e6989b87996f2edfe50e7225",
+      "bytes": 9551
+    },
+    "timing-only/capacity/data/thunderbird/round2-driver.log": {
+      "sha256": "bdc3449e60934e2652ff306583f6b1f9667ede99b6129d2ddd359f33df14965f",
+      "bytes": 9553
+    },
+    "timing-only/capacity/data/thunderbird/round2-validation.log": {
+      "sha256": "7316eec02ec52e089799bf99bb6ce5c32764d70f13e85eb671da330e3f78d7fe",
+      "bytes": 1509
+    },
+    "timing-only/capacity/requirements.txt": {
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    "timing-only/capacity/results/thunderbird/.gitkeep": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "timing-only/capacity/results/thunderbird/combined12/RUN_NOTES.md": {
+      "sha256": "bcdd3041b4648c28c48e35beb644fbe1842bd66b3776eab88bf1e51efad71925",
+      "bytes": 6984
+    },
+    "timing-only/capacity/results/thunderbird/combined12/boundaries.json": {
+      "sha256": "7d75491bb6739612dc849cb579d208523661fb8c5236bdeeced7532f6d31ab40",
+      "bytes": 992
+    },
+    "timing-only/capacity/results/thunderbird/combined12/capacity_points.json": {
+      "sha256": "8f1b25d7c42e7ff45f5f5e7494ac5c3063c0aadd98611fa759e0ccb3e7e99283",
+      "bytes": 73070
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/boundary_boxplots.pdf": {
+      "sha256": "42e15f436e575e75cc4c082d222cc3c0e2cdd94badd7947ad0c74f54aa87b7dd",
+      "bytes": 17374
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/boundary_boxplots.png": {
+      "sha256": "b12ef2cfd20498968d75fbd9cb5b6952cee01e5c5b165ca186121a870fa5f8bd",
+      "bytes": 101233
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/boundary_zoom.pdf": {
+      "sha256": "8ca2df45c2420dfebcbd531f52938695332ffcf8a345a810c4b6f48f468248d5",
+      "bytes": 20430
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/boundary_zoom.png": {
+      "sha256": "2c56ed7601b72cbf93cb3fd3fdd07ffa80f6964cc68ed2ffdc208fb03c14b0c7",
+      "bytes": 178160
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/boxplots_s64_b1024_huge.pdf": {
+      "sha256": "a9946a3682b0f5067d1fb633c227f131294a6af5af7fd61a6cab0dc3ce3a1f93",
+      "bytes": 12599
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/boxplots_s64_b256_base.pdf": {
+      "sha256": "35149d398b894e876a055929adeb570f37dd2f415447f176f34f82d4b8426685",
+      "bytes": 12724
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/boxplots_s64_b256_huge.pdf": {
+      "sha256": "15babc9365830078f07724c2c04ed919a21cc95c139d45312cf48152a337c34d",
+      "bytes": 34940
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/boxplots_s8_b256_huge.pdf": {
+      "sha256": "19aa97bd2245afa05642f7ae518565d9eca39daa0c88605cc6f7ab5c9065ae34",
+      "bytes": 16651
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/capacity_s64_b1024_huge.pdf": {
+      "sha256": "39e1124e9c30cdf143f8bbc1b987011d800fc12dc0126df752266d4cb08b5c23",
+      "bytes": 14757
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/capacity_s64_b1024_huge.png": {
+      "sha256": "8cb7fb0c11c96a4878ab7e24ab6d66fa27ddb5d351ed233699e53093072ee439",
+      "bytes": 118328
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/capacity_s64_b256_base.pdf": {
+      "sha256": "c6de4d01c1c86431b91fc8cf4f236bebd4583a5764e3f0c873be4e1ad7fd96c6",
+      "bytes": 14664
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/capacity_s64_b256_base.png": {
+      "sha256": "09e3b55c995cbcb6876e7971fb4870c7dc2741e4691c10cbf67bc72cac61eb7f",
+      "bytes": 106211
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/capacity_s64_b256_huge.pdf": {
+      "sha256": "16df1346c6a68bf0329edd3cb756df28eca93621ac12f338d70d1b26ed0b3ad3",
+      "bytes": 18239
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/capacity_s64_b256_huge.png": {
+      "sha256": "cced4bb2ce153654a69d7f25bcb0a8a91b9814ed1feb556b5787930d255a893e",
+      "bytes": 141386
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/capacity_s8_b256_huge.pdf": {
+      "sha256": "305676212c7214fc2675cd7097018873762e85e89de9afb7a4257bcfb184e15d",
+      "bytes": 15765
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/capacity_s8_b256_huge.png": {
+      "sha256": "09125946befa20c7a4139a4e93793c02a6d3ece559fd10f8e00290ee749e0c09",
+      "bytes": 130453
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/layout_comparison_b256_huge.pdf": {
+      "sha256": "863451f95e0772a6bb56f73e879213649716ba5808c9b98adc7c3edeeda13808",
+      "bytes": 17369
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/layout_comparison_b256_huge.png": {
+      "sha256": "2434257586a435bbbb48b1df1dba7679ca0a815f5f629e1e6b21a03ef9591171",
+      "bytes": 117514
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/method.pdf": {
+      "sha256": "d345e1221e1fa6cef4934d35b056f49832fcd8644553798dcf67105e1f99f971",
+      "bytes": 13506
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/method.png": {
+      "sha256": "6e97811b73b622403e3004d0d4c35ec84466bbe1b591b3575f0a1e769d350b21",
+      "bytes": 89516
+    },
+    "timing-only/capacity/results/thunderbird/combined12/figures/temporal_stability.pdf": {
+      "sha256": "5115ff5fa6291da78bb08816d40c377aa536211c4a9ca687e6b81fe0c881cc41",
+      "bytes": 41329
+    },
+    "timing-only/capacity/results/thunderbird/combined12/inference.json": {
+      "sha256": "838b1e9c00736989d0f0a2e4e027079eef711b3866f21bae6f719a7f5c2aea0e",
+      "bytes": 2756
+    },
+    "timing-only/capacity/results/thunderbird/combined12/provenance.json": {
+      "sha256": "084147f2494532f2f0b4958cb5a15973734437265af101713b5644d8f2738d10",
+      "bytes": 28830
+    },
+    "timing-only/capacity/results/thunderbird/combined12/summary.csv": {
+      "sha256": "b0559bbcd3f2513320d3f0c6aa908d8d8ed43aec0c25d6de87e6801d0e2c2cca",
+      "bytes": 37940
+    },
+    "timing-only/capacity/results/thunderbird/combined12/temporal_medians.csv": {
+      "sha256": "3bb363ed7b30aa53f40fa0e49c76378a50c5b7824fa89db9e29f84e6801c59ee",
+      "bytes": 102645
+    },
+    "timing-only/capacity/results/thunderbird/combined12/transitions.csv": {
+      "sha256": "b04ab4a43091fbab2dd98f9de6698d7879a4f52bcef05294503b5b29ba8e67ce",
+      "bytes": 4986
+    },
+    "timing-only/capacity/results/thunderbird/combined12/validation.json": {
+      "sha256": "f59a091a41f4de8f7e3bea9f5f7c118c8e881e9ff6a219c34e52c3f6ca4fba0a",
+      "bytes": 1738
+    },
+    "timing-only/capacity/results/thunderbird/round1/RUN_NOTES.md": {
+      "sha256": "6b200a19628c95cd0cdc51b26db90f0795d43809399594a763c2a13bfd5708b2",
+      "bytes": 2434
+    },
+    "timing-only/capacity/results/thunderbird/round1/capacity_points.json": {
+      "sha256": "1772d47cad3b375bf8ff06f8534459a9649eee9aa745b9805cc54f0bf35a0f8c",
+      "bytes": 36713
+    },
+    "timing-only/capacity/results/thunderbird/round1/figures/boxplots_s64_b256_huge.pdf": {
+      "sha256": "0a48c88a9da4035e05d758d7b4e4ff77e5f9cc8333dfdd71ba6a1d939c0c5502",
+      "bytes": 23724
+    },
+    "timing-only/capacity/results/thunderbird/round1/figures/capacity_s64_b256_huge.pdf": {
+      "sha256": "ec1bde1cbf162461164fd0d25d0ad06da7537b5d5568891e0780020ee1bdeb1d",
+      "bytes": 16780
+    },
+    "timing-only/capacity/results/thunderbird/round1/figures/capacity_s64_b256_huge.png": {
+      "sha256": "79848affd1e7135d212148942a2294df5ef718db9e95016b76c57b14f1aacf56",
+      "bytes": 138669
+    },
+    "timing-only/capacity/results/thunderbird/round1/figures/method.pdf": {
+      "sha256": "44a0709ffb1f61fe9ad9b8216b63251e303a24ac65f7b5ca3eea3a4e681a7e14",
+      "bytes": 13506
+    },
+    "timing-only/capacity/results/thunderbird/round1/figures/method.png": {
+      "sha256": "6e97811b73b622403e3004d0d4c35ec84466bbe1b591b3575f0a1e769d350b21",
+      "bytes": 89516
+    },
+    "timing-only/capacity/results/thunderbird/round1/provenance.json": {
+      "sha256": "8033017f327e01c2f9d57c04b37aee28ce9cc36191f0a645d2c70b192c85046f",
+      "bytes": 11598
+    },
+    "timing-only/capacity/results/thunderbird/round1/summary.csv": {
+      "sha256": "b8145ebca71106887793dea9be3d407c6607e549cb3e677b04aabd464e9b35eb",
+      "bytes": 15599
+    },
+    "timing-only/capacity/results/thunderbird/round1/temporal_medians.csv": {
+      "sha256": "f4c612a1b1c0808da4893fb822efa6d0af9de2c9141643321da91502067892a1",
+      "bytes": 41997
+    },
+    "timing-only/capacity/results/thunderbird/round1/transitions.csv": {
+      "sha256": "69aad7f89567c300cd366e5468309b91555555c26205a627d33ed143090ce3ea",
+      "bytes": 1951
+    },
+    "timing-only/capacity/results/thunderbird/round1/validation.json": {
+      "sha256": "632811780a333671e19e663e48a8fff14c849c9f56a50152c91226b679dd9bdc",
+      "bytes": 1494
+    },
+    "timing-only/capacity/results/thunderbird/round2/RUN_NOTES.md": {
+      "sha256": "26b7d9e2f877ea428349e4af814020c5dae078b4301b855951c6fd0b45e89602",
+      "bytes": 1770
+    },
+    "timing-only/capacity/results/thunderbird/round2/capacity_points.json": {
+      "sha256": "43c3ce3f20f63e720ce6359e3a91b96cbba001251b6d888e2017f8476d92a7da",
+      "bytes": 46953
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/boxplots_s64_b1024_huge.pdf": {
+      "sha256": "e4045a8f1c8fad283c757eaaa18aabcd0e95331758f3ecac1c1373996a198f96",
+      "bytes": 12599
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/boxplots_s64_b256_base.pdf": {
+      "sha256": "83bd5cd589e00cdba1d2fa43a655f61f52dcccbe0bd8ae9420c89f6f219fc70c",
+      "bytes": 12724
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/boxplots_s64_b256_huge.pdf": {
+      "sha256": "2cf0dbb08367af219ecd84de93f94aa781061221146636b7d5f301146af7d55e",
+      "bytes": 24023
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/boxplots_s8_b256_huge.pdf": {
+      "sha256": "98f784314776058f3dab329acde3995ddf88d40b080a263272282ca2a391fa44",
+      "bytes": 16651
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/capacity_s64_b1024_huge.pdf": {
+      "sha256": "73ce2927d1b0787f23fd10f4e1c69afbed534899749275f6ac345beef6bd71d0",
+      "bytes": 14757
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/capacity_s64_b1024_huge.png": {
+      "sha256": "8cb7fb0c11c96a4878ab7e24ab6d66fa27ddb5d351ed233699e53093072ee439",
+      "bytes": 118328
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/capacity_s64_b256_base.pdf": {
+      "sha256": "f1b16b86918eb89b4b93e43210fb8d2d0f15c10a91681d33ad4f6b25ff5f44b0",
+      "bytes": 14664
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/capacity_s64_b256_base.png": {
+      "sha256": "09e3b55c995cbcb6876e7971fb4870c7dc2741e4691c10cbf67bc72cac61eb7f",
+      "bytes": 106211
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/capacity_s64_b256_huge.pdf": {
+      "sha256": "f0505dfc053226dd8efb7d55b85242a9ad1f77536c8e416e43c677d5e87d24f3",
+      "bytes": 17285
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/capacity_s64_b256_huge.png": {
+      "sha256": "4e0b59bdf95f3d2e8094af23200640e7b8a8dc52bd948f000a41ba6bb7290a52",
+      "bytes": 144242
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/capacity_s8_b256_huge.pdf": {
+      "sha256": "3aba83cafdd4235460080bddc687d9658e5322b6aeb31ab9b5fdd4df32214649",
+      "bytes": 15765
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/capacity_s8_b256_huge.png": {
+      "sha256": "09125946befa20c7a4139a4e93793c02a6d3ece559fd10f8e00290ee749e0c09",
+      "bytes": 130453
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/layout_comparison_b256_huge.pdf": {
+      "sha256": "e4c55b9d03c550387d1476c3d0ecfe5505ce4399552d8e2167d8cb8ee464e8d4",
+      "bytes": 16632
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/layout_comparison_b256_huge.png": {
+      "sha256": "141f5f1983beb9346d22b638449d01480944d241c503d1126d45fae195e12a28",
+      "bytes": 130443
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/method.pdf": {
+      "sha256": "2413f7f555950ec19c747af8233b3f44e65e92dcc6f3e09ee3ebc42f6df396f3",
+      "bytes": 13506
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/method.png": {
+      "sha256": "6e97811b73b622403e3004d0d4c35ec84466bbe1b591b3575f0a1e769d350b21",
+      "bytes": 89516
+    },
+    "timing-only/capacity/results/thunderbird/round2/figures/temporal_stability.pdf": {
+      "sha256": "7528ed85af123e9fa5324668e6de7fe071ab45e0a0b1e502d53805a378805636",
+      "bytes": 34135
+    },
+    "timing-only/capacity/results/thunderbird/round2/provenance.json": {
+      "sha256": "e09f99c79f0c714e0d4ff50bc3175758da3c2975380360aead9a00d0a8ef89a6",
+      "bytes": 16536
+    },
+    "timing-only/capacity/results/thunderbird/round2/summary.csv": {
+      "sha256": "a06e9eb96085ab8e7685bcf72bb77cdabd662a1071507a8f62b5cf74820515dd",
+      "bytes": 22528
+    },
+    "timing-only/capacity/results/thunderbird/round2/temporal_medians.csv": {
+      "sha256": "4a298762228924a12afaf37bdfa07ae02a09bd4159443c0b781e154ecad6ddec",
+      "bytes": 60680
+    },
+    "timing-only/capacity/results/thunderbird/round2/transitions.csv": {
+      "sha256": "0a0f6d07ffba2753b0e870283d42d29876de29789ee26f3db64d1d8d8708dedf",
+      "bytes": 3697
+    },
+    "timing-only/capacity/results/thunderbird/round2/validation.json": {
+      "sha256": "7316eec02ec52e089799bf99bb6ce5c32764d70f13e85eb671da330e3f78d7fe",
+      "bytes": 1509
+    },
+    "timing-only/capacity/scripts/analyze_capacity.py": {
+      "sha256": "f88370668a62af4364647382f172b137c350136ff4be96ae230fff8749aaf910",
+      "bytes": 18944
+    },
+    "timing-only/capacity/scripts/plan_capacity.py": {
+      "sha256": "3723f74a3d97063c8af6a9311c290de97807680d4d817f4b898e7f583c67339a",
+      "bytes": 8603
+    },
+    "timing-only/capacity/scripts/run_capacity.py": {
+      "sha256": "d6fabfaf86484da2cc6601d4be29ef7ceaecdbd2e2b991f716bd0978f194d98d",
+      "bytes": 16035
+    },
+    "timing-only/capacity/scripts/validate_capacity.py": {
+      "sha256": "ebf75f47613d16b6faf11dcbaedd36361de4537b0d6b6aca1ffdb893161f0b5f",
+      "bytes": 6172
+    },
+    "timing-only/capacity/src/cache_bench.c": {
+      "sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+      "bytes": 7429
+    },
+    "timing-only/capacity/src/cache_bench_aarch64.c": {
+      "sha256": "187a1ce93b443da5a2d342e4e09a6798414cfb88e6989b87996f2edfe50e7225",
+      "bytes": 9551
+    },
+    "timing-only/inclusion/configs/thunderbird.json": {
+      "sha256": "2527609c50aa81fa606c16be9a55692bd05d8dc81c61394b51455a3a98537927",
+      "bytes": 514
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/calibration.csv": {
+      "sha256": "360eafcf7641b71cfacddf5fb79874c45955dd529fd28fc699f25ab69bc462d4",
+      "bytes": 3602962
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/capacity_sweep.csv": {
+      "sha256": "5a5e06adc582b880b4c16d96b59eb4caeb359c0aa23731b3242692c25088e831",
+      "bytes": 268
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k10.csv": {
+      "sha256": "add51cdd82e547752273231bf2c6a73c5fd481c736d1a00ec352299b8e295686",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k12.csv": {
+      "sha256": "854890d7e9af2c848656a08d605a6e1713f66c9de045e8ca7ede8f30f8d8190c",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k14.csv": {
+      "sha256": "c803bb37e7580183a3b53ae92e2c8f1af2352281977eef68b3722cc01f1d3eca",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k16.csv": {
+      "sha256": "5e5538cd2065c47a4f6533d534d28e882e61e567a5b634afe349fb00f3394b00",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k2.csv": {
+      "sha256": "c544bdab9a73417018491f2405bdf8530482ea3fb22fcaf95aeaad8d6ae1542f",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k20.csv": {
+      "sha256": "876671c6ed37b2bdeb828b6142d61b25320be2192bc9cb678fafe2fd6118c5ba",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k24.csv": {
+      "sha256": "e64269a1d1ef67fbab78ddcbf8f3aec9fc23300581f3a64daa149ef526904976",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k32.csv": {
+      "sha256": "c55e702a7ece28592ebfd6422bca8f7d0d915c7dc36348b79c122d0e972dbd56",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k4.csv": {
+      "sha256": "ee6302b6ab881d41e868d1f8fd6cafc8066d8170da2f9ee9c7c3bcc86178d619",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k6.csv": {
+      "sha256": "ee4d2902052dc7359b1316cbbbb9243e36893b38b0fc9693d5346ca3c7f0c1ac",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride1024_k8.csv": {
+      "sha256": "558f7a5ce4bc7d79686b86975303ef6a1d3feb9deb51a453efd1fa489cde2992",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k10.csv": {
+      "sha256": "5c1861cdb8fdc1ec8883182572a2e807d78c7b589855b200f9685ac842d8fa2b",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k12.csv": {
+      "sha256": "c4f1e93e099e7dbf6eeb589a9a8d8841fb00e5dcc6ea502c8b6a732ee7fd50c7",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k14.csv": {
+      "sha256": "ad6facc4fd77e2a36778a92313ccea26fdf8a74f266cfe566f65b1ea18476683",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k16.csv": {
+      "sha256": "19d1940e88f7ff6829cd7d911c2276442ceea6d7e654d176976d38253020364d",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k2.csv": {
+      "sha256": "6f85c1d2060c7f38bba038beebee5b4677715318e81e0cc4dba765955fe5fe27",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k20.csv": {
+      "sha256": "5d8f03719e828c8c1327c2b53977ab7059edf3b65f0e10e6f35c14ab4cc27649",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k24.csv": {
+      "sha256": "01023fee54ae99da2d777f37d356dd32f6beb43e13d01c7fe6daea7f9a209df2",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k32.csv": {
+      "sha256": "45922abc2c3481f01eaf7ea02e8e005e59d70e8d1d9226a538ac80abae5d73df",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k4.csv": {
+      "sha256": "82583c388c933a122d738f562b5e1e826194a0c1621e191c97fb625feb9cf826",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k6.csv": {
+      "sha256": "3a54c6193372cbf5032b5a587cb1eaebe6b757c6c7960879d15ffbffe87b4e88",
+      "bytes": 188931
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride16384_k8.csv": {
+      "sha256": "97570c79cd1225902104bcef890575aa1da9a10fed37144f3fbb42760e788f96",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k10.csv": {
+      "sha256": "adf317413b8d9de10e5529a5aa6111a91c2604af340ae2f13da61310b879615f",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k12.csv": {
+      "sha256": "5483c9b4f8e828d01138eb6c02211349988d8dde8f6753b429be6f8480366c8b",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k14.csv": {
+      "sha256": "293c02763e037efd9fbc417b1f16d17594f28d2642191282e20da59c5d7ee470",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k16.csv": {
+      "sha256": "ce76184fa3ce4720090c147eb94e7ff509ca969f713ae29654b7a35b65127e85",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k2.csv": {
+      "sha256": "2b5c26b32c5bb48bf4e826ac4ec577c01d1dca4468a5567e04c13be7bbadf8d3",
+      "bytes": 188930
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k20.csv": {
+      "sha256": "88af0ebf82eb9a9e1f4fe38e8d702329530a31f6d96b2be875a4952e3486caba",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k24.csv": {
+      "sha256": "19ee2a719fe636ef4e4ab376c57c3c22684046a07da1f3d65254bebc96e5fe33",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k32.csv": {
+      "sha256": "6e01e09f5ec08b10a987549a09d5d2e5163cae42fe0d1a5b12566d6ce744d292",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k4.csv": {
+      "sha256": "911fed15871a32f2e4e2184c16d73bba3ca615a4f175d0300f5efdc6edfc8bf0",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k6.csv": {
+      "sha256": "d476bb4d39c15351d1d3cf32e852761410b3a3713d44cf45cb3949b842b61814",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride2048_k8.csv": {
+      "sha256": "4fa08a7f9b95fd47fdbd812382427e474a54f9637b5da8d0e102e0fcbe1f07d8",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k10.csv": {
+      "sha256": "d517783dacdd995d1066e48043cc3bd7614270555d710effdb5886fd83694b5c",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k12.csv": {
+      "sha256": "f8b3cc2159031f0c4b339f868e415d4686e620a5245fd4c85133b9df8b31301a",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k14.csv": {
+      "sha256": "184008a96710c5efc24347f83cd4af1a02cd86254cf9866c668ef3fdbdbcfd75",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k16.csv": {
+      "sha256": "5b8d2d81fb1bd79260c496c24a72da18a9f40d686b192ea46708e9439d412fe8",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k2.csv": {
+      "sha256": "52b03d6644e88bcaebcbdd3cf6be12be764ef4882395fec121ad97b29172d940",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k20.csv": {
+      "sha256": "036fc5349e57047599f6a9ae63831a416052680ea05e231e7296fa404d58e19d",
+      "bytes": 188930
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k24.csv": {
+      "sha256": "a9b12c3d30927f6e091d40ac4b61a4b3d54b8692d323b31aa86fe428f1c8cc19",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k32.csv": {
+      "sha256": "30cbd6ee094e4d7a3b804ac2fa5df21538fb5f0e6d7ab470068989f55f21e10d",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k4.csv": {
+      "sha256": "487b4393154a81598fc5b86ca091dc8bc47630cef85a5ff7e12495fad5df497f",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k6.csv": {
+      "sha256": "ec6265fecf1b25547411b737e5e80c9aecd375870e7b6179fec17e956e1bf367",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride32768_k8.csv": {
+      "sha256": "e7dec9f45a0d7b9c7999bc63f163b9b35072329ca1e8c3a3af90b140eaf96088",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k10.csv": {
+      "sha256": "eff8ca5870ebb7d40b9ddb2ddcccb80204129268bd5a7a1f3dc94b817d6b1d5e",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k12.csv": {
+      "sha256": "02fb5885f286d5dcac49f31cf4b518ca80ba335112ff9155ed3efce16feb73c6",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k14.csv": {
+      "sha256": "0cb95004b5dcffc00de6d822fc26fc7a5dca35fcc6a2d67869ef406444ae4868",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k16.csv": {
+      "sha256": "5224364936a8d79218c5ed4cfab04c47036adbd6f1f3c59368345fbe6331d9f6",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k2.csv": {
+      "sha256": "1b8b9867dce6bb7da4a4c97faadfa726600bf5366f8942ca5f413cbee6f4e8dd",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k20.csv": {
+      "sha256": "f0f0e68b522de3032e7664e45e90dc4aa0cff5b5d1d1483851c52ce570706e33",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k24.csv": {
+      "sha256": "0690d7d298cef7689dd2dbf69a59df883b42a211360d45e8c060cf0eec4c5693",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k32.csv": {
+      "sha256": "89e38a42dd264bba548eb8c0b2ac0957aa5b17b12159b7ab329c87c7eb12b730",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k4.csv": {
+      "sha256": "32b5c05ff6756039a390f210a661071646872888fd56261589e4b292c39d0be1",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k6.csv": {
+      "sha256": "1a1d1cec8e8f79cecefb1f8632b3ea20e5c71ee3a203a80e66bb9c2f71aa9b07",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride4096_k8.csv": {
+      "sha256": "6c7fb4929a80d705bad199574795eb889a8b961894993a07fd695f3b33c8a53e",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k10.csv": {
+      "sha256": "391eda1b906871c439068db48a9441bdc80560eb4d788af44d419c63d85d3103",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k12.csv": {
+      "sha256": "76710e39da64c7751bcbc9fae9fcfe77ce161add6b86277bf7d94913cebf784c",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k14.csv": {
+      "sha256": "ad3ee7f7c371d73bf8f09d98f1fa7ce53f3ae18bdb4af400342e8556b3981341",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k16.csv": {
+      "sha256": "0d1c63189b877568c4b11f279a43da0b24b5f4933b8dabd4d70d673fef30d044",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k2.csv": {
+      "sha256": "5fe4ba0e248b8fe3446e446bf0799ab5edf193fccaa1f075c089e76a4241ca6c",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k20.csv": {
+      "sha256": "db2a6ab2a0b7f3b52cc9260604ea1cea7503af6c581a598fc253b2a112fe57b5",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k24.csv": {
+      "sha256": "381d03a0b093fb6e83f2c2bc8d5672a9b3e23b071058100347b49439541f1ebb",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k32.csv": {
+      "sha256": "0bec2aaba004762a419b082df9ba58be43cd6a8c35331f26ff55764eccf3dc7b",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k4.csv": {
+      "sha256": "48dc2bd17c67bfc2ffea29524871d04f816079a183ee4081d2329451988af09e",
+      "bytes": 188930
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k6.csv": {
+      "sha256": "3ac11cf41f8f562454500ad44e936893da8d6c3c662d93b62fec8b1ab565c30b",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride512_k8.csv": {
+      "sha256": "a77b8fc07b2f3a0fb5faea970f14282d0552f7643db711569b4063ff7673eb21",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k10.csv": {
+      "sha256": "c8aed4ba4193563a602b7157eefaff9ee323f05e90c5514051f9b8ee61cc0e96",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k12.csv": {
+      "sha256": "71125a70923017c2b52b235b5ba5012c895f95b9f3b58e9cb7798d4d20a9023b",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k14.csv": {
+      "sha256": "7d4cb855ba2c11dbe072d3597911c8fb632e74bb510c24d6154bb9596c3e458f",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k16.csv": {
+      "sha256": "e4171e8b38d42c4ce01e75d43909bbcb5d4fbd070951197c28c4f9118580128d",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k2.csv": {
+      "sha256": "a7e550aafb3dfc0903301e155abe947ffb97e23497a1eca64b00abd6f14fec0a",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k20.csv": {
+      "sha256": "225ba284c604759c5231ca915687c6fa927d517525e85482b710b84be3987325",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k24.csv": {
+      "sha256": "9559456f176c0712ea2fb8aba724c7d0180f355fbf4d83cbfbd170072921c57a",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k32.csv": {
+      "sha256": "5915a67d2965183e6789751bb232f19db8bb88ab446d13501e38cbb53aa2c0b1",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k4.csv": {
+      "sha256": "c3faa0feffb399495e489ea637aff46e2275d0f48c8498d2958b42680e8f1586",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k6.csv": {
+      "sha256": "6d49392a7795ed3dbcedacba60052bc037c2ee4ab5b6e7be91f57a1698e9d315",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict/stride8192_k8.csv": {
+      "sha256": "384660ddb8dad23ebf3b6cb6f32c9e5911c3bd980925beaf43b3723f30a736ab",
+      "bytes": 188928
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/find_conflict_summary.csv": {
+      "sha256": "34fc2fe9c28350a20b3bcc681354542a27ce133e33dd17a4a7d730de9a485614",
+      "bytes": 945
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/inclusion_report.json": {
+      "sha256": "bf0abaeb3dbd76d8e159aad0615be4b62f642172f0e00413b7e3c6da2684c43e",
+      "bytes": 497
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/inclusion_summary.pdf": {
+      "sha256": "08484d266f48e9ffc51d49e899cd9a2a4c5fa07114f659eaff45995d297f9585",
+      "bytes": 20795
+    },
+    "timing-only/inclusion/data/thunderbird/raw_data_inclusion/artemisia/inclusion_trials.csv": {
+      "sha256": "056eee2129b602ee3ca8081e6b2518cbff4953ef591bd64eda03e3e67a3618d3",
+      "bytes": 877844
+    },
+    "timing-only/inclusion/results/thunderbird/figures/all_machines_evidence_grid.pdf": {
+      "sha256": "d95bdddba3ac281f85763e6b92c8bdaec2e4d5a1a1d32741639c2299270a3e9d",
+      "bytes": 14004
+    },
+    "timing-only/inclusion/results/thunderbird/figures/artemisia_evidence.pdf": {
+      "sha256": "8909d2d9d0d8d23ab1791f45cb2d5e26ae8cc6ed14b45367471c2ef9964806eb",
+      "bytes": 25468
+    },
+    "timing-only/inclusion/results/thunderbird/figures/methodology_diagram.pdf": {
+      "sha256": "926a2971fc26e8f6ae00bbb7768293fe5e8956cd41805c42af62dfb2364368c3",
+      "bytes": 39907
+    },
+    "timing-only/inclusion/scripts/make_report_figures.py": {
+      "sha256": "8ba521e98243686be0432ef98a5c286d8fe2dcf33f7abcff16d6ffc23ceb232e",
+      "bytes": 11511
+    },
+    "timing-only/inclusion/scripts/run_inclusion_experiment.py": {
+      "sha256": "2dca592e19232e6682a56f2076d9e06bc8f788ba9eac10e16c02549ce37901ca",
+      "bytes": 19072
+    },
+    "timing-only/inclusion/src/inclusion_bench": {
+      "sha256": "56ad8c2db7cbf989d2e756f96f52384de1d73472fbc3ff91c2696685909ab12e",
+      "bytes": 256264
+    },
+    "timing-only/inclusion/src/inclusion_bench.cpp": {
+      "sha256": "a923a27483c5e4b5772ec62ef1b14eb99d58f7449f25ed48526e1d88fc88c209",
+      "bytes": 21370
+    },
+    "timing-only/latency/Makefile": {
+      "sha256": "580dba2b0895ba4a7e6e4c66f619c0ca4c76308834468f4c7ca3752da0b7ca49",
+      "bytes": 697
+    },
+    "timing-only/latency/README.md": {
+      "sha256": "54b3956efd0c19d31635584c90fcdcc296af334088c6434fb6c5d2a1da572d5b",
+      "bytes": 10105
+    },
+    "timing-only/latency/configs/thunderbird.json": {
+      "sha256": "647e593c33ecd42bdabf4c5e4d159a6eeb76bee9b84b15b0f0c9daadc49ec0ac",
+      "bytes": 4223
+    },
+    "timing-only/latency/data/thunderbird/latency01/build.log": {
+      "sha256": "125edb818ab90fb2d8a6cf9dce3422901219e77b22aa6334462f2379056ab5ab",
+      "bytes": 230
+    },
+    "timing-only/latency/data/thunderbird/latency01/commands.txt": {
+      "sha256": "74d908329ee48224117fb2b8ec6b660979340c1cccdc63e12fff6f9544e18210",
+      "bytes": 7705
+    },
+    "timing-only/latency/data/thunderbird/latency01/config.json": {
+      "sha256": "647e593c33ecd42bdabf4c5e4d159a6eeb76bee9b84b15b0f0c9daadc49ec0ac",
+      "bytes": 4223
+    },
+    "timing-only/latency/data/thunderbird/latency01/disassembly.txt": {
+      "sha256": "b9f34187a0d9519c9bda8c55a7ffba77cc769488864805354997453f65f66c5d",
+      "bytes": 65902
+    },
+    "timing-only/latency/data/thunderbird/latency01/environment.json": {
+      "sha256": "cd31cfc0ed3cdf7ad32135c94cdfcb3ef12de5311b27fe95113df313c38e7bea",
+      "bytes": 1691
+    },
+    "timing-only/latency/data/thunderbird/latency01/latency_bench.bin": {
+      "sha256": "d3c308e0327d384a7d51bdbd82f1da96c15a533622651f7767d8f69d60c8c011",
+      "bytes": 88392
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l1_independent.json": {
+      "sha256": "d5f2ced3ed97bf38c8d62044d6a2ca197aa32e799c5371bc396ada0118658cbf",
+      "bytes": 3568
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l1_independent.txt": {
+      "sha256": "22e732b96d312b78e39414a4dbc9bae65e38c30fce856ae5d61103f6efda68a8",
+      "bytes": 589
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l1_long.json": {
+      "sha256": "eeb828dc9faba18bb9e1047af2f9e67ad28f45dafd525a10ad1ba2f37c2b8a39",
+      "bytes": 3588
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l1_long.txt": {
+      "sha256": "18c5953ec68e4244d1a0b00138530b5a219f4f7460cba7e6cd03acd81b40fb40",
+      "bytes": 584
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l1_sequential.json": {
+      "sha256": "189617b336bf2556ed6e60b4862889698ac7df4a9a14bb553ab0f288ec4e1668",
+      "bytes": 3570
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l1_sequential.txt": {
+      "sha256": "4fc5a5c82e65b879dbe3312cfb3efdcafdf59f453ead168f82f5049c37c70b37",
+      "bytes": 586
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l2_independent.json": {
+      "sha256": "77a72a17ea9b2aa9bf17a0c837b69815f6e096b6950b49265a4996276a4e9c23",
+      "bytes": 3583
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l2_independent.txt": {
+      "sha256": "f92da92ddd9d4ee0a8c58d1cc5f738a48e4d59aa85ecdb507c4631eaa133ea9a",
+      "bytes": 590
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l2_long.json": {
+      "sha256": "9e38749e30b9afd03bc9d6a6581231b93ff910b355a5c6a5467db77b69a36ddc",
+      "bytes": 3568
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l2_long.txt": {
+      "sha256": "1d40893c476bc0e0b0fe5a2b226ad72ac4e39db823851cbf806feb12971fd8a3",
+      "bytes": 583
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l2_sequential.json": {
+      "sha256": "c96867d5922fa725cb7092072934f4b965e9e7cd1043b10ca2f7eb53f13d415c",
+      "bytes": 3559
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__l2_sequential.txt": {
+      "sha256": "b8d41fe9352a064dbe734cab7085cb38528daa0bcdeddd2ed38a7d7cef767fde",
+      "bytes": 589
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__llc_independent.json": {
+      "sha256": "2a9a32446b301d87d8acea70508cc11ff46737b4f3f94bfbfb27504e299f9136",
+      "bytes": 3589
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__llc_independent.txt": {
+      "sha256": "0dec94203fbf4279bfad10847a2e5a8e42b0d52d44225d9752b2011e0c8b63e4",
+      "bytes": 596
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__llc_long.json": {
+      "sha256": "0bfefc28dfcce7b6d721624a361041175bd5553249f133a16ac363218e49ba92",
+      "bytes": 3595
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__llc_long.txt": {
+      "sha256": "7d5d9e724b5c9115cc81737fc7e27ef2123d0a208188ffffb6657bb0180ba921",
+      "bytes": 591
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__llc_sequential.json": {
+      "sha256": "bae5e7e4f75c04083ba0f16605dc66f7109c2125676e420cb5c7c48b2ff0656e",
+      "bytes": 3577
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__llc_sequential.txt": {
+      "sha256": "6341cba2a5a601e0701a5ec2892c2cd715bf238aefd55a2492f89e9987543786",
+      "bytes": 596
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__memory_independent.json": {
+      "sha256": "802cd2e35f36af9310df1522e243684b0a563775cf5694d1810fb09a7ea530e6",
+      "bytes": 3597
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__memory_independent.txt": {
+      "sha256": "6a04c939d23a42bea1e8453089aed7cf045c13635912eaf827029076b269d76a",
+      "bytes": 606
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__memory_sequential.json": {
+      "sha256": "09a002a9f834bfd594c169218c740c85d249365a52d39c8e9243c4de964d12da",
+      "bytes": 3562
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__memory_sequential.txt": {
+      "sha256": "1e2003027294596b3d208849865d139d68c00af035695373f73c57d2e7b64931",
+      "bytes": 605
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__timer.json": {
+      "sha256": "4407434723a4dd278474f40869dab77993d781d9a414674ef2ddce4371921cbc",
+      "bytes": 3392
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/calibration__timer.txt": {
+      "sha256": "9cb3c7c077c900266d8c297a27c0bef5b3bbe7f030f618df1a9814cc6ca6eac7",
+      "bytes": 581
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_hit__alternate.json": {
+      "sha256": "d01641ea79a5d1d57e89b491ead485bd57d217c7d216569b77b25620141767a8",
+      "bytes": 3528
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_hit__alternate.txt": {
+      "sha256": "3cca0c0ddf43f8c3729a8e02ea958086a3e09548f3e2c69ecf5f205128b3c8ce",
+      "bytes": 581
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_hit__primary.json": {
+      "sha256": "9de0acbdc4fc1af0c357ce6d03296788672cc3dd1f986db34b5d9428d8e1638f",
+      "bytes": 3522
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_hit__primary.txt": {
+      "sha256": "90502bedb3b5a4a5fe70dfff3064481bc6f19f40b8be4af5ba66cc3ceb0baf9f",
+      "bytes": 583
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_hit__repeat.json": {
+      "sha256": "d51fac93d47355070141f2963b2b622d7865dd7ebf52ef1953257740982a7b09",
+      "bytes": 3525
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_hit__repeat.txt": {
+      "sha256": "e62450bba3c19da907db0b7b528315985514a5cfaee90744223fe37a357697d9",
+      "bytes": 583
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_miss__alternate.json": {
+      "sha256": "b9638706056c97c46e182368703c24a381da16edd01418fb62f73708e66905b1",
+      "bytes": 4848
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_miss__alternate.txt": {
+      "sha256": "95f2220b1deeaede8309a97fbca75adeaa947c1f68cf48813aaff09fcecf78a6",
+      "bytes": 585
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_miss__primary.json": {
+      "sha256": "2ce323e88e9be4069d6f20e00fd7fcf74d619698a508aadf980f5ab76f8a674f",
+      "bytes": 4834
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_miss__primary.txt": {
+      "sha256": "32ecfd93a76c642ee15b0a6fa5a9d9d94133a766f32691673bc02d6aee3dd87c",
+      "bytes": 583
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_miss__repeat.json": {
+      "sha256": "648561de4dd385d9c644670a2ac9566da642d0418d66ea99434ac262a87e3ae2",
+      "bytes": 4831
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l1_miss__repeat.txt": {
+      "sha256": "51bb525943a87918495b04669250d3f8e197581eeb57bc0f6aeea2132e26ec13",
+      "bytes": 585
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_hit__alternate.json": {
+      "sha256": "2b0ca0bb9f3012aab3984d506681aac7d6f914c0c59720bf4d209216b3732008",
+      "bytes": 3521
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_hit__alternate.txt": {
+      "sha256": "13831605147afd03f620eba8b304e27c6914c2fdc271fe4a28938234e544ebb3",
+      "bytes": 584
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_hit__primary.json": {
+      "sha256": "561251cf9dbcb1ce460636fdf66bc47ba69ddabd8e73e0d35958c2473ed2390e",
+      "bytes": 3521
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_hit__primary.txt": {
+      "sha256": "44f42d4f0893d67bdad2fe97beca1ff5b48e64704459bb1438afa983cfc7ea81",
+      "bytes": 584
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_hit__repeat.json": {
+      "sha256": "d0d4c10480bf56d4e675bacc49e661b0a3d0be515386ae88376d6c2bc77c9dc3",
+      "bytes": 3513
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_hit__repeat.txt": {
+      "sha256": "32b5297f004f6f776026d4bc156c795e37d9b08d61f33e3ec9e0b9131b3fc3e3",
+      "bytes": 584
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_miss__alternate.json": {
+      "sha256": "e27a29c28ba30c158ebd68d4c55409365bd602c1f2693245ed5ae48e92fe9599",
+      "bytes": 4832
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_miss__alternate.txt": {
+      "sha256": "e3eeafc45f7ad4b4cc16540981c6e3eaaef6c0bb7acd6bc6ae4bd019ad3fe553",
+      "bytes": 591
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_miss__primary.json": {
+      "sha256": "eba85ae621a19032a391c5a842b46755bdd91f7d4ab6c21405fe7e26251fe1a4",
+      "bytes": 4823
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_miss__primary.txt": {
+      "sha256": "b6f332f95a2609f8ff6d81000b1c4915eeb994e9894eb120b7b1330ab5c259fd",
+      "bytes": 591
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_miss__repeat.json": {
+      "sha256": "20d2f3504a2a02ee1c3488b51f90d4eafe3badbe2239fcf8564cba24e54b9bd0",
+      "bytes": 4826
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/l2_miss__repeat.txt": {
+      "sha256": "f0ac5a8c40222c68766b5468b6d7d9b8628a375c3d640a85a14f3e8be6203700",
+      "bytes": 591
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_hit__alternate.json": {
+      "sha256": "3aa7518786aa47dd34599ef73499fb17c8bcdbf0c4512597851e061ec2e0633e",
+      "bytes": 3534
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_hit__alternate.txt": {
+      "sha256": "907bf2127bc709ab728019fb94e48635e62903aa524efe2605f2e4a0ce839779",
+      "bytes": 590
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_hit__primary.json": {
+      "sha256": "dc66d7b26716420548393a98bd9fce92ff49228ab2859d6c90e4eae1271f9441",
+      "bytes": 3520
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_hit__primary.txt": {
+      "sha256": "3a83148825149de9c7ec26e4a7d8a66190fc8b3c908e1c8fb05ab488e42d168b",
+      "bytes": 590
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_hit__repeat.json": {
+      "sha256": "9cd017e404193ab083cefd2dc4c87290183b3d9c62878288f8abefcf7f606ebb",
+      "bytes": 3521
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_hit__repeat.txt": {
+      "sha256": "420a53974dc5ad17d99ea9540325d58c10fae8aed3615430ca802c2b5cb3c319",
+      "bytes": 590
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_miss__alternate.json": {
+      "sha256": "924c93e08ad31370306e80dcc727c8505d9b0ffd3da78f4e7f36489fcbafa53a",
+      "bytes": 4834
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_miss__alternate.txt": {
+      "sha256": "2d60ac8cb39749016007666f7d25dc02059803efadb63d8ecc944fa649c2a16b",
+      "bytes": 608
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_miss__primary.json": {
+      "sha256": "7b7b6593a5265b790006a41f38c0dd9c9cddcb320f8d3678432cabaa375441a3",
+      "bytes": 4803
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_miss__primary.txt": {
+      "sha256": "4180eb9df1ffcdd6a78f32e3f1cf784fd2bd0eede63ffa29cabe20829ab5d3d0",
+      "bytes": 602
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_miss__repeat.json": {
+      "sha256": "f91a4a66788a456f6a4e1bea8278311d0f6ad3db6ac50f920e8ff48a056ebc61",
+      "bytes": 4784
+    },
+    "timing-only/latency/data/thunderbird/latency01/logs/llc_miss__repeat.txt": {
+      "sha256": "319706dba89a0910dfa0401542b62ac23389ff47bd75a748729b240f8e189c7a",
+      "bytes": 601
+    },
+    "timing-only/latency/data/thunderbird/latency01/manifest.json": {
+      "sha256": "2002a0f377c7462149977988a12c889dd44f5fff0522f169b16a175f1cc56e13",
+      "bytes": 26924
+    },
+    "timing-only/latency/data/thunderbird/latency01/preflight.json": {
+      "sha256": "2b506037dc21741c2ac472616a6b024befa22280ce826598a4c55cf33be8fd32",
+      "bytes": 1690
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__l1_independent.u64.gz": {
+      "sha256": "de868be09c9499a7f11eedb3a28f4bdd87c2366beb93a310676607da446a31c4",
+      "bytes": 102058
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__l1_long.u64.gz": {
+      "sha256": "818a9156fa74bf9799e30775deef9402cc78256a1008638b9ca9e742f69ec348",
+      "bytes": 120181
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__l1_sequential.u64.gz": {
+      "sha256": "4ab9aee653f98a9530a9753f95ad8a530d8d5e907ce6177fc75b379cc44e762d",
+      "bytes": 109359
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__l2_independent.u64.gz": {
+      "sha256": "291ae52dbbc7882f14221b36ce2012fcba678a3f19d16998cd82c8eaf129a761",
+      "bytes": 205791
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__l2_long.u64.gz": {
+      "sha256": "d2db32ab02e080a8aa0ccebb368a0aeed5ff519123bae023f3974252344471be",
+      "bytes": 131817
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__l2_sequential.u64.gz": {
+      "sha256": "9df58720b8c334abbd1fee0f2b91f685a46ebff1be0e2156526e9676d2d9930c",
+      "bytes": 181016
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__llc_independent.u64.gz": {
+      "sha256": "fb3aad13ad3c00a2be1178fab7993091dd194bb0d7ffb69979406c8ccd84e1c7",
+      "bytes": 400295
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__llc_long.u64.gz": {
+      "sha256": "526b3b1e01ee81333ceebb599521eaa44a9facb38a391025a37eba336b9c65fe",
+      "bytes": 468983
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__llc_sequential.u64.gz": {
+      "sha256": "1dd4b3d123b14717e99489000ae39b804d0ab901336f563556a880a5297e0282",
+      "bytes": 236169
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__memory_independent.u64.gz": {
+      "sha256": "371a2ec87e10ad3aa4eabc289fe416e00fafe80e4f4adec4ff120eaa69827a04",
+      "bytes": 998282
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__memory_sequential.u64.gz": {
+      "sha256": "ca53472598ead5e08c4430ea20b0c81a28ddc5dc06a458587547b541c751e4ac",
+      "bytes": 586622
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/calibration__timer.u64.gz": {
+      "sha256": "d8bd2d77bb534221be67b37418120276c56a13e12242713d8168244172a5e177",
+      "bytes": 178151
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l1_hit__alternate.u64.gz": {
+      "sha256": "e7d3e1601adff0ce1d76e8533339b9f88bc881e5cd0b50a181af283b6dfe0e49",
+      "bytes": 112052
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l1_hit__primary.u64.gz": {
+      "sha256": "40461c5754db338015eba6f21fdbf127db4a2795dfb19839ccf4e66771aac3e6",
+      "bytes": 111467
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l1_hit__repeat.u64.gz": {
+      "sha256": "d4aef26effae542225f9eb6c07ca85b68a7a4f783e5e130d7c741a8cd3e7c21c",
+      "bytes": 111058
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l1_miss__alternate.u64.gz": {
+      "sha256": "5b6b496b22f4f27b28f9959051a944d86580919e81aa1b9ffac5b8bf0e1bbcb5",
+      "bytes": 463480
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l1_miss__primary.u64.gz": {
+      "sha256": "9116f77760e20b1d1ed8e605f9dbf20a4333eda768e3752ea0aeda655a97206a",
+      "bytes": 397108
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l1_miss__repeat.u64.gz": {
+      "sha256": "6a3224790f76a962a678be11979d5a851bbcde67ae8e326bc2a2c94d318cf913",
+      "bytes": 433636
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l2_hit__alternate.u64.gz": {
+      "sha256": "017c2d371fd59c23f557cdf8467d580ca7725de32d5da867750aa8852b428506",
+      "bytes": 176489
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l2_hit__primary.u64.gz": {
+      "sha256": "d9156da481a6a2bc6d6dda1cc286fa85c22503b23cf391fe2cb5a4573b73f83b",
+      "bytes": 165585
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l2_hit__repeat.u64.gz": {
+      "sha256": "eaac4398f7a7a5b87b7f0013303df5e97c2d06bdbf54b80cda12f342db35c76e",
+      "bytes": 164522
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l2_miss__alternate.u64.gz": {
+      "sha256": "b60c8432afe24f4e358458dbaa88b56869403712e9af58e6ced294ff0c7ddd03",
+      "bytes": 1005092
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l2_miss__primary.u64.gz": {
+      "sha256": "dc024491310f449ffa6a69baf2fbf58f2565245694d27fb9e4074f94446993b1",
+      "bytes": 925571
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/l2_miss__repeat.u64.gz": {
+      "sha256": "d4ec2bfbd030c4321ef2ed73929b03bd5ecff470e74de2d8023b92b9c439ba72",
+      "bytes": 920952
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/llc_hit__alternate.u64.gz": {
+      "sha256": "11fdfa4198eeaccfb9940003c5ac3b7fdb8f110b377b436ad81a17881e859cdd",
+      "bytes": 548948
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/llc_hit__primary.u64.gz": {
+      "sha256": "b576c80be6e682670905042eb2ac0f0df5217cd3d43abe666380353a3bc8d898",
+      "bytes": 474701
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/llc_hit__repeat.u64.gz": {
+      "sha256": "b6a42b29e261a95c90b97aeff2f7d3196a3833c38ab489a49a6f32780d251c80",
+      "bytes": 479797
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/llc_miss__alternate.u64.gz": {
+      "sha256": "84fbcad45668422341fc787086e7668e43b6900d3e2ed46bb1437c1aa989307a",
+      "bytes": 1720896
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/llc_miss__primary.u64.gz": {
+      "sha256": "ce11b42eed5fc573759df37f59578f64903ededc6d8f062d214d783a8908b12a",
+      "bytes": 1749872
+    },
+    "timing-only/latency/data/thunderbird/latency01/raw/llc_miss__repeat.u64.gz": {
+      "sha256": "913d9f45c829038ed2544707443f274c8f7b92edda2e74c42a952bc30a6e2307",
+      "bytes": 1752199
+    },
+    "timing-only/latency/data/thunderbird/latency01/source/Makefile": {
+      "sha256": "580dba2b0895ba4a7e6e4c66f619c0ca4c76308834468f4c7ca3752da0b7ca49",
+      "bytes": 697
+    },
+    "timing-only/latency/data/thunderbird/latency01/source/README.md": {
+      "sha256": "55aeafbcc3310d5aeca289876d2879eb9bb4189dd8e19e2f2089d6038622d3ff",
+      "bytes": 9592
+    },
+    "timing-only/latency/data/thunderbird/latency01/source/requirements.txt": {
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    "timing-only/latency/data/thunderbird/latency01/source/scripts/analyze_latency.py": {
+      "sha256": "b2d9d9336612146e7a373925b6d3da371c5efd7a0e8e05b2a3d74aee4878b6bf",
+      "bytes": 14136
+    },
+    "timing-only/latency/data/thunderbird/latency01/source/scripts/common.py": {
+      "sha256": "bacb509745fc0a41c8c00d5cb946e279ceb8887c465c5d263702452942908e86",
+      "bytes": 6074
+    },
+    "timing-only/latency/data/thunderbird/latency01/source/scripts/run_latency.py": {
+      "sha256": "36882314f22a52d2c29ae7afaf8e9654cb3ded6c968311a622ce4ea6808681ba",
+      "bytes": 11366
+    },
+    "timing-only/latency/data/thunderbird/latency01/source/src/latency_bench.c": {
+      "sha256": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+      "bytes": 10981
+    },
+    "timing-only/latency/data/thunderbird/latency01/source/src/timing.h": {
+      "sha256": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093",
+      "bytes": 1853
+    },
+    "timing-only/latency/data/thunderbird/latency01-audit.log": {
+      "sha256": "132a553d8794013787bd1feae47736667ef72919795dca8f44cd2c2e323012ac",
+      "bytes": 1622
+    },
+    "timing-only/latency/data/thunderbird/latency01-driver.log": {
+      "sha256": "f8c3ee48dc3e75f69efabca4e98318c57176676883cb5f3a739a8962e8f6094a",
+      "bytes": 2974
+    },
+    "timing-only/latency/data/thunderbird/preflight/audit_completed.py": {
+      "sha256": "962d22b4243b26cdc499e21424042f3805e4244c760f6b28daf139438314441c",
+      "bytes": 3653
+    },
+    "timing-only/latency/data/thunderbird/preflight/build.log": {
+      "sha256": "125edb818ab90fb2d8a6cf9dce3422901219e77b22aa6334462f2379056ab5ab",
+      "bytes": 230
+    },
+    "timing-only/latency/data/thunderbird/preflight/capacity_inference.json": {
+      "sha256": "838b1e9c00736989d0f0a2e4e027079eef711b3866f21bae6f719a7f5c2aea0e",
+      "bytes": 2756
+    },
+    "timing-only/latency/data/thunderbird/preflight/check_native.py": {
+      "sha256": "5f80208c32f3592b6cf5c10ab19c00d211726c818428889edb3d0da9f9704555",
+      "bytes": 2768
+    },
+    "timing-only/latency/data/thunderbird/preflight/native_checks.json": {
+      "sha256": "3a3e71c74814507c5ef693a9b8f7bfe69bf770f5935bc50e4a7e766dbe1feab4",
+      "bytes": 8092
+    },
+    "timing-only/latency/data/thunderbird/preflight/native_checks.log": {
+      "sha256": "d5f8f381d2ef9ec3aaa151990b506ff05d7b5b51a478e1e2de1999883cc5b3f0",
+      "bytes": 360
+    },
+    "timing-only/latency/data/thunderbird/preflight/original_files_sha256.json": {
+      "sha256": "f3f6cf6e514462a7ba0ca9c793f4a5d0a5be78fc70a4110fa2af302e55b4f364",
+      "bytes": 18411
+    },
+    "timing-only/latency/data/thunderbird/preflight/plan.log": {
+      "sha256": "44862457680a3ae396142590b4c5293be5b0e75c16cc6823c71e8984a7e1d26b",
+      "bytes": 4250
+    },
+    "timing-only/latency/data/thunderbird/preflight/short_batch_resolution.json": {
+      "sha256": "14d05f79063fdd42882c0524b7315baed7f2ad3d66fa46ca082c338f4e688899",
+      "bytes": 1589
+    },
+    "timing-only/latency/data/thunderbird/preflight/short_batch_resolution_test_cpu.json": {
+      "sha256": "1e067e23b183d29e2176cce0337e9c429894df14b41a9b0000fd5db5d2ac866f",
+      "bytes": 1706
+    },
+    "timing-only/latency/data/thunderbird/preflight/source_before/tests/test_latency.py": {
+      "sha256": "689d05f75f0c292906754b9d00b36081fd3fb2ea300a6e384e1691a11f58febb",
+      "bytes": 3956
+    },
+    "timing-only/latency/data/thunderbird/preflight/tests.initial.log": {
+      "sha256": "e1dc67517bc87c2754c03df6d1e0e1bfb81c38fa5639e8ad8c1159e72ed53361",
+      "bytes": 1272
+    },
+    "timing-only/latency/data/thunderbird/preflight/tests.log": {
+      "sha256": "b78799e236667ebea8723945c2cab9ea194607b1f9a19e777ead189dc017131d",
+      "bytes": 568
+    },
+    "timing-only/latency/data/thunderbird/preflight/time_batch.dis": {
+      "sha256": "f86cf792dfacdcbeda56e5a09a03858d2fe00e32b0f598d99c5d781daf33b891",
+      "bytes": 1589
+    },
+    "timing-only/latency/data/thunderbird/preflight/time_independent.dis": {
+      "sha256": "83169beb67f4d33fdcc5fcc3278799c2cd0e386479dcd8e4c1c17d346a681285",
+      "bytes": 2545
+    },
+    "timing-only/latency/data/thunderbird/preflight/w4194304_chase_b1024_huge.log": {
+      "sha256": "7945d19e5c9bb35b542325c7000e8a5aa91afc3a3b3561668f33797334217917",
+      "bytes": 589
+    },
+    "timing-only/latency/data/thunderbird/preflight/w4194304_chase_b1024_huge.u64.gz": {
+      "sha256": "3ef7ae27bb2e77ca6e8a382d7548e4ee348eadd48f4e7a305da8d353e7a3b131",
+      "bytes": 5422
+    },
+    "timing-only/latency/data/thunderbird/preflight/w536870912_paired_b256_huge.log": {
+      "sha256": "e305f122f944eb1b8f3ee54359761fba8abc760c3f22678e0c643a9a06470521",
+      "bytes": 605
+    },
+    "timing-only/latency/data/thunderbird/preflight/w536870912_paired_b256_huge.u64.gz": {
+      "sha256": "8212ac44e5fa54005089f9c12c461d44593ec2d94a4fb42e3d0ece82eed23a6c",
+      "bytes": 15640
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_chase_b256_huge.log": {
+      "sha256": "fc0302c7816f987b78d443a4ac0729d900ff50520f98fe87a0f1ba5922ded503",
+      "bytes": 580
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_chase_b256_huge.u64.gz": {
+      "sha256": "b53dab775c6cd9dae87614fc6529bb0b49e6a4c15f965948b967e62632e88d0d",
+      "bytes": 2230
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_empty_b256_huge.log": {
+      "sha256": "18891e48a0d832837d0b9baf783d67f9e7729222dfde70621ce8c3c4509df345",
+      "bytes": 579
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_empty_b256_huge.u64.gz": {
+      "sha256": "3fa47f2f4270de946d605ebabeacba1586d3e0ceae5946ff678dfcc1d1a5bbac",
+      "bytes": 547
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_independent_b256_huge.log": {
+      "sha256": "5e8b051f30f4b9dbccc617734bf50caaca03f7c5fee833fb2d060fc1cbd3d0ed",
+      "bytes": 585
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_independent_b256_huge.u64.gz": {
+      "sha256": "c98648e26dd692cb23138c255b35e5f6bea3393cc3d3a9f8e140d856aabaa4f3",
+      "bytes": 1991
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_paired_b256_base.log": {
+      "sha256": "5a1ead5795eccd1ba5831c32408ca2d43490694b083d4cda0d99808f33c5a2fd",
+      "bytes": 573
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_paired_b256_base.u64.gz": {
+      "sha256": "6c039f09e327f4555b2f32eb6d65f8ac45ba6bc6f9e81852124c77611baa018b",
+      "bytes": 3716
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_paired_b256_huge.log": {
+      "sha256": "c70617f4f41c461d0cf0684e3a52f53ebeda02dc2971d57badc8d31f0a377bcb",
+      "bytes": 581
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_paired_b256_huge.u64.gz": {
+      "sha256": "d77fa86e4d630588737cf766339e43b9f8da5a2d79669b0d1c04fe2b2563eec4",
+      "bytes": 4088
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_sequential_b256_huge.log": {
+      "sha256": "4e959417d840268b36d894d878bda4e556a4305d43e2685fcbf49f2fa6d2630c",
+      "bytes": 584
+    },
+    "timing-only/latency/data/thunderbird/preflight/w65536_sequential_b256_huge.u64.gz": {
+      "sha256": "b2cee74f16e8f046f84941fe9eaf676209728fafc8c978047354339d4c4dad1b",
+      "bytes": 2671
+    },
+    "timing-only/latency/requirements.txt": {
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    "timing-only/latency/results/thunderbird/latency01/RUN_NOTES.md": {
+      "sha256": "ce273a69fcd51f19c1f346c0a49fa2877ce64afbb7e8921292955fc0d15ce297",
+      "bytes": 9504
+    },
+    "timing-only/latency/results/thunderbird/latency01/analysis_source/analyze_latency.py": {
+      "sha256": "b2d9d9336612146e7a373925b6d3da371c5efd7a0e8e05b2a3d74aee4878b6bf",
+      "bytes": 14136
+    },
+    "timing-only/latency/results/thunderbird/latency01/analysis_source/common.py": {
+      "sha256": "bacb509745fc0a41c8c00d5cb946e279ceb8887c465c5d263702452942908e86",
+      "bytes": 6074
+    },
+    "timing-only/latency/results/thunderbird/latency01/analysis_source/run_latency.py": {
+      "sha256": "36882314f22a52d2c29ae7afaf8e9654cb3ded6c968311a622ce4ea6808681ba",
+      "bytes": 11366
+    },
+    "timing-only/latency/results/thunderbird/latency01/contrasts.csv": {
+      "sha256": "39494b4916fb4ce2678c0adec889fd8b4989a31626209657e815b6bbe0a4e66b",
+      "bytes": 1572
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/first_and_reread.pdf": {
+      "sha256": "80dc2da97f9063b541f646791a641ae314f808a1ae6a5b4bd622eed284e088cf",
+      "bytes": 14506
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/first_and_reread.png": {
+      "sha256": "eb0409d06047526fa5f3221d87e869f0c0ffc40925b43962f7044d985fd176a7",
+      "bytes": 63295
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/method.pdf": {
+      "sha256": "1fb5e4911a1bf735c3730a4d4dfc074e9cbd25b7b050dca8de411a3584669bf5",
+      "bytes": 14975
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/method.png": {
+      "sha256": "2cda7d3c01e2513c023314c578b6fcade2a26d3a9f4f3ef576645e0d58a546cd",
+      "bytes": 79909
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/method_controls.pdf": {
+      "sha256": "48c506fd6aef665bf823c089d32076e8969ad7a59fdb2b6485442f87c494d6a2",
+      "bytes": 13702
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/method_controls.png": {
+      "sha256": "b6884985b1af37ca0262ceab622e7fc1b9e26fff4902604bd8bf7818961a0c37",
+      "bytes": 64946
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/resident_distributions.pdf": {
+      "sha256": "904fdc917f1a064f5ed3d40eea1d60c802eef24dc861321a854bb2d9c820f888",
+      "bytes": 12284
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/resident_distributions.png": {
+      "sha256": "6a5326c1685ffa18030382921f1bb58b1e6ddc738e2c6395d1da9a85d1844f4e",
+      "bytes": 74288
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/temporal_stability.pdf": {
+      "sha256": "ba6e1b12ad41bb454f8cc6cac16ab6545fcc26e9d051178ae3609fc21a4a8129",
+      "bytes": 15692
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/temporal_stability.png": {
+      "sha256": "ad2d7bf70cdcd3857df34bff3f065da7c3e42efcb444f221ae9c1c87490ec51b",
+      "bytes": 49679
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/timer_overhead.pdf": {
+      "sha256": "0566d2e917a69829cb1ae89f446c4a1890209d4d362fbc09895deeb6b7da586d",
+      "bytes": 11354
+    },
+    "timing-only/latency/results/thunderbird/latency01/figures/timer_overhead.png": {
+      "sha256": "2b438c182c1749863f6ff6dd080d341134a73c60339276019f6c033caea87ae7",
+      "bytes": 23837
+    },
+    "timing-only/latency/results/thunderbird/latency01/latency_estimates.json": {
+      "sha256": "1c2b61b8be5351ae226d244eb233d687d352e88b31e2609510fba6e3aebbf299",
+      "bytes": 11749
+    },
+    "timing-only/latency/results/thunderbird/latency01/provenance.json": {
+      "sha256": "89c4fef8375d0f37b3402c1db616e46ad73036595cd1ad56dafb4afba1b2fd18",
+      "bytes": 3660
+    },
+    "timing-only/latency/results/thunderbird/latency01/quality.json": {
+      "sha256": "f5534d87d60bb64791529c02b2efd6a95ff0d7b48437d608a6ca36a8a1227625",
+      "bytes": 61308
+    },
+    "timing-only/latency/results/thunderbird/latency01/run_audit.json": {
+      "sha256": "132a553d8794013787bd1feae47736667ef72919795dca8f44cd2c2e323012ac",
+      "bytes": 1622
+    },
+    "timing-only/latency/results/thunderbird/latency01/summary.csv": {
+      "sha256": "8d267c1bf423aef122cea9e568a7a24a7f73691434b4e6b725e4192e8cc8b726",
+      "bytes": 14243
+    },
+    "timing-only/latency/results/thunderbird/latency01/temporal_medians.csv": {
+      "sha256": "a8dffb2ffeaef0a6ab70729e1fa2c35e5ff34ff0bcfac64b85e8c663935e5ef1",
+      "bytes": 19327
+    },
+    "timing-only/latency/results/thunderbird/latency01/validation.json": {
+      "sha256": "8b277bcdc14a558f410b958c9a7542f4817ce707214157dcd80edcffdfa5d1c4",
+      "bytes": 380
+    },
+    "timing-only/latency/scripts/analyze_latency.py": {
+      "sha256": "b2d9d9336612146e7a373925b6d3da371c5efd7a0e8e05b2a3d74aee4878b6bf",
+      "bytes": 14136
+    },
+    "timing-only/latency/scripts/common.py": {
+      "sha256": "bacb509745fc0a41c8c00d5cb946e279ceb8887c465c5d263702452942908e86",
+      "bytes": 6074
+    },
+    "timing-only/latency/scripts/run_latency.py": {
+      "sha256": "36882314f22a52d2c29ae7afaf8e9654cb3ded6c968311a622ce4ea6808681ba",
+      "bytes": 11366
+    },
+    "timing-only/latency/src/latency_bench.c": {
+      "sha256": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+      "bytes": 10981
+    },
+    "timing-only/latency/src/timing.h": {
+      "sha256": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093",
+      "bytes": 1853
+    },
+    "timing-only/line_size/configs/thunderbird.json": {
+      "sha256": "9dfd3f415c61758690cccf83025c9695d1015230c53056db806bfc3bd612761c",
+      "bytes": 980
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_random_stride64_align0_modefully_random.csv": {
+      "sha256": "ae8105b9eee62ffddc63e97d1c0aecca6d3b19e81057bea980fc735061a01e30",
+      "bytes": 4000050
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_random_stride8_align0_modefully_random.csv": {
+      "sha256": "4ae251aba84c9e8473b9d84cd495a5c42ffef7ade9c697f9589df52351f22e19",
+      "bytes": 4000046
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride128_align0_modesequential_lines.csv": {
+      "sha256": "947d2e6ddc9f434d01f01b5cc409e16927e4934a4171d5b432006659376f06e0",
+      "bytes": 3000412
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride16_align0_modesequential_lines.csv": {
+      "sha256": "a511197c4b706b4a71ed9ed0ab6456a01373b367e673925aca12815342580bdf",
+      "bytes": 3000506
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride256_align0_modesequential_lines.csv": {
+      "sha256": "7c4b95b63fb8dec286313b89b3ffbc1dedc167e628dac4f23ddc9d547cce3947",
+      "bytes": 4000001
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride32_align0_modesequential_lines.csv": {
+      "sha256": "c75f1e1264fc8f4cf97ecd050739267b0e3bac0ccec01cafca2457715fb16370",
+      "bytes": 3000526
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride512_align0_modesequential_lines.csv": {
+      "sha256": "74b7bcdba5815545d29e449cfb5499068cb02827d936b3ef362dbd2b1eb64b4b",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride56_align0_modesequential_lines.csv": {
+      "sha256": "c69293c1db405b36a6d29a40e350aa1b4335ab29f0c75544333a820719b7c335",
+      "bytes": 3031133
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride64_align0_modesequential_lines.csv": {
+      "sha256": "ae758f6078ba5d71ef08e3476dcd7adc5daf887555e86d186fb6e8f1a96e6b4e",
+      "bytes": 3001325
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride72_align0_modesequential_lines.csv": {
+      "sha256": "7360299f8ce482fc9e46de8f3e7ba4c66c39ce88f697046f84a1a8b6001c064b",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/control_sequential_stride8_align0_modesequential_lines.csv": {
+      "sha256": "0d1ddc22559ac2d6c5f891c1ce2271becd2d16c2d2ef8f2dba597c0a70941049",
+      "bytes": 3000527
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride40_align0_moderandom_lines.csv": {
+      "sha256": "a553d6e626f1c5fc766f19d2cfd9913c43f923f272490e8480e7dbb18d52f26b",
+      "bytes": 4000013
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride40_align16_moderandom_lines.csv": {
+      "sha256": "587a769c199b74868ecf2e42cc48425735ed3a5c0c803cc6f2acd538f5e85049",
+      "bytes": 4000018
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride40_align32_moderandom_lines.csv": {
+      "sha256": "658420a069add8a4eb82e48d61f7bd5be40cb4a1975641c6240cba57535bba3a",
+      "bytes": 4000003
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride40_align48_moderandom_lines.csv": {
+      "sha256": "26a884987f1ca5e2f946b7abbffe47959223c0f66b8146c3363078983a585b3e",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride44_align0_moderandom_lines.csv": {
+      "sha256": "b395f99dfedf990656e309c3e389c77842a7ae11f1da1d1f0136a129c91066b3",
+      "bytes": 4000022
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride44_align16_moderandom_lines.csv": {
+      "sha256": "2a750c593d4c4e8bf5beab326d04b147d494a2f23c0b29ea8846ece8ec68584f",
+      "bytes": 4000034
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride44_align32_moderandom_lines.csv": {
+      "sha256": "60a80dd755c7fa65ed7d58cbeef3fcef2d742eb51dade46149abd0d5406cb15f",
+      "bytes": 4000021
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride44_align48_moderandom_lines.csv": {
+      "sha256": "3ea981321cf860e15613af506db0339969d2725beaba22ce3cc12d166643d058",
+      "bytes": 4000031
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride48_align0_moderandom_lines.csv": {
+      "sha256": "84579aeafc121ad93ea6e255df64a7173b6fae339d22a027e42e62998c92c518",
+      "bytes": 4000035
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride48_align16_moderandom_lines.csv": {
+      "sha256": "f9fd22cc23ecc0c4262da8cac5c72862916cffd4b43da010b64d3eb2ac0009d4",
+      "bytes": 4000036
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride48_align32_moderandom_lines.csv": {
+      "sha256": "6b2031737da22785a33715843e343798c560810a2dee70f9fe76d1b91ccc2ca0",
+      "bytes": 4000036
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride48_align48_moderandom_lines.csv": {
+      "sha256": "21bb8367607a4dfec74573985c815adb902050132ee8b7ab79c974cc8cedb880",
+      "bytes": 4000036
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride52_align0_moderandom_lines.csv": {
+      "sha256": "d55c7b827591c44ebf4cfa72581dfdc06ffc060622d70c6b8f1acc300a84f254",
+      "bytes": 4000034
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride52_align16_moderandom_lines.csv": {
+      "sha256": "38b10da48d0c4ff14f581ab2a7d2eafd8b4baf2f3dba1abc09fb64f003f080f6",
+      "bytes": 4000025
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride52_align32_moderandom_lines.csv": {
+      "sha256": "aba03f660fcf19ff7e4786064037e76f5deddd523915bfcc2d684557f9bc899c",
+      "bytes": 4000025
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride52_align48_moderandom_lines.csv": {
+      "sha256": "a5f2246e67c9e4d07c606026b078046aea95f22e1a8a0bd7b01a3ff7e02c5f2d",
+      "bytes": 4000035
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride56_align0_moderandom_lines.csv": {
+      "sha256": "11fd0929292c5f147aaf2d385085cea019eb9b52bab0c126762f07c0d9ca8a6a",
+      "bytes": 4000035
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride56_align16_moderandom_lines.csv": {
+      "sha256": "eb35909e64c3dc7a4692f28001de9032d7e50a1f80f6898101f96b91ff9dd00f",
+      "bytes": 4000031
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride56_align32_moderandom_lines.csv": {
+      "sha256": "fcaf5680fa196552697d4f124eaab865132c21412ff63cdc31173883d392cd91",
+      "bytes": 4000041
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride56_align48_moderandom_lines.csv": {
+      "sha256": "5354f8aea37b162512f5f60e22989c2d7bc0711cb9697c7b5d3cad04333d9c23",
+      "bytes": 4000028
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride60_align0_moderandom_lines.csv": {
+      "sha256": "e0185fcdd115727b0388b926a7eee2930aa9a3c53333cb32acc29d10718346fc",
+      "bytes": 4000028
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride60_align16_moderandom_lines.csv": {
+      "sha256": "92f6c6dc68db7dddcb41f33b74f0d2f17df14fdf221789baf708a9d27eaec6ce",
+      "bytes": 4000029
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride60_align32_moderandom_lines.csv": {
+      "sha256": "dc748138e5ef3f006de1695855458ff2cb7c87aba4c9cb6f7af07feb5e5699eb",
+      "bytes": 4000001
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride60_align48_moderandom_lines.csv": {
+      "sha256": "8a1113673cf8628a1a5838543634d910f36f0e543a0b658c5bb36e6301076e5b",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride64_align0_moderandom_lines.csv": {
+      "sha256": "b1e6a9d3232dacc3632344ded0f3365ff9b6639c1d3fb9d81b8e80b2efd45c36",
+      "bytes": 4000002
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride64_align16_moderandom_lines.csv": {
+      "sha256": "af27f59e5c2c1aa33f798cf168ddde75530f6123d321bc00a158f129aa376c43",
+      "bytes": 4000003
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride64_align32_moderandom_lines.csv": {
+      "sha256": "219c2a66111ce913673dafa9a3ed9b2356ebfa0612e7d969198c0f2c95d72c55",
+      "bytes": 4000002
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride64_align48_moderandom_lines.csv": {
+      "sha256": "89e76ed4147134cd1c109c836468e6d2e10ff2c330031d2081a197d660a12b8b",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride68_align0_moderandom_lines.csv": {
+      "sha256": "0f589ff3515c64a6cf08246da3e58a5c73833ad4075bf36dad8f0545f6506600",
+      "bytes": 4000002
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride68_align16_moderandom_lines.csv": {
+      "sha256": "e20640c8c1901b284611198cbc9215e8b4d13a50c023517596027778cf5f9482",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride68_align32_moderandom_lines.csv": {
+      "sha256": "1cd6a95cef98c8db9be1bcca5fab826b88b1f3ae8c9af242cf066dae815430eb",
+      "bytes": 4000003
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride68_align48_moderandom_lines.csv": {
+      "sha256": "69a500b68e5b4ad27a3ef89c0381470998eb4736254e760b11bd0cc46bee80b1",
+      "bytes": 4000002
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride72_align0_moderandom_lines.csv": {
+      "sha256": "2dfa955fda30d66ac1a41c47c6426c8461363c863a543b3584d2cc2383f22b65",
+      "bytes": 4000001
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride72_align16_moderandom_lines.csv": {
+      "sha256": "a3df9ecf9d12e49d191d6e3b79f67cd8cfa47e9ac7acb1012ca044b13eaf904f",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride72_align32_moderandom_lines.csv": {
+      "sha256": "23d235ef11c29bbde41b4f072e5ecf9999e22e901ac44f6b611b525417550fc6",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride72_align48_moderandom_lines.csv": {
+      "sha256": "1d74fca0ef08b44a519859eaac4952f0ba1b56e58965ef04b98b157773761e71",
+      "bytes": 4000001
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride76_align0_moderandom_lines.csv": {
+      "sha256": "3dbb428ae67ba6224c59597e4534bbf2ba30d3753cdb17b0b8db890e95d9f2f8",
+      "bytes": 4000001
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride76_align16_moderandom_lines.csv": {
+      "sha256": "fd6d1ec145c0c72d3986371076e7efef8b58356f2c03dea52d5aac6514f4e882",
+      "bytes": 4000005
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride76_align32_moderandom_lines.csv": {
+      "sha256": "8d75be723772f591feb77012a192a6b9bd5d177fe5ad81f2fafd44ad8b8f9cf5",
+      "bytes": 4000001
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride76_align48_moderandom_lines.csv": {
+      "sha256": "81d5b560529de777ae33387600592b15ca8e830e9445f9127cb4fd08b62e87cd",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride80_align0_moderandom_lines.csv": {
+      "sha256": "139456b14e5440e72d6194e6d291b1d8386384968ac006ab32f91e3bf98758ae",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride80_align16_moderandom_lines.csv": {
+      "sha256": "392f650dd79b3109e04cacce66eb22148df89fa79335db76f7d4a4346d2ffc72",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride80_align32_moderandom_lines.csv": {
+      "sha256": "09a8cf5c0a56ad0df37e9c04435a7d0cb5cd6827d4fa9e7b023d1928e49d4445",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride80_align48_moderandom_lines.csv": {
+      "sha256": "fc2a28d9a0920b93b85c7511c8b3845f2b7b2aebfc9661d6ffff33953c621091",
+      "bytes": 4000002
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride96_align0_moderandom_lines.csv": {
+      "sha256": "64302c502ab90b7ee47a2568aeb1ff57e1256bfdd8120abde1492689ac11be6a",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride96_align16_moderandom_lines.csv": {
+      "sha256": "bc424d6be6d7b023d4da89563bfa53f82f1f4108ddbf83a45c64415e1a4d3476",
+      "bytes": 4000001
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride96_align32_moderandom_lines.csv": {
+      "sha256": "57b2bd0d6a6532ca2171fae481dfd2c776644732d8a4c60031174f0b69982286",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/dense_stride96_align48_moderandom_lines.csv": {
+      "sha256": "1cd9dc8e7e0bf63080bf308d4531cdae3536c3748dfca27c761a5d8cfe583676",
+      "bytes": 4000016
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride128_align0_moderandom_lines.csv": {
+      "sha256": "7dde42ea50de7838c93c40f310a779d157559f7bed8ef8ba10991400bd900030",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride128_align16_moderandom_lines.csv": {
+      "sha256": "11ce758a04fe1e2b532b774caf555de319eaba05cc61a69de14b2f08936167b3",
+      "bytes": 4000006
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride128_align32_moderandom_lines.csv": {
+      "sha256": "7cc7050f75a18c61f45c669b13600b6bac24f18d4bc58feab31a350fc4d418a7",
+      "bytes": 4000013
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride128_align48_moderandom_lines.csv": {
+      "sha256": "a30ad1cb89f6e6d1f956441aa5bea831b0d17f9e4aa5ff5d1eef94780154e35f",
+      "bytes": 4000045
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride16_align0_moderandom_lines.csv": {
+      "sha256": "440213f8b120f02a314b45b2eca45cef20bca7cb9f9a9cc4271d3d3d6dabaaef",
+      "bytes": 3000585
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride16_align16_moderandom_lines.csv": {
+      "sha256": "d5e364333758f93e09b37f2fde245e261b33ea3b07e909d6555384e6d96acacf",
+      "bytes": 3000555
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride16_align32_moderandom_lines.csv": {
+      "sha256": "5454ad4ce4357a2ad1c9c2e14aeb6322b7ee4f8ef37f07bc77a82d56ecb254f7",
+      "bytes": 3000790
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride16_align48_moderandom_lines.csv": {
+      "sha256": "f7398e83225acbdc074c1c7823dc58e4180ae8a65b1b20defd7ad0975b4c179c",
+      "bytes": 3000861
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride256_align0_moderandom_lines.csv": {
+      "sha256": "8f29836b21a0b70ff03aa349c8c629cac9d6d9203af437db079b360cf8635061",
+      "bytes": 4000035
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride256_align16_moderandom_lines.csv": {
+      "sha256": "aa1d7803dd2446283ebf814bf84885eb401f2339f14f3e44b677c75eace757ac",
+      "bytes": 4000051
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride256_align32_moderandom_lines.csv": {
+      "sha256": "3a48dc7690c1c9512fc955bb3a0162c3b3805629c2fc0dafb2d27ad374732c82",
+      "bytes": 4000052
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride256_align48_moderandom_lines.csv": {
+      "sha256": "61c85467731af4965bb353626b4682ce28db7a23441f5a4c188e5fca9604c0c5",
+      "bytes": 4000034
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride32_align0_moderandom_lines.csv": {
+      "sha256": "76ea900c6a386a975f83235cd632e5ab60f29651f95701bd4608c26e96a7a510",
+      "bytes": 3923130
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride32_align16_moderandom_lines.csv": {
+      "sha256": "8ab9b516def00e0a170a711becb1bcda0901e2d5e233a08729acf4170547e7ba",
+      "bytes": 3994487
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride32_align32_moderandom_lines.csv": {
+      "sha256": "0a470847ac45443ee6981da508d29c25b441115346ae187b6315be12a9f552ba",
+      "bytes": 3999853
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride32_align48_moderandom_lines.csv": {
+      "sha256": "0a14ae53875ae8a49074223da1b35c843ef75384298fe486fc5433c99e6e0ec0",
+      "bytes": 4000039
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride512_align0_moderandom_lines.csv": {
+      "sha256": "1f3e6a134dc80c12327adf01beddf035bee985f7a2c71e7328a339350615a0d2",
+      "bytes": 4000052
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride512_align16_moderandom_lines.csv": {
+      "sha256": "12b37557f9706b889feaf5459f062df96ac0b202aa4f7cda8d370e8822c9a7f9",
+      "bytes": 4000039
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride512_align32_moderandom_lines.csv": {
+      "sha256": "f623ce162a775d5e5cd3010e4d3113b9955c1f3f18baa52c65801e0a336bc1d6",
+      "bytes": 4000042
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride512_align48_moderandom_lines.csv": {
+      "sha256": "7e8cb5562968f10774f719f10251fb1eb605aa61a8598056baabee523b68773f",
+      "bytes": 4000039
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride64_align0_moderandom_lines.csv": {
+      "sha256": "080b7bdbb2f357701614a2d5e061523a09957d800183934e9c533722d903b132",
+      "bytes": 4000108
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride64_align16_moderandom_lines.csv": {
+      "sha256": "f209583a9b762c648fe00d6eac6c91b64ffacd6eb5115a71c82f251bafd16e82",
+      "bytes": 4000040
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride64_align32_moderandom_lines.csv": {
+      "sha256": "0250b0172f75953d275fcc608973a7f31a7fc7aea5fe5bcceca70b99104065e2",
+      "bytes": 4000000
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride64_align48_moderandom_lines.csv": {
+      "sha256": "02e38f232560c12e16516546b01eeb7dce3e42034c840b1e3d9608bf20f28bf7",
+      "bytes": 4000002
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride8_align0_moderandom_lines.csv": {
+      "sha256": "a18395b05dbdc2612c3966dde5845e8ce1ca5704c9645c0d980b13deefb534dc",
+      "bytes": 3000475
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride8_align16_moderandom_lines.csv": {
+      "sha256": "407d00573514a0566cec4b8513a83be9ad66922dcc0d5668d94e781727e6233a",
+      "bytes": 3000959
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride8_align32_moderandom_lines.csv": {
+      "sha256": "cc7dc95ffb589a3c2a8cdeb10aae315021317e3e706cb18ddfd43ce706276dcf",
+      "bytes": 3001139
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/initial_stride8_align48_moderandom_lines.csv": {
+      "sha256": "42cb9c1d8c27007700cd766ddff2da9f525c1999457c2c3efa599205a127706b",
+      "bytes": 3000599
+    },
+    "timing-only/line_size/data/thunderbird/raw_data/pinning_manifest.txt": {
+      "sha256": "9648ca9af314f350ffed89be15e00de4b8bd7762c05548f316e82ff30ed9028d",
+      "bytes": 149
+    },
+    "timing-only/line_size/data/thunderbird/stats/all_stats.csv": {
+      "sha256": "66d12e576492b18992016f058c979a9f49ceb2a7045e53ac47018233d3310279",
+      "bytes": 15606
+    },
+    "timing-only/line_size/results/thunderbird/plots/boxplots_representative.pdf": {
+      "sha256": "22fce7f41c75476e4916d27846a926a4ec96cb5e891b8afbcb9f5cbd6cfe37bf",
+      "bytes": 14862
+    },
+    "timing-only/line_size/results/thunderbird/plots/control_comparison.pdf": {
+      "sha256": "ccb998a26f79d9c894d58403c15a8962ab23b21f2c542a6f91a145a0eebe182a",
+      "bytes": 13781
+    },
+    "timing-only/line_size/results/thunderbird/plots/latency_vs_stride.pdf": {
+      "sha256": "f834335f3dc6eedaec2ea1daf2ab8a60a40a50fa45bf62207d9c14f156a582be",
+      "bytes": 16491
+    },
+    "timing-only/line_size/scripts/run_line_size_experiment.py": {
+      "sha256": "cc7155b689a04f2273efd942b188bd8a850e388ff91e126a97d5f2c2bd8f5b66",
+      "bytes": 13087
+    },
+    "timing-only/line_size/src/Makefile": {
+      "sha256": "888dfd16fb7c22ef34f8e8c82abb89185e94c88ad0447cd24fc6e3c1edf8ba3d",
+      "bytes": 797
+    },
+    "timing-only/line_size/src/line_size_bench": {
+      "sha256": "2d2f68fa7f704bf60c29ffe9bace4c69a0a7ba9d7e68be55854f4448301c9ae7",
+      "bytes": 149904
+    },
+    "timing-only/line_size/src/line_size_bench.cpp": {
+      "sha256": "ff8596ce49e83faa896dc7aa65c07b2e3b4d493d80075d061c9cf1d66878ad7f",
+      "bytes": 9350
+    },
+    "timing-only/line_size/src/timer_compat.h": {
+      "sha256": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+      "bytes": 2419
+    }
+  },
+  "original_pmu_files": 264,
+  "total_bytes": 427913111
+}

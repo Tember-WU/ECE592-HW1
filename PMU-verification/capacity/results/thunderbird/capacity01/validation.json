@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "configurations": 14,
+  "timed_batches": 14000000,
+  "raw_hashes_lengths_statistics_verified": true,
+  "baseline_matches_verified": true,
+  "actual_load_denominators_verified": true,
+  "all_pmu_groups_without_multiplexing": true,
+  "timer_unit": "CNTVCT_EL0 ticks / timed chain load",
+  "timer_frequency_hz": 25000000
+}
