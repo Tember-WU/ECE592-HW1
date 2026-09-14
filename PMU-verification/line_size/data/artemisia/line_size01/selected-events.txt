@@ -1,0 +1,17 @@
+
+cache:
+  mem_load_retired.l1_miss
+       [Retired load instructions missed L1 cache as data sources Supports
+        address when precise. Unit: cpu]
+        cpu/event=0xd1,period=0x30d43,umask=0x8/
+  mem_load_retired.l2_miss
+       [Retired load instructions missed L2 cache as data sources Supports
+        address when precise. Unit: cpu]
+        cpu/event=0xd1,period=0x186b5,umask=0x10/
+  mem_load_retired.l3_miss
+       [Retired load instructions missed L3 cache as data sources Supports
+        address when precise. Unit: cpu]
+        cpu/event=0xd1,period=0xc365,umask=0x20/
+  mem_inst_retired.all_loads
+       [Retired load instructions Supports address when precise. Unit: cpu]
+        cpu/event=0xd0,period=0xf4243,umask=0x81/

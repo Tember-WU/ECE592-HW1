@@ -1,0 +1,117 @@
+{
+  "machine": "artemisia",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 1,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "mem_load_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_inst_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "associativity",
+  "batch": 128,
+  "line_size": 64,
+  "seed": 701,
+  "points": [
+    {
+      "name": "L1_k10",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k11",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 11,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k12",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 12,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k13",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 13,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k14",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 14,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k11",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 11,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k12",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 12,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k13",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 13,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k14",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 14,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k16",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 16,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k17",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 17,
+      "max_k": 17
+    },
+    {
+      "name": "L2_candidate_k18",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 18,
+      "max_k": 18
+    }
+  ]
+}

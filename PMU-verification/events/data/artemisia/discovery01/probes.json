@@ -1,0 +1,308 @@
+[
+  {
+    "event": "mem_load_retired.l1_hit",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_load_retired.l1_hit:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "mem_load_retired.l1_miss",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_load_retired.l1_miss:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "mem_load_retired.l2_hit",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_load_retired.l2_hit:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "mem_load_retired.l2_miss",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_load_retired.l2_miss:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "mem_load_retired.l3_hit",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_load_retired.l3_hit:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "mem_load_retired.l3_miss",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_load_retired.l3_miss:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "mem_load_retired.fb_hit",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_load_retired.fb_hit:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "mem_inst_retired.all_loads",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_inst_retired.all_loads:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "l1d.replacement",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "l1d.replacement:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "l2_rqsts.all_demand_data_rd",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "l2_rqsts.all_demand_data_rd:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "l2_rqsts.demand_data_rd_miss",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "l2_rqsts.demand_data_rd_miss:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "l2_rqsts.references",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "l2_rqsts.references:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "l2_rqsts.miss",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "l2_rqsts.miss:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "dtlb_load_misses.walk_completed",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "dtlb_load_misses.walk_completed:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "cache-references",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "cache-references:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "cache-misses",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "cache-misses:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  },
+  {
+    "event": "capacity_group",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "{mem_load_retired.l1_miss:u,mem_load_retired.l2_miss:u,mem_load_retired.l3_miss:u,mem_inst_retired.all_loads:u}",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "status": "counted in user mode"
+  }
+]

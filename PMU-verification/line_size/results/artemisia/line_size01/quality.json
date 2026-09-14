@@ -1,0 +1,75 @@
+{
+  "preflight_busy_percent": {
+    "32": 0.0,
+    "88": 0.0
+  },
+  "max_sibling_busy_percent": 0.0,
+  "total_involuntary_switches": 41,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "random_s64_a16": 1.0006060606060605,
+    "random_s96_a0": 1.0001211974306146,
+    "random_s64_a0": 1.000363504180298,
+    "random_s56_a16": 1.000131734949282,
+    "fully_random_s64": 1.0008477655322756,
+    "sequential_s72": 1.0003663003663004,
+    "sequential_s64": 1.000489775927513,
+    "random_s72_a0": 1.0004849072614863,
+    "random_s56_a0": 1.0,
+    "random_s32_a0": 1.0003681885125184,
+    "random_s72_a16": 1.0001211093617537,
+    "sequential_s56": 1.0002675943270003
+  },
+  "huge_kib": {
+    "random_s64_a16": [
+      0,
+      0
+    ],
+    "random_s96_a0": [
+      0,
+      0
+    ],
+    "random_s64_a0": [
+      0,
+      0
+    ],
+    "random_s56_a16": [
+      0,
+      0
+    ],
+    "fully_random_s64": [
+      0,
+      0
+    ],
+    "sequential_s72": [
+      0,
+      0
+    ],
+    "sequential_s64": [
+      0,
+      0
+    ],
+    "random_s72_a0": [
+      0,
+      0
+    ],
+    "random_s56_a0": [
+      0,
+      0
+    ],
+    "random_s32_a0": [
+      0,
+      0
+    ],
+    "random_s72_a16": [
+      0,
+      0
+    ],
+    "sequential_s56": [
+      0,
+      0
+    ]
+  },
+  "caveat": "Different CPU/socket from the original timing-only run; PMU loop totals include helper loads."
+}
