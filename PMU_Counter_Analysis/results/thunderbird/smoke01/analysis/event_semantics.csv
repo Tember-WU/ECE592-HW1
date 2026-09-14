@@ -1,0 +1,9 @@
+host,slot,event,type,config,meaning,comparability
+thunderbird,cache_references,cache-references,0,0x2,"Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",generic_mapping_requires_review
+thunderbird,cache_misses,cache-misses,0,0x3,Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.,generic_mapping_requires_review
+thunderbird,l1_loads,l1d_cache_rd,4,0x40,Speculative L1D read accesses.,architecture_specific_proxy
+thunderbird,l1_misses,l1d_cache_refill_rd,4,0x42,L1D line allocations caused by speculative load misses.,architecture_specific_proxy
+thunderbird,stores_or_replacements,l1d_cache_wr,4,0x41,Speculative L1D write accesses.,architecture_specific_proxy
+thunderbird,llc_loads,ll_cache_rd,4,0x36,Last-level read event; EXTLLC/firmware dependent. Existing 8.3 results did NOT validate SLC boundary.,architecture_specific_proxy
+thunderbird,llc_misses,ll_cache_miss_rd,4,0x37,"Last-level read miss event; existing 8.3 results track L2 refills, NOT verified SLC misses.",architecture_specific_proxy
+thunderbird,dtlb_misses,dTLB-load-misses,3,0x10003,Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.,generic_mapping_requires_review

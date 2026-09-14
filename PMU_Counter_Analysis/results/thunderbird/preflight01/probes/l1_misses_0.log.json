@@ -1,0 +1,12 @@
+{
+  "not_probed": true,
+  "reason": "The Arm base generic L1-miss mapping can alias cache-misses. Select the locally documented read-specific 0x42 refill event to preserve a distinct, explicit meaning.",
+  "candidate": {
+    "name": "L1-dcache-load-misses",
+    "type": 3,
+    "config": "0x10000",
+    "meaning": "Kernel L1D read-miss mapping; may count refills rather than retired misses.",
+    "comparability": "generic_mapping_requires_review",
+    "skip_reason": "The Arm base generic L1-miss mapping can alias cache-misses. Select the locally documented read-specific 0x42 refill event to preserve a distinct, explicit meaning."
+  }
+}

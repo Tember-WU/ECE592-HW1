@@ -1,0 +1,2171 @@
+
+build/bench:     file format elf64-littleaarch64
+
+
+Disassembly of section .init:
+
+0000000000400c00 <_init>:
+  400c00:	d503201f 	nop
+  400c04:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+  400c08:	910003fd 	mov	x29, sp
+  400c0c:	9400009e 	bl	400e84 <call_weak_fn>
+  400c10:	a8c17bfd 	ldp	x29, x30, [sp], #16
+  400c14:	d65f03c0 	ret
+
+Disassembly of section .plt:
+
+0000000000400c20 <.plt>:
+  400c20:	a9bf7bf0 	stp	x16, x30, [sp, #-16]!
+  400c24:	f00000f0 	adrp	x16, 41f000 <__FRAME_END__+0x1b788>
+  400c28:	f947fe11 	ldr	x17, [x16, #4088]
+  400c2c:	913fe210 	add	x16, x16, #0xff8
+  400c30:	d61f0220 	br	x17
+  400c34:	d503201f 	nop
+  400c38:	d503201f 	nop
+  400c3c:	d503201f 	nop
+
+0000000000400c40 <fprintf@plt>:
+  400c40:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400c44:	f9400211 	ldr	x17, [x16]
+  400c48:	91000210 	add	x16, x16, #0x0
+  400c4c:	d61f0220 	br	x17
+
+0000000000400c50 <sched_setaffinity@plt>:
+  400c50:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400c54:	f9400611 	ldr	x17, [x16, #8]
+  400c58:	91002210 	add	x16, x16, #0x8
+  400c5c:	d61f0220 	br	x17
+
+0000000000400c60 <std::__throw_bad_alloc()@plt>:
+  400c60:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400c64:	f9400a11 	ldr	x17, [x16, #16]
+  400c68:	91004210 	add	x16, x16, #0x10
+  400c6c:	d61f0220 	br	x17
+
+0000000000400c70 <perror@plt>:
+  400c70:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400c74:	f9400e11 	ldr	x17, [x16, #24]
+  400c78:	91006210 	add	x16, x16, #0x18
+  400c7c:	d61f0220 	br	x17
+
+0000000000400c80 <sched_getcpu@plt>:
+  400c80:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400c84:	f9401211 	ldr	x17, [x16, #32]
+  400c88:	91008210 	add	x16, x16, #0x20
+  400c8c:	d61f0220 	br	x17
+
+0000000000400c90 <fclose@plt>:
+  400c90:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400c94:	f9401611 	ldr	x17, [x16, #40]
+  400c98:	9100a210 	add	x16, x16, #0x28
+  400c9c:	d61f0220 	br	x17
+
+0000000000400ca0 <std::__throw_length_error(char const*)@plt>:
+  400ca0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400ca4:	f9401a11 	ldr	x17, [x16, #48]
+  400ca8:	9100c210 	add	x16, x16, #0x30
+  400cac:	d61f0220 	br	x17
+
+0000000000400cb0 <memset@plt>:
+  400cb0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400cb4:	f9401e11 	ldr	x17, [x16, #56]
+  400cb8:	9100e210 	add	x16, x16, #0x38
+  400cbc:	d61f0220 	br	x17
+
+0000000000400cc0 <read@plt>:
+  400cc0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400cc4:	f9402211 	ldr	x17, [x16, #64]
+  400cc8:	91010210 	add	x16, x16, #0x40
+  400ccc:	d61f0220 	br	x17
+
+0000000000400cd0 <__libc_start_main@plt>:
+  400cd0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400cd4:	f9402611 	ldr	x17, [x16, #72]
+  400cd8:	91012210 	add	x16, x16, #0x48
+  400cdc:	d61f0220 	br	x17
+
+0000000000400ce0 <getrusage@plt>:
+  400ce0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400ce4:	f9402a11 	ldr	x17, [x16, #80]
+  400ce8:	91014210 	add	x16, x16, #0x50
+  400cec:	d61f0220 	br	x17
+
+0000000000400cf0 <std::__throw_bad_array_new_length()@plt>:
+  400cf0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400cf4:	f9402e11 	ldr	x17, [x16, #88]
+  400cf8:	91016210 	add	x16, x16, #0x58
+  400cfc:	d61f0220 	br	x17
+
+0000000000400d00 <ioctl@plt>:
+  400d00:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d04:	f9403211 	ldr	x17, [x16, #96]
+  400d08:	91018210 	add	x16, x16, #0x60
+  400d0c:	d61f0220 	br	x17
+
+0000000000400d10 <syscall@plt>:
+  400d10:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d14:	f9403611 	ldr	x17, [x16, #104]
+  400d18:	9101a210 	add	x16, x16, #0x68
+  400d1c:	d61f0220 	br	x17
+
+0000000000400d20 <operator delete(void*)@plt>:
+  400d20:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d24:	f9403a11 	ldr	x17, [x16, #112]
+  400d28:	9101c210 	add	x16, x16, #0x70
+  400d2c:	d61f0220 	br	x17
+
+0000000000400d30 <mmap@plt>:
+  400d30:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d34:	f9403e11 	ldr	x17, [x16, #120]
+  400d38:	9101e210 	add	x16, x16, #0x78
+  400d3c:	d61f0220 	br	x17
+
+0000000000400d40 <operator new(unsigned long)@plt>:
+  400d40:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d44:	f9404211 	ldr	x17, [x16, #128]
+  400d48:	91020210 	add	x16, x16, #0x80
+  400d4c:	d61f0220 	br	x17
+
+0000000000400d50 <munmap@plt>:
+  400d50:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d54:	f9404611 	ldr	x17, [x16, #136]
+  400d58:	91022210 	add	x16, x16, #0x88
+  400d5c:	d61f0220 	br	x17
+
+0000000000400d60 <snprintf@plt>:
+  400d60:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d64:	f9404a11 	ldr	x17, [x16, #144]
+  400d68:	91024210 	add	x16, x16, #0x90
+  400d6c:	d61f0220 	br	x17
+
+0000000000400d70 <madvise@plt>:
+  400d70:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d74:	f9404e11 	ldr	x17, [x16, #152]
+  400d78:	91026210 	add	x16, x16, #0x98
+  400d7c:	d61f0220 	br	x17
+
+0000000000400d80 <__errno_location@plt>:
+  400d80:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d84:	f9405211 	ldr	x17, [x16, #160]
+  400d88:	91028210 	add	x16, x16, #0xa0
+  400d8c:	d61f0220 	br	x17
+
+0000000000400d90 <fopen@plt>:
+  400d90:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400d94:	f9405611 	ldr	x17, [x16, #168]
+  400d98:	9102a210 	add	x16, x16, #0xa8
+  400d9c:	d61f0220 	br	x17
+
+0000000000400da0 <close@plt>:
+  400da0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400da4:	f9405a11 	ldr	x17, [x16, #176]
+  400da8:	9102c210 	add	x16, x16, #0xb0
+  400dac:	d61f0220 	br	x17
+
+0000000000400db0 <strtoull@plt>:
+  400db0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400db4:	f9405e11 	ldr	x17, [x16, #184]
+  400db8:	9102e210 	add	x16, x16, #0xb8
+  400dbc:	d61f0220 	br	x17
+
+0000000000400dc0 <abort@plt>:
+  400dc0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400dc4:	f9406211 	ldr	x17, [x16, #192]
+  400dc8:	91030210 	add	x16, x16, #0xc0
+  400dcc:	d61f0220 	br	x17
+
+0000000000400dd0 <__gxx_personality_v0@plt>:
+  400dd0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400dd4:	f9406611 	ldr	x17, [x16, #200]
+  400dd8:	91032210 	add	x16, x16, #0xc8
+  400ddc:	d61f0220 	br	x17
+
+0000000000400de0 <exit@plt>:
+  400de0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400de4:	f9406a11 	ldr	x17, [x16, #208]
+  400de8:	91034210 	add	x16, x16, #0xd0
+  400dec:	d61f0220 	br	x17
+
+0000000000400df0 <fwrite@plt>:
+  400df0:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400df4:	f9406e11 	ldr	x17, [x16, #216]
+  400df8:	91036210 	add	x16, x16, #0xd8
+  400dfc:	d61f0220 	br	x17
+
+0000000000400e00 <_Unwind_Resume@plt>:
+  400e00:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400e04:	f9407211 	ldr	x17, [x16, #224]
+  400e08:	91038210 	add	x16, x16, #0xe0
+  400e0c:	d61f0220 	br	x17
+
+0000000000400e10 <__gmon_start__@plt>:
+  400e10:	90000110 	adrp	x16, 420000 <fprintf@GLIBC_2.17>
+  400e14:	f9407611 	ldr	x17, [x16, #232]
+  400e18:	9103a210 	add	x16, x16, #0xe8
+  400e1c:	d61f0220 	br	x17
+
+Disassembly of section .text:
+
+0000000000400e40 <_start>:
+  400e40:	d503201f 	nop
+  400e44:	d280001d 	mov	x29, #0x0                   	// #0
+  400e48:	d280001e 	mov	x30, #0x0                   	// #0
+  400e4c:	aa0003e5 	mov	x5, x0
+  400e50:	f94003e1 	ldr	x1, [sp]
+  400e54:	910023e2 	add	x2, sp, #0x8
+  400e58:	910003e6 	mov	x6, sp
+  400e5c:	90000000 	adrp	x0, 400000 <__abi_tag-0x278>
+  400e60:	9139d000 	add	x0, x0, #0xe74
+  400e64:	d2800003 	mov	x3, #0x0                   	// #0
+  400e68:	d2800004 	mov	x4, #0x0                   	// #0
+  400e6c:	97ffff99 	bl	400cd0 <__libc_start_main@plt>
+  400e70:	97ffffd4 	bl	400dc0 <abort@plt>
+
+0000000000400e74 <__wrap_main>:
+  400e74:	d503201f 	nop
+  400e78:	14000078 	b	401058 <main>
+  400e7c:	d503201f 	nop
+
+0000000000400e80 <_dl_relocate_static_pie>:
+  400e80:	d65f03c0 	ret
+
+0000000000400e84 <call_weak_fn>:
+  400e84:	f00000e0 	adrp	x0, 41f000 <__FRAME_END__+0x1b788>
+  400e88:	f947ec00 	ldr	x0, [x0, #4056]
+  400e8c:	b4000040 	cbz	x0, 400e94 <call_weak_fn+0x10>
+  400e90:	17ffffe0 	b	400e10 <__gmon_start__@plt>
+  400e94:	d65f03c0 	ret
+  400e98:	d503201f 	nop
+  400e9c:	d503201f 	nop
+
+0000000000400ea0 <deregister_tm_clones>:
+  400ea0:	90000100 	adrp	x0, 420000 <fprintf@GLIBC_2.17>
+  400ea4:	91040000 	add	x0, x0, #0x100
+  400ea8:	90000101 	adrp	x1, 420000 <fprintf@GLIBC_2.17>
+  400eac:	91040021 	add	x1, x1, #0x100
+  400eb0:	eb00003f 	cmp	x1, x0
+  400eb4:	540000c0 	b.eq	400ecc <deregister_tm_clones+0x2c>  // b.none
+  400eb8:	f00000e1 	adrp	x1, 41f000 <__FRAME_END__+0x1b788>
+  400ebc:	f947e821 	ldr	x1, [x1, #4048]
+  400ec0:	b4000061 	cbz	x1, 400ecc <deregister_tm_clones+0x2c>
+  400ec4:	aa0103f0 	mov	x16, x1
+  400ec8:	d61f0200 	br	x16
+  400ecc:	d65f03c0 	ret
+
+0000000000400ed0 <register_tm_clones>:
+  400ed0:	90000100 	adrp	x0, 420000 <fprintf@GLIBC_2.17>
+  400ed4:	91040000 	add	x0, x0, #0x100
+  400ed8:	90000101 	adrp	x1, 420000 <fprintf@GLIBC_2.17>
+  400edc:	91040021 	add	x1, x1, #0x100
+  400ee0:	cb000021 	sub	x1, x1, x0
+  400ee4:	d37ffc22 	lsr	x2, x1, #63
+  400ee8:	8b810c41 	add	x1, x2, x1, asr #3
+  400eec:	9341fc21 	asr	x1, x1, #1
+  400ef0:	b40000c1 	cbz	x1, 400f08 <register_tm_clones+0x38>
+  400ef4:	f00000e2 	adrp	x2, 41f000 <__FRAME_END__+0x1b788>
+  400ef8:	f947f042 	ldr	x2, [x2, #4064]
+  400efc:	b4000062 	cbz	x2, 400f08 <register_tm_clones+0x38>
+  400f00:	aa0203f0 	mov	x16, x2
+  400f04:	d61f0200 	br	x16
+  400f08:	d65f03c0 	ret
+  400f0c:	d503201f 	nop
+
+0000000000400f10 <__do_global_dtors_aux>:
+  400f10:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  400f14:	910003fd 	mov	x29, sp
+  400f18:	f9000bf3 	str	x19, [sp, #16]
+  400f1c:	90000113 	adrp	x19, 420000 <fprintf@GLIBC_2.17>
+  400f20:	39442260 	ldrb	w0, [x19, #264]
+  400f24:	35000080 	cbnz	w0, 400f34 <__do_global_dtors_aux+0x24>
+  400f28:	97ffffde 	bl	400ea0 <deregister_tm_clones>
+  400f2c:	52800020 	mov	w0, #0x1                   	// #1
+  400f30:	39042260 	strb	w0, [x19, #264]
+  400f34:	f9400bf3 	ldr	x19, [sp, #16]
+  400f38:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  400f3c:	d65f03c0 	ret
+
+0000000000400f40 <frame_dummy>:
+  400f40:	17ffffe4 	b	400ed0 <register_tm_clones>
+
+0000000000400f44 <die(char const*)>:
+  400f44:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  400f48:	910003fd 	mov	x29, sp
+  400f4c:	f9000fe0 	str	x0, [sp, #24]
+  400f50:	f9400fe0 	ldr	x0, [sp, #24]
+  400f54:	97ffff47 	bl	400c70 <perror@plt>
+  400f58:	52800020 	mov	w0, #0x1                   	// #1
+  400f5c:	97ffffa1 	bl	400de0 <exit@plt>
+
+0000000000400f60 <number(char const*)>:
+  400f60:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  400f64:	910003fd 	mov	x29, sp
+  400f68:	f9000fe0 	str	x0, [sp, #24]
+  400f6c:	97ffff85 	bl	400d80 <__errno_location@plt>
+  400f70:	b900001f 	str	wzr, [x0]
+  400f74:	910083e0 	add	x0, sp, #0x20
+  400f78:	52800002 	mov	w2, #0x0                   	// #0
+  400f7c:	aa0003e1 	mov	x1, x0
+  400f80:	f9400fe0 	ldr	x0, [sp, #24]
+  400f84:	97ffff8b 	bl	400db0 <strtoull@plt>
+  400f88:	f90017e0 	str	x0, [sp, #40]
+  400f8c:	97ffff7d 	bl	400d80 <__errno_location@plt>
+  400f90:	b9400000 	ldr	w0, [x0]
+  400f94:	7100001f 	cmp	w0, #0x0
+  400f98:	540001a1 	b.ne	400fcc <number(char const*)+0x6c>  // b.any
+  400f9c:	f9400fe0 	ldr	x0, [sp, #24]
+  400fa0:	39400000 	ldrb	w0, [x0]
+  400fa4:	7100b41f 	cmp	w0, #0x2d
+  400fa8:	54000120 	b.eq	400fcc <number(char const*)+0x6c>  // b.none
+  400fac:	f94013e0 	ldr	x0, [sp, #32]
+  400fb0:	f9400fe1 	ldr	x1, [sp, #24]
+  400fb4:	eb00003f 	cmp	x1, x0
+  400fb8:	540000a0 	b.eq	400fcc <number(char const*)+0x6c>  // b.none
+  400fbc:	f94013e0 	ldr	x0, [sp, #32]
+  400fc0:	39400000 	ldrb	w0, [x0]
+  400fc4:	7100001f 	cmp	w0, #0x0
+  400fc8:	54000160 	b.eq	400ff4 <number(char const*)+0x94>  // b.none
+  400fcc:	90000100 	adrp	x0, 420000 <fprintf@GLIBC_2.17>
+  400fd0:	91040000 	add	x0, x0, #0x100
+  400fd4:	f9400003 	ldr	x3, [x0]
+  400fd8:	f9400fe2 	ldr	x2, [sp, #24]
+  400fdc:	d0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  400fe0:	912aa001 	add	x1, x0, #0xaa8
+  400fe4:	aa0303e0 	mov	x0, x3
+  400fe8:	97ffff16 	bl	400c40 <fprintf@plt>
+  400fec:	52800040 	mov	w0, #0x2                   	// #2
+  400ff0:	97ffff7c 	bl	400de0 <exit@plt>
+  400ff4:	f94017e0 	ldr	x0, [sp, #40]
+  400ff8:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  400ffc:	d65f03c0 	ret
+
+0000000000401000 <tick()>:
+  401000:	d10043ff 	sub	sp, sp, #0x10
+  401004:	d5033b9f 	dsb	ish
+  401008:	d5033fdf 	isb
+  40100c:	d53be040 	mrs	x0, cntvct_el0
+  401010:	d5033fdf 	isb
+  401014:	f90007e0 	str	x0, [sp, #8]
+  401018:	f94007e0 	ldr	x0, [sp, #8]
+  40101c:	910043ff 	add	sp, sp, #0x10
+  401020:	d65f03c0 	ret
+
+0000000000401024 <chase(unsigned long, unsigned long)>:
+  401024:	d10043ff 	sub	sp, sp, #0x10
+  401028:	f90007e0 	str	x0, [sp, #8]
+  40102c:	f90003e1 	str	x1, [sp]
+  401030:	f94007e1 	ldr	x1, [sp, #8]
+  401034:	f94003e0 	ldr	x0, [sp]
+  401038:	f9400021 	ldr	x1, [x1]
+  40103c:	f1000400 	subs	x0, x0, #0x1
+  401040:	54ffffc1 	b.ne	401038 <chase(unsigned long, unsigned long)+0x14>  // b.any
+  401044:	f90007e1 	str	x1, [sp, #8]
+  401048:	f90003e0 	str	x0, [sp]
+  40104c:	f94007e0 	ldr	x0, [sp, #8]
+  401050:	910043ff 	add	sp, sp, #0x10
+  401054:	d65f03c0 	ret
+
+0000000000401058 <main>:
+  401058:	d283ac0c 	mov	x12, #0x1d60                	// #7520
+  40105c:	cb2c63ff 	sub	sp, sp, x12
+  401060:	a9067bfd 	stp	x29, x30, [sp, #96]
+  401064:	910183fd 	add	x29, sp, #0x60
+  401068:	a90753f3 	stp	x19, x20, [sp, #112]
+  40106c:	a9085bf5 	stp	x21, x22, [sp, #128]
+  401070:	f9004bf7 	str	x23, [sp, #144]
+  401074:	b900afe0 	str	w0, [sp, #172]
+  401078:	f90053e1 	str	x1, [sp, #160]
+  40107c:	b940afe0 	ldr	w0, [sp, #172]
+  401080:	71002c1f 	cmp	w0, #0xb
+  401084:	54000180 	b.eq	4010b4 <main+0x5c>  // b.none
+  401088:	f00000e0 	adrp	x0, 420000 <fprintf@GLIBC_2.17>
+  40108c:	91040000 	add	x0, x0, #0x100
+  401090:	f9400000 	ldr	x0, [x0]
+  401094:	aa0003e3 	mov	x3, x0
+  401098:	d2800b02 	mov	x2, #0x58                  	// #88
+  40109c:	d2800021 	mov	x1, #0x1                   	// #1
+  4010a0:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  4010a4:	912b0000 	add	x0, x0, #0xac0
+  4010a8:	97ffff52 	bl	400df0 <fwrite@plt>
+  4010ac:	52800053 	mov	w19, #0x2                   	// #2
+  4010b0:	14000283 	b	401abc <main+0xa64>
+  4010b4:	f94053e0 	ldr	x0, [sp, #160]
+  4010b8:	91002000 	add	x0, x0, #0x8
+  4010bc:	f9400000 	ldr	x0, [x0]
+  4010c0:	97ffffa8 	bl	400f60 <number(char const*)>
+  4010c4:	f90e97e0 	str	x0, [sp, #7464]
+  4010c8:	f94053e0 	ldr	x0, [sp, #160]
+  4010cc:	91004000 	add	x0, x0, #0x10
+  4010d0:	f9400000 	ldr	x0, [x0]
+  4010d4:	97ffffa3 	bl	400f60 <number(char const*)>
+  4010d8:	f90e93e0 	str	x0, [sp, #7456]
+  4010dc:	f94053e0 	ldr	x0, [sp, #160]
+  4010e0:	91006000 	add	x0, x0, #0x18
+  4010e4:	f9400000 	ldr	x0, [x0]
+  4010e8:	97ffff9e 	bl	400f60 <number(char const*)>
+  4010ec:	f90e8fe0 	str	x0, [sp, #7448]
+  4010f0:	f94053e0 	ldr	x0, [sp, #160]
+  4010f4:	91008000 	add	x0, x0, #0x20
+  4010f8:	f9400000 	ldr	x0, [x0]
+  4010fc:	97ffff99 	bl	400f60 <number(char const*)>
+  401100:	f90e8be0 	str	x0, [sp, #7440]
+  401104:	f94053e0 	ldr	x0, [sp, #160]
+  401108:	9100a000 	add	x0, x0, #0x28
+  40110c:	f9400000 	ldr	x0, [x0]
+  401110:	97ffff94 	bl	400f60 <number(char const*)>
+  401114:	f90e87e0 	str	x0, [sp, #7432]
+  401118:	f94053e0 	ldr	x0, [sp, #160]
+  40111c:	9100c000 	add	x0, x0, #0x30
+  401120:	f9400000 	ldr	x0, [x0]
+  401124:	97ffff8f 	bl	400f60 <number(char const*)>
+  401128:	f90e83e0 	str	x0, [sp, #7424]
+  40112c:	f94053e0 	ldr	x0, [sp, #160]
+  401130:	9100e000 	add	x0, x0, #0x38
+  401134:	f9400000 	ldr	x0, [x0]
+  401138:	97ffff8a 	bl	400f60 <number(char const*)>
+  40113c:	f90e7fe0 	str	x0, [sp, #7416]
+  401140:	f94053e0 	ldr	x0, [sp, #160]
+  401144:	91010000 	add	x0, x0, #0x40
+  401148:	f9400000 	ldr	x0, [x0]
+  40114c:	97ffff85 	bl	400f60 <number(char const*)>
+  401150:	f90e7be0 	str	x0, [sp, #7408]
+  401154:	f94053e0 	ldr	x0, [sp, #160]
+  401158:	91014000 	add	x0, x0, #0x50
+  40115c:	f9400000 	ldr	x0, [x0]
+  401160:	97ffff80 	bl	400f60 <number(char const*)>
+  401164:	f90e77e0 	str	x0, [sp, #7400]
+  401168:	f94e97e0 	ldr	x0, [sp, #7464]
+  40116c:	f10ffc1f 	cmp	x0, #0x3ff
+  401170:	54000648 	b.hi	401238 <main+0x1e0>  // b.pmore
+  401174:	f94e8fe0 	ldr	x0, [sp, #7448]
+  401178:	f1001c1f 	cmp	x0, #0x7
+  40117c:	540005e9 	b.ls	401238 <main+0x1e0>  // b.plast
+  401180:	f94e8fe0 	ldr	x0, [sp, #7448]
+  401184:	92400800 	and	x0, x0, #0x7
+  401188:	f100001f 	cmp	x0, #0x0
+  40118c:	54000561 	b.ne	401238 <main+0x1e0>  // b.any
+  401190:	f94e93e0 	ldr	x0, [sp, #7456]
+  401194:	f94e8fe1 	ldr	x1, [sp, #7448]
+  401198:	9ac10802 	udiv	x2, x0, x1
+  40119c:	f94e8fe1 	ldr	x1, [sp, #7448]
+  4011a0:	9b017c41 	mul	x1, x2, x1
+  4011a4:	cb010000 	sub	x0, x0, x1
+  4011a8:	f100001f 	cmp	x0, #0x0
+  4011ac:	54000461 	b.ne	401238 <main+0x1e0>  // b.any
+  4011b0:	f94e93e1 	ldr	x1, [sp, #7456]
+  4011b4:	f94e8fe0 	ldr	x0, [sp, #7448]
+  4011b8:	9ac00820 	udiv	x0, x1, x0
+  4011bc:	f100041f 	cmp	x0, #0x1
+  4011c0:	540003c9 	b.ls	401238 <main+0x1e0>  // b.plast
+  4011c4:	f94e8be0 	ldr	x0, [sp, #7440]
+  4011c8:	f100001f 	cmp	x0, #0x0
+  4011cc:	54000360 	b.eq	401238 <main+0x1e0>  // b.none
+  4011d0:	f94e87e0 	ldr	x0, [sp, #7432]
+  4011d4:	f100001f 	cmp	x0, #0x0
+  4011d8:	54000300 	b.eq	401238 <main+0x1e0>  // b.none
+  4011dc:	f94e8be1 	ldr	x1, [sp, #7440]
+  4011e0:	d29c2000 	mov	x0, #0xe100                	// #57600
+  4011e4:	f2a0bea0 	movk	x0, #0x5f5, lsl #16
+  4011e8:	eb00003f 	cmp	x1, x0
+  4011ec:	54000268 	b.hi	401238 <main+0x1e0>  // b.pmore
+  4011f0:	f94e87e1 	ldr	x1, [sp, #7432]
+  4011f4:	d2884800 	mov	x0, #0x4240                	// #16960
+  4011f8:	f2a001e0 	movk	x0, #0xf, lsl #16
+  4011fc:	eb00003f 	cmp	x1, x0
+  401200:	540001c8 	b.hi	401238 <main+0x1e0>  // b.pmore
+  401204:	d2800002 	mov	x2, #0x0                   	// #0
+  401208:	f94e8be1 	ldr	x1, [sp, #7440]
+  40120c:	f94e87e0 	ldr	x0, [sp, #7432]
+  401210:	9bc07c20 	umulh	x0, x1, x0
+  401214:	f100001f 	cmp	x0, #0x0
+  401218:	54000040 	b.eq	401220 <main+0x1c8>  // b.none
+  40121c:	d2800022 	mov	x2, #0x1                   	// #1
+  401220:	aa0203e0 	mov	x0, x2
+  401224:	f100001f 	cmp	x0, #0x0
+  401228:	54000081 	b.ne	401238 <main+0x1e0>  // b.any
+  40122c:	f94e77e0 	ldr	x0, [sp, #7400]
+  401230:	f100041f 	cmp	x0, #0x1
+  401234:	54000189 	b.ls	401264 <main+0x20c>  // b.plast
+  401238:	f00000e0 	adrp	x0, 420000 <fprintf@GLIBC_2.17>
+  40123c:	91040000 	add	x0, x0, #0x100
+  401240:	f9400000 	ldr	x0, [x0]
+  401244:	aa0003e3 	mov	x3, x0
+  401248:	d2800262 	mov	x2, #0x13                  	// #19
+  40124c:	d2800021 	mov	x1, #0x1                   	// #1
+  401250:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401254:	912c8000 	add	x0, x0, #0xb20
+  401258:	97fffee6 	bl	400df0 <fwrite@plt>
+  40125c:	52800053 	mov	w19, #0x2                   	// #2
+  401260:	14000217 	b	401abc <main+0xa64>
+  401264:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401268:	912fa000 	add	x0, x0, #0xbe8
+  40126c:	4f000400 	movi	v0.4s, #0x0
+  401270:	ad000000 	stp	q0, q0, [x0]
+  401274:	ad010000 	stp	q0, q0, [x0, #32]
+  401278:	ad020000 	stp	q0, q0, [x0, #64]
+  40127c:	ad030000 	stp	q0, q0, [x0, #96]
+  401280:	f94e97e0 	ldr	x0, [sp, #7464]
+  401284:	f90e73e0 	str	x0, [sp, #7392]
+  401288:	f94e73e0 	ldr	x0, [sp, #7392]
+  40128c:	f10ffc1f 	cmp	x0, #0x3ff
+  401290:	54000248 	b.hi	4012d8 <main+0x280>  // b.pmore
+  401294:	f94e73e0 	ldr	x0, [sp, #7392]
+  401298:	d346fc00 	lsr	x0, x0, #6
+  40129c:	d37df001 	lsl	x1, x0, #3
+  4012a0:	914007e2 	add	x2, sp, #0x1, lsl #12
+  4012a4:	912fa042 	add	x2, x2, #0xbe8
+  4012a8:	8b010041 	add	x1, x2, x1
+  4012ac:	f9400022 	ldr	x2, [x1]
+  4012b0:	f94e73e1 	ldr	x1, [sp, #7392]
+  4012b4:	12001421 	and	w1, w1, #0x3f
+  4012b8:	d2800023 	mov	x3, #0x1                   	// #1
+  4012bc:	9ac12061 	lsl	x1, x3, x1
+  4012c0:	d37df000 	lsl	x0, x0, #3
+  4012c4:	914007e3 	add	x3, sp, #0x1, lsl #12
+  4012c8:	912fa063 	add	x3, x3, #0xbe8
+  4012cc:	8b000060 	add	x0, x3, x0
+  4012d0:	aa010041 	orr	x1, x2, x1
+  4012d4:	f9000001 	str	x1, [x0]
+  4012d8:	914007e0 	add	x0, sp, #0x1, lsl #12
+  4012dc:	912fa000 	add	x0, x0, #0xbe8
+  4012e0:	aa0003e2 	mov	x2, x0
+  4012e4:	d2801001 	mov	x1, #0x80                  	// #128
+  4012e8:	52800000 	mov	w0, #0x0                   	// #0
+  4012ec:	97fffe59 	bl	400c50 <sched_setaffinity@plt>
+  4012f0:	7100001f 	cmp	w0, #0x0
+  4012f4:	1a9f07e0 	cset	w0, ne  // ne = any
+  4012f8:	12001c00 	and	w0, w0, #0xff
+  4012fc:	7100001f 	cmp	w0, #0x0
+  401300:	54000080 	b.eq	401310 <main+0x2b8>  // b.none
+  401304:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401308:	912ce000 	add	x0, x0, #0xb38
+  40130c:	97ffff0e 	bl	400f44 <die(char const*)>
+  401310:	d2800005 	mov	x5, #0x0                   	// #0
+  401314:	12800004 	mov	w4, #0xffffffff            	// #-1
+  401318:	52800443 	mov	w3, #0x22                  	// #34
+  40131c:	52800062 	mov	w2, #0x3                   	// #3
+  401320:	f94e93e1 	ldr	x1, [sp, #7456]
+  401324:	d2800000 	mov	x0, #0x0                   	// #0
+  401328:	97fffe82 	bl	400d30 <mmap@plt>
+  40132c:	f90e6fe0 	str	x0, [sp, #7384]
+  401330:	f94e6fe0 	ldr	x0, [sp, #7384]
+  401334:	b100041f 	cmn	x0, #0x1
+  401338:	54000081 	b.ne	401348 <main+0x2f0>  // b.any
+  40133c:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401340:	912d2000 	add	x0, x0, #0xb48
+  401344:	97ffff00 	bl	400f44 <die(char const*)>
+  401348:	528001e2 	mov	w2, #0xf                   	// #15
+  40134c:	f94e93e1 	ldr	x1, [sp, #7456]
+  401350:	f94e6fe0 	ldr	x0, [sp, #7384]
+  401354:	97fffe87 	bl	400d70 <madvise@plt>
+  401358:	7100001f 	cmp	w0, #0x0
+  40135c:	1a9f07e0 	cset	w0, ne  // ne = any
+  401360:	12001c00 	and	w0, w0, #0xff
+  401364:	7100001f 	cmp	w0, #0x0
+  401368:	54000080 	b.eq	401378 <main+0x320>  // b.none
+  40136c:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401370:	912d4000 	add	x0, x0, #0xb50
+  401374:	97fffef4 	bl	400f44 <die(char const*)>
+  401378:	f94e93e2 	ldr	x2, [sp, #7456]
+  40137c:	52800001 	mov	w1, #0x0                   	// #0
+  401380:	f94e6fe0 	ldr	x0, [sp, #7384]
+  401384:	97fffe4b 	bl	400cb0 <memset@plt>
+  401388:	f94e93e1 	ldr	x1, [sp, #7456]
+  40138c:	f94e8fe0 	ldr	x0, [sp, #7448]
+  401390:	9ac00820 	udiv	x0, x1, x0
+  401394:	f90e6be0 	str	x0, [sp, #7376]
+  401398:	914007e0 	add	x0, sp, #0x1, lsl #12
+  40139c:	9131a000 	add	x0, x0, #0xc68
+  4013a0:	940001f2 	bl	401b68 <std::allocator<unsigned long>::allocator()>
+  4013a4:	914007e1 	add	x1, sp, #0x1, lsl #12
+  4013a8:	9131a021 	add	x1, x1, #0xc68
+  4013ac:	912a03e0 	add	x0, sp, #0xa80
+  4013b0:	aa0103e2 	mov	x2, x1
+  4013b4:	f94e6be1 	ldr	x1, [sp, #7376]
+  4013b8:	940001fc 	bl	401ba8 <std::vector<unsigned long, std::allocator<unsigned long> >::vector(unsigned long, std::allocator<unsigned long> const&)>
+  4013bc:	914007e0 	add	x0, sp, #0x1, lsl #12
+  4013c0:	9131a000 	add	x0, x0, #0xc68
+  4013c4:	940001f1 	bl	401b88 <std::allocator<unsigned long>::~allocator()>
+  4013c8:	f90eafff 	str	xzr, [sp, #7512]
+  4013cc:	1400000a 	b	4013f4 <main+0x39c>
+  4013d0:	912a03e0 	add	x0, sp, #0xa80
+  4013d4:	f94eafe1 	ldr	x1, [sp, #7512]
+  4013d8:	94000222 	bl	401c60 <std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long)>
+  4013dc:	aa0003e1 	mov	x1, x0
+  4013e0:	f94eafe0 	ldr	x0, [sp, #7512]
+  4013e4:	f9000020 	str	x0, [x1]
+  4013e8:	f94eafe0 	ldr	x0, [sp, #7512]
+  4013ec:	91000400 	add	x0, x0, #0x1
+  4013f0:	f90eafe0 	str	x0, [sp, #7512]
+  4013f4:	f94eafe1 	ldr	x1, [sp, #7512]
+  4013f8:	f94e6be0 	ldr	x0, [sp, #7376]
+  4013fc:	eb00003f 	cmp	x1, x0
+  401400:	54fffe83 	b.cc	4013d0 <main+0x378>  // b.lo, b.ul, b.last
+  401404:	9102e3e0 	add	x0, sp, #0xb8
+  401408:	f94e83e1 	ldr	x1, [sp, #7424]
+  40140c:	9400021f 	bl	401c88 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long)>
+  401410:	f94e6be0 	ldr	x0, [sp, #7376]
+  401414:	d1000400 	sub	x0, x0, #0x1
+  401418:	f90eabe0 	str	x0, [sp, #7504]
+  40141c:	14000025 	b	4014b0 <main+0x458>
+  401420:	f94eabe0 	ldr	x0, [sp, #7504]
+  401424:	91000400 	add	x0, x0, #0x1
+  401428:	f90e4be0 	str	x0, [sp, #7312]
+  40142c:	f94e4be0 	ldr	x0, [sp, #7312]
+  401430:	cb0003e0 	neg	x0, x0
+  401434:	f94e4be1 	ldr	x1, [sp, #7312]
+  401438:	9ac10802 	udiv	x2, x0, x1
+  40143c:	f94e4be1 	ldr	x1, [sp, #7312]
+  401440:	9b017c41 	mul	x1, x2, x1
+  401444:	cb010000 	sub	x0, x0, x1
+  401448:	f90e47e0 	str	x0, [sp, #7304]
+  40144c:	9102e3e0 	add	x0, sp, #0xb8
+  401450:	94000218 	bl	401cb0 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()>
+  401454:	f90e43e0 	str	x0, [sp, #7296]
+  401458:	f94e43e1 	ldr	x1, [sp, #7296]
+  40145c:	f94e47e0 	ldr	x0, [sp, #7304]
+  401460:	eb00003f 	cmp	x1, x0
+  401464:	54ffff43 	b.cc	40144c <main+0x3f4>  // b.lo, b.ul, b.last
+  401468:	912a03e0 	add	x0, sp, #0xa80
+  40146c:	f94eabe1 	ldr	x1, [sp, #7504]
+  401470:	940001fc 	bl	401c60 <std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long)>
+  401474:	aa0003f4 	mov	x20, x0
+  401478:	f94e43e0 	ldr	x0, [sp, #7296]
+  40147c:	f94e4be1 	ldr	x1, [sp, #7312]
+  401480:	9ac10802 	udiv	x2, x0, x1
+  401484:	f94e4be1 	ldr	x1, [sp, #7312]
+  401488:	9b017c41 	mul	x1, x2, x1
+  40148c:	cb010001 	sub	x1, x0, x1
+  401490:	912a03e0 	add	x0, sp, #0xa80
+  401494:	940001f3 	bl	401c60 <std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long)>
+  401498:	aa0003e1 	mov	x1, x0
+  40149c:	aa1403e0 	mov	x0, x20
+  4014a0:	94000239 	bl	401d84 <std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<unsigned long> >, std::is_move_constructible<unsigned long>, std::is_move_assignable<unsigned long> >::value, void>::type std::swap<unsigned long>(unsigned long&, unsigned long&)>
+  4014a4:	f94eabe0 	ldr	x0, [sp, #7504]
+  4014a8:	d1000400 	sub	x0, x0, #0x1
+  4014ac:	f90eabe0 	str	x0, [sp, #7504]
+  4014b0:	f94eabe0 	ldr	x0, [sp, #7504]
+  4014b4:	f100001f 	cmp	x0, #0x0
+  4014b8:	54fffb41 	b.ne	401420 <main+0x3c8>  // b.any
+  4014bc:	f90ea7ff 	str	xzr, [sp, #7496]
+  4014c0:	1400001c 	b	401530 <main+0x4d8>
+  4014c4:	f94ea7e0 	ldr	x0, [sp, #7496]
+  4014c8:	91000400 	add	x0, x0, #0x1
+  4014cc:	f94e6be1 	ldr	x1, [sp, #7376]
+  4014d0:	9ac10802 	udiv	x2, x0, x1
+  4014d4:	f94e6be1 	ldr	x1, [sp, #7376]
+  4014d8:	9b017c41 	mul	x1, x2, x1
+  4014dc:	cb010001 	sub	x1, x0, x1
+  4014e0:	912a03e0 	add	x0, sp, #0xa80
+  4014e4:	940001df 	bl	401c60 <std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long)>
+  4014e8:	f9400001 	ldr	x1, [x0]
+  4014ec:	f94e8fe0 	ldr	x0, [sp, #7448]
+  4014f0:	9b007c20 	mul	x0, x1, x0
+  4014f4:	f94e6fe1 	ldr	x1, [sp, #7384]
+  4014f8:	8b000034 	add	x20, x1, x0
+  4014fc:	912a03e0 	add	x0, sp, #0xa80
+  401500:	f94ea7e1 	ldr	x1, [sp, #7496]
+  401504:	940001d7 	bl	401c60 <std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long)>
+  401508:	f9400001 	ldr	x1, [x0]
+  40150c:	f94e8fe0 	ldr	x0, [sp, #7448]
+  401510:	9b007c20 	mul	x0, x1, x0
+  401514:	f94e6fe1 	ldr	x1, [sp, #7384]
+  401518:	8b000020 	add	x0, x1, x0
+  40151c:	aa1403e1 	mov	x1, x20
+  401520:	f9000001 	str	x1, [x0]
+  401524:	f94ea7e0 	ldr	x0, [sp, #7496]
+  401528:	91000400 	add	x0, x0, #0x1
+  40152c:	f90ea7e0 	str	x0, [sp, #7496]
+  401530:	f94ea7e1 	ldr	x1, [sp, #7496]
+  401534:	f94e6be0 	ldr	x0, [sp, #7376]
+  401538:	eb00003f 	cmp	x1, x0
+  40153c:	54fffc43 	b.cc	4014c4 <main+0x46c>  // b.lo, b.ul, b.last
+  401540:	912a03e0 	add	x0, sp, #0xa80
+  401544:	940001b3 	bl	401c10 <std::vector<unsigned long, std::allocator<unsigned long> >::~vector()>
+  401548:	f94e77e0 	ldr	x0, [sp, #7400]
+  40154c:	f100001f 	cmp	x0, #0x0
+  401550:	54000060 	b.eq	40155c <main+0x504>  // b.none
+  401554:	f94e8bf4 	ldr	x20, [sp, #7440]
+  401558:	14000002 	b	401560 <main+0x508>
+  40155c:	d2800014 	mov	x20, #0x0                   	// #0
+  401560:	f90e3bff 	str	xzr, [sp, #7280]
+  401564:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401568:	9131e000 	add	x0, x0, #0xc78
+  40156c:	9400017f 	bl	401b68 <std::allocator<unsigned long>::allocator()>
+  401570:	914007e2 	add	x2, sp, #0x1, lsl #12
+  401574:	9131e042 	add	x2, x2, #0xc78
+  401578:	914007e1 	add	x1, sp, #0x1, lsl #12
+  40157c:	9131c021 	add	x1, x1, #0xc70
+  401580:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401584:	912f4000 	add	x0, x0, #0xbd0
+  401588:	aa0203e3 	mov	x3, x2
+  40158c:	aa0103e2 	mov	x2, x1
+  401590:	aa1403e1 	mov	x1, x20
+  401594:	94000211 	bl	401dd8 <std::vector<unsigned long, std::allocator<unsigned long> >::vector(unsigned long, unsigned long const&, std::allocator<unsigned long> const&)>
+  401598:	914007e0 	add	x0, sp, #0x1, lsl #12
+  40159c:	9131e000 	add	x0, x0, #0xc78
+  4015a0:	9400017a 	bl	401b88 <std::allocator<unsigned long>::~allocator()>
+  4015a4:	f94e6fe0 	ldr	x0, [sp, #7384]
+  4015a8:	f90ea3e0 	str	x0, [sp, #7488]
+  4015ac:	f94e6be0 	ldr	x0, [sp, #7376]
+  4015b0:	d37ff800 	lsl	x0, x0, #1
+  4015b4:	aa0003e1 	mov	x1, x0
+  4015b8:	f94ea3e0 	ldr	x0, [sp, #7488]
+  4015bc:	97fffe9a 	bl	401024 <chase(unsigned long, unsigned long)>
+  4015c0:	f90ea3e0 	str	x0, [sp, #7488]
+  4015c4:	12800000 	mov	w0, #0xffffffff            	// #-1
+  4015c8:	b91d3fe0 	str	w0, [sp, #7484]
+  4015cc:	f94e77e0 	ldr	x0, [sp, #7400]
+  4015d0:	f100001f 	cmp	x0, #0x0
+  4015d4:	540005e1 	b.ne	401690 <main+0x638>  // b.any
+  4015d8:	9102e3e0 	add	x0, sp, #0xb8
+  4015dc:	4f000400 	movi	v0.4s, #0x0
+  4015e0:	ad000000 	stp	q0, q0, [x0]
+  4015e4:	ad010000 	stp	q0, q0, [x0, #32]
+  4015e8:	ad020000 	stp	q0, q0, [x0, #64]
+  4015ec:	ad030000 	stp	q0, q0, [x0, #96]
+  4015f0:	9e660001 	fmov	x1, d0
+  4015f4:	f9004001 	str	x1, [x0, #128]
+  4015f8:	52801100 	mov	w0, #0x88                  	// #136
+  4015fc:	b900bfe0 	str	w0, [sp, #188]
+  401600:	f94e7fe0 	ldr	x0, [sp, #7416]
+  401604:	b900bbe0 	str	w0, [sp, #184]
+  401608:	f94e7be0 	ldr	x0, [sp, #7408]
+  40160c:	f90063e0 	str	x0, [sp, #192]
+  401610:	f94073e0 	ldr	x0, [sp, #224]
+  401614:	b2400000 	orr	x0, x0, #0x1
+  401618:	f90073e0 	str	x0, [sp, #224]
+  40161c:	f94073e0 	ldr	x0, [sp, #224]
+  401620:	b27e0000 	orr	x0, x0, #0x4
+  401624:	f90073e0 	str	x0, [sp, #224]
+  401628:	f94073e0 	ldr	x0, [sp, #224]
+  40162c:	b27b0000 	orr	x0, x0, #0x20
+  401630:	f90073e0 	str	x0, [sp, #224]
+  401634:	f94073e0 	ldr	x0, [sp, #224]
+  401638:	b27a0000 	orr	x0, x0, #0x40
+  40163c:	f90073e0 	str	x0, [sp, #224]
+  401640:	f94073e0 	ldr	x0, [sp, #224]
+  401644:	b26c0000 	orr	x0, x0, #0x100000
+  401648:	f90073e0 	str	x0, [sp, #224]
+  40164c:	d2800060 	mov	x0, #0x3                   	// #3
+  401650:	f9006fe0 	str	x0, [sp, #216]
+  401654:	9102e3e0 	add	x0, sp, #0xb8
+  401658:	d2800105 	mov	x5, #0x8                   	// #8
+  40165c:	12800004 	mov	w4, #0xffffffff            	// #-1
+  401660:	12800003 	mov	w3, #0xffffffff            	// #-1
+  401664:	52800002 	mov	w2, #0x0                   	// #0
+  401668:	aa0003e1 	mov	x1, x0
+  40166c:	d2801e20 	mov	x0, #0xf1                  	// #241
+  401670:	97fffda8 	bl	400d10 <syscall@plt>
+  401674:	b91d3fe0 	str	w0, [sp, #7484]
+  401678:	b95d3fe0 	ldr	w0, [sp, #7484]
+  40167c:	7100001f 	cmp	w0, #0x0
+  401680:	5400008a 	b.ge	401690 <main+0x638>  // b.tcont
+  401684:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401688:	912d8000 	add	x0, x0, #0xb60
+  40168c:	97fffe2e 	bl	400f44 <die(char const*)>
+  401690:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401694:	912d0000 	add	x0, x0, #0xb40
+  401698:	aa0003e1 	mov	x1, x0
+  40169c:	52800000 	mov	w0, #0x0                   	// #0
+  4016a0:	97fffd90 	bl	400ce0 <getrusage@plt>
+  4016a4:	97fffe57 	bl	401000 <tick()>
+  4016a8:	f90e67e0 	str	x0, [sp, #7368]
+  4016ac:	b95d3fe0 	ldr	w0, [sp, #7484]
+  4016b0:	7100001f 	cmp	w0, #0x0
+  4016b4:	5400012b 	b.lt	4016d8 <main+0x680>  // b.tstop
+  4016b8:	52800002 	mov	w2, #0x0                   	// #0
+  4016bc:	d2848001 	mov	x1, #0x2400                	// #9216
+  4016c0:	b95d3fe0 	ldr	w0, [sp, #7484]
+  4016c4:	97fffd8f 	bl	400d00 <ioctl@plt>
+  4016c8:	7100001f 	cmp	w0, #0x0
+  4016cc:	54000060 	b.eq	4016d8 <main+0x680>  // b.none
+  4016d0:	52800020 	mov	w0, #0x1                   	// #1
+  4016d4:	14000002 	b	4016dc <main+0x684>
+  4016d8:	52800000 	mov	w0, #0x0                   	// #0
+  4016dc:	7100001f 	cmp	w0, #0x0
+  4016e0:	54000080 	b.eq	4016f0 <main+0x698>  // b.none
+  4016e4:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  4016e8:	912dc000 	add	x0, x0, #0xb70
+  4016ec:	97fffe16 	bl	400f44 <die(char const*)>
+  4016f0:	f94e77e0 	ldr	x0, [sp, #7400]
+  4016f4:	f100001f 	cmp	x0, #0x0
+  4016f8:	54000360 	b.eq	401764 <main+0x70c>  // b.none
+  4016fc:	f90e9bff 	str	xzr, [sp, #7472]
+  401700:	14000014 	b	401750 <main+0x6f8>
+  401704:	97fffe3f 	bl	401000 <tick()>
+  401708:	f90e63e0 	str	x0, [sp, #7360]
+  40170c:	f94e87e1 	ldr	x1, [sp, #7432]
+  401710:	f94ea3e0 	ldr	x0, [sp, #7488]
+  401714:	97fffe44 	bl	401024 <chase(unsigned long, unsigned long)>
+  401718:	f90ea3e0 	str	x0, [sp, #7488]
+  40171c:	97fffe39 	bl	401000 <tick()>
+  401720:	aa0003f4 	mov	x20, x0
+  401724:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401728:	912f4000 	add	x0, x0, #0xbd0
+  40172c:	f94e9be1 	ldr	x1, [sp, #7472]
+  401730:	9400014c 	bl	401c60 <std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long)>
+  401734:	aa0003e1 	mov	x1, x0
+  401738:	f94e63e0 	ldr	x0, [sp, #7360]
+  40173c:	cb000280 	sub	x0, x20, x0
+  401740:	f9000020 	str	x0, [x1]
+  401744:	f94e9be0 	ldr	x0, [sp, #7472]
+  401748:	91000400 	add	x0, x0, #0x1
+  40174c:	f90e9be0 	str	x0, [sp, #7472]
+  401750:	f94e9be1 	ldr	x1, [sp, #7472]
+  401754:	f94e8be0 	ldr	x0, [sp, #7440]
+  401758:	eb00003f 	cmp	x1, x0
+  40175c:	54fffd43 	b.cc	401704 <main+0x6ac>  // b.lo, b.ul, b.last
+  401760:	14000008 	b	401780 <main+0x728>
+  401764:	f94e8be1 	ldr	x1, [sp, #7440]
+  401768:	f94e87e0 	ldr	x0, [sp, #7432]
+  40176c:	9b007c20 	mul	x0, x1, x0
+  401770:	aa0003e1 	mov	x1, x0
+  401774:	f94ea3e0 	ldr	x0, [sp, #7488]
+  401778:	97fffe2b 	bl	401024 <chase(unsigned long, unsigned long)>
+  40177c:	f90ea3e0 	str	x0, [sp, #7488]
+  401780:	b95d3fe0 	ldr	w0, [sp, #7484]
+  401784:	7100001f 	cmp	w0, #0x0
+  401788:	5400012b 	b.lt	4017ac <main+0x754>  // b.tstop
+  40178c:	52800002 	mov	w2, #0x0                   	// #0
+  401790:	d2848021 	mov	x1, #0x2401                	// #9217
+  401794:	b95d3fe0 	ldr	w0, [sp, #7484]
+  401798:	97fffd5a 	bl	400d00 <ioctl@plt>
+  40179c:	7100001f 	cmp	w0, #0x0
+  4017a0:	54000060 	b.eq	4017ac <main+0x754>  // b.none
+  4017a4:	52800020 	mov	w0, #0x1                   	// #1
+  4017a8:	14000002 	b	4017b0 <main+0x758>
+  4017ac:	52800000 	mov	w0, #0x0                   	// #0
+  4017b0:	7100001f 	cmp	w0, #0x0
+  4017b4:	54000080 	b.eq	4017c4 <main+0x76c>  // b.none
+  4017b8:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  4017bc:	912de000 	add	x0, x0, #0xb78
+  4017c0:	97fffde1 	bl	400f44 <die(char const*)>
+  4017c4:	97fffe0f 	bl	401000 <tick()>
+  4017c8:	aa0003e1 	mov	x1, x0
+  4017cc:	f94e67e0 	ldr	x0, [sp, #7368]
+  4017d0:	cb000020 	sub	x0, x1, x0
+  4017d4:	f90e5fe0 	str	x0, [sp, #7352]
+  4017d8:	914007e0 	add	x0, sp, #0x1, lsl #12
+  4017dc:	912ac000 	add	x0, x0, #0xab0
+  4017e0:	aa0003e1 	mov	x1, x0
+  4017e4:	52800000 	mov	w0, #0x0                   	// #0
+  4017e8:	97fffd3e 	bl	400ce0 <getrusage@plt>
+  4017ec:	914007e0 	add	x0, sp, #0x1, lsl #12
+  4017f0:	91280000 	add	x0, x0, #0xa00
+  4017f4:	a909fc1f 	stp	xzr, xzr, [x0, #152]
+  4017f8:	f90d57ff 	str	xzr, [sp, #6824]
+  4017fc:	b95d3fe0 	ldr	w0, [sp, #7484]
+  401800:	7100001f 	cmp	w0, #0x0
+  401804:	540004cb 	b.lt	40189c <main+0x844>  // b.tstop
+  401808:	914007e0 	add	x0, sp, #0x1, lsl #12
+  40180c:	912a6000 	add	x0, x0, #0xa98
+  401810:	d2800302 	mov	x2, #0x18                  	// #24
+  401814:	aa0003e1 	mov	x1, x0
+  401818:	b95d3fe0 	ldr	w0, [sp, #7484]
+  40181c:	97fffd29 	bl	400cc0 <read@plt>
+  401820:	f100601f 	cmp	x0, #0x18
+  401824:	1a9f07e0 	cset	w0, ne  // ne = any
+  401828:	12001c00 	and	w0, w0, #0xff
+  40182c:	7100001f 	cmp	w0, #0x0
+  401830:	54000080 	b.eq	401840 <main+0x7e8>  // b.none
+  401834:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401838:	912e0000 	add	x0, x0, #0xb80
+  40183c:	97fffdc2 	bl	400f44 <die(char const*)>
+  401840:	f94d53e0 	ldr	x0, [sp, #6816]
+  401844:	f100001f 	cmp	x0, #0x0
+  401848:	540000a0 	b.eq	40185c <main+0x804>  // b.none
+  40184c:	f94d53e1 	ldr	x1, [sp, #6816]
+  401850:	f94d57e0 	ldr	x0, [sp, #6824]
+  401854:	eb00003f 	cmp	x1, x0
+  401858:	540001e0 	b.eq	401894 <main+0x83c>  // b.none
+  40185c:	f00000e0 	adrp	x0, 420000 <fprintf@GLIBC_2.17>
+  401860:	91040000 	add	x0, x0, #0x100
+  401864:	f9400004 	ldr	x4, [x0]
+  401868:	f94d53e0 	ldr	x0, [sp, #6816]
+  40186c:	f94d57e1 	ldr	x1, [sp, #6824]
+  401870:	aa0103e3 	mov	x3, x1
+  401874:	aa0003e2 	mov	x2, x0
+  401878:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  40187c:	912e4001 	add	x1, x0, #0xb90
+  401880:	aa0403e0 	mov	x0, x4
+  401884:	97fffcef 	bl	400c40 <fprintf@plt>
+  401888:	52800073 	mov	w19, #0x3                   	// #3
+  40188c:	52800014 	mov	w20, #0x0                   	// #0
+  401890:	14000085 	b	401aa4 <main+0xa4c>
+  401894:	b95d3fe0 	ldr	w0, [sp, #7484]
+  401898:	97fffd42 	bl	400da0 <close@plt>
+  40189c:	f94e77e0 	ldr	x0, [sp, #7400]
+  4018a0:	f100001f 	cmp	x0, #0x0
+  4018a4:	54000560 	b.eq	401950 <main+0x8f8>  // b.none
+  4018a8:	f94053e0 	ldr	x0, [sp, #160]
+  4018ac:	91012000 	add	x0, x0, #0x48
+  4018b0:	f9400000 	ldr	x0, [x0]
+  4018b4:	912a63e4 	add	x4, sp, #0xa98
+  4018b8:	aa0003e3 	mov	x3, x0
+  4018bc:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  4018c0:	912f4002 	add	x2, x0, #0xbd0
+  4018c4:	d2820001 	mov	x1, #0x1000                	// #4096
+  4018c8:	aa0403e0 	mov	x0, x4
+  4018cc:	97fffd25 	bl	400d60 <snprintf@plt>
+  4018d0:	912a63e2 	add	x2, sp, #0xa98
+  4018d4:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  4018d8:	912f8001 	add	x1, x0, #0xbe0
+  4018dc:	aa0203e0 	mov	x0, x2
+  4018e0:	97fffd2c 	bl	400d90 <fopen@plt>
+  4018e4:	f90e5be0 	str	x0, [sp, #7344]
+  4018e8:	f94e5be0 	ldr	x0, [sp, #7344]
+  4018ec:	f100001f 	cmp	x0, #0x0
+  4018f0:	54000200 	b.eq	401930 <main+0x8d8>  // b.none
+  4018f4:	914007e0 	add	x0, sp, #0x1, lsl #12
+  4018f8:	912f4000 	add	x0, x0, #0xbd0
+  4018fc:	94000153 	bl	401e48 <std::vector<unsigned long, std::allocator<unsigned long> >::data()>
+  401900:	f94e5be3 	ldr	x3, [sp, #7344]
+  401904:	f94e8be2 	ldr	x2, [sp, #7440]
+  401908:	d2800101 	mov	x1, #0x8                   	// #8
+  40190c:	97fffd39 	bl	400df0 <fwrite@plt>
+  401910:	aa0003e1 	mov	x1, x0
+  401914:	f94e8be0 	ldr	x0, [sp, #7440]
+  401918:	eb01001f 	cmp	x0, x1
+  40191c:	540000a1 	b.ne	401930 <main+0x8d8>  // b.any
+  401920:	f94e5be0 	ldr	x0, [sp, #7344]
+  401924:	97fffcdb 	bl	400c90 <fclose@plt>
+  401928:	7100001f 	cmp	w0, #0x0
+  40192c:	54000060 	b.eq	401938 <main+0x8e0>  // b.none
+  401930:	52800020 	mov	w0, #0x1                   	// #1
+  401934:	14000002 	b	40193c <main+0x8e4>
+  401938:	52800000 	mov	w0, #0x0                   	// #0
+  40193c:	7100001f 	cmp	w0, #0x0
+  401940:	54000080 	b.eq	401950 <main+0x8f8>  // b.none
+  401944:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401948:	912fa000 	add	x0, x0, #0xbe8
+  40194c:	97fffd7e 	bl	400f44 <die(char const*)>
+  401950:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401954:	912fe000 	add	x0, x0, #0xbf8
+  401958:	f90e57e0 	str	x0, [sp, #7336]
+  40195c:	d53be000 	mrs	x0, cntfrq_el0
+  401960:	f90e53e0 	str	x0, [sp, #7328]
+  401964:	f94053e0 	ldr	x0, [sp, #160]
+  401968:	91012000 	add	x0, x0, #0x48
+  40196c:	f9400000 	ldr	x0, [x0]
+  401970:	912a63e4 	add	x4, sp, #0xa98
+  401974:	aa0003e3 	mov	x3, x0
+  401978:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  40197c:	91302002 	add	x2, x0, #0xc08
+  401980:	d2820001 	mov	x1, #0x1000                	// #4096
+  401984:	aa0403e0 	mov	x0, x4
+  401988:	97fffcf6 	bl	400d60 <snprintf@plt>
+  40198c:	912a63e2 	add	x2, sp, #0xa98
+  401990:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401994:	91304001 	add	x1, x0, #0xc10
+  401998:	aa0203e0 	mov	x0, x2
+  40199c:	97fffcfd 	bl	400d90 <fopen@plt>
+  4019a0:	f90e4fe0 	str	x0, [sp, #7320]
+  4019a4:	f94e4fe0 	ldr	x0, [sp, #7320]
+  4019a8:	f100001f 	cmp	x0, #0x0
+  4019ac:	54000081 	b.ne	4019bc <main+0x964>  // b.any
+  4019b0:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  4019b4:	91306000 	add	x0, x0, #0xc18
+  4019b8:	97fffd63 	bl	400f44 <die(char const*)>
+  4019bc:	f94e8be1 	ldr	x1, [sp, #7440]
+  4019c0:	f94e87e0 	ldr	x0, [sp, #7432]
+  4019c4:	9b007c37 	mul	x23, x1, x0
+  4019c8:	f94d4ff4 	ldr	x20, [sp, #6808]
+  4019cc:	f94d53f5 	ldr	x21, [sp, #6816]
+  4019d0:	f94d57f6 	ldr	x22, [sp, #6824]
+  4019d4:	97fffcab 	bl	400c80 <sched_getcpu@plt>
+  4019d8:	2a0003e5 	mov	w5, w0
+  4019dc:	f94d7be1 	ldr	x1, [sp, #6896]
+  4019e0:	f94dc3e0 	ldr	x0, [sp, #7040]
+  4019e4:	cb000020 	sub	x0, x1, x0
+  4019e8:	f94d7fe2 	ldr	x2, [sp, #6904]
+  4019ec:	f94dc7e1 	ldr	x1, [sp, #7048]
+  4019f0:	cb010041 	sub	x1, x2, x1
+  4019f4:	f94d9fe3 	ldr	x3, [sp, #6968]
+  4019f8:	f94de7e2 	ldr	x2, [sp, #7112]
+  4019fc:	cb020062 	sub	x2, x3, x2
+  401a00:	f94e6fe3 	ldr	x3, [sp, #7384]
+  401a04:	f94ea3e4 	ldr	x4, [sp, #7488]
+  401a08:	cb030083 	sub	x3, x4, x3
+  401a0c:	f9002be3 	str	x3, [sp, #80]
+  401a10:	f90027e2 	str	x2, [sp, #72]
+  401a14:	f90023e1 	str	x1, [sp, #64]
+  401a18:	f9001fe0 	str	x0, [sp, #56]
+  401a1c:	f94e5fe0 	ldr	x0, [sp, #7352]
+  401a20:	f9001be0 	str	x0, [sp, #48]
+  401a24:	f94e53e0 	ldr	x0, [sp, #7328]
+  401a28:	f90017e0 	str	x0, [sp, #40]
+  401a2c:	f94e57e0 	ldr	x0, [sp, #7336]
+  401a30:	f90013e0 	str	x0, [sp, #32]
+  401a34:	b9001be5 	str	w5, [sp, #24]
+  401a38:	f9000bf6 	str	x22, [sp, #16]
+  401a3c:	f90007f5 	str	x21, [sp, #8]
+  401a40:	f90003f4 	str	x20, [sp]
+  401a44:	aa1703e7 	mov	x7, x23
+  401a48:	f94e83e6 	ldr	x6, [sp, #7424]
+  401a4c:	f94e87e5 	ldr	x5, [sp, #7432]
+  401a50:	f94e8be4 	ldr	x4, [sp, #7440]
+  401a54:	f94e8fe3 	ldr	x3, [sp, #7448]
+  401a58:	f94e93e2 	ldr	x2, [sp, #7456]
+  401a5c:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401a60:	9130a001 	add	x1, x0, #0xc28
+  401a64:	f94e4fe0 	ldr	x0, [sp, #7320]
+  401a68:	97fffc76 	bl	400c40 <fprintf@plt>
+  401a6c:	f94e4fe0 	ldr	x0, [sp, #7320]
+  401a70:	97fffc88 	bl	400c90 <fclose@plt>
+  401a74:	7100001f 	cmp	w0, #0x0
+  401a78:	1a9f07e0 	cset	w0, ne  // ne = any
+  401a7c:	12001c00 	and	w0, w0, #0xff
+  401a80:	7100001f 	cmp	w0, #0x0
+  401a84:	54000080 	b.eq	401a94 <main+0xa3c>  // b.none
+  401a88:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401a8c:	91352000 	add	x0, x0, #0xd48
+  401a90:	97fffd2d 	bl	400f44 <die(char const*)>
+  401a94:	f94e93e1 	ldr	x1, [sp, #7456]
+  401a98:	f94e6fe0 	ldr	x0, [sp, #7384]
+  401a9c:	97fffcad 	bl	400d50 <munmap@plt>
+  401aa0:	52800034 	mov	w20, #0x1                   	// #1
+  401aa4:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401aa8:	912f4000 	add	x0, x0, #0xbd0
+  401aac:	94000059 	bl	401c10 <std::vector<unsigned long, std::allocator<unsigned long> >::~vector()>
+  401ab0:	7100069f 	cmp	w20, #0x1
+  401ab4:	54000041 	b.ne	401abc <main+0xa64>  // b.any
+  401ab8:	52800013 	mov	w19, #0x0                   	// #0
+  401abc:	2a1303e0 	mov	w0, w19
+  401ac0:	14000018 	b	401b20 <main+0xac8>
+  401ac4:	aa0003f3 	mov	x19, x0
+  401ac8:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401acc:	9131a000 	add	x0, x0, #0xc68
+  401ad0:	9400002e 	bl	401b88 <std::allocator<unsigned long>::~allocator()>
+  401ad4:	aa1303e0 	mov	x0, x19
+  401ad8:	97fffcca 	bl	400e00 <_Unwind_Resume@plt>
+  401adc:	aa0003f3 	mov	x19, x0
+  401ae0:	912a03e0 	add	x0, sp, #0xa80
+  401ae4:	9400004b 	bl	401c10 <std::vector<unsigned long, std::allocator<unsigned long> >::~vector()>
+  401ae8:	aa1303e0 	mov	x0, x19
+  401aec:	97fffcc5 	bl	400e00 <_Unwind_Resume@plt>
+  401af0:	aa0003f3 	mov	x19, x0
+  401af4:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401af8:	9131e000 	add	x0, x0, #0xc78
+  401afc:	94000023 	bl	401b88 <std::allocator<unsigned long>::~allocator()>
+  401b00:	aa1303e0 	mov	x0, x19
+  401b04:	97fffcbf 	bl	400e00 <_Unwind_Resume@plt>
+  401b08:	aa0003f3 	mov	x19, x0
+  401b0c:	914007e0 	add	x0, sp, #0x1, lsl #12
+  401b10:	912f4000 	add	x0, x0, #0xbd0
+  401b14:	9400003f 	bl	401c10 <std::vector<unsigned long, std::allocator<unsigned long> >::~vector()>
+  401b18:	aa1303e0 	mov	x0, x19
+  401b1c:	97fffcb9 	bl	400e00 <_Unwind_Resume@plt>
+  401b20:	a94753f3 	ldp	x19, x20, [sp, #112]
+  401b24:	a9485bf5 	ldp	x21, x22, [sp, #128]
+  401b28:	f9404bf7 	ldr	x23, [sp, #144]
+  401b2c:	a9467bfd 	ldp	x29, x30, [sp, #96]
+  401b30:	d283ac0c 	mov	x12, #0x1d60                	// #7520
+  401b34:	8b2c63ff 	add	sp, sp, x12
+  401b38:	d65f03c0 	ret
+
+0000000000401b3c <std::__size_to_integer(unsigned long)>:
+  401b3c:	d10043ff 	sub	sp, sp, #0x10
+  401b40:	f90007e0 	str	x0, [sp, #8]
+  401b44:	f94007e0 	ldr	x0, [sp, #8]
+  401b48:	910043ff 	add	sp, sp, #0x10
+  401b4c:	d65f03c0 	ret
+
+0000000000401b50 <operator new(unsigned long, void*)>:
+  401b50:	d10043ff 	sub	sp, sp, #0x10
+  401b54:	f90007e0 	str	x0, [sp, #8]
+  401b58:	f90003e1 	str	x1, [sp]
+  401b5c:	f94003e0 	ldr	x0, [sp]
+  401b60:	910043ff 	add	sp, sp, #0x10
+  401b64:	d65f03c0 	ret
+
+0000000000401b68 <std::allocator<unsigned long>::allocator()>:
+  401b68:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  401b6c:	910003fd 	mov	x29, sp
+  401b70:	f9000fe0 	str	x0, [sp, #24]
+  401b74:	f9400fe0 	ldr	x0, [sp, #24]
+  401b78:	940000be 	bl	401e70 <__gnu_cxx::new_allocator<unsigned long>::new_allocator()>
+  401b7c:	d503201f 	nop
+  401b80:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  401b84:	d65f03c0 	ret
+
+0000000000401b88 <std::allocator<unsigned long>::~allocator()>:
+  401b88:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  401b8c:	910003fd 	mov	x29, sp
+  401b90:	f9000fe0 	str	x0, [sp, #24]
+  401b94:	f9400fe0 	ldr	x0, [sp, #24]
+  401b98:	940000bb 	bl	401e84 <__gnu_cxx::new_allocator<unsigned long>::~new_allocator()>
+  401b9c:	d503201f 	nop
+  401ba0:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  401ba4:	d65f03c0 	ret
+
+0000000000401ba8 <std::vector<unsigned long, std::allocator<unsigned long> >::vector(unsigned long, std::allocator<unsigned long> const&)>:
+  401ba8:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+  401bac:	910003fd 	mov	x29, sp
+  401bb0:	f9000bf3 	str	x19, [sp, #16]
+  401bb4:	f9001fe0 	str	x0, [sp, #56]
+  401bb8:	f9001be1 	str	x1, [sp, #48]
+  401bbc:	f90017e2 	str	x2, [sp, #40]
+  401bc0:	f9401ff3 	ldr	x19, [sp, #56]
+  401bc4:	f94017e1 	ldr	x1, [sp, #40]
+  401bc8:	f9401be0 	ldr	x0, [sp, #48]
+  401bcc:	940000b3 	bl	401e98 <std::vector<unsigned long, std::allocator<unsigned long> >::_S_check_init_len(unsigned long, std::allocator<unsigned long> const&)>
+  401bd0:	f94017e2 	ldr	x2, [sp, #40]
+  401bd4:	aa0003e1 	mov	x1, x0
+  401bd8:	aa1303e0 	mov	x0, x19
+  401bdc:	940000d1 	bl	401f20 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_base(unsigned long, std::allocator<unsigned long> const&)>
+  401be0:	f9401be1 	ldr	x1, [sp, #48]
+  401be4:	f9401fe0 	ldr	x0, [sp, #56]
+  401be8:	940000f7 	bl	401fc4 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)>
+  401bec:	14000006 	b	401c04 <std::vector<unsigned long, std::allocator<unsigned long> >::vector(unsigned long, std::allocator<unsigned long> const&)+0x5c>
+  401bf0:	aa0003f3 	mov	x19, x0
+  401bf4:	f9401fe0 	ldr	x0, [sp, #56]
+  401bf8:	940000df 	bl	401f74 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::~_Vector_base()>
+  401bfc:	aa1303e0 	mov	x0, x19
+  401c00:	97fffc80 	bl	400e00 <_Unwind_Resume@plt>
+  401c04:	f9400bf3 	ldr	x19, [sp, #16]
+  401c08:	a8c47bfd 	ldp	x29, x30, [sp], #64
+  401c0c:	d65f03c0 	ret
+
+0000000000401c10 <std::vector<unsigned long, std::allocator<unsigned long> >::~vector()>:
+  401c10:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  401c14:	910003fd 	mov	x29, sp
+  401c18:	a90153f3 	stp	x19, x20, [sp, #16]
+  401c1c:	f90017e0 	str	x0, [sp, #40]
+  401c20:	f94017e0 	ldr	x0, [sp, #40]
+  401c24:	f9400013 	ldr	x19, [x0]
+  401c28:	f94017e0 	ldr	x0, [sp, #40]
+  401c2c:	f9400414 	ldr	x20, [x0, #8]
+  401c30:	f94017e0 	ldr	x0, [sp, #40]
+  401c34:	940000f8 	bl	402014 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_get_Tp_allocator()>
+  401c38:	aa0003e2 	mov	x2, x0
+  401c3c:	aa1403e1 	mov	x1, x20
+  401c40:	aa1303e0 	mov	x0, x19
+  401c44:	940000f9 	bl	402028 <void std::_Destroy<unsigned long*, unsigned long>(unsigned long*, unsigned long*, std::allocator<unsigned long>&)>
+  401c48:	f94017e0 	ldr	x0, [sp, #40]
+  401c4c:	940000ca 	bl	401f74 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::~_Vector_base()>
+  401c50:	d503201f 	nop
+  401c54:	a94153f3 	ldp	x19, x20, [sp, #16]
+  401c58:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  401c5c:	d65f03c0 	ret
+
+0000000000401c60 <std::vector<unsigned long, std::allocator<unsigned long> >::operator[](unsigned long)>:
+  401c60:	d10043ff 	sub	sp, sp, #0x10
+  401c64:	f90007e0 	str	x0, [sp, #8]
+  401c68:	f90003e1 	str	x1, [sp]
+  401c6c:	f94007e0 	ldr	x0, [sp, #8]
+  401c70:	f9400001 	ldr	x1, [x0]
+  401c74:	f94003e0 	ldr	x0, [sp]
+  401c78:	d37df000 	lsl	x0, x0, #3
+  401c7c:	8b000020 	add	x0, x1, x0
+  401c80:	910043ff 	add	sp, sp, #0x10
+  401c84:	d65f03c0 	ret
+
+0000000000401c88 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::mersenne_twister_engine(unsigned long)>:
+  401c88:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  401c8c:	910003fd 	mov	x29, sp
+  401c90:	f9000fe0 	str	x0, [sp, #24]
+  401c94:	f9000be1 	str	x1, [sp, #16]
+  401c98:	f9400be1 	ldr	x1, [sp, #16]
+  401c9c:	f9400fe0 	ldr	x0, [sp, #24]
+  401ca0:	940000ed 	bl	402054 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long)>
+  401ca4:	d503201f 	nop
+  401ca8:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  401cac:	d65f03c0 	ret
+
+0000000000401cb0 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()>:
+  401cb0:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  401cb4:	910003fd 	mov	x29, sp
+  401cb8:	f9000fe0 	str	x0, [sp, #24]
+  401cbc:	f9400fe0 	ldr	x0, [sp, #24]
+  401cc0:	f944e000 	ldr	x0, [x0, #2496]
+  401cc4:	f104dc1f 	cmp	x0, #0x137
+  401cc8:	54000069 	b.ls	401cd4 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::operator()()+0x24>  // b.plast
+  401ccc:	f9400fe0 	ldr	x0, [sp, #24]
+  401cd0:	94000116 	bl	402128 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()>
+  401cd4:	f9400fe0 	ldr	x0, [sp, #24]
+  401cd8:	f944e000 	ldr	x0, [x0, #2496]
+  401cdc:	91000402 	add	x2, x0, #0x1
+  401ce0:	f9400fe1 	ldr	x1, [sp, #24]
+  401ce4:	f904e022 	str	x2, [x1, #2496]
+  401ce8:	f9400fe1 	ldr	x1, [sp, #24]
+  401cec:	f8607820 	ldr	x0, [x1, x0, lsl #3]
+  401cf0:	f90017e0 	str	x0, [sp, #40]
+  401cf4:	f94017e0 	ldr	x0, [sp, #40]
+  401cf8:	d35dfc00 	lsr	x0, x0, #29
+  401cfc:	9200f000 	and	x0, x0, #0x5555555555555555
+  401d00:	f94017e1 	ldr	x1, [sp, #40]
+  401d04:	ca000020 	eor	x0, x1, x0
+  401d08:	f90017e0 	str	x0, [sp, #40]
+  401d0c:	f94017e0 	ldr	x0, [sp, #40]
+  401d10:	d36fb801 	lsl	x1, x0, #17
+  401d14:	d2bdb4c0 	mov	x0, #0xeda60000            	// #3987079168
+  401d18:	f2cfffe0 	movk	x0, #0x7fff, lsl #32
+  401d1c:	f2ee3ac0 	movk	x0, #0x71d6, lsl #48
+  401d20:	8a000020 	and	x0, x1, x0
+  401d24:	f94017e1 	ldr	x1, [sp, #40]
+  401d28:	ca000020 	eor	x0, x1, x0
+  401d2c:	f90017e0 	str	x0, [sp, #40]
+  401d30:	f94017e0 	ldr	x0, [sp, #40]
+  401d34:	d35b6801 	lsl	x1, x0, #37
+  401d38:	d2dddc00 	mov	x0, #0xeee000000000        	// #262645840084992
+  401d3c:	f2fffee0 	movk	x0, #0xfff7, lsl #48
+  401d40:	8a000020 	and	x0, x1, x0
+  401d44:	f94017e1 	ldr	x1, [sp, #40]
+  401d48:	ca000020 	eor	x0, x1, x0
+  401d4c:	f90017e0 	str	x0, [sp, #40]
+  401d50:	f94017e0 	ldr	x0, [sp, #40]
+  401d54:	d36bfc00 	lsr	x0, x0, #43
+  401d58:	f94017e1 	ldr	x1, [sp, #40]
+  401d5c:	ca000020 	eor	x0, x1, x0
+  401d60:	f90017e0 	str	x0, [sp, #40]
+  401d64:	f94017e0 	ldr	x0, [sp, #40]
+  401d68:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  401d6c:	d65f03c0 	ret
+
+0000000000401d70 <std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)>:
+  401d70:	d10043ff 	sub	sp, sp, #0x10
+  401d74:	f90007e0 	str	x0, [sp, #8]
+  401d78:	f94007e0 	ldr	x0, [sp, #8]
+  401d7c:	910043ff 	add	sp, sp, #0x10
+  401d80:	d65f03c0 	ret
+
+0000000000401d84 <std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<unsigned long> >, std::is_move_constructible<unsigned long>, std::is_move_assignable<unsigned long> >::value, void>::type std::swap<unsigned long>(unsigned long&, unsigned long&)>:
+  401d84:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  401d88:	910003fd 	mov	x29, sp
+  401d8c:	f9000fe0 	str	x0, [sp, #24]
+  401d90:	f9000be1 	str	x1, [sp, #16]
+  401d94:	f9400fe0 	ldr	x0, [sp, #24]
+  401d98:	97fffff6 	bl	401d70 <std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)>
+  401d9c:	f9400000 	ldr	x0, [x0]
+  401da0:	f90017e0 	str	x0, [sp, #40]
+  401da4:	f9400be0 	ldr	x0, [sp, #16]
+  401da8:	97fffff2 	bl	401d70 <std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)>
+  401dac:	f9400001 	ldr	x1, [x0]
+  401db0:	f9400fe0 	ldr	x0, [sp, #24]
+  401db4:	f9000001 	str	x1, [x0]
+  401db8:	9100a3e0 	add	x0, sp, #0x28
+  401dbc:	97ffffed 	bl	401d70 <std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)>
+  401dc0:	f9400001 	ldr	x1, [x0]
+  401dc4:	f9400be0 	ldr	x0, [sp, #16]
+  401dc8:	f9000001 	str	x1, [x0]
+  401dcc:	d503201f 	nop
+  401dd0:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  401dd4:	d65f03c0 	ret
+
+0000000000401dd8 <std::vector<unsigned long, std::allocator<unsigned long> >::vector(unsigned long, unsigned long const&, std::allocator<unsigned long> const&)>:
+  401dd8:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+  401ddc:	910003fd 	mov	x29, sp
+  401de0:	f9000bf3 	str	x19, [sp, #16]
+  401de4:	f9001fe0 	str	x0, [sp, #56]
+  401de8:	f9001be1 	str	x1, [sp, #48]
+  401dec:	f90017e2 	str	x2, [sp, #40]
+  401df0:	f90013e3 	str	x3, [sp, #32]
+  401df4:	f9401ff3 	ldr	x19, [sp, #56]
+  401df8:	f94013e1 	ldr	x1, [sp, #32]
+  401dfc:	f9401be0 	ldr	x0, [sp, #48]
+  401e00:	94000026 	bl	401e98 <std::vector<unsigned long, std::allocator<unsigned long> >::_S_check_init_len(unsigned long, std::allocator<unsigned long> const&)>
+  401e04:	f94013e2 	ldr	x2, [sp, #32]
+  401e08:	aa0003e1 	mov	x1, x0
+  401e0c:	aa1303e0 	mov	x0, x19
+  401e10:	94000044 	bl	401f20 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_base(unsigned long, std::allocator<unsigned long> const&)>
+  401e14:	f94017e2 	ldr	x2, [sp, #40]
+  401e18:	f9401be1 	ldr	x1, [sp, #48]
+  401e1c:	f9401fe0 	ldr	x0, [sp, #56]
+  401e20:	94000138 	bl	402300 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_fill_initialize(unsigned long, unsigned long const&)>
+  401e24:	14000006 	b	401e3c <std::vector<unsigned long, std::allocator<unsigned long> >::vector(unsigned long, unsigned long const&, std::allocator<unsigned long> const&)+0x64>
+  401e28:	aa0003f3 	mov	x19, x0
+  401e2c:	f9401fe0 	ldr	x0, [sp, #56]
+  401e30:	94000051 	bl	401f74 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::~_Vector_base()>
+  401e34:	aa1303e0 	mov	x0, x19
+  401e38:	97fffbf2 	bl	400e00 <_Unwind_Resume@plt>
+  401e3c:	f9400bf3 	ldr	x19, [sp, #16]
+  401e40:	a8c47bfd 	ldp	x29, x30, [sp], #64
+  401e44:	d65f03c0 	ret
+
+0000000000401e48 <std::vector<unsigned long, std::allocator<unsigned long> >::data()>:
+  401e48:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  401e4c:	910003fd 	mov	x29, sp
+  401e50:	f9000fe0 	str	x0, [sp, #24]
+  401e54:	f9400fe0 	ldr	x0, [sp, #24]
+  401e58:	f9400000 	ldr	x0, [x0]
+  401e5c:	aa0003e1 	mov	x1, x0
+  401e60:	f9400fe0 	ldr	x0, [sp, #24]
+  401e64:	9400013d 	bl	402358 <unsigned long* std::vector<unsigned long, std::allocator<unsigned long> >::_M_data_ptr<unsigned long>(unsigned long*) const>
+  401e68:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  401e6c:	d65f03c0 	ret
+
+0000000000401e70 <__gnu_cxx::new_allocator<unsigned long>::new_allocator()>:
+  401e70:	d10043ff 	sub	sp, sp, #0x10
+  401e74:	f90007e0 	str	x0, [sp, #8]
+  401e78:	d503201f 	nop
+  401e7c:	910043ff 	add	sp, sp, #0x10
+  401e80:	d65f03c0 	ret
+
+0000000000401e84 <__gnu_cxx::new_allocator<unsigned long>::~new_allocator()>:
+  401e84:	d10043ff 	sub	sp, sp, #0x10
+  401e88:	f90007e0 	str	x0, [sp, #8]
+  401e8c:	d503201f 	nop
+  401e90:	910043ff 	add	sp, sp, #0x10
+  401e94:	d65f03c0 	ret
+
+0000000000401e98 <std::vector<unsigned long, std::allocator<unsigned long> >::_S_check_init_len(unsigned long, std::allocator<unsigned long> const&)>:
+  401e98:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+  401e9c:	910003fd 	mov	x29, sp
+  401ea0:	f9000bf3 	str	x19, [sp, #16]
+  401ea4:	f90017e0 	str	x0, [sp, #40]
+  401ea8:	f90013e1 	str	x1, [sp, #32]
+  401eac:	9100e3e0 	add	x0, sp, #0x38
+  401eb0:	f94013e1 	ldr	x1, [sp, #32]
+  401eb4:	9400013d 	bl	4023a8 <std::allocator<unsigned long>::allocator(std::allocator<unsigned long> const&)>
+  401eb8:	9100e3e0 	add	x0, sp, #0x38
+  401ebc:	9400012d 	bl	402370 <std::vector<unsigned long, std::allocator<unsigned long> >::_S_max_size(std::allocator<unsigned long> const&)>
+  401ec0:	aa0003e1 	mov	x1, x0
+  401ec4:	f94017e0 	ldr	x0, [sp, #40]
+  401ec8:	eb01001f 	cmp	x0, x1
+  401ecc:	1a9f97e0 	cset	w0, hi  // hi = pmore
+  401ed0:	12001c13 	and	w19, w0, #0xff
+  401ed4:	9100e3e0 	add	x0, sp, #0x38
+  401ed8:	97ffff2c 	bl	401b88 <std::allocator<unsigned long>::~allocator()>
+  401edc:	7100027f 	cmp	w19, #0x0
+  401ee0:	54000080 	b.eq	401ef0 <std::vector<unsigned long, std::allocator<unsigned long> >::_S_check_init_len(unsigned long, std::allocator<unsigned long> const&)+0x58>  // b.none
+  401ee4:	b0000000 	adrp	x0, 402000 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)+0x3c>
+  401ee8:	91356000 	add	x0, x0, #0xd58
+  401eec:	97fffb6d 	bl	400ca0 <std::__throw_length_error(char const*)@plt>
+  401ef0:	f94017e0 	ldr	x0, [sp, #40]
+  401ef4:	f9400bf3 	ldr	x19, [sp, #16]
+  401ef8:	a8c47bfd 	ldp	x29, x30, [sp], #64
+  401efc:	d65f03c0 	ret
+
+0000000000401f00 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_impl::~_Vector_impl()>:
+  401f00:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  401f04:	910003fd 	mov	x29, sp
+  401f08:	f9000fe0 	str	x0, [sp, #24]
+  401f0c:	f9400fe0 	ldr	x0, [sp, #24]
+  401f10:	97ffff1e 	bl	401b88 <std::allocator<unsigned long>::~allocator()>
+  401f14:	d503201f 	nop
+  401f18:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  401f1c:	d65f03c0 	ret
+
+0000000000401f20 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_base(unsigned long, std::allocator<unsigned long> const&)>:
+  401f20:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+  401f24:	910003fd 	mov	x29, sp
+  401f28:	f9000bf3 	str	x19, [sp, #16]
+  401f2c:	f9001fe0 	str	x0, [sp, #56]
+  401f30:	f9001be1 	str	x1, [sp, #48]
+  401f34:	f90017e2 	str	x2, [sp, #40]
+  401f38:	f9401fe0 	ldr	x0, [sp, #56]
+  401f3c:	f94017e1 	ldr	x1, [sp, #40]
+  401f40:	94000124 	bl	4023d0 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_impl::_Vector_impl(std::allocator<unsigned long> const&)>
+  401f44:	f9401be1 	ldr	x1, [sp, #48]
+  401f48:	f9401fe0 	ldr	x0, [sp, #56]
+  401f4c:	9400012d 	bl	402400 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_create_storage(unsigned long)>
+  401f50:	14000006 	b	401f68 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_base(unsigned long, std::allocator<unsigned long> const&)+0x48>
+  401f54:	aa0003f3 	mov	x19, x0
+  401f58:	f9401fe0 	ldr	x0, [sp, #56]
+  401f5c:	97ffffe9 	bl	401f00 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_impl::~_Vector_impl()>
+  401f60:	aa1303e0 	mov	x0, x19
+  401f64:	97fffba7 	bl	400e00 <_Unwind_Resume@plt>
+  401f68:	f9400bf3 	ldr	x19, [sp, #16]
+  401f6c:	a8c47bfd 	ldp	x29, x30, [sp], #64
+  401f70:	d65f03c0 	ret
+
+0000000000401f74 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::~_Vector_base()>:
+  401f74:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  401f78:	910003fd 	mov	x29, sp
+  401f7c:	f9000fe0 	str	x0, [sp, #24]
+  401f80:	f9400fe0 	ldr	x0, [sp, #24]
+  401f84:	f9400003 	ldr	x3, [x0]
+  401f88:	f9400fe0 	ldr	x0, [sp, #24]
+  401f8c:	f9400801 	ldr	x1, [x0, #16]
+  401f90:	f9400fe0 	ldr	x0, [sp, #24]
+  401f94:	f9400000 	ldr	x0, [x0]
+  401f98:	cb000020 	sub	x0, x1, x0
+  401f9c:	9343fc00 	asr	x0, x0, #3
+  401fa0:	aa0003e2 	mov	x2, x0
+  401fa4:	aa0303e1 	mov	x1, x3
+  401fa8:	f9400fe0 	ldr	x0, [sp, #24]
+  401fac:	9400012d 	bl	402460 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_deallocate(unsigned long*, unsigned long)>
+  401fb0:	f9400fe0 	ldr	x0, [sp, #24]
+  401fb4:	97ffffd3 	bl	401f00 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_impl::~_Vector_impl()>
+  401fb8:	d503201f 	nop
+  401fbc:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  401fc0:	d65f03c0 	ret
+
+0000000000401fc4 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_default_initialize(unsigned long)>:
+  401fc4:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  401fc8:	910003fd 	mov	x29, sp
+  401fcc:	f9000bf3 	str	x19, [sp, #16]
+  401fd0:	f90017e0 	str	x0, [sp, #40]
+  401fd4:	f90013e1 	str	x1, [sp, #32]
+  401fd8:	f94017e0 	ldr	x0, [sp, #40]
+  401fdc:	f9400013 	ldr	x19, [x0]
+  401fe0:	f94017e0 	ldr	x0, [sp, #40]
+  401fe4:	9400000c 	bl	402014 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_get_Tp_allocator()>
+  401fe8:	aa0003e2 	mov	x2, x0
+  401fec:	f94013e1 	ldr	x1, [sp, #32]
+  401ff0:	aa1303e0 	mov	x0, x19
+  401ff4:	9400012a 	bl	40249c <unsigned long* std::__uninitialized_default_n_a<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, std::allocator<unsigned long>&)>
+  401ff8:	aa0003e1 	mov	x1, x0
+  401ffc:	f94017e0 	ldr	x0, [sp, #40]
+  402000:	f9000401 	str	x1, [x0, #8]
+  402004:	d503201f 	nop
+  402008:	f9400bf3 	ldr	x19, [sp, #16]
+  40200c:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402010:	d65f03c0 	ret
+
+0000000000402014 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_get_Tp_allocator()>:
+  402014:	d10043ff 	sub	sp, sp, #0x10
+  402018:	f90007e0 	str	x0, [sp, #8]
+  40201c:	f94007e0 	ldr	x0, [sp, #8]
+  402020:	910043ff 	add	sp, sp, #0x10
+  402024:	d65f03c0 	ret
+
+0000000000402028 <void std::_Destroy<unsigned long*, unsigned long>(unsigned long*, unsigned long*, std::allocator<unsigned long>&)>:
+  402028:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  40202c:	910003fd 	mov	x29, sp
+  402030:	f90017e0 	str	x0, [sp, #40]
+  402034:	f90013e1 	str	x1, [sp, #32]
+  402038:	f9000fe2 	str	x2, [sp, #24]
+  40203c:	f94013e1 	ldr	x1, [sp, #32]
+  402040:	f94017e0 	ldr	x0, [sp, #40]
+  402044:	94000120 	bl	4024c4 <void std::_Destroy<unsigned long*>(unsigned long*, unsigned long*)>
+  402048:	d503201f 	nop
+  40204c:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402050:	d65f03c0 	ret
+
+0000000000402054 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long)>:
+  402054:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402058:	910003fd 	mov	x29, sp
+  40205c:	f9000fe0 	str	x0, [sp, #24]
+  402060:	f9000be1 	str	x1, [sp, #16]
+  402064:	f9400be0 	ldr	x0, [sp, #16]
+  402068:	94000121 	bl	4024ec <unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)>
+  40206c:	aa0003e1 	mov	x1, x0
+  402070:	f9400fe0 	ldr	x0, [sp, #24]
+  402074:	f9000001 	str	x1, [x0]
+  402078:	d2800020 	mov	x0, #0x1                   	// #1
+  40207c:	f90017e0 	str	x0, [sp, #40]
+  402080:	14000021 	b	402104 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long)+0xb0>
+  402084:	f94017e0 	ldr	x0, [sp, #40]
+  402088:	d1000401 	sub	x1, x0, #0x1
+  40208c:	f9400fe0 	ldr	x0, [sp, #24]
+  402090:	f8617800 	ldr	x0, [x0, x1, lsl #3]
+  402094:	f90013e0 	str	x0, [sp, #32]
+  402098:	f94013e0 	ldr	x0, [sp, #32]
+  40209c:	d37efc00 	lsr	x0, x0, #62
+  4020a0:	f94013e1 	ldr	x1, [sp, #32]
+  4020a4:	ca000020 	eor	x0, x1, x0
+  4020a8:	f90013e0 	str	x0, [sp, #32]
+  4020ac:	f94013e1 	ldr	x1, [sp, #32]
+  4020b0:	d28fe5a0 	mov	x0, #0x7f2d                	// #32557
+  4020b4:	f2a992a0 	movk	x0, #0x4c95, lsl #16
+  4020b8:	f2de85a0 	movk	x0, #0xf42d, lsl #32
+  4020bc:	f2eb0a20 	movk	x0, #0x5851, lsl #48
+  4020c0:	9b007c20 	mul	x0, x1, x0
+  4020c4:	f90013e0 	str	x0, [sp, #32]
+  4020c8:	f94017e0 	ldr	x0, [sp, #40]
+  4020cc:	94000112 	bl	402514 <unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long)>
+  4020d0:	aa0003e1 	mov	x1, x0
+  4020d4:	f94013e0 	ldr	x0, [sp, #32]
+  4020d8:	8b010000 	add	x0, x0, x1
+  4020dc:	f90013e0 	str	x0, [sp, #32]
+  4020e0:	f94013e0 	ldr	x0, [sp, #32]
+  4020e4:	94000102 	bl	4024ec <unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)>
+  4020e8:	aa0003e2 	mov	x2, x0
+  4020ec:	f9400fe0 	ldr	x0, [sp, #24]
+  4020f0:	f94017e1 	ldr	x1, [sp, #40]
+  4020f4:	f8217802 	str	x2, [x0, x1, lsl #3]
+  4020f8:	f94017e0 	ldr	x0, [sp, #40]
+  4020fc:	91000400 	add	x0, x0, #0x1
+  402100:	f90017e0 	str	x0, [sp, #40]
+  402104:	f94017e0 	ldr	x0, [sp, #40]
+  402108:	f104dc1f 	cmp	x0, #0x137
+  40210c:	54fffbc9 	b.ls	402084 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::seed(unsigned long)+0x30>  // b.plast
+  402110:	f9400fe0 	ldr	x0, [sp, #24]
+  402114:	d2802701 	mov	x1, #0x138                 	// #312
+  402118:	f904e001 	str	x1, [x0, #2496]
+  40211c:	d503201f 	nop
+  402120:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402124:	d65f03c0 	ret
+
+0000000000402128 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()>:
+  402128:	d10143ff 	sub	sp, sp, #0x50
+  40212c:	f90007e0 	str	x0, [sp, #8]
+  402130:	b26183e0 	mov	x0, #0xffffffff80000000    	// #-2147483648
+  402134:	f9001fe0 	str	x0, [sp, #56]
+  402138:	b2407be0 	mov	x0, #0x7fffffff            	// #2147483647
+  40213c:	f9001be0 	str	x0, [sp, #48]
+  402140:	f90027ff 	str	xzr, [sp, #72]
+  402144:	14000024 	b	4021d4 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0xac>
+  402148:	f94007e0 	ldr	x0, [sp, #8]
+  40214c:	f94027e1 	ldr	x1, [sp, #72]
+  402150:	f8617800 	ldr	x0, [x0, x1, lsl #3]
+  402154:	92618001 	and	x1, x0, #0xffffffff80000000
+  402158:	f94027e0 	ldr	x0, [sp, #72]
+  40215c:	91000402 	add	x2, x0, #0x1
+  402160:	f94007e0 	ldr	x0, [sp, #8]
+  402164:	f8627800 	ldr	x0, [x0, x2, lsl #3]
+  402168:	92407800 	and	x0, x0, #0x7fffffff
+  40216c:	aa000020 	orr	x0, x1, x0
+  402170:	f9000fe0 	str	x0, [sp, #24]
+  402174:	f94027e0 	ldr	x0, [sp, #72]
+  402178:	91027001 	add	x1, x0, #0x9c
+  40217c:	f94007e0 	ldr	x0, [sp, #8]
+  402180:	f8617801 	ldr	x1, [x0, x1, lsl #3]
+  402184:	f9400fe0 	ldr	x0, [sp, #24]
+  402188:	d341fc00 	lsr	x0, x0, #1
+  40218c:	ca000021 	eor	x1, x1, x0
+  402190:	f9400fe0 	ldr	x0, [sp, #24]
+  402194:	92400000 	and	x0, x0, #0x1
+  402198:	f100001f 	cmp	x0, #0x0
+  40219c:	540000c0 	b.eq	4021b4 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x8c>  // b.none
+  4021a0:	d2833d20 	mov	x0, #0x19e9                	// #6633
+  4021a4:	f2b52cc0 	movk	x0, #0xa966, lsl #16
+  4021a8:	f2cdeb40 	movk	x0, #0x6f5a, lsl #32
+  4021ac:	f2f6a040 	movk	x0, #0xb502, lsl #48
+  4021b0:	14000002 	b	4021b8 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x90>
+  4021b4:	d2800000 	mov	x0, #0x0                   	// #0
+  4021b8:	ca010002 	eor	x2, x0, x1
+  4021bc:	f94007e0 	ldr	x0, [sp, #8]
+  4021c0:	f94027e1 	ldr	x1, [sp, #72]
+  4021c4:	f8217802 	str	x2, [x0, x1, lsl #3]
+  4021c8:	f94027e0 	ldr	x0, [sp, #72]
+  4021cc:	91000400 	add	x0, x0, #0x1
+  4021d0:	f90027e0 	str	x0, [sp, #72]
+  4021d4:	f94027e0 	ldr	x0, [sp, #72]
+  4021d8:	f1026c1f 	cmp	x0, #0x9b
+  4021dc:	54fffb69 	b.ls	402148 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x20>  // b.plast
+  4021e0:	d2801380 	mov	x0, #0x9c                  	// #156
+  4021e4:	f90023e0 	str	x0, [sp, #64]
+  4021e8:	14000024 	b	402278 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x150>
+  4021ec:	f94007e0 	ldr	x0, [sp, #8]
+  4021f0:	f94023e1 	ldr	x1, [sp, #64]
+  4021f4:	f8617800 	ldr	x0, [x0, x1, lsl #3]
+  4021f8:	92618001 	and	x1, x0, #0xffffffff80000000
+  4021fc:	f94023e0 	ldr	x0, [sp, #64]
+  402200:	91000402 	add	x2, x0, #0x1
+  402204:	f94007e0 	ldr	x0, [sp, #8]
+  402208:	f8627800 	ldr	x0, [x0, x2, lsl #3]
+  40220c:	92407800 	and	x0, x0, #0x7fffffff
+  402210:	aa000020 	orr	x0, x1, x0
+  402214:	f90013e0 	str	x0, [sp, #32]
+  402218:	f94023e0 	ldr	x0, [sp, #64]
+  40221c:	d1027001 	sub	x1, x0, #0x9c
+  402220:	f94007e0 	ldr	x0, [sp, #8]
+  402224:	f8617801 	ldr	x1, [x0, x1, lsl #3]
+  402228:	f94013e0 	ldr	x0, [sp, #32]
+  40222c:	d341fc00 	lsr	x0, x0, #1
+  402230:	ca000021 	eor	x1, x1, x0
+  402234:	f94013e0 	ldr	x0, [sp, #32]
+  402238:	92400000 	and	x0, x0, #0x1
+  40223c:	f100001f 	cmp	x0, #0x0
+  402240:	540000c0 	b.eq	402258 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x130>  // b.none
+  402244:	d2833d20 	mov	x0, #0x19e9                	// #6633
+  402248:	f2b52cc0 	movk	x0, #0xa966, lsl #16
+  40224c:	f2cdeb40 	movk	x0, #0x6f5a, lsl #32
+  402250:	f2f6a040 	movk	x0, #0xb502, lsl #48
+  402254:	14000002 	b	40225c <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x134>
+  402258:	d2800000 	mov	x0, #0x0                   	// #0
+  40225c:	ca010002 	eor	x2, x0, x1
+  402260:	f94007e0 	ldr	x0, [sp, #8]
+  402264:	f94023e1 	ldr	x1, [sp, #64]
+  402268:	f8217802 	str	x2, [x0, x1, lsl #3]
+  40226c:	f94023e0 	ldr	x0, [sp, #64]
+  402270:	91000400 	add	x0, x0, #0x1
+  402274:	f90023e0 	str	x0, [sp, #64]
+  402278:	f94023e0 	ldr	x0, [sp, #64]
+  40227c:	f104d81f 	cmp	x0, #0x136
+  402280:	54fffb69 	b.ls	4021ec <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0xc4>  // b.plast
+  402284:	f94007e0 	ldr	x0, [sp, #8]
+  402288:	f944dc00 	ldr	x0, [x0, #2488]
+  40228c:	92618001 	and	x1, x0, #0xffffffff80000000
+  402290:	f94007e0 	ldr	x0, [sp, #8]
+  402294:	f9400000 	ldr	x0, [x0]
+  402298:	92407800 	and	x0, x0, #0x7fffffff
+  40229c:	aa000020 	orr	x0, x1, x0
+  4022a0:	f90017e0 	str	x0, [sp, #40]
+  4022a4:	f94007e0 	ldr	x0, [sp, #8]
+  4022a8:	f9426c01 	ldr	x1, [x0, #1240]
+  4022ac:	f94017e0 	ldr	x0, [sp, #40]
+  4022b0:	d341fc00 	lsr	x0, x0, #1
+  4022b4:	ca000021 	eor	x1, x1, x0
+  4022b8:	f94017e0 	ldr	x0, [sp, #40]
+  4022bc:	92400000 	and	x0, x0, #0x1
+  4022c0:	f100001f 	cmp	x0, #0x0
+  4022c4:	540000c0 	b.eq	4022dc <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x1b4>  // b.none
+  4022c8:	d2833d20 	mov	x0, #0x19e9                	// #6633
+  4022cc:	f2b52cc0 	movk	x0, #0xa966, lsl #16
+  4022d0:	f2cdeb40 	movk	x0, #0x6f5a, lsl #32
+  4022d4:	f2f6a040 	movk	x0, #0xb502, lsl #48
+  4022d8:	14000002 	b	4022e0 <std::mersenne_twister_engine<unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul>::_M_gen_rand()+0x1b8>
+  4022dc:	d2800000 	mov	x0, #0x0                   	// #0
+  4022e0:	ca010001 	eor	x1, x0, x1
+  4022e4:	f94007e0 	ldr	x0, [sp, #8]
+  4022e8:	f904dc01 	str	x1, [x0, #2488]
+  4022ec:	f94007e0 	ldr	x0, [sp, #8]
+  4022f0:	f904e01f 	str	xzr, [x0, #2496]
+  4022f4:	d503201f 	nop
+  4022f8:	910143ff 	add	sp, sp, #0x50
+  4022fc:	d65f03c0 	ret
+
+0000000000402300 <std::vector<unsigned long, std::allocator<unsigned long> >::_M_fill_initialize(unsigned long, unsigned long const&)>:
+  402300:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+  402304:	910003fd 	mov	x29, sp
+  402308:	f9000bf3 	str	x19, [sp, #16]
+  40230c:	f9001fe0 	str	x0, [sp, #56]
+  402310:	f9001be1 	str	x1, [sp, #48]
+  402314:	f90017e2 	str	x2, [sp, #40]
+  402318:	f9401fe0 	ldr	x0, [sp, #56]
+  40231c:	f9400013 	ldr	x19, [x0]
+  402320:	f9401fe0 	ldr	x0, [sp, #56]
+  402324:	97ffff3c 	bl	402014 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_get_Tp_allocator()>
+  402328:	aa0003e3 	mov	x3, x0
+  40232c:	f94017e2 	ldr	x2, [sp, #40]
+  402330:	f9401be1 	ldr	x1, [sp, #48]
+  402334:	aa1303e0 	mov	x0, x19
+  402338:	94000081 	bl	40253c <unsigned long* std::__uninitialized_fill_n_a<unsigned long*, unsigned long, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&, std::allocator<unsigned long>&)>
+  40233c:	aa0003e1 	mov	x1, x0
+  402340:	f9401fe0 	ldr	x0, [sp, #56]
+  402344:	f9000401 	str	x1, [x0, #8]
+  402348:	d503201f 	nop
+  40234c:	f9400bf3 	ldr	x19, [sp, #16]
+  402350:	a8c47bfd 	ldp	x29, x30, [sp], #64
+  402354:	d65f03c0 	ret
+
+0000000000402358 <unsigned long* std::vector<unsigned long, std::allocator<unsigned long> >::_M_data_ptr<unsigned long>(unsigned long*) const>:
+  402358:	d10043ff 	sub	sp, sp, #0x10
+  40235c:	f90007e0 	str	x0, [sp, #8]
+  402360:	f90003e1 	str	x1, [sp]
+  402364:	f94003e0 	ldr	x0, [sp]
+  402368:	910043ff 	add	sp, sp, #0x10
+  40236c:	d65f03c0 	ret
+
+0000000000402370 <std::vector<unsigned long, std::allocator<unsigned long> >::_S_max_size(std::allocator<unsigned long> const&)>:
+  402370:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402374:	910003fd 	mov	x29, sp
+  402378:	f9000fe0 	str	x0, [sp, #24]
+  40237c:	92fe0000 	mov	x0, #0xfffffffffffffff     	// #1152921504606846975
+  402380:	f90017e0 	str	x0, [sp, #40]
+  402384:	f9400fe0 	ldr	x0, [sp, #24]
+  402388:	94000079 	bl	40256c <std::allocator_traits<std::allocator<unsigned long> >::max_size(std::allocator<unsigned long> const&)>
+  40238c:	f90013e0 	str	x0, [sp, #32]
+  402390:	910083e1 	add	x1, sp, #0x20
+  402394:	9100a3e0 	add	x0, sp, #0x28
+  402398:	9400007c 	bl	402588 <unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)>
+  40239c:	f9400000 	ldr	x0, [x0]
+  4023a0:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  4023a4:	d65f03c0 	ret
+
+00000000004023a8 <std::allocator<unsigned long>::allocator(std::allocator<unsigned long> const&)>:
+  4023a8:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  4023ac:	910003fd 	mov	x29, sp
+  4023b0:	f9000fe0 	str	x0, [sp, #24]
+  4023b4:	f9000be1 	str	x1, [sp, #16]
+  4023b8:	f9400be1 	ldr	x1, [sp, #16]
+  4023bc:	f9400fe0 	ldr	x0, [sp, #24]
+  4023c0:	94000080 	bl	4025c0 <__gnu_cxx::new_allocator<unsigned long>::new_allocator(__gnu_cxx::new_allocator<unsigned long> const&)>
+  4023c4:	d503201f 	nop
+  4023c8:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  4023cc:	d65f03c0 	ret
+
+00000000004023d0 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_impl::_Vector_impl(std::allocator<unsigned long> const&)>:
+  4023d0:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  4023d4:	910003fd 	mov	x29, sp
+  4023d8:	f9000fe0 	str	x0, [sp, #24]
+  4023dc:	f9000be1 	str	x1, [sp, #16]
+  4023e0:	f9400be1 	ldr	x1, [sp, #16]
+  4023e4:	f9400fe0 	ldr	x0, [sp, #24]
+  4023e8:	97fffff0 	bl	4023a8 <std::allocator<unsigned long>::allocator(std::allocator<unsigned long> const&)>
+  4023ec:	f9400fe0 	ldr	x0, [sp, #24]
+  4023f0:	9400007a 	bl	4025d8 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_impl_data::_Vector_impl_data()>
+  4023f4:	d503201f 	nop
+  4023f8:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  4023fc:	d65f03c0 	ret
+
+0000000000402400 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_create_storage(unsigned long)>:
+  402400:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  402404:	910003fd 	mov	x29, sp
+  402408:	f9000fe0 	str	x0, [sp, #24]
+  40240c:	f9000be1 	str	x1, [sp, #16]
+  402410:	f9400be1 	ldr	x1, [sp, #16]
+  402414:	f9400fe0 	ldr	x0, [sp, #24]
+  402418:	9400007b 	bl	402604 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_allocate(unsigned long)>
+  40241c:	aa0003e1 	mov	x1, x0
+  402420:	f9400fe0 	ldr	x0, [sp, #24]
+  402424:	f9000001 	str	x1, [x0]
+  402428:	f9400fe0 	ldr	x0, [sp, #24]
+  40242c:	f9400001 	ldr	x1, [x0]
+  402430:	f9400fe0 	ldr	x0, [sp, #24]
+  402434:	f9000401 	str	x1, [x0, #8]
+  402438:	f9400fe0 	ldr	x0, [sp, #24]
+  40243c:	f9400001 	ldr	x1, [x0]
+  402440:	f9400be0 	ldr	x0, [sp, #16]
+  402444:	d37df000 	lsl	x0, x0, #3
+  402448:	8b000021 	add	x1, x1, x0
+  40244c:	f9400fe0 	ldr	x0, [sp, #24]
+  402450:	f9000801 	str	x1, [x0, #16]
+  402454:	d503201f 	nop
+  402458:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  40245c:	d65f03c0 	ret
+
+0000000000402460 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_deallocate(unsigned long*, unsigned long)>:
+  402460:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402464:	910003fd 	mov	x29, sp
+  402468:	f90017e0 	str	x0, [sp, #40]
+  40246c:	f90013e1 	str	x1, [sp, #32]
+  402470:	f9000fe2 	str	x2, [sp, #24]
+  402474:	f94013e0 	ldr	x0, [sp, #32]
+  402478:	f100001f 	cmp	x0, #0x0
+  40247c:	540000a0 	b.eq	402490 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_deallocate(unsigned long*, unsigned long)+0x30>  // b.none
+  402480:	f94017e0 	ldr	x0, [sp, #40]
+  402484:	f9400fe2 	ldr	x2, [sp, #24]
+  402488:	f94013e1 	ldr	x1, [sp, #32]
+  40248c:	9400006c 	bl	40263c <std::allocator_traits<std::allocator<unsigned long> >::deallocate(std::allocator<unsigned long>&, unsigned long*, unsigned long)>
+  402490:	d503201f 	nop
+  402494:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402498:	d65f03c0 	ret
+
+000000000040249c <unsigned long* std::__uninitialized_default_n_a<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, std::allocator<unsigned long>&)>:
+  40249c:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  4024a0:	910003fd 	mov	x29, sp
+  4024a4:	f90017e0 	str	x0, [sp, #40]
+  4024a8:	f90013e1 	str	x1, [sp, #32]
+  4024ac:	f9000fe2 	str	x2, [sp, #24]
+  4024b0:	f94013e1 	ldr	x1, [sp, #32]
+  4024b4:	f94017e0 	ldr	x0, [sp, #40]
+  4024b8:	9400006d 	bl	40266c <unsigned long* std::__uninitialized_default_n<unsigned long*, unsigned long>(unsigned long*, unsigned long)>
+  4024bc:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  4024c0:	d65f03c0 	ret
+
+00000000004024c4 <void std::_Destroy<unsigned long*>(unsigned long*, unsigned long*)>:
+  4024c4:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  4024c8:	910003fd 	mov	x29, sp
+  4024cc:	f9000fe0 	str	x0, [sp, #24]
+  4024d0:	f9000be1 	str	x1, [sp, #16]
+  4024d4:	f9400be1 	ldr	x1, [sp, #16]
+  4024d8:	f9400fe0 	ldr	x0, [sp, #24]
+  4024dc:	9400006f 	bl	402698 <void std::_Destroy_aux<true>::__destroy<unsigned long*>(unsigned long*, unsigned long*)>
+  4024e0:	d503201f 	nop
+  4024e4:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  4024e8:	d65f03c0 	ret
+
+00000000004024ec <unsigned long std::__detail::__mod<unsigned long, 0ul, 1ul, 0ul>(unsigned long)>:
+  4024ec:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  4024f0:	910003fd 	mov	x29, sp
+  4024f4:	f9000fe0 	str	x0, [sp, #24]
+  4024f8:	d2800020 	mov	x0, #0x1                   	// #1
+  4024fc:	f90017e0 	str	x0, [sp, #40]
+  402500:	f9400fe0 	ldr	x0, [sp, #24]
+  402504:	9400006b 	bl	4026b0 <std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long)>
+  402508:	d503201f 	nop
+  40250c:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402510:	d65f03c0 	ret
+
+0000000000402514 <unsigned long std::__detail::__mod<unsigned long, 312ul, 1ul, 0ul>(unsigned long)>:
+  402514:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402518:	910003fd 	mov	x29, sp
+  40251c:	f9000fe0 	str	x0, [sp, #24]
+  402520:	d2800020 	mov	x0, #0x1                   	// #1
+  402524:	f90017e0 	str	x0, [sp, #40]
+  402528:	f9400fe0 	ldr	x0, [sp, #24]
+  40252c:	94000068 	bl	4026cc <std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long)>
+  402530:	d503201f 	nop
+  402534:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402538:	d65f03c0 	ret
+
+000000000040253c <unsigned long* std::__uninitialized_fill_n_a<unsigned long*, unsigned long, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&, std::allocator<unsigned long>&)>:
+  40253c:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402540:	910003fd 	mov	x29, sp
+  402544:	f90017e0 	str	x0, [sp, #40]
+  402548:	f90013e1 	str	x1, [sp, #32]
+  40254c:	f9000fe2 	str	x2, [sp, #24]
+  402550:	f9000be3 	str	x3, [sp, #16]
+  402554:	f9400fe2 	ldr	x2, [sp, #24]
+  402558:	f94013e1 	ldr	x1, [sp, #32]
+  40255c:	f94017e0 	ldr	x0, [sp, #40]
+  402560:	94000072 	bl	402728 <unsigned long* std::uninitialized_fill_n<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&)>
+  402564:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402568:	d65f03c0 	ret
+
+000000000040256c <std::allocator_traits<std::allocator<unsigned long> >::max_size(std::allocator<unsigned long> const&)>:
+  40256c:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  402570:	910003fd 	mov	x29, sp
+  402574:	f9000fe0 	str	x0, [sp, #24]
+  402578:	f9400fe0 	ldr	x0, [sp, #24]
+  40257c:	94000078 	bl	40275c <__gnu_cxx::new_allocator<unsigned long>::max_size() const>
+  402580:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  402584:	d65f03c0 	ret
+
+0000000000402588 <unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)>:
+  402588:	d10043ff 	sub	sp, sp, #0x10
+  40258c:	f90007e0 	str	x0, [sp, #8]
+  402590:	f90003e1 	str	x1, [sp]
+  402594:	f94003e0 	ldr	x0, [sp]
+  402598:	f9400001 	ldr	x1, [x0]
+  40259c:	f94007e0 	ldr	x0, [sp, #8]
+  4025a0:	f9400000 	ldr	x0, [x0]
+  4025a4:	eb00003f 	cmp	x1, x0
+  4025a8:	54000062 	b.cs	4025b4 <unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)+0x2c>  // b.hs, b.nlast
+  4025ac:	f94003e0 	ldr	x0, [sp]
+  4025b0:	14000002 	b	4025b8 <unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)+0x30>
+  4025b4:	f94007e0 	ldr	x0, [sp, #8]
+  4025b8:	910043ff 	add	sp, sp, #0x10
+  4025bc:	d65f03c0 	ret
+
+00000000004025c0 <__gnu_cxx::new_allocator<unsigned long>::new_allocator(__gnu_cxx::new_allocator<unsigned long> const&)>:
+  4025c0:	d10043ff 	sub	sp, sp, #0x10
+  4025c4:	f90007e0 	str	x0, [sp, #8]
+  4025c8:	f90003e1 	str	x1, [sp]
+  4025cc:	d503201f 	nop
+  4025d0:	910043ff 	add	sp, sp, #0x10
+  4025d4:	d65f03c0 	ret
+
+00000000004025d8 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_Vector_impl_data::_Vector_impl_data()>:
+  4025d8:	d10043ff 	sub	sp, sp, #0x10
+  4025dc:	f90007e0 	str	x0, [sp, #8]
+  4025e0:	f94007e0 	ldr	x0, [sp, #8]
+  4025e4:	f900001f 	str	xzr, [x0]
+  4025e8:	f94007e0 	ldr	x0, [sp, #8]
+  4025ec:	f900041f 	str	xzr, [x0, #8]
+  4025f0:	f94007e0 	ldr	x0, [sp, #8]
+  4025f4:	f900081f 	str	xzr, [x0, #16]
+  4025f8:	d503201f 	nop
+  4025fc:	910043ff 	add	sp, sp, #0x10
+  402600:	d65f03c0 	ret
+
+0000000000402604 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_allocate(unsigned long)>:
+  402604:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  402608:	910003fd 	mov	x29, sp
+  40260c:	f9000fe0 	str	x0, [sp, #24]
+  402610:	f9000be1 	str	x1, [sp, #16]
+  402614:	f9400be0 	ldr	x0, [sp, #16]
+  402618:	f100001f 	cmp	x0, #0x0
+  40261c:	540000a0 	b.eq	402630 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_allocate(unsigned long)+0x2c>  // b.none
+  402620:	f9400fe0 	ldr	x0, [sp, #24]
+  402624:	f9400be1 	ldr	x1, [sp, #16]
+  402628:	94000054 	bl	402778 <std::allocator_traits<std::allocator<unsigned long> >::allocate(std::allocator<unsigned long>&, unsigned long)>
+  40262c:	14000002 	b	402634 <std::_Vector_base<unsigned long, std::allocator<unsigned long> >::_M_allocate(unsigned long)+0x30>
+  402630:	d2800000 	mov	x0, #0x0                   	// #0
+  402634:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  402638:	d65f03c0 	ret
+
+000000000040263c <std::allocator_traits<std::allocator<unsigned long> >::deallocate(std::allocator<unsigned long>&, unsigned long*, unsigned long)>:
+  40263c:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402640:	910003fd 	mov	x29, sp
+  402644:	f90017e0 	str	x0, [sp, #40]
+  402648:	f90013e1 	str	x1, [sp, #32]
+  40264c:	f9000fe2 	str	x2, [sp, #24]
+  402650:	f9400fe2 	ldr	x2, [sp, #24]
+  402654:	f94013e1 	ldr	x1, [sp, #32]
+  402658:	f94017e0 	ldr	x0, [sp, #40]
+  40265c:	94000051 	bl	4027a0 <__gnu_cxx::new_allocator<unsigned long>::deallocate(unsigned long*, unsigned long)>
+  402660:	d503201f 	nop
+  402664:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402668:	d65f03c0 	ret
+
+000000000040266c <unsigned long* std::__uninitialized_default_n<unsigned long*, unsigned long>(unsigned long*, unsigned long)>:
+  40266c:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402670:	910003fd 	mov	x29, sp
+  402674:	f9000fe0 	str	x0, [sp, #24]
+  402678:	f9000be1 	str	x1, [sp, #16]
+  40267c:	52800020 	mov	w0, #0x1                   	// #1
+  402680:	3900bfe0 	strb	w0, [sp, #47]
+  402684:	f9400be1 	ldr	x1, [sp, #16]
+  402688:	f9400fe0 	ldr	x0, [sp, #24]
+  40268c:	94000054 	bl	4027dc <unsigned long* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned long*, unsigned long>(unsigned long*, unsigned long)>
+  402690:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402694:	d65f03c0 	ret
+
+0000000000402698 <void std::_Destroy_aux<true>::__destroy<unsigned long*>(unsigned long*, unsigned long*)>:
+  402698:	d10043ff 	sub	sp, sp, #0x10
+  40269c:	f90007e0 	str	x0, [sp, #8]
+  4026a0:	f90003e1 	str	x1, [sp]
+  4026a4:	d503201f 	nop
+  4026a8:	910043ff 	add	sp, sp, #0x10
+  4026ac:	d65f03c0 	ret
+
+00000000004026b0 <std::__detail::_Mod<unsigned long, 0ul, 1ul, 0ul, true, false>::__calc(unsigned long)>:
+  4026b0:	d10083ff 	sub	sp, sp, #0x20
+  4026b4:	f90007e0 	str	x0, [sp, #8]
+  4026b8:	f94007e0 	ldr	x0, [sp, #8]
+  4026bc:	f9000fe0 	str	x0, [sp, #24]
+  4026c0:	f9400fe0 	ldr	x0, [sp, #24]
+  4026c4:	910083ff 	add	sp, sp, #0x20
+  4026c8:	d65f03c0 	ret
+
+00000000004026cc <std::__detail::_Mod<unsigned long, 312ul, 1ul, 0ul, true, true>::__calc(unsigned long)>:
+  4026cc:	d10083ff 	sub	sp, sp, #0x20
+  4026d0:	f90007e0 	str	x0, [sp, #8]
+  4026d4:	f94007e0 	ldr	x0, [sp, #8]
+  4026d8:	f9000fe0 	str	x0, [sp, #24]
+  4026dc:	f9400fe2 	ldr	x2, [sp, #24]
+  4026e0:	d343fc41 	lsr	x1, x2, #3
+  4026e4:	d281a420 	mov	x0, #0xd21                 	// #3361
+  4026e8:	f2a41a40 	movk	x0, #0x20d2, lsl #16
+  4026ec:	f2da41a0 	movk	x0, #0xd20d, lsl #32
+  4026f0:	f2e1a400 	movk	x0, #0xd20, lsl #48
+  4026f4:	9bc07c20 	umulh	x0, x1, x0
+  4026f8:	d341fc01 	lsr	x1, x0, #1
+  4026fc:	aa0103e0 	mov	x0, x1
+  402700:	d37ef400 	lsl	x0, x0, #2
+  402704:	8b010000 	add	x0, x0, x1
+  402708:	d37df000 	lsl	x0, x0, #3
+  40270c:	cb010000 	sub	x0, x0, x1
+  402710:	d37df000 	lsl	x0, x0, #3
+  402714:	cb000040 	sub	x0, x2, x0
+  402718:	f9000fe0 	str	x0, [sp, #24]
+  40271c:	f9400fe0 	ldr	x0, [sp, #24]
+  402720:	910083ff 	add	sp, sp, #0x20
+  402724:	d65f03c0 	ret
+
+0000000000402728 <unsigned long* std::uninitialized_fill_n<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&)>:
+  402728:	a9bc7bfd 	stp	x29, x30, [sp, #-64]!
+  40272c:	910003fd 	mov	x29, sp
+  402730:	f90017e0 	str	x0, [sp, #40]
+  402734:	f90013e1 	str	x1, [sp, #32]
+  402738:	f9000fe2 	str	x2, [sp, #24]
+  40273c:	52800020 	mov	w0, #0x1                   	// #1
+  402740:	3900ffe0 	strb	w0, [sp, #63]
+  402744:	f9400fe2 	ldr	x2, [sp, #24]
+  402748:	f94013e1 	ldr	x1, [sp, #32]
+  40274c:	f94017e0 	ldr	x0, [sp, #40]
+  402750:	9400003c 	bl	402840 <unsigned long* std::__uninitialized_fill_n<true>::__uninit_fill_n<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&)>
+  402754:	a8c47bfd 	ldp	x29, x30, [sp], #64
+  402758:	d65f03c0 	ret
+
+000000000040275c <__gnu_cxx::new_allocator<unsigned long>::max_size() const>:
+  40275c:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  402760:	910003fd 	mov	x29, sp
+  402764:	f9000fe0 	str	x0, [sp, #24]
+  402768:	f9400fe0 	ldr	x0, [sp, #24]
+  40276c:	94000040 	bl	40286c <__gnu_cxx::new_allocator<unsigned long>::_M_max_size() const>
+  402770:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  402774:	d65f03c0 	ret
+
+0000000000402778 <std::allocator_traits<std::allocator<unsigned long> >::allocate(std::allocator<unsigned long>&, unsigned long)>:
+  402778:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  40277c:	910003fd 	mov	x29, sp
+  402780:	f9000fe0 	str	x0, [sp, #24]
+  402784:	f9000be1 	str	x1, [sp, #16]
+  402788:	d2800002 	mov	x2, #0x0                   	// #0
+  40278c:	f9400be1 	ldr	x1, [sp, #16]
+  402790:	f9400fe0 	ldr	x0, [sp, #24]
+  402794:	9400003b 	bl	402880 <__gnu_cxx::new_allocator<unsigned long>::allocate(unsigned long, void const*)>
+  402798:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  40279c:	d65f03c0 	ret
+
+00000000004027a0 <__gnu_cxx::new_allocator<unsigned long>::deallocate(unsigned long*, unsigned long)>:
+  4027a0:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  4027a4:	910003fd 	mov	x29, sp
+  4027a8:	f90017e0 	str	x0, [sp, #40]
+  4027ac:	f90013e1 	str	x1, [sp, #32]
+  4027b0:	f9000fe2 	str	x2, [sp, #24]
+  4027b4:	f94013e0 	ldr	x0, [sp, #32]
+  4027b8:	97fff95a 	bl	400d20 <operator delete(void*)@plt>
+  4027bc:	d503201f 	nop
+  4027c0:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  4027c4:	d65f03c0 	ret
+
+00000000004027c8 <unsigned long* std::__addressof<unsigned long>(unsigned long&)>:
+  4027c8:	d10043ff 	sub	sp, sp, #0x10
+  4027cc:	f90007e0 	str	x0, [sp, #8]
+  4027d0:	f94007e0 	ldr	x0, [sp, #8]
+  4027d4:	910043ff 	add	sp, sp, #0x10
+  4027d8:	d65f03c0 	ret
+
+00000000004027dc <unsigned long* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned long*, unsigned long>(unsigned long*, unsigned long)>:
+  4027dc:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  4027e0:	910003fd 	mov	x29, sp
+  4027e4:	f9000fe0 	str	x0, [sp, #24]
+  4027e8:	f9000be1 	str	x1, [sp, #16]
+  4027ec:	f9400be0 	ldr	x0, [sp, #16]
+  4027f0:	f100001f 	cmp	x0, #0x0
+  4027f4:	54000200 	b.eq	402834 <unsigned long* std::__uninitialized_default_n_1<true>::__uninit_default_n<unsigned long*, unsigned long>(unsigned long*, unsigned long)+0x58>  // b.none
+  4027f8:	f9400fe0 	ldr	x0, [sp, #24]
+  4027fc:	97fffff3 	bl	4027c8 <unsigned long* std::__addressof<unsigned long>(unsigned long&)>
+  402800:	f90017e0 	str	x0, [sp, #40]
+  402804:	f94017e0 	ldr	x0, [sp, #40]
+  402808:	9400003b 	bl	4028f4 <void std::_Construct<unsigned long>(unsigned long*)>
+  40280c:	f9400fe0 	ldr	x0, [sp, #24]
+  402810:	91002000 	add	x0, x0, #0x8
+  402814:	f9000fe0 	str	x0, [sp, #24]
+  402818:	f9400be0 	ldr	x0, [sp, #16]
+  40281c:	d1000400 	sub	x0, x0, #0x1
+  402820:	f94017e2 	ldr	x2, [sp, #40]
+  402824:	aa0003e1 	mov	x1, x0
+  402828:	f9400fe0 	ldr	x0, [sp, #24]
+  40282c:	9400003d 	bl	402920 <unsigned long* std::fill_n<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&)>
+  402830:	f9000fe0 	str	x0, [sp, #24]
+  402834:	f9400fe0 	ldr	x0, [sp, #24]
+  402838:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  40283c:	d65f03c0 	ret
+
+0000000000402840 <unsigned long* std::__uninitialized_fill_n<true>::__uninit_fill_n<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&)>:
+  402840:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402844:	910003fd 	mov	x29, sp
+  402848:	f90017e0 	str	x0, [sp, #40]
+  40284c:	f90013e1 	str	x1, [sp, #32]
+  402850:	f9000fe2 	str	x2, [sp, #24]
+  402854:	f9400fe2 	ldr	x2, [sp, #24]
+  402858:	f94013e1 	ldr	x1, [sp, #32]
+  40285c:	f94017e0 	ldr	x0, [sp, #40]
+  402860:	94000030 	bl	402920 <unsigned long* std::fill_n<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&)>
+  402864:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402868:	d65f03c0 	ret
+
+000000000040286c <__gnu_cxx::new_allocator<unsigned long>::_M_max_size() const>:
+  40286c:	d10043ff 	sub	sp, sp, #0x10
+  402870:	f90007e0 	str	x0, [sp, #8]
+  402874:	92fe0000 	mov	x0, #0xfffffffffffffff     	// #1152921504606846975
+  402878:	910043ff 	add	sp, sp, #0x10
+  40287c:	d65f03c0 	ret
+
+0000000000402880 <__gnu_cxx::new_allocator<unsigned long>::allocate(unsigned long, void const*)>:
+  402880:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402884:	910003fd 	mov	x29, sp
+  402888:	f90017e0 	str	x0, [sp, #40]
+  40288c:	f90013e1 	str	x1, [sp, #32]
+  402890:	f9000fe2 	str	x2, [sp, #24]
+  402894:	f94017e0 	ldr	x0, [sp, #40]
+  402898:	97fffff5 	bl	40286c <__gnu_cxx::new_allocator<unsigned long>::_M_max_size() const>
+  40289c:	aa0003e1 	mov	x1, x0
+  4028a0:	f94013e0 	ldr	x0, [sp, #32]
+  4028a4:	eb01001f 	cmp	x0, x1
+  4028a8:	1a9f97e0 	cset	w0, hi  // hi = pmore
+  4028ac:	12001c00 	and	w0, w0, #0xff
+  4028b0:	92401c00 	and	x0, x0, #0xff
+  4028b4:	f100001f 	cmp	x0, #0x0
+  4028b8:	1a9f07e0 	cset	w0, ne  // ne = any
+  4028bc:	12001c00 	and	w0, w0, #0xff
+  4028c0:	7100001f 	cmp	w0, #0x0
+  4028c4:	540000e0 	b.eq	4028e0 <__gnu_cxx::new_allocator<unsigned long>::allocate(unsigned long, void const*)+0x60>  // b.none
+  4028c8:	f94013e1 	ldr	x1, [sp, #32]
+  4028cc:	92fc0000 	mov	x0, #0x1fffffffffffffff    	// #2305843009213693951
+  4028d0:	eb00003f 	cmp	x1, x0
+  4028d4:	54000049 	b.ls	4028dc <__gnu_cxx::new_allocator<unsigned long>::allocate(unsigned long, void const*)+0x5c>  // b.plast
+  4028d8:	97fff906 	bl	400cf0 <std::__throw_bad_array_new_length()@plt>
+  4028dc:	97fff8e1 	bl	400c60 <std::__throw_bad_alloc()@plt>
+  4028e0:	f94013e0 	ldr	x0, [sp, #32]
+  4028e4:	d37df000 	lsl	x0, x0, #3
+  4028e8:	97fff916 	bl	400d40 <operator new(unsigned long)@plt>
+  4028ec:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  4028f0:	d65f03c0 	ret
+
+00000000004028f4 <void std::_Construct<unsigned long>(unsigned long*)>:
+  4028f4:	a9be7bfd 	stp	x29, x30, [sp, #-32]!
+  4028f8:	910003fd 	mov	x29, sp
+  4028fc:	f9000fe0 	str	x0, [sp, #24]
+  402900:	f9400fe0 	ldr	x0, [sp, #24]
+  402904:	aa0003e1 	mov	x1, x0
+  402908:	d2800100 	mov	x0, #0x8                   	// #8
+  40290c:	97fffc91 	bl	401b50 <operator new(unsigned long, void*)>
+  402910:	f900001f 	str	xzr, [x0]
+  402914:	d503201f 	nop
+  402918:	a8c27bfd 	ldp	x29, x30, [sp], #32
+  40291c:	d65f03c0 	ret
+
+0000000000402920 <unsigned long* std::fill_n<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&)>:
+  402920:	a9bb7bfd 	stp	x29, x30, [sp, #-80]!
+  402924:	910003fd 	mov	x29, sp
+  402928:	a90153f3 	stp	x19, x20, [sp, #16]
+  40292c:	f90013f5 	str	x21, [sp, #32]
+  402930:	f90027e0 	str	x0, [sp, #72]
+  402934:	f90023e1 	str	x1, [sp, #64]
+  402938:	f9001fe2 	str	x2, [sp, #56]
+  40293c:	f94027f3 	ldr	x19, [sp, #72]
+  402940:	f94023e0 	ldr	x0, [sp, #64]
+  402944:	97fffc7e 	bl	401b3c <std::__size_to_integer(unsigned long)>
+  402948:	aa0003f4 	mov	x20, x0
+  40294c:	910123e0 	add	x0, sp, #0x48
+  402950:	9400000a 	bl	402978 <std::iterator_traits<unsigned long*>::iterator_category std::__iterator_category<unsigned long*>(unsigned long* const&)>
+  402954:	2a1503e3 	mov	w3, w21
+  402958:	f9401fe2 	ldr	x2, [sp, #56]
+  40295c:	aa1403e1 	mov	x1, x20
+  402960:	aa1303e0 	mov	x0, x19
+  402964:	9400000b 	bl	402990 <unsigned long* std::__fill_n_a<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&, std::random_access_iterator_tag)>
+  402968:	a94153f3 	ldp	x19, x20, [sp, #16]
+  40296c:	f94013f5 	ldr	x21, [sp, #32]
+  402970:	a8c57bfd 	ldp	x29, x30, [sp], #80
+  402974:	d65f03c0 	ret
+
+0000000000402978 <std::iterator_traits<unsigned long*>::iterator_category std::__iterator_category<unsigned long*>(unsigned long* const&)>:
+  402978:	d10043ff 	sub	sp, sp, #0x10
+  40297c:	f90007e0 	str	x0, [sp, #8]
+  402980:	d503201f 	nop
+  402984:	2a0103e0 	mov	w0, w1
+  402988:	910043ff 	add	sp, sp, #0x10
+  40298c:	d65f03c0 	ret
+
+0000000000402990 <unsigned long* std::__fill_n_a<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&, std::random_access_iterator_tag)>:
+  402990:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  402994:	910003fd 	mov	x29, sp
+  402998:	f90017e0 	str	x0, [sp, #40]
+  40299c:	f90013e1 	str	x1, [sp, #32]
+  4029a0:	f9000fe2 	str	x2, [sp, #24]
+  4029a4:	390043e3 	strb	w3, [sp, #16]
+  4029a8:	f94013e0 	ldr	x0, [sp, #32]
+  4029ac:	f100001f 	cmp	x0, #0x0
+  4029b0:	54000061 	b.ne	4029bc <unsigned long* std::__fill_n_a<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&, std::random_access_iterator_tag)+0x2c>  // b.any
+  4029b4:	f94017e0 	ldr	x0, [sp, #40]
+  4029b8:	1400000d 	b	4029ec <unsigned long* std::__fill_n_a<unsigned long*, unsigned long, unsigned long>(unsigned long*, unsigned long, unsigned long const&, std::random_access_iterator_tag)+0x5c>
+  4029bc:	f94013e0 	ldr	x0, [sp, #32]
+  4029c0:	d37df000 	lsl	x0, x0, #3
+  4029c4:	f94017e1 	ldr	x1, [sp, #40]
+  4029c8:	8b000020 	add	x0, x1, x0
+  4029cc:	f9400fe2 	ldr	x2, [sp, #24]
+  4029d0:	aa0003e1 	mov	x1, x0
+  4029d4:	f94017e0 	ldr	x0, [sp, #40]
+  4029d8:	94000007 	bl	4029f4 <void std::__fill_a<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)>
+  4029dc:	f94013e0 	ldr	x0, [sp, #32]
+  4029e0:	d37df000 	lsl	x0, x0, #3
+  4029e4:	f94017e1 	ldr	x1, [sp, #40]
+  4029e8:	8b000020 	add	x0, x1, x0
+  4029ec:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  4029f0:	d65f03c0 	ret
+
+00000000004029f4 <void std::__fill_a<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)>:
+  4029f4:	a9bd7bfd 	stp	x29, x30, [sp, #-48]!
+  4029f8:	910003fd 	mov	x29, sp
+  4029fc:	f90017e0 	str	x0, [sp, #40]
+  402a00:	f90013e1 	str	x1, [sp, #32]
+  402a04:	f9000fe2 	str	x2, [sp, #24]
+  402a08:	f9400fe2 	ldr	x2, [sp, #24]
+  402a0c:	f94013e1 	ldr	x1, [sp, #32]
+  402a10:	f94017e0 	ldr	x0, [sp, #40]
+  402a14:	94000004 	bl	402a24 <__gnu_cxx::__enable_if<std::__is_scalar<unsigned long>::__value, void>::__type std::__fill_a1<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)>
+  402a18:	d503201f 	nop
+  402a1c:	a8c37bfd 	ldp	x29, x30, [sp], #48
+  402a20:	d65f03c0 	ret
+
+0000000000402a24 <__gnu_cxx::__enable_if<std::__is_scalar<unsigned long>::__value, void>::__type std::__fill_a1<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)>:
+  402a24:	d100c3ff 	sub	sp, sp, #0x30
+  402a28:	f9000fe0 	str	x0, [sp, #24]
+  402a2c:	f9000be1 	str	x1, [sp, #16]
+  402a30:	f90007e2 	str	x2, [sp, #8]
+  402a34:	f94007e0 	ldr	x0, [sp, #8]
+  402a38:	f9400000 	ldr	x0, [x0]
+  402a3c:	f90017e0 	str	x0, [sp, #40]
+  402a40:	14000007 	b	402a5c <__gnu_cxx::__enable_if<std::__is_scalar<unsigned long>::__value, void>::__type std::__fill_a1<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)+0x38>
+  402a44:	f9400fe0 	ldr	x0, [sp, #24]
+  402a48:	f94017e1 	ldr	x1, [sp, #40]
+  402a4c:	f9000001 	str	x1, [x0]
+  402a50:	f9400fe0 	ldr	x0, [sp, #24]
+  402a54:	91002000 	add	x0, x0, #0x8
+  402a58:	f9000fe0 	str	x0, [sp, #24]
+  402a5c:	f9400fe1 	ldr	x1, [sp, #24]
+  402a60:	f9400be0 	ldr	x0, [sp, #16]
+  402a64:	eb00003f 	cmp	x1, x0
+  402a68:	54fffee1 	b.ne	402a44 <__gnu_cxx::__enable_if<std::__is_scalar<unsigned long>::__value, void>::__type std::__fill_a1<unsigned long*, unsigned long>(unsigned long*, unsigned long*, unsigned long const&)+0x20>  // b.any
+  402a6c:	d503201f 	nop
+  402a70:	d503201f 	nop
+  402a74:	9100c3ff 	add	sp, sp, #0x30
+  402a78:	d65f03c0 	ret
+
+Disassembly of section .fini:
+
+0000000000402a7c <_fini>:
+  402a7c:	d503201f 	nop
+  402a80:	a9bf7bfd 	stp	x29, x30, [sp, #-16]!
+  402a84:	910003fd 	mov	x29, sp
+  402a88:	a8c17bfd 	ldp	x29, x30, [sp], #16
+  402a8c:	d65f03c0 	ret

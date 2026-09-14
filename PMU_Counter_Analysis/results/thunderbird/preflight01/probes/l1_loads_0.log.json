@@ -1,0 +1,12 @@
+{
+  "not_probed": true,
+  "reason": "The Arm base generic L1-load mapping can alias cache-references and include writes. Select the locally documented read-specific 0x40 event to preserve a distinct, explicit meaning.",
+  "candidate": {
+    "name": "L1-dcache-loads",
+    "type": 3,
+    "config": "0x0",
+    "meaning": "Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.",
+    "comparability": "generic_mapping_requires_review",
+    "skip_reason": "The Arm base generic L1-load mapping can alias cache-references and include writes. Select the locally documented read-specific 0x40 event to preserve a distinct, explicit meaning."
+  }
+}

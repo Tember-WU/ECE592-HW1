@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/thunderbird/counters01/source/bench",
+    "4",
+    "32768",
+    "64",
+    "1000000",
+    "64",
+    "59285",
+    "4",
+    "0x37",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/thunderbird/counters01/raw/l1_resident__r1__llc_misses",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}

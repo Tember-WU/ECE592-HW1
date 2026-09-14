@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/thunderbird/counters01/source/bench",
+    "4",
+    "32768",
+    "64",
+    "10000",
+    "64",
+    "59284",
+    "3",
+    "0x2",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/thunderbird/counters01/probes/llc_loads_0",
+    "0"
+  ],
+  "returncode": 1,
+  "output": "perf_event_open: No such file or directory\n"
+}
