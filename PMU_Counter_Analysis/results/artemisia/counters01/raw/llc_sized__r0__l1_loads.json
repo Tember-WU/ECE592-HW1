@@ -1,0 +1,1 @@
+{"bytes":55050240,"spacing":64,"samples":1000000,"batch":64,"seed":59284,"chain_loads":64000000,"count":64009955,"enabled_ns":9143998109,"running_ns":9143998109,"cpu_end":0,"timer_unit":"TSC_ticks","timer_hz":0,"elapsed_ticks":27525633910,"minor_faults":13,"major_faults":0,"involuntary_switches":2244,"checksum_offset":5489984}

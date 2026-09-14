@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/build/bench",
+    "0",
+    "24576",
+    "64",
+    "1000000",
+    "64",
+    "59284",
+    "3",
+    "0x2",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/artemisia/counters01/raw/l1_resident__r0__llc_loads",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}
