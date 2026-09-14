@@ -12,8 +12,8 @@ cannot be scheduled on this host. Each pass retains one million timed batches.
 |---|---|
 | [events](events/README.md) | Local `perf list` descriptions, event encodings, and access/scheduling probes. |
 | [capacity](capacity/README.md) | Timing and hardware-miss evidence around selected capacity boundaries. |
-| [line_size](line_size/README.md) | Completed Artemisia stride validation; supports 64 B spatial granularity visible in L1. |
-| [associativity](associativity/README.md) | Completed Artemisia conflict validation; distinguishes the L1 threshold from the L2 threshold. |
+| [line_size](line_size/README.md) | Stride validation with access-order controls. |
+| [associativity](associativity/README.md) | Conflict validation that distinguishes L1 misses from L2 misses. |
 
 Each experiment uses `configs/<machine>.json`, `scripts/`, `data/<machine>/<run-id>/`, and
 `results/<machine>/<run-id>/`. Capacity also contains its benchmark in `src/` and functional checks
@@ -21,10 +21,13 @@ in `tests/`. Every collection requires a new run ID. Data and results include fa
 applicable. Build products and uncompressed temporary arrays are ignored by Git; compressed raw
 samples, counter outputs, configurations, scripts, and figures are retained.
 
-The current work covers event discovery and the three representative experiments on Artemisia and Sunbird required
-by Section 8.3: capacity, line/stride, and associativity. `common/` holds shared helpers for the latter
-two. The unused latency/inclusion directories are optional placeholders, not additional required runs.
-Sunbird's system/vendor comparison is included in its run notes. Section 8.4's eight-event
+The current work covers event discovery and the three representative experiments on Artemisia,
+Sunbird and Charnwood required by Section 8.3: capacity, line/stride, and associativity. `common/`
+holds shared helpers for the latter two. The unused latency/inclusion directories are optional
+placeholders, not additional required runs.
+Sunbird's system/vendor comparison is included in its run notes. Charnwood's
+[completed report](results/charnwood/REPORT.md) includes the system/vendor comparison,
+PMU evidence and disagreement analysis. Section 8.4's eight-event
 cross-generation study is a separate task.
 
 Legacy configurations read timing-only files in place. Sunbird configurations reference
@@ -32,3 +35,12 @@ the pre-PMU [Phase-I freeze](phase1-freeze/sunbird/freeze01/README.md); the anal
 its copied summaries. A separate [PMU implementation snapshot](common/data/sunbird/source01/manifest.json)
 records the scripts, kernels, configurations, executables and disassemblies used for this run.
 Phase-I files and Artemisia results are preserved.
+
+The core collectors do not create Phase-I freeze checkpoints. Charnwood's
+[preparation workflow](results/charnwood/preparation/README.md) separately records source snapshots,
+a pre-run Phase-I hash checkpoint and its post-run verification. Existing timing-only files are read
+in place for comparison and are not changed.
+
+Charnwood completed `capacity03` (14 points), `line_size01` (12 points) and `associativity01`
+(12 points) serially on 2026-09-14, with one million samples per point and four simultaneous events.
+The two earlier capacity allocation failures are preserved and excluded from formal analysis.

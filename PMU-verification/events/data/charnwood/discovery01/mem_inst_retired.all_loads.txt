@@ -1,0 +1,1 @@
+126670,,mem_inst_retired.all_loads:u,1043182,100.00,,

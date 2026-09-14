@@ -1,0 +1,20 @@
+14 configurations, 1,000,000 timed batches each, four simultaneous events.
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Preflight CPU busy %: {'3': 0.0, '7': 2.0}
+[1/14] LLC_w7340032: median 59.7500 ticks/load; L1/L2/L3 misses per 1000 chain loads [997.5, 982.47, 131.73]
+[2/14] L1_w36864: median 11.1797 ticks/load; L1/L2/L3 misses per 1000 chain loads [992.67, 0.05, 0.03]
+[3/14] L1_w32768: median 11.0312 ticks/load; L1/L2/L3 misses per 1000 chain loads [916.03, 1.11, 0.02]
+[4/14] L2_w524288: median 28.1016 ticks/load; L1/L2/L3 misses per 1000 chain loads [995.98, 735.85, 0.0]
+[5/14] L1_w40960: median 11.4219 ticks/load; L1/L2/L3 misses per 1000 chain loads [970.53, 2.27, 0.02]
+[6/14] LLC_w5242880: median 33.8750 ticks/load; L1/L2/L3 misses per 1000 chain loads [988.87, 966.76, 5.48]
+[7/14] LLC_w4194304: median 33.8594 ticks/load; L1/L2/L3 misses per 1000 chain loads [996.08, 968.93, 2.34]
+[8/14] LLC_w6291456: median 35.0078 ticks/load; L1/L2/L3 misses per 1000 chain loads [998.43, 979.88, 23.06]
+[9/14] LLC_w8388608: median 143.3516 ticks/load; L1/L2/L3 misses per 1000 chain loads [988.2, 973.03, 495.8]
+[10/14] L2_w262144: median 11.3516 ticks/load; L1/L2/L3 misses per 1000 chain loads [999.09, 12.61, 0.01]
+[11/14] L2_w393216: median 26.8125 ticks/load; L1/L2/L3 misses per 1000 chain loads [992.66, 662.2, 0.0]
+[12/14] L1_w49152: median 11.2344 ticks/load; L1/L2/L3 misses per 1000 chain loads [994.47, 0.15, 0.11]
+[13/14] L2_w294912: median 17.7422 ticks/load; L1/L2/L3 misses per 1000 chain loads [997.33, 289.58, 0.0]
+[14/14] L1_w65536: median 11.2344 ticks/load; L1/L2/L3 misses per 1000 chain loads [994.19, 0.31, 0.17]

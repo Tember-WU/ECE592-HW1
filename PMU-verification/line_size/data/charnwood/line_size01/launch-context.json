@@ -1,0 +1,39 @@
+{
+  "started_utc": "2026-09-14T15:41:04.013893+00:00",
+  "runner_affinity": [
+    1,
+    5
+  ],
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MALLOC_TRIM_THRESHOLD_": "0",
+    "MALLOC_MMAP_THRESHOLD_": "131072"
+  },
+  "processes": [
+    "    PID USER     PSR %CPU COMMAND",
+    "1999123 hbsu       2  100 python3",
+    "1998708 hbsu       3 99.8 python3",
+    "1996114 hbsu       5  2.3 claude",
+    "1165983 root       6  1.8 sssd_be",
+    "   1886 root       1  1.8 CrashPlanServic",
+    "1995822 hbsu       0  1.3 MainThread",
+    "1817791 nsngo      0  0.9 claude",
+    "1987098 swu35      4  0.8 MainThread",
+    "1987170 swu35      2  0.4 codex",
+    "1995227 hbsu       7  0.4 MainThread",
+    "1165997 root       6  0.2 sssd_nss",
+    "1986363 swu35      0  0.2 MainThread",
+    "1995762 hbsu       0  0.2 code-645f29cc31",
+    "1995398 hbsu       7  0.1 MainThread",
+    "1987063 swu35      7  0.1 code-645f29cc31"
+  ],
+  "command": [
+    "/home/swu35/ECE592-HW1/PMU-verification/../timing-only/capacity/.venv/bin/python",
+    "/home/swu35/ECE592-HW1/PMU-verification/line_size/scripts/run_line_size.py",
+    "--machine",
+    "charnwood",
+    "--run-id",
+    "line_size01"
+  ]
+}

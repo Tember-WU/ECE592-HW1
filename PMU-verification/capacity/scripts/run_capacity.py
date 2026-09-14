@@ -26,7 +26,11 @@ def main():
     ap.add_argument('--run-id', required=True)
     ap.add_argument('--config', type=Path)
     ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--allocation-attempts', type=int, default=1,
+                    help='Bounded retries only for MADV_COLLAPSE failure before any sampling')
     args = ap.parse_args()
+    if not 1 <= args.allocation_attempts <= 6:
+        ap.error('--allocation-attempts must be between 1 and 6')
     identifier(args.machine); identifier(args.run_id)
     config = json.loads((args.config or ROOT / 'configs' / (args.machine + '.json')).read_text())
     if config['machine'] != args.machine:
@@ -68,7 +72,7 @@ def main():
         (out / 'selected-events.txt').write_text(listing)
         for event in config['events']:
             block = re.search(r'^  ' + re.escape(event['name']) + r'\n(.*?)(?=^  \S|\Z)', listing, re.M | re.S)
-            encoding = re.search(r'cpu/event=(0x[0-9a-f]+),[^\n]*umask=(0x[0-9a-f]+)', block.group(1)) if block else None
+            encoding = re.search(r'(?:cpu|default_core)/event=(0x[0-9a-f]+),[^\n]*umask=(0x[0-9a-f]+)', block.group(1)) if block else None
             if not encoding or int(encoding[1], 16) | (int(encoding[2], 16) << 8) != int(event['config'], 0):
                 raise ValueError('Local perf event encoding mismatch: ' + event['name'])
         topology = Path(f'/sys/devices/system/cpu/cpu{cpu}/topology')
@@ -103,8 +107,28 @@ def main():
             save(out / 'manifest.json', manifest)
             before = cpu_stat(); t0 = time.monotonic()
             log_path = out / 'logs' / (name + '.txt')
-            with log_path.open('w') as f:
-                run = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT)
+            job['allocation_attempts'] = []
+            for attempt in range(1, args.allocation_attempts + 1):
+                with log_path.open('w') as f:
+                    run = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT)
+                if not run.returncode:
+                    break
+                # This exact failure precedes warmup, PMU open and all sampling.
+                # Never retry a measurement failure or discard collected samples.
+                allocation_failure = (log_path.read_text().strip() ==
+                                      'MADV_COLLAPSE: Cannot allocate memory' and
+                                      not raw_path.exists() and not count_path.exists())
+                if not allocation_failure:
+                    break
+                failed_log = log_path.with_name(f'{name}.allocation-attempt{attempt}.txt')
+                shutil.copy2(log_path, failed_log)
+                job['allocation_attempts'].append(dict(attempt=attempt, utc=now(),
+                                                       log_file=str(failed_log.relative_to(out))))
+                save(out / 'manifest.json', manifest)
+                if attempt < args.allocation_attempts:
+                    print(f'{name}: premeasurement THP allocation failed; '
+                          f'retrying ({attempt + 1}/{args.allocation_attempts}) in 10 seconds', flush=True)
+                    time.sleep(10)
             job.update(returncode=run.returncode, elapsed_seconds=time.monotonic() - t0,
                        cpu_busy_percent=activity(before, cpu_stat(), siblings), frequency_after=frequency(cpu))
             if run.returncode:

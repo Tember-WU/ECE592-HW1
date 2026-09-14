@@ -1,0 +1,16 @@
+{
+  "hostname": "charnwood.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "6.8.0-101-generic",
+  "cpu": 3,
+  "collected_utc": "2026-09-14T15:29:15.244180+00:00",
+  "perf_version": "perf version 6.8.12",
+  "perf_event_paranoid": "-1",
+  "processor_identification": [
+    "vendor_id\t: GenuineIntel",
+    "cpu family\t: 6",
+    "model\t\t: 94",
+    "model name\t: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz",
+    "stepping\t: 3"
+  ]
+}

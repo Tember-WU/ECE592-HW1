@@ -115,7 +115,7 @@ def main():
             a.set_xlabel('Working set (' + ('KiB' if region == 'L1' else 'MiB') + ')')
             a.set_xticks(x)
             a.tick_params(axis='x', labelsize=8)
-    fig.suptitle(f'{args.machine}: same capacity workloads, timing and PMU evidence')
+    fig.suptitle(f'{args.machine.capitalize()}: same capacity workloads, timing and PMU evidence')
     for extension in ('png', 'pdf'):
         fig.savefig(figures / ('capacity_pmu_validation.' + extension), dpi=180)
     plt.close(fig)

@@ -128,7 +128,7 @@ def main():
         (data / 'selected-events.txt').write_text(listing)
         for e in c['events']:
             block = re.search(r'^  ' + re.escape(e['name']) + r'\n(.*?)(?=^  \S|\Z)', listing, re.M | re.S)
-            raw = re.search(r'cpu/event=(0x[0-9a-f]+),[^\n]*umask=(0x[0-9a-f]+)', block[1]) if block else None
+            raw = re.search(r'(?:cpu|default_core)/event=(0x[0-9a-f]+),[^\n]*umask=(0x[0-9a-f]+)', block[1]) if block else None
             if not raw or (int(raw[1], 16) | int(raw[2], 16) << 8) != int(e['config'], 0):
                 raise ValueError('Local encoding mismatch: ' + e['name'])
         topology = Path(f'/sys/devices/system/cpu/cpu{c["cpu"]}/topology')

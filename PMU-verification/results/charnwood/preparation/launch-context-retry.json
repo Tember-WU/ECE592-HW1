@@ -1,0 +1,39 @@
+{
+  "started_utc": "2026-09-14T15:35:16.244444+00:00",
+  "runner_affinity": [
+    1,
+    5
+  ],
+  "cpu_bindings": {
+    "capacity": 3,
+    "line_size": 4,
+    "associativity": 4
+  },
+  "numa_node": 0,
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "processes": [
+    "    PID USER     PSR %CPU COMMAND",
+    "1997291 hbsu       7  100 python3",
+    "1997510 swu35      1 10.8 python",
+    "1995822 hbsu       3  3.6 MainThread",
+    "1996114 hbsu       4  3.4 claude",
+    "1165983 root       5  1.8 sssd_be",
+    "   1886 root       1  1.8 CrashPlanServic",
+    "1995227 hbsu       3  1.2 MainThread",
+    "1987098 swu35      1  0.9 MainThread",
+    "1817791 nsngo      4  0.9 claude",
+    "1995762 hbsu       7  0.5 code-645f29cc31",
+    "1995398 hbsu       7  0.5 MainThread",
+    "1987170 swu35      2  0.4 codex",
+    "1995363 hbsu       5  0.4 MainThread",
+    "1995743 hbsu       2  0.3 sshd"
+  ],
+  "retry_reason": "capacity01 failed before the first point at MADV_COLLAPSE; no timing samples. Full capacity02 retry with allocator settings previously used successfully for Charnwood latency.",
+  "allocator_environment": {
+    "MALLOC_TRIM_THRESHOLD_": "0",
+    "MALLOC_MMAP_THRESHOLD_": "131072"
+  }
+}

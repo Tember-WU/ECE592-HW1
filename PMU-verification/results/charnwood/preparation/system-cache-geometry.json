@@ -1,0 +1,110 @@
+{
+  "recorded_utc": "2026-09-14T15:34:02.056878+00:00",
+  "scope": "System-reported cache geometry collected after Phase-I freeze; not used to select the PMU point grid.",
+  "caches": [
+    {
+      "cpu": 3,
+      "index": "index0",
+      "level": "1",
+      "type": "Data",
+      "size": "32K",
+      "coherency_line_size": "64",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "physical_line_partition": "1",
+      "shared_cpu_list": "3,7",
+      "id": "3"
+    },
+    {
+      "cpu": 3,
+      "index": "index1",
+      "level": "1",
+      "type": "Instruction",
+      "size": "32K",
+      "coherency_line_size": "64",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "physical_line_partition": "1",
+      "shared_cpu_list": "3,7",
+      "id": "3"
+    },
+    {
+      "cpu": 3,
+      "index": "index2",
+      "level": "2",
+      "type": "Unified",
+      "size": "256K",
+      "coherency_line_size": "64",
+      "ways_of_associativity": "4",
+      "number_of_sets": "1024",
+      "physical_line_partition": "1",
+      "shared_cpu_list": "3,7",
+      "id": "3"
+    },
+    {
+      "cpu": 3,
+      "index": "index3",
+      "level": "3",
+      "type": "Unified",
+      "size": "8192K",
+      "coherency_line_size": "64",
+      "ways_of_associativity": "16",
+      "number_of_sets": "8192",
+      "physical_line_partition": "1",
+      "shared_cpu_list": "0-7",
+      "id": "0"
+    },
+    {
+      "cpu": 4,
+      "index": "index0",
+      "level": "1",
+      "type": "Data",
+      "size": "32K",
+      "coherency_line_size": "64",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "physical_line_partition": "1",
+      "shared_cpu_list": "0,4",
+      "id": "0"
+    },
+    {
+      "cpu": 4,
+      "index": "index1",
+      "level": "1",
+      "type": "Instruction",
+      "size": "32K",
+      "coherency_line_size": "64",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "physical_line_partition": "1",
+      "shared_cpu_list": "0,4",
+      "id": "0"
+    },
+    {
+      "cpu": 4,
+      "index": "index2",
+      "level": "2",
+      "type": "Unified",
+      "size": "256K",
+      "coherency_line_size": "64",
+      "ways_of_associativity": "4",
+      "number_of_sets": "1024",
+      "physical_line_partition": "1",
+      "shared_cpu_list": "0,4",
+      "id": "0"
+    },
+    {
+      "cpu": 4,
+      "index": "index3",
+      "level": "3",
+      "type": "Unified",
+      "size": "8192K",
+      "coherency_line_size": "64",
+      "ways_of_associativity": "16",
+      "number_of_sets": "8192",
+      "physical_line_partition": "1",
+      "shared_cpu_list": "0-7",
+      "id": "0"
+    }
+  ]
+}

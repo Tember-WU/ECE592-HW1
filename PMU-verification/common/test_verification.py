@@ -41,9 +41,12 @@ class VerificationTests(unittest.TestCase):
         with self.assertRaises(ValueError): validate_counts(bad, c, p)
 
     def test_two_live_kernels(self):
+        machine = platform.node().split('.')[0]
         for experiment in ('line_size', 'associativity'):
-            machine = platform.node().split('.')[0]
-            c = json.loads((PMU / experiment / 'configs' / (machine + '.json')).read_text())
+            path = PMU / experiment / 'configs' / (machine + '.json')
+            if not path.exists():
+                self.skipTest('No local PMU machine configuration')
+            c = json.loads(path.read_text())
             jobs = plan(c)[:len(c.get('event_passes', [None]))]
             c['samples'] = 1000
             for p in jobs:

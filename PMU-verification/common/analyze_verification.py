@@ -73,7 +73,7 @@ def plots(c, rows, folder):
         ax[1, 1].bar(labels, [r['l1_misses_per_1000_chain_loads'] for r in selected], color=['#166aa0', '#d08014', '#547f3a'])
         ax[1, 0].set(title='Traversal controls at 64 B stride', ylabel='TSC ticks / timed chain load')
         ax[1, 1].set(title='Traversal controls at 64 B stride', ylabel='L1 misses / 1,000 chain loads', ylim=(0, 1100))
-        fig.suptitle(f'{c["machine"]} line-size verification ({c["footprint"] / 1024:g} KiB footprint)')
+        fig.suptitle(f'{c["machine"].capitalize()} line-size verification ({c["footprint"] / 1024:g} KiB footprint)')
         figure_save(fig, folder, 'line_size_pmu_validation')
         groups = [('Random windows, offset 0 B', sorted([r for r in rows if r['mode'] == 'random_lines' and r['alignment'] == 0], key=lambda r: r['stride']), 'stride'),
                   ('Random windows, offset 16 B', sorted([r for r in rows if r['mode'] == 'random_lines' and r['alignment'] == 16], key=lambda r: r['stride']), 'stride')]
@@ -83,8 +83,8 @@ def plots(c, rows, folder):
         for col, group in enumerate(('L1', 'L2_candidate')):
             selected = sorted([r for r in rows if r['group'] == group], key=lambda r: r['k'])
             x = sorted({r['k'] for r in selected})
-            spacing = selected[0]['num_sets'] * c['line_size'] / 1024
-            label = f'{spacing:g} KiB address spacing' + (' (L2 candidate)' if group != 'L1' else '')
+            spacing_kib = selected[0]['num_sets'] * c['line_size'] / 1024
+            label = f'{spacing_kib:g} KiB address spacing' + (' (L2 candidate)' if group != 'L1' else '')
             pass_names = list(dict.fromkeys(r['pmu_pass'] for r in selected))
             for pass_name in pass_names:
                 subset = [r for r in selected if r['pmu_pass'] == pass_name]
@@ -100,7 +100,7 @@ def plots(c, rows, folder):
             ax[1, col].set(ylabel='Misses / 1,000 chain loads (including preparation)', xlabel='K (addresses)', ylim=(0, 1100))
             for a in ax[:, col]: a.legend(fontsize=8); a.set_xticks(x)
             groups.append((label, selected, 'k'))
-        fig.suptitle(f'{c["machine"]} associativity: identify which cache actually misses')
+        fig.suptitle(f'{c["machine"].capitalize()} associativity: identify which cache actually misses')
         figure_save(fig, folder, 'associativity_pmu_validation')
     if c['experiment'] == 'line_size' and c.get('event_passes'):
         groups = [(title, sorted([r for r in all_rows if r['mode'] == 'random_lines' and r['alignment'] == alignment],
@@ -179,7 +179,7 @@ def main():
                    total_major_faults=sum(p['measurement_events']['major_faults'] for p in m['jobs']),
                    temporal_max_min={p['name']:max(p['statistics']['decile_medians'])/min(p['statistics']['decile_medians']) for p in m['jobs']},
                    huge_kib={p['name']:p['anon_huge_kib_before_after'] for p in m['jobs']},
-                   caveat=c.get('placement_note', 'Prior placement not specified.') + ' PMU loop totals include helper loads.')
+                   caveat=c.get('placement_note', 'No prior placement comparison supplied.') + ' PMU loop totals include helper loads.')
     save(out / 'quality.json', quality)
     save(out / 'validation.json', dict(status='passed', configurations=len(rows), timed_batches=sum(r['n'] for r in rows),
          unique_workloads=len({r['point_name'] for r in rows}), event_passes=c.get('event_passes'),

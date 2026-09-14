@@ -65,6 +65,7 @@ class CapacityTests(unittest.TestCase):
         self.assertEqual(s['outliers'], 1)
         self.assertGreater(s['mean'], s['median'])
 
+    @unittest.skipUnless((ROOT / 'configs' / (platform.node().split('.')[0] + '.json')).exists(), 'Local hardware configuration required')
     def test_live_counter_group_and_raw_samples(self):
         machine = platform.node().split('.')[0]
         c = json.loads((ROOT / 'configs' / (machine + '.json')).read_text())

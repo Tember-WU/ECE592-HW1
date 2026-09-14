@@ -1,0 +1,54 @@
+{
+  "machine": "charnwood",
+  "isa": "x86_64",
+  "cpu": 3,
+  "numa_node": 0,
+  "samples": 1000000,
+  "batch": 256,
+  "spacing": 64,
+  "seed": 59202,
+  "pages": "huge",
+  "mode": "random",
+  "order_seed": 59283,
+  "events": [
+    {
+      "name": "mem_load_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_inst_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "regions": {
+    "L1": [
+      32768,
+      36864,
+      40960,
+      49152,
+      65536
+    ],
+    "L2": [
+      262144,
+      294912,
+      393216,
+      524288
+    ],
+    "LLC": [
+      4194304,
+      5242880,
+      6291456,
+      7340032,
+      8388608
+    ]
+  },
+  "selection_note": "Representative previously measured seed-59202 primary-layout points around Charnwood Phase-I L1 32 KiB, L2 256 KiB and effective LLC 4-8 MiB transitions; same CPU 3/node 0."
+}

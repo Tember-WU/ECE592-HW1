@@ -1,0 +1,4 @@
+subleaf=0 eax=1c004121 ebx=01c0003f ecx=0000003f edx=00000000 type=1 level=1 bytes=32768 line=64 partitions=1 ways=8 sets=64 inclusive_lower_levels=0 complex_indexing=0 max_addressable_sharers=2
+subleaf=1 eax=1c004122 ebx=01c0003f ecx=0000003f edx=00000000 type=2 level=1 bytes=32768 line=64 partitions=1 ways=8 sets=64 inclusive_lower_levels=0 complex_indexing=0 max_addressable_sharers=2
+subleaf=2 eax=1c004143 ebx=00c0003f ecx=000003ff edx=00000000 type=3 level=2 bytes=262144 line=64 partitions=1 ways=4 sets=1024 inclusive_lower_levels=0 complex_indexing=0 max_addressable_sharers=2
+subleaf=3 eax=1c03c163 ebx=03c0003f ecx=00001fff edx=00000006 type=3 level=3 bytes=8388608 line=64 partitions=1 ways=16 sets=8192 inclusive_lower_levels=1 complex_indexing=1 max_addressable_sharers=16

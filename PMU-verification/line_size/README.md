@@ -5,6 +5,9 @@ stride/order/offset points, CPU 32/node 0, and two counter pairs per point. Its
 configuration reads the frozen Phase-I summary. The detailed historical parameters
 and placement below describe Artemisia unless stated otherwise.
 
+Charnwood's completed run is [line_size01](results/charnwood/line_size01/RUN_NOTES.md), with
+[Section 8.3 comparison and limitations](../results/charnwood/REPORT.md).
+
 Artemisia's completed run is [line_size01](results/artemisia/line_size01/RUN_NOTES.md).
 Twelve representative configurations reproduce the existing grouping-window stride experiment
 with four user-mode counters: retired L1/L2/L3 load misses and retired loads in total.

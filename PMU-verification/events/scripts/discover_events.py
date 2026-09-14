@@ -80,7 +80,7 @@ def main():
             continue
         content = ' '.join(block['lines'])
         desc = re.search(r'\[(.*?)\]', content)
-        encoding = re.search(r'cpu/[^ ]+/', content)
+        encoding = re.search(r'(?:cpu|default_core)/[^ ]+/', content)
         rows.append(dict(event=name, category=block['section'],
                          description=desc.group(1) if desc else content,
                          encoding=encoding.group(0) if encoding else '',
@@ -107,7 +107,7 @@ def main():
     (out / 'probes.json').write_text(json.dumps(probes, indent=2) + '\n')
     with (result / 'events.csv').open('w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
-    text = [f'# {args.machine} cache-event inventory', '',
+    text = [f'# {args.machine.capitalize()} cache-event inventory', '',
             'Descriptions and encodings come from this host\'s archived `perf list --details`.',
             'A listed event is not necessarily usable. Selected probes count a short `/usr/bin/true` process;',
             'they test access/scheduling, not cache behavior. Formal capacity measurements are separate.', '',
