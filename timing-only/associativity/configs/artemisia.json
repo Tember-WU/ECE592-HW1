@@ -18,5 +18,8 @@
     2048,
     1024,
     4096
-  ]
+  ],
+  "assoc_llc_num_sets_candidates": [],
+  "assoc_llc_max_k": 24,
+  "llc_notes": "EMPTY until a real LLC capacity plateau exists from Experiment 1 (partner's current capacity sweep only found 3 residency regions -- L1D/L2/DRAM -- with no distinct LLC step reported; extend that sweep past L2 out to 32-64MB and confirm a real plateau before filling this in). Note: Thunderbird (Ampere Altra/Neoverse N1) may not have a traditional shared LLC at all -- verify rather than assume a candidate list is even applicable there. LLC is sliced/hashed (TA Slide 16), so even with real candidates this may only resolve to an effective associativity or a bound, not an exact ways count."
 }

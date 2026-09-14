@@ -33,7 +33,25 @@ struct Config {
     size_t batch;             // number of dependent accesses per timed batch
     uint32_t seed;
     std::string outfile;
+    std::string raw_outfile;      // optional: raw per-access latencies for raw_ks
+    std::vector<size_t> raw_ks;   // K values to dump raw samples for (e.g. boundary-1,boundary,boundary+1)
+    std::vector<size_t> only_ks;  // if non-empty, sweep only these K values instead of 1..max_k
+                                   // (used to cheaply re-measure just the boundary K's for a box plot,
+                                   // without re-running the full 1..max_k sweep a second time)
 };
+
+static std::vector<size_t> parse_size_list(const std::string& list) {
+    std::vector<size_t> out;
+    size_t pos = 0;
+    while (pos < list.size()) {
+        size_t comma = list.find(',', pos);
+        std::string token = list.substr(pos, comma == std::string::npos ? std::string::npos : comma - pos);
+        if (!token.empty()) out.push_back(std::stoul(token));
+        if (comma == std::string::npos) break;
+        pos = comma + 1;
+    }
+    return out;
+}
 
 bool parse_args(int argc, char** argv, Config& cfg) {
     cfg.line_size = 64;
@@ -48,6 +66,9 @@ bool parse_args(int argc, char** argv, Config& cfg) {
         else if (arg == "--batch" && i+1 < argc) cfg.batch = std::stoul(argv[++i]);
         else if (arg == "--seed" && i+1 < argc) cfg.seed = std::stoul(argv[++i]);
         else if (arg == "--output" && i+1 < argc) cfg.outfile = argv[++i];
+        else if (arg == "--raw_output" && i+1 < argc) cfg.raw_outfile = argv[++i];
+        else if (arg == "--raw_ks" && i+1 < argc) cfg.raw_ks = parse_size_list(argv[++i]);
+        else if (arg == "--only_ks" && i+1 < argc) cfg.only_ks = parse_size_list(argv[++i]);
         else { std::cerr << "Unknown arg: " << arg << "\n"; return false; }
     }
     if (cfg.num_sets == 0 || cfg.max_k == 0 || cfg.samples == 0 || cfg.outfile.empty()) {
@@ -137,7 +158,7 @@ struct Result {
 Result measure_K(Node* base, size_t set_stride, size_t K,
                  size_t samples, size_t warmup, size_t batch,
                  uint64_t hit_threshold, uint64_t miss_threshold,
-                 uint32_t seed) {
+                 uint32_t seed, std::ofstream* raw_out = nullptr) {
     build_conflict_cycle(base, set_stride, K, seed);
     Node* p = base;
     // warmup
@@ -176,13 +197,25 @@ Result measure_K(Node* base, size_t set_stride, size_t K,
 
     std::sort(latencies.begin(), latencies.end());
     double med = (double)latencies[samples/2] / (double)batch; // per-access latency
+
+    // Dump raw per-access latencies for this K if requested. This is what makes a real
+    // box plot possible: the summary CSV only ever stores one median per K, which cannot
+    // support quartiles/whiskers/outliers. Deliberately dumped UNSORTED-then-sorted order
+    // doesn't matter for a box plot; we write the sorted values simply because `latencies`
+    // is already sorted at this point.
+    if (raw_out != nullptr) {
+        for (uint64_t raw_delta : latencies) {
+            (*raw_out) << K << "," << ((double)raw_delta / (double)batch) << "\n";
+        }
+    }
+
     return {(double)evictions / (double)samples, med};
 }
 
 // ---------- Calibration (using batched latencies) ----------
 void calibrate(Node* base, size_t set_stride, size_t max_k, size_t warmup, size_t batch,
                uint64_t& hit_threshold, uint64_t& miss_threshold, uint32_t seed) {
-    const size_t CAL_SAMPLES = 100000;
+    const size_t CAL_SAMPLES = 10000;
     // Hit: K=1
     build_conflict_cycle(base, set_stride, 1, seed);
     Node* p = base;
@@ -249,14 +282,32 @@ int main(int argc, char** argv) {
     std::ofstream out(cfg.outfile);
     out << "K,eviction_probability,median_latency\n";
 
-    for (size_t K = 1; K <= cfg.max_k; ++K) {
+    std::ofstream raw_out;
+    bool raw_enabled = !cfg.raw_outfile.empty() && !cfg.raw_ks.empty();
+    if (raw_enabled) {
+        raw_out.open(cfg.raw_outfile);
+        raw_out << "K,latency_per_access\n";
+    }
+
+    std::vector<size_t> k_range;
+    if (!cfg.only_ks.empty()) {
+        k_range = cfg.only_ks;
+    } else {
+        for (size_t K = 1; K <= cfg.max_k; ++K) k_range.push_back(K);
+    }
+
+    for (size_t K : k_range) {
+        bool dump_this_k = raw_enabled &&
+            std::find(cfg.raw_ks.begin(), cfg.raw_ks.end(), K) != cfg.raw_ks.end();
         Result res = measure_K(base, set_stride, K, cfg.samples, cfg.warmup, cfg.batch,
-                               hit_thresh, miss_thresh, cfg.seed + K * 100);
+                               hit_thresh, miss_thresh, cfg.seed + K * 100,
+                               dump_this_k ? &raw_out : nullptr);
         out << K << "," << res.eviction_prob << "," << res.median_latency << "\n";
         std::cerr << "K=" << K << " P=" << res.eviction_prob << " med=" << res.median_latency << "\n";
     }
 
     out.close();
+    if (raw_enabled) raw_out.close();
     // allocate_buffer() always uses mmap() now (regardless of use_huge), so cleanup is
     // always munmap() -- no more posix_memalign/mmap mismatch.
     munmap(raw, alloc_size);
