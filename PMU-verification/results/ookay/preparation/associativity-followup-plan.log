@@ -1,0 +1,66 @@
+associativity: 9 configurations, 1,000,000 batches each
+[
+  {
+    "name": "L2_sets512_k8",
+    "group": "L2_sets512",
+    "num_sets": 512,
+    "k": 8,
+    "max_k": 16
+  },
+  {
+    "name": "L2_sets512_k9",
+    "group": "L2_sets512",
+    "num_sets": 512,
+    "k": 9,
+    "max_k": 16
+  },
+  {
+    "name": "L2_sets512_k10",
+    "group": "L2_sets512",
+    "num_sets": 512,
+    "k": 10,
+    "max_k": 16
+  },
+  {
+    "name": "L2_sets1024_k8",
+    "group": "L2_sets1024",
+    "num_sets": 1024,
+    "k": 8,
+    "max_k": 16
+  },
+  {
+    "name": "L2_sets1024_k4",
+    "group": "L2_sets1024",
+    "num_sets": 1024,
+    "k": 4,
+    "max_k": 16
+  },
+  {
+    "name": "L2_sets512_k7",
+    "group": "L2_sets512",
+    "num_sets": 512,
+    "k": 7,
+    "max_k": 16
+  },
+  {
+    "name": "L2_sets1024_k5",
+    "group": "L2_sets1024",
+    "num_sets": 1024,
+    "k": 5,
+    "max_k": 16
+  },
+  {
+    "name": "L2_sets1024_k9",
+    "group": "L2_sets1024",
+    "num_sets": 1024,
+    "k": 9,
+    "max_k": 16
+  },
+  {
+    "name": "L2_sets1024_k10",
+    "group": "L2_sets1024",
+    "num_sets": 1024,
+    "k": 10,
+    "max_k": 16
+  }
+]

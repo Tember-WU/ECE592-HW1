@@ -1,0 +1,27 @@
+{
+  "preflight_busy_percent": {
+    "2": 0.0,
+    "6": 0.0
+  },
+  "total_involuntary_switches": 18,
+  "total_minor_faults": 3,
+  "total_major_faults": 0,
+  "max_sibling_busy_percent": 0.0,
+  "temporal_median_max_min": {
+    "LLC_w7340032": 1.0019370460048427,
+    "L1_w36864": 1.0007496251874064,
+    "L1_w32768": 1.0060975609756098,
+    "L2_w524288": 1.0023536334215946,
+    "L1_w40960": 1.0007479431563202,
+    "LLC_w5242880": 1.000730104648333,
+    "LLC_w4194304": 1.001953601953602,
+    "LLC_w6291456": 1.0009711094925953,
+    "LLC_w8388608": 1.0391401338470898,
+    "L2_w262144": 1.0073855243722305,
+    "L2_w393216": 1.0025260498894852,
+    "L1_w49152": 1.000747384155456,
+    "L2_w294912": 1.0051377860812705,
+    "L1_w65536": 1.000747384155456
+  },
+  "note": "CPU busy time during a run includes this benchmark. Shared-cache/memory interference is not isolated."
+}

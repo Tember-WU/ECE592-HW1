@@ -1,0 +1,73 @@
+14 configurations, 1,000,000 timed batches each, four simultaneous events.
+[
+  {
+    "name": "LLC_w7340032",
+    "region": "LLC",
+    "bytes": 7340032
+  },
+  {
+    "name": "L1_w36864",
+    "region": "L1",
+    "bytes": 36864
+  },
+  {
+    "name": "L1_w32768",
+    "region": "L1",
+    "bytes": 32768
+  },
+  {
+    "name": "L2_w524288",
+    "region": "L2",
+    "bytes": 524288
+  },
+  {
+    "name": "L1_w40960",
+    "region": "L1",
+    "bytes": 40960
+  },
+  {
+    "name": "LLC_w5242880",
+    "region": "LLC",
+    "bytes": 5242880
+  },
+  {
+    "name": "LLC_w4194304",
+    "region": "LLC",
+    "bytes": 4194304
+  },
+  {
+    "name": "LLC_w6291456",
+    "region": "LLC",
+    "bytes": 6291456
+  },
+  {
+    "name": "LLC_w8388608",
+    "region": "LLC",
+    "bytes": 8388608
+  },
+  {
+    "name": "L2_w262144",
+    "region": "L2",
+    "bytes": 262144
+  },
+  {
+    "name": "L2_w393216",
+    "region": "L2",
+    "bytes": 393216
+  },
+  {
+    "name": "L1_w49152",
+    "region": "L1",
+    "bytes": 49152
+  },
+  {
+    "name": "L2_w294912",
+    "region": "L2",
+    "bytes": 294912
+  },
+  {
+    "name": "L1_w65536",
+    "region": "L1",
+    "bytes": 65536
+  }
+]

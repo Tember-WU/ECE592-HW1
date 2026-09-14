@@ -1,0 +1,116 @@
+{
+  "machine": "ookay",
+  "created_utc": "2026-09-14T15:29:32.491378+00:00",
+  "git_head": "f86eecbb6fce590f3d40b64487620888b33dcd93",
+  "scope": "Record existing Phase-I summaries and interpretations before any PMU event discovery or system/vendor cache-geometry query in this verification task. Original Phase-I files are not edited.",
+  "files": [
+    {
+      "path": "timing-only/capacity/results/ookay/combined12/inference.json",
+      "sha256": "e9e14be7e86b498d02a25bd8dfe2422455601aa77e66ca7cd36e9c014645693a",
+      "bytes": 2356,
+      "snapshot": "files/timing-only/capacity/results/ookay/combined12/inference.json"
+    },
+    {
+      "path": "timing-only/capacity/results/ookay/combined12/summary.csv",
+      "sha256": "6b76c9292b69e9cb3ddaf11157b99af7a099c5bbd1ee4eb0e97e847ac1f3d738",
+      "bytes": 36830,
+      "snapshot": "files/timing-only/capacity/results/ookay/combined12/summary.csv"
+    },
+    {
+      "path": "timing-only/capacity/results/ookay/combined12/RUN_NOTES.md",
+      "sha256": "068ec3fa59f8bf91e7138c9730f0b055c65f7411c6a70b71194fa5c06b7f7e53",
+      "bytes": 6851,
+      "snapshot": "files/timing-only/capacity/results/ookay/combined12/RUN_NOTES.md"
+    },
+    {
+      "path": "timing-only/capacity/results/ookay/combined12/validation.json",
+      "sha256": "7c282bc9b550aa33a8097cb5a6a23f2eb6e65dbc0e57922d4a4e84d1fbb30492",
+      "bytes": 1506,
+      "snapshot": "files/timing-only/capacity/results/ookay/combined12/validation.json"
+    },
+    {
+      "path": "timing-only/line_size/data/ookay/stats/all_stats.csv",
+      "sha256": "f44d8bf33cc7cbc425a8a5b9f6a92abc10d676e1aa1ce64a752dbe556604eb21",
+      "bytes": 15314,
+      "snapshot": "files/timing-only/line_size/data/ookay/stats/all_stats.csv"
+    },
+    {
+      "path": "timing-only/line_size/data/ookay/raw_data/pinning_manifest.txt",
+      "sha256": "5a2ad9aa4b6b509aeb06f31de0e83cdff9c529b83494efe9a2be88c60d6c1383",
+      "bytes": 149,
+      "snapshot": "files/timing-only/line_size/data/ookay/raw_data/pinning_manifest.txt"
+    },
+    {
+      "path": "timing-only/associativity/data/ookay/raw_data/l2_associativity_candidate1024.csv",
+      "sha256": "f0867687ade2658816d6f5071db71571a85f4257fd1a9e017b52df0e9344706d",
+      "bytes": 317,
+      "snapshot": "files/timing-only/associativity/data/ookay/raw_data/l2_associativity_candidate1024.csv"
+    },
+    {
+      "path": "timing-only/associativity/data/ookay/raw_data/l2_associativity.csv",
+      "sha256": "4e35ac5f801c165630f0785022421c6c46efaba75afe001ff093fc6945436019",
+      "bytes": 307,
+      "snapshot": "files/timing-only/associativity/data/ookay/raw_data/l2_associativity.csv"
+    },
+    {
+      "path": "timing-only/associativity/data/ookay/raw_data/pinning_manifest.txt",
+      "sha256": "5a2ad9aa4b6b509aeb06f31de0e83cdff9c529b83494efe9a2be88c60d6c1383",
+      "bytes": 149,
+      "snapshot": "files/timing-only/associativity/data/ookay/raw_data/pinning_manifest.txt"
+    },
+    {
+      "path": "timing-only/associativity/data/ookay/raw_data/l1_associativity.csv",
+      "sha256": "69cfd2d80982bb0358376221608a4a644203dc988e56f29c61cf60fafc6093ab",
+      "bytes": 308,
+      "snapshot": "files/timing-only/associativity/data/ookay/raw_data/l1_associativity.csv"
+    },
+    {
+      "path": "timing-only/associativity/data/ookay/raw_data/associativity_candidate_selection.txt",
+      "sha256": "fd47650e37e430b7234ae58b1cb63768ed36d6c3384254b384871ca0f54a5877",
+      "bytes": 564,
+      "snapshot": "files/timing-only/associativity/data/ookay/raw_data/associativity_candidate_selection.txt"
+    },
+    {
+      "path": "timing-only/associativity/data/ookay/raw_data/l1_associativity_candidate64.csv",
+      "sha256": "46be7d178e379989b49696c346c0bc54523f0832f87bf91724b30db5280b2482",
+      "bytes": 292,
+      "snapshot": "files/timing-only/associativity/data/ookay/raw_data/l1_associativity_candidate64.csv"
+    },
+    {
+      "path": "timing-only/associativity/data/ookay/raw_data/l2_associativity_candidate256.csv",
+      "sha256": "7b8640f265893bea143cd64ed69f01f74f103f8e0b0e715760ffd5d0ff617746",
+      "bytes": 291,
+      "snapshot": "files/timing-only/associativity/data/ookay/raw_data/l2_associativity_candidate256.csv"
+    },
+    {
+      "path": "timing-only/associativity/data/ookay/raw_data/l2_associativity_candidate512.csv",
+      "sha256": "4be6e3376f82b028609195e16e10f2e5e7f9b651e0e82d0db61e6ca9ad5b73da",
+      "bytes": 312,
+      "snapshot": "files/timing-only/associativity/data/ookay/raw_data/l2_associativity_candidate512.csv"
+    },
+    {
+      "path": "timing-only/latency/results/ookay/latency01-retry2/latency_estimates.json",
+      "sha256": "bbc0104dab9af20e7a9535fa29082bc388263abcc8bec474ac2283189703a7d4",
+      "bytes": 11555,
+      "snapshot": "files/timing-only/latency/results/ookay/latency01-retry2/latency_estimates.json"
+    },
+    {
+      "path": "timing-only/latency/results/ookay/latency01-retry2/summary.csv",
+      "sha256": "04b7569f6cc36573be6a6b8ae98bdee82df40cbde2765ddf6423b5edc83b5e9e",
+      "bytes": 13810,
+      "snapshot": "files/timing-only/latency/results/ookay/latency01-retry2/summary.csv"
+    },
+    {
+      "path": "timing-only/latency/results/ookay/latency01-retry2/RUN_NOTES.md",
+      "sha256": "498962df7936346b8f2900f2d4194060e1dc755abbd27035dd3778ac2fb3688d",
+      "bytes": 11337,
+      "snapshot": "files/timing-only/latency/results/ookay/latency01-retry2/RUN_NOTES.md"
+    },
+    {
+      "path": "timing-only/inclusion/data/ookay/raw_data_inclusion/ookay/inclusion_report.json",
+      "sha256": "82699af3bf2e82eb83dec62a325da70f4c3b355b6b30a1b23f30fdd014bf49b3",
+      "bytes": 504,
+      "snapshot": "files/timing-only/inclusion/data/ookay/raw_data_inclusion/ookay/inclusion_report.json"
+    }
+  ]
+}

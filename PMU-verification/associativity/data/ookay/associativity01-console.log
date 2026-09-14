@@ -1,0 +1,18 @@
+associativity: 12 configurations, 1,000,000 batches each
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Preflight: {'0': 2.0202020202020203, '4': 0.0}
+[1/12] L2_candidate_k8: 7.8760 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.54, 0.002, 0.0]
+[2/12] L1_k10: 13.7519 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [941.246, 0.001, 0.0]
+[3/12] L1_k8: 7.8760 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.721, 0.0, 0.0]
+[4/12] L2_candidate_k7: 7.8760 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.13, 0.005, 0.0]
+[5/12] L2_candidate_k18: 21.9225 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [976.715, 298.184, 0.0]
+[6/12] L2_candidate_k17: 19.3488 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [976.393, 182.985, 0.0]
+[7/12] L2_candidate_k16: 12.9302 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [871.849, 0.282, 0.0]
+[8/12] L1_k9: 13.7519 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [982.114, 0.001, 0.0]
+[9/12] L1_k7: 7.8760 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.108, 0.001, 0.0]
+[10/12] L1_k6: 7.8760 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [0.071, 0.002, 0.0]
+[11/12] L2_candidate_k9: 13.7519 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [981.984, 0.013, 0.0]
+[12/12] L2_candidate_k10: 13.7519 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [940.902, 0.014, 0.0]

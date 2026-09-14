@@ -1,0 +1,101 @@
+{
+  "machine": "ookay",
+  "isa": "x86_64",
+  "cpu": 4,
+  "numa_node": 0,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "mem_load_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_inst_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "associativity",
+  "batch": 128,
+  "line_size": 64,
+  "seed": 701,
+  "points": [
+    {
+      "name": "L2_sets512_k7",
+      "group": "L2_sets512",
+      "num_sets": 512,
+      "k": 7,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets512_k8",
+      "group": "L2_sets512",
+      "num_sets": 512,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets512_k9",
+      "group": "L2_sets512",
+      "num_sets": 512,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets512_k10",
+      "group": "L2_sets512",
+      "num_sets": 512,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets1024_k4",
+      "group": "L2_sets1024",
+      "num_sets": 1024,
+      "k": 4,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets1024_k5",
+      "group": "L2_sets1024",
+      "num_sets": 1024,
+      "k": 5,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets1024_k8",
+      "group": "L2_sets1024",
+      "num_sets": 1024,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets1024_k9",
+      "group": "L2_sets1024",
+      "num_sets": 1024,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L2_sets1024_k10",
+      "group": "L2_sets1024",
+      "num_sets": 1024,
+      "k": 10,
+      "max_k": 16
+    }
+  ],
+  "placement_note": "Same logical CPU 4 and NUMA node 0 as the timing-only pinning manifest. Actual SMT sibling is CPU 0; the old manifest incorrectly said none. Collector pinned to CPU 1; worker binds CPU 4.",
+  "phase1_freeze": "results/ookay/phase1-freeze01/manifest.json",
+  "selection_note": "Phase-II follow-up: the frozen selected 256-set candidate has an L1-miss edge at K8->9 and an L2-miss onset at K16->17. Reuse two already measured alternative address spacings to distinguish L1 filtering and multi-set L2 occupancy. No new traversal method or larger sample count; every point has a frozen Phase-I baseline. Selected after the initial PMU evidence and system lookup; not a revised Phase-I inference.",
+  "created_utc": "2026-09-14T15:36:54.630491+00:00",
+  "source_pmu_run": "associativity01"
+}

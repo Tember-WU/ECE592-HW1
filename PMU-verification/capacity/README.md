@@ -7,6 +7,10 @@ configuration for its selected sizes and locally verified event encodings.
 Charnwood's completed run is [capacity03](results/charnwood/capacity03/RUN_NOTES.md), with
 [Section 8.3 comparison and limitations](../results/charnwood/REPORT.md).
 
+Ookay: [capacity01](results/ookay/capacity01/RUN_NOTES.md) completes 14 representative points
+with `configs/ookay.json`. See the [Section 8.3 comparison](../results/ookay/SECTION_8_3_REPORT.md).
+The parameters below describe Artemisia; select `--machine ookay` for Ookay's own sizes and placement.
+
 This small Section 8.3 experiment reruns 14 Artemisia capacity points using the existing randomized,
 dependent pointer-chase workload. It measures the timing distribution and a group of four hardware
 events during the same measurement loop.

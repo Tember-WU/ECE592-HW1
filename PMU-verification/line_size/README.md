@@ -8,6 +8,12 @@ and placement below describe Artemisia unless stated otherwise.
 Charnwood's completed run is [line_size01](results/charnwood/line_size01/RUN_NOTES.md), with
 [Section 8.3 comparison and limitations](../results/charnwood/REPORT.md).
 
+Ookay: [line_size01](results/ookay/line_size01/RUN_NOTES.md) and the complete stability repeat
+[line_size02](results/ookay/line_size02/RUN_NOTES.md) each collect 12 million repetitions.
+Use `configs/ookay.json` / `--machine ookay`; these runs retain CPU4/node0 and disclose SMT interference.
+Their [Section 8.3 comparison](../results/ookay/SECTION_8_3_REPORT.md) reports partial line-size evidence.
+The remaining run-specific placement and results below describe Artemisia.
+
 Artemisia's completed run is [line_size01](results/artemisia/line_size01/RUN_NOTES.md).
 Twelve representative configurations reproduce the existing grouping-window stride experiment
 with four user-mode counters: retired L1/L2/L3 load misses and retired loads in total.

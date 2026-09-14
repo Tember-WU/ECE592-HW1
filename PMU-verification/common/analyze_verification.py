@@ -78,13 +78,17 @@ def plots(c, rows, folder):
         groups = [('Random windows, offset 0 B', sorted([r for r in rows if r['mode'] == 'random_lines' and r['alignment'] == 0], key=lambda r: r['stride']), 'stride'),
                   ('Random windows, offset 16 B', sorted([r for r in rows if r['mode'] == 'random_lines' and r['alignment'] == 16], key=lambda r: r['stride']), 'stride')]
     else:
-        fig, ax = plt.subplots(2, 2, figsize=(12, 7.5), layout='constrained')
+        group_names = list(dict.fromkeys(p['group'] for p in c['points']))
+        fig, ax = plt.subplots(2, len(group_names), figsize=(6 * len(group_names), 7.5),
+                               squeeze=False, layout='constrained')
         groups = []
-        for col, group in enumerate(('L1', 'L2_candidate')):
+        for col, group in enumerate(group_names):
             selected = sorted([r for r in rows if r['group'] == group], key=lambda r: r['k'])
             x = sorted({r['k'] for r in selected})
-            spacing_kib = selected[0]['num_sets'] * c['line_size'] / 1024
-            label = f'{spacing_kib:g} KiB address spacing' + (' (L2 candidate)' if group != 'L1' else '')
+            spacings = {r['num_sets'] * c['line_size'] for r in selected}
+            if len(spacings) != 1:
+                raise ValueError('Each plotted associativity group needs one address spacing')
+            label = f'{spacings.pop() / 1024:g} KiB address spacing' + (' (L2 candidate)' if group != 'L1' else '')
             pass_names = list(dict.fromkeys(r['pmu_pass'] for r in selected))
             for pass_name in pass_names:
                 subset = [r for r in selected if r['pmu_pass'] == pass_name]

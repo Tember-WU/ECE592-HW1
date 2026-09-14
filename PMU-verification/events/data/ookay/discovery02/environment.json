@@ -1,0 +1,16 @@
+{
+  "hostname": "ookay.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "6.8.0-100-generic",
+  "cpu": 2,
+  "collected_utc": "2026-09-14T15:31:59.776472+00:00",
+  "perf_version": "perf version 6.8.12",
+  "perf_event_paranoid": "1",
+  "processor_identification": [
+    "vendor_id\t: GenuineIntel",
+    "cpu family\t: 6",
+    "model\t\t: 158",
+    "model name\t: Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz",
+    "stepping\t: 9"
+  ]
+}

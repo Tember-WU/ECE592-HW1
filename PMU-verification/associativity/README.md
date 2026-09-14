@@ -8,6 +8,12 @@ K values, placement and failed `associativity01` discussed below refer to Artemi
 Charnwood's completed run is [associativity01](results/charnwood/associativity01/RUN_NOTES.md), with
 [Section 8.3 comparison and limitations](../results/charnwood/REPORT.md).
 
+Ookay: [associativity01](results/ookay/associativity01/RUN_NOTES.md) completes 12 points;
+[associativity02](results/ookay/associativity02/RUN_NOTES.md) adds nine points at the other two
+Phase-I address spacings. `configs/ookay.json` and `configs/ookay-followup.json` retain CPU4/node0.
+See the [Section 8.3 comparison](../results/ookay/SECTION_8_3_REPORT.md) for why the original
+8-way L2 label is unsupported. The run-specific details below describe Artemisia.
+
 Artemisia's completed run is [associativity02](results/artemisia/associativity02/RUN_NOTES.md).
 It confirms the L1 conflict threshold and identifies the original L2-labeled 12-to-13 transition
 as an L1 miss transition. Two extension points provide evidence for a later L2 threshold.

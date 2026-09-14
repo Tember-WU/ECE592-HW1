@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "configurations": 9,
+  "timed_batches": 9000000,
+  "raw_hashes_lengths_and_statistics_verified": true,
+  "actual_load_denominators_verified": true,
+  "all_pmu_groups_without_multiplexing": true,
+  "note": "Integrity checks, not proof of exact physical geometry."
+}

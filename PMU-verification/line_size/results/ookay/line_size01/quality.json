@@ -1,0 +1,75 @@
+{
+  "preflight_busy_percent": {
+    "0": 2.0408163265306123,
+    "4": 0.0
+  },
+  "max_sibling_busy_percent": 18.90909090909091,
+  "total_involuntary_switches": 29,
+  "total_minor_faults": 25,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "random_s64_a16": 1.0065359477124183,
+    "random_s96_a0": 1.0011753950633406,
+    "random_s64_a0": 1.0078862314156432,
+    "random_s56_a16": 1.059323392656726,
+    "fully_random_s64": 1.0020376974019358,
+    "sequential_s72": 1.0018387986515476,
+    "sequential_s64": 1.0011054958938723,
+    "random_s72_a0": 1.0010322580645161,
+    "random_s56_a0": 1.0085862324204293,
+    "random_s32_a0": 1.1658484525080042,
+    "random_s72_a16": 1.02803738317757,
+    "sequential_s56": 1.00181598062954
+  },
+  "huge_kib": {
+    "random_s64_a16": [
+      0,
+      0
+    ],
+    "random_s96_a0": [
+      0,
+      0
+    ],
+    "random_s64_a0": [
+      0,
+      0
+    ],
+    "random_s56_a16": [
+      0,
+      0
+    ],
+    "fully_random_s64": [
+      0,
+      0
+    ],
+    "sequential_s72": [
+      0,
+      0
+    ],
+    "sequential_s64": [
+      0,
+      0
+    ],
+    "random_s72_a0": [
+      0,
+      0
+    ],
+    "random_s56_a0": [
+      0,
+      0
+    ],
+    "random_s32_a0": [
+      0,
+      0
+    ],
+    "random_s72_a16": [
+      0,
+      0
+    ],
+    "sequential_s56": [
+      0,
+      0
+    ]
+  },
+  "caveat": "Same logical CPU 4 and NUMA node 0 as the timing-only pinning manifest. Actual SMT sibling is CPU 0; the old manifest incorrectly said none. Collector pinned to CPU 1; worker binds CPU 4. PMU loop totals include helper loads."
+}
