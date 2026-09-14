@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "machine": "crux",
+  "run_id": "latency01-retry2",
+  "full_seven_groups": true,
+  "configurations": 30,
+  "timed_batches": 30000000,
+  "recorded_intervals": 39000000,
+  "raw_hashes_counts_statistics_snapshots_and_placement_verified": true,
+  "scope": "Data integrity and recorded placement only; not proof of pure cache states or absence of interference."
+}

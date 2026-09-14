@@ -21,17 +21,51 @@ def now():
     return dt.datetime.now(dt.timezone.utc).isoformat()
 
 
+def launch(cmd, log_path, raw_path, count_path, retries, attempts, *, retry_delay=2, on_attempt=None):
+    """Retry only a known pre-measurement THP allocation failure, retaining logs."""
+    for attempt in range(retries + 1):
+        started = now()
+        with log_path.open('w') as f:
+            run = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT)
+        retryable = (run.returncode != 0 and
+                     log_path.read_text().strip() == 'MADV_COLLAPSE: Cannot allocate memory' and
+                     not raw_path.exists() and not count_path.exists())
+        entry = dict(started_utc=started, finished_utc=now(), returncode=run.returncode,
+                     premeasurement_allocation_failure=retryable)
+        entry['log_file'] = 'logs/' + log_path.name
+        if retryable:
+            failed_log = log_path.with_name(log_path.stem + f'.allocation-attempt{attempt + 1}.txt')
+            shutil.copy2(log_path, failed_log)
+            entry['log_file'] = 'logs/' + failed_log.name
+        attempts.append(entry)
+        if on_attempt is not None:
+            on_attempt()
+        if not retryable or attempt == retries:
+            return run
+        print(f'{log_path.stem}: allocation failed before timing; retry {attempt + 1}/{retries}', flush=True)
+        time.sleep(retry_delay)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--machine', required=True)
     ap.add_argument('--run-id', required=True)
     ap.add_argument('--config', type=Path)
     ap.add_argument('--dry-run', action='store_true')
-    ap.add_argument('--allocation-attempts', type=int, default=1,
-                    help='Bounded retries only for MADV_COLLAPSE failure before any sampling')
+    retry_options = ap.add_mutually_exclusive_group()
+    retry_options.add_argument('--allocation-attempts', type=int,
+                    help='Total THP allocation attempts, 1 to 6, with 10 seconds between retries')
+    retry_options.add_argument('--allocation-retries', type=int, default=0,
+                    help='Retry only pre-timing MADV_COLLAPSE ENOMEM failures (default: 0)')
     args = ap.parse_args()
-    if not 1 <= args.allocation_attempts <= 6:
-        ap.error('--allocation-attempts must be between 1 and 6')
+    if not 0 <= args.allocation_retries <= 30:
+        ap.error('--allocation-retries must be between 0 and 30')
+    retry_delay = 2
+    if args.allocation_attempts is not None:
+        if not 1 <= args.allocation_attempts <= 6:
+            ap.error('--allocation-attempts must be between 1 and 6')
+        args.allocation_retries = args.allocation_attempts - 1
+        retry_delay = 10
     identifier(args.machine); identifier(args.run_id)
     config = json.loads((args.config or ROOT / 'configs' / (args.machine + '.json')).read_text())
     if config['machine'] != args.machine:
@@ -60,7 +94,9 @@ def main():
         (out / directory).mkdir()
     save(out / 'config.json', config)
     manifest = dict(machine=args.machine, run_id=args.run_id, status='running',
-                    started_utc=now(), command=sys.argv, jobs=jobs)
+                    started_utc=now(), command=sys.argv, jobs=jobs,
+                    allocation_retries=args.allocation_retries,
+                    allocation_retry_delay_seconds=retry_delay)
     start = time.monotonic()
     try:
         with (out / 'build.log').open('w') as f:
@@ -106,28 +142,18 @@ def main():
             save(out / 'manifest.json', manifest)
             before = cpu_stat(); t0 = time.monotonic()
             log_path = out / 'logs' / (name + '.txt')
+            job['launch_attempts'] = []
             job['allocation_attempts'] = []
-            for attempt in range(1, args.allocation_attempts + 1):
-                with log_path.open('w') as f:
-                    run = subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT)
-                if not run.returncode:
-                    break
-                # This exact failure precedes warmup, PMU open and all sampling.
-                # Never retry a measurement failure or discard collected samples.
-                allocation_failure = (log_path.read_text().strip() ==
-                                      'MADV_COLLAPSE: Cannot allocate memory' and
-                                      not raw_path.exists() and not count_path.exists())
-                if not allocation_failure:
-                    break
-                failed_log = log_path.with_name(f'{name}.allocation-attempt{attempt}.txt')
-                shutil.copy2(log_path, failed_log)
-                job['allocation_attempts'].append(dict(attempt=attempt, utc=now(),
-                                                       log_file=str(failed_log.relative_to(out))))
+
+            def record_attempt():
+                job['allocation_attempts'] = [
+                    dict(attempt=i, utc=entry['finished_utc'], log_file=entry['log_file'])
+                    for i, entry in enumerate(job['launch_attempts'], 1)
+                    if entry['premeasurement_allocation_failure']]
                 save(out / 'manifest.json', manifest)
-                if attempt < args.allocation_attempts:
-                    print(f'{name}: premeasurement THP allocation failed; '
-                          f'retrying ({attempt + 1}/{args.allocation_attempts}) in 10 seconds', flush=True)
-                    time.sleep(10)
+
+            run = launch(cmd, log_path, raw_path, count_path, args.allocation_retries,
+                         job['launch_attempts'], retry_delay=retry_delay, on_attempt=record_attempt)
             job.update(returncode=run.returncode, elapsed_seconds=time.monotonic() - t0,
                        cpu_busy_percent=activity(before, cpu_stat(), siblings), frequency_after=frequency(cpu))
             if run.returncode:

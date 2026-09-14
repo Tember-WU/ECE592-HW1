@@ -1,0 +1,74 @@
+{
+  "preflight_busy_percent": {
+    "4": 2.0
+  },
+  "max_sibling_busy_percent": null,
+  "total_involuntary_switches": 278,
+  "total_minor_faults": 6,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "random_s64_a16": 1.0263091535681264,
+    "random_s96_a0": 1.0178896540805826,
+    "random_s64_a0": 1.018835907008315,
+    "random_s56_a16": 1.0146055539540695,
+    "fully_random_s64": 1.0078804506450294,
+    "sequential_s72": 1.0485366859027205,
+    "sequential_s64": 1.019495046340684,
+    "random_s72_a0": 1.0134699611602347,
+    "random_s56_a0": 1.0240480961923848,
+    "random_s32_a0": 1.0422656699252444,
+    "random_s72_a16": 1.0426257459505541,
+    "sequential_s56": 1.0351709699930216
+  },
+  "huge_kib": {
+    "random_s64_a16": [
+      0,
+      0
+    ],
+    "random_s96_a0": [
+      0,
+      0
+    ],
+    "random_s64_a0": [
+      0,
+      0
+    ],
+    "random_s56_a16": [
+      0,
+      0
+    ],
+    "fully_random_s64": [
+      0,
+      0
+    ],
+    "sequential_s72": [
+      0,
+      0
+    ],
+    "sequential_s64": [
+      0,
+      0
+    ],
+    "random_s72_a0": [
+      0,
+      0
+    ],
+    "random_s56_a0": [
+      0,
+      0
+    ],
+    "random_s32_a0": [
+      0,
+      0
+    ],
+    "random_s72_a16": [
+      0,
+      0
+    ],
+    "sequential_s56": [
+      0,
+      0
+    ]
+  },
+  "caveat": "Same CPU 4/NUMA node 0 as the original Crux line_size run. For line_size/associativity the archived pinning manifest takes precedence over stale template config fields. PMU loop totals include helper loads."
+}

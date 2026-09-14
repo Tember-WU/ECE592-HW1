@@ -1,0 +1,1 @@
+1895,,l2_rqsts.demand_data_rd_miss:u,672210,100.00,,

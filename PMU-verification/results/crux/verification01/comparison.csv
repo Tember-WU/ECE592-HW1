@@ -1,0 +1,13 @@
+Property,Timing Inference,PMU Evidence,Published/System Value,Source/Page,Error/Agreement
+L1D capacity,约 32 KiB；转折 32–36 KiB,32→36 KiB: L1 miss 39.13→993.70 / 1000；timing 2.875→7.758 ticks/load,32 KiB,sysfs index0；Agner §11.12 Table 11.2 p.160,名义值一致（0%）；采样间隔 4 KiB，不是精确字节级证明
+L2 capacity,约 256 KiB；转折 256–288 KiB,256→288 KiB: L2 miss 10.76→287.72 / 1000,256 KiB,sysfs index2；Agner p.160 的 256 KiB–1 MiB 是家族范围,名义值一致（0%）；采样间隔 32 KiB
+LLC capacity,4–16 MiB 有效变化区间，4–7 MiB 已开始上升；未确定物理容量,本次明显上升在 10–13 MiB；L3 miss 12.67→398.28 / 1000,12 MiB,sysfs index3；Intel i7-9700 specifications；Agner p.160 是多型号范围,本次邻域相容；未复现 Phase-I 的早期有效转折，不计算点估计百分比误差
+Cache line size,64 B 候选；访问顺序控制影响 timing,32–96 B 的 L1 miss 逐步上升；64 B 无干净饱和平台；顺序/完全随机差异很大,L1D/L2/LLC 均 64 B,sysfs coherency_line_size；Agner p.160,64 B 候选与规格一致；PMU 对准确线长及每级线长证据有限
+L1D associativity,原选择器 9 路，candidate sets=64,4 KiB 间隔 K=8→9：L1 miss 0.333→984.504，L2 miss 近零,8 ways,sysfs index0；Agner p.160,原 9 路高估 +12.5%；本次阈值支持 8 路
+L2 associativity,原选择器 8 路，candidate sets=512,32 KiB 间隔 K=8→9→10：L2 miss 0.019→93.189→515.644；L1 同时 miss,4 ways,sysfs index2；Agner p.160 的 4–16 ways 是家族范围,原单 set 8 路解释高估 +100%；两组×4 路是几何一致的解释，未独立定位物理 sets
+L1D derived sets,candidate=64；32 KiB/(9 ways×64 B)=56.89，内部不一致,以本次 8 路阈值和 32 KiB/64 B 推得 64 sets,64 sets,sysfs index0；Agner p.160,修正后几何一致；原 9 路不能与容量/线长共同构成整数 sets
+L2 derived sets,256 KiB/(8×64 B)=512 sets,以系统 4 ways 得 1024 sets；本次 32 KiB 间隔可能覆盖两组,1024 sets,sysfs index2；Agner p.160,原 512 比系统低 50%；本次不能独立将 8-address 阈值归为单组 ways
+LLC ways / derived sets,本批次无对应 timing-only ways 结论,未做 LLC conflict-set experiment,12 ways；16384 sets,sysfs index3；12 MiB/(12×64 B)=16384,仅系统值，PMU 未验证
+Sharing scope,本批次无独立跨核心 timing 结论,单线程实验；不能定位共享范围,L1/L2 每核心；LLC shared_cpu_list=0-7,sysfs index0/index2/index3；Agner p.160,仅系统/文献对照，PMU 未独立验证
+Hit / next-level latency,已有独立 timing-only latency 七组；本批只复现三类代表性工作量,本批 timing 为含 timer/helper 开销的 TSC ticks/load,Agner 家族参考 L1D 4、L2 14、L3 34–85 core clocks,Agner §11.12 Table 11.2 p.160；不是逐 SKU 校准值,计时单位/工作负载不同，不计算周期误差，不声明独立 hit latency 验证
+Inclusion / exclusion,本批无对应冻结推断,未采集足以辨别 inclusion/exclusion 的实验,本报告不指定已证实的关系,本次无足够证据,未验证，不从容量/miss totals 推断 inclusion

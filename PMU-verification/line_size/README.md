@@ -19,6 +19,10 @@ Upgrade's completed run is [line_size01](results/upgrade/line_size01/RUN_NOTES.m
 timing-only placement (SMT sibling CPU 10). Use `--machine upgrade` and a fresh run ID to reproduce.
 Its [Phase-I freeze and system/vendor comparison](../reports/upgrade/README.md) are saved separately.
 
+Crux's complete run is [line_size01](results/crux/line_size01/RUN_NOTES.md): 12 points,
+one million timed batches per point. Its order-sensitive PMU curve does not have Artemisia's
+clean 64 B plateau; see the [Crux overview](../results/crux/verification01/README.md).
+
 Artemisia's completed run is [line_size01](results/artemisia/line_size01/RUN_NOTES.md).
 Twelve representative configurations reproduce the existing grouping-window stride experiment
 with four user-mode counters: retired L1/L2/L3 load misses and retired loads in total.

@@ -1,0 +1,38 @@
+[
+  {
+    "run_id": "latency01",
+    "status": "failed",
+    "included_in_formal_analysis": false,
+    "started_utc": "2026-09-10T20:52:27.247436+00:00",
+    "finished_utc": "2026-09-10T20:52:33.502445+00:00",
+    "completed_configurations": 6,
+    "timed_batches": 6000000,
+    "recorded_intervals": 8000000,
+    "raw_gzip_bytes": 6858562,
+    "error": "calibration__memory_sequential: MADV_COLLAPSE: full THP backing unavailable: Cannot allocate memory\n"
+  },
+  {
+    "run_id": "latency01-retry1",
+    "status": "failed",
+    "included_in_formal_analysis": false,
+    "started_utc": "2026-09-10T20:52:54.501786+00:00",
+    "finished_utc": "2026-09-10T20:53:19.368664+00:00",
+    "completed_configurations": 11,
+    "timed_batches": 11000000,
+    "recorded_intervals": 13000000,
+    "raw_gzip_bytes": 13767700,
+    "error": "llc_miss__alternate: MADV_COLLAPSE: full THP backing unavailable: Cannot allocate memory\n"
+  },
+  {
+    "run_id": "latency01-retry2",
+    "status": "complete",
+    "included_in_formal_analysis": true,
+    "started_utc": "2026-09-10T20:53:47.524199+00:00",
+    "finished_utc": "2026-09-10T20:55:42.800698+00:00",
+    "completed_configurations": 30,
+    "timed_batches": 30000000,
+    "recorded_intervals": 39000000,
+    "raw_gzip_bytes": 48646666,
+    "error": null
+  }
+]

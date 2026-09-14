@@ -1,0 +1,33 @@
+{
+  "captured_utc": "2026-09-14T15:46:50.775150+00:00",
+  "experiment": "capacity",
+  "machine": "crux",
+  "run_id": "capacity05",
+  "git_head": "f86eecbb6fce590f3d40b64487620888b33dcd93",
+  "run_manifest_sha256": "9a5a161b071a44b7907e028f5c7f6b940e87a7661d801fcff4abb9ae45352bb7",
+  "verification_basis": {
+    "freeze_manifest": "phase1/crux/freeze01/manifest.json",
+    "freeze_manifest_sha256": "17a5365bfaa4428ffcef8b0997106e8edbfe642bb6e7afa5dc0c85f106e37337",
+    "event_discovery": "events/data/crux/discovery01"
+  },
+  "note": "Post-collection snapshot of retained source/build files, not an automatic pre-run snapshot. For these Crux runs the measurement sources and compiler flags were unchanged during collection. The archive helper itself was added after collection began. Frozen Phase-I evidence is separate.",
+  "files": {
+    "bin/cache_capacity_pmu": "97bec97ab273dc76684192ba91520851736c068a3b642f68fb5b5be43777abb7",
+    "bin/cache_capacity_pmu.dis": "7734d9732da68e32167c20972d07482dcb9ec149c734c580581be8ac9c8a3943",
+    "config.json": "6b3476831378636ec5360fc6a6b945584296bbc928e3f97bac413488c10be812",
+    "source/capacity/Makefile": "671e76de26198a8af05db0e1ff124c7558894f2b57f06832d47b40cad779427c",
+    "source/capacity/requirements.txt": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+    "source/capacity/scripts/analyze_capacity.py": "3b1e29a258f941a6de500760fc13c0922cb2807e6dbd3244b0579e91791e828f",
+    "source/capacity/scripts/common.py": "7f36612ea6920533d912c4bf09e70a1edb1559a640975c8a9cea227a02a9859d",
+    "source/capacity/scripts/run_capacity.py": "cb576ecdc396b7be0520a3b6eaac14985dc064940745eec4061f97741e488c97",
+    "source/capacity/src/cache_bench.c": "e6be345e4ac5be4d73405a675f61f1eb5ee9f78acb9e5cfd4f4cb35b2d2ddae2",
+    "source/capacity/src/pmu.h": "8aeaa772c6c16d7487c0c7d83e663f1b3c4cf3d8454bf71ca2231a15d2255504",
+    "source/capacity/tests/test_capacity.py": "bd9d1013c7f248652de605807ad7e0ef85d4523d423da8a2851f9f9b5d38591e",
+    "source/common/analyze_verification.py": "195f7f0ec4df4b223b1eee9578b99b6bb0de5d83cd992fa7900b5ce74658099f",
+    "source/common/archive_run.py": "9f3f554412ddb638de1e45249f21814c2a6e560d9372d86759dba4e1c29f0519",
+    "source/common/measurement.hpp": "606f58fad2048c893cac3f8ca209b951ae123e55a2fa56e29fad28ef48361060",
+    "source/common/pmu.hpp": "98df180a618991e9eee63aa7b570dfefe86ce7d0fb0f17452f8ee3724a1492fd",
+    "source/common/run_verification.py": "0621680b23d8b3a6540adeb1f034810f6cfbe7e820d896d283b927f77d0c5241",
+    "source/common/test_verification.py": "4aecc160fa0eb431c2cb6813d6104e59eea92e71a679fbfbc2318e57a4603c0b"
+  }
+}

@@ -34,7 +34,8 @@ def baseline(c, p):
         return float(matches[0]['median'])
     level = 'l1' if p['group'] == 'L1' else 'l2'
     with (root / 'raw_data' / f'{level}_associativity_candidate{p["num_sets"]}.csv').open() as f:
-        matches = [r for r in csv.DictReader(f) if int(r['K']) == p['k']]
+        rows = [{k.strip(): v.strip() for k, v in r.items()} for r in csv.DictReader(f)]
+        matches = [r for r in rows if int(r['K']) == p['k']]
     if not matches and p['k'] > 16: return None
     if len(matches) != 1: raise ValueError('Missing/ambiguous timing-only associativity point')
     # The source times batch+1 loads but divided by batch. Apply the same
@@ -178,7 +179,7 @@ def main():
     plots(c, rows, figs)
     env = json.loads((data / 'environment.json').read_text())
     quality = dict(preflight_busy_percent=env['preflight_busy_percent'],
-                   max_sibling_busy_percent=max(v for p in m['jobs'] for cpu,v in p['cpu_busy_percent'].items() if int(cpu) != c['cpu']),
+                   max_sibling_busy_percent=max((v for p in m['jobs'] for cpu,v in p['cpu_busy_percent'].items() if int(cpu) != c['cpu']), default=None),
                    total_involuntary_switches=sum(p['measurement_events']['involuntary_switches'] for p in m['jobs']),
                    total_minor_faults=sum(p['measurement_events']['minor_faults'] for p in m['jobs']),
                    total_major_faults=sum(p['measurement_events']['major_faults'] for p in m['jobs']),

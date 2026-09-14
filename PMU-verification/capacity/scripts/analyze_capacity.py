@@ -151,8 +151,8 @@ def main():
                    total_involuntary_switches=sum(r['involuntary_switches'] for r in rows),
                    total_minor_faults=sum(r['measurement_minor_faults'] for r in rows),
                    total_major_faults=sum(r['major_faults'] for r in rows),
-                   max_sibling_busy_percent=max(v for j in manifest['jobs'] for cpu, v in j['cpu_busy_percent'].items()
-                                                if int(cpu) != config['cpu']),
+                   max_sibling_busy_percent=max((v for j in manifest['jobs'] for cpu, v in j['cpu_busy_percent'].items()
+                                                if int(cpu) != config['cpu']), default=None),
                    temporal_median_max_min={j['name']: max(j['statistics']['decile_medians']) /
                        min(j['statistics']['decile_medians']) for j in manifest['jobs']},
                    note='CPU busy time during a run includes this benchmark. Shared-cache/memory interference is not isolated.')

@@ -17,6 +17,10 @@ LLC 4, 5, 6, 7, 8 MiB. These points follow Upgrade's frozen timing-only boundari
 Use `--machine upgrade` and a fresh run ID to reproduce; live checks use `MACHINE=upgrade make check`.
 The [Upgrade report](../reports/upgrade/README.md) includes the system/vendor comparison.
 
+Crux's complete run is [capacity05](results/crux/capacity05/RUN_NOTES.md): 14 points,
+one million timed batches per point. See the [Crux overview](../results/crux/verification01/README.md)
+for the Phase-I freeze, allocation-only retries, system comparison, and LLC disagreement.
+
 This small Section 8.3 experiment reruns 14 Artemisia capacity points using the existing randomized,
 dependent pointer-chase workload. It measures the timing distribution and a group of four hardware
 events during the same measurement loop.

@@ -7,27 +7,33 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from common import plan, raw_event_encoding, selected_events, summarize, validate_counts
+from common import event_encoding, plan, raw_event_encoding, selected_events, summarize, validate_counts
+from run_capacity import launch
+
+MACHINE = os.environ.get('MACHINE', 'artemisia')
 
 
 class CapacityTests(unittest.TestCase):
     def setUp(self):
-        self.config = json.loads((ROOT / 'configs' / 'artemisia.json').read_text())
+        self.config = json.loads((ROOT / 'configs' / (MACHINE + '.json')).read_text())
 
     def test_plan_matches_fourteen_unique_points(self):
         a = plan(self.config)
-        self.assertEqual(len(a), 14)
+        passes = len(self.config.get('event_passes', [None]))
+        self.assertEqual(len(a), 14 * passes)
+        self.assertEqual(len({j['bytes'] for j in a}), 14)
         self.assertEqual(a, plan(self.config))
-        self.assertEqual(sum(j['region'] == 'L1' for j in a), 5)
+        self.assertEqual(sum(j['region'] == 'L1' for j in a), 5 * passes)
 
     def test_reject_insufficient_samples_and_duplicate_points(self):
         bad = copy.deepcopy(self.config); bad['samples'] = 999999
         with self.assertRaises(ValueError): plan(bad)
-        bad = copy.deepcopy(self.config); bad['regions']['L1'].append(32768)
+        bad = copy.deepcopy(self.config); bad['regions']['L1'].append(bad['regions']['L1'][0])
         with self.assertRaises(ValueError): plan(bad)
 
     def test_counter_scope_validation(self):
@@ -75,10 +81,64 @@ class CapacityTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             raw_event_encoding(listing + '    cpu_atom/event=0xd1,umask=0x10/\n', 'mem_load_retired.l1_miss')
 
+    def test_local_event_aliases_and_missing_event(self):
+        for unit in ('cpu', 'default_core'):
+            listing = f'  mem_load_retired.l1_miss\n    [Retired L1 misses]\n    {unit}/event=0xd1,period=0x10,umask=0x8/\n'
+            self.assertEqual(event_encoding(listing, 'mem_load_retired.l1_miss'), 0x08d1)
+            with self.assertRaises(ValueError): event_encoding(listing, 'mem_load_retired.l2_miss')
+
+    def test_allocation_retry_preserves_failure_and_does_not_retry_measurement(self):
+        with tempfile.TemporaryDirectory() as directory:
+            p = Path(directory)
+            log, raw, counts = p / 'point.txt', p / 'raw', p / 'counts'
+            marker = p / 'first-launch'
+            script = ('import pathlib,sys; p=pathlib.Path(sys.argv[1]); '
+                      'first=not p.exists(); p.touch(); '
+                      'print("MADV_COLLAPSE: Cannot allocate memory" if first else "measurement complete"); '
+                      'sys.exit(1 if first else 0)')
+            attempts = []
+            with patch('run_capacity.time.sleep'):
+                run = launch([sys.executable, '-c', script, str(marker)], log, raw, counts, 2, attempts)
+            self.assertEqual(run.returncode, 0)
+            self.assertEqual(len(attempts), 2)
+            self.assertTrue((p / 'point.allocation-attempt1.txt').exists())
+            # Even the same error must not be retried if measurement output exists.
+            raw.touch(); marker.unlink(); attempts = []
+            run = launch([sys.executable, '-c', script, str(marker)], log, raw, counts, 2, attempts)
+            self.assertNotEqual(run.returncode, 0)
+            self.assertEqual(len(attempts), 1)
+            self.assertFalse(attempts[0]['premeasurement_allocation_failure'])
+
+    def test_allocation_retry_limit_preserves_every_failure_before_waiting(self):
+        with tempfile.TemporaryDirectory() as directory:
+            p = Path(directory)
+            log, raw, counts = p / 'point.txt', p / 'raw', p / 'counts'
+            script = 'import sys; print("MADV_COLLAPSE: Cannot allocate memory"); sys.exit(1)'
+            attempts, saved = [], []
+
+            def record_attempt():
+                saved.append(copy.deepcopy(attempts))
+                self.assertTrue((p / Path(attempts[-1]['log_file']).name).exists())
+
+            def wait(seconds):
+                self.assertEqual(seconds, 10)
+                self.assertEqual(saved[-1], attempts)
+
+            with patch('run_capacity.time.sleep', side_effect=wait) as sleep:
+                run = launch([sys.executable, '-c', script], log, raw, counts, 2, attempts,
+                             retry_delay=10, on_attempt=record_attempt)
+            self.assertNotEqual(run.returncode, 0)
+            self.assertEqual(len(attempts), 3)
+            self.assertEqual(sleep.call_count, 2)
+            self.assertEqual([len(snapshot) for snapshot in saved], [1, 2, 3])
+            self.assertTrue(all(entry['premeasurement_allocation_failure'] for entry in attempts))
+            self.assertTrue(log.exists())
+
     def test_live_counter_group_and_raw_samples(self):
         machine = os.environ.get('MACHINE', platform.node().split('.')[0])
         config_path = ROOT / 'configs' / (machine + '.json')
-        if not config_path.exists() or platform.machine() != 'x86_64':
+        if (not config_path.exists() or platform.machine() != 'x86_64' or
+                platform.node().split('.')[0] != machine):
             self.skipTest('No configured local x86-64 machine')
         c = json.loads(config_path.read_text())
         jobs = plan(c)[:len(c.get('event_passes', [None]))]

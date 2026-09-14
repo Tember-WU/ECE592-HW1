@@ -21,6 +21,10 @@ Use `--machine upgrade` and a fresh run ID to reproduce. The
 [Upgrade report](../reports/upgrade/README.md) records the prerequisite timing-only run,
 Phase-I freeze, and system/vendor comparison. The original C++ benchmark kernels are unchanged.
 
+Crux's complete run is [associativity01](results/crux/associativity01/RUN_NOTES.md): 12 points,
+one million timed batches per point. It supports an 8-way L1 threshold and qualifies the
+L2 candidate's 8-address threshold; see the [Crux overview](../results/crux/verification01/README.md).
+
 Artemisia's completed run is [associativity02](results/artemisia/associativity02/RUN_NOTES.md).
 It confirms the L1 conflict threshold and identifies the original L2-labeled 12-to-13 transition
 as an L1 miss transition. Two extension points provide evidence for a later L2 threshold.

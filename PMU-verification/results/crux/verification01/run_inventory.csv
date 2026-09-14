@@ -1,0 +1,8 @@
+experiment,run_id,status,completed_points,timed_batches,included_in_formal_results,started_utc,finished_utc,elapsed_seconds,error
+capacity,capacity01,failed,0,0,False,2026-09-14T15:35:28.150202+00:00,2026-09-14T15:35:29.289629+00:00,1.1394260041415691,Benchmark failed: /home/swu35/ECE592-HW1/PMU-verification/capacity/data/crux/capacity01/logs/LLC_w13631488.txt
+capacity,capacity02,failed,4,4000000,False,2026-09-14T15:36:15.796802+00:00,2026-09-14T15:36:32.483893+00:00,16.68708685785532,Benchmark failed: /home/swu35/ECE592-HW1/PMU-verification/capacity/data/crux/capacity02/logs/L1_w40960.txt
+capacity,capacity03,failed,0,0,False,2026-09-14T15:37:33.302317+00:00,2026-09-14T15:37:34.448772+00:00,1.1464412547647953,Benchmark failed: /home/swu35/ECE592-HW1/PMU-verification/capacity/data/crux/capacity03/logs/LLC_w13631488.txt
+capacity,capacity04,failed,4,4000000,False,2026-09-14T15:43:08.711294+00:00,2026-09-14T15:43:27.188153+00:00,18.476860756985843,Benchmark failed: /home/swu35/ECE592-HW1/PMU-verification/capacity/data/crux/capacity04/logs/L1_w40960.txt
+capacity,capacity05,complete,14,14000000,True,2026-09-14T15:44:49.981300+00:00,2026-09-14T15:45:43.777934+00:00,53.796627898700535,
+line_size,line_size01,complete,12,12000000,True,2026-09-14T15:38:43.684150+00:00,2026-09-14T15:39:34.454563+00:00,50.770405227318406,
+associativity,associativity01,complete,12,12000000,True,2026-09-14T15:40:15.947084+00:00,2026-09-14T15:40:30.963050+00:00,15.015961760655046,

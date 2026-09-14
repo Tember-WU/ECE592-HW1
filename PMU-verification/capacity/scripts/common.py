@@ -63,6 +63,11 @@ def raw_event_encoding(listing, name):
     return values.pop()
 
 
+def event_encoding(listing, name):
+    """Keep the Crux helper name compatible with the shared core-PMU parser."""
+    return raw_event_encoding(listing, name)
+
+
 def plan(config):
     identifier(config['machine'])
     if config['isa'] != 'x86_64':

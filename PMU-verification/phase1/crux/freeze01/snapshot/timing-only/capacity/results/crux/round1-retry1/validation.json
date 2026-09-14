@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "errors": [],
+  "machine": "crux",
+  "run_id": "round1-retry1",
+  "checked_at_utc": "2026-09-10T17:03:09.081855+00:00",
+  "collection_status": "complete",
+  "expected_configurations": 39,
+  "complete_configurations": 39,
+  "total_timed_batches": 39000000,
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 53375907,
+  "started_utc": "2026-09-10T16:53:06.478173+00:00",
+  "finished_utc": "2026-09-10T16:55:43.083157+00:00",
+  "wall_seconds": 156.604984,
+  "cpu": 6,
+  "numa_node": 0,
+  "smt_sibling": null,
+  "page_policy_counts": {
+    "huge": 39,
+    "base": 0
+  },
+  "all_mappings_match_page_policy_and_are_local": true,
+  "raw_checksums_and_statistics": "Raw hashes, counts and positive intervals checked and statistics recomputed by analyze_capacity.py; matched against manifest and collection records here.",
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "major_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "voluntary_switches": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "involuntary_switches": {
+      "minimum": 0,
+      "maximum": 61,
+      "total": 439
+    }
+  },
+  "cpu_busy_percent_ranges": {
+    "cpu0": [
+      100.0,
+      100.0
+    ],
+    "cpu1": [
+      0.0,
+      7.143
+    ],
+    "cpu2": [
+      0.0,
+      3.571
+    ],
+    "cpu3": [
+      100.0,
+      100.0
+    ],
+    "cpu4": [
+      0.0,
+      4.878
+    ],
+    "cpu5": [
+      0.0,
+      20.0
+    ],
+    "cpu6": [
+      98.182,
+      100.0
+    ],
+    "cpu7": [
+      0.0,
+      3.704
+    ]
+  },
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+  "binary_sha256": "b7a26b55bcb6b42551016855163a592aae8303b82b7baff2f9c6189d4a0c0153",
+  "limitation": "Passing integrity and placement checks does not establish absence of shared-machine interference."
+}
