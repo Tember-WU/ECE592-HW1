@@ -1,10 +1,10 @@
 {
-  "host": "sunbird",
-  "year": 2014,
-  "vendor": "Intel",
-  "microarchitecture": "Haswell",
-  "model_contains": "E5-2680 v3",
-  "isa": "x86_64",
+  "host": "thunderbird",
+  "year": 2020,
+  "vendor": "Arm",
+  "microarchitecture": "Neoverse N1",
+  "model_contains": "0xd0c",
+  "isa": "aarch64",
   "events": [
     {
       "slot": "cache_references",
@@ -15,6 +15,13 @@
           "config": "0x2",
           "meaning": "Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",
           "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l2d_cache",
+          "type": 4,
+          "config": "0x16",
+          "meaning": "L2 cache accesses; proxy for cache references.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -27,6 +34,13 @@
           "config": "0x3",
           "meaning": "Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.",
           "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l2d_cache_refill_rd",
+          "type": 4,
+          "config": "0x52",
+          "meaning": "L2 read refills including store allocation; proxy for cache misses.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -38,15 +52,15 @@
           "type": 3,
           "config": "0x0",
           "meaning": "Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.",
-          "comparability": "generic_mapping_requires_review"
+          "comparability": "generic_mapping_requires_review",
+          "skip_reason": "The Arm base generic L1-load mapping can alias cache-references and include writes. Select the locally documented read-specific 0x40 event to preserve a distinct, explicit meaning."
         },
         {
-          "name": "mem_uops_retired.all_loads",
+          "name": "l1d_cache_rd",
           "type": 4,
-          "config": "0x81d0",
-          "meaning": "Retired load instructions, including measurement scaffolding. Haswell counts load uops.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Retired load uops Supports address when precise. Spec update: HSD29, HSM30 (Precise event). Unit: cpu"
+          "config": "0x40",
+          "meaning": "Speculative L1D read accesses.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -58,15 +72,15 @@
           "type": 3,
           "config": "0x10000",
           "meaning": "Kernel L1D read-miss mapping; may count refills rather than retired misses.",
-          "comparability": "generic_mapping_requires_review"
+          "comparability": "generic_mapping_requires_review",
+          "skip_reason": "The Arm base generic L1-miss mapping can alias cache-misses. Select the locally documented read-specific 0x42 refill event to preserve a distinct, explicit meaning."
         },
         {
-          "name": "mem_load_uops_retired.l1_miss",
+          "name": "l1d_cache_refill_rd",
           "type": 4,
-          "config": "0x8d1",
-          "meaning": "Retired loads missing L1D. Haswell counts load uops.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Retired load uops misses in L1 cache as data sources Supports address when precise. Spec update: HSM30 (Precise event). Unit: cpu"
+          "config": "0x42",
+          "meaning": "L1D line allocations caused by speculative load misses.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -81,12 +95,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "l1d.replacement",
+          "name": "l1d_cache_wr",
           "type": 4,
-          "config": "0x151",
-          "meaning": "L1D line replacements, not stores or retired misses.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "L1D data line replacements. Unit: cpu"
+          "config": "0x41",
+          "meaning": "Speculative L1D write accesses.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -101,12 +114,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "l2_rqsts.all_demand_data_rd",
+          "name": "ll_cache_rd",
           "type": 4,
-          "config": "0xe124",
-          "meaning": "Demand data reads accessing L2; proxy for deeper-cache traffic, NOT LLC accesses.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Demand Data Read requests Spec update: HSD78,HSM80. Unit: cpu"
+          "config": "0x36",
+          "meaning": "Last-level read event; EXTLLC/firmware dependent. Existing 8.3 results did NOT validate SLC boundary.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -121,12 +133,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "mem_load_uops_retired.l3_miss",
+          "name": "ll_cache_miss_rd",
           "type": 4,
-          "config": "0x20d1",
-          "meaning": "Retired demand loads missing L3; not necessarily local DRAM. Haswell counts load uops.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Miss in last-level (L3) cache. Excludes Unknown data-source Supports address when precise. Spec update: HSD74,HSD29,HSD25,HSM26,HSM30 (Precise event). Unit: cpu"
+          "config": "0x37",
+          "meaning": "Last-level read miss event; existing 8.3 results track L2 refills, NOT verified SLC misses.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -141,14 +152,15 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "dtlb_load_misses.walk_completed",
+          "name": "l1d_tlb_refill",
           "type": 4,
-          "config": "0xe08",
-          "meaning": "Completed load page walks across all page sizes, not all L1 TLB misses.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Demand load Miss in all translation lookaside buffer (TLB) levels causes a page walk that completes of any page size. Unit: cpu"
+          "config": "0x5",
+          "meaning": "L1D TLB refills, including speculative activity; not page walks.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     }
-  ]
+  ],
+  "llc_bytes_if_sysfs_omits_l3": 33554432,
+  "llc_source": "Ampere Altra datasheet sections 2.1 p.8 and 2.5 p.9: socket-shared 32 MiB SLC; docs/event_evidence/thunderbird/ampere-altra-datasheet.pdf; absent in archived sysfs/lscpu"
 }

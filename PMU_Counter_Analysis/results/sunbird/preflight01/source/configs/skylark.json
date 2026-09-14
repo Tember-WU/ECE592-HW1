@@ -1,9 +1,9 @@
 {
-  "host": "sunbird",
-  "year": 2014,
-  "vendor": "Intel",
-  "microarchitecture": "Haswell",
-  "model_contains": "E5-2680 v3",
+  "host": "skylark",
+  "year": 2019,
+  "vendor": "AMD",
+  "microarchitecture": "Zen 2 / Rome",
+  "model_contains": "EPYC 7532",
   "isa": "x86_64",
   "events": [
     {
@@ -15,6 +15,13 @@
           "config": "0x2",
           "meaning": "Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",
           "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l2_request_g1.rd_blk_l",
+          "type": 4,
+          "config": "0x8060",
+          "meaning": "L2 data-cache read requests including hardware/software prefetch; NOT generic LLC references.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -27,6 +34,13 @@
           "config": "0x3",
           "meaning": "Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.",
           "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l2_cache_req_stat.ls_rd_blk_c",
+          "type": 4,
+          "config": "0x864",
+          "meaning": "Core-to-L2 data request misses excluding L2 prefetch; NOT retired-load/LLC misses.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -41,12 +55,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "mem_uops_retired.all_loads",
+          "name": "ls_dispatch.ld_dispatch",
           "type": 4,
-          "config": "0x81d0",
-          "meaning": "Retired load instructions, including measurement scaffolding. Haswell counts load uops.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Retired load uops Supports address when precise. Spec update: HSD29, HSM30 (Precise event). Unit: cpu"
+          "config": "0x129",
+          "meaning": "Dispatched load operations including speculation; not retired loads.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -61,12 +74,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "mem_load_uops_retired.l1_miss",
+          "name": "ls_mab_alloc.loads",
           "type": 4,
-          "config": "0x8d1",
-          "meaning": "Retired loads missing L1D. Haswell counts load uops.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Retired load uops misses in L1 cache as data sources Supports address when precise. Spec update: HSM30 (Precise event). Unit: cpu"
+          "config": "0x141",
+          "meaning": "Load miss-address-buffer allocations; previously failed to track L1 capacity on Skylark.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -81,12 +93,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "l1d.replacement",
+          "name": "ls_refills_from_sys.ls_mabresp_lcl_l2",
           "type": 4,
-          "config": "0x151",
-          "meaning": "L1D line replacements, not stores or retired misses.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "L1D data line replacements. Unit: cpu"
+          "config": "0x143",
+          "meaning": "Demand data fills from local L2; refill/replacement evidence, NOT stores.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -101,12 +112,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "l2_rqsts.all_demand_data_rd",
+          "name": "ls_refills_from_sys.ls_mabresp_lcl_cache",
           "type": 4,
-          "config": "0xe124",
-          "meaning": "Demand data reads accessing L2; proxy for deeper-cache traffic, NOT LLC accesses.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Demand Data Read requests Spec update: HSD78,HSM80. Unit: cpu"
+          "config": "0x243",
+          "meaning": "Demand fills from local cache domain excluding local L2; not total LLC accesses or pure LLC hits.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -121,12 +131,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "mem_load_uops_retired.l3_miss",
+          "name": "ls_refills_from_sys.ls_mabresp_lcl_dram",
           "type": 4,
-          "config": "0x20d1",
-          "meaning": "Retired demand loads missing L3; not necessarily local DRAM. Haswell counts load uops.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Miss in last-level (L3) cache. Excludes Unknown data-source Supports address when precise. Spec update: HSD74,HSD29,HSD25,HSM26,HSM30 (Precise event). Unit: cpu"
+          "config": "0x843",
+          "meaning": "Demand fills from DRAM or IO on this die; omits remote DRAM and is NOT direct LLC misses.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     },
@@ -141,12 +150,11 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "dtlb_load_misses.walk_completed",
+          "name": "ls_l1_d_tlb_miss.all",
           "type": 4,
-          "config": "0xe08",
-          "meaning": "Completed load page walks across all page sizes, not all L1 TLB misses.",
-          "comparability": "architecture_specific_proxy",
-          "local_description": "Demand load Miss in all translation lookaside buffer (TLB) levels causes a page walk that completes of any page size. Unit: cpu"
+          "config": "0xff45",
+          "meaning": "All L1 data TLB misses/reloads, not just page walks.",
+          "comparability": "architecture_specific_proxy"
         }
       ]
     }

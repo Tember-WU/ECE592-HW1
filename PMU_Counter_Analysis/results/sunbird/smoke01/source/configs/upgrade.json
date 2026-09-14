@@ -1,9 +1,9 @@
 {
-  "host": "sunbird",
-  "year": 2014,
+  "host": "upgrade",
+  "year": 2017,
   "vendor": "Intel",
-  "microarchitecture": "Haswell",
-  "model_contains": "E5-2680 v3",
+  "microarchitecture": "Coffee Lake",
+  "model_contains": "i7-8700",
   "isa": "x86_64",
   "events": [
     {
@@ -41,12 +41,12 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "mem_uops_retired.all_loads",
+          "name": "mem_inst_retired.all_loads",
           "type": 4,
           "config": "0x81d0",
-          "meaning": "Retired load instructions, including measurement scaffolding. Haswell counts load uops.",
+          "meaning": "Retired load instructions, including measurement scaffolding.",
           "comparability": "architecture_specific_proxy",
-          "local_description": "Retired load uops Supports address when precise. Spec update: HSD29, HSM30 (Precise event). Unit: cpu"
+          "local_description": "Retired load instructions Supports address when precise (Precise event)"
         }
       ]
     },
@@ -61,12 +61,12 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "mem_load_uops_retired.l1_miss",
+          "name": "mem_load_retired.l1_miss",
           "type": 4,
           "config": "0x8d1",
-          "meaning": "Retired loads missing L1D. Haswell counts load uops.",
+          "meaning": "Retired loads missing L1D.",
           "comparability": "architecture_specific_proxy",
-          "local_description": "Retired load uops misses in L1 cache as data sources Supports address when precise. Spec update: HSM30 (Precise event). Unit: cpu"
+          "local_description": "Retired load instructions missed L1 cache as data sources Supports address when precise (Precise event)"
         }
       ]
     },
@@ -86,7 +86,7 @@
           "config": "0x151",
           "meaning": "L1D line replacements, not stores or retired misses.",
           "comparability": "architecture_specific_proxy",
-          "local_description": "L1D data line replacements. Unit: cpu"
+          "local_description": "L1D data line replacements"
         }
       ]
     },
@@ -106,7 +106,7 @@
           "config": "0xe124",
           "meaning": "Demand data reads accessing L2; proxy for deeper-cache traffic, NOT LLC accesses.",
           "comparability": "architecture_specific_proxy",
-          "local_description": "Demand Data Read requests Spec update: HSD78,HSM80. Unit: cpu"
+          "local_description": "Demand Data Read requests"
         }
       ]
     },
@@ -121,12 +121,12 @@
           "comparability": "generic_mapping_requires_review"
         },
         {
-          "name": "mem_load_uops_retired.l3_miss",
+          "name": "mem_load_retired.l3_miss",
           "type": 4,
           "config": "0x20d1",
-          "meaning": "Retired demand loads missing L3; not necessarily local DRAM. Haswell counts load uops.",
+          "meaning": "Retired demand loads missing L3; not necessarily local DRAM.",
           "comparability": "architecture_specific_proxy",
-          "local_description": "Miss in last-level (L3) cache. Excludes Unknown data-source Supports address when precise. Spec update: HSD74,HSD29,HSD25,HSM26,HSM30 (Precise event). Unit: cpu"
+          "local_description": "Retired load instructions missed L3 cache as data sources Supports address when precise (Precise event)"
         }
       ]
     },
@@ -146,7 +146,7 @@
           "config": "0xe08",
           "meaning": "Completed load page walks across all page sizes, not all L1 TLB misses.",
           "comparability": "architecture_specific_proxy",
-          "local_description": "Demand load Miss in all translation lookaside buffer (TLB) levels causes a page walk that completes of any page size. Unit: cpu"
+          "local_description": "Load miss in all TLB levels causes a page walk that completes. (All page sizes)"
         }
       ]
     }
