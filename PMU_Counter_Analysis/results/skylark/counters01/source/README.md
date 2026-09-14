@@ -2,7 +2,7 @@
 
 Everything for this section lives here. `timing-only` (8.2) and `PMU-verification` (8.3) are inputs/evidence only and are not modified. This directory runs independently after copying it to another Linux machine. C++11 supports Intel/AMD x86-64 and Arm AArch64; build natively on each host. PMU access and CPU-specific semantics still require verification on that host.
 
-The completed Artemisia full run is in [`results/artemisia/counters01`](results/artemisia/counters01/). Read its [`RUN_NOTES.md`](results/artemisia/counters01/RUN_NOTES.md) for observed behavior and limitations. Skylark is also complete in [`results/skylark/counters01`](results/skylark/counters01/); see its [`RUN_NOTES.md`](results/skylark/counters01/RUN_NOTES.md), including the preserved TLB anomaly and diagnostic repeats. Combined two-host plots and tables are in [`results/comparison_artemisia_skylark01`](results/comparison_artemisia_skylark01/). The other six hosts still need native collection. Testing details are in [`docs/VALIDATION.md`](docs/VALIDATION.md).
+The completed Artemisia full run is in [`results/artemisia/counters01`](results/artemisia/counters01/). Read its [`RUN_NOTES.md`](results/artemisia/counters01/RUN_NOTES.md) for observed behavior and limitations. The other seven hosts still need native collection. Testing details are in [`docs/VALIDATION.md`](docs/VALIDATION.md).
 
 ## Start on any of the eight ECE machines
 
