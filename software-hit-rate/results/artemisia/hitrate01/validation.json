@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "scope": "Integrity, sample counts, classifier reconstruction, placement, source checkpoint and PMU denominator; not proof of universal estimator accuracy",
+  "machine": "artemisia",
+  "run_id": "hitrate01",
+  "configurations": 54,
+  "timed_samples": 54000000,
+  "validation_pairs": 24,
+  "threshold_ticks": 57,
+  "model_sha256": "eff9942d3321acf99692660e809503738cf0fe0cf1277aa8dfb45819449bf9c7",
+  "all_pmu_groups_without_multiplexing": true,
+  "max_auxiliary_loads": 192,
+  "max_auxiliary_reference_bound_pp": 0.019200000000000002,
+  "empty_loop_retired_loads": 74,
+  "mean_absolute_error_pp": 0.014892879857411853,
+  "worst_absolute_error_pp": 0.033224882584048654,
+  "standalone_paired_mean_absolute_error_pp": 0.014421605373641616,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "total_involuntary_switches": 2
+}

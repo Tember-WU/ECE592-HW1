@@ -1,0 +1,113 @@
+CPU CORE SOCKET NODE ONLINE
+  0    0      0    0    yes
+  1    1      0    0    yes
+  2    2      0    0    yes
+  3    3      0    0    yes
+  4    4      0    0    yes
+  5    5      0    0    yes
+  6    6      0    0    yes
+  7    7      0    0    yes
+  8    8      0    0    yes
+  9    9      0    0    yes
+ 10   10      0    0    yes
+ 11   11      0    0    yes
+ 12   12      0    0    yes
+ 13   13      0    0    yes
+ 14   14      0    0    yes
+ 15   15      0    0    yes
+ 16   16      0    0    yes
+ 17   17      0    0    yes
+ 18   18      0    0    yes
+ 19   19      0    0    yes
+ 20   20      0    0    yes
+ 21   21      0    0    yes
+ 22   22      0    0    yes
+ 23   23      0    0    yes
+ 24   24      0    0    yes
+ 25   25      0    0    yes
+ 26   26      0    0    yes
+ 27   27      0    0    yes
+ 28   28      1    1    yes
+ 29   29      1    1    yes
+ 30   30      1    1    yes
+ 31   31      1    1    yes
+ 32   32      1    1    yes
+ 33   33      1    1    yes
+ 34   34      1    1    yes
+ 35   35      1    1    yes
+ 36   36      1    1    yes
+ 37   37      1    1    yes
+ 38   38      1    1    yes
+ 39   39      1    1    yes
+ 40   40      1    1    yes
+ 41   41      1    1    yes
+ 42   42      1    1    yes
+ 43   43      1    1    yes
+ 44   44      1    1    yes
+ 45   45      1    1    yes
+ 46   46      1    1    yes
+ 47   47      1    1    yes
+ 48   48      1    1    yes
+ 49   49      1    1    yes
+ 50   50      1    1    yes
+ 51   51      1    1    yes
+ 52   52      1    1    yes
+ 53   53      1    1    yes
+ 54   54      1    1    yes
+ 55   55      1    1    yes
+ 56    0      0    0    yes
+ 57    1      0    0    yes
+ 58    2      0    0    yes
+ 59    3      0    0    yes
+ 60    4      0    0    yes
+ 61    5      0    0    yes
+ 62    6      0    0    yes
+ 63    7      0    0    yes
+ 64    8      0    0    yes
+ 65    9      0    0    yes
+ 66   10      0    0    yes
+ 67   11      0    0    yes
+ 68   12      0    0    yes
+ 69   13      0    0    yes
+ 70   14      0    0    yes
+ 71   15      0    0    yes
+ 72   16      0    0    yes
+ 73   17      0    0    yes
+ 74   18      0    0    yes
+ 75   19      0    0    yes
+ 76   20      0    0    yes
+ 77   21      0    0    yes
+ 78   22      0    0    yes
+ 79   23      0    0    yes
+ 80   24      0    0    yes
+ 81   25      0    0    yes
+ 82   26      0    0    yes
+ 83   27      0    0    yes
+ 84   28      1    1    yes
+ 85   29      1    1    yes
+ 86   30      1    1    yes
+ 87   31      1    1    yes
+ 88   32      1    1    yes
+ 89   33      1    1    yes
+ 90   34      1    1    yes
+ 91   35      1    1    yes
+ 92   36      1    1    yes
+ 93   37      1    1    yes
+ 94   38      1    1    yes
+ 95   39      1    1    yes
+ 96   40      1    1    yes
+ 97   41      1    1    yes
+ 98   42      1    1    yes
+ 99   43      1    1    yes
+100   44      1    1    yes
+101   45      1    1    yes
+102   46      1    1    yes
+103   47      1    1    yes
+104   48      1    1    yes
+105   49      1    1    yes
+106   50      1    1    yes
+107   51      1    1    yes
+108   52      1    1    yes
+109   53      1    1    yes
+110   54      1    1    yes
+111   55      1    1    yes

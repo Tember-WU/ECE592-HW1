@@ -1,0 +1,109 @@
+{
+  "machine": "artemisia",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 1,
+  "samples": 1000000,
+  "spacing": 64,
+  "repeats": 3,
+  "order_seed": 59285,
+  "max_balanced_calibration_error": 0.15,
+  "max_auxiliary_load_fraction": 0.001,
+  "pmu": {
+    "vendor": "GenuineIntel",
+    "family": "6",
+    "model": "143",
+    "miss_event": "mem_load_retired.l1_miss",
+    "miss_config": "0x08d1",
+    "loads_event": "mem_inst_retired.all_loads",
+    "loads_config": "0x81d0",
+    "source": "../PMU-verification/events/data/artemisia/discovery01/perf-list-details.txt"
+  },
+  "calibration": [
+    {
+      "id": "timer",
+      "bytes": 8192,
+      "mode": "empty",
+      "reuse": 1,
+      "seed": 8501
+    },
+    {
+      "id": "hit_fit",
+      "bytes": 8192,
+      "mode": "random",
+      "reuse": 1,
+      "seed": 8511
+    },
+    {
+      "id": "miss_fit",
+      "bytes": 524288,
+      "mode": "random",
+      "reuse": 1,
+      "seed": 8521
+    },
+    {
+      "id": "hit_check",
+      "bytes": 8192,
+      "mode": "random",
+      "reuse": 1,
+      "seed": 8512
+    },
+    {
+      "id": "miss_check",
+      "bytes": 524288,
+      "mode": "random",
+      "reuse": 1,
+      "seed": 8522
+    }
+  ],
+  "validation": [
+    {
+      "id": "resident_16k",
+      "bytes": 16384,
+      "mode": "random",
+      "reuse": 1
+    },
+    {
+      "id": "boundary_48k",
+      "bytes": 49152,
+      "mode": "random",
+      "reuse": 1
+    },
+    {
+      "id": "nonresident_128k",
+      "bytes": 131072,
+      "mode": "random",
+      "reuse": 1
+    },
+    {
+      "id": "reuse2_256k",
+      "bytes": 262144,
+      "mode": "random",
+      "reuse": 2
+    },
+    {
+      "id": "reuse4_256k",
+      "bytes": 262144,
+      "mode": "random",
+      "reuse": 4
+    },
+    {
+      "id": "reuse8_256k",
+      "bytes": 262144,
+      "mode": "random",
+      "reuse": 8
+    },
+    {
+      "id": "deeper_8m",
+      "bytes": 8388608,
+      "mode": "random",
+      "reuse": 1
+    },
+    {
+      "id": "large_128m",
+      "bytes": 134217728,
+      "mode": "random",
+      "reuse": 1
+    }
+  ]
+}

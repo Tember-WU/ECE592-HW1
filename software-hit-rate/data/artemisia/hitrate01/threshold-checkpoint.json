@@ -1,0 +1,5 @@
+{
+  "created_utc": "2026-09-14T17:15:41.318529+00:00",
+  "model_sha256": "eff9942d3321acf99692660e809503738cf0fe0cf1277aa8dfb45819449bf9c7",
+  "note": "Immutable run checkpoint before ANY validation PMU measurement; not a Git commit or official competition freeze"
+}
