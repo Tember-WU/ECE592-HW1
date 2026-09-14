@@ -25,8 +25,9 @@ Phase-I and Section 8.3 experiments.
    results, block-bootstrap intervals and threshold sensitivity. An empty-loop
    PMU control checks entry/exit overhead.
 
-This is **54 million retained single-access samples**: 5M calibration, 1M PMU
+This is **54 million retained timing intervals**: 5M calibration, 1M PMU
 empty control, and 8 cases × 3 repeats × 2 executions × 1M validation samples.
+This includes 52M single-target-load intervals and 2M empty controls.
 Warm-up is additional and excluded. These are two main stages (calibration and
 validation), not 54 different experimental designs.
 
@@ -38,6 +39,30 @@ is up to 0.0192 pp, so these figures do not establish finer target-only accuracy
 The [comparison plot](results/artemisia/hitrate01/figures/hit_rate_comparison.pdf)
 and [per-repeat table](results/artemisia/hitrate01/comparison.csv) retain both the
 same-execution comparison and the standalone estimator's paired comparison.
+
+Sunbird's completed [hitrate01 results and failure analysis](results/sunbird/hitrate01/SUNBIRD_NOTES.md)
+retain the same calibration/workload parameters and unchanged estimator. Its independently
+calibrated threshold is 70 ticks, but mean absolute error is **26.882 pp**, with a worst
+case of **96.692 pp**. Calibration separation does not transfer to the held-out 48/128 KiB
+workloads on this machine. All 54 collections and integrity/reference checks passed;
+this is an estimator-accuracy failure, preserved without PMU-based threshold retuning.
+
+## Run on Sunbird
+
+```bash
+cd /home/swu35/ECE592-HW1/software-hit-rate
+export PATH="/home/swu35/ECE592-HW1/timing-only/capacity/.venv/bin:/home/swu35/ECE592-HW1/timing-only/capacity/build/sunbird/deps/usr/bin:$PATH"
+make MACHINE=sunbird check
+python scripts/analyze.py --machine sunbird --run-id hitrate01
+python preparation/sunbird/setup01/audit_run.py
+# For a new collection, choose an unused run ID:
+python scripts/run_experiment.py --machine sunbird --run-id hitrate02
+```
+
+Sunbird uses CPU 32/node 0 and its locally verified `mem_load_uops_retired.l1_miss`
+and `mem_uops_retired.all_loads` events. These count retired load uops; the known
+single-load instruction loop and the auxiliary-load check constrain the reference
+denominator. No benchmark kernel or timing-only classification logic was changed.
 
 ## Run on Artemisia
 
@@ -115,8 +140,8 @@ error is unstable near zero reference hit rate and undefined at zero.
 
 ## Portability and scope
 
-The instruction paths cover Linux x86-64 and AArch64, but only Artemisia has been
-compiled and experimentally validated here. The generic Arm timer may not
+The instruction paths cover Linux x86-64 and AArch64. Artemisia and Sunbird have
+been measured; Sunbird exposes substantial estimator error. The generic Arm timer may not
 resolve L1 versus L2 single-access timings; calibration must demonstrate usable
 separation before reporting a hit rate. Do not claim Arm accuracy from this
 implementation alone. The runner currently requires the Intel identity fields

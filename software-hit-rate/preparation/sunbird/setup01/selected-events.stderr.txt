@@ -1,0 +1,4 @@
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied

@@ -208,7 +208,7 @@ def main():
     cases = [p['id'] for p in cfg['validation']]
     figures(out / 'figures', manifest['jobs'], arrays, model, rows, cases)
     report = [f"# {args.machine}: Section 8.5 software-only L1D hit-rate estimator", '',
-              f"Completed `{args.run_id}`: {result['timed_samples']:,} raw timing intervals (including empty controls), "
+              f"Completed `{args.run_id}`: {result['timed_samples']:,} single-access timing samples, "
               f"five timing-only calibration configurations, one empty PMU control, and {len(rows)} paired validations "
               f"({len(cases)} workloads × {cfg['repeats']} repeats × estimator-only/PMU executions). Every configuration retains {cfg['samples']:,} samples.", '',
               f"The timing-only threshold is **hit iff raw interval ≤ {model['threshold_ticks']} ticks**. "
@@ -262,7 +262,7 @@ def main():
                '- The 48 KiB case is a held-out hit-rate workload; its label is not a machine-specific capacity inference. '
                'Output logging and other cache occupants can affect the observed hit rate. The repeated-node mixed cases deliberately provide different hit fractions; '
                'their success is not evidence of comparable accuracy on arbitrary access streams.',
-               f"- This report covers the {args.machine} run. x86-64 and AArch64 instruction paths share the algorithm, but the Arm path is untested; "
+               f"- This report validates the {args.machine} run. x86-64 and AArch64 instruction paths share the algorithm, but the Arm path is untested; "
                'single-access Arm timer resolution may make calibration fail. Other CPUs require their own calibration and semantically valid PMU configuration. '
                'This retired-load ratio must not be copied to AMD/Arm refill/dispatch events without denominator validation.',
                f"- Recorded quality: {result['total_minor_faults']} minor faults, {result['total_major_faults']} major faults and "

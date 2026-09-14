@@ -1,0 +1,76 @@
+calibration: timer_software: 1,000,000 samples, median 58.0 ticks
+calibration: hit_fit_software: 1,000,000 samples, median 56.0 ticks
+calibration: miss_fit_software: 1,000,000 samples, median 88.0 ticks
+calibration: hit_check_software: 1,000,000 samples, median 58.0 ticks
+calibration: miss_check_software: 1,000,000 samples, median 88.0 ticks
+Threshold checkpoint: hit <= 70 ticks; training/holdout error 3.7001%/3.0777%
+counter_control: counter_overhead_pmu: 1,000,000 samples, median 65.0 ticks
+validation: reuse2_256k_r1_software: 1,000,000 samples, median 59.0 ticks
+validation: reuse2_256k_r1_pmu: 1,000,000 samples, median 59.0 ticks
+validation: reuse4_256k_r1_software: 1,000,000 samples, median 56.0 ticks
+validation: reuse4_256k_r1_pmu: 1,000,000 samples, median 64.0 ticks
+validation: large_128m_r1_software: 1,000,000 samples, median 276.0 ticks
+validation: large_128m_r1_pmu: 1,000,000 samples, median 276.0 ticks
+validation: nonresident_128k_r1_software: 1,000,000 samples, median 56.0 ticks
+validation: nonresident_128k_r1_pmu: 1,000,000 samples, median 56.0 ticks
+validation: reuse8_256k_r1_software: 1,000,000 samples, median 56.0 ticks
+validation: reuse8_256k_r1_pmu: 1,000,000 samples, median 68.0 ticks
+validation: resident_16k_r1_software: 1,000,000 samples, median 56.0 ticks
+validation: resident_16k_r1_pmu: 1,000,000 samples, median 56.0 ticks
+validation: boundary_48k_r1_software: 1,000,000 samples, median 56.0 ticks
+validation: boundary_48k_r1_pmu: 1,000,000 samples, median 56.0 ticks
+validation: deeper_8m_r1_software: 1,000,000 samples, median 96.0 ticks
+validation: deeper_8m_r1_pmu: 1,000,000 samples, median 96.0 ticks
+validation: boundary_48k_r2_pmu: 1,000,000 samples, median 56.0 ticks
+validation: boundary_48k_r2_software: 1,000,000 samples, median 56.0 ticks
+validation: reuse2_256k_r2_pmu: 1,000,000 samples, median 59.0 ticks
+validation: reuse2_256k_r2_software: 1,000,000 samples, median 62.0 ticks
+validation: nonresident_128k_r2_pmu: 1,000,000 samples, median 65.0 ticks
+validation: nonresident_128k_r2_software: 1,000,000 samples, median 56.0 ticks
+validation: reuse8_256k_r2_pmu: 1,000,000 samples, median 56.0 ticks
+validation: reuse8_256k_r2_software: 1,000,000 samples, median 56.0 ticks
+validation: reuse4_256k_r2_pmu: 1,000,000 samples, median 56.0 ticks
+validation: reuse4_256k_r2_software: 1,000,000 samples, median 56.0 ticks
+validation: deeper_8m_r2_pmu: 1,000,000 samples, median 96.0 ticks
+validation: deeper_8m_r2_software: 1,000,000 samples, median 96.0 ticks
+validation: resident_16k_r2_pmu: 1,000,000 samples, median 56.0 ticks
+validation: resident_16k_r2_software: 1,000,000 samples, median 58.0 ticks
+validation: large_128m_r2_pmu: 1,000,000 samples, median 276.0 ticks
+validation: large_128m_r2_software: 1,000,000 samples, median 276.0 ticks
+validation: large_128m_r3_software: 1,000,000 samples, median 276.0 ticks
+validation: large_128m_r3_pmu: 1,000,000 samples, median 276.0 ticks
+validation: reuse2_256k_r3_software: 1,000,000 samples, median 58.0 ticks
+validation: reuse2_256k_r3_pmu: 1,000,000 samples, median 60.0 ticks
+validation: deeper_8m_r3_software: 1,000,000 samples, median 96.0 ticks
+validation: deeper_8m_r3_pmu: 1,000,000 samples, median 96.0 ticks
+validation: resident_16k_r3_software: 1,000,000 samples, median 56.0 ticks
+validation: resident_16k_r3_pmu: 1,000,000 samples, median 58.0 ticks
+validation: boundary_48k_r3_software: 1,000,000 samples, median 56.0 ticks
+validation: boundary_48k_r3_pmu: 1,000,000 samples, median 65.0 ticks
+validation: reuse4_256k_r3_software: 1,000,000 samples, median 56.0 ticks
+validation: reuse4_256k_r3_pmu: 1,000,000 samples, median 56.0 ticks
+validation: nonresident_128k_r3_software: 1,000,000 samples, median 56.0 ticks
+validation: nonresident_128k_r3_pmu: 1,000,000 samples, median 65.0 ticks
+validation: reuse8_256k_r3_software: 1,000,000 samples, median 56.0 ticks
+validation: reuse8_256k_r3_pmu: 1,000,000 samples, median 56.0 ticks
+{
+  "status": "passed",
+  "scope": "Integrity, sample counts, classifier reconstruction, placement, source checkpoint and PMU denominator; not proof of universal estimator accuracy",
+  "machine": "sunbird",
+  "run_id": "hitrate01",
+  "configurations": 54,
+  "timed_samples": 54000000,
+  "validation_pairs": 24,
+  "threshold_ticks": 70,
+  "model_sha256": "d843c85284ac429cfcaab42cef899782ed206626a61ec419e7cdd64570bf4183",
+  "all_pmu_groups_without_multiplexing": true,
+  "max_auxiliary_loads": 972,
+  "max_auxiliary_reference_bound_pp": 0.0972,
+  "empty_loop_retired_loads": 382,
+  "mean_absolute_error_pp": 26.882294835945043,
+  "worst_absolute_error_pp": 96.69154129322996,
+  "standalone_paired_mean_absolute_error_pp": 25.748481437396,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "total_involuntary_switches": 2
+}

@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-09-14T20:42:23.540111+00:00",
+  "command": [
+    "perf",
+    "stat",
+    "--no-big-num",
+    "-x,",
+    "-e",
+    "{mem_load_uops_retired.l1_miss:u,mem_uops_retired.all_loads:u}",
+    "--",
+    "taskset",
+    "-c",
+    "32",
+    "/usr/bin/python3",
+    "-c",
+    "sum(range(2000000))"
+  ],
+  "returncode": 0,
+  "output": "859302,,mem_load_uops_retired.l1_miss:u,82574787,100.00,,\n130066760,,mem_uops_retired.all_loads:u,82574787,100.00,,\n",
+  "purpose": "Access and scheduling diagnostic only; not calibration or formal validation data."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "audited_utc": "2026-09-14T20:47:51.531607+00:00",
+  "collection_started_utc": "2026-09-14T20:43:01.499232+00:00",
+  "collection_finished_utc": "2026-09-14T20:43:27.846724+00:00",
+  "collection_elapsed_seconds": 26.347492,
+  "original_artemisia_and_estimator_files_verified": 206,
+  "source_and_compiled_copies_match": true,
+  "threshold_refitted_from_saved_timing_only_data": true,
+  "serial_exact_plan_and_unique_names_verified": true,
+  "formal_pmu_executions": 25,
+  "software_only_executions": 29,
+  "numa_basepage_mapping_records_verified": 92,
+  "runs_with_coalesced_chain_output_vma": 16,
+  "raw_payload_bytes": 432000000,
+  "raw_gzip_bytes": 20685687,
+  "max_sibling_cpu8_busy_percent": 0.0,
+  "total_voluntary_switches": 0,
+  "ci_covers_pmu_reference_runs": 3,
+  "mean_absolute_error_pp": 26.882294835945043,
+  "worst_absolute_error_pp": 96.69154129322996,
+  "note": "Integrity/provenance checks pass; unchanged estimator has large systematic error on Sunbird. No PMU input is fed back into its threshold."
+}

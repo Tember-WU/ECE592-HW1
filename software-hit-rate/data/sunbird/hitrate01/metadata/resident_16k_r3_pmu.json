@@ -1,0 +1,1 @@
+{"samples":1000000,"target_loads":1000000,"classified_hits":942115,"threshold_ticks":70,"cpu_before":32,"cpu_after":32,"minor_faults":0,"major_faults":0,"voluntary_switches":0,"involuntary_switches":0,"timer_unit":"TSC ticks/access including fences","timer_hz":null,"pmu":{"l1_misses":2074,"retired_loads":1000270,"time_enabled_ns":45055920,"time_running_ns":45055920}}
