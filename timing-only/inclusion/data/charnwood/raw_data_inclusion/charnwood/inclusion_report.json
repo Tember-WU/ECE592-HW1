@@ -1,0 +1,16 @@
+{
+  "machine": "charnwood",
+  "n_trials": 40000,
+  "fraction_L2_hit": 0.927675,
+  "fraction_LLC_hit": 0.00445,
+  "fraction_DRAM": 0.067875,
+  "l2_median_ticks": 116.0,
+  "llc_median_ticks": 158.0,
+  "dram_median_ticks": 430.0,
+  "l2_dram_boundary_ticks": 137.0,
+  "llc_dram_boundary_ticks": 294.0,
+  "llc_conflict_stride_bytes": 2048,
+  "pressure_k_used": 32,
+  "possibly_l2_contaminated_target_regions": 40000,
+  "verdict": "Evidence consistent with NON-INCLUSIVE / exclusive-like LLC (inner copy survived)"
+}
