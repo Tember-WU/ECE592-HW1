@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/ookay/counters01/source/bench",
+    "1",
+    "8388608",
+    "64",
+    "1000000",
+    "64",
+    "59285",
+    "3",
+    "0x10002",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/ookay/counters01/raw/llc_sized__r1__llc_misses",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}

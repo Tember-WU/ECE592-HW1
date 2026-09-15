@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/ookay/smoke01/source/bench",
+    "1",
+    "33554432",
+    "64",
+    "2000",
+    "64",
+    "59284",
+    "3",
+    "0x10000",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/ookay/smoke01/raw/beyond_llc__r0__l1_misses",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}
