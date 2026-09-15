@@ -1,0 +1,49 @@
+host,slot,event,type,config,meaning,comparability
+artemisia,cache_references,cache-references,0,0x2,"Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",generic_mapping_requires_review
+artemisia,cache_misses,cache-misses,0,0x3,Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.,generic_mapping_requires_review
+artemisia,l1_loads,L1-dcache-loads,3,0x0,Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.,generic_mapping_requires_review
+artemisia,l1_misses,L1-dcache-load-misses,3,0x10000,Kernel L1D read-miss mapping; may count refills rather than retired misses.,generic_mapping_requires_review
+artemisia,stores_or_replacements,L1-dcache-stores,3,0x100,Kernel L1D write-access mapping; the read-only kernel should have little store activity.,generic_mapping_requires_review
+artemisia,llc_loads,LLC-loads,3,0x2,Kernel last-level read-access mapping; do not assume identical LLC domains across CPUs.,generic_mapping_requires_review
+artemisia,llc_misses,LLC-load-misses,3,0x10002,Kernel last-level read-miss mapping; interpretation depends on CPU and firmware.,generic_mapping_requires_review
+artemisia,dtlb_misses,dTLB-load-misses,3,0x10003,Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.,generic_mapping_requires_review
+skylark,cache_references,cache-references,0,0x2,"Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",generic_mapping_requires_review
+skylark,cache_misses,cache-misses,0,0x3,Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.,generic_mapping_requires_review
+skylark,l1_loads,L1-dcache-loads,3,0x0,Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.,generic_mapping_requires_review
+skylark,l1_misses,L1-dcache-load-misses,3,0x10000,Kernel L1D read-miss mapping; may count refills rather than retired misses.,generic_mapping_requires_review
+skylark,stores_or_replacements,ls_refills_from_sys.ls_mabresp_lcl_l2,4,0x143,"Demand data fills from local L2; refill/replacement evidence, NOT stores.",architecture_specific_proxy
+skylark,llc_loads,ls_refills_from_sys.ls_mabresp_lcl_cache,4,0x243,Demand fills from local cache domain excluding local L2; not total LLC accesses or pure LLC hits.,architecture_specific_proxy
+skylark,llc_misses,ls_refills_from_sys.ls_mabresp_lcl_dram,4,0x843,Demand fills from DRAM or IO on this die; omits remote DRAM and is NOT direct LLC misses.,architecture_specific_proxy
+skylark,dtlb_misses,dTLB-load-misses,3,0x10003,Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.,generic_mapping_requires_review
+sunbird,cache_references,cache-references,0,0x2,"Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",generic_mapping_requires_review
+sunbird,cache_misses,cache-misses,0,0x3,Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.,generic_mapping_requires_review
+sunbird,l1_loads,L1-dcache-loads,3,0x0,Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.,generic_mapping_requires_review
+sunbird,l1_misses,L1-dcache-load-misses,3,0x10000,Kernel L1D read-miss mapping; may count refills rather than retired misses.,generic_mapping_requires_review
+sunbird,stores_or_replacements,L1-dcache-stores,3,0x100,Kernel L1D write-access mapping; the read-only kernel should have little store activity.,generic_mapping_requires_review
+sunbird,llc_loads,LLC-loads,3,0x2,Kernel last-level read-access mapping; do not assume identical LLC domains across CPUs.,generic_mapping_requires_review
+sunbird,llc_misses,LLC-load-misses,3,0x10002,Kernel last-level read-miss mapping; interpretation depends on CPU and firmware.,generic_mapping_requires_review
+sunbird,dtlb_misses,dTLB-load-misses,3,0x10003,Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.,generic_mapping_requires_review
+thunderbird,cache_references,cache-references,0,0x2,"Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",generic_mapping_requires_review
+thunderbird,cache_misses,cache-misses,0,0x3,Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.,generic_mapping_requires_review
+thunderbird,l1_loads,l1d_cache_rd,4,0x40,Speculative L1D read accesses.,architecture_specific_proxy
+thunderbird,l1_misses,l1d_cache_refill_rd,4,0x42,L1D line allocations caused by speculative load misses.,architecture_specific_proxy
+thunderbird,stores_or_replacements,l1d_cache_wr,4,0x41,Speculative L1D write accesses.,architecture_specific_proxy
+thunderbird,llc_loads,ll_cache_rd,4,0x36,Last-level read event; EXTLLC/firmware dependent. Existing 8.3 results did NOT validate SLC boundary.,architecture_specific_proxy
+thunderbird,llc_misses,ll_cache_miss_rd,4,0x37,"Last-level read miss event; existing 8.3 results track L2 refills, NOT verified SLC misses.",architecture_specific_proxy
+thunderbird,dtlb_misses,dTLB-load-misses,3,0x10003,Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.,generic_mapping_requires_review
+charnwood,cache_references,cache-references,0,0x2,"Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",generic_mapping_requires_review
+charnwood,cache_misses,cache-misses,0,0x3,Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.,generic_mapping_requires_review
+charnwood,l1_loads,L1-dcache-loads,3,0x0,Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.,generic_mapping_requires_review
+charnwood,l1_misses,L1-dcache-load-misses,3,0x10000,Kernel L1D read-miss mapping; may count refills rather than retired misses.,generic_mapping_requires_review
+charnwood,stores_or_replacements,L1-dcache-stores,3,0x100,Kernel L1D write-access mapping; the read-only kernel should have little store activity.,generic_mapping_requires_review
+charnwood,llc_loads,LLC-loads,3,0x2,Kernel last-level read-access mapping; do not assume identical LLC domains across CPUs.,generic_mapping_requires_review
+charnwood,llc_misses,LLC-load-misses,3,0x10002,Kernel last-level read-miss mapping; interpretation depends on CPU and firmware.,generic_mapping_requires_review
+charnwood,dtlb_misses,dTLB-load-misses,3,0x10003,Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.,generic_mapping_requires_review
+crux,cache_references,cache-references,0,0x2,"Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",generic_mapping_requires_review
+crux,cache_misses,cache-misses,0,0x3,Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.,generic_mapping_requires_review
+crux,l1_loads,L1-dcache-loads,3,0x0,Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.,generic_mapping_requires_review
+crux,l1_misses,L1-dcache-load-misses,3,0x10000,Kernel L1D read-miss mapping; may count refills rather than retired misses.,generic_mapping_requires_review
+crux,stores_or_replacements,L1-dcache-stores,3,0x100,Kernel L1D write-access mapping; the read-only kernel should have little store activity.,generic_mapping_requires_review
+crux,llc_loads,LLC-loads,3,0x2,Kernel last-level read-access mapping; do not assume identical LLC domains across CPUs.,generic_mapping_requires_review
+crux,llc_misses,LLC-load-misses,3,0x10002,Kernel last-level read-miss mapping; interpretation depends on CPU and firmware.,generic_mapping_requires_review
+crux,dtlb_misses,dTLB-load-misses,3,0x10003,Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.,generic_mapping_requires_review
