@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/upgrade/counters01/source/bench",
+    "1",
+    "50331648",
+    "64",
+    "1000000",
+    "64",
+    "59286",
+    "0",
+    "0",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/upgrade/counters01/raw/beyond_llc__r2__timing",
+    "1"
+  ],
+  "returncode": 0,
+  "output": ""
+}
