@@ -1,5 +1,5 @@
 {
-  "machine": "artemisia",
+  "machine": "thunderbird",
   "n_trials": 40000,
   "fraction_L2_hit": 0.999325,
   "fraction_LLC_hit": 0.0,

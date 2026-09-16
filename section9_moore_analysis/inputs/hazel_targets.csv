@@ -1,0 +1,10 @@
+constraint,vendor,cpu_family_from_assignment,microarchitecture,generation_year,implementation_launch_year,lab_overlap_note,isa,availability_status,source
+haswell,Intel,Xeon E5 v3,Haswell,2014,2014,"Same server generation as lab Sunbird; held-out machine, not unseen architecture",x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"
+broadwell,Intel,Xeon E5 v4,Broadwell,2016,2016,No matching lab server generation,x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"
+skylake,Intel,1st Generation Xeon Scalable,Skylake-SP,2017,2017,Lab Charnwood is desktop Skylake; not the same server implementation,x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"
+cascadelake,Intel,2nd Generation Xeon Scalable,Cascade Lake,2019,2019,No matching lab server generation,x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"
+icelake_6326,Intel,Xeon Gold 6326 / 3rd Generation Xeon Scalable,Ice Lake-SP,2020,2021,No matching lab server generation; same generation as icelake_8358,x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"
+icelake_8358,Intel,Xeon Platinum 8358 / 3rd Generation Xeon Scalable,Ice Lake-SP,2020,2021,No matching lab server generation; same generation as icelake_6326,x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"
+genoa,AMD,4th Generation EPYC,Zen 4 / Genoa,2022,2022,AMD training has one Zen 2 / Rome host; pooled prediction,x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"
+sapphirerapids,Intel,4th Generation Xeon Scalable,Sapphire Rapids,2023,2023,"Same generation as lab Artemisia; L2 model anchor, not unseen architecture",x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"
+turin,AMD,5th Generation EPYC,Zen 5 / Turin,2024,2024,Only target beyond latest lab year; one AMD lab host; pooled prediction,x86-64,Not checked; assignment target only,"PROJECT 1.pdf, page 18, Table 4"

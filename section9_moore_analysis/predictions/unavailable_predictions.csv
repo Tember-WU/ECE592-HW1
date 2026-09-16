@@ -1,0 +1,15 @@
+metric,status,reason
+l1d_associativity_ways,abstained_for_all_targets,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+l2_associativity_ways,abstained_for_all_targets,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+llc_capacity_bytes,abstained_for_all_targets,Effective transition spans are not physical sharing-domain capacity estimates.
+llc_associativity_ways,abstained_for_all_targets,Reliable LLC eviction was not established.
+l1_hit_absolute_latency,abstained_for_all_targets,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+l2_hit_absolute_latency,abstained_for_all_targets,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+llc_hit_absolute_latency,abstained_for_all_targets,Uncalibrated x86 ticks and sharing-domain/residency differences.
+l1_miss_penalty,abstained_for_all_targets,Uncalibrated timer units and configuration-dependent differences of medians.
+l2_miss_penalty,abstained_for_all_targets,Uncalibrated timer units and configuration-dependent differences of medians.
+llc_to_memory_miss_penalty,abstained_for_all_targets,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+line_size_bytes,abstained_for_all_targets,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+inclusion_policy,abstained_for_all_targets,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+software_hit_rate,abstained_for_all_targets,Identical standardized workload available on only two lab hosts; fewer than three observations.
+pmu_normalized_metrics,abstained_for_all_targets,Target runtime PMU mappings and workloads are unverified.

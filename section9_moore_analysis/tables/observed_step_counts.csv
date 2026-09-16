@@ -1,0 +1,10 @@
+metric,cohort,adjacent_pairs,increases,decreases,unchanged,interpretation
+l1d_capacity_KiB,pooled_all_lab,7,1,1,5,Counts between sampled hosts; not design-change frequency or a causal lineage
+l1d_capacity_KiB,Intel_lab,5,1,0,4,Counts between sampled hosts; not design-change frequency or a causal lineage
+l1d_capacity_KiB,Intel_desktop,3,0,0,3,Counts between sampled hosts; not design-change frequency or a causal lineage
+l2_capacity_KiB,pooled_all_lab,7,3,0,4,Counts between sampled hosts; not design-change frequency or a causal lineage
+l2_capacity_KiB,Intel_lab,5,1,0,4,Counts between sampled hosts; not design-change frequency or a causal lineage
+l2_capacity_KiB,Intel_desktop,3,0,0,3,Counts between sampled hosts; not design-change frequency or a causal lineage
+l2_l1_latency_ratio,pooled_all_lab,7,3,4,0,Counts between sampled hosts; not design-change frequency or a causal lineage
+l2_l1_latency_ratio,Intel_lab,5,3,2,0,Counts between sampled hosts; not design-change frequency or a causal lineage
+l2_l1_latency_ratio,Intel_desktop,3,2,1,0,Counts between sampled hosts; not design-change frequency or a causal lineage

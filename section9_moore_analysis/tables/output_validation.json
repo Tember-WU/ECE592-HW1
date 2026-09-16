@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "lab_hosts": 8,
+  "figures": 22,
+  "predictions": 27,
+  "abstentions": 126,
+  "source_files": 198,
+  "upstream_checked": true,
+  "frozen_hashes_checked": false
+}

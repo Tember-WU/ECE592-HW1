@@ -1,0 +1,7 @@
+constraint,metric,main_year,main_prediction,implementation_year,alternative_prediction,note
+icelake_6326,l1d_capacity_KiB,2020,32.0,2021,32.0,Chronology sensitivity only; main prediction retains the Section 8.1 generation-wide year convention
+icelake_6326,l2_capacity_KiB,2020,865.3517414132037,2021,1153.2012348337742,Chronology sensitivity only; main prediction retains the Section 8.1 generation-wide year convention
+icelake_6326,l2_l1_latency_ratio,2020,2.9179178547927176,2021,2.9179178547927176,Chronology sensitivity only; main prediction retains the Section 8.1 generation-wide year convention
+icelake_8358,l1d_capacity_KiB,2020,32.0,2021,32.0,Chronology sensitivity only; main prediction retains the Section 8.1 generation-wide year convention
+icelake_8358,l2_capacity_KiB,2020,865.3517414132037,2021,1153.2012348337742,Chronology sensitivity only; main prediction retains the Section 8.1 generation-wide year convention
+icelake_8358,l2_l1_latency_ratio,2020,2.9179178547927176,2021,2.9179178547927176,Chronology sensitivity only; main prediction retains the Section 8.1 generation-wide year convention

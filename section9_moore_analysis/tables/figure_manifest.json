@@ -1,0 +1,90 @@
+[
+  {
+    "file": "00_chronological_capacity_overview",
+    "caption": "Compact display of the eight lab hosts in generation-year order. The full master CSV includes CPU/process metadata, all native timing metrics, PMU events and separate verification fields. LLC intervals are effective transition regions, not bounds on physical capacity."
+  },
+  {
+    "file": "01_l1d_capacity",
+    "caption": "L1D timing-derived capacity; bars show sampled transition neighborhoods, not statistical confidence intervals. Solid links join only related Intel desktop observations; server and other-vendor points remain separate."
+  },
+  {
+    "file": "05_l2_capacity",
+    "caption": "L2 timing-derived capacity; bars show sampled transition neighborhoods, not statistical confidence intervals. Solid links join only related Intel desktop observations; server and other-vendor points remain separate."
+  },
+  {
+    "file": "02_l1_associativity",
+    "caption": "Left: selected candidate thresholds, not proven physical ways; bars span clean-edge stride outcomes. Crosses mark byte-identical Sunbird/Crux summaries with unresolved independent provenance. Right: separate Section 8.3 interpretations (see phase2_verification.csv), including system-based physical ways and the supported 16-line Artemisia L2 threshold. Several original purported L2 edges were identified as L1 conflicts. No associativity trend is fitted."
+  },
+  {
+    "file": "06_l2_associativity",
+    "caption": "Left: selected candidate thresholds, not proven physical ways; bars span clean-edge stride outcomes. Crosses mark byte-identical Sunbird/Crux summaries with unresolved independent provenance. Right: separate Section 8.3 interpretations (see phase2_verification.csv), including system-based physical ways and the supported 16-line Artemisia L2 threshold. Several original purported L2 edges were identified as L1 conflicts. No associativity trend is fitted."
+  },
+  {
+    "file": "03_l1_hit",
+    "caption": "L1D resident latency. Separate native-timer panels prevent a false common cycle scale. x86 TSC frequency was not saved; no ns or core-cycle conversion is made. Arm uses documented 25 MHz CNTVCT. Hit bars span P05-P95 across primary/alternate/repeat points; miss bars span differences of medians across those configurations, not a penalty confidence interval."
+  },
+  {
+    "file": "04_l1_miss",
+    "caption": "L1-to-L2 incremental cost. Separate native-timer panels prevent a false common cycle scale. x86 TSC frequency was not saved; no ns or core-cycle conversion is made. Arm uses documented 25 MHz CNTVCT. Hit bars span P05-P95 across primary/alternate/repeat points; miss bars span differences of medians across those configurations, not a penalty confidence interval."
+  },
+  {
+    "file": "07_l2_hit",
+    "caption": "L2 resident latency. Separate native-timer panels prevent a false common cycle scale. x86 TSC frequency was not saved; no ns or core-cycle conversion is made. Arm uses documented 25 MHz CNTVCT. Hit bars span P05-P95 across primary/alternate/repeat points; miss bars span differences of medians across those configurations, not a penalty confidence interval."
+  },
+  {
+    "file": "08_l2_miss",
+    "caption": "L2-to-LLC incremental cost. Separate native-timer panels prevent a false common cycle scale. x86 TSC frequency was not saved; no ns or core-cycle conversion is made. Arm uses documented 25 MHz CNTVCT. Hit bars span P05-P95 across primary/alternate/repeat points; miss bars span differences of medians across those configurations, not a penalty confidence interval."
+  },
+  {
+    "file": "11a_llc_hit",
+    "caption": "LLC-region resident latency. Separate native-timer panels prevent a false common cycle scale. x86 TSC frequency was not saved; no ns or core-cycle conversion is made. Arm uses documented 25 MHz CNTVCT. Hit bars span P05-P95 across primary/alternate/repeat points; miss bars span differences of medians across those configurations, not a penalty confidence interval."
+  },
+  {
+    "file": "11b_llc_miss",
+    "caption": "LLC-to-memory incremental cost. Separate native-timer panels prevent a false common cycle scale. x86 TSC frequency was not saved; no ns or core-cycle conversion is made. Arm uses documented 25 MHz CNTVCT. Hit bars span P05-P95 across primary/alternate/repeat points; miss bars span differences of medians across those configurations, not a penalty confidence interval."
+  },
+  {
+    "file": "09_llc_capacity",
+    "caption": "Left: timing-observed LLC transition spans; endpoints do not bound physical capacity and no midpoint is inferred. Right: separate post-Phase-I sysfs sharing-domain capacity divided by domain physical-core count, using saved thread topology; no socket aggregation. Thunderbird has no sysfs LLC entry and is omitted only from the validation panel."
+  },
+  {
+    "file": "10_llc_associativity",
+    "caption": "All hosts are explicitly unresolved. The saved LLC conflict search did not establish reliable eviction; inclusion pressure K is not an associativity measurement."
+  },
+  {
+    "file": "12_line_size",
+    "caption": "The original stride script hardcodes a 64 B candidate marker. It does not compute a unique line-size inference. Candidate and system-reported values are shown separately; neither is promoted to a measured timing law."
+  },
+  {
+    "file": "13_inclusion",
+    "caption": "High inner-resident reload fractions do not prove non-inclusion when LLC eviction itself was not established. Every run has only 40000 trials and flags potential L2 contamination in every recorded trial. Original verdicts are retained in the CSV, but the supported policy is uncertain."
+  },
+  {
+    "file": "14_software_hit_rate",
+    "caption": "Identical named workloads on the only two available Section 8.5 hosts. Primary markers use standalone, PMU-free estimator executions; bars are min/max of three repeats. Crosses show separate PMU validation. Six hosts are missing, so no chronological fit or projection is made. The 128 KiB case exposes estimator failure on Sunbird."
+  },
+  {
+    "file": "15a_l1_loads",
+    "caption": "Intel desktop retired-load mapping. Only the four related Intel desktops are compared under the saved mapping review; vendor-kernel mapping caveat remains. Error bars are min/max of three counter passes. Workloads are capacity-relative (different byte sizes), not controlled year-only experiments. All other host/event results remain in pmu_normalized.csv."
+  },
+  {
+    "file": "15b_dtlb_misses",
+    "caption": "Intel desktop completed demand-load page walks. Only the four related Intel desktops are compared under the saved mapping review; vendor-kernel mapping caveat remains. Error bars are min/max of three counter passes. Workloads are capacity-relative (different byte sizes), not controlled year-only experiments. All other host/event results remain in pmu_normalized.csv."
+  },
+  {
+    "file": "17_latency_ratios",
+    "caption": "Dimensionless within-host latency ratios permit a common cross-architecture axis without assuming TSC ticks equal core cycles. They still include run/frequency, candidate-residency and shared-machine effects; the ratios are benchmark observations, not pure hardware latency ratios."
+  },
+  {
+    "file": "18_lab_models_and_hazel_extrapolation",
+    "caption": "Solid vendor-shaped points are lab data; solid observation links join only the related Intel desktops. Thin gray lines are pooled fitted references, not observed lineage. The dashed L2 extrapolation begins at the measured Artemisia 2023 endpoint and extends only to 2024. L1 and relative latency use constant medians; their target predictions are hollow markers. Bars and shading are descriptive envelopes, not probability intervals. No Hazel measurements are present."
+  },
+  {
+    "file": "19_hazel_prediction_intervals",
+    "caption": "Nine assignment constraints ordered by generation year; three quantitative predictions each. These include targets inside the lab year range. Ice Lake constraints share a generation and prediction. The generation-wide year 2020 follows Section 8.1; the Ice Lake implementation launched in 2021, evaluated separately in chronology_sensitivity.csv. Bars are not 95% intervals. Target cache specifications were not model inputs."
+  },
+  {
+    "file": "20_trend_model_comparison",
+    "caption": "Leave-one-lab-host-out error compares unconstrained OLS with a constant-mean baseline on identical folds; lower is better. Capacity errors are in log2 KiB. This is a lab diagnostic, not Hazel validation. Four related desktops have identical L1 and L2 capacities. The frozen L2 prediction uses a separate anchored fit in model_parameters.json."
+  }
+]

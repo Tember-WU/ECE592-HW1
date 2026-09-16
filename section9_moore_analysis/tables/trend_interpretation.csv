@@ -1,0 +1,6 @@
+metric,finding,quantitative_evidence,interpretation
+L2 capacity,Growth in the pooled sample,OLS log2 slope=0.361345/year; doubling time=2.7674 years; R2=0.8178,An empirical description of eight mixed lab hosts; not a causal or universal technology law.
+L2 capacity,Large cohort dependence,Intel leave-one-out RMSE=1.3656 log2 KiB versus flat baseline=1.3416; four desktop hosts all have 256 KiB,Removing the latest server changes the trend substantially. Do not attribute the pooled growth solely to elapsed years.
+L1D capacity,Mostly constant with architectural steps,"Six hosts have 32 KiB, one has 64 KiB, and one has 48 KiB; four desktop hosts all have 32 KiB",The cross-host sequence is non-monotonic. A pooled median and full sampling-bracket envelope are used for prediction.
+L2/L1 resident latency,Weak temporal fit,OLS slope=0.027845/year; R2=0.1633; observed range=2.6471-3.3333,Use an empirical median with an observed-variability envelope; do not extrapolate a strong latency growth law.
+Other inferred quantities,Insufficient comparable numerical evidence,Exact timing-derived LLC capacities: 0/8; unique timing line-size estimates: 0/8; software standardized-workload hosts: 2/8,"Retain observations, separate validation, and explicit uncertainty; do not fit or invent missing results."

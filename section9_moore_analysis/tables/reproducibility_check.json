@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "method": "Two consecutive builds from the same normalized snapshot; compare SHA-256 for all generated table, prediction and figure files",
+  "files_compared": 72,
+  "byte_identical": true
+}

@@ -1,0 +1,30 @@
+field_pattern,unit,meaning
+year,year,First public launch of the represented processor generation; inherited Section 8.1 convention
+*_inferred_bytes,bytes,Timing-only capacity estimate; missing means unresolved
+l1d/l2_transition_low/high_bytes,bytes,Empirical sampled transition bracket; not a confidence interval
+llc_transition_low/high_bytes,bytes,Effective timing transition span; endpoints do not bound physical LLC capacity
+*_effective_ways_recorded,lines,Largest-jump timing conflict candidate; not necessarily physical associativity
+*_associativity_status,text,Candidate-stride sensitivity and duplicate-provenance warnings
+*_phase2_ways,ways or effective threshold,Separate existing Section 8.3 PMU/system interpretation; read phase2_verification.csv
+llc_system_bytes,bytes/sharing domain,Separate saved OS cache inventory at pinned core; not socket aggregation
+llc_system_domain_cores,physical cores,Logical sharing list divided by sibling count in the saved topology
+llc_system_bytes_per_core,bytes/core,OS sharing-domain capacity divided by domain physical-core count
+l1_hit/l2_hit/llc_hit,native timer ticks/load,Primary resident median; x86 ticks are not validated core cycles
+*_hit_low/high,native timer ticks/load,"Minimum P05 / maximum P95 over primary, alternate and repeat configurations"
+l1_miss/l2_miss/llc_miss,native timer ticks/load,Next-level first-access median minus reference resident median; incremental cost
+*_miss_low/high,native timer ticks/load,Minimum/maximum difference of medians across configurations
+timer_frequency_hz,Hz,Documented timer frequency; unavailable on selected x86 records
+*_hit_ns,ns/load,Only derived when timer frequency is documented; no nominal-GHz conversion
+l2_l1_ratio,ratio,L2 primary resident median divided by L1 primary resident median
+line_timing_inferred_bytes,bytes,Unresolved in all saved timing inferences
+line_candidate_bytes,bytes,64-byte marker hardcoded by the original stride plotting script
+line_system_bytes,bytes,Separate OS-reported coherency line size
+inclusion_inferred,category,Uncertain because successful LLC eviction was not established
+software_*,fraction,Median software_standalone result over three repeats of the named workload
+pmu_*_events_per_1000_pointer_loads,events/1000 pointer loads,Existing normalized median; compare only compatible event semantics
+prediction/low/high,specified by unit,Frozen central model output and descriptive sensitivity envelope
+generation_year,year,Main Hazel model coordinate; not always the specific implementation launch year
+implementation_launch_year,year,Implementation launch metadata; Ice Lake differs from generation-wide coordinate
+r_squared,dimensionless,Coefficient of determination in the fitted response space; undefined for constant samples
+leave_one_host_out_rmse,response unit,Each host predicted from the other lab hosts; this is not Hazel validation
+doubling_years,years,Inverse positive log2-capacity slope; undefined for flat or declining series

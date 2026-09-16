@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "lab_hosts": 8,
+  "resident_summary_checks": [
+    "sunbird: capacity and latency source selected; 9 resident summaries match saved per-point logs; 1e6 samples each; taxonomy year matches 8.4",
+    "charnwood: capacity and latency source selected; 9 resident summaries match saved per-point logs; 1e6 samples each; taxonomy year matches 8.4",
+    "ookay: capacity and latency source selected; 9 resident summaries match saved per-point logs; 1e6 samples each; taxonomy year matches 8.4",
+    "upgrade: capacity and latency source selected; 9 resident summaries match saved per-point logs; 1e6 samples each; taxonomy year matches 8.4",
+    "crux: capacity and latency source selected; 9 resident summaries match saved per-point logs; 1e6 samples each; taxonomy year matches 8.4",
+    "skylark: capacity and latency source selected; 9 resident summaries match saved per-point logs; 1e6 samples each; taxonomy year matches 8.4",
+    "thunderbird: capacity and latency source selected; 9 resident summaries match saved per-point logs; 1e6 samples each; taxonomy year matches 8.4",
+    "artemisia: capacity and latency source selected; 9 resident summaries match saved per-point logs; 1e6 samples each; taxonomy year matches 8.4"
+  ],
+  "latency_rows": 144,
+  "hazel_observations": 0,
+  "source_files": 198,
+  "scope": "Selected saved-summary consistency; upstream raw sample arrays were not fully re-audited"
+}

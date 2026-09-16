@@ -1,0 +1,154 @@
+constraint,metric,status,prediction,unit,reason
+haswell,l1d_capacity_KiB,prediction,32.0,KiB/core,
+haswell,l2_capacity_KiB,prediction,154.49631005736538,KiB/core,
+haswell,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+broadwell,l1d_capacity_KiB,prediction,32.0,KiB/core,
+broadwell,l2_capacity_KiB,prediction,274.374006409291,KiB/core,
+broadwell,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+skylake,l1d_capacity_KiB,prediction,32.0,KiB/core,
+skylake,l2_capacity_KiB,prediction,365.64142400725797,KiB/core,
+skylake,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+cascadelake,l1d_capacity_KiB,prediction,32.0,KiB/core,
+cascadelake,l2_capacity_KiB,prediction,649.3520937608113,KiB/core,
+cascadelake,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+icelake_6326,l1d_capacity_KiB,prediction,32.0,KiB/core,
+icelake_6326,l2_capacity_KiB,prediction,865.3517414132037,KiB/core,
+icelake_6326,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+icelake_8358,l1d_capacity_KiB,prediction,32.0,KiB/core,
+icelake_8358,l2_capacity_KiB,prediction,865.3517414132037,KiB/core,
+icelake_8358,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+genoa,l1d_capacity_KiB,prediction,32.0,KiB/core,
+genoa,l2_capacity_KiB,prediction,1536.8006145689717,KiB/core,
+genoa,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+sapphirerapids,l1d_capacity_KiB,prediction,32.0,KiB/core,
+sapphirerapids,l2_capacity_KiB,prediction,2048.0,KiB/core,
+sapphirerapids,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+turin,l1d_capacity_KiB,prediction,32.0,KiB/core,
+turin,l2_capacity_KiB,prediction,2729.2440933701614,KiB/core,
+turin,l2_l1_latency_ratio,prediction,2.9179178547927176,ratio,
+haswell,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+haswell,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+haswell,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+haswell,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+haswell,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+haswell,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+haswell,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+haswell,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+haswell,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+haswell,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+haswell,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+haswell,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+haswell,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+haswell,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.
+broadwell,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+broadwell,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+broadwell,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+broadwell,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+broadwell,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+broadwell,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+broadwell,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+broadwell,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+broadwell,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+broadwell,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+broadwell,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+broadwell,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+broadwell,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+broadwell,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.
+skylake,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+skylake,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+skylake,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+skylake,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+skylake,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+skylake,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+skylake,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+skylake,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+skylake,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+skylake,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+skylake,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+skylake,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+skylake,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+skylake,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.
+cascadelake,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+cascadelake,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+cascadelake,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+cascadelake,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+cascadelake,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+cascadelake,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+cascadelake,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+cascadelake,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+cascadelake,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+cascadelake,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+cascadelake,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+cascadelake,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+cascadelake,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+cascadelake,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.
+icelake_6326,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+icelake_6326,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+icelake_6326,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+icelake_6326,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+icelake_6326,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+icelake_6326,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+icelake_6326,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+icelake_6326,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+icelake_6326,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+icelake_6326,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+icelake_6326,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+icelake_6326,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+icelake_6326,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+icelake_6326,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.
+icelake_8358,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+icelake_8358,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+icelake_8358,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+icelake_8358,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+icelake_8358,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+icelake_8358,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+icelake_8358,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+icelake_8358,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+icelake_8358,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+icelake_8358,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+icelake_8358,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+icelake_8358,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+icelake_8358,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+icelake_8358,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.
+genoa,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+genoa,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+genoa,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+genoa,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+genoa,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+genoa,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+genoa,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+genoa,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+genoa,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+genoa,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+genoa,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+genoa,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+genoa,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+genoa,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.
+sapphirerapids,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+sapphirerapids,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+sapphirerapids,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+sapphirerapids,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+sapphirerapids,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+sapphirerapids,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+sapphirerapids,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+sapphirerapids,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+sapphirerapids,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+sapphirerapids,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+sapphirerapids,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+sapphirerapids,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+sapphirerapids,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+sapphirerapids,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.
+turin,l1d_associativity_ways,abstained,,,Timing thresholds have candidate sensitivity and duplicate cross-host provenance; verified ways are separate.
+turin,l2_associativity_ways,abstained,,,Several original L2 thresholds were L1 conflicts; insufficient uniform independent timing-only physical-way estimates.
+turin,llc_capacity_bytes,abstained,,,Effective transition spans are not physical sharing-domain capacity estimates.
+turin,llc_associativity_ways,abstained,,,Reliable LLC eviction was not established.
+turin,l1_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; cannot transfer ticks to target CPUs.
+turin,l2_hit_absolute_latency,abstained,,,No calibrated x86 timer frequency or core-cycle measure; relative latency is predicted instead.
+turin,llc_hit_absolute_latency,abstained,,,Uncalibrated x86 ticks and sharing-domain/residency differences.
+turin,l1_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+turin,l2_miss_penalty,abstained,,,Uncalibrated timer units and configuration-dependent differences of medians.
+turin,llc_to_memory_miss_penalty,abstained,,,"Uncalibrated timers, NUMA and memory-system differences are uncontrolled."
+turin,line_size_bytes,abstained,,,Saved timing code marks a fixed 64-byte candidate; no unique data-derived size estimate.
+turin,inclusion_policy,abstained,,,All supported lab classifications are uncertain; LLC eviction was not demonstrated.
+turin,software_hit_rate,abstained,,,Identical standardized workload available on only two lab hosts; fewer than three observations.
+turin,pmu_normalized_metrics,abstained,,,Target runtime PMU mappings and workloads are unverified.

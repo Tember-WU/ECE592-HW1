@@ -1,0 +1,28 @@
+{
+  "scope": [
+    "chronological lab results",
+    "quantitative lab trends",
+    "lab-only Hazel predictions and local file snapshot (no Git commit)"
+  ],
+  "year_convention": "First formal public launch year of the represented processor generation; inherited from Section 8.1",
+  "ice_lake_year_note": "Use generation-wide 2020 for 3rd Generation Xeon Scalable, consistent with Section 8.1. Ice Lake-SP implementation launched in 2021; retain both dates and calculate coordinate sensitivity.",
+  "hazel_measurements_included": false,
+  "live_hazel_availability_checked": false,
+  "latency_runs": {
+    "sunbird": "latency01",
+    "charnwood": "latency03",
+    "ookay": "latency01-retry2",
+    "upgrade": "latency01",
+    "crux": "latency01-retry2",
+    "skylark": "latency01",
+    "thunderbird": "latency01",
+    "artemisia": "latency01"
+  },
+  "prediction_metrics": [
+    "l1d_capacity_KiB",
+    "l2_capacity_KiB",
+    "l2_l1_latency_ratio"
+  ],
+  "uncertainty_policy": "Descriptive envelopes and lab-only sensitivity; no nominal confidence or coverage probability",
+  "model_selection_note": "Exploratory models selected after inspecting the lab data. Model choice and all parameters are frozen before Hazel experiments."
+}

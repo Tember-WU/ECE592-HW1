@@ -1,0 +1,25 @@
+host,year,group,level,estimate_bytes,lower_bytes,upper_bytes,interval_type,source
+sunbird,2014,Intel x86,L1D,32768,32768,36864,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/sunbird/combined12/inference.json
+sunbird,2014,Intel x86,L2,262144,262144,294912,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/sunbird/combined12/inference.json
+sunbird,2014,Intel x86,LLC,,16777216,67108864,"effective transition region, NOT physical-capacity bounds",timing-only/capacity/results/sunbird/combined12/inference.json
+charnwood,2015,Intel x86,L1D,32768,32768,36864,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/charnwood/combined12/inference.json
+charnwood,2015,Intel x86,L2,262144,262144,294912,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/charnwood/combined12/inference.json
+charnwood,2015,Intel x86,LLC,,4194304,8388608,"effective transition region, NOT physical-capacity bounds",timing-only/capacity/results/charnwood/combined12/inference.json
+ookay,2016,Intel x86,L1D,32768,32768,36864,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/ookay/combined12/inference.json
+ookay,2016,Intel x86,L2,262144,262144,294912,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/ookay/combined12/inference.json
+ookay,2016,Intel x86,LLC,,5242880,8388608,"effective transition region, NOT physical-capacity bounds",timing-only/capacity/results/ookay/combined12/inference.json
+upgrade,2017,Intel x86,L1D,32768,32768,36864,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/upgrade/combined12/inference.json
+upgrade,2017,Intel x86,L2,262144,262144,294912,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/upgrade/combined12/inference.json
+upgrade,2017,Intel x86,LLC,,7340032,8388608,"effective transition region, NOT physical-capacity bounds",timing-only/capacity/results/upgrade/combined12/inference.json
+crux,2018,Intel x86,L1D,32768,32768,36864,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/crux/combined12/inference.json
+crux,2018,Intel x86,L2,262144,262144,294912,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/crux/combined12/inference.json
+crux,2018,Intel x86,LLC,,4194304,16777216,"effective transition region, NOT physical-capacity bounds",timing-only/capacity/results/crux/combined12/inference.json
+skylark,2019,AMD x86,L1D,32768,32768,36864,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/skylark/combined12/inference.json
+skylark,2019,AMD x86,L2,524288,524288,589824,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/skylark/combined12/inference.json
+skylark,2019,AMD x86,LLC,,16777216,33554432,"effective transition region, NOT physical-capacity bounds",timing-only/capacity/results/skylark/combined12/inference.json
+thunderbird,2020,Arm / Ampere,L1D,65536,65536,73728,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/thunderbird/combined12/inference.json
+thunderbird,2020,Arm / Ampere,L2,1048576,1048576,1179648,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/thunderbird/combined12/inference.json
+thunderbird,2020,Arm / Ampere,LLC,,33554432,67108864,"effective transition region, NOT physical-capacity bounds",timing-only/capacity/results/thunderbird/combined12/inference.json
+artemisia,2023,Intel x86,L1D,49152,45056,53248,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/artemisia/combined12/inference.json
+artemisia,2023,Intel x86,L2,2097152,2097152,2359296,"empirical sampling bracket, NOT confidence interval",timing-only/capacity/results/artemisia/combined12/inference.json
+artemisia,2023,Intel x86,LLC,,33554432,67108864,"effective transition region, NOT physical-capacity bounds",timing-only/capacity/results/artemisia/combined12/inference.json

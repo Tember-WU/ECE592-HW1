@@ -1,0 +1,9 @@
+held_out_lab_host,observed_KiB,predicted_KiB,log2_prediction_error,scope
+sunbird,256.0,125.79008248849384,-1.025125628140703,Lab-only diagnostic; anchor reselected within each fold
+charnwood,256.0,193.0181350916335,-0.40740740740740744,Lab-only diagnostic; anchor reselected within each fold
+ookay,256.0,278.4379641229289,0.12121212121212105,Lab-only diagnostic; anchor reselected within each fold
+upgrade,256.0,385.3869566332846,0.5901639344262293,Lab-only diagnostic; anchor reselected within each fold
+crux,256.0,519.006156965215,1.019607843137255,Lab-only diagnostic; anchor reselected within each fold
+skylark,512.0,658.772427780829,0.3636363636363636,Lab-only diagnostic; anchor reselected within each fold
+thunderbird,1024.0,860.5275021394885,-0.25092250922509235,Lab-only diagnostic; anchor reselected within each fold
+artemisia,2048.0,2613.2842683996087,0.35164835164835184,Lab-only diagnostic; anchor reselected within each fold

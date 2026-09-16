@@ -1,0 +1,25 @@
+host,year,group,metric,value,low,high,source
+sunbird,2014,Intel x86,l1d_capacity_KiB,32.0,32.0,36.0,timing-only/capacity/results/sunbird/combined12/inference.json
+sunbird,2014,Intel x86,l2_capacity_KiB,256.0,256.0,288.0,timing-only/capacity/results/sunbird/combined12/inference.json
+sunbird,2014,Intel x86,l2_l1_latency_ratio,2.924812030075188,2.668965517241379,2.9285714285714284,timing-only/latency/results/sunbird/latency01/latency_estimates.json
+charnwood,2015,Intel x86,l1d_capacity_KiB,32.0,32.0,36.0,timing-only/capacity/results/charnwood/combined12/inference.json
+charnwood,2015,Intel x86,l2_capacity_KiB,256.0,256.0,288.0,timing-only/capacity/results/charnwood/combined12/inference.json
+charnwood,2015,Intel x86,l2_l1_latency_ratio,2.915680473372781,2.8954344624447717,3.0964391691394657,timing-only/latency/results/charnwood/latency03/latency_estimates.json
+ookay,2016,Intel x86,l1d_capacity_KiB,32.0,32.0,36.0,timing-only/capacity/results/ookay/combined12/inference.json
+ookay,2016,Intel x86,l2_capacity_KiB,256.0,256.0,288.0,timing-only/capacity/results/ookay/combined12/inference.json
+ookay,2016,Intel x86,l2_l1_latency_ratio,2.9170212765957446,2.8983050847457625,3.298507462686567,timing-only/latency/results/ookay/latency01-retry2/latency_estimates.json
+upgrade,2017,Intel x86,l1d_capacity_KiB,32.0,32.0,36.0,timing-only/capacity/results/upgrade/combined12/inference.json
+upgrade,2017,Intel x86,l2_capacity_KiB,256.0,256.0,288.0,timing-only/capacity/results/upgrade/combined12/inference.json
+upgrade,2017,Intel x86,l2_l1_latency_ratio,2.9188144329896906,2.83974358974359,3.258575197889182,timing-only/latency/results/upgrade/latency01/latency_estimates.json
+crux,2018,Intel x86,l1d_capacity_KiB,32.0,32.0,36.0,timing-only/capacity/results/crux/combined12/inference.json
+crux,2018,Intel x86,l2_capacity_KiB,256.0,256.0,288.0,timing-only/capacity/results/crux/combined12/inference.json
+crux,2018,Intel x86,l2_l1_latency_ratio,2.855507868383405,2.6034031413612566,2.9912023460410557,timing-only/latency/results/crux/latency01-retry2/latency_estimates.json
+skylark,2019,AMD x86,l1d_capacity_KiB,32.0,32.0,36.0,timing-only/capacity/results/skylark/combined12/inference.json
+skylark,2019,AMD x86,l2_capacity_KiB,512.0,512.0,576.0,timing-only/capacity/results/skylark/combined12/inference.json
+skylark,2019,AMD x86,l2_l1_latency_ratio,2.6470588235294117,2.588235294117647,2.909090909090909,timing-only/latency/results/skylark/latency01/latency_estimates.json
+thunderbird,2020,Arm / Ampere,l1d_capacity_KiB,64.0,64.0,72.0,timing-only/capacity/results/thunderbird/combined12/inference.json
+thunderbird,2020,Arm / Ampere,l2_capacity_KiB,1024.0,1024.0,1152.0,timing-only/capacity/results/thunderbird/combined12/inference.json
+thunderbird,2020,Arm / Ampere,l2_l1_latency_ratio,3.3333333333333335,2.6363636363636362,3.3333333333333335,timing-only/latency/results/thunderbird/latency01/latency_estimates.json
+artemisia,2023,Intel x86,l1d_capacity_KiB,48.0,44.0,52.0,timing-only/capacity/results/artemisia/combined12/inference.json
+artemisia,2023,Intel x86,l2_capacity_KiB,2048.0,2048.0,2304.0,timing-only/capacity/results/artemisia/combined12/inference.json
+artemisia,2023,Intel x86,l2_l1_latency_ratio,3.1265060240963853,3.1049475262368817,3.1435045317220545,timing-only/latency/results/artemisia/latency01/latency_estimates.json

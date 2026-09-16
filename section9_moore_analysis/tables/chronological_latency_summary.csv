@@ -1,0 +1,9 @@
+year,host,native_unit,l1_hit,l2_hit,llc_hit,l1_miss,l2_miss,llc_miss,l2_l1_ratio,absolute_ns_available,note
+2014,sunbird,TSC ticks / dependent load,4.15625,12.15625,41.734375,8.015625,29.5625,168.0625,2.924812030075188,False,Hits are resident medians; misses are incremental differences of medians
+2015,charnwood,TSC ticks / dependent load,5.28125,15.3984375,43.515625,10.140625,28.1640625,264.1640625,2.915680473372781,False,Hits are resident medians; misses are incremental differences of medians
+2016,ookay,TSC ticks / dependent load,3.671875,10.7109375,30.9765625,7.0546875,20.21875,201.875,2.9170212765957446,False,Hits are resident medians; misses are incremental differences of medians
+2017,upgrade,TSC ticks / dependent load,3.03125,8.84765625,26.29296875,5.82421875,17.421875,178.46484375,2.9188144329896906,False,Hits are resident medians; misses are incremental differences of medians
+2018,crux,TSC ticks / dependent load,2.73046875,7.796875,26.203125,5.21875,18.515625,179.046875,2.855507868383405,False,Hits are resident medians; misses are incremental differences of medians
+2019,skylark,TSC ticks / dependent load,3.1875,8.4375,27.09375,5.15625,18.65625,243.9375,2.6470588235294117,False,Hits are resident medians; misses are incremental differences of medians
+2020,thunderbird,CNTVCT ticks / dependent load,0.03515625,0.1171875,0.9609375,0.08203125,0.84375,1.40625,3.3333333333333335,True,Hits are resident medians; misses are incremental differences of medians
+2023,artemisia,TSC ticks / dependent load,5.1875,16.21875,62.8828125,11.03125,46.65625,191.578125,3.1265060240963853,False,Hits are resident medians; misses are incremental differences of medians

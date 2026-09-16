@@ -1,0 +1,9 @@
+year,host,vendor_ISA_group,microarchitecture,L1D_KiB_per_core,L2_KiB_per_core,LLC_effective_transition_low_MiB,LLC_effective_transition_high_MiB,LLC_physical_capacity_inferred,line_size_inferred,line_size_candidate_bytes,inclusion_policy
+2014,sunbird,Intel x86,Haswell server,32.0,256.0,16.0,64.0,,,64,uncertain
+2015,charnwood,Intel x86,Skylake desktop,32.0,256.0,4.0,8.0,,,64,uncertain
+2016,ookay,Intel x86,Kaby Lake,32.0,256.0,5.0,8.0,,,64,uncertain
+2017,upgrade,Intel x86,Coffee Lake,32.0,256.0,7.0,8.0,,,64,uncertain
+2018,crux,Intel x86,Coffee Lake refresh,32.0,256.0,4.0,16.0,,,64,uncertain
+2019,skylark,AMD x86,Zen 2 / Rome,32.0,512.0,16.0,32.0,,,64,uncertain
+2020,thunderbird,Arm / Ampere,Neoverse N1 / Altra,64.0,1024.0,32.0,64.0,,,64,uncertain
+2023,artemisia,Intel x86,Sapphire Rapids,48.0,2048.0,32.0,64.0,,,64,uncertain

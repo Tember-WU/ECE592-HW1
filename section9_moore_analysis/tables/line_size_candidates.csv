@@ -1,0 +1,9 @@
+host,year,group,timing_inferred_line_bytes,existing_candidate_bytes,status,source
+sunbird,2014,Intel x86,,64,64 B candidate; exact line size not established by saved inference,timing-only/line_size/data/sunbird/stats/all_stats.csv
+charnwood,2015,Intel x86,,64,64 B candidate; exact line size not established by saved inference,timing-only/line_size/data/charnwood/stats/all_stats.csv
+ookay,2016,Intel x86,,64,64 B candidate; exact line size not established by saved inference,timing-only/line_size/data/ookay/stats/all_stats.csv
+upgrade,2017,Intel x86,,64,64 B candidate; exact line size not established by saved inference,timing-only/line_size/data/upgrade/stats/all_stats.csv
+crux,2018,Intel x86,,64,64 B candidate; exact line size not established by saved inference,timing-only/line_size/data/crux/stats/all_stats.csv
+skylark,2019,AMD x86,,64,64 B candidate; exact line size not established by saved inference,timing-only/line_size/data/skylark/stats/all_stats.csv
+thunderbird,2020,Arm / Ampere,,64,64 B candidate; exact line size not established by saved inference,timing-only/line_size/data/thunderbird/stats/all_stats.csv
+artemisia,2023,Intel x86,,64,64 B candidate; exact line size not established by saved inference,timing-only/line_size/data/artemisia/stats/all_stats.csv

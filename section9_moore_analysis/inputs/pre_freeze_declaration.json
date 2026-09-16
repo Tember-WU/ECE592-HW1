@@ -1,0 +1,9 @@
+{
+  "recorded_at_utc": "2026-09-16T18:56:33.504500+00:00",
+  "team_declaration_english": "The user states that neither they nor their teammate has run Hazel cache experiments or viewed Hazel target cache specifications or cache counter results.",
+  "basis": "User response in this conversation; not an independent audit of team activity",
+  "assistant_activity": "Read local lab results and assignment; researched target launch dates only. No Hazel login, Slurm query, job submission or cache experiment.",
+  "incidental_exposure_note": "An AMD launch-date search result included a relative L3 marketing comparison. No exact target cache geometry was collected, and neither that comparison nor any target cache specification was used in numerical models.",
+  "numeric_training_inputs": "Only eight ECE lab hosts; no Hazel measurements or published target cache values",
+  "assignment_sha256": "4b4dc98cd3cb05eb2fd0bd406b9e8278d4aa8bdd9b1a341fe8aec65564d4a86c"
+}

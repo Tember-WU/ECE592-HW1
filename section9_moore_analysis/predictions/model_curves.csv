@@ -1,0 +1,604 @@
+year,metric,prediction,low,high,role
+2014.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.0,l2_capacity_KiB,154.49631005736538,75.91446713392153,314.4210941932033,model evaluation within lab year range
+2014.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.05,l2_capacity_KiB,156.73057708138094,77.01231335756309,318.9681327739301,model evaluation within lab year range
+2014.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.1,l2_capacity_KiB,158.9971552274728,78.12603621679555,323.58092890157866,model evaluation within lab year range
+2014.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.15,l2_capacity_KiB,161.29651176684092,79.25586531350483,328.2604335368672,model evaluation within lab year range
+2014.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.2,l2_capacity_KiB,163.62912072815254,80.40203356997667,333.007611392883,model evaluation within lab year range
+2014.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.25,l2_capacity_KiB,165.99546299532918,81.56477727694603,337.8234411340919,model evaluation within lab year range
+2014.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.3,l2_capacity_KiB,168.39602640664273,82.74433614228975,342.7089155780131,model evaluation within lab year range
+2014.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.35,l2_capacity_KiB,170.83130585529696,83.94095334044893,347.66504189991537,model evaluation within lab year range
+2014.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.4,l2_capacity_KiB,173.30180339146486,85.15487556256682,352.69284184047774,model evaluation within lab year range
+2014.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.45,l2_capacity_KiB,175.80802832574457,86.38635306732371,357.793351916336,model evaluation within lab year range
+2014.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.5,l2_capacity_KiB,178.3504973342248,87.63563973256265,362.9676236339054,model evaluation within lab year range
+2014.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.55,l2_capacity_KiB,180.92973456495653,88.90299310760616,368.21672370606507,model evaluation within lab year range
+2014.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.6,l2_capacity_KiB,183.5462717460211,90.18867446635741,373.5417342720912,model evaluation within lab year range
+2014.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.65,l2_capacity_KiB,186.2006482951616,91.49294886116957,378.94375312077216,model evaluation within lab year range
+2014.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.7,l2_capacity_KiB,188.89341143093958,92.81608517746443,384.42389391662715,model evaluation within lab year range
+2014.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.75,l2_capacity_KiB,191.6251162856202,94.15835618920075,389.9832864296435,model evaluation within lab year range
+2014.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.8,l2_capacity_KiB,194.3963260195688,95.52003861508476,395.6230767680887,model evaluation within lab year range
+2014.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.85,l2_capacity_KiB,197.2076119373621,96.90141317562367,401.3444276148132,model evaluation within lab year range
+2014.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.9,l2_capacity_KiB,200.05955360558008,98.30276465100458,407.1485184669723,model evaluation within lab year range
+2014.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2014.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2014.95,l2_capacity_KiB,202.95273897223544,99.72438193977834,413.0365458790818,model evaluation within lab year range
+2014.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.0,l2_capacity_KiB,205.88776448806124,101.16655811845631,419.00972370985505,model evaluation within lab year range
+2015.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.05,l2_capacity_KiB,208.86523522942167,102.62959050190477,425.0692833723427,model evaluation within lab year range
+2015.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.1,l2_capacity_KiB,211.88576502306577,104.11378070464478,431.21647408782394,model evaluation within lab year range
+2015.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.15,l2_capacity_KiB,214.94997657268624,105.61943470303915,437.4525631433708,model evaluation within lab year range
+2015.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.2,l2_capacity_KiB,218.058501587238,107.14686289834387,443.7788361529942,model evaluation within lab year range
+2015.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.25,l2_capacity_KiB,221.21198091125362,108.69638018074109,450.196597322853,model evaluation within lab year range
+2015.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.3,l2_capacity_KiB,224.41106465690203,110.26830599422824,456.7071697200124,model evaluation within lab year range
+2015.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.35,l2_capacity_KiB,227.65641233802765,111.86296440248071,463.3118955452312,model evaluation within lab year range
+2015.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.4,l2_capacity_KiB,230.9486930061291,113.48068415566726,470.01213640969735,model evaluation within lab year range
+2015.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.45,l2_capacity_KiB,234.2885853882287,115.12179875819461,476.8092736156111,model evaluation within lab year range
+2015.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.5,l2_capacity_KiB,237.6767780268866,116.78664653750589,483.70470844113294,model evaluation within lab year range
+2015.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.55,l2_capacity_KiB,241.11396942208924,118.47557071379995,490.6998624291459,model evaluation within lab year range
+2015.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.6,l2_capacity_KiB,244.6008681752649,120.18891947079601,497.7961776803472,model evaluation within lab year range
+2015.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.65,l2_capacity_KiB,248.13819313538306,121.92704602752207,504.99511715058,model evaluation within lab year range
+2015.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.7,l2_capacity_KiB,251.72667354708568,123.69030871110182,512.2981649523008,model evaluation within lab year range
+2015.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.75,l2_capacity_KiB,255.36704920112274,125.47907103067381,519.7068266607365,model evaluation within lab year range
+2015.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.8,l2_capacity_KiB,259.060070586801,127.29370175229973,527.2226296241388,model evaluation within lab year range
+2015.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.85,l2_capacity_KiB,262.80649904671895,129.1345749749963,534.84712327869,model evaluation within lab year range
+2015.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.9,l2_capacity_KiB,266.6071069337405,131.00207020786686,542.5818794679668,model evaluation within lab year range
+2015.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2015.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2015.95,l2_capacity_KiB,270.4626777701512,132.89657244830565,550.4284927668444,model evaluation within lab year range
+2015.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.0,l2_capacity_KiB,274.374006409291,134.81847226141895,558.3885808104419,model evaluation within lab year range
+2016.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.05,l2_capacity_KiB,278.3418991993499,136.76816586050882,566.4637846274677,model evaluation within lab year range
+2016.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.1,l2_capacity_KiB,282.3671741496193,138.74605518876373,574.6557689785649,model evaluation within lab year range
+2016.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.15,l2_capacity_KiB,286.45066109914956,140.7525480021313,582.9662226995517,model evaluation within lab year range
+2016.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.2,l2_capacity_KiB,290.5932018877525,142.7880579533435,591.3968590494354,model evaluation within lab year range
+2016.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.25,l2_capacity_KiB,294.79565052966393,144.85300467724855,599.9494160638386,model evaluation within lab year range
+2016.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.3,l2_capacity_KiB,299.0588733895308,146.9478138772856,608.6256569131579,model evaluation within lab year range
+2016.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.35,l2_capacity_KiB,303.3837493610371,149.07291741325545,617.4273702660917,model evaluation within lab year range
+2016.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.4,l2_capacity_KiB,307.77117004811356,151.2287533903612,626.3563706584264,model evaluation within lab year range
+2016.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.45,l2_capacity_KiB,312.22203994866885,153.41576624948777,635.4144988669549,model evaluation within lab year range
+2016.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.5,l2_capacity_KiB,316.7372766411773,155.6344068588851,644.6036222892079,model evaluation within lab year range
+2016.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.55,l2_capacity_KiB,321.317810973765,157.8851326070788,653.9256353282701,model evaluation within lab year range
+2016.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.6,l2_capacity_KiB,325.9645872561304,160.1684074971738,663.3824597833647,model evaluation within lab year range
+2016.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.65,l2_capacity_KiB,330.6785634542425,162.4847022425227,672.9760452460905,model evaluation within lab year range
+2016.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.7,l2_capacity_KiB,335.46071138774533,164.83449436372388,682.7083695021677,model evaluation within lab year range
+2016.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.75,l2_capacity_KiB,340.3120169304353,167.21826828712955,692.5814389394361,model evaluation within lab year range
+2016.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.8,l2_capacity_KiB,345.2334802134197,169.63651544467135,702.5972889613109,model evaluation within lab year range
+2016.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.85,l2_capacity_KiB,350.22611583132255,172.08973437518304,712.757984406439,model evaluation within lab year range
+2016.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.9,l2_capacity_KiB,355.2909530514737,174.57843082718932,723.0656199744283,model evaluation within lab year range
+2016.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2016.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2016.95,l2_capacity_KiB,360.4290360260071,177.10311786312403,733.5223206574958,model evaluation within lab year range
+2016.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.0,l2_capacity_KiB,365.64142400725797,179.66431596516927,744.1302421788309,model evaluation within lab year range
+2017.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.05,l2_capacity_KiB,370.9291915660441,182.2625531425118,754.8915714368277,model evaluation within lab year range
+2017.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.1,l2_capacity_KiB,376.2934288132187,184.8983650402069,765.8085269559746,model evaluation within lab year range
+2017.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.15,l2_capacity_KiB,381.73524162442953,187.57229504961765,776.8833593442703,model evaluation within lab year range
+2017.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.2,l2_capacity_KiB,387.25575186800353,190.2848944203901,788.1183517570006,model evaluation within lab year range
+2017.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.25,l2_capacity_KiB,392.85609763637683,193.03672237417044,799.5158203677291,model evaluation within lab year range
+2017.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.3,l2_capacity_KiB,398.5374334806211,195.82834621984355,811.0781148455911,model evaluation within lab year range
+2017.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.35,l2_capacity_KiB,404.3009306484882,198.6603414705006,822.8076188397471,model evaluation within lab year range
+2017.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.4,l2_capacity_KiB,410.14777732589715,201.53329196209768,834.7067504708405,model evaluation within lab year range
+2017.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.45,l2_capacity_KiB,416.0791788817807,204.44778997376554,846.7779628292956,model evaluation within lab year range
+2017.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.5,l2_capacity_KiB,422.09635811674013,207.40443634999053,859.0237444813628,model evaluation within lab year range
+2017.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.55,l2_capacity_KiB,428.20055551502844,210.4038406244309,871.4466199819392,model evaluation within lab year range
+2017.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.6,l2_capacity_KiB,434.3930295003109,213.44662114558923,884.0491503950766,model evaluation within lab year range
+2017.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.65,l2_capacity_KiB,440.6750566951276,216.5334052043039,896.8339338220227,model evaluation within lab year range
+2017.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.7,l2_capacity_KiB,447.04793218396304,219.66482916301294,909.8036059366038,model evaluation within lab year range
+2017.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.75,l2_capacity_KiB,453.5129697804085,222.8415385870289,922.960840528937,model evaluation within lab year range
+2017.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.8,l2_capacity_KiB,460.07150229790034,226.06418837757096,936.3083500564188,model evaluation within lab year range
+2017.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.85,l2_capacity_KiB,466.7248818245171,229.3334429067912,949.8488862029762,model evaluation within lab year range
+2017.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.9,l2_capacity_KiB,473.4744800017529,232.64997615475477,963.5852404464073,model evaluation within lab year range
+2017.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2017.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2017.95,l2_capacity_KiB,480.32168830716836,236.0144718483255,977.5202446336149,model evaluation within lab year range
+2017.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.0,l2_capacity_KiB,487.26791834143717,239.42762360221118,991.6567715647859,model evaluation within lab year range
+2018.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.05,l2_capacity_KiB,494.31460211923576,242.89013506189718,1005.9977355853911,model evaluation within lab year range
+2018.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.1,l2_capacity_KiB,501.46319236449335,246.40272004872293,1020.5460931870592,model evaluation within lab year range
+2018.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.15,l2_capacity_KiB,508.71516280991494,249.9661027070577,1035.3048436171478,model evaluation within lab year range
+2018.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.2,l2_capacity_KiB,516.0720085006687,253.5810176535227,1050.2770294967877,model evaluation within lab year range
+2018.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.25,l2_capacity_KiB,523.5352461027991,257.2482101285352,1065.4657374485464,model evaluation within lab year range
+2018.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.3,l2_capacity_KiB,531.1064142157659,260.96843614988035,1080.8740987324877,model evaluation within lab year range
+2018.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.35,l2_capacity_KiB,538.7870736896707,264.7424626685855,1096.5052898917709,model evaluation within lab year range
+2018.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.4,l2_capacity_KiB,546.5788079470727,268.57106772705043,1112.3625334075891,model evaluation within lab year range
+2018.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.45,l2_capacity_KiB,554.4832233092807,272.4550406193764,1128.4490983632193,model evaluation within lab year range
+2018.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.5,l2_capacity_KiB,562.5019493277194,276.3951820541891,1144.7683011183974,model evaluation within lab year range
+2018.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.55,l2_capacity_KiB,570.6366391197329,280.39230431964097,1161.323505992724,model evaluation within lab year range
+2018.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.6,l2_capacity_KiB,578.8889697094206,284.4472314508876,1178.1181259593125,model evaluation within lab year range
+2018.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.65,l2_capacity_KiB,587.2606423734072,288.5607993999874,1195.1556233484773,model evaluation within lab year range
+2018.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.7,l2_capacity_KiB,595.7533829914187,292.73385620816333,1212.439510561206,model evaluation within lab year range
+2018.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.75,l2_capacity_KiB,604.3689424023147,296.9672621807459,1229.9733507937308,model evaluation within lab year range
+2018.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.8,l2_capacity_KiB,613.1090967648835,301.26189006445566,1247.7607587717982,model evaluation within lab year range
+2018.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.85,l2_capacity_KiB,621.9756479240477,305.61862522734515,1265.8054014959469,model evaluation within lab year range
+2018.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.9,l2_capacity_KiB,630.9704237823694,310.0383658413444,1284.11099899757,model evaluation within lab year range
+2018.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2018.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2018.95,l2_capacity_KiB,640.0952786767201,314.52202306734404,1302.6813251054923,model evaluation within lab year range
+2018.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.0,l2_capacity_KiB,649.3520937608113,319.07052124315874,1321.5202082244705,model evaluation within lab year range
+2019.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.05,l2_capacity_KiB,658.7427773928446,323.6847980740057,1340.6315321241143,model evaluation within lab year range
+2019.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.1,l2_capacity_KiB,668.269265528974,328.3658048258392,1360.0192367396367,model evaluation within lab year range
+2019.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.15,l2_capacity_KiB,677.933522122461,333.11450652148255,1379.6873189841888,model evaluation within lab year range
+2019.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.2,l2_capacity_KiB,687.7375395283817,337.931882139488,1399.6398335724932,model evaluation within lab year range
+2019.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.25,l2_capacity_KiB,697.683338914628,342.8189248160893,1419.8808938572893,model evaluation within lab year range
+2019.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.3,l2_capacity_KiB,707.7729706784108,347.7766420498579,1440.414672676972,model evaluation within lab year range
+2019.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.35,l2_capacity_KiB,718.0085148690075,352.80605590942736,1461.245403215943,model evaluation within lab year range
+2019.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.4,l2_capacity_KiB,728.392081616627,357.9082032442236,1482.377379877408,model evaluation within lab year range
+2019.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.45,l2_capacity_KiB,738.9258115672375,363.0841358981252,1503.8149591683107,model evaluation within lab year range
+2019.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.5,l2_capacity_KiB,749.6118763241601,368.3349209264482,1525.5625605980372,model evaluation within lab year range
+2019.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.55,l2_capacity_KiB,760.452478895572,373.66164081583446,1547.624667589145,model evaluation within lab year range
+2019.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.6,l2_capacity_KiB,771.449854148718,379.06539370743667,1570.0058284017466,model evaluation within lab year range
+2019.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.65,l2_capacity_KiB,782.6062692706972,384.5472936233337,1592.7106570712717,model evaluation within lab year range
+2019.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.7,l2_capacity_KiB,793.9240242356548,390.1084706960937,1615.7438343592678,model evaluation within lab year range
+2019.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.75,l2_capacity_KiB,805.4054522792425,395.7500714019086,1639.1101087189918,model evaluation within lab year range
+2019.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.8,l2_capacity_KiB,817.05292037943,401.47325879684877,1662.814297273926,model evaluation within lab year range
+2019.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.85,l2_capacity_KiB,828.8688297445245,407.2792127566605,1686.861286810966,model evaluation within lab year range
+2019.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.9,l2_capacity_KiB,840.8556163082516,413.1691302200324,1711.2560347879762,model evaluation within lab year range
+2019.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2019.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2019.95,l2_capacity_KiB,853.0157512317214,419.14422543524523,1736.003570355361,model evaluation within lab year range
+2019.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.0,l2_capacity_KiB,865.3517414132037,425.20573021065894,1761.1089953935261,model evaluation within lab year range
+2020.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.05,l2_capacity_KiB,877.8661300047246,431.3548941685514,1786.5774855642228,model evaluation within lab year range
+2020.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.1,l2_capacity_KiB,890.5614969364101,437.59298500276395,1812.4142913776602,model evaluation within lab year range
+2020.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.15,l2_capacity_KiB,903.4404594484162,443.9212887400744,1838.624739275054,model evaluation within lab year range
+2020.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.2,l2_capacity_KiB,916.5056726302556,450.3411100052046,1865.2142327262318,model evaluation within lab year range
+2020.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.25,l2_capacity_KiB,929.759829968516,456.8537722899517,1892.188253344312,model evaluation within lab year range
+2020.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.3,l2_capacity_KiB,943.2056639019067,463.4606182259197,1919.5523620153028,model evaluation within lab year range
+2020.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.35,l2_capacity_KiB,956.8459463846291,470.1630098613416,1947.312200044635,model evaluation within lab year range
+2020.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.4,l2_capacity_KiB,970.6834894578983,476.9623289419065,1975.4734903202889,model evaluation within lab year range
+2020.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.45,l2_capacity_KiB,984.721145829412,483.8599771954918,2004.042038492091,model evaluation within lab year range
+2020.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.5,l2_capacity_KiB,998.961809461835,490.85737662132533,2033.0237341693614,model evaluation within lab year range
+2020.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.55,l2_capacity_KiB,1013.4084161691585,497.95596978301694,2062.4245521345865,model evaluation within lab year range
+2020.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.6,l2_capacity_KiB,1028.0639442220024,505.15722010598444,2092.25055357529,model evaluation within lab year range
+2020.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.65,l2_capacity_KiB,1042.9314149616741,512.462612179182,2122.5078873337293,model evaluation within lab year range
+2020.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.7,l2_capacity_KiB,1058.0138934227684,519.8736520610256,2153.2027911739688,model evaluation within lab year range
+2020.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.75,l2_capacity_KiB,1073.314488965452,527.3918675900774,2184.3415930686674,model evaluation within lab year range
+2020.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.8,l2_capacity_KiB,1088.836355916211,535.0188086998876,2215.930712503085,model evaluation within lab year range
+2020.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.85,l2_capacity_KiB,1104.5826942182039,542.7560477385572,2247.976661798642,model evaluation within lab year range
+2020.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.9,l2_capacity_KiB,1120.5567500910265,550.605179792925,2280.4860474556285,model evaluation within lab year range
+2020.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2020.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2020.95,l2_capacity_KiB,1136.7618166996517,558.5678230172629,2313.46557151459,model evaluation within lab year range
+2020.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.0,l2_capacity_KiB,1153.2012348337742,566.6456189670836,2346.9220329388863,model evaluation within lab year range
+2021.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.05,l2_capacity_KiB,1169.8783935962483,574.8402329374169,2380.8623290157566,model evaluation within lab year range
+2021.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.1,l2_capacity_KiB,1186.7967311018488,583.1533543061578,2415.2934567783914,model evaluation within lab year range
+2021.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.15,l2_capacity_KiB,1203.9597351861398,591.5866968823817,2450.222514448581,model evaluation within lab year range
+2021.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.2,l2_capacity_KiB,1221.3709441242052,600.1419992595054,2485.656702899427,model evaluation within lab year range
+2021.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.25,l2_capacity_KiB,1239.0339473605557,608.8210251739391,2521.603327140804,model evaluation within lab year range
+2021.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.3,l2_capacity_KiB,1256.9523862488088,617.6255638685423,2558.0697978247103,model evaluation within lab year range
+2021.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.35,l2_capacity_KiB,1275.1299548024565,626.5574304615251,2595.0636327731804,model evaluation within lab year range
+2021.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.4,l2_capacity_KiB,1293.570400456497,635.6184663206905,2632.592458528313,model evaluation within lab year range
+2021.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.45,l2_capacity_KiB,1312.277524839658,644.8105394428793,2670.664011923846,model evaluation within lab year range
+2021.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.5,l2_capacity_KiB,1331.2551845586336,654.1355448393188,2709.2861416811907,model evaluation within lab year range
+2021.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.55,l2_capacity_KiB,1350.5072919928155,663.5954049261277,2748.4668100268163,model evaluation within lab year range
+2021.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.6,l2_capacity_KiB,1370.037816100943,673.192069920678,2788.214094333892,model evaluation within lab year range
+2021.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.65,l2_capacity_KiB,1389.8507832394207,682.9275182436894,2828.5361887876757,model evaluation within lab year range
+2021.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.7,l2_capacity_KiB,1409.9502779920203,692.8037569269181,2869.4414060740714,model evaluation within lab year range
+2021.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.75,l2_capacity_KiB,1430.3404440124868,702.822822027186,2910.9381790944476,model evaluation within lab year range
+2021.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.8,l2_capacity_KiB,1451.0254848784225,712.9867790459513,2953.035062703407,model evaluation within lab year range
+2021.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.85,l2_capacity_KiB,1472.0096649579743,723.297723355171,2995.7407354726147,model evaluation within lab year range
+2021.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.9,l2_capacity_KiB,1493.2973102890614,733.7577806293243,3039.064001480146,model evaluation within lab year range
+2021.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2021.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2021.95,l2_capacity_KiB,1514.8928094708292,744.3691072834445,3083.0137921247165,model evaluation within lab year range
+2021.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.0,l2_capacity_KiB,1536.8006145689717,755.1338909179648,3127.599167968138,model evaluation within lab year range
+2022.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.05,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.05,l2_capacity_KiB,1559.0252420331706,766.0543507695179,3172.829320602431,model evaluation within lab year range
+2022.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.1,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.1,l2_capacity_KiB,1581.5712736282892,777.1327381684952,3218.713574544933,model evaluation within lab year range
+2022.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.15,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.15,l2_capacity_KiB,1604.4433573790407,788.3713370032247,3265.261389160827,model evaluation within lab year range
+2022.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.2,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.2,l2_capacity_KiB,1627.646208527795,799.7724641906077,3312.4823606124073,model evaluation within lab year range
+2022.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.25,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.25,l2_capacity_KiB,1651.1846105072811,811.3384701540721,3360.386223838665,model evaluation within lab year range
+2022.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.3,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.3,l2_capacity_KiB,1675.0634159263138,823.0717393079269,3408.982854561373,model evaluation within lab year range
+2022.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.35,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.35,l2_capacity_KiB,1699.2875475702954,834.974690548976,3458.282271321248,model evaluation within lab year range
+2022.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.4,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.4,l2_capacity_KiB,1723.8619994161954,847.0497777552466,3508.294637543568,model evaluation within lab year range
+2022.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.45,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.45,l2_capacity_KiB,1748.7918376616462,859.2994902916531,3559.030263632526,model evaluation within lab year range
+2022.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.5,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.5,l2_capacity_KiB,1774.082201770046,871.7263535235268,3610.4996090981554,model evaluation within lab year range
+2022.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.55,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.55,l2_capacity_KiB,1799.73830552965,884.3329293370188,3662.7132847117273,model evaluation within lab year range
+2022.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.6,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.6,l2_capacity_KiB,1825.7654381285417,897.1218166673061,3715.6820546934605,model evaluation within lab year range
+2022.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.65,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.65,l2_capacity_KiB,1852.1689652451569,910.0956520344397,3769.41683893189,model evaluation within lab year range
+2022.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.7,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.7,l2_capacity_KiB,1878.9543301539738,923.2571100866447,3823.9287152340967,model evaluation within lab year range
+2022.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.75,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.75,l2_capacity_KiB,1906.127054848405,936.6089041520729,3879.228921610944,model evaluation within lab year range
+2022.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.8,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.8,l2_capacity_KiB,1933.692741178715,950.1537867979388,3935.328858592899,model evaluation within lab year range
+2022.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.85,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.85,l2_capacity_KiB,1961.6570720070026,963.8945503980397,3992.2400915805747,model evaluation within lab year range
+2022.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.9,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.9,l2_capacity_KiB,1990.0258123788915,977.8340277084872,4049.9743532292846,model evaluation within lab year range
+2022.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2022.95,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2022.95,l2_capacity_KiB,2018.8048107115185,991.9750924514457,4108.54354586676,model evaluation within lab year range
+2022.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2023.0,l1d_capacity_KiB,32.0,32.0,72.0,model evaluation within lab year range
+2023.0,l2_capacity_KiB,2048.0,1006.3206599079507,4167.959743948472,model evaluation within lab year range
+2023.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,model evaluation within lab year range
+2023.05,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.05,l2_capacity_KiB,2077.617399040047,1020.8736875186622,4228.235196545823,future extrapolation
+2023.05,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.1,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.1,l2_capacity_KiB,2107.6631136689116,1035.6371754936256,4289.382329871639,future extrapolation
+2023.1,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.15,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.15,l2_capacity_KiB,2138.143338024286,1050.6141674308535,4351.413749842205,future extrapolation
+2023.15,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.2,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.2,l2_capacity_KiB,2169.064355820714,1065.8077509435132,4414.342244674932,future extrapolation
+2023.2,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.25,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.25,l2_capacity_KiB,2200.432541645853,1081.221058296867,4478.180787526433,future extrapolation
+2023.25,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.3,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.3,l2_capacity_KiB,2232.2543622740905,1096.8572670537424,4542.942539165908,future extrapolation
+2023.3,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.35,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.35,l2_capacity_KiB,2264.5363779998515,1112.7196007296734,4608.640850688605,future extrapolation
+2023.35,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.4,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.4,l2_capacity_KiB,2297.285243990199,1128.8113294575267,4675.289266268552,future extrapolation
+2023.4,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.45,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.45,l2_capacity_KiB,2330.507711656249,1145.1357706613694,4742.90152594957,future extrapolation
+2023.45,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.5,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.5,l2_capacity_KiB,2364.2106300459122,1161.6962897408175,4811.491568479696,future extrapolation
+2023.5,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.55,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.55,l2_capacity_KiB,2398.4009472552834,1178.4963007645463,4881.073534183547,future extrapolation
+2023.55,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.6,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.6,l2_capacity_KiB,2433.0857118611852,1195.5392671741963,4951.66176787775,future extrapolation
+2023.6,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.65,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.65,l2_capacity_KiB,2468.272074374447,1212.8287024984668,5023.270821828557,future extrapolation
+2023.65,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.7,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.7,l2_capacity_KiB,2503.967288713389,1230.3681710771384,5095.915458750589,future extrapolation
+2023.7,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.75,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.75,l2_capacity_KiB,2540.1787137002298,1248.1612887963597,5169.610654852231,future extrapolation
+2023.75,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.8,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.8,l2_capacity_KiB,2576.9138145775214,1266.2117238337723,5244.371602921781,future extrapolation
+2023.8,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.85,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.85,l2_capacity_KiB,2614.180164547323,1284.523197414813,5320.21371545988,future extrapolation
+2023.85,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.9,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.9,l2_capacity_KiB,2651.9854463326396,1303.0994845799528,5397.152627857257,future extrapolation
+2023.9,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2023.95,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2023.95,l2_capacity_KiB,2690.337453760585,1321.9444149626113,5475.204201616676,future extrapolation
+2023.95,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
+2024.0,l1d_capacity_KiB,32.0,32.0,72.0,future extrapolation
+2024.0,l2_capacity_KiB,2729.2440933701614,1341.0618735791686,5554.3845276249895,future extrapolation
+2024.0,l2_l1_latency_ratio,2.9179178547927176,2.588235294117647,3.3333333333333335,future extrapolation
