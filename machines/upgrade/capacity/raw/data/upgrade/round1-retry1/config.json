@@ -1,0 +1,180 @@
+{
+  "machine": "upgrade",
+  "hostname": "upgrade",
+  "isa": "x86_64",
+  "cpu": 2,
+  "numa_node": 0,
+  "capacity": {
+    "defaults": {
+      "samples": 1000000,
+      "batch": 256,
+      "spacing": 64,
+      "seed": 59201,
+      "pages": "huge",
+      "mode": "random"
+    },
+    "sweeps": {
+      "coarse": {
+        "order_seed": 592,
+        "points": [
+          {
+            "bytes": 2048,
+            "mode": "random"
+          },
+          {
+            "bytes": 2048,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 4096,
+            "mode": "random"
+          },
+          {
+            "bytes": 4096,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 8192,
+            "mode": "random"
+          },
+          {
+            "bytes": 8192,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 16384,
+            "mode": "random"
+          },
+          {
+            "bytes": 16384,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 32768,
+            "mode": "random"
+          },
+          {
+            "bytes": 32768,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 65536,
+            "mode": "random"
+          },
+          {
+            "bytes": 65536,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 131072,
+            "mode": "random"
+          },
+          {
+            "bytes": 131072,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 262144,
+            "mode": "random"
+          },
+          {
+            "bytes": 262144,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 524288,
+            "mode": "random"
+          },
+          {
+            "bytes": 524288,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 1048576,
+            "mode": "random"
+          },
+          {
+            "bytes": 1048576,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 2097152,
+            "mode": "random"
+          },
+          {
+            "bytes": 2097152,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 4194304,
+            "mode": "random"
+          },
+          {
+            "bytes": 4194304,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 8388608,
+            "mode": "random"
+          },
+          {
+            "bytes": 8388608,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 16777216,
+            "mode": "random"
+          },
+          {
+            "bytes": 16777216,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 33554432,
+            "mode": "random"
+          },
+          {
+            "bytes": 33554432,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 67108864,
+            "mode": "random"
+          },
+          {
+            "bytes": 67108864,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 134217728,
+            "mode": "random"
+          },
+          {
+            "bytes": 134217728,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 268435456,
+            "mode": "random"
+          },
+          {
+            "bytes": 268435456,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 536870912,
+            "mode": "random"
+          },
+          {
+            "bytes": 536870912,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 2048,
+            "mode": "empty"
+          }
+        ]
+      }
+    }
+  }
+}

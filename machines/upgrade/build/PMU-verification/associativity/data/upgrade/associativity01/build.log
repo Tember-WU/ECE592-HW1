@@ -1,0 +1,3 @@
+mkdir -p build/upgrade
+g++ -O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/associativity_bench.cpp -o build/upgrade/associativity_pmu
+objdump -d -Mintel build/upgrade/associativity_pmu > build/upgrade/associativity_pmu.dis

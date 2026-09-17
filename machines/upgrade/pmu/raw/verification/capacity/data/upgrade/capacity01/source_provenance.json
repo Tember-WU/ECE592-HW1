@@ -1,0 +1,61 @@
+{
+  "archived_utc": "2026-09-14T15:42:09.712309+00:00",
+  "files": [
+    {
+      "path": "source/capacity/Makefile",
+      "sha256": "671e76de26198a8af05db0e1ff124c7558894f2b57f06832d47b40cad779427c"
+    },
+    {
+      "path": "source/capacity/scripts/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/capacity/scripts/analyze_capacity.py",
+      "sha256": "12cc41d6f7c2f70f06c09a6461f60442f4fef71935e5332d3fb903357895e55c"
+    },
+    {
+      "path": "source/capacity/scripts/common.py",
+      "sha256": "8fe3c720b5f213246669b4696bc421d910572f5fabccfbde6b55d0bb9c6bc813"
+    },
+    {
+      "path": "source/capacity/scripts/run_capacity.py",
+      "sha256": "cca98f1e1a5f987731d10c12389051a399636a600585484b933477d7cc6878a2"
+    },
+    {
+      "path": "source/capacity/src/cache_bench.c",
+      "sha256": "e6be345e4ac5be4d73405a675f61f1eb5ee9f78acb9e5cfd4f4cb35b2d2ddae2"
+    },
+    {
+      "path": "source/capacity/src/pmu.h",
+      "sha256": "8aeaa772c6c16d7487c0c7d83e663f1b3c4cf3d8454bf71ca2231a15d2255504"
+    },
+    {
+      "path": "source/capacity/tests/test_capacity.py",
+      "sha256": "0e2dcb0ef60eb5be7c7d5536acc7d938546bdf1addc19f545f42c5700ec524db"
+    },
+    {
+      "path": "source/common/analyze_verification.py",
+      "sha256": "dcc373de6c4321a119fc404f977d4971b659e059489ee64c475581e59ce97497"
+    },
+    {
+      "path": "source/common/measurement.hpp",
+      "sha256": "606f58fad2048c893cac3f8ca209b951ae123e55a2fa56e29fad28ef48361060"
+    },
+    {
+      "path": "source/common/pmu.hpp",
+      "sha256": "98df180a618991e9eee63aa7b570dfefe86ce7d0fb0f17452f8ee3724a1492fd"
+    },
+    {
+      "path": "source/common/run_verification.py",
+      "sha256": "bbab0719f4284337147636e414d144e50c62a66c2bd312dd592324dadcd600de"
+    },
+    {
+      "path": "source/common/test_verification.py",
+      "sha256": "856b12ae9a94484e7d487bb279c692ecf50399f7ce5b8116c0d761c6918a4b19"
+    },
+    {
+      "path": "cache_capacity_pmu.bin",
+      "sha256": "1c10d50aa3cd2b56661f2cb3bd97c0f70336303040016e7724e8be4e76058a59"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "started_utc": "2026-09-14T15:32:48.923008+00:00",
+  "reason": "Upgrade associativity Phase-I data were missing; collect before freezing Phase I and running formal PMU verification.",
+  "samples_per_k": 1000000,
+  "candidate_sets": {
+    "L1": [
+      64
+    ],
+    "L2": [
+      256,
+      512,
+      1024
+    ]
+  },
+  "cpu": 2,
+  "numa_node": 0,
+  "smt_sibling": 8,
+  "memory_policy": "Parent launched under numactl --membind=0; original worker uses taskset -c 2.",
+  "finished_utc": "2026-09-14T15:33:52.063670+00:00",
+  "source_sha256": {
+    "source/scripts/run_associativity.py": "053c2cabebea9401267e436664252ecc0d927d619b959fea5d56e3477ec99321",
+    "source/src/timer_compat.h": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+    "source/src/associativity_bench.cpp": "fa9d4d7d1bb0c060a8a7e16533921c054f4699b963e72e3cebb32258ec7ebbb3",
+    "source/src/Makefile": "48cbd9159aff28f563160191eabcfd8714ea85f51be98d83a31fa83ec4de73b8"
+  },
+  "binary_sha256": "1fe6c93ab249dad08e415a05600927bc611b19fc26e7b7cc9ba130608e77c72b"
+}

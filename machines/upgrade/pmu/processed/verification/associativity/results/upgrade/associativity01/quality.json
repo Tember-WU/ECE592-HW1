@@ -1,0 +1,105 @@
+{
+  "preflight_busy_percent": {
+    "2": 0.0,
+    "8": 0.0
+  },
+  "max_sibling_busy_percent": 0.7575757575757576,
+  "total_involuntary_switches": 64,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "L2_candidate_k8": 1.0705596107055961,
+    "L1_k6": 1.0012180267965896,
+    "L2_sets512_k9": 1.0480847595762022,
+    "L2_candidate_k10": 1.022053756030324,
+    "L2_candidate_k7": 1.0463414634146342,
+    "L1_k10": 1.023432115782219,
+    "L2_candidate_k17": 1.0274588117823265,
+    "L1_k8": 1.0012165450121655,
+    "L2_candidate_k9": 1.0454232622161046,
+    "L2_sets512_k8": 1.0462287104622872,
+    "L1_k9": 1.044735030970406,
+    "L2_sets1024_k8": 1.0451843043995244,
+    "L2_candidate_k18": 1.0469916556873078,
+    "L2_candidate_k16": 1.0455172413793103,
+    "L2_sets1024_k9": 1.044334975369458,
+    "L1_k7": 1.023170731707317,
+    "L2_sets512_k10": 1.0467133800467132,
+    "L2_sets1024_k10": 1.0449008836876044
+  },
+  "huge_kib": {
+    "L2_candidate_k8": [
+      2048,
+      2048
+    ],
+    "L1_k6": [
+      2048,
+      2048
+    ],
+    "L2_sets512_k9": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k10": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k7": [
+      2048,
+      2048
+    ],
+    "L1_k10": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k17": [
+      2048,
+      2048
+    ],
+    "L1_k8": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k9": [
+      2048,
+      2048
+    ],
+    "L2_sets512_k8": [
+      2048,
+      2048
+    ],
+    "L1_k9": [
+      2048,
+      2048
+    ],
+    "L2_sets1024_k8": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k18": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k16": [
+      2048,
+      2048
+    ],
+    "L2_sets1024_k9": [
+      2048,
+      2048
+    ],
+    "L1_k7": [
+      2048,
+      2048
+    ],
+    "L2_sets512_k10": [
+      2048,
+      2048
+    ],
+    "L2_sets1024_k10": [
+      2048,
+      2048
+    ]
+  },
+  "caveat": "CPU 2/node 0 matches the newly completed and frozen Upgrade Phase-I associativity baseline; SMT sibling CPU 8. PMU loop totals include helper loads."
+}

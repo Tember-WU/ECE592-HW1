@@ -1,0 +1,23 @@
+{
+  "recorded_utc": "2026-09-10T20:53:22.319879+00:00",
+  "cpu_busy_percent": {
+    "cpu6": 1.0,
+    "cpu4": 0.0,
+    "cpu8": 0.0,
+    "cpu2": 0.0,
+    "cpu11": 1.0,
+    "cpu7": 1.98,
+    "cpu1": 0.0,
+    "cpu9": 2.0,
+    "cpu10": 0.0,
+    "cpu3": 100.0,
+    "cpu0": 2.97,
+    "cpu5": 1.01
+  },
+  "cpu_frequency": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "4308218",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4600000"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "recorded_utc": "2026-09-10T20:52:14.945168+00:00",
+  "observation_seconds": 3,
+  "cpu": 2,
+  "numa_node": 0,
+  "smt_sibling": 8,
+  "cpu_busy_percent": {
+    "cpu0": 0.0,
+    "cpu1": 1.333,
+    "cpu2": 0.0,
+    "cpu3": 100.0,
+    "cpu4": 0.333,
+    "cpu5": 0.667,
+    "cpu6": 0.332,
+    "cpu7": 0.0,
+    "cpu8": 0.333,
+    "cpu9": 0.332,
+    "cpu10": 0.664,
+    "cpu11": 0.997
+  },
+  "processes": [
+    "    PID PSR %CPU COMMAND",
+    " 133471   3  103 cache_bench",
+    "   1755  10  4.2 CrashPlanServic",
+    " 128704   4  1.2 claude",
+    " 129390   8  0.7 code-645f29cc31",
+    "    115   2  0.6 kswapd0",
+    " 129412   5  0.4 MainThread",
+    " 129799  10  0.4 MainThread",
+    " 125484  11  0.3 MainThread",
+    " 126002   8  0.3 MainThread",
+    " 133541   8  0.3 python3",
+    " 113770   7  0.2 MainThread",
+    " 126207  10  0.2 cpptools",
+    " 128502   6  0.2 MainThread",
+    "   1144   5  0.1 systemd-oomd"
+  ],
+  "dependency_environment": "Reused capacity/.venv with pinned NumPy/Matplotlib and locally extracted numactl; no system installation or tuning."
+}

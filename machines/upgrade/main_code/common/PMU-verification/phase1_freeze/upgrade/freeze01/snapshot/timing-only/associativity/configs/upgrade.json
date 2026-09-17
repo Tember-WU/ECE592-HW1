@@ -1,0 +1,23 @@
+{
+  "hostname": "upgrade",
+  "arch": "x86_64",
+  "cpu_config_note": "Intel Core i7-8700 (Coffee Lake) -- Table 1: 2017, x86-64, single socket",
+  "pinned_cpu": 2,
+  "pinned_core": 2,
+  "pinned_socket": 0,
+  "pinned_node": 0,
+  "smt_sibling_note": "CPU 8 is the SMT sibling of CPU 2.",
+  "line_size_group_window": 512,
+  "notes": "Prepared on upgrade for a missing Phase-I prerequisite before formal PMU verification. Existing candidate lists are retained as timing hypotheses: L1 [64], L2 [256,512,1024], K=1..16, 64 B spacing from the saved line-size curve, batch 128, one million repetitions. Capacity inference is 32 KiB L1D / 256 KiB L2. No system/vendor cache geometry consulted to select these candidates.",
+  "assoc_l1_num_sets_candidates": [
+    64
+  ],
+  "assoc_l2_num_sets_candidates": [
+    256,
+    512,
+    1024
+  ],
+  "assoc_llc_num_sets_candidates": [],
+  "assoc_llc_max_k": 24,
+  "llc_notes": "LLC associativity is outside this bounded L1/L2 conflict experiment; effective LLC capacity from the earlier scan is not sufficient to assert a physical set mapping."
+}

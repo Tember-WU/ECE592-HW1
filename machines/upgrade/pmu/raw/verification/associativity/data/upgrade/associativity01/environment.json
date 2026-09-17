@@ -1,0 +1,31 @@
+{
+  "hostname": "upgrade.ece.ncsu.edu",
+  "kernel": "6.8.0-138-generic",
+  "cpu": 2,
+  "numa_node": 0,
+  "isa": "x86_64",
+  "siblings": [
+    2,
+    8
+  ],
+  "preflight_busy_percent": {
+    "2": 0.0,
+    "8": 0.0
+  },
+  "socket": "0",
+  "core": "2",
+  "frequency": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "800000",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4600000"
+  },
+  "compiler": "g++ (Ubuntu 12.3.0-1ubuntu1~22.04.3) 12.3.0",
+  "perf_version": "perf version 6.8.12",
+  "python": "3.10.12",
+  "numpy": "1.26.3",
+  "flags": "-O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+  "timer_unit": "TSC ticks / timed chain load",
+  "placement_note": "CPU 2/node 0 matches the newly completed and frozen Upgrade Phase-I associativity baseline; SMT sibling CPU 8.",
+  "counting_scope": "User mode, calling thread, entire sample loop; includes stack/helper loads and associativity preparation loads."
+}

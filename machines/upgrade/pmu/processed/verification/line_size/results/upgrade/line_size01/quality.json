@@ -1,0 +1,75 @@
+{
+  "preflight_busy_percent": {
+    "4": 0.0,
+    "10": 2.0
+  },
+  "max_sibling_busy_percent": 1.0025062656641603,
+  "total_involuntary_switches": 308,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "random_s64_a16": 1.0213297783702717,
+    "random_s96_a0": 1.0204580152671756,
+    "random_s64_a0": 1.0631336025714992,
+    "random_s56_a16": 1.0478423117405034,
+    "fully_random_s64": 1.0244078326954014,
+    "sequential_s72": 1.010693641618497,
+    "sequential_s64": 1.0148133319987989,
+    "random_s72_a0": 1.030229840280483,
+    "random_s56_a0": 1.0448476871004138,
+    "random_s32_a0": 1.0257510729613735,
+    "random_s72_a16": 1.0120445189815521,
+    "sequential_s56": 1.0154716981132075
+  },
+  "huge_kib": {
+    "random_s64_a16": [
+      0,
+      0
+    ],
+    "random_s96_a0": [
+      0,
+      0
+    ],
+    "random_s64_a0": [
+      0,
+      0
+    ],
+    "random_s56_a16": [
+      0,
+      0
+    ],
+    "fully_random_s64": [
+      0,
+      0
+    ],
+    "sequential_s72": [
+      0,
+      0
+    ],
+    "sequential_s64": [
+      0,
+      0
+    ],
+    "random_s72_a0": [
+      0,
+      0
+    ],
+    "random_s56_a0": [
+      0,
+      0
+    ],
+    "random_s32_a0": [
+      0,
+      0
+    ],
+    "random_s72_a16": [
+      0,
+      0
+    ],
+    "sequential_s56": [
+      0,
+      0
+    ]
+  },
+  "caveat": "CPU 4/node 0 matches the original Upgrade line-size pinning manifest. The actual SMT sibling is CPU 10; the old no-SMT statement is incorrect. PMU loop totals include helper loads."
+}

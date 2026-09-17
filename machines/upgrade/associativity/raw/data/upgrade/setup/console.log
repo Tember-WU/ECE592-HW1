@@ -1,0 +1,100 @@
+Hostname: upgrade
+Loading config: /home/swu35/ECE592-HW1/timing-only/associativity/configs/upgrade.json
+NOTE: assoc_llc_num_sets_candidates not set in this machine's config -- skipping LLC associativity. Fill it in (from a real measured LLC capacity plateau) once available.
+Running: taskset -c 2 /home/swu35/ECE592-HW1/timing-only/associativity/data/upgrade/setup/associativity_bench.bin --num_sets 64 --line_size 64 --max_k 16 --samples 1000000 --warmup 1000 --batch 128 --seed 701 --output raw_data/l1_associativity_candidate64.csv
+Hit threshold (95%): 873 ticks (batch size 128)
+Miss threshold (5%): 1476 ticks
+K=1 P=0.000658 med=6.67188
+K=2 P=0.000523 med=6.42188
+K=3 P=0.000561 med=6.44531
+K=4 P=0.000586 med=6.44531
+K=5 P=0.000489 med=6.42188
+K=6 P=0.000502 med=6.67969
+K=7 P=0.000467 med=6.44531
+K=8 P=0.000637 med=6.44531
+K=9 P=0.999996 med=11.3672
+K=10 P=1 med=11.3359
+K=11 P=1 med=11.3984
+K=12 P=1 med=11.3672
+K=13 P=1 med=11.3203
+K=14 P=1 med=11.3203
+K=15 P=1 med=11.5781
+K=16 P=1 med=11.3516
+num_sets=64: has_edge=True inferred_ways=8 largest_jump=0.999
+SELECTED L1: num_sets=64 -> inferred ways=8 (copied raw_data/l1_associativity_candidate64.csv -> raw_data/l1_associativity.csv)
+Running (boundary raw dump): taskset -c 2 /home/swu35/ECE592-HW1/timing-only/associativity/data/upgrade/setup/associativity_bench.bin --num_sets 64 --line_size 64 --max_k 16 --samples 1000000 --warmup 1000 --batch 128 --seed 701 --output raw_data/l1_boundary_summary_tmp.csv --raw_output raw_data/l1_associativity_boundary_raw.csv --raw_ks 7,8,9 --only_ks 7,8,9
+Hit threshold (95%): 838 ticks (batch size 128)
+Miss threshold (5%): 1444 ticks
+K=7 P=0.000593 med=6.54688
+K=8 P=0.000776 med=6.51562
+K=9 P=0.999998 med=11.3984
+Running: taskset -c 2 /home/swu35/ECE592-HW1/timing-only/associativity/data/upgrade/setup/associativity_bench.bin --num_sets 256 --line_size 64 --max_k 16 --samples 1000000 --warmup 1000 --batch 128 --seed 701 --output raw_data/l2_associativity_candidate256.csv
+Hit threshold (95%): 866 ticks (batch size 128)
+Miss threshold (5%): 1509 ticks
+K=1 P=0.000534 med=6.54688
+K=2 P=0.000585 med=6.45312
+K=3 P=0.000625 med=6.45312
+K=4 P=0.000631 med=6.40625
+K=5 P=0.0006 med=6.53125
+K=6 P=0.000644 med=6.48438
+K=7 P=0.001432 med=6.57812
+K=8 P=0.000457 med=6.40625
+K=9 P=0.999992 med=11.3828
+K=10 P=1 med=11.5391
+K=11 P=1 med=11.3516
+K=12 P=1 med=11.3672
+K=13 P=1 med=11.5859
+K=14 P=1 med=11.5078
+K=15 P=1 med=11.3672
+K=16 P=1 med=11.3672
+num_sets=256: has_edge=True inferred_ways=8 largest_jump=1.000
+Running: taskset -c 2 /home/swu35/ECE592-HW1/timing-only/associativity/data/upgrade/setup/associativity_bench.bin --num_sets 512 --line_size 64 --max_k 16 --samples 1000000 --warmup 1000 --batch 128 --seed 701 --output raw_data/l2_associativity_candidate512.csv
+Hit threshold (95%): 895 ticks (batch size 128)
+Miss threshold (5%): 3996 ticks
+K=1 P=0.000448 med=6.40625
+K=2 P=0.000506 med=6.42188
+K=3 P=0.000598 med=6.45312
+K=4 P=0.000517 med=6.52344
+K=5 P=0.000561 med=6.45312
+K=6 P=0.000529 med=6.42188
+K=7 P=0.000598 med=6.45312
+K=8 P=0.000507 med=6.42188
+K=9 P=0.000938 med=9.92969
+K=10 P=0.999836 med=23.8359
+K=11 P=1 med=30.1016
+K=12 P=1 med=33.9531
+K=13 P=1 med=32.4297
+K=14 P=1 med=32.4766
+K=15 P=1 med=32.1953
+K=16 P=1 med=31.9922
+num_sets=512: has_edge=True inferred_ways=9 largest_jump=0.999
+Running: taskset -c 2 /home/swu35/ECE592-HW1/timing-only/associativity/data/upgrade/setup/associativity_bench.bin --num_sets 1024 --line_size 64 --max_k 16 --samples 1000000 --warmup 1000 --batch 128 --seed 701 --output raw_data/l2_associativity_candidate1024.csv
+Hit threshold (95%): 834 ticks (batch size 128)
+Miss threshold (5%): 4203 ticks
+K=1 P=0.000441 med=6.53906
+K=2 P=0.000601 med=6.50781
+K=3 P=0.000482 med=6.58594
+K=4 P=0.000474 med=6.51562
+K=5 P=0.000683 med=6.45312
+K=6 P=0.000439 med=6.48438
+K=7 P=0.000586 med=6.57812
+K=8 P=0.000493 med=6.4375
+K=9 P=0.000904 med=9.75781
+K=10 P=0.999304 med=33.2031
+K=11 P=0.999939 med=34.1953
+K=12 P=0.999997 med=33.6094
+K=13 P=1 med=33.6094
+K=14 P=1 med=33.5078
+K=15 P=1 med=33.4062
+K=16 P=1 med=33.7188
+num_sets=1024: has_edge=True inferred_ways=9 largest_jump=0.998
+SELECTED L2: num_sets=256 -> inferred ways=8 (copied raw_data/l2_associativity_candidate256.csv -> raw_data/l2_associativity.csv)
+Running (boundary raw dump): taskset -c 2 /home/swu35/ECE592-HW1/timing-only/associativity/data/upgrade/setup/associativity_bench.bin --num_sets 256 --line_size 64 --max_k 16 --samples 1000000 --warmup 1000 --batch 128 --seed 701 --output raw_data/l2_boundary_summary_tmp.csv --raw_output raw_data/l2_associativity_boundary_raw.csv --raw_ks 7,8,9 --only_ks 7,8,9
+Hit threshold (95%): 830 ticks (batch size 128)
+Miss threshold (5%): 1430 ticks
+K=7 P=0.000577 med=6.5625
+K=8 P=0.000801 med=6.42188
+K=9 P=0.999998 med=11.6172
+Plot saved to /home/swu35/ECE592-HW1/timing-only/associativity/results/upgrade/plots/associativity_plot.pdf
+Box plot saved to /home/swu35/ECE592-HW1/timing-only/associativity/results/upgrade/plots/l1_associativity_boxplot.pdf
+Box plot saved to /home/swu35/ECE592-HW1/timing-only/associativity/results/upgrade/plots/l2_associativity_boxplot.pdf

@@ -1,0 +1,8 @@
+{
+  "machine": "upgrade",
+  "hostname": "upgrade",
+  "isa": "x86_64",
+  "cpu": 2,
+  "numa_node": 0,
+  "capacity": "common/round1.json"
+}

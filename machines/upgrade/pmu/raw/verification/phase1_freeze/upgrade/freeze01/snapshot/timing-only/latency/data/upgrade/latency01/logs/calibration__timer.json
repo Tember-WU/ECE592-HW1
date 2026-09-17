@@ -1,0 +1,98 @@
+{
+  "name": "calibration__timer",
+  "group": "calibration",
+  "machine": "upgrade",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge",
+    "mode": "empty",
+    "bytes": 8192
+  },
+  "columns": [
+    "first"
+  ],
+  "raw_format": "little-endian uint64, row-major interleaved columns",
+  "raw_file": "raw/calibration__timer.u64.gz",
+  "raw_sha256": "7c16ce57d6461d452dfdb51cb4215a0d129039dc6183fbac268ce20573934f98",
+  "stats": {
+    "first": {
+      "n": 1000000,
+      "mean": 34.714763,
+      "std": 151.33439534009793,
+      "median": 34.0,
+      "q1": 34.0,
+      "q3": 35.0,
+      "p05": 32.0,
+      "p95": 37.0,
+      "p99": 38.0,
+      "minimum": 29.0,
+      "maximum": 74773.0,
+      "whisker_low": 33.0,
+      "whisker_high": 36.0,
+      "outliers": 201170,
+      "decile_medians": [
+        34.0,
+        34.0,
+        34.0,
+        34.0,
+        34.0,
+        34.0,
+        34.0,
+        34.0,
+        34.0,
+        34.0
+      ]
+    }
+  },
+  "start_utc": "2026-09-10T20:53:28.380734+00:00",
+  "elapsed_seconds": 0.0387175209907582,
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/upgrade/latency01/latency_bench.bin",
+    "8192",
+    "64",
+    "empty",
+    "1000000",
+    "256",
+    "59221",
+    "2",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/upgrade/latency01/raw/calibration__timer.u64"
+  ],
+  "cpu_busy_percent": {
+    "cpu6": 0.0,
+    "cpu4": 0.0,
+    "cpu8": 0.0,
+    "cpu2": 80.0,
+    "cpu11": 0.0,
+    "cpu7": 0.0,
+    "cpu1": 0.0,
+    "cpu9": 0.0,
+    "cpu10": 0.0,
+    "cpu3": 100.0,
+    "cpu0": 20.0,
+    "cpu5": 0.0
+  },
+  "cpu_frequency_before": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "800000",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4600000"
+  },
+  "cpu_frequency_after": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "4399993",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4600000"
+  },
+  "runtime_events": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 0
+  }
+}

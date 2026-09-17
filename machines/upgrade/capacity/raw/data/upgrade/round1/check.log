@@ -1,0 +1,60 @@
+python3 -m unittest discover -s tests -v
+test_affinity_checks_actual_permission_and_restores_inherited_mask (test_capacity.CapacityTests) ... ok
+test_analysis_recomputes_raw_and_handles_custom_layout_and_one_boundary (test_capacity.CapacityTests) ... /home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2010: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.space          = oneOf(self._space_widths)("space")
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2012: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.style_literal  = oneOf(
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2020: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'
+  )("sym").leaveWhitespace()
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2024: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.start_group    = Optional(r"\math" + oneOf(self._fontnames)("font")) + "{"
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2027: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  p.delim          = oneOf(self._delims)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:1984: PyparsingDeprecationWarning: 'setName' deprecated - use 'set_name'
+  val.setName(key)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:1987: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+  val.setParseAction(getattr(self, key))
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:1748: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+  return Empty().setParseAction(raise_error)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2088: PyparsingDeprecationWarning: 'endQuoteChar' argument is deprecated, use 'end_quote_char'
+  p.text = cmd(r"\text", QuotedString('{', '\\', endQuoteChar="}"))
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2097: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  + OneOrMore(oneOf(["_", "^"]) - p.placeable)("subsuper")
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2146: PyparsingDeprecationWarning: 'unquoteResults' argument is deprecated, use 'unquote_results'
+  p.math_string   = QuotedString('$', '\\', unquoteResults=False)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2147: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'
+  p.non_math      = Regex(r"(?:(?:\\[$])|[^$])*").leaveWhitespace()
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2170: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2197: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1], parseAll=True)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/pyparsing/util.py:466: PyparsingDeprecationWarning: 'parseAll' argument is deprecated, use 'parse_all'
+  return fn(self, *args, **kwargs)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2178: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  ParserElement.resetCache()
+ok
+test_combining_rounds_preserves_repeat_identity_and_rejects_environment_changes (test_capacity.CapacityTests) ... ok
+test_dry_run_does_not_build_or_create_output_and_protects_existing_runs (test_capacity.CapacityTests) ... ok
+test_invalid_points_are_rejected_before_collection (test_capacity.CapacityTests) ... ok
+test_multiple_collected_points_keep_cpu_and_separate_raw_from_analysis (test_capacity.CapacityTests) ... ok
+test_planner_cli_and_combined_analysis_from_verified_raw_files (test_capacity.CapacityTests) ... /home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2170: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  result = self._expression.parseString(s)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2197: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  return self._math_expression.parseString(toks[0][1:-1], parseAll=True)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/pyparsing/util.py:466: PyparsingDeprecationWarning: 'parseAll' argument is deprecated, use 'parse_all'
+  return fn(self, *args, **kwargs)
+/home/swu35/ECE592-HW1/timing-only/capacity/.venv/lib/python3.10/site-packages/matplotlib/_mathtext.py:2178: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  ParserElement.resetCache()
+ok
+test_round2_uses_measured_intervals_and_combines_controls (test_capacity.CapacityTests) ... ok
+test_round3_only_refines_selected_interval (test_capacity.CapacityTests) ... ok
+test_shared_first_round_is_broad_and_deterministic (test_capacity.CapacityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.669s
+
+OK

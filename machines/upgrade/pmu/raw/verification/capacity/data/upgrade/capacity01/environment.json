@@ -1,0 +1,31 @@
+{
+  "hostname": "upgrade.ece.ncsu.edu",
+  "kernel": "6.8.0-138-generic",
+  "isa": "x86_64",
+  "cpu": 2,
+  "numa_node": 0,
+  "siblings": [
+    2,
+    8
+  ],
+  "core": "2",
+  "socket": "0",
+  "preflight_busy_percent": {
+    "2": 1.0,
+    "8": 1.0
+  },
+  "frequency": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "900040",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4600000"
+  },
+  "perf_version": "perf version 6.8.12",
+  "compiler": "gcc (Ubuntu 12.3.0-1ubuntu1~22.04.3) 12.3.0",
+  "python": "3.10.12",
+  "numpy": "1.26.3",
+  "flags": "-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+  "timer_unit": "TSC ticks / dependent load",
+  "pmu_scope": "Calling thread, user mode, measurement loop only; includes loop/helper instructions",
+  "perf_event_paranoid": "1"
+}

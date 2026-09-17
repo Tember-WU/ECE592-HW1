@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "errors": [],
+  "machine": "upgrade",
+  "run_id": "round2",
+  "validation_scope": "Raw integrity, recomputed statistics, provenance, CPU/NUMA binding and page backing; does not certify absence of interference.",
+  "checked_at_utc": "2026-09-10T17:01:38.598111+00:00",
+  "collection_status": "complete",
+  "expected_configurations": 57,
+  "complete_configurations": 57,
+  "total_timed_batches": 57000000,
+  "raw_bytes": 456000000,
+  "raw_gzip_bytes": 86658778,
+  "started_utc": "2026-09-10T16:58:08.403399+00:00",
+  "finished_utc": "2026-09-10T17:00:08.570639+00:00",
+  "wall_seconds": 120.16724,
+  "cpu": 2,
+  "numa_node": 0,
+  "smt_sibling": 8,
+  "smt_busy_percent_range": [
+    0.0,
+    6.897
+  ],
+  "configured_page_counts": {
+    "huge": 54,
+    "base": 3
+  },
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "major_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "voluntary_switches": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "involuntary_switches": {
+      "minimum": 0,
+      "maximum": 23,
+      "total": 205
+    }
+  },
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+  "binary_sha256": "89cab944c4e818a8e7b5561713e83a5b8fa6776b10ab2e27009d2249cd320645",
+  "audit_script_sha256": "e97786ed6259da70d7a70664a1c806e4b7fb4f69d49363f04313c1613928132e"
+}

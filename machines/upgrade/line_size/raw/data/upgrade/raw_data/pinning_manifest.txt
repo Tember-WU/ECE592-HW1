@@ -1,0 +1,6 @@
+pinned_cpu=4
+pinned_core=4
+pinned_socket=0
+pinned_node=0
+smt_sibling=none (CPU==CORE for all rows in lscpu -e topology)
+affinity_method=taskset -c 4

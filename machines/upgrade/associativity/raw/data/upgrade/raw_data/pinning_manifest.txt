@@ -1,0 +1,8 @@
+pinned_cpu=2
+pinned_core=2
+pinned_socket=0
+pinned_node=0
+smt_sibling=8 (observed Linux thread_siblings_list=2,8)
+affinity_method=taskset -c 2
+memory_policy=numactl --membind=0 inherited
+note=Corrected the original collector's hard-coded no-SMT statement.

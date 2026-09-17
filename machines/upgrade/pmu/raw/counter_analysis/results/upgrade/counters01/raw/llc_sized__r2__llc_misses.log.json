@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/upgrade/counters01/source/bench",
+    "1",
+    "12582912",
+    "64",
+    "1000000",
+    "64",
+    "59286",
+    "3",
+    "0x10002",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/upgrade/counters01/raw/llc_sized__r2__llc_misses",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}

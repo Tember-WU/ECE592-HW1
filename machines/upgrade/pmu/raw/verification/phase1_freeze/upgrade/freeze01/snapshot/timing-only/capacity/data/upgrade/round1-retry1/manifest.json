@@ -1,0 +1,603 @@
+{
+  "machine": "upgrade",
+  "experiment": "capacity",
+  "run_id": "round1-retry1",
+  "phase": "timing-only",
+  "started_utc": "2026-09-10T16:52:58.284714+00:00",
+  "status": "failed",
+  "command": [
+    "scripts/run_capacity.py",
+    "--machine",
+    "upgrade",
+    "--run-id",
+    "round1-retry1"
+  ],
+  "config_file": "/home/swu35/ECE592-HW1/timing-only/capacity/configs/upgrade.json",
+  "jobs": [
+    {
+      "name": "coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 524288
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/cache_capacity.bin",
+        "524288",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59201",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/raw/coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 2097152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/cache_capacity.bin",
+        "2097152",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59201",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/raw/coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 8192
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/cache_capacity.bin",
+        "8192",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59201",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/raw/coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 1048576
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/cache_capacity.bin",
+        "1048576",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59201",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/raw/coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "coarse_w536870912_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 536870912
+      },
+      "status": "failed",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/cache_capacity.bin",
+        "536870912",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59201",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/upgrade/round1-retry1/raw/coarse_w536870912_s64_random_b256_seed59201_huge_n1000000.u64"
+      ],
+      "error": "MADV_COLLAPSE: Cannot allocate memory\n"
+    },
+    {
+      "name": "coarse_w33554432_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 33554432
+      }
+    },
+    {
+      "name": "coarse_w4194304_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 4194304
+      }
+    },
+    {
+      "name": "coarse_w268435456_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 268435456
+      }
+    },
+    {
+      "name": "coarse_w4194304_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 4194304
+      }
+    },
+    {
+      "name": "coarse_w1048576_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1048576
+      }
+    },
+    {
+      "name": "coarse_w32768_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 32768
+      }
+    },
+    {
+      "name": "coarse_w536870912_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 536870912
+      }
+    },
+    {
+      "name": "coarse_w524288_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 524288
+      }
+    },
+    {
+      "name": "coarse_w4096_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 4096
+      }
+    },
+    {
+      "name": "coarse_w262144_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 262144
+      }
+    },
+    {
+      "name": "coarse_w2048_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 2048
+      }
+    },
+    {
+      "name": "coarse_w16777216_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 16777216
+      }
+    },
+    {
+      "name": "coarse_w16777216_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 16777216
+      }
+    },
+    {
+      "name": "coarse_w4096_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 4096
+      }
+    },
+    {
+      "name": "coarse_w262144_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 262144
+      }
+    },
+    {
+      "name": "coarse_w131072_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 131072
+      }
+    },
+    {
+      "name": "coarse_w8388608_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 8388608
+      }
+    },
+    {
+      "name": "coarse_w67108864_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 67108864
+      }
+    },
+    {
+      "name": "coarse_w16384_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 16384
+      }
+    },
+    {
+      "name": "coarse_w134217728_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 134217728
+      }
+    },
+    {
+      "name": "coarse_w67108864_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 67108864
+      }
+    },
+    {
+      "name": "coarse_w65536_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 65536
+      }
+    },
+    {
+      "name": "coarse_w268435456_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 268435456
+      }
+    },
+    {
+      "name": "coarse_w2048_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 2048
+      }
+    },
+    {
+      "name": "coarse_w16384_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 16384
+      }
+    },
+    {
+      "name": "coarse_w8388608_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 8388608
+      }
+    },
+    {
+      "name": "coarse_w2097152_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 2097152
+      }
+    },
+    {
+      "name": "coarse_w131072_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 131072
+      }
+    },
+    {
+      "name": "coarse_w32768_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 32768
+      }
+    },
+    {
+      "name": "coarse_w2048_s64_empty_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "empty",
+        "bytes": 2048
+      }
+    },
+    {
+      "name": "coarse_w65536_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 65536
+      }
+    },
+    {
+      "name": "coarse_w134217728_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 134217728
+      }
+    },
+    {
+      "name": "coarse_w33554432_s64_sequential_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 33554432
+      }
+    },
+    {
+      "name": "coarse_w8192_s64_random_b256_seed59201_huge_n1000000",
+      "suite": "coarse",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59201,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 8192
+      }
+    }
+  ],
+  "error": "MADV_COLLAPSE: Cannot allocate memory\n",
+  "finished_utc": "2026-09-10T16:53:01.748521+00:00"
+}

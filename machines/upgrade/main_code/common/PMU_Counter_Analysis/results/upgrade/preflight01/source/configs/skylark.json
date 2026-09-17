@@ -1,0 +1,162 @@
+{
+  "host": "skylark",
+  "year": 2019,
+  "vendor": "AMD",
+  "microarchitecture": "Zen 2 / Rome",
+  "model_contains": "EPYC 7532",
+  "isa": "x86_64",
+  "events": [
+    {
+      "slot": "cache_references",
+      "candidates": [
+        {
+          "name": "cache-references",
+          "type": 0,
+          "config": "0x2",
+          "meaning": "Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l2_request_g1.rd_blk_l",
+          "type": 4,
+          "config": "0x8060",
+          "meaning": "L2 data-cache read requests including hardware/software prefetch; NOT generic LLC references.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "cache_misses",
+      "candidates": [
+        {
+          "name": "cache-misses",
+          "type": 0,
+          "config": "0x3",
+          "meaning": "Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "l2_cache_req_stat.ls_rd_blk_c",
+          "type": 4,
+          "config": "0x864",
+          "meaning": "Core-to-L2 data request misses excluding L2 prefetch; NOT retired-load/LLC misses.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "l1_loads",
+      "candidates": [
+        {
+          "name": "L1-dcache-loads",
+          "type": 3,
+          "config": "0x0",
+          "meaning": "Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "ls_dispatch.ld_dispatch",
+          "type": 4,
+          "config": "0x129",
+          "meaning": "Dispatched load operations including speculation; not retired loads.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "l1_misses",
+      "candidates": [
+        {
+          "name": "L1-dcache-load-misses",
+          "type": 3,
+          "config": "0x10000",
+          "meaning": "Kernel L1D read-miss mapping; may count refills rather than retired misses.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "ls_mab_alloc.loads",
+          "type": 4,
+          "config": "0x141",
+          "meaning": "Load miss-address-buffer allocations; previously failed to track L1 capacity on Skylark.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "stores_or_replacements",
+      "candidates": [
+        {
+          "name": "L1-dcache-stores",
+          "type": 3,
+          "config": "0x100",
+          "meaning": "Kernel L1D write-access mapping; the read-only kernel should have little store activity.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "ls_refills_from_sys.ls_mabresp_lcl_l2",
+          "type": 4,
+          "config": "0x143",
+          "meaning": "Demand data fills from local L2; refill/replacement evidence, NOT stores.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "llc_loads",
+      "candidates": [
+        {
+          "name": "LLC-loads",
+          "type": 3,
+          "config": "0x2",
+          "meaning": "Kernel last-level read-access mapping; do not assume identical LLC domains across CPUs.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "ls_refills_from_sys.ls_mabresp_lcl_cache",
+          "type": 4,
+          "config": "0x243",
+          "meaning": "Demand fills from local cache domain excluding local L2; not total LLC accesses or pure LLC hits.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "llc_misses",
+      "candidates": [
+        {
+          "name": "LLC-load-misses",
+          "type": 3,
+          "config": "0x10002",
+          "meaning": "Kernel last-level read-miss mapping; interpretation depends on CPU and firmware.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "ls_refills_from_sys.ls_mabresp_lcl_dram",
+          "type": 4,
+          "config": "0x843",
+          "meaning": "Demand fills from DRAM or IO on this die; omits remote DRAM and is NOT direct LLC misses.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    },
+    {
+      "slot": "dtlb_misses",
+      "candidates": [
+        {
+          "name": "dTLB-load-misses",
+          "type": 3,
+          "config": "0x10003",
+          "meaning": "Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.",
+          "comparability": "generic_mapping_requires_review"
+        },
+        {
+          "name": "ls_l1_d_tlb_miss.all",
+          "type": 4,
+          "config": "0xff45",
+          "meaning": "All L1 data TLB misses/reloads, not just page walks.",
+          "comparability": "architecture_specific_proxy"
+        }
+      ]
+    }
+  ]
+}
