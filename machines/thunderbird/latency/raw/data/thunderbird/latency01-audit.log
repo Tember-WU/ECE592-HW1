@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-09-10T21:10:47.008196+00:00",
+  "run_id": "latency01",
+  "machine": "thunderbird",
+  "all_planned_points_and_order_verified": true,
+  "group_counts": {
+    "calibration": 12,
+    "l1_hit": 3,
+    "l2_hit": 3,
+    "llc_hit": 3,
+    "l1_miss": 3,
+    "l2_miss": 3,
+    "llc_miss": 3
+  },
+  "original_files_unchanged": 150,
+  "modified_test_original_archived": [
+    {
+      "file": "tests/test_latency.py",
+      "original_sha256": "689d05f75f0c292906754b9d00b36081fd3fb2ea300a6e384e1691a11f58febb",
+      "original_copy": "data/thunderbird/preflight/source_before/tests/test_latency.py",
+      "current_sha256": "aa72561a3eed6c27ee67ed11bed7b1b3cd69fada4e30c659e6ddd3be682fe70f"
+    }
+  ],
+  "all_mapping_pages_accounted_for_on_node0": true,
+  "capacity_basis_hash_verified": true,
+  "wall_seconds": 223.411569,
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 15432149,
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "total": 0,
+      "maximum": 0
+    },
+    "major_faults": {
+      "total": 0,
+      "maximum": 0
+    },
+    "voluntary_switches": {
+      "total": 0,
+      "maximum": 0
+    },
+    "involuntary_switches": {
+      "total": 2506,
+      "maximum": 250
+    }
+  },
+  "drift_flagged_points": [
+    "calibration__l1_independent",
+    "l1_hit__primary",
+    "l1_hit__repeat"
+  ],
+  "timer_frequency_hz": 25000000,
+  "timer_tick_ns": 40.0,
+  "cpu_frequency_khz": {
+    "before": [
+      "1000000",
+      "3000000"
+    ],
+    "after": [
+      "3000000"
+    ]
+  },
+  "audit_script_sha256": "962d22b4243b26cdc499e21424042f3805e4244c760f6b28daf139438314441c"
+}

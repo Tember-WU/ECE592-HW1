@@ -1,0 +1,120 @@
+Machine: thunderbird; CPU: 32; NUMA node: 0
+57 points; 57,000,000 timed batches; 456,000,000 raw bytes before compression
+Raw data: /home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2
+Analysis output: /home/swu35/ECE592-HW1/timing-only/capacity/results/thunderbird/round2
+[1/57] running round2_w2097152_s64_random_b256_seed59203_huge_n1000000
+  median=0.9570, p05–p95=0.9414–0.9727, elapsed=9.9s; saved all 1,000,000 samples
+[2/57] running round2_w98304_s64_random_b256_seed59202_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.3s; saved all 1,000,000 samples
+[3/57] running round2_w1572864_s64_random_b256_seed59202_huge_n1000000
+  median=0.7812, p05–p95=0.7500–0.8203, elapsed=8.1s; saved all 1,000,000 samples
+[4/57] running round2_w50331648_s8_random_b256_seed59203_huge_n1000000
+  median=1.6562, p05–p95=1.5469–1.7891, elapsed=19.1s; saved all 1,000,000 samples
+[5/57] running round2_w33554432_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.0508, p05–p95=0.0508–0.0703, elapsed=0.6s; saved all 1,000,000 samples
+[6/57] running round2_w2097152_s8_random_b256_seed59202_huge_n1000000
+  median=0.5703, p05–p95=0.5273–0.6133, elapsed=5.9s; saved all 1,000,000 samples
+[7/57] running round2_w2097152_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.0508, p05–p95=0.0469–0.0547, elapsed=0.6s; saved all 1,000,000 samples
+[8/57] running round2_w1048576_s64_random_b1024_seed59202_huge_n1000000
+  median=0.1562, p05–p95=0.1426–0.1709, elapsed=6.5s; saved all 1,000,000 samples
+[9/57] running round2_w50331648_s64_random_b256_seed59202_huge_n1000000
+  median=1.6992, p05–p95=1.5625–1.9258, elapsed=17.9s; saved all 1,000,000 samples
+[10/57] running round2_w67108864_s64_random_b256_seed59202_base_n1000000
+  median=2.1133, p05–p95=2.0078–2.2852, elapsed=22.3s; saved all 1,000,000 samples
+[11/57] running round2_w98304_s8_random_b256_seed59202_huge_n1000000
+  median=0.0664, p05–p95=0.0625–0.0703, elapsed=0.7s; saved all 1,000,000 samples
+[12/57] running round2_w114688_s64_random_b256_seed59202_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.3s; saved all 1,000,000 samples
+[13/57] running round2_w1048576_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.0469, p05–p95=0.0469–0.0547, elapsed=0.6s; saved all 1,000,000 samples
+[14/57] running round2_w65536_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.0391, p05–p95=0.0352–0.0430, elapsed=0.5s; saved all 1,000,000 samples
+[15/57] running round2_w1048576_s64_random_b256_seed59202_huge_n1000000
+  median=0.1562, p05–p95=0.1367–0.1797, elapsed=1.7s; saved all 1,000,000 samples
+[16/57] running round2_w33554432_s8_random_b256_seed59203_huge_n1000000
+  median=0.9609, p05–p95=0.9336–1.0156, elapsed=10.8s; saved all 1,000,000 samples
+[17/57] running round2_w131072_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.0391, p05–p95=0.0391–0.0469, elapsed=0.5s; saved all 1,000,000 samples
+[18/57] running round2_w50331648_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.1211, p05–p95=0.0938–0.1406, elapsed=1.3s; saved all 1,000,000 samples
+[19/57] running round2_w65536_s64_random_b256_seed59203_huge_n1000000
+  median=0.0391, p05–p95=0.0352–0.0430, elapsed=0.5s; saved all 1,000,000 samples
+[20/57] running round2_w1179648_s64_random_b256_seed59202_huge_n1000000
+  median=0.3672, p05–p95=0.3281–0.4062, elapsed=3.8s; saved all 1,000,000 samples
+[21/57] running round2_w58720256_s8_random_b256_seed59202_huge_n1000000
+  median=1.7852, p05–p95=1.6914–1.8867, elapsed=20.9s; saved all 1,000,000 samples
+[22/57] running round2_w131072_s64_random_b256_seed59203_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.3s; saved all 1,000,000 samples
+[23/57] running round2_w122880_s64_random_b256_seed59202_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.3s; saved all 1,000,000 samples
+[24/57] running round2_w58720256_s64_random_b256_seed59202_huge_n1000000
+  median=1.8164, p05–p95=1.7109–1.9727, elapsed=19.2s; saved all 1,000,000 samples
+[25/57] running round2_w1703936_s64_random_b256_seed59202_huge_n1000000
+  median=0.8828, p05–p95=0.8555–0.9102, elapsed=9.1s; saved all 1,000,000 samples
+[26/57] running round2_w1310720_s64_random_b256_seed59202_huge_n1000000
+  median=0.5273, p05–p95=0.4844–0.5703, elapsed=5.5s; saved all 1,000,000 samples
+[27/57] running round2_w33554432_s64_random_b256_seed59202_huge_n1000000
+  median=0.9844, p05–p95=0.9570–1.1680, elapsed=10.6s; saved all 1,000,000 samples
+[28/57] running round2_w131072_s8_random_b256_seed59202_huge_n1000000
+  median=0.0781, p05–p95=0.0703–0.0820, elapsed=0.9s; saved all 1,000,000 samples
+[29/57] running round2_w1572864_s64_random_b256_seed59203_huge_n1000000
+  median=0.7891, p05–p95=0.7539–0.8281, elapsed=8.2s; saved all 1,000,000 samples
+[30/57] running round2_w41943040_s8_random_b256_seed59202_huge_n1000000
+  median=1.3945, p05–p95=1.2969–1.5156, elapsed=15.9s; saved all 1,000,000 samples
+[31/57] running round2_w1835008_s64_random_b256_seed59202_huge_n1000000
+  median=0.9336, p05–p95=0.9102–0.9492, elapsed=9.7s; saved all 1,000,000 samples
+[32/57] running round2_w2097152_s64_random_b256_seed59202_huge_n1000000
+  median=0.9570, p05–p95=0.9453–0.9727, elapsed=9.9s; saved all 1,000,000 samples
+[33/57] running round2_w1572864_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.0508, p05–p95=0.0469–0.0547, elapsed=0.6s; saved all 1,000,000 samples
+[34/57] running round2_w67108864_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.1250, p05–p95=0.0977–0.1445, elapsed=1.3s; saved all 1,000,000 samples
+[35/57] running round2_w50331648_s8_random_b256_seed59202_huge_n1000000
+  median=1.6445, p05–p95=1.5391–1.7617, elapsed=18.9s; saved all 1,000,000 samples
+[36/57] running round2_w1441792_s64_random_b256_seed59202_huge_n1000000
+  median=0.6602, p05–p95=0.6172–0.7031, elapsed=6.9s; saved all 1,000,000 samples
+[37/57] running round2_w67108864_s8_random_b256_seed59203_huge_n1000000
+  median=1.8398, p05–p95=1.7500–1.9453, elapsed=21.9s; saved all 1,000,000 samples
+[38/57] running round2_w33554432_s64_random_b256_seed59202_base_n1000000
+  median=1.3750, p05–p95=1.2969–1.5039, elapsed=14.4s; saved all 1,000,000 samples
+[39/57] running round2_w1966080_s64_random_b256_seed59202_huge_n1000000
+  median=0.9531, p05–p95=0.9375–0.9727, elapsed=9.9s; saved all 1,000,000 samples
+[40/57] running round2_w65536_s8_random_b256_seed59202_huge_n1000000
+  median=0.0391, p05–p95=0.0352–0.0430, elapsed=0.5s; saved all 1,000,000 samples
+[41/57] running round2_w1572864_s8_random_b256_seed59202_huge_n1000000
+  median=0.4258, p05–p95=0.3828–0.4727, elapsed=4.5s; saved all 1,000,000 samples
+[42/57] running round2_w106496_s64_random_b256_seed59202_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.3s; saved all 1,000,000 samples
+[43/57] running round2_w73728_s64_random_b256_seed59202_huge_n1000000
+  median=0.0781, p05–p95=0.0781–0.0820, elapsed=0.9s; saved all 1,000,000 samples
+[44/57] running round2_w65536_s64_random_b256_seed59202_huge_n1000000
+  median=0.0391, p05–p95=0.0352–0.0430, elapsed=0.5s; saved all 1,000,000 samples
+[45/57] running round2_w98304_s64_sequential_b256_seed59202_huge_n1000000
+  median=0.0391, p05–p95=0.0352–0.0469, elapsed=0.5s; saved all 1,000,000 samples
+[46/57] running round2_w67108864_s64_random_b256_seed59202_huge_n1000000
+  median=1.8750, p05–p95=1.7773–2.0430, elapsed=19.9s; saved all 1,000,000 samples
+[47/57] running round2_w1048576_s64_random_b256_seed59203_huge_n1000000
+  median=0.1562, p05–p95=0.1367–0.1797, elapsed=1.7s; saved all 1,000,000 samples
+[48/57] running round2_w50331648_s64_random_b256_seed59202_base_n1000000
+  median=1.9102, p05–p95=1.7617–2.1445, elapsed=20.1s; saved all 1,000,000 samples
+[49/57] running round2_w67108864_s8_random_b256_seed59202_huge_n1000000
+  median=1.8398, p05–p95=1.7500–1.9414, elapsed=21.9s; saved all 1,000,000 samples
+[50/57] running round2_w81920_s64_random_b256_seed59202_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.3s; saved all 1,000,000 samples
+[51/57] running round2_w90112_s64_random_b256_seed59202_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.2s; saved all 1,000,000 samples
+[52/57] running round2_w65536_s64_random_b1024_seed59202_huge_n1000000
+  median=0.0361, p05–p95=0.0352–0.0361, elapsed=1.5s; saved all 1,000,000 samples
+[53/57] running round2_w98304_s64_random_b256_seed59203_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.2s; saved all 1,000,000 samples
+[54/57] running round2_w41943040_s64_random_b256_seed59202_huge_n1000000
+  median=1.4336, p05–p95=1.3320–1.5977, elapsed=15.1s; saved all 1,000,000 samples
+[55/57] running round2_w33554432_s8_random_b256_seed59202_huge_n1000000
+  median=0.9609, p05–p95=0.9336–1.0195, elapsed=10.8s; saved all 1,000,000 samples
+[56/57] running round2_w1048576_s8_random_b256_seed59202_huge_n1000000
+  median=0.1094, p05–p95=0.1055–0.1172, elapsed=1.2s; saved all 1,000,000 samples
+[57/57] running round2_w131072_s64_random_b256_seed59202_huge_n1000000
+  median=0.1172, p05–p95=0.1133–0.1172, elapsed=1.3s; saved all 1,000,000 samples
+Recomputed 57 points from raw samples; output: /home/swu35/ECE592-HW1/timing-only/capacity/results/thunderbird/round2
+Recomputed 96 points from raw samples; output: /home/swu35/ECE592-HW1/timing-only/capacity/results/thunderbird/combined12

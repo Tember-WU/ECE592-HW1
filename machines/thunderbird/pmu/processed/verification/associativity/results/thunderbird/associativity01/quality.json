@@ -1,0 +1,78 @@
+{
+  "preflight_busy_percent": {
+    "4": 1.9801980198019802
+  },
+  "sibling_cpus": [],
+  "max_sibling_busy_percent": null,
+  "faults_and_switches": {
+    "minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 1614
+  },
+  "temporal_max_min": {
+    "L2_candidate_k5": 1.0,
+    "L1_k6": 1.05,
+    "L1_k4": 1.1666666666666667,
+    "L2_candidate_k4": 1.0909090909090908,
+    "L2_candidate_k12": 1.033112582781457,
+    "L2_candidate_k10": 1.0329670329670328,
+    "L2_candidate_k9": 1.0634920634920637,
+    "L1_k5": 1.1,
+    "L1_k3": 1.25,
+    "L1_k2": 1.0,
+    "L2_candidate_k7": 1.0,
+    "L2_candidate_k8": 1.05
+  },
+  "huge_kib": {
+    "L2_candidate_k5": [
+      4096,
+      4096
+    ],
+    "L1_k6": [
+      2048,
+      2048
+    ],
+    "L1_k4": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k4": [
+      4096,
+      4096
+    ],
+    "L2_candidate_k12": [
+      4096,
+      4096
+    ],
+    "L2_candidate_k10": [
+      4096,
+      4096
+    ],
+    "L2_candidate_k9": [
+      4096,
+      4096
+    ],
+    "L1_k5": [
+      2048,
+      2048
+    ],
+    "L1_k3": [
+      2048,
+      2048
+    ],
+    "L1_k2": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k7": [
+      4096,
+      4096
+    ],
+    "L2_candidate_k8": [
+      4096,
+      4096
+    ]
+  },
+  "caveat": "Same CPU and NUMA node as Thunderbird Phase I: CPU 4/node 0. Counts include helper traffic; refill/speculation semantics differ from retired-load misses."
+}

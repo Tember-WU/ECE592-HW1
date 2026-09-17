@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/thunderbird/smoke01/source/bench",
+    "4",
+    "32768",
+    "64",
+    "10000",
+    "64",
+    "59284",
+    "4",
+    "0x42",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/thunderbird/smoke01/probes/l1_misses_1",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}

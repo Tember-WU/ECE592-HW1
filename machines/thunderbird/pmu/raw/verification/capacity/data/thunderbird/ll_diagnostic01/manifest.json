@@ -1,0 +1,171 @@
+{
+  "machine": "thunderbird",
+  "experiment": "capacity",
+  "run_id": "ll_diagnostic01",
+  "status": "complete",
+  "started_utc": "2026-09-14T15:48:46.294192+00:00",
+  "jobs": [
+    {
+      "name": "L2_w2097152",
+      "group": "L2",
+      "bytes": 2097152,
+      "baseline_median": 0.95703125,
+      "status": "complete",
+      "started_utc": "2026-09-14T15:48:47.736871+00:00",
+      "command": [
+        "taskset",
+        "-c",
+        "32",
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/thunderbird/capacity_pmu",
+        "2097152",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/thunderbird/ll_diagnostic01/raw/L2_w2097152.u64",
+        "0x36,0x37,0x2a,0x52",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/thunderbird/ll_diagnostic01/counts/L2_w2097152.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 9.969617748633027,
+      "cpu_busy_percent": {
+        "32": 99.5987963891675
+      },
+      "anon_huge_kib_before_after": [
+        2048,
+        2048
+      ],
+      "measurement_events": {
+        "minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 161
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 0.9592188046875,
+        "std": 0.018813460119756438,
+        "median": 0.9609375,
+        "q1": 0.953125,
+        "q3": 0.96484375,
+        "p05": 0.9453125,
+        "p95": 0.97265625,
+        "p99": 0.9765625,
+        "minimum": 0.88671875,
+        "maximum": 5.07421875,
+        "outliers": 11257,
+        "whisker_low": 0.9375,
+        "whisker_high": 0.98046875,
+        "decile_medians": [
+          0.9609375,
+          0.9609375,
+          0.95703125,
+          0.9609375,
+          0.9609375,
+          0.9609375,
+          0.9609375,
+          0.9609375,
+          0.9609375,
+          0.9609375
+        ]
+      },
+      "finished_utc": "2026-09-14T15:48:57.957577+00:00",
+      "raw_file": "raw/L2_w2097152.u64.gz",
+      "raw_sha256": "47edcea4c64253fd654020224266f6eb35e6f0bdba7199382d07aec31d2b3e55",
+      "counts_file": "counts/L2_w2097152.json",
+      "counts_sha256": "939df73afbd3471d955cfa3980f7bb7fe3f027ba7d75daa0a312d2ff09f0a2b2"
+    },
+    {
+      "name": "LLC_w67108864",
+      "group": "LLC",
+      "bytes": 67108864,
+      "baseline_median": 1.875,
+      "status": "complete",
+      "started_utc": "2026-09-14T15:48:57.958163+00:00",
+      "command": [
+        "taskset",
+        "-c",
+        "32",
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/thunderbird/capacity_pmu",
+        "67108864",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/thunderbird/ll_diagnostic01/raw/LLC_w67108864.u64",
+        "0x36,0x37,0x2a,0x52",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/thunderbird/ll_diagnostic01/counts/LLC_w67108864.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 23.162184439599514,
+      "cpu_busy_percent": {
+        "32": 99.95684074233924
+      },
+      "anon_huge_kib_before_after": [
+        65536,
+        65536
+      ],
+      "measurement_events": {
+        "minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 8
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 2.20701978125,
+        "std": 0.2231726173676929,
+        "median": 2.1796875,
+        "q1": 2.0078125,
+        "q3": 2.4140625,
+        "p05": 1.890625,
+        "p95": 2.5234375,
+        "p99": 2.62890625,
+        "minimum": 1.6875,
+        "maximum": 4.2890625,
+        "outliers": 702,
+        "whisker_low": 1.6875,
+        "whisker_high": 3.0234375,
+        "decile_medians": [
+          1.953125,
+          2.36328125,
+          2.46484375,
+          2.15625,
+          2.24609375,
+          2.23828125,
+          2.12890625,
+          2.09765625,
+          2.109375,
+          2.23046875
+        ]
+      },
+      "finished_utc": "2026-09-14T15:49:21.511431+00:00",
+      "raw_file": "raw/LLC_w67108864.u64.gz",
+      "raw_sha256": "71e0a68386c306768ee4945fda54746d40601ee10e584426409e8753823d55a3",
+      "counts_file": "counts/LLC_w67108864.json",
+      "counts_sha256": "ee3405755ef248199d7bbb943f8a35f3870aee9c7e94c1d43932c55b589540b3"
+    }
+  ],
+  "command": [
+    "scripts/thunderbird.py",
+    "run",
+    "--experiment",
+    "capacity",
+    "--run-id",
+    "ll_diagnostic01",
+    "--config",
+    "capacity/configs/thunderbird_ll_diagnostic.json"
+  ],
+  "finished_utc": "2026-09-14T15:49:21.512639+00:00",
+  "elapsed_seconds": 35.218441450968385
+}

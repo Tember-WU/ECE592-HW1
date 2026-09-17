@@ -1,0 +1,3 @@
+numactl 2.0.19-3.el9 aarch64
+2c02d5872dbd608932df7fed5b1a2eb529afbbded538e84bc55008a7ae981004  build/thunderbird/deps/numactl.rpm
+84b2cef96caeda3460b6dc72bc42bd95fa6dfc6005b43f0bbf26abc040831a87  build/thunderbird/deps/usr/bin/numactl

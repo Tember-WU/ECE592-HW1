@@ -1,0 +1,31 @@
+{
+  "hostname": "thunderbird.ece.ncsu.edu",
+  "isa": "aarch64",
+  "kernel": "5.14.0-611.54.1.el9_7.aarch64",
+  "cpu": 32,
+  "numa_node": 0,
+  "siblings": [
+    32
+  ],
+  "preflight_busy_percent": {
+    "32": 0.0
+  },
+  "frequency": {
+    "scaling_governor": "schedutil",
+    "scaling_cur_freq": "1000000",
+    "scaling_min_freq": "1000000",
+    "scaling_max_freq": "3000000"
+  },
+  "timer_unit": "CNTVCT_EL0 ticks / timed chain load",
+  "timer": {
+    "timer_frequency_hz": 25000000,
+    "timer_tick_ns": 40.0,
+    "calibration_seconds": 0.20010152,
+    "calibration_ticks": 5002393,
+    "observed_frequency_hz": 24999275.368
+  },
+  "placement_note": "Same CPU and NUMA node as Thunderbird Phase I: CPU 32/node 0.",
+  "compiler": "gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)",
+  "perf_version": "perf version 5.14.0-687.17.1.el9_8.aarch64",
+  "counting_scope": "User mode, calling thread, entire sample loop; includes helper/stack loads and associativity preparation loads."
+}

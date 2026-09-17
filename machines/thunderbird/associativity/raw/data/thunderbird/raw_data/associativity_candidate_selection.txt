@@ -1,0 +1,10 @@
+=== L1 candidate sweep ===
+num_sets=256: has_edge=True inferred_ways=4 largest_jump=1.000
+num_sets=128: has_edge=True inferred_ways=8 largest_jump=0.924
+num_sets=64: has_edge=False inferred_ways=14 largest_jump=0.150
+SELECTED L1: num_sets=256 -> inferred ways=4 (copied raw_data/l1_associativity_candidate256.csv -> raw_data/l1_associativity.csv)
+=== L2 candidate sweep ===
+num_sets=2048: has_edge=True inferred_ways=8 largest_jump=0.978
+num_sets=1024: has_edge=True inferred_ways=4 largest_jump=1.000
+num_sets=4096: has_edge=True inferred_ways=8 largest_jump=0.920
+SELECTED L2: num_sets=2048 -> inferred ways=8 (copied raw_data/l2_associativity_candidate2048.csv -> raw_data/l2_associativity.csv)

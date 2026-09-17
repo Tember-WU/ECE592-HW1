@@ -1,0 +1,78 @@
+{
+  "preflight_busy_percent": {
+    "4": 100.0
+  },
+  "sibling_cpus": [],
+  "max_sibling_busy_percent": null,
+  "faults_and_switches": {
+    "minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 1821
+  },
+  "temporal_max_min": {
+    "random_s64_a16": 1.0084745762711864,
+    "random_s96_a0": 1.0,
+    "random_s64_a0": 1.0,
+    "random_s56_a16": 1.009009009009009,
+    "fully_random_s64": 1.0060240963855422,
+    "sequential_s72": 1.0,
+    "sequential_s64": 1.0,
+    "random_s72_a0": 1.008130081300813,
+    "random_s56_a0": 1.0,
+    "random_s32_a0": 1.0,
+    "random_s72_a16": 1.0081967213114753,
+    "sequential_s56": 1.0
+  },
+  "huge_kib": {
+    "random_s64_a16": [
+      0,
+      0
+    ],
+    "random_s96_a0": [
+      6144,
+      6144
+    ],
+    "random_s64_a0": [
+      6144,
+      6144
+    ],
+    "random_s56_a16": [
+      0,
+      0
+    ],
+    "fully_random_s64": [
+      0,
+      0
+    ],
+    "sequential_s72": [
+      0,
+      0
+    ],
+    "sequential_s64": [
+      6144,
+      6144
+    ],
+    "random_s72_a0": [
+      0,
+      0
+    ],
+    "random_s56_a0": [
+      6144,
+      6144
+    ],
+    "random_s32_a0": [
+      0,
+      0
+    ],
+    "random_s72_a16": [
+      4096,
+      4096
+    ],
+    "sequential_s56": [
+      6144,
+      6144
+    ]
+  },
+  "caveat": "Same CPU and NUMA node as Thunderbird Phase I: CPU 4/node 0. Counts include helper traffic; refill/speculation semantics differ from retired-load misses."
+}

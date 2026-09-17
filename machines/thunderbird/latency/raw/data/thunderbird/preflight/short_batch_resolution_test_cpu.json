@@ -1,0 +1,97 @@
+[
+  {
+    "cpu": 0,
+    "mode": "chase",
+    "batch": 16,
+    "intervals": 100000,
+    "zero_intervals": 0,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "chase",
+      "100000",
+      "16",
+      "59221",
+      "0",
+      "base",
+      "build/thunderbird/short_cpu0_chase.u64"
+    ]
+  },
+  {
+    "cpu": 0,
+    "mode": "sequential",
+    "batch": 16,
+    "intervals": 100000,
+    "zero_intervals": 0,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "sequential",
+      "100000",
+      "16",
+      "59221",
+      "0",
+      "base",
+      "build/thunderbird/short_cpu0_sequential.u64"
+    ]
+  },
+  {
+    "cpu": 0,
+    "mode": "paired",
+    "batch": 16,
+    "intervals": 200000,
+    "zero_intervals": 0,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "paired",
+      "100000",
+      "16",
+      "59221",
+      "0",
+      "base",
+      "build/thunderbird/short_cpu0_paired.u64"
+    ]
+  },
+  {
+    "cpu": 0,
+    "mode": "independent",
+    "batch": 16,
+    "intervals": 100000,
+    "zero_intervals": 5726,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "independent",
+      "100000",
+      "16",
+      "59221",
+      "0",
+      "base",
+      "build/thunderbird/short_cpu0_independent.u64"
+    ]
+  },
+  {
+    "cpu": 0,
+    "mode": "empty",
+    "batch": 16,
+    "intervals": 100000,
+    "zero_intervals": 23491,
+    "command": [
+      "build/thunderbird/latency_bench",
+      "65536",
+      "64",
+      "empty",
+      "100000",
+      "16",
+      "59221",
+      "0",
+      "base",
+      "build/thunderbird/short_cpu0_empty.u64"
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+
+  401074:	d10103ff 	sub	sp, sp, #0x40
+  401078:	f90007e0 	str	x0, [sp, #8]
+  40107c:	f90003e1 	str	x1, [sp]
+  401080:	f94007e0 	ldr	x0, [sp, #8]
+  401084:	f9400000 	ldr	x0, [x0]
+  401088:	f9001fe0 	str	x0, [sp, #56]
+  40108c:	f94007e0 	ldr	x0, [sp, #8]
+  401090:	f9400400 	ldr	x0, [x0, #8]
+  401094:	f9001be0 	str	x0, [sp, #48]
+  401098:	f94007e0 	ldr	x0, [sp, #8]
+  40109c:	f9400800 	ldr	x0, [x0, #16]
+  4010a0:	f90017e0 	str	x0, [sp, #40]
+  4010a4:	f94007e0 	ldr	x0, [sp, #8]
+  4010a8:	f9400c00 	ldr	x0, [x0, #24]
+  4010ac:	f90013e0 	str	x0, [sp, #32]
+  4010b0:	f9401fe4 	ldr	x4, [sp, #56]
+  4010b4:	f9401be3 	ldr	x3, [sp, #48]
+  4010b8:	f94017e2 	ldr	x2, [sp, #40]
+  4010bc:	f94013e1 	ldr	x1, [sp, #32]
+  4010c0:	f94003e0 	ldr	x0, [sp]
+  4010c4:	d5033b9f 	dsb	ish
+  4010c8:	d5033fdf 	isb
+  4010cc:	d53be045 	mrs	x5, cntvct_el0
+  4010d0:	d5033fdf 	isb
+  4010d4:	f9400084 	ldr	x4, [x4]
+  4010d8:	f9400063 	ldr	x3, [x3]
+  4010dc:	f9400042 	ldr	x2, [x2]
+  4010e0:	f9400021 	ldr	x1, [x1]
+  4010e4:	f9400084 	ldr	x4, [x4]
+  4010e8:	f9400063 	ldr	x3, [x3]
+  4010ec:	f9400042 	ldr	x2, [x2]
+  4010f0:	f9400021 	ldr	x1, [x1]
+  4010f4:	f9400084 	ldr	x4, [x4]
+  4010f8:	f9400063 	ldr	x3, [x3]
+  4010fc:	f9400042 	ldr	x2, [x2]
+  401100:	f9400021 	ldr	x1, [x1]
+  401104:	f9400084 	ldr	x4, [x4]
+  401108:	f9400063 	ldr	x3, [x3]
+  40110c:	f9400042 	ldr	x2, [x2]
+  401110:	f9400021 	ldr	x1, [x1]
+  401114:	f1000400 	subs	x0, x0, #0x1
+  401118:	54fffde1 	b.ne	4010d4 <time_independent+0x60>  // b.any
+  40111c:	d503399f 	dsb	ishld
+  401120:	d5033fdf 	isb
+  401124:	d53be046 	mrs	x6, cntvct_el0
+  401128:	d5033fdf 	isb
+  40112c:	cb0500c6 	sub	x6, x6, x5
+  401130:	f9000fe6 	str	x6, [sp, #24]
+  401134:	f9000be5 	str	x5, [sp, #16]
+  401138:	f9001fe4 	str	x4, [sp, #56]
+  40113c:	f9001be3 	str	x3, [sp, #48]
+  401140:	f90017e2 	str	x2, [sp, #40]
+  401144:	f90013e1 	str	x1, [sp, #32]
+  401148:	f90003e0 	str	x0, [sp]
+  40114c:	f94007e0 	ldr	x0, [sp, #8]
+  401150:	f9401fe1 	ldr	x1, [sp, #56]
+  401154:	f9000001 	str	x1, [x0]
+  401158:	f94007e0 	ldr	x0, [sp, #8]
+  40115c:	91002000 	add	x0, x0, #0x8
+  401160:	f9401be1 	ldr	x1, [sp, #48]
+  401164:	f9000001 	str	x1, [x0]
+  401168:	f94007e0 	ldr	x0, [sp, #8]
+  40116c:	91004000 	add	x0, x0, #0x10
+  401170:	f94017e1 	ldr	x1, [sp, #40]
+  401174:	f9000001 	str	x1, [x0]
+  401178:	f94007e0 	ldr	x0, [sp, #8]
+  40117c:	91006000 	add	x0, x0, #0x18
+  401180:	f94013e1 	ldr	x1, [sp, #32]
+  401184:	f9000001 	str	x1, [x0]
+  401188:	f9400fe0 	ldr	x0, [sp, #24]
+  40118c:	910103ff 	add	sp, sp, #0x40
+  401190:	d65f03c0 	ret

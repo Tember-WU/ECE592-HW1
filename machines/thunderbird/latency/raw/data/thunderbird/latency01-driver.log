@@ -1,0 +1,62 @@
+30 configurations, 30,000,000 batches, 39,000,000 recorded timer intervals
+[1/30] l1_miss__alternate: paired, W=524288, batch=256
+  first median=0.11719; reread=0.03906; 1.7s
+[2/30] l2_miss__repeat: paired, W=4194304, batch=256
+  first median=0.96094; reread=0.03906; 10.4s
+[3/30] calibration__l1_independent: independent, W=16384, batch=256
+  first median=0.01172; 0.2s
+[4/30] calibration__l1_sequential: sequential, W=16384, batch=256
+  first median=0.03516; 0.4s
+[5/30] l1_hit__alternate: chase, W=32768, batch=256
+  first median=0.03516; 0.4s
+[6/30] calibration__timer: empty, W=16384, batch=256
+  first median=1.00000; 0.1s
+[7/30] calibration__memory_sequential: sequential, W=268435456, batch=256
+  first median=0.10938; 1.5s
+[8/30] calibration__l1_long: chase, W=16384, batch=1024
+  first median=0.03418; 1.5s
+[9/30] calibration__l2_long: chase, W=262144, batch=1024
+  first median=0.11328; 4.7s
+[10/30] calibration__llc_long: chase, W=4194304, batch=1024
+  first median=0.95801; 39.4s
+[11/30] llc_hit__alternate: chase, W=8388608, batch=256
+  first median=0.96094; 10.0s
+[12/30] llc_miss__alternate: paired, W=536870912, batch=256
+  first median=2.43750; reread=0.07031; 29.7s
+[13/30] llc_hit__repeat: chase, W=4194304, batch=256
+  first median=0.96094; 9.9s
+[14/30] l2_miss__alternate: paired, W=8388608, batch=256
+  first median=0.96094; reread=0.03906; 10.4s
+[15/30] l2_hit__alternate: chase, W=524288, batch=256
+  first median=0.11719; 1.3s
+[16/30] l2_hit__repeat: chase, W=262144, batch=256
+  first median=0.11719; 1.3s
+[17/30] l1_hit__primary: chase, W=16384, batch=256
+  first median=0.03516; 0.4s
+[18/30] calibration__memory_independent: independent, W=268435456, batch=256
+  first median=0.61328; 8.2s
+[19/30] l2_hit__primary: chase, W=262144, batch=256
+  first median=0.11719; 1.3s
+[20/30] calibration__llc_sequential: sequential, W=4194304, batch=256
+  first median=0.05078; 0.6s
+[21/30] l1_miss__repeat: paired, W=262144, batch=256
+  first median=0.11719; reread=0.03906; 1.7s
+[22/30] llc_miss__repeat: paired, W=268435456, batch=256
+  first median=2.35547; reread=0.06250; 26.8s
+[23/30] calibration__l2_independent: independent, W=262144, batch=256
+  first median=0.03516; 0.4s
+[24/30] calibration__l2_sequential: sequential, W=262144, batch=256
+  first median=0.03906; 0.5s
+[25/30] llc_miss__primary: paired, W=268435456, batch=256
+  first median=2.36719; reread=0.06250; 26.9s
+[26/30] l2_miss__primary: paired, W=4194304, batch=256
+  first median=0.96094; reread=0.03906; 10.4s
+[27/30] llc_hit__primary: chase, W=4194304, batch=256
+  first median=0.96094; 9.9s
+[28/30] l1_hit__repeat: chase, W=16384, batch=256
+  first median=0.03516; 0.4s
+[29/30] l1_miss__primary: paired, W=262144, batch=256
+  first median=0.11719; reread=0.03906; 1.7s
+[30/30] calibration__llc_independent: independent, W=4194304, batch=256
+  first median=0.23828; 2.5s
+Validated 30 configurations. Results: /home/swu35/ECE592-HW1/timing-only/latency/results/thunderbird/latency01

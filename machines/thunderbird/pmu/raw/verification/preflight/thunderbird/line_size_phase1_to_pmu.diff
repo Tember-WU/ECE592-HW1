@@ -1,0 +1,93 @@
+--- /home/swu35/ECE592-HW1/timing-only/line_size/src/line_size_bench.cpp	2026-09-14 11:20:03.935149689 -0400
++++ /home/swu35/ECE592-HW1/PMU-verification/line_size/src/line_size_bench.cpp	2026-09-14 11:19:53.835149639 -0400
+@@ -15,6 +15,7 @@
+ #include <x86intrin.h>   // _rdtsc, _rdtscp, _mm_lfence -- x86 only, unused on AArch64
+ #endif
+ #include "timer_compat.h"
++#include "../../common/measurement.hpp"
+ 
+ // =============== Timer ===============
+ // Forwards to the portable backend so this file compiles on both x86-64 and AArch64
+@@ -24,6 +25,7 @@
+ 
+ // =============== Parameter parsing ===============
+ struct Config {
++    std::string pmu_events, pmu_output, ticks_output;
+     size_t stride;          // bytes between consecutive nodes
+     size_t alignment;       // offset from base (0,16,32,48)
+     size_t footprint;       // total working set bytes
+@@ -41,7 +43,10 @@
+     cfg.group_window = 0; // 0 = not set; validated below
+     for (int i = 1; i < argc; ++i) {
+         std::string arg = argv[i];
+-        if (arg == "--stride" && i+1 < argc) cfg.stride = std::stoul(argv[++i]);
++        if (arg == "--pmu-events" && i+1 < argc) cfg.pmu_events = argv[++i];
++        else if (arg == "--pmu-output" && i+1 < argc) cfg.pmu_output = argv[++i];
++        else if (arg == "--ticks-output" && i+1 < argc) cfg.ticks_output = argv[++i];
++        else if (arg == "--stride" && i+1 < argc) cfg.stride = std::stoul(argv[++i]);
+         else if (arg == "--alignment" && i+1 < argc) cfg.alignment = std::stoul(argv[++i]);
+         else if (arg == "--footprint" && i+1 < argc) cfg.footprint = std::stoul(argv[++i]);
+         else if (arg == "--batch" && i+1 < argc) cfg.batch = std::stoul(argv[++i]);
+@@ -139,12 +144,17 @@
+ 
+ // =============== Main measurement ===============
+ int main(int argc, char** argv) {
+-    Config cfg;
++    Config cfg{};
+     if (!parse_args(argc, argv, cfg)) return 1;
++    if (cfg.pmu_events.empty() || cfg.pmu_output.empty()) {
++        std::cerr << "PMU event configs and output are required\n"; return 1;
++    }
++    pmu_open(cfg.pmu_events.c_str());
+ 
+     // Allocate aligned buffer
+     const size_t alignment = 64;  // we want cache-line alignment
+-    void* raw = aligned_alloc(alignment, cfg.footprint + cfg.alignment + alignment); // extra for offset
++    void* raw = nullptr;
++    if (posix_memalign(&raw, alignment, cfg.footprint + cfg.alignment + alignment)) raw = nullptr;
+     if (!raw) { std::cerr << "Allocation failed\n"; return 1; }
+     char* base = static_cast<char*>(raw) + cfg.alignment;
+     // Ensure base is aligned to 64 bytes (already, since raw is 64-aligned and offset is multiple of 8)
+@@ -160,6 +170,7 @@
+     // Find the first node (base)
+     uintptr_t* p = reinterpret_cast<uintptr_t*>(base);
+ 
++    std::vector<uint64_t> raw_ticks(cfg.samples, 0); // prefault before warm-up
+     // Warmup
+     for (size_t w = 0; w < cfg.warmup; ++w) {
+         for (size_t i = 0; i < cfg.batch; ++i) {
+@@ -170,13 +181,13 @@
+     volatile uintptr_t* sink = p;
+     (void)sink;
+ 
+-    // Open output file
+-    std::ofstream out(cfg.outfile);
+-    if (!out) { std::cerr << "Cannot open " << cfg.outfile << "\n"; return 1; }
+-
+     // Reset p to start
+     p = reinterpret_cast<uintptr_t*>(base);
+ 
++    log_mapping(base, "before");
++    struct rusage usage_before{}, usage_after{};
++    getrusage(RUSAGE_SELF, &usage_before);
++    pmu_start();
+     // Collect samples
+     for (size_t s = 0; s < cfg.samples; ++s) {
+         uint64_t t0 = tsc_start();
+@@ -186,9 +197,14 @@
+         }
+         uint64_t t1 = tsc_stop();
+         uint64_t delta = t1 - t0;
+-        out << delta << '\n';
++        raw_ticks[s] = delta;
+     }
+-    out.close();
++    pmu_stop();
++    getrusage(RUSAGE_SELF, &usage_after);
++    log_usage(usage_before, usage_after);
++    log_mapping(base, "after");
++    pmu_save(cfg.pmu_output.c_str(), cfg.samples * cfg.batch);
++    save_ticks(cfg.outfile.c_str(), raw_ticks.data(), cfg.samples);
+ 
+     // Prevent compiler from discarding p
+     volatile uintptr_t* final_p = p;

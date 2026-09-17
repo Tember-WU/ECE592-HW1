@@ -1,0 +1,14 @@
+{
+    "hostname": "thunderbird",
+    "arch": "aarch64",
+    "cpu_config_note": "Ampere Altra Q80-30 (Neoverse N1) -- Table 1: 2020, AArch64, single socket, needs AArch64 timer backend",
+    "pinned_cpu": 4,
+    "pinned_core": 4,
+    "pinned_socket": 0,
+    "pinned_node": 0,
+    "smt_sibling_note": null,
+    "line_size_group_window": 512,
+    "assoc_l1_num_sets": null,
+    "assoc_l2_num_sets": null,
+    "notes": "TEMPLATE -- fill in before running. 1) Run 'lscpu -e=CPU,CORE,SOCKET,NODE' on thunderbird and set pinned_cpu/core/socket/node from a core that is idle (check SMT sibling too). 2) Run the line-size and capacity experiments on THIS host first; only after that, derive assoc_l1_num_sets / assoc_l2_num_sets empirically for THIS host's cache geometry. Do NOT copy skylark.json's values (64/1024) -- Ampere Altra Q80-30 (Neoverse N1) -- Table 1: 2020, AArch64, single socket, needs AArch64 timer backend may have a different L1/L2 size or associativity than Zen 2."
+  }

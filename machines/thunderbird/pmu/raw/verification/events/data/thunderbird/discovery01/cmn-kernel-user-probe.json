@@ -1,0 +1,18 @@
+{
+  "command": [
+    "perf",
+    "stat",
+    "-a",
+    "-C",
+    "0",
+    "--no-big-num",
+    "-x,",
+    "-e",
+    "arm_cmn_0/hnf_cache_miss/uk",
+    "--",
+    "/usr/bin/true"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "<not supported>,,arm_cmn_0/hnf_cache_miss/uku,0,100.00,,\n"
+}

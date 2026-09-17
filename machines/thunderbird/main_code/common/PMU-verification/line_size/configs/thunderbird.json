@@ -1,0 +1,134 @@
+{
+  "machine": "thunderbird",
+  "isa": "aarch64",
+  "cpu": 4,
+  "numa_node": 0,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "l1d_cache_refill_rd",
+      "config": "0x42",
+      "label": "L1D read refills"
+    },
+    {
+      "name": "l2d_cache_refill_rd",
+      "config": "0x52",
+      "label": "L2 read refills"
+    },
+    {
+      "name": "ll_cache_miss_rd",
+      "config": "0x37",
+      "label": "LL_CACHE_MISS_RD (0x37)"
+    },
+    {
+      "name": "ld_spec",
+      "config": "0x70",
+      "label": "Speculative loads"
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "line_size",
+  "footprint": 262144,
+  "batch": 1024,
+  "group_window": 512,
+  "points": [
+    {
+      "name": "random_s32_a0",
+      "group": "random_alignment0",
+      "stride": 32,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 701
+    },
+    {
+      "name": "random_s56_a0",
+      "group": "random_alignment0",
+      "stride": 56,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s64_a0",
+      "group": "random_alignment0",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s72_a0",
+      "group": "random_alignment0",
+      "stride": 72,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s96_a0",
+      "group": "random_alignment0",
+      "stride": 96,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s56_a16",
+      "group": "random_alignment16",
+      "stride": 56,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s64_a16",
+      "group": "random_alignment16",
+      "stride": 64,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s72_a16",
+      "group": "random_alignment16",
+      "stride": 72,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "sequential_s56",
+      "group": "sequential_control",
+      "stride": 56,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "sequential_s64",
+      "group": "sequential_control",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "sequential_s72",
+      "group": "sequential_control",
+      "stride": 72,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "fully_random_s64",
+      "group": "fully_random_control",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "fully_random",
+      "seed": 721
+    }
+  ],
+  "placement_note": "Same CPU and NUMA node as Thunderbird Phase I: CPU 4/node 0."
+}

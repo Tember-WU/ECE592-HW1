@@ -1,0 +1,1619 @@
+{
+  "machine": "thunderbird",
+  "experiment": "capacity",
+  "run_id": "round2",
+  "phase": "timing-only",
+  "started_utc": "2026-09-10T17:04:01.099898+00:00",
+  "status": "complete",
+  "command": [
+    "scripts/run_capacity.py",
+    "--machine",
+    "thunderbird",
+    "--config",
+    "configs/thunderbird-round2.json",
+    "--sweep",
+    "all",
+    "--run-id",
+    "round2"
+  ],
+  "config_file": "/home/swu35/ECE592-HW1/timing-only/capacity/configs/thunderbird-round2.json",
+  "jobs": [
+    {
+      "name": "round2_w2097152_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 2097152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "2097152",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w2097152_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w98304_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 98304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "98304",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w98304_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1572864_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1572864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1572864",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1572864_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w50331648_s8_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 50331648
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "50331648",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s8_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w33554432_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 33554432
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "33554432",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w2097152_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 2097152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "2097152",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w2097152_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w2097152_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 2097152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "2097152",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w2097152_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1048576_s64_random_b1024_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1048576
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1048576",
+        "64",
+        "random",
+        "1000000",
+        "1024",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s64_random_b1024_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w50331648_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 50331648
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "50331648",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w67108864_s64_random_b256_seed59202_base_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "base",
+        "mode": "random",
+        "bytes": 67108864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "67108864",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "base",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s64_random_b256_seed59202_base_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w98304_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 98304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "98304",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w98304_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w114688_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 114688
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "114688",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w114688_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1048576_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 1048576
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1048576",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "65536",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1048576_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1048576
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1048576",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w33554432_s8_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 33554432
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "33554432",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s8_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w131072_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 131072
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "131072",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w131072_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w50331648_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 50331648
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "50331648",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "65536",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1179648_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1179648
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1179648",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1179648_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w58720256_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 58720256
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "58720256",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w58720256_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w131072_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 131072
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "131072",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w131072_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w122880_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 122880
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "122880",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w122880_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w58720256_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 58720256
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "58720256",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w58720256_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1703936_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1703936
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1703936",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1703936_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1310720_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1310720
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1310720",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1310720_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w33554432_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 33554432
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "33554432",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w131072_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 131072
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "131072",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w131072_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1572864_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1572864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1572864",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1572864_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w41943040_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 41943040
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "41943040",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w41943040_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1835008_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1835008
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1835008",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1835008_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w2097152_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 2097152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "2097152",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w2097152_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1572864_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 1572864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1572864",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1572864_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w67108864_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 67108864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "67108864",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w50331648_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 50331648
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "50331648",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1441792_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1441792
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1441792",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1441792_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w67108864_s8_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 67108864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "67108864",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s8_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w33554432_s64_random_b256_seed59202_base_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "base",
+        "mode": "random",
+        "bytes": 33554432
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "33554432",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "base",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s64_random_b256_seed59202_base_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1966080_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1966080
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1966080",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1966080_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "65536",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1572864_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1572864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1572864",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1572864_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w106496_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 106496
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "106496",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w106496_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w73728_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 73728
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "73728",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w73728_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "65536",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w98304_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 98304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "98304",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w98304_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w67108864_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 67108864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "67108864",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1048576_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1048576
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1048576",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w50331648_s64_random_b256_seed59202_base_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "base",
+        "mode": "random",
+        "bytes": 50331648
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "50331648",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "base",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w50331648_s64_random_b256_seed59202_base_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w67108864_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 67108864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "67108864",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w67108864_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w81920_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 81920
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "81920",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w81920_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w90112_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 90112
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "90112",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w90112_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s64_random_b1024_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "65536",
+        "64",
+        "random",
+        "1000000",
+        "1024",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w65536_s64_random_b1024_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w98304_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 98304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "98304",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w98304_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w41943040_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 41943040
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "41943040",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w41943040_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w33554432_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 33554432
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "33554432",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w33554432_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w1048576_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 1048576
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "1048576",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w1048576_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w131072_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 131072
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/cache_capacity.bin",
+        "131072",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/thunderbird/round2/raw/round2_w131072_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    }
+  ],
+  "finished_utc": "2026-09-10T17:11:03.136550+00:00"
+}

@@ -1,0 +1,23 @@
+python3 -m unittest discover -s tests -v
+test_all_machine_configurations (test_latency.DataTests) ... ok
+test_paired_columns_and_signed_differences (test_latency.DataTests) ... ok
+test_reject_underfilled_and_ambiguous_configs (test_latency.DataTests) ... ok
+test_tampered_archive_rejected (test_latency.DataTests) ... ok
+test_zero_intervals_only_for_empty_timer (test_latency.DataTests) ... ok
+test_kernel_modes_and_cursor_verification (test_latency.KernelTests) ... ERROR
+
+======================================================================
+ERROR: test_kernel_modes_and_cursor_verification (test_latency.KernelTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/swu35/ECE592-HW1/timing-only/latency/tests/test_latency.py", line 78, in test_kernel_modes_and_cursor_verification
+    raw = decode(target.read_bytes(), dict(mode=mode, samples=1000))
+  File "/home/swu35/ECE592-HW1/timing-only/latency/scripts/common.py", line 102, in decode
+    raise ValueError('Nonpositive timed access interval')
+ValueError: Nonpositive timed access interval
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.027s
+
+FAILED (errors=1)
+make: *** [Makefile:21: check] Error 1

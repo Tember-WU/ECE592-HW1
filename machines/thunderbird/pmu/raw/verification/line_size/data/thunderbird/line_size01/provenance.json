@@ -1,0 +1,14 @@
+{
+  "source_sha256": {
+    "line_size/src/line_size_bench.cpp": "2175b036a78dc8acf49822eddc95d1051e3761b36b3ed98c83c6aeb85db8365e",
+    "line_size/src/timer_compat.h": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+    "common/measurement.hpp": "606f58fad2048c893cac3f8ca209b951ae123e55a2fa56e29fad28ef48361060",
+    "common/pmu.hpp": "98df180a618991e9eee63aa7b570dfefe86ce7d0fb0f17452f8ee3724a1492fd",
+    "scripts/thunderbird.py": "ba85286ddd79066a5cadc3f760ee779bd2c65ef0854659c1e2115f4eb4507c5b",
+    "capacity/scripts/common.py": "610f6e2ec29e59294047309d0813203f0b99b471a50421a978486ef7cf9263d0",
+    "common/run_verification.py": "6a6e9af6da5f95ab1ffb23384fc4da7dc3f905e15a8ed831a867932947125553",
+    "common/analyze_verification.py": "ecbe170ff357e7ffa9c99c6544a7f8aa1b6b3a6f1b3ff0e462cbf3c4aa39693c"
+  },
+  "binary_sha256": "7653b91dca790a27881ffdb0ca24278e54b9bb0bffce850c114b46bc0acbc2dd",
+  "phase1_freeze_sha256": "5d90fdab034f815f157d66bbeee0e16077f932c86207cfa6390c48661cb65a97"
+}

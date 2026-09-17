@@ -1,0 +1,92 @@
+{
+  "machine": "thunderbird",
+  "source_runs": [
+    "round1",
+    "round2"
+  ],
+  "scope": "Timing-only interpretation of new measurements; physical specifications are not substituted for timing evidence",
+  "interpreted_at_utc": "2026-09-10T17:14:35.515815+00:00",
+  "measurable_data_cache_residency_regions": 3,
+  "cpu": 32,
+  "numa_node": 0,
+  "timer_unit": "CNTVCT ticks / dependent load",
+  "timer_frequency_hz": 25000000,
+  "timer_tick_ns": 40,
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "capacity_estimates": [
+    {
+      "level": "L1D",
+      "approximate_bytes": 65536,
+      "sampled_transition_neighborhood_bytes": [
+        65536,
+        73728
+      ],
+      "evidence_ns_per_load": {
+        "32KiB": [
+          1.40625
+        ],
+        "64KiB": [
+          1.5625,
+          1.5625,
+          1.5625
+        ],
+        "72KiB": [
+          3.125
+        ],
+        "80KiB": [
+          4.6875
+        ]
+      }
+    },
+    {
+      "level": "L2",
+      "approximate_bytes": 1048576,
+      "sampled_large_rise_interval_bytes": [
+        1048576,
+        1179648
+      ],
+      "evidence_ns_per_load": {
+        "512KiB": [
+          4.6875
+        ],
+        "1MiB": [
+          6.25,
+          6.25,
+          6.25
+        ],
+        "1.125MiB": [
+          14.6875
+        ],
+        "1.25MiB": [
+          21.09375
+        ]
+      },
+      "caveat": "1 MiB already departs from the flat 128-512 KiB region; round 2 does not densely sample 512 KiB-1 MiB. The interval identifies the large rise, not the earliest departure."
+    },
+    {
+      "level": "LLC/system cache",
+      "approximate_bytes": null,
+      "nominal_physical_capacity_bytes": null,
+      "observed_effective_transition_region_bytes": [
+        33554432,
+        67108864
+      ],
+      "first_sampled_strong_rise_bytes": [
+        33554432,
+        41943040
+      ],
+      "interpretation": "Both 8 B and 64 B layouts show a broad effective transition; this is not a bound on nominal physical capacity."
+    }
+  ],
+  "caveats": [
+    "Empirical sampling neighborhoods, not statistical confidence intervals.",
+    "7,614 involuntary context switches; at most 256 per configuration.",
+    "Default schedutil governor retained; endpoint frequency snapshots do not prove constant frequency.",
+    "Zero-tick empty intervals are retained; raw counter ticks are not core cycles.",
+    "One million consecutive batches per point are not independent experiment repetitions.",
+    "Page and layout effects are not fully isolated.",
+    "Initial compatibility lscpu output included kernel-reported cache totals, but intervals and inferences use the new timing evidence."
+  ],
+  "third_round": "Not executed; the requested two rounds are complete."
+}

@@ -1,0 +1,48 @@
+--- /home/swu35/ECE592-HW1/timing-only/capacity/src/cache_bench_aarch64.c	2026-09-10 14:02:54.500019030 -0400
++++ /home/swu35/ECE592-HW1/PMU-verification/capacity/src/cache_bench_aarch64.c	2026-09-14 11:37:47.825170963 -0400
+@@ -55,6 +55,7 @@
+ }
+ 
+ static void fail(const char *what) { perror(what); exit(1); }
++#include "pmu.h"
+ 
+ /* This is elapsed-time measurement, not a PMU/core-cycle counter. */
+ static uint64_t counter_read(void) {
+@@ -130,9 +131,9 @@
+ 
+ int main(int argc, char **argv) {
+     if (argc == 2 && !strcmp(argv[1], "--timer-info")) { timer_info(); return 0; }
+-    if (argc != 10) {
++    if (argc != 12) {
+         fprintf(stderr, "Usage: %s bytes spacing random|sequential|empty "
+-                "samples batch seed cpu huge|base output.u64\n", argv[0]);
++                "samples batch seed cpu huge|base output.u64 raw_configs pmu.json\n", argv[0]);
+         return 1;
+     }
+     size_t bytes = number(argv[1]), spacing = number(argv[2]);
+@@ -195,6 +196,7 @@
+         *(void **)(base + order[i] * spacing) = base + order[(i + 1) % n] * spacing;
+     void *cursor = base + order[0] * spacing;
+     free(order);
++    pmu_open(argv[10]);
+     /* Warm every node at least four times and execute >= 1M loads. */
+     uint64_t warm = n * 4;
+     if (warm < 1048576) warm = 1048576;
+@@ -207,14 +209,17 @@
+     }
+     struct rusage before, after;
+     getrusage(RUSAGE_SELF, &before);
++    pmu_start();
+     for (size_t i = 0; i < samples; ++i)
+         raw[i] = time_batch(&cursor, empty ? 0 : batch / 16);
++    pmu_stop();
+     getrusage(RUSAGE_SELF, &after);
+     fprintf(stderr, "mapping_after:\n");
+     if (mapping_info(base) != (huge ? mapped : 0)) {
+         fprintf(stderr, "Page backing changed during measurement\n"); return 1;
+     }
+ 
++    pmu_save(argv[11], empty ? 0 : samples * batch);
+     FILE *f = fopen(argv[9], "wb");
+     if (!f) fail("output");
+     if (fwrite(raw, sizeof(*raw), samples, f) != samples) fail("fwrite");

@@ -1,0 +1,21 @@
+name,block,median,units
+L2_w2097152,1,0.9609375,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,2,0.9609375,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,3,0.95703125,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,4,0.9609375,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,5,0.9609375,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,6,0.9609375,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,7,0.9609375,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,8,0.9609375,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,9,0.9609375,CNTVCT_EL0 ticks / timed chain load
+L2_w2097152,10,0.9609375,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,1,1.953125,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,2,2.36328125,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,3,2.46484375,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,4,2.15625,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,5,2.24609375,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,6,2.23828125,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,7,2.12890625,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,8,2.09765625,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,9,2.109375,CNTVCT_EL0 ticks / timed chain load
+LLC_w67108864,10,2.23046875,CNTVCT_EL0 ticks / timed chain load

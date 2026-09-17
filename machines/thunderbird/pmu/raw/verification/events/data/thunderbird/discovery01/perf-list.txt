@@ -1,0 +1,838 @@
+  branch-instructions OR branches                    [Hardware event]
+  branch-misses                                      [Hardware event]
+  bus-cycles                                         [Hardware event]
+  cache-misses                                       [Hardware event]
+  cache-references                                   [Hardware event]
+  cpu-cycles OR cycles                               [Hardware event]
+  instructions                                       [Hardware event]
+  stalled-cycles-backend OR idle-cycles-backend      [Hardware event]
+  stalled-cycles-frontend OR idle-cycles-frontend    [Hardware event]
+  alignment-faults                                   [Software event]
+  bpf-output                                         [Software event]
+  cgroup-switches                                    [Software event]
+  context-switches OR cs                             [Software event]
+  cpu-clock                                          [Software event]
+  cpu-migrations OR migrations                       [Software event]
+  dummy                                              [Software event]
+  emulation-faults                                   [Software event]
+  major-faults                                       [Software event]
+  minor-faults                                       [Software event]
+  page-faults OR faults                              [Software event]
+  task-clock                                         [Software event]
+  duration_time                                      [Tool event]
+  user_time                                          [Tool event]
+  system_time                                        [Tool event]
+
+armv8_pmuv3_0:
+  L1-dcache-loads OR armv8_pmuv3_0/L1-dcache-loads/
+  L1-dcache-load-misses OR armv8_pmuv3_0/L1-dcache-load-misses/
+  L1-icache-loads OR armv8_pmuv3_0/L1-icache-loads/
+  L1-icache-load-misses OR armv8_pmuv3_0/L1-icache-load-misses/
+  dTLB-loads OR armv8_pmuv3_0/dTLB-loads/
+  dTLB-load-misses OR armv8_pmuv3_0/dTLB-load-misses/
+  iTLB-loads OR armv8_pmuv3_0/iTLB-loads/
+  iTLB-load-misses OR armv8_pmuv3_0/iTLB-load-misses/
+  branch-loads OR armv8_pmuv3_0/branch-loads/
+  branch-load-misses OR armv8_pmuv3_0/branch-load-misses/
+  l3d_cache_wb OR armv8_pmuv3_0/l3d_cache_wb/        [Kernel PMU event]
+  arm_cmn/cxha_chidat_up_stall/                      [Kernel PMU event]
+  arm_cmn/cxha_chirsp_up_stall/                      [Kernel PMU event]
+  arm_cmn/cxha_rdb_occ/                              [Kernel PMU event]
+  arm_cmn/cxha_rdbyp_occ/                            [Kernel PMU event]
+  arm_cmn/cxha_rddatbyp/                             [Kernel PMU event]
+  arm_cmn/cxha_reqtrk_occ/                           [Kernel PMU event]
+  arm_cmn/cxha_sdb_occ/                              [Kernel PMU event]
+  arm_cmn/cxha_snphaz_occ/                           [Kernel PMU event]
+  arm_cmn/cxha_snppcrd_link0_stall/                  [Kernel PMU event]
+  arm_cmn/cxha_snppcrd_link1_stall/                  [Kernel PMU event]
+  arm_cmn/cxha_snppcrd_link2_stall/                  [Kernel PMU event]
+  arm_cmn/cxha_snptrk_occ/                           [Kernel PMU event]
+  arm_cmn/cxha_wdb_occ/                              [Kernel PMU event]
+  arm_cmn/cxra_chidat_stalls/                        [Kernel PMU event]
+  arm_cmn/cxra_chirsp_stalls/                        [Kernel PMU event]
+  arm_cmn/cxra_cxdat_pcrd_stalls_link0/              [Kernel PMU event]
+  arm_cmn/cxra_cxdat_pcrd_stalls_link1/              [Kernel PMU event]
+  arm_cmn/cxra_cxdat_pcrd_stalls_link2/              [Kernel PMU event]
+  arm_cmn/cxra_cxreq_pcrd_stalls_link0/              [Kernel PMU event]
+  arm_cmn/cxra_cxreq_pcrd_stalls_link1/              [Kernel PMU event]
+  arm_cmn/cxra_cxreq_pcrd_stalls_link2/              [Kernel PMU event]
+  arm_cmn/cxra_external_chidat_stalls/               [Kernel PMU event]
+  arm_cmn/cxra_external_chirsp_stalls/               [Kernel PMU event]
+  arm_cmn/cxra_rdb_occ/                              [Kernel PMU event]
+  arm_cmn/cxra_req_chain_avglen/                     [Kernel PMU event]
+  arm_cmn/cxra_req_chains/                           [Kernel PMU event]
+  arm_cmn/cxra_rht_occ/                              [Kernel PMU event]
+  arm_cmn/cxra_sht_occ/                              [Kernel PMU event]
+  arm_cmn/cxra_snp_bcasts/                           [Kernel PMU event]
+  arm_cmn/cxra_ssb_occ/                              [Kernel PMU event]
+  arm_cmn/cxra_wdb_occ/                              [Kernel PMU event]
+  arm_cmn/dn_rxreq_dvmop/                            [Kernel PMU event]
+  arm_cmn/dn_rxreq_dvmop_vmid_filtered/              [Kernel PMU event]
+  arm_cmn/dn_rxreq_dvmsync/                          [Kernel PMU event]
+  arm_cmn/dn_rxreq_retried/                          [Kernel PMU event]
+  arm_cmn/dn_rxreq_trk_occupancy_all/                [Kernel PMU event]
+  arm_cmn/dn_rxreq_trk_occupancy_dvmop/              [Kernel PMU event]
+  arm_cmn/dn_rxreq_trk_occupancy_dvmsync/            [Kernel PMU event]
+  arm_cmn/dtc_cycles/                                [Kernel PMU event]
+  arm_cmn/hnf_cmp_adq_full/                          [Kernel PMU event]
+  arm_cmn/hnf_intv_dirty/                            [Kernel PMU event]
+  arm_cmn/hnf_ld_st_swp_adq_full/                    [Kernel PMU event]
+  arm_cmn/hnf_pocq_addrhaz/                          [Kernel PMU event]
+  arm_cmn/hnf_pocq_atomic_addrhaz/                   [Kernel PMU event]
+  arm_cmn/hnf_qos_pocq_occupancy_all/                [Kernel PMU event]
+  arm_cmn/hnf_qos_pocq_occupancy_atomic/             [Kernel PMU event]
+  arm_cmn/hnf_qos_pocq_occupancy_read/               [Kernel PMU event]
+  arm_cmn/hnf_qos_pocq_occupancy_stash/              [Kernel PMU event]
+  arm_cmn/hnf_qos_pocq_occupancy_write/              [Kernel PMU event]
+  arm_cmn/hnf_seq_full/                              [Kernel PMU event]
+  arm_cmn/hnf_seq_hit/                               [Kernel PMU event]
+  arm_cmn/hnf_sfbi_brd_snp_sent/                     [Kernel PMU event]
+  arm_cmn/hnf_sfbi_dir_snp_sent/                     [Kernel PMU event]
+  arm_cmn/hnf_snp_fwded/                             [Kernel PMU event]
+  arm_cmn/hnf_snp_sent/                              [Kernel PMU event]
+  arm_cmn/hnf_snp_sent_untrk/                        [Kernel PMU event]
+  arm_cmn/hnf_stash_data_pull/                       [Kernel PMU event]
+  arm_cmn/hnf_stash_snp_sent/                        [Kernel PMU event]
+  arm_cmn/hnf_txdat_stall/                           [Kernel PMU event]
+  arm_cmn/hnf_txrsp_stall/                           [Kernel PMU event]
+  arm_cmn/hni_nonpcie_serialization/                 [Kernel PMU event]
+  arm_cmn/hni_pcie_serialization/                    [Kernel PMU event]
+  arm_cmn/hni_rdt_rd_alloc/                          [Kernel PMU event]
+  arm_cmn/hni_rdt_rd_occ_cnt_ovfl/                   [Kernel PMU event]
+  arm_cmn/hni_rdt_wr_alloc/                          [Kernel PMU event]
+  arm_cmn/hni_rdt_wr_occ_cnt_ovfl/                   [Kernel PMU event]
+  arm_cmn/hni_rrt_rd_alloc/                          [Kernel PMU event]
+  arm_cmn/hni_rrt_rd_occ_cnt_ovfl/                   [Kernel PMU event]
+  arm_cmn/hni_rrt_wr_alloc/                          [Kernel PMU event]
+  arm_cmn/hni_rrt_wr_occ_cnt_ovfl/                   [Kernel PMU event]
+  arm_cmn/hni_wdb_alloc/                             [Kernel PMU event]
+  arm_cmn/hni_wdb_occ_cnt_ovfl/                      [Kernel PMU event]
+  arm_cmn/mxp_e_dat_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_e_dat_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_e_req_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_e_req_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_e_rsp_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_e_rsp_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_e_snp_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_e_snp_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_n_dat_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_n_dat_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_n_req_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_n_req_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_n_rsp_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_n_rsp_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_n_snp_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_n_snp_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_p0_dat_partial_dat_flit/               [Kernel PMU event]
+  arm_cmn/mxp_p0_dat_txflit_stall/                   [Kernel PMU event]
+  arm_cmn/mxp_p0_dat_txflit_valid/                   [Kernel PMU event]
+  arm_cmn/mxp_p0_req_txflit_stall/                   [Kernel PMU event]
+  arm_cmn/mxp_p0_req_txflit_valid/                   [Kernel PMU event]
+  arm_cmn/mxp_p0_rsp_txflit_stall/                   [Kernel PMU event]
+  arm_cmn/mxp_p0_rsp_txflit_valid/                   [Kernel PMU event]
+  arm_cmn/mxp_p0_snp_txflit_stall/                   [Kernel PMU event]
+  arm_cmn/mxp_p0_snp_txflit_valid/                   [Kernel PMU event]
+  arm_cmn/mxp_p1_dat_partial_dat_flit/               [Kernel PMU event]
+  arm_cmn/mxp_p1_dat_txflit_stall/                   [Kernel PMU event]
+  arm_cmn/mxp_p1_dat_txflit_valid/                   [Kernel PMU event]
+  arm_cmn/mxp_p1_req_txflit_stall/                   [Kernel PMU event]
+  arm_cmn/mxp_p1_req_txflit_valid/                   [Kernel PMU event]
+  arm_cmn/mxp_p1_rsp_txflit_stall/                   [Kernel PMU event]
+  arm_cmn/mxp_p1_rsp_txflit_valid/                   [Kernel PMU event]
+  arm_cmn/mxp_p1_snp_txflit_stall/                   [Kernel PMU event]
+  arm_cmn/mxp_p1_snp_txflit_valid/                   [Kernel PMU event]
+  arm_cmn/mxp_s_dat_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_s_dat_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_s_req_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_s_req_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_s_rsp_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_s_rsp_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_s_snp_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_s_snp_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_w_dat_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_w_dat_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_w_req_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_w_req_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_w_rsp_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_w_rsp_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/mxp_w_snp_txflit_stall/                    [Kernel PMU event]
+  arm_cmn/mxp_w_snp_txflit_valid/                    [Kernel PMU event]
+  arm_cmn/rnid_rdb_hybrid/                           [Kernel PMU event]
+  arm_cmn/rnid_rdb_ord/                              [Kernel PMU event]
+  arm_cmn/rnid_rdb_replay/                           [Kernel PMU event]
+  arm_cmn/rnid_rdb_unord/                            [Kernel PMU event]
+  arm_cmn/rnid_rrt_alloc/                            [Kernel PMU event]
+  arm_cmn/rnid_rrt_occ_ovfl/                         [Kernel PMU event]
+  arm_cmn/rnid_s0_wdata_beats/                       [Kernel PMU event]
+  arm_cmn/rnid_s1_wdata_beats/                       [Kernel PMU event]
+  arm_cmn/rnid_s2_wdata_beats/                       [Kernel PMU event]
+  arm_cmn/rnid_txreq_flits_replayed/                 [Kernel PMU event]
+  arm_cmn/rnid_wrcancel_sent/                        [Kernel PMU event]
+  arm_cmn/rnid_wrt_alloc/                            [Kernel PMU event]
+  arm_cmn/rnid_wrt_occ_ovfl/                         [Kernel PMU event]
+  arm_cmn/watchpoint_down,wp_dev_sel=?,wp_chn_sel=?,wp_grp=?,wp_val=?,wp_mask=?/[Kernel PMU event]
+  arm_cmn/watchpoint_up,wp_dev_sel=?,wp_chn_sel=?,wp_grp=?,wp_val=?,wp_mask=?/[Kernel PMU event]
+  arm_dmc620/clk_cycle_count/                        [Kernel PMU event]
+  arm_dmc620/clk_request/                            [Kernel PMU event]
+  arm_dmc620/clk_upload_stall/                       [Kernel PMU event]
+  arm_dmc620/clkdiv2_activate/                       [Kernel PMU event]
+  arm_dmc620/clkdiv2_allocate/                       [Kernel PMU event]
+  arm_dmc620/clkdiv2_arbitrate/                      [Kernel PMU event]
+  arm_dmc620/clkdiv2_bk_fsm_tracker/                 [Kernel PMU event]
+  arm_dmc620/clkdiv2_bk_open_tracker/                [Kernel PMU event]
+  arm_dmc620/clkdiv2_cycle_count/                    [Kernel PMU event]
+  arm_dmc620/clkdiv2_enqueue/                        [Kernel PMU event]
+  arm_dmc620/clkdiv2_hazard_resolution/              [Kernel PMU event]
+  arm_dmc620/clkdiv2_high_qos_depth/                 [Kernel PMU event]
+  arm_dmc620/clkdiv2_highigh_qos_depth/              [Kernel PMU event]
+  arm_dmc620/clkdiv2_low_qos_depth/                  [Kernel PMU event]
+  arm_dmc620/clkdiv2_lrank_turnaround_activate/      [Kernel PMU event]
+  arm_dmc620/clkdiv2_medium_qos_depth/               [Kernel PMU event]
+  arm_dmc620/clkdiv2_prank_turnaround_activate/      [Kernel PMU event]
+  arm_dmc620/clkdiv2_queue_depth/                    [Kernel PMU event]
+  arm_dmc620/clkdiv2_ranks_in_pwr_down/              [Kernel PMU event]
+  arm_dmc620/clkdiv2_ranks_in_sref/                  [Kernel PMU event]
+  arm_dmc620/clkdiv2_rdwr/                           [Kernel PMU event]
+  arm_dmc620/clkdiv2_read_backlog/                   [Kernel PMU event]
+  arm_dmc620/clkdiv2_read_depth/                     [Kernel PMU event]
+  arm_dmc620/clkdiv2_refresh/                        [Kernel PMU event]
+  arm_dmc620/clkdiv2_t_mac_tracker/                  [Kernel PMU event]
+  arm_dmc620/clkdiv2_training_request/               [Kernel PMU event]
+  arm_dmc620/clkdiv2_waiting_for_mi/                 [Kernel PMU event]
+  arm_dmc620/clkdiv2_waiting_for_wr_data/            [Kernel PMU event]
+  arm_dmc620/clkdiv2_write_depth/                    [Kernel PMU event]
+  arm_dsu/bus_access/                                [Kernel PMU event]
+  arm_dsu/bus_cycles/                                [Kernel PMU event]
+  arm_dsu/cycles/                                    [Kernel PMU event]
+  arm_dsu/l3d_cache/                                 [Kernel PMU event]
+  arm_dsu/l3d_cache_allocate/                        [Kernel PMU event]
+  arm_dsu/l3d_cache_refill/                          [Kernel PMU event]
+  arm_dsu/l3d_cache_wb/                              [Kernel PMU event]
+  arm_dsu/memory_error/                              [Kernel PMU event]
+
+bus:
+  bus_access
+       [Attributable Bus access. Unit: armv8_pmuv3_0]
+  bus_access_rd
+       [Bus access read. Unit: armv8_pmuv3_0]
+  bus_access_wr
+       [Bus access write. Unit: armv8_pmuv3_0]
+  bus_cycles
+       [Bus cycle. Unit: armv8_pmuv3_0]
+
+cmn:
+  hnf_brd_snoops_sent
+       [Counts number of multicast snoops sent (not including SF back
+        invalidation). Unit: arm_cmn]
+  hnf_cache_fill
+       [Counts total allocations in HN SLC (all cache line allocations to
+        SLC). Unit: arm_cmn]
+  hnf_cache_miss
+       [Counts total cache misses in first lookup result (high priority).
+        Unit: arm_cmn]
+  hnf_dir_snoops_sent
+       [Counts number of directed snoops sent (not including SF back
+        invalidation). Unit: arm_cmn]
+  hnf_mc_reqs
+       [Counts number of requests that are sent to MC. Unit: arm_cmn]
+  hnf_mc_retries
+       [Counts number of retried transactions by the MC. Unit: arm_cmn]
+  hnf_pocq_reqs_recvd
+       [Counts number of requests that HN receives. Unit: arm_cmn]
+  hnf_pocq_retry
+       [Counts number of retried requests. Unit: arm_cmn]
+  hnf_qos_hh_retry
+       [Counts number of times a HighHigh priority request is protocolretried
+        at the HN-F. Unit: arm_cmn]
+  hnf_sf_evictions
+       [Counts number of SF eviction cache invalidations initiated. Unit:
+        arm_cmn]
+  hnf_sf_hit
+       [Counts number of SF hits. Unit: arm_cmn]
+  hnf_slc_eviction
+       [Counts number of SLC evictions (dirty only). Unit: arm_cmn]
+  hnf_slc_fill_invalid_way
+       [Counts number of SLC fills to an invalid way. Unit: arm_cmn]
+  hnf_slc_sf_cache_access
+       [Counts number of cache accesses in first access (high priority). Unit:
+        arm_cmn]
+  hni_arready_no_arvalid
+       [Number of cycles the AR channel is waiting for new requests from HN-I
+        bridge. Unit: arm_cmn]
+  hni_arvalid_no_arready
+       [Number of cycles the HN-I bridge is stalled because of backpressure on
+        AR channel. Unit: arm_cmn]
+  hni_awready_no_awvalid
+       [Number of cycles the AW channel is waiting for new requests from HN-I
+        bridge. Unit: arm_cmn]
+  hni_awvalid_no_awready
+       [Number of cycles the HN-I bridge is stalled because of backpressure on
+        AW channel. Unit: arm_cmn]
+  hni_txdat_stall
+       [TXDAT valid but no link credit available. Unit: arm_cmn]
+  hni_txrsp_retryack
+       [Number of RXREQ flits dispatched. This event is a measure of the retry
+        rate. Unit: arm_cmn]
+  hni_wvalid_no_wready
+       [Number of cycles the HN-I bridge is stalled because of backpressure on
+        W channel. Unit: arm_cmn]
+  rnid_rxdat_flits
+       [Number of RXDAT flits received. This event measures the true read data
+        bandwidth,excluding CMOs. Unit: arm_cmn]
+  rnid_s0_rdata_beats
+       [Number of RData beats (RVALID and RREADY) dispatched on port 0. This
+        event measures the read bandwidth,including CMO responses. Unit:
+        arm_cmn]
+  rnid_s1_rdata_beats
+       [Number of RData beats (RVALID and RREADY) dispatched on port 1. This
+        event measures the read bandwidth,including CMO responses. Unit:
+        arm_cmn]
+  rnid_s2_rdata_beats
+       [Number of RData beats (RVALID and RREADY) dispatched on port 2. This
+        event measures the read bandwidth,including CMO responses. Unit:
+        arm_cmn]
+  rnid_txdat_flits
+       [Number of TXDAT flits dispatched. This event measures the write
+        bandwidth. Unit: arm_cmn]
+  rnid_txreq_flits_retried
+       [Number of retried TXREQ flits dispatched. This event measures the
+        retry rate. Unit: arm_cmn]
+  rnid_txreq_flits_total
+       [Number of TXREQ flits dispatched. This event measures the total
+        request bandwidth. Unit: arm_cmn]
+  sbsx_arvalid_no_arready
+       [Number of cycles the SBSX bridge is stalled because of backpressure on
+        AR channel. Unit: arm_cmn]
+  sbsx_awvalid_no_awready
+       [Number of cycles the SBSX bridge is stalled because of backpressure on
+        AW channel. Unit: arm_cmn]
+  sbsx_txdat_flitv
+       [Number of TXDAT flits dispatched from XP to SBSX. This event is a
+        measure of the write bandwidth. Unit: arm_cmn]
+  sbsx_txrsp_retryack
+       [Number of RXREQ flits dispatched. This event is a measure of the retry
+        rate. Unit: arm_cmn]
+  sbsx_wvalid_no_wready
+       [Number of cycles the SBSX bridge is stalled because of backpressure on
+        W channel. Unit: arm_cmn]
+
+exception:
+  exc_dabort
+       [Exception taken,Data Abort and SError. Unit: armv8_pmuv3_0]
+  exc_fiq
+       [Exception taken,FIQ. Unit: armv8_pmuv3_0]
+  exc_hvc
+       [Exception taken,Hypervisor Call. Unit: armv8_pmuv3_0]
+  exc_irq
+       [Exception taken,IRQ. Unit: armv8_pmuv3_0]
+  exc_pabort
+       [Exception taken,Instruction Abort. Unit: armv8_pmuv3_0]
+  exc_return
+       [Instruction architecturally executed,condition check pass,exception
+        return. Unit: armv8_pmuv3_0]
+  exc_smc
+       [Exception taken,Secure Monitor Call. Unit: armv8_pmuv3_0]
+  exc_svc
+       [Exception taken,Supervisor Call. Unit: armv8_pmuv3_0]
+  exc_taken
+       [Exception taken. Unit: armv8_pmuv3_0]
+  exc_trap_dabort
+       [Exception taken,Data Abort or SError not taken locally. Unit:
+        armv8_pmuv3_0]
+  exc_trap_fiq
+       [Exception taken,FIQ not taken locally. Unit: armv8_pmuv3_0]
+  exc_trap_irq
+       [Exception taken,IRQ not taken locally. Unit: armv8_pmuv3_0]
+  exc_trap_other
+       [Exception taken,Other traps not taken locally. Unit: armv8_pmuv3_0]
+  exc_trap_pabort
+       [Exception taken,Instruction Abort not taken locally. Unit:
+        armv8_pmuv3_0]
+  exc_undef
+       [Exception taken,Other synchronous. Unit: armv8_pmuv3_0]
+
+general:
+  cpu_cycles
+       [Cycle. Unit: armv8_pmuv3_0]
+
+l1d_cache:
+  l1d_cache
+       [Level 1 data cache access. Unit: armv8_pmuv3_0]
+  l1d_cache_inval
+       [L1D cache invalidate. Unit: armv8_pmuv3_0]
+  l1d_cache_rd
+       [L1D cache access,read. Unit: armv8_pmuv3_0]
+  l1d_cache_refill
+       [Level 1 data cache refill. Unit: armv8_pmuv3_0]
+  l1d_cache_refill_inner
+       [L1D cache refill,inner. Unit: armv8_pmuv3_0]
+  l1d_cache_refill_outer
+       [L1D cache refill,outer. Unit: armv8_pmuv3_0]
+  l1d_cache_refill_rd
+       [L1D cache refill,read. Unit: armv8_pmuv3_0]
+  l1d_cache_refill_wr
+       [L1D cache refill,write. Unit: armv8_pmuv3_0]
+  l1d_cache_wb
+       [Attributable Level 1 data cache write-back. Unit: armv8_pmuv3_0]
+  l1d_cache_wb_clean
+       [L1D cache Write-Back,cleaning and coherency. Unit: armv8_pmuv3_0]
+  l1d_cache_wb_victim
+       [L1D cache Write-Back,victim. Unit: armv8_pmuv3_0]
+  l1d_cache_wr
+       [L1D cache access,write. Unit: armv8_pmuv3_0]
+
+l1i_cache:
+  l1i_cache
+       [Attributable Level 1 instruction cache access. Unit: armv8_pmuv3_0]
+  l1i_cache_refill
+       [Level 1 instruction cache refill. Unit: armv8_pmuv3_0]
+
+l2_cache:
+  l2d_cache
+       [Level 2 data cache access. Unit: armv8_pmuv3_0]
+  l2d_cache_allocate
+       [Attributable Level 2 data cache allocation without refill. Unit:
+        armv8_pmuv3_0]
+  l2d_cache_inval
+       [L2D cache invalidate. Unit: armv8_pmuv3_0]
+  l2d_cache_rd
+       [L2D cache access,read. Unit: armv8_pmuv3_0]
+  l2d_cache_refill
+       [Level 2 data refill. Unit: armv8_pmuv3_0]
+  l2d_cache_refill_rd
+       [L2D cache refill,read. Unit: armv8_pmuv3_0]
+  l2d_cache_refill_wr
+       [L2D cache refill,write. Unit: armv8_pmuv3_0]
+  l2d_cache_wb
+       [Attributable Level 2 data cache write-back. Unit: armv8_pmuv3_0]
+  l2d_cache_wb_clean
+       [L2D cache Write-Back,cleaning and coherency. Unit: armv8_pmuv3_0]
+  l2d_cache_wb_victim
+       [L2D cache Write-Back,victim. Unit: armv8_pmuv3_0]
+  l2d_cache_wr
+       [L2D cache access,write. Unit: armv8_pmuv3_0]
+
+l3_cache:
+  l3d_cache
+       [Attributable Level 3 data cache access. Unit: armv8_pmuv3_0]
+  l3d_cache_allocate
+       [Attributable Level 3 data cache allocation without refill. Unit:
+        armv8_pmuv3_0]
+  l3d_cache_rd
+       [Attributable Level 3 data or unified cache access,read. Unit:
+        armv8_pmuv3_0]
+  l3d_cache_refill
+       [Attributable Level 3 data cache refill. Unit: armv8_pmuv3_0]
+
+ll_cache:
+  ll_cache_miss_rd
+       [Last level cache miss,read. Unit: armv8_pmuv3_0]
+  ll_cache_rd
+       [Attributable Last level cache memory read. Unit: armv8_pmuv3_0]
+
+memory:
+  mem_access
+       [Data memory access. Unit: armv8_pmuv3_0]
+  mem_access_rd
+       [Data memory access,read. Unit: armv8_pmuv3_0]
+  mem_access_wr
+       [Data memory access,write. Unit: armv8_pmuv3_0]
+  memory_error
+       [Local memory error. Unit: armv8_pmuv3_0]
+  remote_access
+       [Access to another socket in a multi-socket system. Unit: armv8_pmuv3_0]
+
+retired:
+  br_mis_pred_retired
+       [Instruction architecturally executed,mispredicted branch. Unit:
+        armv8_pmuv3_0]
+  br_retired
+       [Instruction architecturally executed,branch. Unit: armv8_pmuv3_0]
+  cid_write_retired
+       [Instruction architecturally executed,condition code check pass,write
+        to CONTEXTIDR. Unit: armv8_pmuv3_0]
+  inst_retired
+       [Instruction architecturally executed. Unit: armv8_pmuv3_0]
+  sw_incr
+       [Instruction architecturally executed,Condition code check pass,
+        software increment. Unit: armv8_pmuv3_0]
+  ttbr_write_retired
+       [Instruction architecturally executed,Condition code check pass,write
+        to TTBR. Unit: armv8_pmuv3_0]
+
+spe:
+  sample_collision
+       [Sample collided with previous sample. Unit: armv8_pmuv3_0]
+  sample_feed
+       [Sample Taken. Unit: armv8_pmuv3_0]
+  sample_filtrate
+       [Sample Taken and not removed by filtering. Unit: armv8_pmuv3_0]
+  sample_pop
+       [Sample Population. Unit: armv8_pmuv3_0]
+
+spec_operation:
+  ase_spec
+       [Operation speculatively executed,Advanced SIMD instruction. Unit:
+        armv8_pmuv3_0]
+  br_immed_spec
+       [Branch speculatively executed,immediate branch. Unit: armv8_pmuv3_0]
+  br_indirect_spec
+       [Branch speculatively executed,indirect branch. Unit: armv8_pmuv3_0]
+  br_mis_pred
+       [Mispredicted or not predicted branch speculatively executed. Unit:
+        armv8_pmuv3_0]
+  br_pred
+       [Predictable branch speculatively executed. Unit: armv8_pmuv3_0]
+  br_return_spec
+       [Branch speculatively executed,procedure return. Unit: armv8_pmuv3_0]
+  crypto_spec
+       [Operation speculatively executed,Cryptographic instruction. Unit:
+        armv8_pmuv3_0]
+  dmb_spec
+       [Barrier speculatively executed,DMB. Unit: armv8_pmuv3_0]
+  dp_spec
+       [Operation speculatively executed,integer data processing. Unit:
+        armv8_pmuv3_0]
+  dsb_spec
+       [Barrier speculatively executed,DSB. Unit: armv8_pmuv3_0]
+  inst_spec
+       [Operation speculatively executed. Unit: armv8_pmuv3_0]
+  isb_spec
+       [Barrier speculatively executed,ISB. Unit: armv8_pmuv3_0]
+  ld_spec
+       [Operation speculatively executed,load. Unit: armv8_pmuv3_0]
+  ldrex_spec
+       [Exclusive operation speculatively executed,LDREX or LDX. Unit:
+        armv8_pmuv3_0]
+  pc_write_spec
+       [Operation speculatively executed,software change of the PC. Unit:
+        armv8_pmuv3_0]
+  rc_ld_spec
+       [Release consistency operation speculatively executed,Load-Acquire.
+        Unit: armv8_pmuv3_0]
+  rc_st_spec
+       [Release consistency operation speculatively executed,Store-Release.
+        Unit: armv8_pmuv3_0]
+  st_spec
+       [Operation speculatively executed,store. Unit: armv8_pmuv3_0]
+  strex_fail_spec
+       [Exclusive operation speculatively executed,STREX or STX fail. Unit:
+        armv8_pmuv3_0]
+  strex_pass_spec
+       [Exclusive operation speculatively executed,STREX or STX pass. Unit:
+        armv8_pmuv3_0]
+  strex_spec
+       [Exclusive operation speculatively executed,STREX or STX. Unit:
+        armv8_pmuv3_0]
+  unaligned_ld_spec
+       [Unaligned access,read. Unit: armv8_pmuv3_0]
+  unaligned_ldst_spec
+       [Unaligned access. Unit: armv8_pmuv3_0]
+  unaligned_st_spec
+       [Unaligned access,write. Unit: armv8_pmuv3_0]
+  vfp_spec
+       [Operation speculatively executed,floating-point instruction. Unit:
+        armv8_pmuv3_0]
+
+stall:
+  stall_backend
+       [No operation issued due to the backend. Unit: armv8_pmuv3_0]
+  stall_frontend
+       [No operation issued because of the frontend. Unit: armv8_pmuv3_0]
+
+tlb:
+  dtlb_walk
+       [Access to data TLB causes a translation table walk. Unit:
+        armv8_pmuv3_0]
+  itlb_walk
+       [Access to instruction TLB that causes a translation table walk. Unit:
+        armv8_pmuv3_0]
+  l1d_tlb
+       [Attributable Level 1 data or unified TLB access. Unit: armv8_pmuv3_0]
+  l1d_tlb_rd
+       [L1D tlb access,read. Unit: armv8_pmuv3_0]
+  l1d_tlb_refill
+       [Attributable Level 1 data TLB refill. Unit: armv8_pmuv3_0]
+  l1d_tlb_refill_rd
+       [L1D tlb refill,read. Unit: armv8_pmuv3_0]
+  l1d_tlb_refill_wr
+       [L1D tlb refill,write. Unit: armv8_pmuv3_0]
+  l1d_tlb_wr
+       [L1D tlb access,write. Unit: armv8_pmuv3_0]
+  l1i_tlb
+       [Attributable Level 1 instruction TLB access. Unit: armv8_pmuv3_0]
+  l1i_tlb_refill
+       [Attributable Level 1 instruction TLB refill. Unit: armv8_pmuv3_0]
+  l2d_tlb
+       [Attributable Level 2 data or unified TLB access. Unit: armv8_pmuv3_0]
+  l2d_tlb_rd
+       [L2D cache access,read. Unit: armv8_pmuv3_0]
+  l2d_tlb_refill
+       [Attributable Level 2 data TLB refill. Unit: armv8_pmuv3_0]
+  l2d_tlb_refill_rd
+       [L2D cache refill,read. Unit: armv8_pmuv3_0]
+  l2d_tlb_refill_wr
+       [L2D cache refill,write. Unit: armv8_pmuv3_0]
+  l2d_tlb_wr
+       [L2D cache access,write. Unit: armv8_pmuv3_0]
+  rNNN                                               [Raw event descriptor]
+  armv8_pmuv3/threshold_count,event=0..0xffff,long,.../modifier[Raw event descriptor]
+       [(see 'man perf-list' or 'man perf-record' on how to encode it)]
+  arm_cmn/wp_dev_sel=0..7,wp_exclusive,wp_chn_sel=0..31,.../modifier[Raw event descriptor]
+  arm_dmc620/event=0..63,incr=0..3,mask=0..0x1fffffffffff,.../modifier[Raw event descriptor]
+  arm_dsu/event=0..0xffffffff/modifier               [Raw event descriptor]
+  breakpoint//modifier                               [Raw event descriptor]
+  kprobe/retprobe/modifier                           [Raw event descriptor]
+  software//modifier                                 [Raw event descriptor]
+  tracepoint//modifier                               [Raw event descriptor]
+  uprobe/ref_ctr_offset=0..0xffffffff,retprobe/modifier[Raw event descriptor]
+  mem:<addr>[/len][:access]                          [Hardware breakpoint]
+
+Metric Groups:
+
+Branch_Effectiveness:
+  branch_misprediction_ratio
+       [This metric measures the ratio of branches mispredicted to the total
+        number of branches architecturally executed. This gives an indication
+        of the effectiveness of the branch prediction unit]
+  branch_mpki
+       [This metric measures the number of branch mispredictions per thousand
+        instructions executed]
+
+Cycle_Accounting:
+  backend_stalled_cycles
+       [This metric is the percentage of cycles that were stalled due to
+        resource constraints in the backend unit of the processor]
+  frontend_stalled_cycles
+       [This metric is the percentage of cycles that were stalled due to
+        resource constraints in the frontend unit of the processor]
+
+DTLB_Effectiveness:
+  dtlb_mpki
+       [This metric measures the number of data TLB Walks per thousand
+        instructions executed]
+  dtlb_walk_ratio
+       [This metric measures the ratio of instruction TLB Walks to the total
+        number of data TLB accesses. This gives an indication of the
+        effectiveness of the data TLB accesses]
+  l1d_tlb_miss_ratio
+       [This metric measures the ratio of level 1 data TLB accesses missed to
+        the total number of level 1 data TLB accesses. This gives an
+        indication of the effectiveness of the level 1 data TLB]
+  l1d_tlb_mpki
+       [This metric measures the number of level 1 instruction TLB accesses
+        missed per thousand instructions executed]
+  l2_tlb_miss_ratio
+       [This metric measures the ratio of level 2 unified TLB accesses missed
+        to the total number of level 2 unified TLB accesses. This gives an
+        indication of the effectiveness of the level 2 TLB]
+  l2_tlb_mpki
+       [This metric measures the number of level 2 unified TLB accesses missed
+        per thousand instructions executed]
+
+General:
+  ipc
+       [This metric measures the number of instructions retired per cycle]
+
+ITLB_Effectiveness:
+  itlb_mpki
+       [This metric measures the number of instruction TLB Walks per thousand
+        instructions executed]
+  itlb_walk_ratio
+       [This metric measures the ratio of instruction TLB Walks to the total
+        number of instruction TLB accesses. This gives an indication of the
+        effectiveness of the instruction TLB accesses]
+  l1i_tlb_miss_ratio
+       [This metric measures the ratio of level 1 instruction TLB accesses
+        missed to the total number of level 1 instruction TLB accesses. This
+        gives an indication of the effectiveness of the level 1 instruction
+        TLB]
+  l1i_tlb_mpki
+       [This metric measures the number of level 1 instruction TLB accesses
+        missed per thousand instructions executed]
+  l2_tlb_miss_ratio
+       [This metric measures the ratio of level 2 unified TLB accesses missed
+        to the total number of level 2 unified TLB accesses. This gives an
+        indication of the effectiveness of the level 2 TLB]
+  l2_tlb_mpki
+       [This metric measures the number of level 2 unified TLB accesses missed
+        per thousand instructions executed]
+
+L1D_Cache_Effectiveness:
+  l1d_cache_miss_ratio
+       [This metric measures the ratio of level 1 data cache accesses missed
+        to the total number of level 1 data cache accesses. This gives an
+        indication of the effectiveness of the level 1 data cache]
+  l1d_cache_mpki
+       [This metric measures the number of level 1 data cache accesses missed
+        per thousand instructions executed]
+
+L1I_Cache_Effectiveness:
+  l1i_cache_miss_ratio
+       [This metric measures the ratio of level 1 instruction cache accesses
+        missed to the total number of level 1 instruction cache accesses. This
+        gives an indication of the effectiveness of the level 1 instruction
+        cache]
+  l1i_cache_mpki
+       [This metric measures the number of level 1 instruction cache accesses
+        missed per thousand instructions executed]
+
+L2_Cache_Effectiveness:
+  l2_cache_miss_ratio
+       [This metric measures the ratio of level 2 cache accesses missed to the
+        total number of level 2 cache accesses. This gives an indication of
+        the effectiveness of the level 2 cache,which is a unified cache that
+        stores both data and instruction. Note that cache accesses in this
+        cache are either data memory access or instruction fetch as this is a
+        unified cache]
+  l2_cache_mpki
+       [This metric measures the number of level 2 unified cache accesses
+        missed per thousand instructions executed. Note that cache accesses in
+        this cache are either data memory access or instruction fetch as this
+        is a unified cache]
+
+LL_Cache_Effectiveness:
+  ll_cache_read_hit_ratio
+       [This metric measures the ratio of last level cache read accesses hit
+        in the cache to the total number of last level cache accesses. This
+        gives an indication of the effectiveness of the last level cache for
+        read traffic. Note that cache accesses in this cache are either data
+        memory access or instruction fetch as this is a system level cache]
+  ll_cache_read_miss_ratio
+       [This metric measures the ratio of last level cache read accesses
+        missed to the total number of last level cache accesses. This gives an
+        indication of the effectiveness of the last level cache for read
+        traffic. Note that cache accesses in this cache are either data memory
+        access or instruction fetch as this is a system level cache]
+  ll_cache_read_mpki
+       [This metric measures the number of last level cache read accesses
+        missed per thousand instructions executed]
+
+MPKI:
+  branch_mpki
+       [This metric measures the number of branch mispredictions per thousand
+        instructions executed]
+  dtlb_mpki
+       [This metric measures the number of data TLB Walks per thousand
+        instructions executed]
+  itlb_mpki
+       [This metric measures the number of instruction TLB Walks per thousand
+        instructions executed]
+  l1d_cache_mpki
+       [This metric measures the number of level 1 data cache accesses missed
+        per thousand instructions executed]
+  l1d_tlb_mpki
+       [This metric measures the number of level 1 instruction TLB accesses
+        missed per thousand instructions executed]
+  l1i_cache_mpki
+       [This metric measures the number of level 1 instruction cache accesses
+        missed per thousand instructions executed]
+  l1i_tlb_mpki
+       [This metric measures the number of level 1 instruction TLB accesses
+        missed per thousand instructions executed]
+  l2_cache_mpki
+       [This metric measures the number of level 2 unified cache accesses
+        missed per thousand instructions executed. Note that cache accesses in
+        this cache are either data memory access or instruction fetch as this
+        is a unified cache]
+  l2_tlb_mpki
+       [This metric measures the number of level 2 unified TLB accesses missed
+        per thousand instructions executed]
+  ll_cache_read_mpki
+       [This metric measures the number of last level cache read accesses
+        missed per thousand instructions executed]
+
+Miss_Ratio:
+  branch_misprediction_ratio
+       [This metric measures the ratio of branches mispredicted to the total
+        number of branches architecturally executed. This gives an indication
+        of the effectiveness of the branch prediction unit]
+  dtlb_walk_ratio
+       [This metric measures the ratio of instruction TLB Walks to the total
+        number of data TLB accesses. This gives an indication of the
+        effectiveness of the data TLB accesses]
+  itlb_walk_ratio
+       [This metric measures the ratio of instruction TLB Walks to the total
+        number of instruction TLB accesses. This gives an indication of the
+        effectiveness of the instruction TLB accesses]
+  l1d_cache_miss_ratio
+       [This metric measures the ratio of level 1 data cache accesses missed
+        to the total number of level 1 data cache accesses. This gives an
+        indication of the effectiveness of the level 1 data cache]
+  l1d_tlb_miss_ratio
+       [This metric measures the ratio of level 1 data TLB accesses missed to
+        the total number of level 1 data TLB accesses. This gives an
+        indication of the effectiveness of the level 1 data TLB]
+  l1i_cache_miss_ratio
+       [This metric measures the ratio of level 1 instruction cache accesses
+        missed to the total number of level 1 instruction cache accesses. This
+        gives an indication of the effectiveness of the level 1 instruction
+        cache]
+  l1i_tlb_miss_ratio
+       [This metric measures the ratio of level 1 instruction TLB accesses
+        missed to the total number of level 1 instruction TLB accesses. This
+        gives an indication of the effectiveness of the level 1 instruction
+        TLB]
+  l2_cache_miss_ratio
+       [This metric measures the ratio of level 2 cache accesses missed to the
+        total number of level 2 cache accesses. This gives an indication of
+        the effectiveness of the level 2 cache,which is a unified cache that
+        stores both data and instruction. Note that cache accesses in this
+        cache are either data memory access or instruction fetch as this is a
+        unified cache]
+  l2_tlb_miss_ratio
+       [This metric measures the ratio of level 2 unified TLB accesses missed
+        to the total number of level 2 unified TLB accesses. This gives an
+        indication of the effectiveness of the level 2 TLB]
+  ll_cache_read_miss_ratio
+       [This metric measures the ratio of last level cache read accesses
+        missed to the total number of last level cache accesses. This gives an
+        indication of the effectiveness of the last level cache for read
+        traffic. Note that cache accesses in this cache are either data memory
+        access or instruction fetch as this is a system level cache]
+
+Operation_Mix:
+  branch_percentage
+       [This metric measures branch operations as a percentage of operations
+        speculatively executed]
+  crypto_percentage
+       [This metric measures crypto operations as a percentage of operations
+        speculatively executed]
+  integer_dp_percentage
+       [This metric measures scalar integer operations as a percentage of
+        operations speculatively executed]
+  load_percentage
+       [This metric measures load operations as a percentage of operations
+        speculatively executed]
+  scalar_fp_percentage
+       [This metric measures scalar floating point operations as a percentage
+        of operations speculatively executed]
+  simd_percentage
+       [This metric measures advanced SIMD operations as a percentage of total
+        operations speculatively executed]
+  store_percentage
+       [This metric measures store operations as a percentage of operations
+        speculatively executed]
+
+cmn:
+  hnf_message_retry_rate
+       [HN-F message retry rate indicates whether a lack of credits is causing
+        the bottlenecks]
+  mc_message_retry_rate
+       [The memory controller request retries rate indicates whether the
+        memory controller is the bottleneck]
+  rni_actual_read_bandwidth.all
+       [This event measure the actual bandwidth that RN-I bridge sends to the
+        interconnect]
+  rni_actual_write_bandwidth.all
+       [This event measures the actual write bandwidth at RN-I bridges]
+  rni_retry_rate
+       [RN-I bridge retry rate indicates whether the memory controller is the
+        bottleneck]
+  sbsx_actual_write_bandwidth.all
+       [sbsx actual write bandwidth]
+  sf_hit_rate
+       [Snoop filter hit rate can be used to measure the snoop filter
+        efficiency]
+  slc_miss_rate
+       [The system level cache miss rate]

@@ -1,0 +1,202 @@
+{
+  "machine": "thunderbird",
+  "hostname": "thunderbird",
+  "isa": "aarch64",
+  "cpu": 32,
+  "numa_node": 0,
+  "experiment": "latency",
+  "defaults": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge"
+  },
+  "order_seed": 59280,
+  "groups": {
+    "calibration": [
+      {
+        "id": "timer",
+        "mode": "empty",
+        "bytes": 16384
+      },
+      {
+        "id": "l1_long",
+        "mode": "chase",
+        "bytes": 16384,
+        "batch": 1024
+      },
+      {
+        "id": "l1_sequential",
+        "mode": "sequential",
+        "bytes": 16384
+      },
+      {
+        "id": "l1_independent",
+        "mode": "independent",
+        "bytes": 16384
+      },
+      {
+        "id": "l2_long",
+        "mode": "chase",
+        "bytes": 262144,
+        "batch": 1024
+      },
+      {
+        "id": "l2_sequential",
+        "mode": "sequential",
+        "bytes": 262144
+      },
+      {
+        "id": "l2_independent",
+        "mode": "independent",
+        "bytes": 262144
+      },
+      {
+        "id": "llc_long",
+        "mode": "chase",
+        "bytes": 4194304,
+        "batch": 1024
+      },
+      {
+        "id": "llc_sequential",
+        "mode": "sequential",
+        "bytes": 4194304
+      },
+      {
+        "id": "llc_independent",
+        "mode": "independent",
+        "bytes": 4194304
+      },
+      {
+        "id": "memory_sequential",
+        "mode": "sequential",
+        "bytes": 268435456
+      },
+      {
+        "id": "memory_independent",
+        "mode": "independent",
+        "bytes": 268435456
+      }
+    ],
+    "l1_hit": [
+      {
+        "id": "primary",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      {
+        "id": "alternate",
+        "mode": "chase",
+        "bytes": 32768
+      },
+      {
+        "id": "repeat",
+        "mode": "chase",
+        "bytes": 16384,
+        "seed": 59222
+      }
+    ],
+    "l2_hit": [
+      {
+        "id": "primary",
+        "mode": "chase",
+        "bytes": 262144
+      },
+      {
+        "id": "alternate",
+        "mode": "chase",
+        "bytes": 524288
+      },
+      {
+        "id": "repeat",
+        "mode": "chase",
+        "bytes": 262144,
+        "seed": 59222
+      }
+    ],
+    "llc_hit": [
+      {
+        "id": "primary",
+        "mode": "chase",
+        "bytes": 4194304
+      },
+      {
+        "id": "alternate",
+        "mode": "chase",
+        "bytes": 8388608
+      },
+      {
+        "id": "repeat",
+        "mode": "chase",
+        "bytes": 4194304,
+        "seed": 59222
+      }
+    ],
+    "l1_miss": [
+      {
+        "id": "primary",
+        "mode": "paired",
+        "bytes": 262144
+      },
+      {
+        "id": "alternate",
+        "mode": "paired",
+        "bytes": 524288
+      },
+      {
+        "id": "repeat",
+        "mode": "paired",
+        "bytes": 262144,
+        "seed": 59222
+      }
+    ],
+    "l2_miss": [
+      {
+        "id": "primary",
+        "mode": "paired",
+        "bytes": 4194304
+      },
+      {
+        "id": "alternate",
+        "mode": "paired",
+        "bytes": 8388608
+      },
+      {
+        "id": "repeat",
+        "mode": "paired",
+        "bytes": 4194304,
+        "seed": 59222
+      }
+    ],
+    "llc_miss": [
+      {
+        "id": "primary",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      {
+        "id": "alternate",
+        "mode": "paired",
+        "bytes": 536870912
+      },
+      {
+        "id": "repeat",
+        "mode": "paired",
+        "bytes": 268435456,
+        "seed": 59222
+      }
+    ]
+  },
+  "capacity_basis": {
+    "inference_file": "capacity/results/thunderbird/combined12/inference.json",
+    "inference_sha256": "838b1e9c00736989d0f0a2e4e027079eef711b3866f21bae6f719a7f5c2aea0e",
+    "source_runs": [
+      "round1",
+      "round2"
+    ],
+    "selection": "Resident points inside observed plateaus; paired footprints set full-cycle reuse distance. Intended levels are timing hypotheses, not verified per-access hit classes.",
+    "spacing_note": "64 bytes is an access-layout parameter inherited from capacity, not a measured line size.",
+    "memory_note": "256/512 MiB are observed large-footprint regions. Their first-pass timings need not be pure DRAM latency."
+  }
+}

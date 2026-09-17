@@ -1,0 +1,11 @@
+mapping_before base=0xffff8482a040 cpu=4
+Size:                268 kB
+KernelPageSize:        4 kB
+AnonHugePages:         0 kB
+numa_mapping: ffff8482a000 bind:0 anon=66 dirty=66 active=0 N0=66 kernelpagesize_kB=4
+cpu_end=4 minor_faults=0 major_faults=0 voluntary_switches=0 involuntary_switches=84
+mapping_after base=0xffff8482a040 cpu=4
+Size:                268 kB
+KernelPageSize:        4 kB
+AnonHugePages:         0 kB
+numa_mapping: ffff8482a000 bind:0 anon=66 dirty=66 active=0 N0=66 kernelpagesize_kB=4

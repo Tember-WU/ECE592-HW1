@@ -1,0 +1,19 @@
+[
+  "taskset",
+  "-c",
+  "32",
+  "numactl",
+  "--membind=0",
+  "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/thunderbird/capacity_pmu",
+  "58720256",
+  "64",
+  "random",
+  "1000",
+  "256",
+  "59202",
+  "32",
+  "huge",
+  "/home/swu35/ECE592-HW1/PMU-verification/preflight/thunderbird/smoke01/capacity/raw/LLC_w58720256.u64",
+  "0x42,0x52,0x37,0x70",
+  "/home/swu35/ECE592-HW1/PMU-verification/preflight/thunderbird/smoke01/capacity/counts/LLC_w58720256.json"
+]
