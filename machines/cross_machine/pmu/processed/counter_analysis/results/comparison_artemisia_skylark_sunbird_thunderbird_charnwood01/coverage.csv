@@ -1,0 +1,6 @@
+host,records,expected,full_sample_coverage,contributor
+artemisia,81,81,True,UNASSIGNED
+skylark,81,81,True,Preet Patel
+sunbird,81,81,True,Preet Patel
+thunderbird,81,81,True,Preet Patel
+charnwood,81,81,True,Preet Patel
