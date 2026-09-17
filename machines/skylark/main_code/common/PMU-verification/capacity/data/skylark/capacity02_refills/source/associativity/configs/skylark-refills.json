@@ -1,0 +1,134 @@
+{
+  "machine": "skylark",
+  "isa": "x86_64",
+  "cpu": 4,
+  "numa_node": 0,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "ls_refills_from_sys.ls_mabresp_lcl_l2",
+      "config": "0x0143",
+      "field": "local_l2_demand_fills_per_1000_chain_loads",
+      "label": "Demand fills from local L2",
+      "meaning": "Demand data-cache fills satisfied by local L2; L1 refill evidence rather than a retired L1 miss count."
+    },
+    {
+      "name": "ls_refills_from_sys.ls_mabresp_lcl_cache",
+      "config": "0x0243",
+      "field": "local_cache_demand_fills_per_1000_chain_loads",
+      "label": "Demand fills from local cache domain",
+      "meaning": "Demand fills from a local CCX cache excluding local L2, or remote CCX with address home on this die; not a pure L3-hit count."
+    },
+    {
+      "name": "l2_request_g1.rd_blk_l",
+      "config": "0x8060",
+      "field": "l2_data_read_requests_per_1000_chain_loads",
+      "label": "L2 data-read requests incl. prefetch",
+      "meaning": "Data cache reads received by L2, including hardware and software prefetch; not a retired-load miss event."
+    },
+    {
+      "name": "ls_l1_d_tlb_miss.all",
+      "config": "0xff45",
+      "field": "l1_dtlb_misses_reloads_per_1000_chain_loads",
+      "label": "L1 DTLB misses or reloads",
+      "meaning": "All L1 data-TLB misses or reloads; translation-control evidence, not necessarily page walks."
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "associativity",
+  "batch": 128,
+  "line_size": 64,
+  "seed": 701,
+  "points": [
+    {
+      "name": "L1_k6",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 6,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k7",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 7,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k8",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k9",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k10",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k7",
+      "group": "L2_candidate",
+      "num_sets": 1024,
+      "k": 7,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k8",
+      "group": "L2_candidate",
+      "num_sets": 1024,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k9",
+      "group": "L2_candidate",
+      "num_sets": 1024,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k10",
+      "group": "L2_candidate",
+      "num_sets": 1024,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k11",
+      "group": "L2_candidate",
+      "num_sets": 1024,
+      "k": 11,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k12",
+      "group": "L2_candidate",
+      "num_sets": 1024,
+      "k": 12,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k13",
+      "group": "L2_candidate",
+      "num_sets": 1024,
+      "k": 13,
+      "max_k": 16
+    }
+  ],
+  "placement_note": "CPU 4/node 0 matches the saved candidate-sweep pinning_manifest. Compare the explicitly selected candidate64/candidate1024 CSVs inside raw_data/raw_data, not the separate outer CSV generation.",
+  "phase1_freeze": "skylark/phase1_frozen.json",
+  "baseline_directory": "raw_data/raw_data",
+  "selection_note": "Five points around frozen L1 K=8/9 edge; seven points spanning the selected L2-candidate K=8..12 mixed transition and reported inferred_ways=11. All existed in Phase I; no new K extension.",
+  "counter_pass": "Supplemental refill/translation group; same workload and order as pass 1. Added because MAB allocations did not track the L1 timing transition."
+}

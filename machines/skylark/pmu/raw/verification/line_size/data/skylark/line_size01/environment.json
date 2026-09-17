@@ -1,0 +1,24 @@
+{
+  "hostname": "skylark.ece.ncsu.edu",
+  "kernel": "5.14.0-611.38.1.el9_7.x86_64",
+  "cpu": 0,
+  "numa_node": 0,
+  "isa": "x86_64",
+  "siblings": [
+    0
+  ],
+  "preflight_busy_percent": {
+    "0": 0.0
+  },
+  "socket": "0",
+  "core": "0",
+  "frequency": {},
+  "compiler": "g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)",
+  "perf_version": "perf version 5.14.0-687.30.1.el9_8.x86_64",
+  "python": "3.9.25",
+  "numpy": "1.26.3",
+  "flags": "-O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+  "timer_unit": "TSC ticks / timed chain load",
+  "placement_note": "Use CPU 0/node 0 from the saved Skylark line-size fixed_params; no collection-time pinning manifest is present, so original actual binding cannot be independently verified. Same footprint/stride/order/seed/batch; PMU version retains the previously disclosed buffered-output change.",
+  "counting_scope": "User mode, calling thread, entire sample loop; includes stack/helper loads and associativity preparation loads."
+}

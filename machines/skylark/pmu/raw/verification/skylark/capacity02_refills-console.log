@@ -1,0 +1,24 @@
+14 configurations, 1,000,000 timed batches each, four simultaneous events.
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Preflight CPU busy %: {'32': 0.0}
+[1/14] LLC_w29360128: median 202.5000 ticks/load; Configured first three events per 1000 chain loads [10.45, 291.64, 1008.2]
+[2/14] L1_w36864: median 5.0625 ticks/load; Configured first three events per 1000 chain loads [325.58, 0.0, 469.21]
+[3/14] L1_w32768: median 3.3750 ticks/load; Configured first three events per 1000 chain loads [47.62, 0.0, 50.99]
+[4/14] L2_w1048576: median 23.2500 ticks/load; Configured first three events per 1000 chain loads [258.13, 742.53, 1083.77]
+[5/14] L1_w40960: median 5.7188 ticks/load; Configured first three events per 1000 chain loads [432.6, 0.0, 741.91]
+[6/14] LLC_w20971520: median 141.6562 ticks/load; Configured first three events per 1000 chain loads [13.66, 551.64, 1007.74]
+[7/14] LLC_w16777216: median 30.0938 ticks/load; Configured first three events per 1000 chain loads [17.15, 975.9, 1008.33]
+[8/14] LLC_w25165824: median 184.4062 ticks/load; Configured first three events per 1000 chain loads [11.73, 363.51, 1007.13]
+[9/14] LLC_w33554432: median 211.8750 ticks/load; Configured first three events per 1000 chain loads [9.03, 254.76, 1006.72]
+[10/14] L2_w524288: median 9.1875 ticks/load; Configured first three events per 1000 chain loads [972.74, 20.28, 1156.79]
+[11/14] L2_w786432: median 23.3438 ticks/load; Configured first three events per 1000 chain loads [278.22, 723.83, 1001.44]
+[12/14] L1_w49152: median 6.4688 ticks/load; Configured first three events per 1000 chain loads [563.85, 0.0, 1060.54]
+[13/14] L2_w589824: median 16.2188 ticks/load; Configured first three events per 1000 chain loads [620.8, 379.89, 1022.42]
+[14/14] L1_w65536: median 7.3125 ticks/load; Configured first three events per 1000 chain loads [711.83, 0.0, 1326.29]

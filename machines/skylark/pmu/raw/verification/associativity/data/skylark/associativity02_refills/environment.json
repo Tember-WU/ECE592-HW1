@@ -1,0 +1,24 @@
+{
+  "hostname": "skylark.ece.ncsu.edu",
+  "kernel": "5.14.0-611.38.1.el9_7.x86_64",
+  "cpu": 4,
+  "numa_node": 0,
+  "isa": "x86_64",
+  "siblings": [
+    4
+  ],
+  "preflight_busy_percent": {
+    "4": 0.0
+  },
+  "socket": "0",
+  "core": "8",
+  "frequency": {},
+  "compiler": "g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)",
+  "perf_version": "perf version 5.14.0-687.30.1.el9_8.x86_64",
+  "python": "3.9.25",
+  "numpy": "1.26.3",
+  "flags": "-O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+  "timer_unit": "TSC ticks / timed chain load",
+  "placement_note": "CPU 4/node 0 matches the saved candidate-sweep pinning_manifest. Compare the explicitly selected candidate64/candidate1024 CSVs inside raw_data/raw_data, not the separate outer CSV generation.",
+  "counting_scope": "User mode, calling thread, entire sample loop; includes stack/helper loads and associativity preparation loads."
+}

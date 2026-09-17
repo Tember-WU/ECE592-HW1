@@ -1,0 +1,142 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-09-14T15:53:13.548505+00:00",
+  "original_pmu_files_preserved": 264,
+  "frozen_phase1_files_unchanged": 682,
+  "totals": {
+    "samples": 76000000,
+    "minor_faults": 0,
+    "major_faults": 0,
+    "involuntary_switches": 917,
+    "raw_files": 76
+  },
+  "runs": [
+    {
+      "experiment": "capacity",
+      "run_id": "capacity01",
+      "points": 14,
+      "cpu": 32,
+      "numa_node": 1,
+      "started_utc": "2026-09-14T15:40:04.908423+00:00",
+      "finished_utc": "2026-09-14T15:41:45.704918+00:00",
+      "elapsed_seconds": 100.79648936586455,
+      "all_raw_and_count_hashes_match": true,
+      "all_groups_without_multiplexing": true,
+      "stable_huge_kib": [
+        2048,
+        16384,
+        20480,
+        24576,
+        28672,
+        32768
+      ]
+    },
+    {
+      "experiment": "capacity",
+      "run_id": "capacity02_refills",
+      "points": 14,
+      "cpu": 32,
+      "numa_node": 1,
+      "started_utc": "2026-09-14T15:43:19.141294+00:00",
+      "finished_utc": "2026-09-14T15:45:00.053160+00:00",
+      "elapsed_seconds": 100.91185895213857,
+      "all_raw_and_count_hashes_match": true,
+      "all_groups_without_multiplexing": true,
+      "stable_huge_kib": [
+        2048,
+        16384,
+        20480,
+        24576,
+        28672,
+        32768
+      ]
+    },
+    {
+      "experiment": "line_size",
+      "run_id": "line_size01",
+      "points": 12,
+      "cpu": 0,
+      "numa_node": 0,
+      "started_utc": "2026-09-14T15:41:45.809054+00:00",
+      "finished_utc": "2026-09-14T15:42:38.298435+00:00",
+      "elapsed_seconds": 52.48937271209434,
+      "all_raw_and_count_hashes_match": true,
+      "all_groups_without_multiplexing": true,
+      "stable_huge_kib": [
+        0
+      ]
+    },
+    {
+      "experiment": "line_size",
+      "run_id": "line_size02_refills",
+      "points": 12,
+      "cpu": 0,
+      "numa_node": 0,
+      "started_utc": "2026-09-14T15:45:00.158978+00:00",
+      "finished_utc": "2026-09-14T15:45:51.331452+00:00",
+      "elapsed_seconds": 51.172467852942646,
+      "all_raw_and_count_hashes_match": true,
+      "all_groups_without_multiplexing": true,
+      "stable_huge_kib": [
+        0
+      ]
+    },
+    {
+      "experiment": "associativity",
+      "run_id": "associativity01",
+      "points": 12,
+      "cpu": 4,
+      "numa_node": 0,
+      "started_utc": "2026-09-14T15:42:38.403033+00:00",
+      "finished_utc": "2026-09-14T15:42:55.717299+00:00",
+      "elapsed_seconds": 17.314258689060807,
+      "all_raw_and_count_hashes_match": true,
+      "all_groups_without_multiplexing": true,
+      "stable_huge_kib": [
+        2048
+      ]
+    },
+    {
+      "experiment": "associativity",
+      "run_id": "associativity02_refills",
+      "points": 12,
+      "cpu": 4,
+      "numa_node": 0,
+      "started_utc": "2026-09-14T15:45:51.435337+00:00",
+      "finished_utc": "2026-09-14T15:46:08.994780+00:00",
+      "elapsed_seconds": 17.559436718933284,
+      "all_raw_and_count_hashes_match": true,
+      "all_groups_without_multiplexing": true,
+      "stable_huge_kib": [
+        2048
+      ]
+    }
+  ],
+  "combined_validation_sha256": "8f60eb9188f7a5f430d4c645811fc6a322cad5622d598e5866bb94208d2077dd",
+  "implementation_and_analysis_hashes": {
+    "run_capacity.py": "b5c06fa8cda3a9bf71a5a939020298947472dc5a26f84bab359b5051f777eecf",
+    "run_verification.py": "12be8f32a5091274ee7ffa9d59826366bfbb229b07741a9efc7f585ac5ffe9d0",
+    "support.py": "085f12e59d4baef5de2d153210c96cc805efac6726a1d1d73f675dd805f274b1",
+    "discover_events.py": "898d25119406871e91f355c94f1aef2fcc4d08937d3946b077e525daa2b3ce8f",
+    "analyze_capacity.py": "3208d729da2cc641bbbd36a69aeabc3c677cf1b0f639e86633ad7ebb195493df",
+    "analyze_verification.py": "44dfe30dfb6d5e82447340d06ca246e3af3ec8bf636f13ebf0a5cbbee59d6fe4",
+    "test_skylark.py": "6c72073ca99b6fcd01faa7c722de1f256d32dda68bbbf2c0c75c732fe9c390a2",
+    "combine_results.py": "72e2d2193c0a6f1afef58e8499b3a7df3c7c51a3cead9e4cf705d12fe0aa0235",
+    "final_audit.py": "11aa7a73cc3c35c35171c8169d634e5559c7820dc6780c653efde62beba4d051"
+  },
+  "result_artifact_hashes": {
+    "capacity_eight_events.csv": "b399b10e659d83838e6686cc51e9ecbca17e9015999972758619c30bcbbad698",
+    "capacity_combined.png": "c2b121b891809ab1b6dd1631bc84511a2fe90da09f3e0c98176ea80001972740",
+    "capacity_combined.pdf": "f914ca423628f5ba36242afa5cf30ce32a6ae7cff98d12b4ba2dfb2b4c1e3675",
+    "line_size_eight_events.csv": "b0a906e43eed8433bba0aaf26fcea72904c8e5b13550cfe7ff6e202e366f00f7",
+    "line_size_combined.png": "35007e7e82d4fdc615bc115be2f172069f12cd2b0d34181963358c98dc902b1c",
+    "line_size_combined.pdf": "b83546fe1fe6be2eb8a6c917a2597c6680a57239ef751841cc8c7c9946bb3e93",
+    "associativity_eight_events.csv": "1f73e7035ba910e4bb65c3ca220601682b6885490b701cbaaf98bb8f3b227f48",
+    "associativity_combined.png": "6f3902c17cf3fbd761e8be1d0504d632435d7dc921a6a044c631cecda55063c7",
+    "associativity_combined.pdf": "734d724058f988253ea4f9151a2db2b60daba9c26adf73cc706b5e2768d12bc4",
+    "combined_validation.json": "8f60eb9188f7a5f430d4c645811fc6a322cad5622d598e5866bb94208d2077dd",
+    "system_comparison.csv": "71e58fbbcc8c545e02171df3171ba3b015576ddfaa392063f81424f7406fdd7f",
+    "eight_event_definitions.csv": "4e083c736c4e236df0de11c88cbf70eee547f45749ffe0d2cf9d8cd6106b2a04"
+  },
+  "report_sha256": "542c4853765661b73e927c5a59c00494072160b25b2e8786bfab24f297ff634d"
+}

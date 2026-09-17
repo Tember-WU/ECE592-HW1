@@ -1,0 +1,6 @@
+data/skylark/preflight/numactl-2.0.19-3.el9.x86_64.rpm:
+    Header V4 RSA/SHA256 Signature, key ID fd431d51: OK
+    Header SHA256 digest: OK
+    Header SHA1 digest: OK
+    Payload SHA256 digest: OK
+    MD5 digest: OK

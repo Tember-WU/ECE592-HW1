@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ls_mab_alloc.loads",
+    "config": "0x0141",
+    "field": "l1_load_mab_allocs_per_1000_chain_loads",
+    "label": "L1 load MAB allocations",
+    "meaning": "Load miss-address-buffer allocations; request/allocation evidence, not retired-load misses."
+  },
+  {
+    "name": "l2_cache_req_stat.ls_rd_blk_c",
+    "config": "0x0864",
+    "field": "l2_dc_request_misses_per_1000_chain_loads",
+    "label": "L2 data-cache request misses",
+    "meaning": "Core-to-L2 data-cache request misses, all types, excluding L2 prefetch. Includes more than retired demand loads."
+  },
+  {
+    "name": "ls_refills_from_sys.ls_mabresp_lcl_dram",
+    "config": "0x0843",
+    "field": "local_dram_io_fills_per_1000_chain_loads",
+    "label": "Local DRAM/IO demand fills",
+    "meaning": "Demand data-cache fills from DRAM or IO on this thread die. Indirect beyond-cache evidence, not a direct L3 miss count."
+  },
+  {
+    "name": "ls_dispatch.ld_dispatch",
+    "config": "0x0129",
+    "field": "load_dispatches_per_1000_chain_loads",
+    "label": "Load dispatches",
+    "meaning": "Dispatched load operations including helper/stack work and speculative activity; not retired loads."
+  }
+]

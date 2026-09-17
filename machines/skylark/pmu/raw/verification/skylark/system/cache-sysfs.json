@@ -1,0 +1,128 @@
+{
+  "0": {
+    "index0": {
+      "level": "1",
+      "type": "Data",
+      "size": "32K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "0",
+      "id": "0"
+    },
+    "index1": {
+      "level": "1",
+      "type": "Instruction",
+      "size": "32K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "0",
+      "id": "0"
+    },
+    "index2": {
+      "level": "2",
+      "type": "Unified",
+      "size": "512K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "1024",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "0",
+      "id": "0"
+    },
+    "index3": {
+      "level": "3",
+      "type": "Unified",
+      "size": "16384K",
+      "ways_of_associativity": "16",
+      "number_of_sets": "16384",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "0-1",
+      "id": "0"
+    }
+  },
+  "4": {
+    "index0": {
+      "level": "1",
+      "type": "Data",
+      "size": "32K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "4",
+      "id": "8"
+    },
+    "index1": {
+      "level": "1",
+      "type": "Instruction",
+      "size": "32K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "4",
+      "id": "8"
+    },
+    "index2": {
+      "level": "2",
+      "type": "Unified",
+      "size": "512K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "1024",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "4",
+      "id": "8"
+    },
+    "index3": {
+      "level": "3",
+      "type": "Unified",
+      "size": "16384K",
+      "ways_of_associativity": "16",
+      "number_of_sets": "16384",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "4-5",
+      "id": "4"
+    }
+  },
+  "32": {
+    "index0": {
+      "level": "1",
+      "type": "Data",
+      "size": "32K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "32",
+      "id": "64"
+    },
+    "index1": {
+      "level": "1",
+      "type": "Instruction",
+      "size": "32K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "64",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "32",
+      "id": "64"
+    },
+    "index2": {
+      "level": "2",
+      "type": "Unified",
+      "size": "512K",
+      "ways_of_associativity": "8",
+      "number_of_sets": "1024",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "32",
+      "id": "64"
+    },
+    "index3": {
+      "level": "3",
+      "type": "Unified",
+      "size": "16384K",
+      "ways_of_associativity": "16",
+      "number_of_sets": "16384",
+      "coherency_line_size": "64",
+      "shared_cpu_list": "32-33",
+      "id": "32"
+    }
+  }
+}

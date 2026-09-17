@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "agner-microarchitecture.pdf",
+    "url": "https://www.agner.org/optimize/microarchitecture.pdf",
+    "retrieved_utc": "2026-09-14T15:42:38.846810+00:00",
+    "sha256": "75bcd395680df4742a3e7200a61525400bc98ca4927cad50cd17dadc7273df5e"
+  },
+  {
+    "filename": "amdzen2-memory.json",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/tools/perf/pmu-events/arch/x86/amdzen2/memory.json",
+    "retrieved_utc": "2026-09-14T15:42:38.960969+00:00",
+    "sha256": "12d06121e8a31461ab51011702b9298534f7f5cfff5fb08515189f0beda61bfe"
+  },
+  {
+    "filename": "amdzen2-cache.json",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/tools/perf/pmu-events/arch/x86/amdzen2/cache.json",
+    "retrieved_utc": "2026-09-14T15:42:39.064730+00:00",
+    "sha256": "a1e808941c967288ae79e2de76079dbf971c7c3514a9bb87e3beebc6ffb23438"
+  },
+  {
+    "filename": "amd-epyc-7002-datasheet.pdf",
+    "url": "https://www.amd.com/content/dam/amd/en/documents/products/epyc/amd-epyc-7002-series-datasheet.pdf",
+    "sha256": "86395da9c83eb47ae4f2fc466dda62438ce7b031257ac5efd3d134e5238fabf1",
+    "retrieved_utc": "2026-09-14T15:48:09.320225+00:00"
+  }
+]

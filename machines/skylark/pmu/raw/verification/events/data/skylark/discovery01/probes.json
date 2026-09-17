@@ -1,0 +1,287 @@
+[
+  {
+    "name": "ls_mab_alloc.loads",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "ls_mab_alloc.loads:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "l2_cache_req_stat.ls_rd_blk_c",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "l2_cache_req_stat.ls_rd_blk_c:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "ls_refills_from_sys.ls_mabresp_lcl_dram",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "ls_refills_from_sys.ls_mabresp_lcl_dram:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "ls_dispatch.ld_dispatch",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "ls_dispatch.ld_dispatch:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "ls_refills_from_sys.ls_mabresp_lcl_l2",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "ls_refills_from_sys.ls_mabresp_lcl_l2:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "ls_refills_from_sys.ls_mabresp_lcl_cache",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "ls_refills_from_sys.ls_mabresp_lcl_cache:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "ls_refills_from_sys.ls_mabresp_rmt_dram",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "ls_refills_from_sys.ls_mabresp_rmt_dram:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "ls_l1_d_tlb_miss.all",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "ls_l1_d_tlb_miss.all:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "ls_dc_accesses",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "ls_dc_accesses:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "l3_comb_clstr_state.request_miss",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "l3_comb_clstr_state.request_miss:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": false,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "l3_lookup_state.all_l3_req_typs",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "l3_lookup_state.all_l3_req_typs:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": false,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "mem_load_retired.l1_miss",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "mem_load_retired.l1_miss:u",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 129,
+    "usable": false,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "user_core_group",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-e",
+      "{ls_mab_alloc.loads:u,l2_cache_req_stat.ls_rd_blk_c:u,ls_refills_from_sys.ls_mabresp_lcl_dram:u,ls_dispatch.ld_dispatch:u}",
+      "--",
+      "taskset",
+      "-c",
+      "32",
+      "/usr/bin/true"
+    ],
+    "returncode": 0,
+    "usable": true,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "l3_system_user",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-a",
+      "-C",
+      "32",
+      "-e",
+      "amd_l3/event=0x6,umask=0x1/:u",
+      "--",
+      "/usr/bin/true"
+    ],
+    "returncode": 129,
+    "usable": false,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  },
+  {
+    "name": "l3_system_all_modes",
+    "command": [
+      "perf",
+      "stat",
+      "--no-big-num",
+      "-x,",
+      "-a",
+      "-C",
+      "32",
+      "-e",
+      "amd_l3/event=0x6,umask=0x1/:uk",
+      "--",
+      "/usr/bin/true"
+    ],
+    "returncode": 129,
+    "usable": false,
+    "counting_scope": "Availability probe only; not a formal experiment"
+  }
+]

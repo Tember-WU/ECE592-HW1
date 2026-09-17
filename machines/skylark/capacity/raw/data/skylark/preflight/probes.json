@@ -1,0 +1,59 @@
+[
+  {
+    "command": [
+      "numactl",
+      "--membind=1",
+      "build/skylark/cache_capacity",
+      "32768",
+      "64",
+      "random",
+      "1000",
+      "256",
+      "59201",
+      "32",
+      "huge",
+      "build/skylark/preflight/probe-huge-32768.u64"
+    ],
+    "returncode": 0,
+    "diagnostic_only": true,
+    "samples": 1000
+  },
+  {
+    "command": [
+      "numactl",
+      "--membind=1",
+      "build/skylark/cache_capacity",
+      "536870912",
+      "64",
+      "random",
+      "1000",
+      "256",
+      "59201",
+      "32",
+      "huge",
+      "build/skylark/preflight/probe-huge-536870912.u64"
+    ],
+    "returncode": 0,
+    "diagnostic_only": true,
+    "samples": 1000
+  },
+  {
+    "command": [
+      "numactl",
+      "--membind=1",
+      "build/skylark/cache_capacity",
+      "33554432",
+      "64",
+      "random",
+      "1000",
+      "256",
+      "59201",
+      "32",
+      "base",
+      "build/skylark/preflight/probe-base-33554432.u64"
+    ],
+    "returncode": 0,
+    "diagnostic_only": true,
+    "samples": 1000
+  }
+]

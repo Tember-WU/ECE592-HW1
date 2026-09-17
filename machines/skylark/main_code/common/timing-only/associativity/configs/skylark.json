@@ -1,0 +1,23 @@
+{
+  "hostname": "skylark",
+  "arch": "x86_64",
+  "cpu_config_note": "2x AMD EPYC 7532 (Zen 2, Rome) -- Table 1: 2019, x86-64",
+  "pinned_cpu": 4,
+  "pinned_core": 4,
+  "pinned_socket": 0,
+  "pinned_node": 0,
+  "smt_sibling_note": "none (CPU==CORE for all rows in lscpu -e; verified idle at pin time)",
+  "line_size_group_window": 512,
+  "notes": "L1/L2 num_sets confirmed for Zen 2 (32KB 8-way L1, 512KB 8-way L2, 64B line). These values are specific to Zen 2 -- do NOT copy them into another machine's config without re-deriving from that machine's own Experiment 1 (capacity) and Experiment 2 (line size) results. | Candidate num_sets lists are STARTING POINTS to test empirically, derived from the team's own capacity measurements plus plausible power-of-two way-counts -- they are not looked-up vendor specs and must not be reported as the Phase-I associativity answer until a candidate actually produces a clean eviction-probability edge in your own data (see run_associativity.py auto-selection + l2_candidate_selection.txt).",
+  "assoc_l1_num_sets_candidates": [
+    64
+  ],
+  "assoc_l2_num_sets_candidates": [
+    1024,
+    512,
+    2048
+  ],
+  "assoc_llc_num_sets_candidates": [],
+  "assoc_llc_max_k": 24,
+  "llc_notes": "EMPTY until a real LLC capacity plateau exists from Experiment 1 (partner's current capacity sweep only found 3 residency regions -- L1D/L2/DRAM -- with no distinct LLC step reported; extend that sweep past L2 out to 32-64MB and confirm a real plateau before filling this in). Note: Thunderbird (Ampere Altra/Neoverse N1) may not have a traditional shared LLC at all -- verify rather than assume a candidate list is even applicable there. LLC is sliced/hashed (TA Slide 16), so even with real candidates this may only resolve to an effective associativity or a bound, not an exact ways count."
+}

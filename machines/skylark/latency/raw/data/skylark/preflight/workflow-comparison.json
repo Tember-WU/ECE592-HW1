@@ -1,0 +1,172 @@
+{
+  "same_seven_groups": true,
+  "same_point_ids_and_shuffled_order": true,
+  "same_defaults": true,
+  "only_point_parameter_difference": "bytes",
+  "footprint_differences": [
+    {
+      "name": "l1_miss__alternate",
+      "differences": {
+        "bytes": {
+          "skylark": 262144,
+          "artemisia": 1048576
+        }
+      }
+    },
+    {
+      "name": "l2_miss__repeat",
+      "differences": {
+        "bytes": {
+          "skylark": 4194304,
+          "artemisia": 8388608
+        }
+      }
+    },
+    {
+      "name": "calibration__l2_long",
+      "differences": {
+        "bytes": {
+          "skylark": 131072,
+          "artemisia": 524288
+        }
+      }
+    },
+    {
+      "name": "calibration__llc_long",
+      "differences": {
+        "bytes": {
+          "skylark": 4194304,
+          "artemisia": 8388608
+        }
+      }
+    },
+    {
+      "name": "llc_hit__alternate",
+      "differences": {
+        "bytes": {
+          "skylark": 8388608,
+          "artemisia": 16777216
+        }
+      }
+    },
+    {
+      "name": "llc_hit__repeat",
+      "differences": {
+        "bytes": {
+          "skylark": 4194304,
+          "artemisia": 8388608
+        }
+      }
+    },
+    {
+      "name": "l2_miss__alternate",
+      "differences": {
+        "bytes": {
+          "skylark": 8388608,
+          "artemisia": 16777216
+        }
+      }
+    },
+    {
+      "name": "l2_hit__alternate",
+      "differences": {
+        "bytes": {
+          "skylark": 262144,
+          "artemisia": 1048576
+        }
+      }
+    },
+    {
+      "name": "l2_hit__repeat",
+      "differences": {
+        "bytes": {
+          "skylark": 131072,
+          "artemisia": 524288
+        }
+      }
+    },
+    {
+      "name": "l2_hit__primary",
+      "differences": {
+        "bytes": {
+          "skylark": 131072,
+          "artemisia": 524288
+        }
+      }
+    },
+    {
+      "name": "calibration__llc_sequential",
+      "differences": {
+        "bytes": {
+          "skylark": 4194304,
+          "artemisia": 8388608
+        }
+      }
+    },
+    {
+      "name": "l1_miss__repeat",
+      "differences": {
+        "bytes": {
+          "skylark": 131072,
+          "artemisia": 524288
+        }
+      }
+    },
+    {
+      "name": "calibration__l2_independent",
+      "differences": {
+        "bytes": {
+          "skylark": 131072,
+          "artemisia": 524288
+        }
+      }
+    },
+    {
+      "name": "calibration__l2_sequential",
+      "differences": {
+        "bytes": {
+          "skylark": 131072,
+          "artemisia": 524288
+        }
+      }
+    },
+    {
+      "name": "l2_miss__primary",
+      "differences": {
+        "bytes": {
+          "skylark": 4194304,
+          "artemisia": 8388608
+        }
+      }
+    },
+    {
+      "name": "llc_hit__primary",
+      "differences": {
+        "bytes": {
+          "skylark": 4194304,
+          "artemisia": 8388608
+        }
+      }
+    },
+    {
+      "name": "l1_miss__primary",
+      "differences": {
+        "bytes": {
+          "skylark": 131072,
+          "artemisia": 524288
+        }
+      }
+    },
+    {
+      "name": "calibration__llc_independent",
+      "differences": {
+        "bytes": {
+          "skylark": 4194304,
+          "artemisia": 8388608
+        }
+      }
+    }
+  ],
+  "skylark_config_sha256": "b45534ec106349077ec37f45f6b3a7896a1af93e08b9fd2081c979fe1fa0cd43",
+  "artemisia_config_sha256": "84740e4f5b5aee8bcea219d35cf04d30bc81509b31d1bed8172d76d40d8960c9"
+}

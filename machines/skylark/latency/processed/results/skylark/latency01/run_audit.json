@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "serial_measurement_windows_verified": true,
+  "full_numa_page_counts_and_membind_verified": true,
+  "capacity_basis_sha256_verified": true,
+  "wall_seconds": 177.187754,
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 25330658,
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "total": 0,
+      "maximum": 0
+    },
+    "major_faults": {
+      "total": 0,
+      "maximum": 0
+    },
+    "voluntary_switches": {
+      "total": 0,
+      "maximum": 0
+    },
+    "involuntary_switches": {
+      "total": 374,
+      "maximum": 88
+    }
+  },
+  "maximum_first_pass_temporal_median_ratio": 1.0555555555555556,
+  "most_variable_first_pass_point": "l1_miss__repeat",
+  "first_pass_drift_flags": [],
+  "preservation": {
+    "passed": true,
+    "original_files_checked": 151,
+    "changed_or_missing": [],
+    "checked_at_utc": "2026-09-10T20:59:26.695298+00:00"
+  }
+}

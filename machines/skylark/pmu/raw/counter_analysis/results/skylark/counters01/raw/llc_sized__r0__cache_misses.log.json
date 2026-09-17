@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/skylark/counters01/source/bench",
+    "4",
+    "16777216",
+    "64",
+    "1000000",
+    "64",
+    "59284",
+    "0",
+    "0x3",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/skylark/counters01/raw/llc_sized__r0__cache_misses",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}

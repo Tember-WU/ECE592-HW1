@@ -1,0 +1,21 @@
+
+memory:
+  ls_refills_from_sys.ls_mabresp_lcl_l2
+       [Demand Data Cache Fills by Data Source. Local L2 hit. Unit: cpu]
+        cpu/event=0x43,umask=0x1/
+  ls_refills_from_sys.ls_mabresp_lcl_cache
+       [Demand Data Cache Fills by Data Source. Hit in cache; local CCX (not
+        Local L2),or Remote CCX and the address's Home Node is on this
+        thread's die. Unit: cpu]
+        cpu/event=0x43,umask=0x2/
+
+cache:
+  l2_request_g1.rd_blk_l
+       [All L2 Cache Requests (Breakdown 1 - Common). Data cache reads
+        (including hardware and software prefetch). Unit: cpu]
+        cpu/event=0x60,umask=0x80/
+
+memory:
+  ls_l1_d_tlb_miss.all
+       [All L1 DTLB Misses or Reloads. Unit: cpu]
+        cpu/event=0x45,umask=0xff/

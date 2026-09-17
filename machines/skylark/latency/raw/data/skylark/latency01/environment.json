@@ -1,0 +1,45 @@
+{
+  "machine": "skylark",
+  "host": "skylark.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "5.14.0-611.38.1.el9_7.x86_64",
+  "model": "AMD EPYC 7532 32-Core Processor",
+  "cpu": 32,
+  "numa_node": 1,
+  "core": "0",
+  "package": "1",
+  "siblings": "32",
+  "nodes": {
+    "node0": "0-31",
+    "node1": "32-63"
+  },
+  "inherited_affinity": [
+    0
+  ],
+  "page_size": 4096,
+  "thp": "[always] madvise never",
+  "compiler": "gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)",
+  "flags": "-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+  "python_version": "3.9.25",
+  "numpy_version": "1.26.3",
+  "source_hashes": {
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093"
+  },
+  "binary_sha256": "9eff190d42254c954f79be28ec643e5e18701ddf76d018c006906e5a5ae6b715",
+  "cpu_frequency": {},
+  "timer_unit": "TSC ticks",
+  "timer_frequency_hz": null,
+  "timer": "LFENCE/RDTSC/LFENCE ... RDTSCP/LFENCE",
+  "build_command": [
+    "make",
+    "-B",
+    "MACHINE=skylark",
+    "CC=gcc",
+    "CFLAGS=-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+    "all"
+  ],
+  "git_head": "59dc6857c0c2a42feec7823b34f7e18ccdbb870c",
+  "git_status": "?? data/skylark/\n",
+  "memory_policy": "numactl --membind=1; first touch after CPU binding"
+}

@@ -1,0 +1,13 @@
+make: Entering directory '/home/swu35/ECE592-HW1/PMU-verification/capacity'
+python3 -m unittest discover -s tests -v
+test_counter_scope_validation (test_capacity.CapacityTests) ... ok
+test_live_counter_group_and_raw_samples (test_capacity.CapacityTests) ... skipped 'Artemisia hardware smoke test'
+test_plan_matches_fourteen_unique_points (test_capacity.CapacityTests) ... ok
+test_reject_insufficient_samples_and_duplicate_points (test_capacity.CapacityTests) ... ok
+test_stats_keep_outliers (test_capacity.CapacityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+OK (skipped=1)
+make: Leaving directory '/home/swu35/ECE592-HW1/PMU-verification/capacity'

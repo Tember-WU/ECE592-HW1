@@ -1,0 +1,59 @@
+{
+  "machine": "skylark",
+  "source_runs": [
+    "round1",
+    "round2"
+  ],
+  "scope": "Timing-only cache levels and capacity; OS cache geometry was inspected for platform compatibility and is not used as experimental evidence.",
+  "interpreted_at_utc": "2026-09-10T17:09:46.470854+00:00",
+  "measurable_data_cache_levels": 3,
+  "capacity_estimates": [
+    {
+      "level": "L1D",
+      "approximate_bytes": 32768,
+      "sampled_onset_interval_bytes": [
+        32768,
+        36864
+      ],
+      "evidence": "32 KiB: 3.46875 ticks/load in all three primary-layout runs across rounds; 36 KiB: 5.0625, P05-P95 4.875-5.34375. 2-16 KiB: 3.1875."
+    },
+    {
+      "level": "L2",
+      "approximate_bytes": 524288,
+      "sampled_onset_interval_bytes": [
+        524288,
+        589824
+      ],
+      "evidence": "512 KiB: 9.1875 ticks/load in all three primary-layout runs; 576 KiB: 15.75, P05-P95 14.71875-17.25. 1 MiB repeats: 23.25-23.34375."
+    },
+    {
+      "level": "LLC/L3 effective region",
+      "approximate_bytes": null,
+      "nominal_physical_capacity_bytes": null,
+      "last_low_latency_sample_bytes": 16777216,
+      "sampled_onset_interval_bytes": [
+        16777216,
+        20971520
+      ],
+      "observed_effective_transition_region_bytes": [
+        16777216,
+        33554432
+      ],
+      "evidence": "64 B huge: 16 MiB 29.90625, 20 MiB 137.4375, 24 MiB 184.40625, 32 MiB 211.96875. Compact 8 B huge: 16 MiB repeats 28.6875, 20 MiB 84.75, 24 MiB repeats 120-120.1875, 32 MiB repeats 157.21875-157.3125.",
+      "interpretation": "Effective onset near the 16 MiB low-latency endpoint; no uniquely established nominal physical capacity or aggregate socket/system capacity."
+    }
+  ],
+  "timer_unit": "TSC ticks / dependent load",
+  "cpu": 32,
+  "numa_node": 1,
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "caveats": [
+    "Intervals are empirical sampling brackets, not confidence intervals.",
+    "Layout and base-page controls differ substantially; the experiment does not uniquely isolate the causes.",
+    "Involuntary switches total 430 in round 1 and 787 in round 2; no samples removed.",
+    "The largest within-point temporal-decile median ratio is 1.058824 at the 640 KiB round-2 point.",
+    "AMD LFENCE serialization relies on standard Linux AMD initialization; the privileged DE_CFG register was not read directly."
+  ],
+  "third_round": "Not run: the requested two rounds are complete. The L1/L2 estimates and bounded LLC transition can be reported at the present sampling resolution."
+}

@@ -1,0 +1,57 @@
+{
+  "recorded_utc": "2026-09-10T20:52:33.475200+00:00",
+  "host": "skylark.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "5.14.0-611.38.1.el9_7.x86_64",
+  "inherited_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "binding_test_affinity": [
+    32
+  ],
+  "numa_node": 1,
+  "capacity_basis_verified": true,
+  "capacity_basis": {
+    "inference_file": "capacity/results/skylark/combined12/inference.json",
+    "inference_sha256": "1ef92873189b037f1dab830fb9d6ce1bc9366d72842da9f2c23314587f095d53",
+    "source_runs": [
+      "round1",
+      "round2"
+    ],
+    "selection": "Resident points inside observed plateaus; paired footprints set full-cycle reuse distance. Intended levels are timing hypotheses, not verified per-access hit classes.",
+    "spacing_note": "64 bytes is an access-layout parameter inherited from capacity, not a measured line size.",
+    "memory_note": "256/512 MiB are observed large-footprint regions. Their first-pass timings need not be pure DRAM latency."
+  },
+  "original_files_preserved": 151
+}

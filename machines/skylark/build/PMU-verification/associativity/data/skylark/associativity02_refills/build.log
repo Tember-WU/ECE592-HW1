@@ -1,0 +1,3 @@
+mkdir -p build/skylark
+g++ -O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/associativity_bench.cpp -o build/skylark/associativity_pmu
+objdump -d -Mintel build/skylark/associativity_pmu > build/skylark/associativity_pmu.dis

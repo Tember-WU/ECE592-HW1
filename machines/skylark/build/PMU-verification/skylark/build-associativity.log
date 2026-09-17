@@ -1,0 +1,5 @@
+make: Entering directory '/home/swu35/ECE592-HW1/PMU-verification/associativity'
+mkdir -p build/skylark
+g++ -O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/associativity_bench.cpp -o build/skylark/associativity_pmu
+objdump -d -Mintel build/skylark/associativity_pmu > build/skylark/associativity_pmu.dis
+make: Leaving directory '/home/swu35/ECE592-HW1/PMU-verification/associativity'

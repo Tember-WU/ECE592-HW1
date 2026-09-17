@@ -1,0 +1,4 @@
+host,vendor,year,workload,repeat,bytes,unit,n,mean,std,p5,q1,median,q3,p95,outliers
+skylark,AMD,2019,beyond_llc,0,67108864,TSC_ticks/access,2000,279.043875,15.799041109648869,256.875,269.625,278.25,287.625,300.375,30
+skylark,AMD,2019,l1_resident,0,16384,TSC_ticks/access,2000,3.984,0.18996776042265695,3.75,3.75,4.125,4.125,4.125,4
+skylark,AMD,2019,llc_sized,0,16777216,TSC_ticks/access,2000,112.567125,17.663088998937162,87.75,101.25,111.75,122.625,141.0,21

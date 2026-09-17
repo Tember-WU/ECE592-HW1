@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "errors": [],
+  "machine": "skylark",
+  "run_id": "round1",
+  "checked_at_utc": "2026-09-10T17:07:51.116158+00:00",
+  "collection_status": "complete",
+  "expected_configurations": 39,
+  "complete_configurations": 39,
+  "total_timed_batches": 39000000,
+  "raw_checksums_and_statistics": "Every raw hash/count/positive interval checked; statistics recomputed and compared with saved values.",
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 24014237,
+  "wall_seconds": 187.546678,
+  "started_utc": "2026-09-10T16:55:50.737503+00:00",
+  "finished_utc": "2026-09-10T16:58:58.284181+00:00",
+  "cpu": 32,
+  "numa_node": 1,
+  "thread_siblings": "32",
+  "huge_configurations": 39,
+  "base_configurations": 0,
+  "all_mappings_local_and_page_policy_verified": true,
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "major_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "voluntary_switches": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "involuntary_switches": {
+      "minimum": 0,
+      "maximum": 78,
+      "total": 430
+    }
+  },
+  "maximum_temporal_decile_median_ratio": 1.0031446540880504,
+  "most_variable_temporal_point": "coarse_w16777216_s64_random_b256_seed59201_huge_n1000000",
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+  "binary_sha256": "1812acb1265cf7b491677c33058b76a7c8547091e4c60d619436a7e36b9d8bd1",
+  "validator_sha256": "8cdc91aca025cb728ca7092d8a0599bcec5842a1271e98bd5a444b83d131278c",
+  "validation_scope": "Integrity, snapshots, timing environment, CPU/NUMA placement, and page policy. Passing does not prove absence of interference."
+}

@@ -1,0 +1,9 @@
+host,slot,event,type,config,meaning,comparability
+skylark,cache_references,cache-references,0,0x2,"Kernel generic cache references; cache level, prefetch and request scope are CPU/kernel dependent.",generic_mapping_requires_review
+skylark,cache_misses,cache-misses,0,0x3,Kernel generic cache misses; not guaranteed to be demand-load or LLC misses.,generic_mapping_requires_review
+skylark,l1_loads,L1-dcache-loads,3,0x0,Kernel L1D read-access mapping; speculative versus retired scope must be checked per CPU.,generic_mapping_requires_review
+skylark,l1_misses,L1-dcache-load-misses,3,0x10000,Kernel L1D read-miss mapping; may count refills rather than retired misses.,generic_mapping_requires_review
+skylark,stores_or_replacements,ls_refills_from_sys.ls_mabresp_lcl_l2,4,0x143,"Demand data fills from local L2; refill/replacement evidence, NOT stores.",architecture_specific_proxy
+skylark,llc_loads,ls_refills_from_sys.ls_mabresp_lcl_cache,4,0x243,Demand fills from local cache domain excluding local L2; not total LLC accesses or pure LLC hits.,architecture_specific_proxy
+skylark,llc_misses,ls_refills_from_sys.ls_mabresp_lcl_dram,4,0x843,Demand fills from DRAM or IO on this die; omits remote DRAM and is NOT direct LLC misses.,architecture_specific_proxy
+skylark,dtlb_misses,dTLB-load-misses,3,0x10003,Kernel data-TLB read-miss mapping; may mean page walks rather than L1 TLB misses.,generic_mapping_requires_review

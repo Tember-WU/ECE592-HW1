@@ -1,0 +1,13 @@
+Linux 5.14.0-611.38.1.el9_7.x86_64 (skylark.ece.ncsu.edu) 	09/10/26 	_x86_64_	(64 CPU)
+
+13:00:51     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+13:00:52      32    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+
+13:00:52     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+13:00:53      32    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+
+13:00:53     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+13:00:54      32    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
+
+Average:     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+Average:      32    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00
