@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "errors": [],
+  "machine": "charnwood",
+  "source_runs": [
+    "round1",
+    "round2"
+  ],
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "raw_bytes": 768000000,
+  "raw_gzip_bytes": 151527593,
+  "runs": [
+    {
+      "passed": true,
+      "errors": [],
+      "machine": "charnwood",
+      "run_id": "round1",
+      "checked_at_utc": "2026-09-10T17:03:53.130003+00:00",
+      "validation_scope": "Raw SHA-256, positive sample counts, recomputed statistics, manifest/config/analysis agreement, source/binary hashes, CPU/NUMA binding and page backing. Does not certify absence of interference.",
+      "collection_status": "complete",
+      "expected_configurations": 39,
+      "complete_configurations": 39,
+      "total_timed_batches": 39000000,
+      "raw_bytes": 312000000,
+      "raw_gzip_bytes": 56070318,
+      "started_utc": "2026-09-10T16:52:02.194784+00:00",
+      "finished_utc": "2026-09-10T16:56:03.600832+00:00",
+      "wall_seconds": 241.406048,
+      "cpu": 3,
+      "numa_node": 0,
+      "smt_sibling": 7,
+      "configured_page_counts": {
+        "huge": 39
+      },
+      "smt_busy_percent_range": [
+        0.0,
+        12.5
+      ],
+      "smt_busy_points_above_50_percent": [],
+      "all_mappings_local_and_matching_page_policy": true,
+      "runtime_events": {
+        "measurement_minor_faults": {
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "major_faults": {
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "voluntary_switches": {
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "involuntary_switches": {
+          "minimum": 0,
+          "maximum": 136,
+          "total": 1079
+        }
+      },
+      "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+      "binary_sha256": "b7a26b55bcb6b42551016855163a592aae8303b82b7baff2f9c6189d4a0c0153"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "machine": "charnwood",
+      "run_id": "round2",
+      "checked_at_utc": "2026-09-10T17:03:53.143238+00:00",
+      "validation_scope": "Raw SHA-256, positive sample counts, recomputed statistics, manifest/config/analysis agreement, source/binary hashes, CPU/NUMA binding and page backing. Does not certify absence of interference.",
+      "collection_status": "complete",
+      "expected_configurations": 57,
+      "complete_configurations": 57,
+      "total_timed_batches": 57000000,
+      "raw_bytes": 456000000,
+      "raw_gzip_bytes": 95457275,
+      "started_utc": "2026-09-10T16:57:07.829287+00:00",
+      "finished_utc": "2026-09-10T17:02:18.577837+00:00",
+      "wall_seconds": 310.74855,
+      "cpu": 3,
+      "numa_node": 0,
+      "smt_sibling": 7,
+      "configured_page_counts": {
+        "huge": 54,
+        "base": 3
+      },
+      "smt_busy_percent_range": [
+        0.0,
+        97.945
+      ],
+      "smt_busy_points_above_50_percent": [
+        {
+          "name": "round2_w393216_s8_random_b256_seed59202_huge_n1000000",
+          "busy_percent": 75.812,
+          "median": 38.2734375
+        },
+        {
+          "name": "round2_w53248_s64_random_b256_seed59202_huge_n1000000",
+          "busy_percent": 97.945,
+          "median": 18.609375
+        }
+      ],
+      "all_mappings_local_and_matching_page_policy": true,
+      "runtime_events": {
+        "measurement_minor_faults": {
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "major_faults": {
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "voluntary_switches": {
+          "minimum": 0,
+          "maximum": 0,
+          "total": 0
+        },
+        "involuntary_switches": {
+          "minimum": 0,
+          "maximum": 149,
+          "total": 1619
+        }
+      },
+      "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+      "binary_sha256": "b7a26b55bcb6b42551016855163a592aae8303b82b7baff2f9c6189d4a0c0153"
+    }
+  ]
+}

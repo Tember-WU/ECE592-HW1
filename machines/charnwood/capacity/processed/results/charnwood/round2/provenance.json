@@ -1,0 +1,359 @@
+{
+  "machine": "charnwood",
+  "run_ids": [
+    "round2"
+  ],
+  "output_id": "round2",
+  "data_directories": [
+    "/home/swu35/ECE592-HW1/timing-only/capacity/data/charnwood/round2"
+  ],
+  "generated_utc": "2026-09-10T17:03:20.846363+00:00",
+  "command": "/home/swu35/ECE592-HW1/timing-only/capacity/.venv/bin/python scripts/analyze_capacity.py --machine charnwood --run-id round2",
+  "analysis_sha256": "fa5b67a280d31eb022672d5c7ac0b76dde67f94a44f462512f2bac156f6ca0b5",
+  "statistics_sha256": "cd60ca027709089d260127915984a7cf3a4ba20c9541d34a6417c76c1036bd9d",
+  "boundaries": [],
+  "inputs": [
+    {
+      "run_id": "round2",
+      "name": "round2_w262144_s64_random_b1024_seed59202_huge_n1000000",
+      "file": "raw/round2_w262144_s64_random_b1024_seed59202_huge_n1000000.u64.gz",
+      "sha256": "1ce5ad1952ea44b3cc751f5086aee8647693a61f699426758cb491690fda3f90"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w262144_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w262144_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "eac6e7495ca2f04ae275e0cdea0b4f73d5092fc5eaa0a54adc6fec1bab4fc73c"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w262144_s64_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w262144_s64_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "57b039c847955da83904da8c6f560d4655e7c7c5b92993cb19cb484e424b9115"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w262144_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w262144_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "555745913d7876581176add9cdc3b14d9263707241b3db10fc1bcadf9cfa1662"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w262144_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w262144_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "ae1c01de3ff2c3ca20f46effd52ef615036f4eea80b041c2b91432e808920fff"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w294912_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w294912_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "64e0585b0f934440e0ad08cc4b47132190cb5089783108eea88628d7d67002ab"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w327680_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w327680_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "d5be1a1887f663369b4e2660d467e0512eae4d1e71110c4c872b292de4d59c30"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w32768_s64_random_b1024_seed59202_huge_n1000000",
+      "file": "raw/round2_w32768_s64_random_b1024_seed59202_huge_n1000000.u64.gz",
+      "sha256": "b27d3313a0550c8640f79f34d9d845ad0729676f82dbafa8b7787cfacd37338a"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w32768_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w32768_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "02daeed8597d1abb4e9176120817d1d7aac064289c518126255ccae0b2b545c9"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w32768_s64_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w32768_s64_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "ebe87c92b910172ad46c108c7eaf098dcc8ee142d63b3ddcb1c2be9736da8961"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w32768_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w32768_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "9f62dcd3ec8628c0ef9eac69607791e219e7d746619ffd7f4ef220f989ff6e9e"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w32768_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w32768_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "9c9dbaf083ba53ca223c0cc7307db6291bdc82b5515c03fdef5c57942b111b44"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w360448_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w360448_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "c5cd40a443de76bde3b46a3273f9d0dfd49a4bea68df68d764bc28f0d1acbd3c"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w36864_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w36864_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "68f4fbd30daad785c37015b3ae39b9df2bed07efac82ca015089935c612fae2e"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w393216_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w393216_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "0971c90ace43c7767f6ad813b130e83bf32378314630a3a574480112507afb3e"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w393216_s64_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w393216_s64_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "40fcc8ad3e6c8d4907d58c2223b5bcb1df0e6337f43ac90f9ed0b034b2e9383d"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w393216_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w393216_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "010765a772bd29d593ef7ff87ae9ce9d0c37f637460521fa509f4803b51c9474"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w393216_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w393216_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "7f40d19b6050e2ef6250f40b562e0e7ed0234d2a3bdf65173cd56cabf375cf19"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w40960_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w40960_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "5fa8c1125d91a77e093bb39551eddfc2cbad6d905a52b223bfc91ceea98d29ae"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w4194304_s64_random_b256_seed59202_base_n1000000",
+      "file": "raw/round2_w4194304_s64_random_b256_seed59202_base_n1000000.u64.gz",
+      "sha256": "4c0e3a6e0a872b83a7f49b98a3c2f58b9304fa37c0d549380f339b1426865466"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w4194304_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w4194304_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "414325c5b7fc6f7c544b393ddd7b0dba96fa8481cd32f9ebe2d52cd3e8a4693c"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w4194304_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w4194304_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "60c1942919c762dc284fa0a46f0b3e7c2b8893cda1859167695acea4628539dc"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w4194304_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w4194304_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "3ae46efd191f75d8832bbfe9b3eb8e6d86feca90daf7ce8330222ce0fc5fa03a"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w4194304_s8_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w4194304_s8_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "58dc4e9aca19f2bb88dcd15e46e0674993db6ee18bde59adffd3a21f1df142ef"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w425984_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w425984_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "c13cbeb475a5bb122be93f2f0536671bce5ab150b87e7f2b321f071be3f3da39"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w45056_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w45056_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "81902a0e78651bf7738fd25353826f44192c0d9fb981d0c3e35085d91d90ef9a"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w458752_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w458752_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "771ae5dc5b6ac4f4106351ce46b77159b66f3490a7c1f1a999ae343fa644e8bb"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w491520_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w491520_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "b04327212cac1dd9e72ebd563068060f9e0696e53d7f5bb047fb8ce676e0c89d"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w49152_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w49152_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "55a71a2fe33bf5417aa0116c34de1be904c158f4c74902c07b7740a55431ecba"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w49152_s64_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w49152_s64_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "23295cab19d628f9148b855c0b07c7b42ba34e52c5f1f78c2fc4ffb8db63752d"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w49152_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w49152_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "6e63f04826bb8a6d235d5da402ea65e4aab3cf75a0ec2b43d4d3bdee3ff5073f"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w49152_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w49152_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "8ffda0a4853dfd99a652f40b9e2b7a1310357c93bd05e7d0e3bbef44a1605540"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w5242880_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w5242880_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "de117f155bb0b5ebf7aa323a444edb607799d145c498e5e88b489e3290986716"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w5242880_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w5242880_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "ce2c826d2786ee935a35262bb94df104e84f4d430d22083c547c1665fcf927d1"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w524288_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w524288_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "a2d53a77ea6e07f4aa7bdf324021c8313ba4b62813851d33af1ac6b4f1f09edf"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w524288_s64_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w524288_s64_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "0b6284e978852f02178e43993bfc9f154fb71e7c814de377d1690d11fc24b5a7"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w524288_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w524288_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "9ad3c59e4704682dbcc6a92cc64bf87334d06882e1e649bf5ecfc51a13f77d53"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w524288_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w524288_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "c2af943ead8ea4064a4c18f2819f448c1adaf3a89e1286cc7b76680fa340a726"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w53248_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w53248_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "b2c625e90679c6f140bc8dc9b9d67d1e10e00945ac30d4cf67b58526ed3f0a34"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w57344_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w57344_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "ecd34456c415190268ae8160a55f00370ad4f7c69825e9295f481a0322dff3e1"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w61440_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w61440_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "9af63e5209f7743c07f4435ae2c2f7597f5468b3d5284dfa3c5d6b09a05c90ba"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w6291456_s64_random_b256_seed59202_base_n1000000",
+      "file": "raw/round2_w6291456_s64_random_b256_seed59202_base_n1000000.u64.gz",
+      "sha256": "6e480402259ef5e8caed46c98a6a72da576a4735db7510c77fd1a7a3899e6c13"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w6291456_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w6291456_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "132f72f3f7fe7b43e430cc2a02e52515165eef4c726bbb044e3ecb2f1ca1c35a"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w6291456_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w6291456_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "ae020afe03e05eaf3c52a2d52b764b97c61a46560ee383e3ffcdf72a17cd4dd9"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w6291456_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w6291456_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "3fe209c8ef311e2f5009682ced00e45300ca60fcd5beaeb03208a186ee0dd24c"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w6291456_s8_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w6291456_s8_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "2ab3f669a8744a35fd6487f29e26676bfa01b0049b594d6edafc14215fda50f1"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w65536_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w65536_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "46a80ef5e4b974b8cb6a2080367cd3e97ad8ac161987c7e2bde6f5e4d1252fa8"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w65536_s64_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w65536_s64_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "8f7f61db020823acbe2c03e30774e6d931680f512a7ebee18fa59f5c122d73f7"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w65536_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w65536_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "d2740a64ecea593ed5960a071911b4c70776e26673d37437f77a5c02d1755edf"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w65536_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w65536_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "4f3f03aef24d228072610af5d090f43a4caf3e1fb4a6f8e0a930e4fb110e974a"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w7340032_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w7340032_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "48a3f6b867e239063d24b8067cedc1cfe64f102fa1df13ee36bdd24797c3b879"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w7340032_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w7340032_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "164bf4a161ec217ddf6f0300118b2c9673169c64c5198264d85a5fdea929ba35"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w8388608_s64_random_b256_seed59202_base_n1000000",
+      "file": "raw/round2_w8388608_s64_random_b256_seed59202_base_n1000000.u64.gz",
+      "sha256": "6c55a38de580123b08e290999d2d8a9dfef32d2c2b611d3fae5300cd2e7e1b0f"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w8388608_s64_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w8388608_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "81bed84d82a378c51683c960561f4e5083662abb468b9b28404ce9479587004a"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w8388608_s64_sequential_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w8388608_s64_sequential_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "7a9a433b85acd608643d0eaed154402aa8981e070d540375ca1c7f9da7052172"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w8388608_s8_random_b256_seed59202_huge_n1000000",
+      "file": "raw/round2_w8388608_s8_random_b256_seed59202_huge_n1000000.u64.gz",
+      "sha256": "27a107fdfff32641b6a1fa2ff77bf1a56debf4034c0be5d88e13834abd4d90d0"
+    },
+    {
+      "run_id": "round2",
+      "name": "round2_w8388608_s8_random_b256_seed59203_huge_n1000000",
+      "file": "raw/round2_w8388608_s8_random_b256_seed59203_huge_n1000000.u64.gz",
+      "sha256": "ec4db5c6246dfd6e54922428ee4c40536ecc0ec677c6a95fb88662dc5b606f4e"
+    }
+  ]
+}

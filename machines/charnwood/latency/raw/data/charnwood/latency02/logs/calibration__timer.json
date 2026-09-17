@@ -1,0 +1,94 @@
+{
+  "name": "calibration__timer",
+  "group": "calibration",
+  "machine": "charnwood",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge",
+    "mode": "empty",
+    "bytes": 8192
+  },
+  "columns": [
+    "first"
+  ],
+  "raw_format": "little-endian uint64, row-major interleaved columns",
+  "raw_file": "raw/calibration__timer.u64.gz",
+  "raw_sha256": "d863052079d99b7a7b9a01b6d84d93beef19cd47a03b6ac92f4824ae26f5f21a",
+  "stats": {
+    "first": {
+      "n": 1000000,
+      "mean": 60.350708,
+      "std": 54.50866168869799,
+      "median": 60.0,
+      "q1": 58.0,
+      "q3": 62.0,
+      "p05": 56.0,
+      "p95": 66.0,
+      "p99": 68.0,
+      "minimum": 50.0,
+      "maximum": 29204.0,
+      "whisker_low": 52.0,
+      "whisker_high": 68.0,
+      "outliers": 7288,
+      "decile_medians": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "start_utc": "2026-09-10T20:55:34.665287+00:00",
+  "elapsed_seconds": 0.06443498563021421,
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency02/latency_bench.bin",
+    "8192",
+    "64",
+    "empty",
+    "1000000",
+    "256",
+    "59221",
+    "3",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency02/raw/calibration__timer.u64"
+  ],
+  "cpu_busy_percent": {
+    "cpu4": 14.286,
+    "cpu1": 0.0,
+    "cpu3": 100.0,
+    "cpu2": 0.0,
+    "cpu6": 100.0,
+    "cpu0": 16.667,
+    "cpu7": 16.667,
+    "cpu5": 12.5
+  },
+  "cpu_frequency_before": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "2700826",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "cpu_frequency_after": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "2699983",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "runtime_events": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 0
+  }
+}

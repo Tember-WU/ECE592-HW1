@@ -1,0 +1,65 @@
+{
+  "checked_utc": "2026-09-14T15:43:34.110840+00:00",
+  "phase1_frozen_files": 116,
+  "phase1_unchanged": true,
+  "supplementary_phase1_sources": [
+    {
+      "path": "timing-only/latency/results/charnwood/latency03/latency_estimates.json",
+      "sha256": "b75b183f10b22132356d5f3d129427387bdd115adcaa1a3fd276b72c3272e429",
+      "matches_pre_run_git_head": true
+    },
+    {
+      "path": "timing-only/latency/results/charnwood/latency03/RUN_NOTES.md",
+      "sha256": "e151138663befdf4322f829093daff01b3e0fcb915df21cd5f15690092601355",
+      "matches_pre_run_git_head": true
+    },
+    {
+      "path": "timing-only/inclusion/data/charnwood/raw_data_inclusion/charnwood/inclusion_report.json",
+      "sha256": "4425fd3b2762299659167a6c403219f830478cc980091b587f5b3d7acacfd3c0",
+      "matches_pre_run_git_head": true
+    }
+  ],
+  "runs": [
+    {
+      "experiment": "capacity",
+      "run_id": "capacity03",
+      "points": 14,
+      "samples": 14000000,
+      "started_utc": "2026-09-14T15:40:17.008369+00:00",
+      "finished_utc": "2026-09-14T15:40:59.943518+00:00",
+      "elapsed_seconds": 42.93514600582421,
+      "raw_compressed_bytes": 21815306,
+      "all_hashes_valid": true,
+      "all_four_event_groups_fully_scheduled": true,
+      "allocation_retries": 0
+    },
+    {
+      "experiment": "line_size",
+      "run_id": "line_size01",
+      "points": 12,
+      "samples": 12000000,
+      "started_utc": "2026-09-14T15:41:04.139357+00:00",
+      "finished_utc": "2026-09-14T15:42:07.754318+00:00",
+      "elapsed_seconds": 63.61495938990265,
+      "raw_compressed_bytes": 22590311,
+      "all_hashes_valid": true,
+      "all_four_event_groups_fully_scheduled": true,
+      "allocation_retries": 0
+    },
+    {
+      "experiment": "associativity",
+      "run_id": "associativity01",
+      "points": 12,
+      "samples": 12000000,
+      "started_utc": "2026-09-14T15:42:10.926061+00:00",
+      "finished_utc": "2026-09-14T15:42:28.238257+00:00",
+      "elapsed_seconds": 17.312184600159526,
+      "raw_compressed_bytes": 10396025,
+      "all_hashes_valid": true,
+      "all_four_event_groups_fully_scheduled": true,
+      "allocation_retries": 0
+    }
+  ],
+  "serial_order_verified": true,
+  "total_timed_batches": 38000000
+}

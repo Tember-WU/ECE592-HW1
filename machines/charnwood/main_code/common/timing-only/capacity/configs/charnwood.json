@@ -1,0 +1,8 @@
+{
+  "machine": "charnwood",
+  "hostname": "charnwood",
+  "isa": "x86_64",
+  "cpu": 3,
+  "numa_node": 0,
+  "capacity": "common/round1.json"
+}

@@ -1,0 +1,19 @@
+{
+  "purpose": "512 MiB page-allocation diagnostic after failed latency01; 16 samples only, excluded from formal latency results",
+  "recorded_utc": "2026-09-10T20:54:53.893085+00:00",
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/build/charnwood/latency_bench",
+    "536870912",
+    "64",
+    "paired",
+    "16",
+    "256",
+    "59221",
+    "3",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/build/charnwood/thp-probe.u64"
+  ],
+  "returncode": 0
+}

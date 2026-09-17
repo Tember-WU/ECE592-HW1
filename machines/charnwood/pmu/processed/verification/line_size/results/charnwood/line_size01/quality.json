@@ -1,0 +1,75 @@
+{
+  "preflight_busy_percent": {
+    "0": 90.0,
+    "4": 13.0
+  },
+  "max_sibling_busy_percent": 13.757700205338809,
+  "total_involuntary_switches": 237,
+  "total_minor_faults": 1,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "random_s64_a16": 1.0285142571285644,
+    "random_s96_a0": 1.0118739713143663,
+    "random_s64_a0": 1.0208626647894534,
+    "random_s56_a16": 1.0129245153306752,
+    "fully_random_s64": 1.0130821559392988,
+    "sequential_s72": 1.0142566191446027,
+    "sequential_s64": 1.0349587396849211,
+    "random_s72_a0": 1.0184325857179686,
+    "random_s56_a0": 1.0194255584848064,
+    "random_s32_a0": 1.0179063360881542,
+    "random_s72_a16": 1.0770515267175573,
+    "sequential_s56": 1.0995475113122173
+  },
+  "huge_kib": {
+    "random_s64_a16": [
+      0,
+      0
+    ],
+    "random_s96_a0": [
+      0,
+      0
+    ],
+    "random_s64_a0": [
+      0,
+      0
+    ],
+    "random_s56_a16": [
+      0,
+      0
+    ],
+    "fully_random_s64": [
+      0,
+      0
+    ],
+    "sequential_s72": [
+      0,
+      0
+    ],
+    "sequential_s64": [
+      0,
+      0
+    ],
+    "random_s72_a0": [
+      0,
+      0
+    ],
+    "random_s56_a0": [
+      0,
+      0
+    ],
+    "random_s32_a0": [
+      0,
+      0
+    ],
+    "random_s72_a16": [
+      0,
+      0
+    ],
+    "sequential_s56": [
+      0,
+      0
+    ]
+  },
+  "caveat": "Matches timing-only CPU 4 / NUMA node 0 / physical core 0. Current sysfs confirms SMT sibling CPU 0; the old timing-only pinning manifest incorrectly stated no SMT sibling. PMU loop totals include helper loads."
+}

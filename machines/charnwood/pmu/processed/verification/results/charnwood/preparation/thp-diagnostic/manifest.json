@@ -1,0 +1,46 @@
+{
+  "purpose": "Allocation diagnostic only; excluded from formal PMU measurements",
+  "utc": "2026-09-14T15:38:54.878294+00:00",
+  "results": [
+    {
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/charnwood/cache_capacity_pmu",
+        "2097152",
+        "64",
+        "random",
+        "16",
+        "256",
+        "59202",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/results/charnwood/preparation/thp-diagnostic/2097152.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/results/charnwood/preparation/thp-diagnostic/2097152.json"
+      ],
+      "returncode": 0,
+      "log": "mapping_before:\nKernelPageSize:        4 kB\nAnonHugePages:      2048 kB\nnuma_mapping: 779c43400000 bind:0 anon=512 dirty=512 active=0 N0=512 kernelpagesize_kB=4\nmapping_after:\nKernelPageSize:        4 kB\nAnonHugePages:      2048 kB\nnuma_mapping: 779c43400000 bind:0 anon=512 dirty=512 active=0 N0=512 kernelpagesize_kB=4\nbytes=2097152 spacing=64 mode=random samples=16 batch=256 seed=59202 cpu_start=3 cpu_end=3 warm_loads=1048576 base=0x779c43400000 mapped_bytes=2097152\nmeasurement_minor_faults=0 major_faults=0 voluntary_switches=0 involuntary_switches=0\n"
+    },
+    {
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/charnwood/cache_capacity_pmu",
+        "7340032",
+        "64",
+        "random",
+        "16",
+        "256",
+        "59202",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/results/charnwood/preparation/thp-diagnostic/7340032.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/results/charnwood/preparation/thp-diagnostic/7340032.json"
+      ],
+      "returncode": 1,
+      "log": "MADV_COLLAPSE: Cannot allocate memory\n"
+    }
+  ]
+}

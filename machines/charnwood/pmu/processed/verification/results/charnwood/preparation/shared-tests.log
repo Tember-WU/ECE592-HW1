@@ -1,0 +1,10 @@
+test_associativity_actual_load_denominators (__main__.VerificationTests.test_associativity_actual_load_denominators) ... ok
+test_multiplex_and_wrong_denominator_rejected (__main__.VerificationTests.test_multiplex_and_wrong_denominator_rejected) ... ok
+test_plans (__main__.VerificationTests.test_plans) ... ok
+test_two_live_kernels (__main__.VerificationTests.test_two_live_kernels) ... ok
+test_unsafe_layout_and_missing_samples (__main__.VerificationTests.test_unsafe_layout_and_missing_samples) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.041s
+
+OK

@@ -1,0 +1,69 @@
+
+build/charnwood/latency_bench:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+0000000000001469 <time_batch>:
+    1469:	f3 0f 1e fa          	endbr64
+    146d:	55                   	push   rbp
+    146e:	48 89 e5             	mov    rbp,rsp
+    1471:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+    1475:	48 89 75 e0          	mov    QWORD PTR [rbp-0x20],rsi
+    1479:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    147d:	48 8b 00             	mov    rax,QWORD PTR [rax]
+    1480:	48 89 45 f0          	mov    QWORD PTR [rbp-0x10],rax
+    1484:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+    1488:	48 8b 45 e0          	mov    rax,QWORD PTR [rbp-0x20]
+    148c:	48 89 d7             	mov    rdi,rdx
+    148f:	48 89 c6             	mov    rsi,rax
+    1492:	0f ae e8             	lfence
+    1495:	0f 31                	rdtsc
+    1497:	48 c1 e2 20          	shl    rdx,0x20
+    149b:	48 09 d0             	or     rax,rdx
+    149e:	49 89 c0             	mov    r8,rax
+    14a1:	0f ae e8             	lfence
+    14a4:	48 85 f6             	test   rsi,rsi
+    14a7:	74 35                	je     14de <time_batch+0x75>
+    14a9:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14ac:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14af:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14b2:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14b5:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14b8:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14bb:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14be:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14c1:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14c4:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14c7:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14ca:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14cd:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14d0:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14d3:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14d6:	48 8b 3f             	mov    rdi,QWORD PTR [rdi]
+    14d9:	48 ff ce             	dec    rsi
+    14dc:	75 cb                	jne    14a9 <time_batch+0x40>
+    14de:	0f 01 f9             	rdtscp
+    14e1:	48 c1 e2 20          	shl    rdx,0x20
+    14e5:	48 09 d0             	or     rax,rdx
+    14e8:	4c 29 c0             	sub    rax,r8
+    14eb:	0f ae e8             	lfence
+    14ee:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+    14f2:	48 89 7d f0          	mov    QWORD PTR [rbp-0x10],rdi
+    14f6:	48 89 75 e0          	mov    QWORD PTR [rbp-0x20],rsi
+    14fa:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+    14fe:	48 8b 55 f0          	mov    rdx,QWORD PTR [rbp-0x10]
+    1502:	48 89 10             	mov    QWORD PTR [rax],rdx
+    1505:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+    1509:	5d                   	pop    rbp
+    150a:	c3                   	ret
+
+Disassembly of section .fini:

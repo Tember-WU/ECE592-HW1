@@ -1,0 +1,75 @@
+{
+  "preflight_busy_percent": {
+    "0": 6.0,
+    "4": 9.900990099009901
+  },
+  "max_sibling_busy_percent": 14.634146341463415,
+  "total_involuntary_switches": 55,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "L2_candidate_k8": 1.206959706959707,
+    "L1_k10": 1.055613850996852,
+    "L1_k8": 1.368131868131868,
+    "L2_candidate_k7": 1.1137614678899082,
+    "L2_candidate_k18": 1.0168123739071957,
+    "L2_candidate_k17": 1.044822256568779,
+    "L2_candidate_k16": 1.0202774813233726,
+    "L1_k9": 1.060988433228181,
+    "L1_k7": 1.0263653483992468,
+    "L1_k6": 1.0897435897435896,
+    "L2_candidate_k9": 1.0440386680988185,
+    "L2_candidate_k10": 1.0020964360587001
+  },
+  "huge_kib": {
+    "L2_candidate_k8": [
+      2048,
+      2048
+    ],
+    "L1_k10": [
+      2048,
+      2048
+    ],
+    "L1_k8": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k7": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k18": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k17": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k16": [
+      2048,
+      2048
+    ],
+    "L1_k9": [
+      2048,
+      2048
+    ],
+    "L1_k7": [
+      2048,
+      2048
+    ],
+    "L1_k6": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k9": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k10": [
+      2048,
+      2048
+    ]
+  },
+  "caveat": "Matches timing-only CPU 4 / NUMA node 0 / physical core 0. Current sysfs confirms SMT sibling CPU 0; the old timing-only pinning manifest incorrectly stated no SMT sibling. PMU loop totals include helper loads."
+}

@@ -1,0 +1,94 @@
+{
+  "name": "l1_hit__alternate",
+  "group": "l1_hit",
+  "machine": "charnwood",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge",
+    "mode": "chase",
+    "bytes": 16384
+  },
+  "columns": [
+    "first"
+  ],
+  "raw_format": "little-endian uint64, row-major interleaved columns",
+  "raw_file": "raw/l1_hit__alternate.u64.gz",
+  "raw_sha256": "d3170ea90a507a0d5418b6861f98c74d1442c945086b7132a03b1bffc83d2fbd",
+  "stats": {
+    "first": {
+      "n": 1000000,
+      "mean": 5.315033515625,
+      "std": 1.1369836970041223,
+      "median": 5.28125,
+      "q1": 5.2734375,
+      "q3": 5.2890625,
+      "p05": 5.265625,
+      "p95": 5.3046875,
+      "p99": 5.84375,
+      "minimum": 5.234375,
+      "maximum": 365.046875,
+      "whisker_low": 5.25,
+      "whisker_high": 5.3125,
+      "outliers": 19452,
+      "decile_medians": [
+        5.2890625,
+        5.28125,
+        5.2890625,
+        5.28125,
+        5.28125,
+        5.28125,
+        5.28125,
+        5.28125,
+        5.28125,
+        5.28125
+      ]
+    }
+  },
+  "start_utc": "2026-09-10T20:57:44.954354+00:00",
+  "elapsed_seconds": 0.44443457666784525,
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+    "16384",
+    "64",
+    "chase",
+    "1000000",
+    "256",
+    "59221",
+    "3",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/l1_hit__alternate.u64"
+  ],
+  "cpu_busy_percent": {
+    "cpu3": 100.0,
+    "cpu5": 4.348,
+    "cpu2": 0.0,
+    "cpu7": 2.222,
+    "cpu0": 2.222,
+    "cpu1": 0.0,
+    "cpu6": 100.0,
+    "cpu4": 2.222
+  },
+  "cpu_frequency_before": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "800000",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "cpu_frequency_after": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "2700011",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "runtime_events": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 2
+  }
+}

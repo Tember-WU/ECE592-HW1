@@ -1,0 +1,54 @@
+{
+  "machine": "charnwood",
+  "source_runs": [
+    "round1",
+    "round2"
+  ],
+  "scope": "Timing-only cache levels and capacity; two-round empirical interpretation, not specification validation",
+  "interpreted_at_utc": "2026-09-10T17:05:41.247715+00:00",
+  "measurable_data_cache_levels": 3,
+  "capacity_estimates": [
+    {
+      "level": "L1D",
+      "approximate_bytes": 32768,
+      "sampled_onset_interval_bytes": [
+        32768,
+        36864
+      ],
+      "evidence": "64 B random: round-2 medians at 32 KiB are 5.90625 and 6.4453125; round 1 is 6.7734375. At 36 KiB the median is 15.890625 TSC ticks/load. The 32 KiB / 1024-load control is 5.732421875."
+    },
+    {
+      "level": "L2",
+      "approximate_bytes": 262144,
+      "sampled_onset_interval_bytes": [
+        262144,
+        294912
+      ],
+      "evidence": "64 B random: round-2 medians at 256 KiB are 18.0859375 and 16.2734375; round 1 is 18.46875. At 288 KiB the median is 28.3984375. The two 384 KiB primary-layout medians are 40.6328125 and 40.5546875. The 256 KiB / 1024-load control is 18.40625 TSC ticks/load."
+    },
+    {
+      "level": "LLC/L3",
+      "approximate_bytes": null,
+      "nominal_physical_capacity_bytes": null,
+      "observed_effective_transition_region_bytes": [
+        4194304,
+        8388608
+      ],
+      "interpretation": "Three cache residency regions are visible, but the broad 4-8 MiB LLC transition depends on layout, run and time. This interval does not bound nominal physical capacity.",
+      "evidence": "64 B huge-page medians at 4/5/6/7/8 MiB: 58.234375, 92.796875, 240.765625, 257.8984375, 280.8984375. Compact 8 B repeat medians at 6 MiB: 111.2421875 and 153.7578125."
+    }
+  ],
+  "timer_unit": "TSC ticks / dependent load",
+  "cpu": 3,
+  "numa_node": 0,
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "caveats": [
+    "Other users had active benchmarks on the shared machine; no CPU reservation was made.",
+    "During two round-2 subprocess intervals, SMT sibling CPU 7 averaged 75.812% busy (384 KiB / 8 B random) and 97.945% busy (52 KiB / 64 B random). Those samples are retained; the 384 KiB compact control is not treated as an independent clean corroboration.",
+    "Involuntary context switches totaled 1079 in round 1 and 1619 in round 2; zero measured faults or voluntary switches in either round.",
+    "Between-run and within-run latency variation remains visible. Page and layout controls do not isolate a unique cause for LLC changes.",
+    "Empirical intervals are not statistical confidence intervals or vendor specifications. TSC ticks have not been validated as core cycles."
+  ],
+  "third_round": "Not executed. The requested two-round protocol is complete. Optional bounded refinement of 32-36 KiB or 256-288 KiB would be needed only for narrower onset brackets or confirmation under quieter conditions; no unbounded LLC search is warranted."
+}

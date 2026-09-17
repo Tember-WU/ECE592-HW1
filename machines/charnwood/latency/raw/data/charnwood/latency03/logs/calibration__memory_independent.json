@@ -1,0 +1,94 @@
+{
+  "name": "calibration__memory_independent",
+  "group": "calibration",
+  "machine": "charnwood",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge",
+    "mode": "independent",
+    "bytes": 268435456
+  },
+  "columns": [
+    "first"
+  ],
+  "raw_format": "little-endian uint64, row-major interleaved columns",
+  "raw_file": "raw/calibration__memory_independent.u64.gz",
+  "raw_sha256": "1704b7fadf29224123442ad075fb6cd8754f70127aa585da9f2cf8a822cf3b4e",
+  "stats": {
+    "first": {
+      "n": 1000000,
+      "mean": 93.2126551953125,
+      "std": 11.691577113080974,
+      "median": 93.3671875,
+      "q1": 91.1953125,
+      "q3": 94.953125,
+      "p05": 84.234375,
+      "p95": 97.0390625,
+      "p99": 103.546875,
+      "minimum": 61.03125,
+      "maximum": 1674.390625,
+      "whisker_low": 85.5625,
+      "whisker_high": 100.5859375,
+      "outliers": 78247,
+      "decile_medians": [
+        89.78125,
+        87.6484375,
+        93.0703125,
+        94.21875,
+        94.1171875,
+        94.1640625,
+        94.0859375,
+        94.03125,
+        93.7265625,
+        93.625
+      ]
+    }
+  },
+  "start_utc": "2026-09-10T20:58:58.277237+00:00",
+  "elapsed_seconds": 8.952777131460607,
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/latency_bench.bin",
+    "268435456",
+    "64",
+    "independent",
+    "1000000",
+    "256",
+    "59221",
+    "3",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency03/raw/calibration__memory_independent.u64"
+  ],
+  "cpu_busy_percent": {
+    "cpu3": 100.0,
+    "cpu5": 2.464,
+    "cpu2": 1.899,
+    "cpu7": 2.016,
+    "cpu0": 2.05,
+    "cpu1": 1.344,
+    "cpu6": 100.0,
+    "cpu4": 1.456
+  },
+  "cpu_frequency_before": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "800000",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "cpu_frequency_after": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "1599999",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4000000"
+  },
+  "runtime_events": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 51
+  }
+}

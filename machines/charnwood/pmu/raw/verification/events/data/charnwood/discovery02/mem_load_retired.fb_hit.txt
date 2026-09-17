@@ -1,0 +1,1 @@
+3870,,mem_load_retired.fb_hit:u,1114390,100.00,,

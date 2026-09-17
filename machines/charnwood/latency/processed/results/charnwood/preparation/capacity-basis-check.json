@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "inference_file": "/home/swu35/ECE592-HW1/timing-only/capacity/results/charnwood/combined12/inference.json",
+  "inference_sha256": "13edd3e32eb5f57b36095f5a990159b72eb3d52ef5dec4c084b970d5b9e949ab",
+  "source_runs": [
+    "round1",
+    "round2"
+  ]
+}

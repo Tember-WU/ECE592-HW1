@@ -1,0 +1,710 @@
+{
+  "machine": "charnwood",
+  "experiment": "latency",
+  "run_id": "latency01",
+  "phase": "timing-only",
+  "started_utc": "2026-09-10T20:53:15.927934+00:00",
+  "status": "failed",
+  "command": [
+    "scripts/run_latency.py",
+    "--machine",
+    "charnwood",
+    "--run-id",
+    "latency01"
+  ],
+  "jobs": [
+    {
+      "name": "l1_miss__alternate",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 131072
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "131072",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/l1_miss__alternate.u64"
+      ],
+      "raw_sha256": "542d2cc26e2557f89dd3d0bbf9c441b5a7f78bf69285f5d000f2bdd31e01704b"
+    },
+    {
+      "name": "l2_miss__repeat",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "1048576",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/l2_miss__repeat.u64"
+      ],
+      "raw_sha256": "cf589c2cef484f01a2d2ec806986c59457b4775785e4501f7f9590d997b5c002"
+    },
+    {
+      "name": "calibration__l1_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/calibration__l1_independent.u64"
+      ],
+      "raw_sha256": "5a0cca94baf44d0e93f54c7dbe613228ce048b293048057b33639688b0cec23a"
+    },
+    {
+      "name": "calibration__l1_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/calibration__l1_sequential.u64"
+      ],
+      "raw_sha256": "90eabd48efc142902acd5a7bf668ea454daa5ff12ce54601f944eb694da7c712"
+    },
+    {
+      "name": "l1_hit__alternate",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "16384",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/l1_hit__alternate.u64"
+      ],
+      "raw_sha256": "55a3918f3b0d709cc1833d1bf78cadeb2533d894216c0a786adb4c58704d0019"
+    },
+    {
+      "name": "calibration__timer",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "empty",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "empty",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/calibration__timer.u64"
+      ],
+      "raw_sha256": "dfd028af42d43eb73c825959fd63eba24631ff216bde47463ea4c6641bc66ad4"
+    },
+    {
+      "name": "calibration__memory_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/calibration__memory_sequential.u64"
+      ],
+      "raw_sha256": "77bb02e3352e67cc2b393fa477bdee258474cda928eae35c6299ebf8d23433c6"
+    },
+    {
+      "name": "calibration__l1_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/calibration__l1_long.u64"
+      ],
+      "raw_sha256": "f66b3c1d9729c3444c4c31666ff0932a04036ab9af47e8b06c285e8f6ce32dc4"
+    },
+    {
+      "name": "calibration__l2_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "65536",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/calibration__l2_long.u64"
+      ],
+      "raw_sha256": "834354a0f25cb0b96ceb2aa2f1a8d83785b4a064d1ecccf5d36fbd87382252d6"
+    },
+    {
+      "name": "calibration__llc_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "1048576",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/calibration__llc_long.u64"
+      ],
+      "raw_sha256": "7a8ec94d9ae26f3d22919d37e78b3224eaa65404fa810c1afca0b2d663a45957"
+    },
+    {
+      "name": "llc_hit__alternate",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 2097152
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "2097152",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/llc_hit__alternate.u64"
+      ],
+      "raw_sha256": "07627b69085a3d581fc8491c110624207e81f001ed6386a07535cfdec0b76b6f"
+    },
+    {
+      "name": "llc_miss__alternate",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 536870912
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "failed",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/latency_bench.bin",
+        "536870912",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "3",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/latency/data/charnwood/latency01/raw/llc_miss__alternate.u64"
+      ]
+    },
+    {
+      "name": "llc_hit__repeat",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l2_miss__alternate",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 2097152
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "l2_hit__alternate",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 131072
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l2_hit__repeat",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l1_hit__primary",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "calibration__memory_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l2_hit__primary",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "calibration__llc_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l1_miss__repeat",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 65536
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "llc_miss__repeat",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "calibration__l2_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "calibration__l2_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 65536
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "llc_miss__primary",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "l2_miss__primary",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "llc_hit__primary",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l1_hit__repeat",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ]
+    },
+    {
+      "name": "l1_miss__primary",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 65536
+      },
+      "columns": [
+        "first",
+        "reread"
+      ]
+    },
+    {
+      "name": "calibration__llc_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ]
+    }
+  ],
+  "source_snapshot_hashes": {
+    "requirements.txt": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+    "Makefile": "580dba2b0895ba4a7e6e4c66f619c0ca4c76308834468f4c7ca3752da0b7ca49",
+    "README.md": "55aeafbcc3310d5aeca289876d2879eb9bb4189dd8e19e2f2089d6038622d3ff",
+    "scripts/run_latency.py": "36882314f22a52d2c29ae7afaf8e9654cb3ded6c968311a622ce4ea6808681ba",
+    "scripts/common.py": "bacb509745fc0a41c8c00d5cb946e279ceb8887c465c5d263702452942908e86",
+    "scripts/analyze_latency.py": "b2d9d9336612146e7a373925b6d3da371c5efd7a0e8e05b2a3d74aee4878b6bf",
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093"
+  },
+  "environment_sha256": "a708c528da252bceb059d22a05e74fa58bebabbedf0c6f0b118be78503c54772",
+  "error": "llc_miss__alternate: MADV_COLLAPSE: full THP backing unavailable: Cannot allocate memory\n",
+  "finished_utc": "2026-09-10T20:53:55.863472+00:00"
+}

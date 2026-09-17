@@ -1,0 +1,111 @@
+{
+  "name": "round2_w5242880_s64_random_b256_seed59202_huge_n1000000",
+  "suite": "round2",
+  "machine": "charnwood",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59202,
+    "pages": "huge",
+    "mode": "random",
+    "bytes": 5242880
+  },
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/capacity/data/charnwood/round2/cache_capacity.bin",
+    "5242880",
+    "64",
+    "random",
+    "1000000",
+    "256",
+    "59202",
+    "3",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/capacity/data/charnwood/round2/raw/round2_w5242880_s64_random_b256_seed59202_huge_n1000000.u64"
+  ],
+  "start_utc": "2026-09-10T17:02:00.985587+00:00",
+  "elapsed_seconds": 8.201956618577242,
+  "environment": {
+    "host": "charnwood.ece.ncsu.edu",
+    "model": "Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz",
+    "kernel": "6.8.0-101-generic",
+    "cpu": 3,
+    "core": "3",
+    "package": "0",
+    "siblings": "3,7",
+    "nodes": {
+      "node0": "0-7"
+    },
+    "inherited_affinity": [
+      1,
+      5
+    ],
+    "page_size": 4096,
+    "thp": "always [madvise] never",
+    "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "flags": "-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+    "timer": "LFENCE/RDTSC/LFENCE ... RDTSCP/LFENCE; TSC ticks/access",
+    "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+    "binary_sha256": "b7a26b55bcb6b42551016855163a592aae8303b82b7baff2f9c6189d4a0c0153",
+    "git_head": "47f48d204a8f53f9fd26a95814d332c0152f3486",
+    "machine": "charnwood",
+    "numa_node": 0,
+    "build_command": [
+      "make",
+      "-B",
+      "MACHINE=charnwood",
+      "CC=gcc",
+      "CFLAGS=-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+      "capacity",
+      "assembly"
+    ],
+    "memory_policy": "numactl --membind=0; first touch after CPU binding",
+    "variables": {
+      "PATH": "/home/swu35/.codex/tmp/arg0/codex-arg0M1yzuL:/home/swu35/.vscode-server/cli/servers/Stable-645f29cc3176500b4b5762ba887cf2a7f0ffdf2c/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/puppetlabs/bin:/home/swu35/.vscode-server/extensions/openai.chatgpt-26.903.71938-linux-x64/bin/linux-x86_64",
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "cpu_busy_percent": {
+    "cpu0": 100.0,
+    "cpu1": 1.236,
+    "cpu2": 1.709,
+    "cpu3": 100.0,
+    "cpu4": 100.0,
+    "cpu5": 1.224,
+    "cpu6": 100.0,
+    "cpu7": 1.591
+  },
+  "stats": {
+    "n": 1000000,
+    "mean": 108.0071108125,
+    "std": 44.07589743169211,
+    "p05": 63.1953125,
+    "q1": 74.4609375,
+    "median": 92.796875,
+    "q3": 131.6484375,
+    "p95": 200.6953125,
+    "p99": 239.75,
+    "minimum": 49.7734375,
+    "maximum": 1184.28125,
+    "whisker_low": 49.7734375,
+    "whisker_high": 217.4296875,
+    "outliers": 30496,
+    "decile_medians": [
+      94.390625,
+      81.3125,
+      71.6015625,
+      83.6953125,
+      130.22265625,
+      157.75,
+      94.375,
+      117.1171875,
+      98.1796875,
+      75.671875
+    ]
+  },
+  "log": "mapping_before:\nKernelPageSize:        4 kB\nAnonHugePages:      6144 kB\nnuma_mapping: 714ad8800000 bind:0 anon=1536 dirty=1536 active=0 N0=1536 kernelpagesize_kB=4\nmapping_after:\nKernelPageSize:        4 kB\nAnonHugePages:      6144 kB\nnuma_mapping: 714ad8800000 bind:0 anon=1536 dirty=1536 active=0 N0=1536 kernelpagesize_kB=4\nbytes=5242880 spacing=64 mode=random samples=1000000 batch=256 seed=59202 cpu_start=3 cpu_end=3 warm_loads=1048576 base=0x714ad8800000 mapped_bytes=6291456\nmeasurement_minor_faults=0 major_faults=0 voluntary_switches=0 involuntary_switches=50\n",
+  "raw_file": "raw/round2_w5242880_s64_random_b256_seed59202_huge_n1000000.u64.gz",
+  "raw_sha256": "de117f155bb0b5ebf7aa323a444edb607799d145c498e5e88b489e3290986716"
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "level": "L1D",
+    "estimate": 32768,
+    "interval": [
+      32768,
+      36864
+    ],
+    "zoom": [
+      16384,
+      65536
+    ],
+    "unit": 1024,
+    "box_points": [
+      32768,
+      36864,
+      49152
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 32 KiB; 32-36 KiB brackets the sampled onset. Not a confidence interval or specification validation."
+  },
+  {
+    "level": "L2",
+    "estimate": 262144,
+    "interval": [
+      262144,
+      294912
+    ],
+    "zoom": [
+      131072,
+      393216
+    ],
+    "unit": 1024,
+    "box_points": [
+      262144,
+      294912,
+      393216
+    ],
+    "spacing": 64,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "Approximately 256 KiB; 256-288 KiB brackets the sampled onset. Absolute medians vary between runs."
+  },
+  {
+    "level": "LLC effective transition",
+    "estimate": null,
+    "interval": [
+      4194304,
+      8388608
+    ],
+    "zoom": [
+      4194304,
+      8388608
+    ],
+    "unit": 1048576,
+    "box_points": [
+      4194304,
+      6291456,
+      8388608
+    ],
+    "spacing": 8,
+    "batch": 256,
+    "pages": "huge",
+    "interpretation": "A broad layout-, run-, and time-dependent transition in 4-8 MiB; this interval does not bound nominal physical capacity."
+  }
+]
