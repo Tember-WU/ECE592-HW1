@@ -1,0 +1,16 @@
+{
+  "hostname": "crux.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "6.8.0-88-generic",
+  "cpu": 6,
+  "collected_utc": "2026-09-14T15:31:44.280714+00:00",
+  "perf_version": "perf version 6.8.12",
+  "perf_event_paranoid": "1",
+  "processor_identification": [
+    "vendor_id\t: GenuineIntel",
+    "cpu family\t: 6",
+    "model\t\t: 158",
+    "model name\t: Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+    "stepping\t: 13"
+  ]
+}

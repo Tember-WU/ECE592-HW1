@@ -1,0 +1,12 @@
+14 configurations, 1,000,000 timed batches each, four simultaneous events.
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Preflight CPU busy %: {'6': 1.0101010101010102}
+Traceback (most recent call last):
+  File "/home/swu35/ECE592-HW1/PMU-verification/capacity/scripts/run_capacity.py", line 146, in <module>
+    main()
+  File "/home/swu35/ECE592-HW1/PMU-verification/capacity/scripts/run_capacity.py", line 109, in main
+    raise RuntimeError('Benchmark failed: ' + str(log_path))
+RuntimeError: Benchmark failed: /home/swu35/ECE592-HW1/PMU-verification/capacity/data/crux/capacity03/logs/LLC_w13631488.txt

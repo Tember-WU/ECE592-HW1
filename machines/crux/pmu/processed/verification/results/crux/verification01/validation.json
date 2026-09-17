@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-09-14T15:53:55.322016+00:00",
+  "runs": [
+    {
+      "experiment": "capacity",
+      "run_id": "capacity05",
+      "points": 14,
+      "timed_batches": 14000000,
+      "analyzer_validation": "capacity/results/crux/capacity05/validation.json",
+      "archive_hashes_verified": 17
+    },
+    {
+      "experiment": "line_size",
+      "run_id": "line_size01",
+      "points": 12,
+      "timed_batches": 12000000,
+      "analyzer_validation": "line_size/results/crux/line_size01/validation.json",
+      "archive_hashes_verified": 16
+    },
+    {
+      "experiment": "associativity",
+      "run_id": "associativity01",
+      "points": 12,
+      "timed_batches": 12000000,
+      "analyzer_validation": "associativity/results/crux/associativity01/validation.json",
+      "archive_hashes_verified": 16
+    }
+  ],
+  "total_points": 38,
+  "total_formal_timed_batches": 38000000,
+  "frozen_snapshot_files_verified": 171,
+  "frozen_originals_unchanged": true,
+  "measurement_c_cpp_unchanged": true,
+  "local_document_links_verified": 79,
+  "all_groups_without_multiplexing": true,
+  "all_mapping_policies_verified": true,
+  "formal_data_excludes_failed_runs": true,
+  "note": "Run analyzers already decompressed all raw samples and recomputed statistics. This final audit verifies archived hashes, counters, mapping logs, provenance, frozen originals and report links."
+}

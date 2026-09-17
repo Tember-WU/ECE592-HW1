@@ -1,0 +1,4 @@
+3143,,mem_load_retired.l1_miss:u,662902,100.00,,
+1259,,mem_load_retired.l2_miss:u,662902,100.00,,
+21,,mem_load_retired.l3_miss:u,662902,100.00,,
+126815,,mem_inst_retired.all_loads:u,662902,100.00,,

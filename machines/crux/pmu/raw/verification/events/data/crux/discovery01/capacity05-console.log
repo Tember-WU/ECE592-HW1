@@ -1,0 +1,25 @@
+14 configurations, 1,000,000 timed batches each, four simultaneous events.
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Preflight CPU busy %: {'6': 0.9900990099009901}
+LLC_w13631488: allocation failed before timing; retry 1/30
+LLC_w13631488: allocation failed before timing; retry 2/30
+LLC_w13631488: allocation failed before timing; retry 3/30
+LLC_w13631488: allocation failed before timing; retry 4/30
+LLC_w13631488: allocation failed before timing; retry 5/30
+[1/14] LLC_w13631488: median 92.2930 ticks/load; L1/L2/L3 misses per 1000 chain loads [999.88, 991.11, 398.28]
+[2/14] L1_w36864: median 7.7578 ticks/load; L1/L2/L3 misses per 1000 chain loads [993.7, 0.02, 0.01]
+[3/14] L1_w32768: median 2.8750 ticks/load; L1/L2/L3 misses per 1000 chain loads [39.13, 0.01, 0.0]
+[4/14] L2_w524288: median 22.9492 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.24, 729.05, 0.0]
+[5/14] L1_w40960: median 7.9531 ticks/load; L1/L2/L3 misses per 1000 chain loads [998.85, 0.04, 0.03]
+[6/14] LLC_w7340032: median 28.1758 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.62, 985.37, 3.02]
+[7/14] LLC_w4194304: median 27.7617 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.79, 973.93, 1.82]
+[8/14] LLC_w10485760: median 28.1133 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.82, 989.71, 12.67]
+[9/14] LLC_w16777216: median 151.7383 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.31, 992.76, 727.05]
+[10/14] L2_w262144: median 7.9531 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.26, 10.76, 0.01]
+[11/14] L2_w393216: median 21.0039 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.66, 645.48, 0.0]
+[12/14] L1_w49152: median 7.7734 ticks/load; L1/L2/L3 misses per 1000 chain loads [997.3, 0.01, 0.01]
+[13/14] L2_w294912: median 13.6641 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.99, 287.72, 0.01]
+[14/14] L1_w65536: median 7.7891 ticks/load; L1/L2/L3 misses per 1000 chain loads [1001.94, 0.01, 0.01]

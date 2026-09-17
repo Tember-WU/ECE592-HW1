@@ -1,0 +1,5 @@
+make: Entering directory '/home/swu35/ECE592-HW1/PMU-verification/line_size'
+mkdir -p build/crux
+g++ -O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/line_size_bench.cpp -o build/crux/line_size_pmu
+objdump -d -Mintel build/crux/line_size_pmu > build/crux/line_size_pmu.dis
+make: Leaving directory '/home/swu35/ECE592-HW1/PMU-verification/line_size'

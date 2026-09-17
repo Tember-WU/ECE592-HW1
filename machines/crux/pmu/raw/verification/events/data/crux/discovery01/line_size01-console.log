@@ -1,0 +1,18 @@
+line_size: 12 configurations, 1,000,000 batches each
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Preflight: {'4': 2.0}
+[1/12] random_s64_a16: 11.7441 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [367.948, 76.856, 0.146]
+[2/12] random_s96_a0: 12.4434 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [556.192, 97.276, 0.159]
+[3/12] random_s64_a0: 11.6289 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [370.197, 75.87, 0.047]
+[4/12] random_s56_a16: 10.2637 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [260.301, 50.643, 0.006]
+[5/12] fully_random_s64: 16.7793 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [985.623, 345.317, 0.028]
+[6/12] sequential_s72: 9.5732 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [78.25, 10.032, 0.024]
+[7/12] sequential_s64: 9.2598 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [49.422, 6.706, 0.001]
+[8/12] random_s72_a0: 11.8906 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [412.343, 79.117, 0.01]
+[9/12] random_s56_a0: 9.8301 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [277.7, 34.726, 0.008]
+[10/12] random_s32_a0: 6.9033 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [99.817, 13.004, 0.006]
+[11/12] random_s72_a16: 11.7344 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [426.399, 66.401, 0.103]
+[12/12] sequential_s56: 7.0625 ticks/timed load; L1/L2/L3 misses per 1000 chain loads [41.19, 0.751, 0.014]

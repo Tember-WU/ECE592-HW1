@@ -1,0 +1,1619 @@
+{
+  "machine": "crux",
+  "experiment": "capacity",
+  "run_id": "round2",
+  "phase": "timing-only",
+  "started_utc": "2026-09-10T16:57:08.546424+00:00",
+  "status": "complete",
+  "command": [
+    "scripts/run_capacity.py",
+    "--machine",
+    "crux",
+    "--config",
+    "configs/crux-round2.json",
+    "--sweep",
+    "all",
+    "--run-id",
+    "round2"
+  ],
+  "config_file": "/home/swu35/ECE592-HW1/timing-only/capacity/configs/crux-round2.json",
+  "jobs": [
+    {
+      "name": "round2_w524288_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 524288
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "524288",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w524288_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w49152_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 49152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "49152",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w49152_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w393216_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 393216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "393216",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w393216_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w10485760_s8_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 10485760
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "10485760",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w10485760_s8_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w4194304_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 4194304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "4194304",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w4194304_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w524288_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 524288
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "524288",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w524288_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w524288_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 524288
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "524288",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w524288_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w262144_s64_random_b1024_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 262144
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "262144",
+        "64",
+        "random",
+        "1000000",
+        "1024",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w262144_s64_random_b1024_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w10485760_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 10485760
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "10485760",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w10485760_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w16777216_s64_random_b256_seed59202_base_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "base",
+        "mode": "random",
+        "bytes": 16777216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "16777216",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "base",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w16777216_s64_random_b256_seed59202_base_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w49152_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 49152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "49152",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w49152_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w57344_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 57344
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "57344",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w57344_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w262144_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 262144
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "262144",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w262144_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w32768_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 32768
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "32768",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w32768_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w262144_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 262144
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "262144",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w262144_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w4194304_s8_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 4194304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "4194304",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w4194304_s8_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "65536",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w65536_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w10485760_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 10485760
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "10485760",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w10485760_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w32768_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 32768
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "32768",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w32768_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w294912_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 294912
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "294912",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w294912_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w13631488_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 13631488
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "13631488",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w13631488_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "65536",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w65536_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w61440_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 61440
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "61440",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w61440_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w13631488_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 13631488
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "13631488",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w13631488_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w425984_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 425984
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "425984",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w425984_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w327680_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 327680
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "327680",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w327680_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w4194304_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 4194304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "4194304",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w4194304_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "65536",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w65536_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w393216_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 393216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "393216",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w393216_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w7340032_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 7340032
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "7340032",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w7340032_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w458752_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 458752
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "458752",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w458752_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w524288_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 524288
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "524288",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w524288_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w393216_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 393216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "393216",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w393216_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w16777216_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 16777216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "16777216",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w16777216_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w10485760_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 10485760
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "10485760",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w10485760_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w360448_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 360448
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "360448",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w360448_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w16777216_s8_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 16777216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "16777216",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w16777216_s8_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w4194304_s64_random_b256_seed59202_base_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "base",
+        "mode": "random",
+        "bytes": 4194304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "4194304",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "base",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w4194304_s64_random_b256_seed59202_base_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w491520_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 491520
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "491520",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w491520_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w32768_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 32768
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "32768",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w32768_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w393216_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 393216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "393216",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w393216_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w53248_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 53248
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "53248",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w53248_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w36864_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 36864
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "36864",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w36864_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w32768_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 32768
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "32768",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w32768_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w49152_s64_sequential_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 49152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "49152",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w49152_s64_sequential_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w16777216_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 16777216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "16777216",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w16777216_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w262144_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 262144
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "262144",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w262144_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w10485760_s64_random_b256_seed59202_base_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "base",
+        "mode": "random",
+        "bytes": 10485760
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "10485760",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "base",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w10485760_s64_random_b256_seed59202_base_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w16777216_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 16777216
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "16777216",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w16777216_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w40960_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 40960
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "40960",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w40960_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w45056_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 45056
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "45056",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w45056_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w32768_s64_random_b1024_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 32768
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "32768",
+        "64",
+        "random",
+        "1000000",
+        "1024",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w32768_s64_random_b1024_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w49152_s64_random_b256_seed59203_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59203,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 49152
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "49152",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59203",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w49152_s64_random_b256_seed59203_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w7340032_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 7340032
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "7340032",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w7340032_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w4194304_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 4194304
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "4194304",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w4194304_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w262144_s8_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 8,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 262144
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "262144",
+        "8",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w262144_s8_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    },
+    {
+      "name": "round2_w65536_s64_random_b256_seed59202_huge_n1000000",
+      "suite": "round2",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59202,
+        "pages": "huge",
+        "mode": "random",
+        "bytes": 65536
+      },
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/cache_capacity.bin",
+        "65536",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "6",
+        "huge",
+        "/home/swu35/ECE592-HW1/timing-only/capacity/data/crux/round2/raw/round2_w65536_s64_random_b256_seed59202_huge_n1000000.u64"
+      ]
+    }
+  ],
+  "finished_utc": "2026-09-10T17:00:32.612730+00:00"
+}

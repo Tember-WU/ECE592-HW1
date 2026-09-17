@@ -1,0 +1,32 @@
+{
+  "machine": "crux",
+  "run_id": "round2",
+  "observed_at_utc": "2026-09-10T16:57:08.384855+00:00",
+  "observation_seconds": 3,
+  "cpu": 6,
+  "numa_node": 0,
+  "cpu_busy_percent": {
+    "cpu0": 100.0,
+    "cpu1": 1.007,
+    "cpu2": 1.333,
+    "cpu3": 100.0,
+    "cpu4": 1.003,
+    "cpu5": 1.338,
+    "cpu6": 1.667,
+    "cpu7": 1.338
+  },
+  "processes": [
+    "    PID USER     PSR %CPU COMMAND",
+    " 951245 rsivaku3   3 99.9 cache_bench",
+    " 853509 hbsu       0 97.8 cache_bench",
+    " 960448 swu35      1 17.4 python",
+    " 952066 swu35      1  0.3 MainThread",
+    " 951651 swu35      1  0.3 MainThread",
+    " 954138 rqashou    1  0.1 MainThread",
+    "   2068 gdm        1  0.1 gnome-shell",
+    " 951633 swu35      7  0.1 code-645f29cc31",
+    " 952239 swu35      2  0.1 codex",
+    " 960359 root       5  0.0 kworker/5:0-mm_percpu_wq",
+    " 952037 swu35      7  0.0 code-645f29cc31"
+  ]
+}

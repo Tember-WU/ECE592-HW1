@@ -1,0 +1,60 @@
+{
+  "machine": "crux",
+  "isa": "x86_64",
+  "cpu": 6,
+  "numa_node": 0,
+  "samples": 1000000,
+  "batch": 256,
+  "spacing": 64,
+  "seed": 59202,
+  "pages": "huge",
+  "mode": "random",
+  "order_seed": 59283,
+  "events": [
+    {
+      "name": "mem_load_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_inst_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "regions": {
+    "L1": [
+      32768,
+      36864,
+      40960,
+      49152,
+      65536
+    ],
+    "L2": [
+      262144,
+      294912,
+      393216,
+      524288
+    ],
+    "LLC": [
+      4194304,
+      7340032,
+      10485760,
+      13631488,
+      16777216
+    ]
+  },
+  "verification_basis": {
+    "freeze_manifest": "phase1/crux/freeze01/manifest.json",
+    "freeze_manifest_sha256": "17a5365bfaa4428ffcef8b0997106e8edbfe642bb6e7afa5dc0c85f106e37337",
+    "event_discovery": "events/data/crux/discovery01"
+  },
+  "selection_note": "14 already measured primary random points from Crux round2 (seed 59202), spanning the frozen 32 KiB and 256 KiB timing boundaries and 4-16 MiB effective LLC region.",
+  "placement_note": "Same CPU 6/NUMA node 0 as the original Crux capacity run. For line_size/associativity the archived pinning manifest takes precedence over stale template config fields."
+}

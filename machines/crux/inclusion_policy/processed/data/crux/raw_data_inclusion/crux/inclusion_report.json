@@ -1,0 +1,16 @@
+{
+  "machine": "crux",
+  "n_trials": 40000,
+  "fraction_L2_hit": 0.999725,
+  "fraction_LLC_hit": 0.00015,
+  "fraction_DRAM": 0.000125,
+  "l2_median_ticks": 73.0,
+  "llc_median_ticks": 81.0,
+  "dram_median_ticks": 259.0,
+  "l2_dram_boundary_ticks": 77.0,
+  "llc_dram_boundary_ticks": 170.0,
+  "llc_conflict_stride_bytes": 2048,
+  "pressure_k_used": 32,
+  "possibly_l2_contaminated_target_regions": 40000,
+  "verdict": "Evidence consistent with NON-INCLUSIVE / exclusive-like LLC (inner copy survived)"
+}

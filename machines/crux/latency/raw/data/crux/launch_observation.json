@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-09-10T20:52:25.768702+00:00",
+  "host": "crux.ece.ncsu.edu",
+  "cpu": 6,
+  "numa_node": 0,
+  "processes": [
+    "    PID USER     PSR %CPU COMMAND",
+    " 974906 dchen27    4 99.7 cache_clusivity",
+    " 853509 hbsu       0 98.1 cache_bench",
+    " 974924 swu35      6 66.6 python",
+    " 971976 rqashou    7  0.2 MainThread",
+    " 970106 rqashou    3  0.2 MainThread",
+    " 952066 swu35      1  0.1 MainThread",
+    "   2068 gdm        5  0.1 gnome-shell",
+    " 974908 root       4  0.1 kworker/4:1-events",
+    " 970035 rqashou    7  0.1 MainThread",
+    " 974056 nmannam    1  0.1 systemd",
+    " 951651 swu35      5  0.1 MainThread"
+  ],
+  "note": "Existing CPU0 benchmark observed; no other users processes interrupted and no governor or global memory settings changed."
+}

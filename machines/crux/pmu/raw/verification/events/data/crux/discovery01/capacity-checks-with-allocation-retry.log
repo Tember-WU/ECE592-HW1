@@ -1,0 +1,13 @@
+test_allocation_retry_preserves_failure_and_does_not_retry_measurement (test_capacity.CapacityTests.test_allocation_retry_preserves_failure_and_does_not_retry_measurement) ... point: allocation failed before timing; retry 1/2
+ok
+test_counter_scope_validation (test_capacity.CapacityTests.test_counter_scope_validation) ... ok
+test_live_counter_group_and_raw_samples (test_capacity.CapacityTests.test_live_counter_group_and_raw_samples) ... ok
+test_local_event_aliases_and_missing_event (test_capacity.CapacityTests.test_local_event_aliases_and_missing_event) ... ok
+test_plan_matches_fourteen_unique_points (test_capacity.CapacityTests.test_plan_matches_fourteen_unique_points) ... ok
+test_reject_insufficient_samples_and_duplicate_points (test_capacity.CapacityTests.test_reject_insufficient_samples_and_duplicate_points) ... ok
+test_stats_keep_outliers (test_capacity.CapacityTests.test_stats_keep_outliers) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.071s
+
+OK

@@ -1,0 +1,33 @@
+30 configurations, 30,000,000 batches, 39,000,000 recorded timer intervals
+[1/30] l1_miss__alternate: paired, W=131072, batch=256
+  first median=7.82031; reread=2.92969; 1.0s
+[2/30] l2_miss__repeat: paired, W=1048576, batch=256
+  first median=25.82422; reread=3.03125; 2.5s
+[3/30] calibration__l1_independent: independent, W=8192, batch=256
+  first median=0.76562; 0.1s
+[4/30] calibration__l1_sequential: sequential, W=8192, batch=256
+  first median=2.73047; 0.3s
+[5/30] l1_hit__alternate: chase, W=16384, batch=256
+  first median=2.72656; 0.3s
+[6/30] calibration__timer: empty, W=8192, batch=256
+  first median=30.00000; 0.0s
+[7/30] calibration__memory_sequential: sequential, W=268435456, batch=256
+  first median=23.43750; 2.3s
+[8/30] calibration__l1_long: chase, W=8192, batch=1024
+  first median=2.64062; 0.9s
+[9/30] calibration__l2_long: chase, W=65536, batch=1024
+  first median=7.71777; 2.7s
+[10/30] calibration__llc_long: chase, W=1048576, batch=1024
+  first median=25.83008; 9.0s
+[11/30] llc_hit__alternate: chase, W=2097152, batch=256
+  first median=27.24219; 2.4s
+[12/30] llc_miss__alternate: paired, W=536870912, batch=256
+Traceback (most recent call last):
+  File "/home/swu35/ECE592-HW1/timing-only/latency/scripts/run_latency.py", line 222, in <module>
+    main()
+  File "/home/swu35/ECE592-HW1/timing-only/latency/scripts/run_latency.py", line 207, in main
+    collect(config, jobs, out, manifest)
+  File "/home/swu35/ECE592-HW1/timing-only/latency/scripts/run_latency.py", line 140, in collect
+    raise RuntimeError(f'{name}: {process.stderr}')
+RuntimeError: llc_miss__alternate: MADV_COLLAPSE: full THP backing unavailable: Cannot allocate memory
+

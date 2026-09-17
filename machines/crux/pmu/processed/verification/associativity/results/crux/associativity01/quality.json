@@ -1,0 +1,74 @@
+{
+  "preflight_busy_percent": {
+    "4": 1.0
+  },
+  "max_sibling_busy_percent": null,
+  "total_involuntary_switches": 39,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "L2_candidate_k7": 1.0453333333333334,
+    "L1_k11": 1.0220364741641337,
+    "L1_k9": 1.0447647951441577,
+    "L2_candidate_k6": 1.021276595744681,
+    "L2_candidate_k16": 1.018978102189781,
+    "L2_candidate_k12": 1.0111870727159726,
+    "L2_candidate_k10": 1.0128465179175117,
+    "L1_k10": 1.021180030257186,
+    "L1_k8": 1.0211081794195251,
+    "L1_k7": 1.024,
+    "L2_candidate_k8": 1.0211081794195251,
+    "L2_candidate_k9": 1.0249140893470792
+  },
+  "huge_kib": {
+    "L2_candidate_k7": [
+      2048,
+      2048
+    ],
+    "L1_k11": [
+      2048,
+      2048
+    ],
+    "L1_k9": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k6": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k16": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k12": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k10": [
+      2048,
+      2048
+    ],
+    "L1_k10": [
+      2048,
+      2048
+    ],
+    "L1_k8": [
+      2048,
+      2048
+    ],
+    "L1_k7": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k8": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k9": [
+      2048,
+      2048
+    ]
+  },
+  "caveat": "Same CPU 4/NUMA node 0 as the original Crux associativity run. For line_size/associativity the archived pinning manifest takes precedence over stale template config fields. PMU loop totals include helper loads."
+}

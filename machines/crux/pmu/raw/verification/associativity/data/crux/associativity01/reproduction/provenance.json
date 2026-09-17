@@ -1,0 +1,32 @@
+{
+  "captured_utc": "2026-09-14T15:46:50.865013+00:00",
+  "experiment": "associativity",
+  "machine": "crux",
+  "run_id": "associativity01",
+  "git_head": "f86eecbb6fce590f3d40b64487620888b33dcd93",
+  "run_manifest_sha256": "9d1d5471ed304a2684898435a15828236f01435d2328f9828439521be1d06b84",
+  "verification_basis": {
+    "freeze_manifest": "phase1/crux/freeze01/manifest.json",
+    "freeze_manifest_sha256": "17a5365bfaa4428ffcef8b0997106e8edbfe642bb6e7afa5dc0c85f106e37337",
+    "event_discovery": "events/data/crux/discovery01"
+  },
+  "note": "Post-collection snapshot of retained source/build files, not an automatic pre-run snapshot. For these Crux runs the measurement sources and compiler flags were unchanged during collection. The archive helper itself was added after collection began. Frozen Phase-I evidence is separate.",
+  "files": {
+    "bin/associativity_pmu": "624ad3fe810d89efcb71a581e61a05e6eb3a7aa180fc97f922619a9c5f2611b5",
+    "bin/associativity_pmu.dis": "8bc783a18c58f7878e6c7938c74968d4058d8e898812794d77652ed747b49d88",
+    "config.json": "82719836906f89f2b934dd21bce051f3fa9926de0650e7332bd593ad20c4b9f0",
+    "source/associativity/Makefile": "0dbbe14408ac4a5246b6a4f52131a0bfdc3b9498b0031edd2999a522530b6ea1",
+    "source/associativity/scripts/analyze_associativity.py": "3bcc91ba79cdc0d46a5d4df91f1836a8f9e5c3d38c453e8ee67f4df940363020",
+    "source/associativity/scripts/run_associativity.py": "becefa36e0ded19881e986dfcab886631ecfd943d64e22178b0a8a508d69779d",
+    "source/associativity/src/associativity_bench.cpp": "0f9b7c8c891729990a91fa2310a096e038094da60a7d7cdc7a270b2fd147d79b",
+    "source/associativity/src/timer_compat.h": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+    "source/capacity/requirements.txt": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+    "source/capacity/scripts/common.py": "7f36612ea6920533d912c4bf09e70a1edb1559a640975c8a9cea227a02a9859d",
+    "source/common/analyze_verification.py": "195f7f0ec4df4b223b1eee9578b99b6bb0de5d83cd992fa7900b5ce74658099f",
+    "source/common/archive_run.py": "9f3f554412ddb638de1e45249f21814c2a6e560d9372d86759dba4e1c29f0519",
+    "source/common/measurement.hpp": "606f58fad2048c893cac3f8ca209b951ae123e55a2fa56e29fad28ef48361060",
+    "source/common/pmu.hpp": "98df180a618991e9eee63aa7b570dfefe86ce7d0fb0f17452f8ee3724a1492fd",
+    "source/common/run_verification.py": "0621680b23d8b3a6540adeb1f034810f6cfbe7e820d896d283b927f77d0c5241",
+    "source/common/test_verification.py": "4aecc160fa0eb431c2cb6813d6104e59eea92e71a679fbfbc2318e57a4603c0b"
+  }
+}

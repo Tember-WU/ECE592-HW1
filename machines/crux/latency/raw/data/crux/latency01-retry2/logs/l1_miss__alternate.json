@@ -1,0 +1,152 @@
+{
+  "name": "l1_miss__alternate",
+  "group": "l1_miss",
+  "machine": "crux",
+  "parameters": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge",
+    "mode": "paired",
+    "bytes": 131072
+  },
+  "columns": [
+    "first",
+    "reread"
+  ],
+  "raw_format": "little-endian uint64, row-major interleaved columns",
+  "raw_file": "raw/l1_miss__alternate.u64.gz",
+  "raw_sha256": "4d496d6d7fcde778704e4f1c1b061451229f7825f2288a9327de05db77028761",
+  "stats": {
+    "first": {
+      "n": 1000000,
+      "mean": 8.01485283203125,
+      "std": 3.6494525163779077,
+      "median": 7.9453125,
+      "q1": 7.7890625,
+      "q3": 7.96875,
+      "p05": 7.7734375,
+      "p95": 8.14453125,
+      "p99": 8.62109375,
+      "minimum": 7.7578125,
+      "maximum": 350.97265625,
+      "whisker_low": 7.7578125,
+      "whisker_high": 8.23828125,
+      "outliers": 12777,
+      "decile_medians": [
+        8.13671875,
+        8.1171875,
+        7.95703125,
+        7.9453125,
+        7.7890625,
+        7.796875,
+        7.94921875,
+        7.796875,
+        7.953125,
+        7.7890625
+      ]
+    },
+    "reread": {
+      "n": 1000000,
+      "mean": 2.9907705390625,
+      "std": 2.1927926210929134,
+      "median": 2.921875,
+      "q1": 2.859375,
+      "q3": 3.015625,
+      "p05": 2.7109375,
+      "p95": 3.30078125,
+      "p99": 3.37890625,
+      "minimum": 2.6484375,
+      "maximum": 321.1796875,
+      "whisker_low": 2.6484375,
+      "whisker_high": 3.25,
+      "outliers": 77778,
+      "decile_medians": [
+        2.9921875,
+        2.9765625,
+        2.9296875,
+        2.9140625,
+        2.8671875,
+        2.8984375,
+        2.921875,
+        2.890625,
+        2.921875,
+        2.8828125
+      ]
+    },
+    "first_minus_reread": {
+      "n": 1000000,
+      "mean": 5.02408229296875,
+      "std": 4.253478239089212,
+      "median": 4.984375,
+      "q1": 4.88671875,
+      "q3": 5.0625,
+      "p05": 4.57421875,
+      "p95": 5.23046875,
+      "p99": 5.59765625,
+      "minimum": -313.05078125,
+      "maximum": 347.8203125,
+      "whisker_low": 4.625,
+      "whisker_high": 5.32421875,
+      "outliers": 80635,
+      "decile_medians": [
+        5.13671875,
+        5.0625,
+        5.02734375,
+        4.984375,
+        4.921875,
+        4.93359375,
+        5.0078125,
+        4.9296875,
+        5.0078125,
+        4.92578125
+      ]
+    },
+    "first_slower_fraction": 0.999574
+  },
+  "start_utc": "2026-09-10T20:53:47.597226+00:00",
+  "elapsed_seconds": 0.9897772334516048,
+  "command": [
+    "numactl",
+    "--membind=0",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/crux/latency01-retry2/latency_bench.bin",
+    "131072",
+    "64",
+    "paired",
+    "1000000",
+    "256",
+    "59221",
+    "6",
+    "huge",
+    "/home/swu35/ECE592-HW1/timing-only/latency/data/crux/latency01-retry2/raw/l1_miss__alternate.u64"
+  ],
+  "cpu_busy_percent": {
+    "cpu0": 100.0,
+    "cpu4": 0.0,
+    "cpu3": 0.0,
+    "cpu7": 0.0,
+    "cpu1": 0.0,
+    "cpu5": 0.0,
+    "cpu2": 0.0,
+    "cpu6": 100.0
+  },
+  "cpu_frequency_before": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "4168133",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4700000"
+  },
+  "cpu_frequency_after": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "4599991",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4700000"
+  },
+  "runtime_events": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 7
+  }
+}

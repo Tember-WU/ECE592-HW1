@@ -1,0 +1,17 @@
+{
+  "consulted_utc": "2026-09-14T15:38:08.911307+00:00",
+  "agner_url": "https://www.agner.org/optimize/microarchitecture.pdf",
+  "pages_consulted": [
+    152,
+    160
+  ],
+  "access": "Read via browser tool; local PDF download attempted separately.",
+  "scope": "Chapter 11 covers Skylake-derived Lake families; Table 11.2 is family-level context, not an exact i7-9700 SKU specification.",
+  "intel_specification_url": "https://www.intel.com/content/www/us/en/products/sku/191792/intel-core-i79700-processor-12m-cache-up-to-4-70-ghz/specifications.html",
+  "intel_supported_facts": [
+    "Coffee Lake",
+    "8 cores and 8 threads",
+    "12 MB Intel Smart Cache"
+  ],
+  "pdf_sha256": "75bcd395680df4742a3e7200a61525400bc98ca4927cad50cd17dadc7273df5e"
+}

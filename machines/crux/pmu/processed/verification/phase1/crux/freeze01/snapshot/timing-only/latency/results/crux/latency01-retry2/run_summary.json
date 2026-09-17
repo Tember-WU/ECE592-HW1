@@ -1,0 +1,71 @@
+{
+  "machine": "crux",
+  "run_id": "latency01-retry2",
+  "wall_seconds": 115.276499,
+  "groups": {
+    "calibration": 12,
+    "l1_hit": 3,
+    "l2_hit": 3,
+    "llc_hit": 3,
+    "l1_miss": 3,
+    "l2_miss": 3,
+    "llc_miss": 3
+  },
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "total": 0,
+      "maximum": 0
+    },
+    "major_faults": {
+      "total": 0,
+      "maximum": 0
+    },
+    "voluntary_switches": {
+      "total": 0,
+      "maximum": 0
+    },
+    "involuntary_switches": {
+      "total": 140,
+      "maximum": 25
+    }
+  },
+  "cpu_busy_percent_ranges": {
+    "cpu0": [
+      99.953,
+      100.0
+    ],
+    "cpu1": [
+      0.0,
+      10.48
+    ],
+    "cpu2": [
+      0.0,
+      4.598
+    ],
+    "cpu3": [
+      0.0,
+      65.217
+    ],
+    "cpu4": [
+      0.0,
+      7.407
+    ],
+    "cpu5": [
+      0.0,
+      4.924
+    ],
+    "cpu6": [
+      96.429,
+      100.0
+    ],
+    "cpu7": [
+      0.0,
+      3.704
+    ]
+  },
+  "drift_flagged_points": [],
+  "maximum_first_temporal_median_ratio": 1.1140350877192982,
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 48646666,
+  "scope": "Descriptive run diagnostics; all samples and outliers retained."
+}

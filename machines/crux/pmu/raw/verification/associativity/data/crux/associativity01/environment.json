@@ -1,0 +1,29 @@
+{
+  "hostname": "crux.ece.ncsu.edu",
+  "kernel": "6.8.0-88-generic",
+  "cpu": 4,
+  "numa_node": 0,
+  "isa": "x86_64",
+  "siblings": [
+    4
+  ],
+  "preflight_busy_percent": {
+    "4": 1.0
+  },
+  "socket": "0",
+  "core": "4",
+  "frequency": {
+    "scaling_governor": "powersave",
+    "scaling_cur_freq": "800000",
+    "scaling_min_freq": "800000",
+    "scaling_max_freq": "4700000"
+  },
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "perf_version": "perf version 6.8.12",
+  "python": "3.12.3",
+  "numpy": "1.26.3",
+  "flags": "-O0 -g -std=c++11 -Wall -Wextra -Werror -fno-omit-frame-pointer",
+  "timer_unit": "TSC ticks / timed chain load",
+  "placement_note": "Same CPU 4/NUMA node 0 as the original Crux associativity run. For line_size/associativity the archived pinning manifest takes precedence over stale template config fields.",
+  "counting_scope": "User mode, calling thread, entire sample loop; includes stack/helper loads and associativity preparation loads."
+}

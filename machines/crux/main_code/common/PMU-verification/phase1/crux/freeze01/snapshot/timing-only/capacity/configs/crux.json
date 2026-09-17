@@ -1,0 +1,8 @@
+{
+  "machine": "crux",
+  "hostname": "crux",
+  "isa": "x86_64",
+  "cpu": 6,
+  "numa_node": 0,
+  "capacity": "common/round1.json"
+}

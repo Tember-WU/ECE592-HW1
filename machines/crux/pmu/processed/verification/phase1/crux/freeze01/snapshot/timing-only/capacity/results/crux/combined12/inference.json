@@ -1,0 +1,60 @@
+{
+  "machine": "crux",
+  "source_runs": [
+    "round1-retry1",
+    "round2"
+  ],
+  "interpreted_at_utc": "2026-09-10T17:03:09.114315+00:00",
+  "scope": "Cache levels and capacity from dependent-load timing; shared-machine conditions; not blind specification inference.",
+  "measurable_data_cache_levels": 3,
+  "capacity_estimates": [
+    {
+      "level": "L1D",
+      "approximate_bytes": 32768,
+      "sampled_transition_interval_bytes": [
+        32768,
+        36864
+      ],
+      "evidence": "64 B random: 32 KiB medians 2.8672-2.9141 across three processes; 36 KiB 7.9297 TSC ticks/load."
+    },
+    {
+      "level": "L2",
+      "approximate_bytes": 262144,
+      "sampled_onset_interval_bytes": [
+        262144,
+        294912
+      ],
+      "evidence": "64 B random: 256 KiB medians 8.0586-8.1133 across three processes; 288 KiB 13.8164; 512 KiB 22.8398-22.9102 TSC ticks/load."
+    },
+    {
+      "level": "LLC/L3",
+      "approximate_bytes": null,
+      "nominal_physical_capacity_bytes": null,
+      "observed_effective_transition_region_bytes": [
+        4194304,
+        16777216
+      ],
+      "sampled_effective_onset_interval_bytes": [
+        4194304,
+        7340032
+      ],
+      "evidence": "64 B huge: 4 MiB 27.9180, 7 MiB 71.8789, 10 MiB 142.6172, 16 MiB 171.7539. Compact 8 B medians at 4 MiB 27.4141-27.4375, 10 MiB 91.8984-92.7031, 16 MiB 135.5117-138.6953.",
+      "interpretation": "Broad layout-dependent effective transition under concurrent workloads, not a bound on physical LLC capacity."
+    }
+  ],
+  "timer_unit": "TSC ticks / dependent load",
+  "cpu": 6,
+  "numa_node": 0,
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "excluded_runs": {
+    "round1": "Failed at 512 MiB MADV_COLLAPSE before that point was timed; 4 completed points retained separately."
+  },
+  "caveats": [
+    "CPU0 and CPU3 were 100% busy during every benchmark subprocess interval in both complete rounds.",
+    "1037 involuntary context switches in the two complete rounds; no measured faults or voluntary switches; all samples retained.",
+    "An initial unfiltered lscpu command exposed OS cache-size fields before reading the protocol; this experiment cannot be described as blind. Intervals and numerical conclusions are supported by the recorded timing curves. No PMU measurements were taken.",
+    "Empirical brackets are not confidence intervals; different layouts, page policies, batches and processes remain identifiable."
+  ],
+  "third_round": "Not executed. Approximate L1D/L2 results and LLC uncertainty can be reported after the requested two rounds; narrower boundaries would require additional measured points."
+}

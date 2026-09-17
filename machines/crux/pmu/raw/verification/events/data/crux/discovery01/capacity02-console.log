@@ -1,0 +1,16 @@
+14 configurations, 1,000,000 timed batches each, four simultaneous events.
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Error: failed to open tracing events directory
+Preflight CPU busy %: {'6': 0.0}
+[1/14] LLC_w13631488: median 127.9531 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.49, 991.77, 583.6]
+[2/14] L1_w36864: median 7.9570 ticks/load; L1/L2/L3 misses per 1000 chain loads [993.16, 0.03, 0.02]
+[3/14] L1_w32768: median 2.9141 ticks/load; L1/L2/L3 misses per 1000 chain loads [33.76, 0.01, 0.01]
+[4/14] L2_w524288: median 22.9492 ticks/load; L1/L2/L3 misses per 1000 chain loads [1000.57, 729.32, 0.0]
+Traceback (most recent call last):
+  File "/home/swu35/ECE592-HW1/PMU-verification/capacity/scripts/run_capacity.py", line 146, in <module>
+    main()
+  File "/home/swu35/ECE592-HW1/PMU-verification/capacity/scripts/run_capacity.py", line 109, in main
+    raise RuntimeError('Benchmark failed: ' + str(log_path))
+RuntimeError: Benchmark failed: /home/swu35/ECE592-HW1/PMU-verification/capacity/data/crux/capacity02/logs/L1_w40960.txt
