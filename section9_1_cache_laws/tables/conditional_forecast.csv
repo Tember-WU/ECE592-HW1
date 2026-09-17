@@ -1,0 +1,3 @@
+metric,year,prediction,low,high,status,coverage
+l2_capacity_KiB,2028,8607.798383847176,4229.592456048673,17518.045482372923,conditional lab-only scenario; not post-Hazel forecast,uncalibrated sensitivity envelope
+l2_l1_latency_ratio,2028,2.9179178547927176,2.588235294117647,3.3333333333333335,conditional lab-only scenario; not post-Hazel forecast,uncalibrated sensitivity envelope

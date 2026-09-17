@@ -1,0 +1,11 @@
+{
+  "source_package": "../section9_moore_analysis",
+  "source_sha256": {
+    "predictions/model_parameters.json": "400395b82e849e0467adf23a88f2d8f153fb8d2d5763d6d7d1de6545f877f7a1",
+    "predictions/model_training_points.csv": "4166b3893c2d6d803ef2a447541251e8f00c5b86789c61ab30f547b3d4e495b3",
+    "predictions/hazel_predictions.csv": "e0d0b4415c040a3ff17fa507898457612720e7d6e8bfa9dce20a8c67bdc16f04",
+    "tables/trend_summary.csv": "ddd5f3f94a13559afb6ac52eaf82c09f03f7593460758a5aeff80e5bd55c7272"
+  },
+  "hazel_used": false,
+  "github_freeze_verified": false
+}

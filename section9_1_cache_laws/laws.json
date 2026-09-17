@@ -1,0 +1,134 @@
+{
+  "l2_capacity_KiB": {
+    "training_hosts": [
+      "sunbird",
+      "charnwood",
+      "ookay",
+      "upgrade",
+      "crux",
+      "skylark",
+      "thunderbird",
+      "artemisia"
+    ],
+    "n_lab_hosts": 8,
+    "cohort": "pooled Intel, AMD and Arm lab hosts",
+    "hazel_observations_used": 0,
+    "year_range": [
+      2014,
+      2023
+    ],
+    "uncertainty_probability": null,
+    "validated_on_hazel": false,
+    "model_id": "pooled_l2_anchored_log_linear",
+    "anchor_host": "artemisia",
+    "anchor_year": 2023,
+    "anchor_KiB": 2048.0,
+    "log2_slope_per_year": 0.4142857142857143,
+    "equation": "C_L2(t) = anchor_KiB * 2**(b * (t - anchor_year)); b minimizes squared log2 residuals through latest lab point",
+    "doubling_years": 2.413793103448276,
+    "leave_one_host_out_rmse_log2": 0.6060424309099557,
+    "max_abs_leave_one_host_out_error_log2": 1.025125628140703,
+    "sensitivity_models": [
+      {
+        "variant": "leave_out_sunbird",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2048.0,
+        "log2_slope_per_year": 0.4472361809045226
+      },
+      {
+        "variant": "leave_out_charnwood",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2048.0,
+        "log2_slope_per_year": 0.42592592592592593
+      },
+      {
+        "variant": "leave_out_ookay",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2048.0,
+        "log2_slope_per_year": 0.41125541125541126
+      },
+      {
+        "variant": "leave_out_upgrade",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2048.0,
+        "log2_slope_per_year": 0.4016393442622951
+      },
+      {
+        "variant": "leave_out_crux",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2048.0,
+        "log2_slope_per_year": 0.396078431372549
+      },
+      {
+        "variant": "leave_out_skylark",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2048.0,
+        "log2_slope_per_year": 0.4090909090909091
+      },
+      {
+        "variant": "leave_out_thunderbird",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2048.0,
+        "log2_slope_per_year": 0.41697416974169743
+      },
+      {
+        "variant": "leave_out_artemisia",
+        "anchor_host": "thunderbird",
+        "anchor_year": 2020,
+        "anchor_KiB": 1024.0,
+        "log2_slope_per_year": 0.45054945054945056
+      },
+      {
+        "variant": "all_lower_brackets",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2048.0,
+        "log2_slope_per_year": 0.4142857142857143
+      },
+      {
+        "variant": "all_upper_brackets",
+        "anchor_host": "artemisia",
+        "anchor_year": 2023,
+        "anchor_KiB": 2303.9999999999995,
+        "log2_slope_per_year": 0.4142857142857143
+      }
+    ],
+    "uncertainty": "Union of leave-one-host-out refits, all-lower/all-upper bracket refits, and central prediction times 2**(+/- max absolute lab leave-one-out log2 error); not a calibrated interval",
+    "limitation": "Latest-host anchor and mixed desktop/server cohort strongly affect the slope. AMD has only one training host. Continuous outputs are not rounded to physical cache sizes."
+  },
+  "l2_l1_latency_ratio": {
+    "training_hosts": [
+      "sunbird",
+      "charnwood",
+      "ookay",
+      "upgrade",
+      "crux",
+      "skylark",
+      "thunderbird",
+      "artemisia"
+    ],
+    "n_lab_hosts": 8,
+    "cohort": "pooled Intel, AMD and Arm lab hosts",
+    "hazel_observations_used": 0,
+    "year_range": [
+      2014,
+      2023
+    ],
+    "uncertainty_probability": null,
+    "validated_on_hazel": false,
+    "model_id": "pooled_relative_latency_empirical_median",
+    "equation": "R(t) = median(lab L2-resident median / L1-resident median)",
+    "central": 2.9179178547927176,
+    "low": 2.588235294117647,
+    "high": 3.3333333333333335,
+    "uncertainty": "Envelope of within-host ratios formed from resident P05-P95 extrema over configurations; not a calibrated prediction interval",
+    "limitation": "Timer scale cancels algebraically; differing run frequencies, residency and contention do not. This does not predict absolute cycles or ns."
+  }
+}
