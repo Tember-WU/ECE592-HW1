@@ -1,0 +1,38 @@
+{
+  "started_utc": "2026-09-10T20:54:46.661486+00:00",
+  "mapped_bytes": 536870912,
+  "cpu": 2,
+  "kind": "Non-timed allocation diagnostic; not a formal latency measurement.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "returncode": -1,
+      "errno": 12,
+      "error": "Cannot allocate memory",
+      "huge_bytes": 274726912,
+      "elapsed_seconds": 0.00341996643692255
+    },
+    {
+      "attempt": 2,
+      "returncode": -1,
+      "errno": 12,
+      "error": "Cannot allocate memory",
+      "huge_bytes": 274726912,
+      "elapsed_seconds": 0.003321876749396324
+    },
+    {
+      "attempt": 3,
+      "returncode": -1,
+      "errno": 12,
+      "error": "Cannot allocate memory",
+      "huge_bytes": 274726912,
+      "elapsed_seconds": 0.0033308258280158043
+    }
+  ],
+  "huge_bytes_after_first_touch": 274726912,
+  "complete_huge_backing": false,
+  "released": true,
+  "finished_utc": "2026-09-10T20:54:46.926107+00:00",
+  "buddyinfo_after_release": "Node 0, zone      DMA      0      0      0      0      0      0      0      0      1      2      2 \nNode 0, zone    DMA32   1276    616    564    688    451    135     53     28      4     43     27 \nNode 0, zone   Normal  24331   5975   3885    700    282    132     61     17      0     33      1 \n",
+  "meminfo_after_release": "MemTotal:       16077476 kB\nMemFree:          691540 kB\nMemAvailable:   10716048 kB\nBuffers:          428156 kB\nCached:          9091696 kB\nSwapCached:       203204 kB\nActive:          6224984 kB\nInactive:        7613692 kB\nActive(anon):    4156960 kB\nInactive(anon):   220732 kB\nActive(file):    2068024 kB\nInactive(file):  7392960 kB\nUnevictable:       76168 kB\nMlocked:           27412 kB\nSwapTotal:       4194300 kB\nSwapFree:        3427720 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:       4328956 kB\nMapped:          1320488 kB\nShmem:             50932 kB\nKReclaimable:     900112 kB\nSlab:            1181640 kB\nSReclaimable:     900112 kB\nSUnreclaim:       281528 kB\nKernelStack:       21768 kB\nPageTables:        96916 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    12233036 kB\nCommitted_AS:   13089816 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       63636 kB\nVmallocChunk:          0 kB\nPercpu:            19712 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      226580 kB\nDirectMap2M:     6813696 kB\nDirectMap1G:     9437184 kB\n"
+}

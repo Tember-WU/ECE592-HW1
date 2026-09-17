@@ -1,0 +1,2 @@
+*.u64.gz -text
+*.csv whitespace=-cr-at-eol

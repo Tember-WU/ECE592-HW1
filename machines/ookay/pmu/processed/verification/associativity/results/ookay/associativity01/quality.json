@@ -1,0 +1,75 @@
+{
+  "preflight_busy_percent": {
+    "0": 2.0202020202020203,
+    "4": 0.0
+  },
+  "max_sibling_busy_percent": 8.108108108108109,
+  "total_involuntary_switches": 8,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "L2_candidate_k8": 1.0,
+    "L1_k10": 1.0011273957158964,
+    "L1_k8": 1.0019685039370079,
+    "L2_candidate_k7": 1.0019723865877712,
+    "L2_candidate_k18": 1.0007072135785007,
+    "L2_candidate_k17": 1.0064412238325282,
+    "L2_candidate_k16": 1.0036057692307692,
+    "L1_k9": 1.0011273957158964,
+    "L1_k7": 1.0019723865877712,
+    "L1_k6": 1.0019723865877712,
+    "L2_candidate_k9": 1.0011273957158964,
+    "L2_candidate_k10": 1.0
+  },
+  "huge_kib": {
+    "L2_candidate_k8": [
+      2048,
+      2048
+    ],
+    "L1_k10": [
+      2048,
+      2048
+    ],
+    "L1_k8": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k7": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k18": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k17": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k16": [
+      2048,
+      2048
+    ],
+    "L1_k9": [
+      2048,
+      2048
+    ],
+    "L1_k7": [
+      2048,
+      2048
+    ],
+    "L1_k6": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k9": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k10": [
+      2048,
+      2048
+    ]
+  },
+  "caveat": "Same logical CPU 4 and NUMA node 0 as the timing-only pinning manifest. Actual SMT sibling is CPU 0; the old manifest incorrectly said none. Collector pinned to CPU 1; worker binds CPU 4. PMU loop totals include helper loads."
+}

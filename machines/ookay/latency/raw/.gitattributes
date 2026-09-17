@@ -1,0 +1,4 @@
+# Preserve recorded bytes, including source snapshots and raw arrays.
+data/** -text
+data/**/disassembly.txt -whitespace
+results/**/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

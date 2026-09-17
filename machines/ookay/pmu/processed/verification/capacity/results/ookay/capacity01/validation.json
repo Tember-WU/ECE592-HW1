@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "points": 14,
+  "timed_batches": 14000000,
+  "all_raw_and_count_hashes_match": true,
+  "all_statistics_recomputed": true,
+  "all_groups_without_multiplexing": true,
+  "matching_timing_only_workload_for_every_point": true,
+  "note": "Integrity and comparability checks; not proof of an uncontended or pure cache state."
+}

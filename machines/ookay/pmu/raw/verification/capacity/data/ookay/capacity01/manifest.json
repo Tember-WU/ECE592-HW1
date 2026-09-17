@@ -1,0 +1,1151 @@
+{
+  "machine": "ookay",
+  "run_id": "capacity01",
+  "status": "complete",
+  "started_utc": "2026-09-14T15:33:46.477986+00:00",
+  "command": [
+    "capacity/scripts/run_capacity.py",
+    "--machine",
+    "ookay",
+    "--run-id",
+    "capacity01"
+  ],
+  "jobs": [
+    {
+      "name": "LLC_w7340032",
+      "region": "LLC",
+      "bytes": 7340032,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "7340032",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/LLC_w7340032.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/LLC_w7340032.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:33:47.615257+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.491405355744064,
+      "cpu_busy_percent": {
+        "2": 99.59677419354838,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4187064",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 34.1773405625,
+        "std": 11.84152462976537,
+        "median": 32.296875,
+        "q1": 32.1171875,
+        "q3": 32.515625,
+        "p05": 31.890625,
+        "p95": 38.0703125,
+        "p99": 85.42203125000015,
+        "minimum": 31.40625,
+        "maximum": 611.3203125,
+        "outliers": 133929,
+        "whisker_low": 31.5234375,
+        "whisker_high": 33.109375,
+        "decile_medians": [
+          32.328125,
+          32.3046875,
+          32.265625,
+          32.296875,
+          32.3125,
+          32.2890625,
+          32.296875,
+          32.2890625,
+          32.2890625,
+          32.296875
+        ]
+      },
+      "finished_utc": "2026-09-14T15:33:50.516415+00:00",
+      "raw_file": "raw/LLC_w7340032.u64.gz",
+      "raw_sha256": "46e78bc64668f5bdf5899e3945ef486ec68deef9df64c40295182df57347842c",
+      "counts_file": "counts/LLC_w7340032.json",
+      "counts_sha256": "6048dfb5fd75d6986f20e7d9a5f44c28c096133fe23849773d3189825304cafd",
+      "log_file": "logs/LLC_w7340032.txt"
+    },
+    {
+      "name": "L1_w36864",
+      "region": "L1",
+      "bytes": 36864,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "36864",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L1_w36864.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L1_w36864.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:33:50.520552+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.779186712577939,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4190458",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 10.5226459765625,
+        "std": 3.703942562947258,
+        "median": 10.421875,
+        "q1": 10.3984375,
+        "q3": 10.4453125,
+        "p05": 10.375,
+        "p95": 10.484375,
+        "p99": 10.7109375,
+        "minimum": 9.8828125,
+        "maximum": 319.4765625,
+        "outliers": 42413,
+        "whisker_low": 10.328125,
+        "whisker_high": 10.515625,
+        "decile_medians": [
+          10.421875,
+          10.421875,
+          10.421875,
+          10.421875,
+          10.421875,
+          10.421875,
+          10.421875,
+          10.421875,
+          10.4296875,
+          10.421875
+        ]
+      },
+      "finished_utc": "2026-09-14T15:33:51.540643+00:00",
+      "raw_file": "raw/L1_w36864.u64.gz",
+      "raw_sha256": "fb7b4bd891db9bf495510920b3f41c051126469b5ff3b136d5ea149395fcb0dd",
+      "counts_file": "counts/L1_w36864.json",
+      "counts_sha256": "dc5393a08856c2006e3c74e9fa7c43d81c18cc547c3dc65c150594e7e76603b3",
+      "log_file": "logs/L1_w36864.txt"
+    },
+    {
+      "name": "L1_w32768",
+      "region": "L1",
+      "bytes": 32768,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "32768",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L1_w32768.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L1_w32768.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:33:51.542782+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.30592998769134283,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4190606",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 0
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 3.89573790625,
+        "std": 2.1716321465968607,
+        "median": 3.8515625,
+        "q1": 3.8203125,
+        "q3": 3.8828125,
+        "p05": 3.796875,
+        "p95": 3.96875,
+        "p99": 4.0390625,
+        "minimum": 3.75,
+        "maximum": 320.3203125,
+        "outliers": 39177,
+        "whisker_low": 3.75,
+        "whisker_high": 3.9765625,
+        "decile_medians": [
+          3.8671875,
+          3.8515625,
+          3.8515625,
+          3.8515625,
+          3.84375,
+          3.8515625,
+          3.8515625,
+          3.8515625,
+          3.8515625,
+          3.84375
+        ]
+      },
+      "finished_utc": "2026-09-14T15:33:52.081482+00:00",
+      "raw_file": "raw/L1_w32768.u64.gz",
+      "raw_sha256": "77a82cdd761d1a9972ebaab402b189210a18a8c13cf870bc8d54a6b30a541d11",
+      "counts_file": "counts/L1_w32768.json",
+      "counts_sha256": "72ff8f367d52cb3d7ecabe911aaff58251bc127522d3bad331335fea39bdd382",
+      "log_file": "logs/L1_w32768.txt"
+    },
+    {
+      "name": "L2_w524288",
+      "region": "L2",
+      "bytes": 524288,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "524288",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L2_w524288.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L2_w524288.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:33:52.083591+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.943549427203834,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4189386",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 2
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 26.814304203125,
+        "std": 5.559304166211546,
+        "median": 26.5703125,
+        "q1": 26.2265625,
+        "q3": 27.0546875,
+        "p05": 25.421875,
+        "p95": 27.7109375,
+        "p99": 28.1484375,
+        "minimum": 23.765625,
+        "maximum": 353.0390625,
+        "outliers": 20546,
+        "whisker_low": 24.984375,
+        "whisker_high": 28.296875,
+        "decile_medians": [
+          26.5625,
+          26.6171875,
+          26.5703125,
+          26.5625,
+          26.5703125,
+          26.5546875,
+          26.5625,
+          26.5859375,
+          26.5625,
+          26.5625
+        ]
+      },
+      "finished_utc": "2026-09-14T15:33:54.461432+00:00",
+      "raw_file": "raw/L2_w524288.u64.gz",
+      "raw_sha256": "87add1b6acf9bb93ba99d3cdda8f5c9681206f3ce3841014fbfe307b39841257",
+      "counts_file": "counts/L2_w524288.json",
+      "counts_sha256": "15fdd24a1ddfd4409b5aa81713532d26989ea9a82459403b7ac93b8edcf1f6ad",
+      "log_file": "logs/L2_w524288.txt"
+    },
+    {
+      "name": "L1_w40960",
+      "region": "L1",
+      "bytes": 40960,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "40960",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L1_w40960.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L1_w40960.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:33:54.465244+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.7812622925266623,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4186452",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 10.5531118359375,
+        "std": 3.7710547395646947,
+        "median": 10.4453125,
+        "q1": 10.4296875,
+        "q3": 10.4609375,
+        "p05": 10.40625,
+        "p95": 10.6328125,
+        "p99": 10.7265625,
+        "minimum": 10.2734375,
+        "maximum": 318.296875,
+        "outliers": 53020,
+        "whisker_low": 10.3828125,
+        "whisker_high": 10.5078125,
+        "decile_medians": [
+          10.4453125,
+          10.4453125,
+          10.4453125,
+          10.4453125,
+          10.4453125,
+          10.4453125,
+          10.4453125,
+          10.4453125,
+          10.453125,
+          10.4453125
+        ]
+      },
+      "finished_utc": "2026-09-14T15:33:55.459153+00:00",
+      "raw_file": "raw/L1_w40960.u64.gz",
+      "raw_sha256": "f2641120f0ab645d4242fbbc7a996b270d345c5fe92baf35590c0eb9bed93f4f",
+      "counts_file": "counts/L1_w40960.json",
+      "counts_sha256": "c4bfdf7ef844a24e59fbd14f80731900d00a514d5e3922cc8e9fcc251668f53c",
+      "log_file": "logs/L1_w40960.txt"
+    },
+    {
+      "name": "LLC_w5242880",
+      "region": "LLC",
+      "bytes": 5242880,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "5242880",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/LLC_w5242880.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/LLC_w5242880.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:33:55.461101+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.357443685643375,
+      "cpu_busy_percent": {
+        "2": 99.57627118644068,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4196453",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 2
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 32.574654203125,
+        "std": 7.120211594965823,
+        "median": 32.109375,
+        "q1": 31.9140625,
+        "q3": 32.296875,
+        "p05": 31.6796875,
+        "p95": 32.6015625,
+        "p99": 37.07820312500007,
+        "minimum": 30.9453125,
+        "maximum": 358.359375,
+        "outliers": 37430,
+        "whisker_low": 31.34375,
+        "whisker_high": 32.8671875,
+        "decile_medians": [
+          32.125,
+          32.1015625,
+          32.109375,
+          32.1171875,
+          32.109375,
+          32.1015625,
+          32.109375,
+          32.1015625,
+          32.109375,
+          32.1015625
+        ]
+      },
+      "finished_utc": "2026-09-14T15:33:58.258674+00:00",
+      "raw_file": "raw/LLC_w5242880.u64.gz",
+      "raw_sha256": "a2339e594ca039c2d7ef9ad45ada80e90b86c0467bb28c1de28412d1989511fa",
+      "counts_file": "counts/LLC_w5242880.json",
+      "counts_sha256": "3bad0932e8f00383e92bda4dc6a41e4cf45f8f92d97579d8829a396a14778e1e",
+      "log_file": "logs/LLC_w5242880.txt"
+    },
+    {
+      "name": "LLC_w4194304",
+      "region": "LLC",
+      "bytes": 4194304,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "4194304",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/LLC_w4194304.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/LLC_w4194304.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:33:58.262039+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.3375485381111503,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4196985",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 32.3044204375,
+        "std": 5.974769775947434,
+        "median": 32.0,
+        "q1": 31.828125,
+        "q3": 32.1875,
+        "p05": 31.5234375,
+        "p95": 32.5234375,
+        "p99": 33.984375,
+        "minimum": 30.84375,
+        "maximum": 360.921875,
+        "outliers": 46158,
+        "whisker_low": 31.2890625,
+        "whisker_high": 32.7265625,
+        "decile_medians": [
+          32.0,
+          32.0,
+          32.0234375,
+          31.9921875,
+          31.9921875,
+          31.9921875,
+          31.9921875,
+          32.0546875,
+          31.9921875,
+          31.9921875
+        ]
+      },
+      "finished_utc": "2026-09-14T15:34:01.054958+00:00",
+      "raw_file": "raw/LLC_w4194304.u64.gz",
+      "raw_sha256": "7a82f11cbd734fce3dacb5f6b7b391c3f289ed7c0216a1c659740d9cf96f672a",
+      "counts_file": "counts/LLC_w4194304.json",
+      "counts_sha256": "c281ede4a1c7a1b5b7abbf18c831f6ca59325f37c4501fb043a9a25af9909e6c",
+      "log_file": "logs/LLC_w4194304.txt"
+    },
+    {
+      "name": "LLC_w6291456",
+      "region": "LLC",
+      "bytes": 6291456,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "6291456",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/LLC_w6291456.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/LLC_w6291456.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:34:01.058429+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 2.418965176679194,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4195135",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 3,
+        "major_faults": 0,
+        "voluntary_switches": 3,
+        "involuntary_switches": 2
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 33.4249975234375,
+        "std": 12.794283245338582,
+        "median": 32.1953125,
+        "q1": 32.0234375,
+        "q3": 32.3671875,
+        "p05": 31.7578125,
+        "p95": 32.875,
+        "p99": 60.67976562500007,
+        "minimum": 31.234375,
+        "maximum": 437.171875,
+        "outliers": 51371,
+        "whisker_low": 31.5078125,
+        "whisker_high": 32.8828125,
+        "decile_medians": [
+          32.203125,
+          32.1875,
+          32.2109375,
+          32.1953125,
+          32.1796875,
+          32.1953125,
+          32.1875,
+          32.203125,
+          32.1875,
+          32.1796875
+        ]
+      },
+      "finished_utc": "2026-09-14T15:34:03.890621+00:00",
+      "raw_file": "raw/LLC_w6291456.u64.gz",
+      "raw_sha256": "052955c04bf3c1a1b55aaac5bdada3a9b7960de295863ece0b4cdb0f837b7ed9",
+      "counts_file": "counts/LLC_w6291456.json",
+      "counts_sha256": "c73e247cd62340eac99fb03672d6ceb8af8299ba32d1fc877ff780daf5b5522b",
+      "log_file": "logs/LLC_w6291456.txt"
+    },
+    {
+      "name": "LLC_w8388608",
+      "region": "LLC",
+      "bytes": 8388608,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "8388608",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/LLC_w8388608.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/LLC_w8388608.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:34:03.894448+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 3.531196564435959,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4185711",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 2
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 48.944530734375,
+        "std": 22.212882056812077,
+        "median": 39.09375,
+        "q1": 36.15625,
+        "q3": 55.8125,
+        "p05": 33.953125,
+        "p95": 91.1484375,
+        "p99": 134.0546875,
+        "minimum": 31.5,
+        "maximum": 486.984375,
+        "outliers": 66379,
+        "whisker_low": 31.5,
+        "whisker_high": 85.296875,
+        "decile_medians": [
+          40.03125,
+          39.859375,
+          39.96875,
+          39.2890625,
+          38.546875,
+          38.859375,
+          38.5234375,
+          39.0234375,
+          38.9140625,
+          38.5234375
+        ]
+      },
+      "finished_utc": "2026-09-14T15:34:07.808781+00:00",
+      "raw_file": "raw/LLC_w8388608.u64.gz",
+      "raw_sha256": "a574f2775df1daff58656d8941fc9e328fc0de94bb4de9fc28289d1620025027",
+      "counts_file": "counts/LLC_w8388608.json",
+      "counts_sha256": "2795fe16ed278a676258418925d8e86be9aa23bc354dc7b91ce3fa240ab6e517",
+      "log_file": "logs/LLC_w8388608.txt"
+    },
+    {
+      "name": "L2_w262144",
+      "region": "L2",
+      "bytes": 262144,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "262144",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L2_w262144.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L2_w262144.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:34:07.813545+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.7976776296272874,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4184884",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 10.7741415703125,
+        "std": 3.6903112277066428,
+        "median": 10.6015625,
+        "q1": 10.5234375,
+        "q3": 10.703125,
+        "p05": 10.4453125,
+        "p95": 10.90625,
+        "p99": 14.1171875,
+        "minimum": 10.390625,
+        "maximum": 341.5078125,
+        "outliers": 34388,
+        "whisker_low": 10.390625,
+        "whisker_high": 10.96875,
+        "decile_medians": [
+          10.5859375,
+          10.59375,
+          10.5859375,
+          10.6015625,
+          10.5859375,
+          10.578125,
+          10.5859375,
+          10.578125,
+          10.609375,
+          10.65625
+        ]
+      },
+      "finished_utc": "2026-09-14T15:34:08.932352+00:00",
+      "raw_file": "raw/L2_w262144.u64.gz",
+      "raw_sha256": "5056e1d0eb351bd50c329e4cac6974b477157a68a4178b8d2a48d1b090ce85ae",
+      "counts_file": "counts/L2_w262144.json",
+      "counts_sha256": "3c161d998852e6e3615aebb9ee6b4f803cdea4609c151d3cef607f5fe89368eb",
+      "log_file": "logs/L2_w262144.txt"
+    },
+    {
+      "name": "L2_w393216",
+      "region": "L2",
+      "bytes": 393216,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "393216",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L2_w393216.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L2_w393216.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:34:08.935446+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.811256118118763,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4187853",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 2
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 24.965981515625,
+        "std": 5.353973331233074,
+        "median": 24.7578125,
+        "q1": 24.2578125,
+        "q3": 25.2890625,
+        "p05": 23.296875,
+        "p95": 26.3203125,
+        "p99": 26.8671875,
+        "minimum": 21.109375,
+        "maximum": 352.5625,
+        "outliers": 23465,
+        "whisker_low": 22.7109375,
+        "whisker_high": 26.8359375,
+        "decile_medians": [
+          24.765625,
+          24.75,
+          24.75,
+          24.75,
+          24.8046875,
+          24.78125,
+          24.75,
+          24.7421875,
+          24.7578125,
+          24.7421875
+        ]
+      },
+      "finished_utc": "2026-09-14T15:34:11.147656+00:00",
+      "raw_file": "raw/L2_w393216.u64.gz",
+      "raw_sha256": "a9977e12ae306e91993d79271681ada51fd34c0e60e4a47cf6ce647b0858f011",
+      "counts_file": "counts/L2_w393216.json",
+      "counts_sha256": "b2b301d694d292b2182d33c453f149c711b2a4b3aedcd9987aac5892da6ee6c4",
+      "log_file": "logs/L2_w393216.txt"
+    },
+    {
+      "name": "L1_w49152",
+      "region": "L1",
+      "bytes": 49152,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "49152",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L1_w49152.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L1_w49152.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:34:11.151577+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.781706846319139,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4197743",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 10.558857921875,
+        "std": 3.7196718419114267,
+        "median": 10.453125,
+        "q1": 10.4453125,
+        "q3": 10.46875,
+        "p05": 10.4296875,
+        "p95": 10.484375,
+        "p99": 10.734375,
+        "minimum": 10.140625,
+        "maximum": 444.9921875,
+        "outliers": 44895,
+        "whisker_low": 10.4140625,
+        "whisker_high": 10.5,
+        "decile_medians": [
+          10.453125,
+          10.453125,
+          10.453125,
+          10.453125,
+          10.453125,
+          10.453125,
+          10.453125,
+          10.453125,
+          10.4609375,
+          10.4609375
+        ]
+      },
+      "finished_utc": "2026-09-14T15:34:12.132366+00:00",
+      "raw_file": "raw/L1_w49152.u64.gz",
+      "raw_sha256": "6232e326b39e13600d344000e75e8e0057799342597945abb04bba4bf9f76078",
+      "counts_file": "counts/L1_w49152.json",
+      "counts_sha256": "da64806500ec74f313565b8d602812e09023c012952411f94b1205839a9954f1",
+      "log_file": "logs/L1_w49152.txt"
+    },
+    {
+      "name": "L2_w294912",
+      "region": "L2",
+      "bytes": 294912,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "294912",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L2_w294912.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L2_w294912.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:34:12.134049+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 1.238421575166285,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4187173",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 16.9479221875,
+        "std": 4.749506181878845,
+        "median": 16.75,
+        "q1": 16.2578125,
+        "q3": 17.2578125,
+        "p05": 15.6640625,
+        "p95": 17.984375,
+        "p99": 19.9921875,
+        "minimum": 13.96875,
+        "maximum": 414.2890625,
+        "outliers": 17518,
+        "whisker_low": 14.7578125,
+        "whisker_high": 18.7578125,
+        "decile_medians": [
+          16.734375,
+          16.75,
+          16.7265625,
+          16.75,
+          16.734375,
+          16.734375,
+          16.7421875,
+          16.8125,
+          16.734375,
+          16.75
+        ]
+      },
+      "finished_utc": "2026-09-14T15:34:13.789959+00:00",
+      "raw_file": "raw/L2_w294912.u64.gz",
+      "raw_sha256": "8b91650ab0365333a355ed995ecfcbdb8d2e669c191438c41c9d8f52c5c095b6",
+      "counts_file": "counts/L2_w294912.json",
+      "counts_sha256": "5e9b89fa0a54bf5ac6bb4cc6a3ecd934eb7be92aea4a91f9c9495330620a9953",
+      "log_file": "logs/L2_w294912.txt"
+    },
+    {
+      "name": "L1_w65536",
+      "region": "L1",
+      "bytes": 65536,
+      "command": [
+        "numactl",
+        "--membind=0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/build/ookay/cache_capacity_pmu",
+        "65536",
+        "64",
+        "random",
+        "1000000",
+        "256",
+        "59202",
+        "2",
+        "huge",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/raw/L1_w65536.u64",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "/home/swu35/ECE592-HW1/PMU-verification/capacity/data/ookay/capacity01/counts/L1_w65536.json"
+      ],
+      "status": "complete",
+      "started_utc": "2026-09-14T15:34:13.793767+00:00",
+      "frequency_before": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "800000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.7825178494676948,
+      "cpu_busy_percent": {
+        "2": 100.0,
+        "6": 0.0
+      },
+      "frequency_after": {
+        "scaling_governor": "powersave",
+        "scaling_cur_freq": "4191942",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "4200000"
+      },
+      "measurement_events": {
+        "measurement_minor_faults": 0,
+        "major_faults": 0,
+        "voluntary_switches": 0,
+        "involuntary_switches": 1
+      },
+      "statistics": {
+        "n": 1000000,
+        "mean": 10.5687916953125,
+        "std": 3.687231557321123,
+        "median": 10.4609375,
+        "q1": 10.4453125,
+        "q3": 10.46875,
+        "p05": 10.4296875,
+        "p95": 10.6953125,
+        "p99": 10.75,
+        "minimum": 10.4140625,
+        "maximum": 407.34375,
+        "outliers": 61672,
+        "whisker_low": 10.4140625,
+        "whisker_high": 10.5,
+        "decile_medians": [
+          10.4609375,
+          10.4609375,
+          10.4609375,
+          10.4609375,
+          10.453125,
+          10.453125,
+          10.453125,
+          10.453125,
+          10.4609375,
+          10.4609375
+        ]
+      },
+      "finished_utc": "2026-09-14T15:34:14.774229+00:00",
+      "raw_file": "raw/L1_w65536.u64.gz",
+      "raw_sha256": "581f218c9038a883bcbfb1c6e941c4db226748729fd16af5dd07461886471180",
+      "counts_file": "counts/L1_w65536.json",
+      "counts_sha256": "070debccf39b820274d91469525c85ed78fcf31b7e929fa5a520f8b2f9aafed3",
+      "log_file": "logs/L1_w65536.txt"
+    }
+  ],
+  "finished_utc": "2026-09-14T15:34:14.775708+00:00",
+  "elapsed_seconds": 28.29773187637329
+}

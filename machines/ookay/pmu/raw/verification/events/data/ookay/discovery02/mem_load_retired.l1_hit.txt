@@ -1,0 +1,1 @@
+118082,,mem_load_retired.l1_hit:u,903889,100.00,,

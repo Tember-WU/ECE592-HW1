@@ -1,0 +1,17 @@
+{
+  "started_utc": "2026-09-10T20:56:01.661268+00:00",
+  "purpose": "Bounded non-timed allocation preparation after two THP failures; no global VM settings changed.",
+  "scratch_bytes": 1073741824,
+  "scratch_pages": "base",
+  "max_simultaneously_mapped_bytes": 1073741824,
+  "cpu": 2,
+  "scratch_released": true,
+  "huge_bytes_after_first_touch": 536870912,
+  "collapse_attempts": [],
+  "verified_bytes": 536870912,
+  "complete_huge_backing": true,
+  "verification_mapping_released": true,
+  "finished_utc": "2026-09-10T20:56:02.258869+00:00",
+  "buddyinfo_after_release": "Node 0, zone      DMA      0      0      0      0      0      0      0      0      1      2      2 \nNode 0, zone    DMA32   2159   1611   1313   1136    860    200     83     58     19     58     49 \nNode 0, zone   Normal  40117  11764   4572   2104    765    190     66     35      0     78      3 \n",
+  "meminfo_after_release": "MemTotal:       16077476 kB\nMemFree:         1238292 kB\nMemAvailable:   10668624 kB\nBuffers:          428456 kB\nCached:          8497620 kB\nSwapCached:       203248 kB\nActive:          6225996 kB\nInactive:        7019148 kB\nActive(anon):    4157872 kB\nInactive(anon):   220476 kB\nActive(file):    2068124 kB\nInactive(file):  6798672 kB\nUnevictable:       76296 kB\nMlocked:           27412 kB\nSwapTotal:       4194300 kB\nSwapFree:        3427720 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:               536 kB\nWriteback:             0 kB\nAnonPages:       4329204 kB\nMapped:          1320596 kB\nShmem:             51060 kB\nKReclaimable:     900124 kB\nSlab:            1181644 kB\nSReclaimable:     900124 kB\nSUnreclaim:       281520 kB\nKernelStack:       21752 kB\nPageTables:        96732 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    12233036 kB\nCommitted_AS:   13073532 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       63604 kB\nVmallocChunk:          0 kB\nPercpu:            19712 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      226580 kB\nDirectMap2M:     6813696 kB\nDirectMap1G:     9437184 kB\n"
+}

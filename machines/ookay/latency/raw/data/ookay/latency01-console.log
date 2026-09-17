@@ -1,0 +1,23 @@
+30 configurations, 30,000,000 batches, 39,000,000 recorded timer intervals
+[1/30] l1_miss__alternate: paired, W=131072, batch=256
+  first median=10.71875; reread=3.97656; 1.1s
+[2/30] l2_miss__repeat: paired, W=1048576, batch=256
+  first median=30.91406; reread=4.14844; 2.6s
+[3/30] calibration__l1_independent: independent, W=8192, batch=256
+  first median=1.03906; 0.1s
+[4/30] calibration__l1_sequential: sequential, W=8192, batch=256
+  first median=3.67188; 0.3s
+[5/30] l1_hit__alternate: chase, W=16384, batch=256
+  first median=3.67188; 0.3s
+[6/30] calibration__timer: empty, W=8192, batch=256
+  first median=42.00000; 0.0s
+[7/30] calibration__memory_sequential: sequential, W=268435456, batch=256
+Traceback (most recent call last):
+  File "/home/swu35/ECE592-HW1/timing-only/latency/scripts/run_latency.py", line 222, in <module>
+    main()
+  File "/home/swu35/ECE592-HW1/timing-only/latency/scripts/run_latency.py", line 207, in main
+    collect(config, jobs, out, manifest)
+  File "/home/swu35/ECE592-HW1/timing-only/latency/scripts/run_latency.py", line 140, in collect
+    raise RuntimeError(f'{name}: {process.stderr}')
+RuntimeError: calibration__memory_sequential: MADV_COLLAPSE: full THP backing unavailable: Cannot allocate memory
+

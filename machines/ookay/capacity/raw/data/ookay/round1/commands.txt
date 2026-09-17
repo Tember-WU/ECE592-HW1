@@ -1,0 +1,7 @@
+Build working directory: /home/swu35/ECE592-HW1/timing-only/capacity
+make -B MACHINE=ookay CC=gcc 'CFLAGS=-O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer' capacity assembly
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/cache_capacity.bin 524288 64 sequential 1000000 256 59201 2 huge /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/raw/coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/cache_capacity.bin 2097152 64 sequential 1000000 256 59201 2 huge /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/raw/coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/cache_capacity.bin 8192 64 sequential 1000000 256 59201 2 huge /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/raw/coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/cache_capacity.bin 1048576 64 sequential 1000000 256 59201 2 huge /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/raw/coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000.u64
+numactl --membind=0 /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/cache_capacity.bin 536870912 64 random 1000000 256 59201 2 huge /home/swu35/ECE592-HW1/timing-only/capacity/data/ookay/round1/raw/coarse_w536870912_s64_random_b256_seed59201_huge_n1000000.u64

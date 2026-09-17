@@ -1,0 +1,6 @@
+[
+{"leaf":4,"subleaf":0,"eax":469778721,"ebx":29360191,"ecx":63,"edx":0,"type":1,"level":1,"inclusive_of_lower_levels":0,"line_bytes":64,"ways":8,"sets":64},
+{"leaf":4,"subleaf":1,"eax":469778722,"ebx":29360191,"ecx":63,"edx":0,"type":2,"level":1,"inclusive_of_lower_levels":0,"line_bytes":64,"ways":8,"sets":64},
+{"leaf":4,"subleaf":2,"eax":469778755,"ebx":12582975,"ecx":1023,"edx":0,"type":3,"level":2,"inclusive_of_lower_levels":0,"line_bytes":64,"ways":4,"sets":1024},
+{"leaf":4,"subleaf":3,"eax":470008163,"ebx":62914623,"ecx":8191,"edx":6,"type":3,"level":3,"inclusive_of_lower_levels":1,"line_bytes":64,"ways":16,"sets":8192}
+]

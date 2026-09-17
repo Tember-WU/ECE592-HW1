@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "errors": [],
+  "checked_at_utc": "2026-09-10T17:03:42.757294+00:00",
+  "validation_scope": "Completed-run data integrity, CPU/NUMA/page checks from per-run validation, and compatibility of combined inputs; not an absence-of-interference claim.",
+  "machine": "ookay",
+  "run_ids": [
+    "round1-retry1",
+    "round2"
+  ],
+  "excluded_failed_run_ids": [
+    "round1"
+  ],
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "raw_bytes": 768000000,
+  "raw_gzip_bytes": 139857274,
+  "same_measurement_environment_verified": true,
+  "same_binary_verified": true,
+  "per_run_validation": [
+    "../round1-retry1/validation.json",
+    "../round2/validation.json"
+  ],
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+  "binary_sha256": "b7a26b55bcb6b42551016855163a592aae8303b82b7baff2f9c6189d4a0c0153",
+  "page_policy_configurations": {
+    "huge": 93,
+    "base": 3
+  },
+  "runtime_event_totals": {
+    "measurement_minor_faults": 0,
+    "major_faults": 0,
+    "voluntary_switches": 0,
+    "involuntary_switches": 87
+  },
+  "quality_caveats": [
+    "Other benchmarks were observed on CPUs 0/4 before both rounds; shared-cache and memory-system interference was not isolated.",
+    "LLC timing depends on layout/page policy and varies over time; no unique nominal physical LLC capacity is inferred.",
+    "Intervals are empirical sampling neighborhoods, not statistical confidence intervals or hardware specification bounds."
+  ]
+}

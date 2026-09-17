@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "errors": [],
+  "machine": "ookay",
+  "run_id": "round1-retry1",
+  "checked_at_utc": "2026-09-10T16:56:08.139764+00:00",
+  "validation_scope": "Data integrity, completion, CPU/NUMA binding and page backing; not a claim of no shared-machine interference.",
+  "collection_status": "complete",
+  "expected_configurations": 39,
+  "complete_configurations": 39,
+  "total_timed_batches": 39000000,
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 53052853,
+  "raw_checksums_and_statistics": "All raw hashes/counts checked; statistics recomputed by analyze_capacity.py, see provenance.json.",
+  "started_utc": "2026-09-10T16:52:52.918187+00:00",
+  "finished_utc": "2026-09-10T16:55:42.304888+00:00",
+  "wall_seconds": 169.386701,
+  "cpu": 2,
+  "numa_node": 0,
+  "smt_sibling": 6,
+  "smt_busy_percent_range": [
+    0.0,
+    3.333
+  ],
+  "page_policy_configurations": {
+    "huge": 39,
+    "base": 0
+  },
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "major_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "voluntary_switches": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "involuntary_switches": {
+      "minimum": 0,
+      "maximum": 5,
+      "total": 42
+    }
+  },
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+  "binary_sha256": "b7a26b55bcb6b42551016855163a592aae8303b82b7baff2f9c6189d4a0c0153",
+  "validation_script_sha256": "a11b75cdb4b77d168bc243377a08b833cea9e182fd0fad3ce5332f17320025f8"
+}

@@ -1,0 +1,234 @@
+{
+  "created_utc": "2026-09-14T15:49:27.166753+00:00",
+  "scope": "Post-run source/build archive. Kernel sources were unchanged during collection; binary hashes were taken after collection, not at process launch. Analysis was regenerated using these final scripts. Per-run configs/commands/build logs remain authoritative. Phase-I freeze is a separate pre-run archive.",
+  "files": [
+    {
+      "source": "associativity/Makefile",
+      "snapshot": "source/associativity/Makefile",
+      "sha256": "0dbbe14408ac4a5246b6a4f52131a0bfdc3b9498b0031edd2999a522530b6ea1",
+      "bytes": 443
+    },
+    {
+      "source": "associativity/configs/ookay-followup.json",
+      "snapshot": "source/associativity/configs/ookay-followup.json",
+      "sha256": "396f0b6a2d5a4ee5ae3272e904b45e5a30e18500e93980c631523c78f8c98ab4",
+      "bytes": 2556
+    },
+    {
+      "source": "associativity/configs/ookay.json",
+      "snapshot": "source/associativity/configs/ookay.json",
+      "sha256": "1a67577d3f08124759a719db035d3819286de861804798782ff2510952f38ebb",
+      "bytes": 2344
+    },
+    {
+      "source": "associativity/requirements.txt",
+      "snapshot": "source/associativity/requirements.txt",
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    {
+      "source": "associativity/scripts/analyze_associativity.py",
+      "snapshot": "source/associativity/scripts/analyze_associativity.py",
+      "sha256": "3bcc91ba79cdc0d46a5d4df91f1836a8f9e5c3d38c453e8ee67f4df940363020",
+      "bytes": 320
+    },
+    {
+      "source": "associativity/scripts/run_associativity.py",
+      "snapshot": "source/associativity/scripts/run_associativity.py",
+      "sha256": "becefa36e0ded19881e986dfcab886631ecfd943d64e22178b0a8a508d69779d",
+      "bytes": 312
+    },
+    {
+      "source": "associativity/src/associativity_bench.cpp",
+      "snapshot": "source/associativity/src/associativity_bench.cpp",
+      "sha256": "0f9b7c8c891729990a91fa2310a096e038094da60a7d7cdc7a270b2fd147d79b",
+      "bytes": 15601
+    },
+    {
+      "source": "associativity/src/timer_compat.h",
+      "snapshot": "source/associativity/src/timer_compat.h",
+      "sha256": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+      "bytes": 2419
+    },
+    {
+      "source": "capacity/Makefile",
+      "snapshot": "source/capacity/Makefile",
+      "sha256": "671e76de26198a8af05db0e1ff124c7558894f2b57f06832d47b40cad779427c",
+      "bytes": 428
+    },
+    {
+      "source": "capacity/configs/ookay.json",
+      "snapshot": "source/capacity/configs/ookay.json",
+      "sha256": "4fbc23969f8d30f78ad9b6a1f07fa0059c1515278ac1795f7cbbafd072889af6",
+      "bytes": 884
+    },
+    {
+      "source": "capacity/requirements.txt",
+      "snapshot": "source/capacity/requirements.txt",
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    {
+      "source": "capacity/scripts/analyze_capacity.py",
+      "snapshot": "source/capacity/scripts/analyze_capacity.py",
+      "sha256": "12cc41d6f7c2f70f06c09a6461f60442f4fef71935e5332d3fb903357895e55c",
+      "bytes": 9259
+    },
+    {
+      "source": "capacity/scripts/common.py",
+      "snapshot": "source/capacity/scripts/common.py",
+      "sha256": "610f6e2ec29e59294047309d0813203f0b99b471a50421a978486ef7cf9263d0",
+      "bytes": 4397
+    },
+    {
+      "source": "capacity/scripts/run_capacity.py",
+      "snapshot": "source/capacity/scripts/run_capacity.py",
+      "sha256": "8bd010df5c54913b3df74353eb6aa7a232db337645caa5dd46f937db0dbd04a7",
+      "bytes": 8418
+    },
+    {
+      "source": "capacity/src/cache_bench.c",
+      "snapshot": "source/capacity/src/cache_bench.c",
+      "sha256": "e6be345e4ac5be4d73405a675f61f1eb5ee9f78acb9e5cfd4f4cb35b2d2ddae2",
+      "bytes": 7577
+    },
+    {
+      "source": "capacity/src/pmu.h",
+      "snapshot": "source/capacity/src/pmu.h",
+      "sha256": "8aeaa772c6c16d7487c0c7d83e663f1b3c4cf3d8454bf71ca2231a15d2255504",
+      "bytes": 3555
+    },
+    {
+      "source": "capacity/tests/test_capacity.py",
+      "snapshot": "source/capacity/tests/test_capacity.py",
+      "sha256": "84d232db59e8abd0ac7d60ca2e55193134866da1720b9f3395837a2064f7c1e4",
+      "bytes": 3389
+    },
+    {
+      "source": "common/analyze_verification.py",
+      "snapshot": "source/common/analyze_verification.py",
+      "sha256": "7abb5a4fd05d24919f5936c15f7f43b6e4e26c9d9d6820e01ad65dac19b8ac7a",
+      "bytes": 11803
+    },
+    {
+      "source": "common/measurement.hpp",
+      "snapshot": "source/common/measurement.hpp",
+      "sha256": "606f58fad2048c893cac3f8ca209b951ae123e55a2fa56e29fad28ef48361060",
+      "bytes": 1801
+    },
+    {
+      "source": "common/pmu.hpp",
+      "snapshot": "source/common/pmu.hpp",
+      "sha256": "98df180a618991e9eee63aa7b570dfefe86ce7d0fb0f17452f8ee3724a1492fd",
+      "bytes": 3800
+    },
+    {
+      "source": "common/run_verification.py",
+      "snapshot": "source/common/run_verification.py",
+      "sha256": "d8f4cdaaae8ea2be9f2aabf78c0c8fc928a992bd8c8e61e79b86735552938695",
+      "bytes": 11552
+    },
+    {
+      "source": "common/test_verification.py",
+      "snapshot": "source/common/test_verification.py",
+      "sha256": "7121d8cb826b1638dde7895f139199db84dcd69b4d0cb9312a58341ff740ce6d",
+      "bytes": 3040
+    },
+    {
+      "source": "events/scripts/discover_events.py",
+      "snapshot": "source/events/scripts/discover_events.py",
+      "sha256": "0a333aa1d77c9efec0f66ea164a369b83bb0ba92ea95041244eddb82e421b34a",
+      "bytes": 7284
+    },
+    {
+      "source": "line_size/Makefile",
+      "snapshot": "source/line_size/Makefile",
+      "sha256": "6daf7373f5126b0bf8150450786681cb32708a72c0c71443948c9ecacafbff8b",
+      "bytes": 423
+    },
+    {
+      "source": "line_size/configs/ookay.json",
+      "snapshot": "source/line_size/configs/ookay.json",
+      "sha256": "b031107642cc03d411bc47fcc10c6e58a0506dc00eeb5328efde7f4a9e4bfa82",
+      "bytes": 2937
+    },
+    {
+      "source": "line_size/requirements.txt",
+      "snapshot": "source/line_size/requirements.txt",
+      "sha256": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+      "bytes": 32
+    },
+    {
+      "source": "line_size/scripts/analyze_line_size.py",
+      "snapshot": "source/line_size/scripts/analyze_line_size.py",
+      "sha256": "38a5797dc9c54fef26cd1317e42f69f30912b653942149c58a1b5dc9f3d954af",
+      "bytes": 312
+    },
+    {
+      "source": "line_size/scripts/run_line_size.py",
+      "snapshot": "source/line_size/scripts/run_line_size.py",
+      "sha256": "3d320b6dc1d8b96a4346da2b034fbdbcea63290ea786504daf77994c85b8c860",
+      "bytes": 304
+    },
+    {
+      "source": "line_size/src/line_size_bench.cpp",
+      "snapshot": "source/line_size/src/line_size_bench.cpp",
+      "sha256": "2175b036a78dc8acf49822eddc95d1051e3761b36b3ed98c83c6aeb85db8365e",
+      "bytes": 10224
+    },
+    {
+      "source": "line_size/src/timer_compat.h",
+      "snapshot": "source/line_size/src/timer_compat.h",
+      "sha256": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+      "bytes": 2419
+    },
+    {
+      "source": "results/ookay/finalize_results.py",
+      "snapshot": "source/results/ookay/finalize_results.py",
+      "sha256": "ebd7162e37f4993d1063ac363247279fe59340d3103e28fda31416fa1ec54ebc",
+      "bytes": 6824
+    },
+    {
+      "source": "capacity/build/ookay/cache_capacity_pmu",
+      "snapshot": "build/capacity/cache_capacity_pmu.gz",
+      "sha256": "3125ec865ac4edb90648af693bae2788b1d83d200f461b509c0b9d1047f313a1",
+      "uncompressed_sha256": "97bec97ab273dc76684192ba91520851736c068a3b642f68fb5b5be43777abb7",
+      "bytes": 13788
+    },
+    {
+      "source": "capacity/build/ookay/cache_capacity_pmu.dis",
+      "snapshot": "build/capacity/cache_capacity_pmu.dis.gz",
+      "sha256": "0702635578db9316210e0c7074bbe175fa3f1ff90926c36b7807ed4c0906a9a1",
+      "uncompressed_sha256": "fee2b8a0360f0faa28dea8084a2a49eb82a3aac1f645a6dcb0a8388f90b2c133",
+      "bytes": 15226
+    },
+    {
+      "source": "line_size/build/ookay/line_size_pmu",
+      "snapshot": "build/line_size/line_size_pmu.gz",
+      "sha256": "c42130a2ded4eca39f25e9ea54d2e228bd0f4be84e243d207be5a7a03427c9ec",
+      "uncompressed_sha256": "4ee5763c01e23b9d6b24a0bf0a72a298391d46b316b85b03e65e663f74a60103",
+      "bytes": 60448
+    },
+    {
+      "source": "line_size/build/ookay/line_size_pmu.dis",
+      "snapshot": "build/line_size/line_size_pmu.dis.gz",
+      "sha256": "3aa2ee6e5907538dc7b55a45df278969a45e7f5b8b46962691e763446bb13f9c",
+      "uncompressed_sha256": "ff7dc93434d9460fe45ee458641f7eb4e028cffbc3a1b1c6137b315a446e33f2",
+      "bytes": 39099
+    },
+    {
+      "source": "associativity/build/ookay/associativity_pmu",
+      "snapshot": "build/associativity/associativity_pmu.gz",
+      "sha256": "47d753a3d049be7b3550524cadf122d5ab075aeed13967621ff8bfa5ee5a183b",
+      "uncompressed_sha256": "624ad3fe810d89efcb71a581e61a05e6eb3a7aa180fc97f922619a9c5f2611b5",
+      "bytes": 92551
+    },
+    {
+      "source": "associativity/build/ookay/associativity_pmu.dis",
+      "snapshot": "build/associativity/associativity_pmu.dis.gz",
+      "sha256": "8018c5d6ed5af143cf40dfcc0ebe3ad63b5c86e8252d657580959f902eae8d72",
+      "uncompressed_sha256": "ffbef60a59b88707d2a73fa6d460a77f68d8f845ffaf0ba8396698c59e01325b",
+      "bytes": 83999
+    }
+  ]
+}

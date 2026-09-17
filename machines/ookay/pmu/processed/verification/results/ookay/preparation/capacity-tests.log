@@ -1,0 +1,16 @@
+make: Entering directory '/home/swu35/ECE592-HW1/PMU-verification/capacity'
+mkdir -p build/ookay
+gcc -O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/cache_bench.c -o build/ookay/cache_capacity_pmu
+objdump -d -Mintel build/ookay/cache_capacity_pmu > build/ookay/cache_capacity_pmu.dis
+python3 -m unittest discover -s tests -v
+test_counter_scope_validation (test_capacity.CapacityTests.test_counter_scope_validation) ... ok
+test_live_counter_group_and_raw_samples (test_capacity.CapacityTests.test_live_counter_group_and_raw_samples) ... ok
+test_plan_matches_fourteen_unique_points (test_capacity.CapacityTests.test_plan_matches_fourteen_unique_points) ... ok
+test_reject_insufficient_samples_and_duplicate_points (test_capacity.CapacityTests.test_reject_insufficient_samples_and_duplicate_points) ... ok
+test_stats_keep_outliers (test_capacity.CapacityTests.test_stats_keep_outliers) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.015s
+
+OK
+make: Leaving directory '/home/swu35/ECE592-HW1/PMU-verification/capacity'

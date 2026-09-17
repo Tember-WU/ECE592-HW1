@@ -1,0 +1,12 @@
+{
+  "n1-pmu-guide": {
+    "url": "https://documentation-service.arm.com/static/66ace6ee0469d5197d40c93e",
+    "retrieved_utc": "2026-09-14T15:43:47.421281+00:00",
+    "pdf_sha256": "fdf7e88a624ee823dcd339165eeed95607158bead1814da8e4ff0ab34dd74571"
+  },
+  "ampere-altra-datasheet": {
+    "url": "https://amperecomputing.com/assets/Altra_Rev_A1_DS_v1_30_20220728_8170025756.pdf",
+    "retrieved_utc": "2026-09-14T15:43:47.423370+00:00",
+    "pdf_sha256": "e8158af302b993412c6272792836eb09d64f2564ec78505e55ca8e8a4e472ff5"
+  }
+}
