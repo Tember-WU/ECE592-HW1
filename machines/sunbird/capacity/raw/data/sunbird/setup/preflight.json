@@ -1,0 +1,399 @@
+{
+  "observed_utc": "2026-09-10T16:28:28.010937+00:00",
+  "host": "sunbird.ece.ncsu.edu",
+  "inherited_affinity": [
+    0,
+    1,
+    2,
+    24,
+    25,
+    26
+  ],
+  "sampling_seconds": 3,
+  "cpu_busy": [
+    {
+      "cpu": 0,
+      "node": [
+        "node0"
+      ],
+      "siblings": "0,24",
+      "busy_percent": 1.67
+    },
+    {
+      "cpu": 1,
+      "node": [
+        "node1"
+      ],
+      "siblings": "1,25",
+      "busy_percent": 0.66
+    },
+    {
+      "cpu": 2,
+      "node": [
+        "node0"
+      ],
+      "siblings": "2,26",
+      "busy_percent": 1.0
+    },
+    {
+      "cpu": 3,
+      "node": [
+        "node1"
+      ],
+      "siblings": "3,27",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 4,
+      "node": [
+        "node0"
+      ],
+      "siblings": "4,28",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 5,
+      "node": [
+        "node1"
+      ],
+      "siblings": "5,29",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 6,
+      "node": [
+        "node0"
+      ],
+      "siblings": "6,30",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 7,
+      "node": [
+        "node1"
+      ],
+      "siblings": "7,31",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 8,
+      "node": [
+        "node0"
+      ],
+      "siblings": "8,32",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 9,
+      "node": [
+        "node1"
+      ],
+      "siblings": "9,33",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 10,
+      "node": [
+        "node0"
+      ],
+      "siblings": "10,34",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 11,
+      "node": [
+        "node1"
+      ],
+      "siblings": "11,35",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 12,
+      "node": [
+        "node0"
+      ],
+      "siblings": "12,36",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 13,
+      "node": [
+        "node1"
+      ],
+      "siblings": "13,37",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 14,
+      "node": [
+        "node0"
+      ],
+      "siblings": "14,38",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 15,
+      "node": [
+        "node1"
+      ],
+      "siblings": "15,39",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 16,
+      "node": [
+        "node0"
+      ],
+      "siblings": "16,40",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 17,
+      "node": [
+        "node1"
+      ],
+      "siblings": "17,41",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 18,
+      "node": [
+        "node0"
+      ],
+      "siblings": "18,42",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 19,
+      "node": [
+        "node1"
+      ],
+      "siblings": "19,43",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 20,
+      "node": [
+        "node0"
+      ],
+      "siblings": "20,44",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 21,
+      "node": [
+        "node1"
+      ],
+      "siblings": "21,45",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 22,
+      "node": [
+        "node0"
+      ],
+      "siblings": "22,46",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 23,
+      "node": [
+        "node1"
+      ],
+      "siblings": "23,47",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 24,
+      "node": [
+        "node0"
+      ],
+      "siblings": "0,24",
+      "busy_percent": 0.67
+    },
+    {
+      "cpu": 25,
+      "node": [
+        "node1"
+      ],
+      "siblings": "1,25",
+      "busy_percent": 0.33
+    },
+    {
+      "cpu": 26,
+      "node": [
+        "node0"
+      ],
+      "siblings": "2,26",
+      "busy_percent": 1.33
+    },
+    {
+      "cpu": 27,
+      "node": [
+        "node1"
+      ],
+      "siblings": "3,27",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 28,
+      "node": [
+        "node0"
+      ],
+      "siblings": "4,28",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 29,
+      "node": [
+        "node1"
+      ],
+      "siblings": "5,29",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 30,
+      "node": [
+        "node0"
+      ],
+      "siblings": "6,30",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 31,
+      "node": [
+        "node1"
+      ],
+      "siblings": "7,31",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 32,
+      "node": [
+        "node0"
+      ],
+      "siblings": "8,32",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 33,
+      "node": [
+        "node1"
+      ],
+      "siblings": "9,33",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 34,
+      "node": [
+        "node0"
+      ],
+      "siblings": "10,34",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 35,
+      "node": [
+        "node1"
+      ],
+      "siblings": "11,35",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 36,
+      "node": [
+        "node0"
+      ],
+      "siblings": "12,36",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 37,
+      "node": [
+        "node1"
+      ],
+      "siblings": "13,37",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 38,
+      "node": [
+        "node0"
+      ],
+      "siblings": "14,38",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 39,
+      "node": [
+        "node1"
+      ],
+      "siblings": "15,39",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 40,
+      "node": [
+        "node0"
+      ],
+      "siblings": "16,40",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 41,
+      "node": [
+        "node1"
+      ],
+      "siblings": "17,41",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 42,
+      "node": [
+        "node0"
+      ],
+      "siblings": "18,42",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 43,
+      "node": [
+        "node1"
+      ],
+      "siblings": "19,43",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 44,
+      "node": [
+        "node0"
+      ],
+      "siblings": "20,44",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 45,
+      "node": [
+        "node1"
+      ],
+      "siblings": "21,45",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 46,
+      "node": [
+        "node0"
+      ],
+      "siblings": "22,46",
+      "busy_percent": 0.0
+    },
+    {
+      "cpu": 47,
+      "node": [
+        "node1"
+      ],
+      "siblings": "23,47",
+      "busy_percent": 0.0
+    }
+  ]
+}

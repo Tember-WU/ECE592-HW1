@@ -1,0 +1,1 @@
+133883,,mem_uops_retired.all_loads:u,1874571,100.00,,

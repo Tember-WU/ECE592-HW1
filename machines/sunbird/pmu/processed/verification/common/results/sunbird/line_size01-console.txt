@@ -1,0 +1,34 @@
+line_size: 24 configurations, 1,000,000 batches each
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Error: failed to open tracing events directory
+/sys/kernel/tracing/events: Permission denied
+Preflight: {'8': 0.0, '32': 0.0}
+[1/24] random_s64_a16__l1_l2: 18.8242 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 261.272, 'mem_load_uops_retired.l2_miss': 48.27}
+[2/24] random_s64_a16__l3_loads: 19.7773 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.001, 'mem_uops_retired.all_loads': 5024.47}
+[3/24] random_s96_a0__l1_l2: 19.3008 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 372.408, 'mem_load_uops_retired.l2_miss': 68.014}
+[4/24] random_s96_a0__l3_loads: 18.3516 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.002, 'mem_uops_retired.all_loads': 5024.466}
+[5/24] random_s64_a0__l1_l2: 18.3867 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 267.645, 'mem_load_uops_retired.l2_miss': 47.017}
+[6/24] random_s64_a0__l3_loads: 18.1797 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.008, 'mem_uops_retired.all_loads': 5024.466}
+[7/24] random_s56_a16__l1_l2: 15.9844 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 235.861, 'mem_load_uops_retired.l2_miss': 28.512}
+[8/24] random_s56_a16__l3_loads: 16.7656 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.002, 'mem_uops_retired.all_loads': 5024.46}
+[9/24] fully_random_s64__l1_l2: 25.1875 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 1000.837, 'mem_load_uops_retired.l2_miss': 280.9}
+[10/24] fully_random_s64__l3_loads: 36.7227 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.154, 'mem_uops_retired.all_loads': 5024.516}
+[11/24] sequential_s72__l1_l2: 15.8047 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 30.705, 'mem_load_uops_retired.l2_miss': 3.802}
+[12/24] sequential_s72__l3_loads: 16.0039 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.0, 'mem_uops_retired.all_loads': 5024.459}
+[13/24] sequential_s64__l1_l2: 15.7852 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 33.238, 'mem_load_uops_retired.l2_miss': 0.775}
+[14/24] sequential_s64__l3_loads: 15.4883 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.001, 'mem_uops_retired.all_loads': 5024.458}
+[15/24] random_s72_a0__l1_l2: 19.6406 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 281.029, 'mem_load_uops_retired.l2_miss': 59.68}
+[16/24] random_s72_a0__l3_loads: 19.0312 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.003, 'mem_uops_retired.all_loads': 5024.468}
+[17/24] random_s56_a0__l1_l2: 16.9492 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 230.82, 'mem_load_uops_retired.l2_miss': 40.067}
+[18/24] random_s56_a0__l3_loads: 16.8281 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.002, 'mem_uops_retired.all_loads': 5024.461}
+[19/24] random_s32_a0__l1_l2: 12.3164 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 81.935, 'mem_load_uops_retired.l2_miss': 16.315}
+[20/24] random_s32_a0__l3_loads: 12.8555 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.001, 'mem_uops_retired.all_loads': 5024.45}
+[21/24] random_s72_a16__l1_l2: 18.9805 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 282.626, 'mem_load_uops_retired.l2_miss': 54.502}
+[22/24] random_s72_a16__l3_loads: 18.8711 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.002, 'mem_uops_retired.all_loads': 5024.467}
+[23/24] sequential_s56__l1_l2: 10.8594 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l1_miss': 24.303, 'mem_load_uops_retired.l2_miss': 0.375}
+[24/24] sequential_s56__l3_loads: 10.8828 ticks/timed load; counts per 1000 chain loads {'mem_load_uops_retired.l3_miss': 0.0, 'mem_uops_retired.all_loads': 5024.445}

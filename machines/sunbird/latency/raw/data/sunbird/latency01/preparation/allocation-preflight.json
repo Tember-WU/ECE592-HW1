@@ -1,0 +1,28 @@
+{
+  "started_utc": "2026-09-10T20:51:52.617009+00:00",
+  "purpose": "Untimed maximum-footprint THP and local-NUMA check; no latency samples",
+  "cpu": 32,
+  "numa_node": 0,
+  "trials": [
+    {
+      "bytes": 2097152,
+      "collapse_rc": null,
+      "errno": null,
+      "anon_huge_bytes": 2097152,
+      "numa_mapping": "7f19f1600000 bind:0 anon=512 dirty=512 active=0 N0=512 kernelpagesize_kB=4",
+      "elapsed_seconds": 0.004602632950991392,
+      "passed": true
+    },
+    {
+      "bytes": 536870912,
+      "collapse_rc": -1,
+      "errno": 12,
+      "anon_huge_bytes": 452984832,
+      "numa_mapping": "7f19d1200000 bind:0 anon=131072 dirty=131072 active=0 N0=131072 kernelpagesize_kB=4",
+      "elapsed_seconds": 0.33677761210128665,
+      "passed": false
+    }
+  ],
+  "finished_utc": "2026-09-10T20:51:52.964733+00:00",
+  "passed": false
+}

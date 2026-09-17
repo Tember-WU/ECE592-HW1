@@ -1,0 +1,1 @@
+mapping: 7f14997de000 bind:0 anon=2082 dirty=2082 active=0 N0=2082 kernelpagesize_kB=4

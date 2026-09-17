@@ -1,0 +1,482 @@
+[
+  {
+    "id": "reuse2_256k_r1",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 2,
+    "case": "reuse2_256k",
+    "repeat": 0,
+    "seed": 86003,
+    "pmu": false
+  },
+  {
+    "id": "reuse2_256k_r1",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 2,
+    "case": "reuse2_256k",
+    "repeat": 0,
+    "seed": 86003,
+    "pmu": true
+  },
+  {
+    "id": "reuse4_256k_r1",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 4,
+    "case": "reuse4_256k",
+    "repeat": 0,
+    "seed": 86004,
+    "pmu": false
+  },
+  {
+    "id": "reuse4_256k_r1",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 4,
+    "case": "reuse4_256k",
+    "repeat": 0,
+    "seed": 86004,
+    "pmu": true
+  },
+  {
+    "id": "large_128m_r1",
+    "bytes": 134217728,
+    "mode": "random",
+    "reuse": 1,
+    "case": "large_128m",
+    "repeat": 0,
+    "seed": 86007,
+    "pmu": false
+  },
+  {
+    "id": "large_128m_r1",
+    "bytes": 134217728,
+    "mode": "random",
+    "reuse": 1,
+    "case": "large_128m",
+    "repeat": 0,
+    "seed": 86007,
+    "pmu": true
+  },
+  {
+    "id": "nonresident_128k_r1",
+    "bytes": 131072,
+    "mode": "random",
+    "reuse": 1,
+    "case": "nonresident_128k",
+    "repeat": 0,
+    "seed": 86002,
+    "pmu": false
+  },
+  {
+    "id": "nonresident_128k_r1",
+    "bytes": 131072,
+    "mode": "random",
+    "reuse": 1,
+    "case": "nonresident_128k",
+    "repeat": 0,
+    "seed": 86002,
+    "pmu": true
+  },
+  {
+    "id": "reuse8_256k_r1",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 8,
+    "case": "reuse8_256k",
+    "repeat": 0,
+    "seed": 86005,
+    "pmu": false
+  },
+  {
+    "id": "reuse8_256k_r1",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 8,
+    "case": "reuse8_256k",
+    "repeat": 0,
+    "seed": 86005,
+    "pmu": true
+  },
+  {
+    "id": "resident_16k_r1",
+    "bytes": 16384,
+    "mode": "random",
+    "reuse": 1,
+    "case": "resident_16k",
+    "repeat": 0,
+    "seed": 86000,
+    "pmu": false
+  },
+  {
+    "id": "resident_16k_r1",
+    "bytes": 16384,
+    "mode": "random",
+    "reuse": 1,
+    "case": "resident_16k",
+    "repeat": 0,
+    "seed": 86000,
+    "pmu": true
+  },
+  {
+    "id": "boundary_48k_r1",
+    "bytes": 49152,
+    "mode": "random",
+    "reuse": 1,
+    "case": "boundary_48k",
+    "repeat": 0,
+    "seed": 86001,
+    "pmu": false
+  },
+  {
+    "id": "boundary_48k_r1",
+    "bytes": 49152,
+    "mode": "random",
+    "reuse": 1,
+    "case": "boundary_48k",
+    "repeat": 0,
+    "seed": 86001,
+    "pmu": true
+  },
+  {
+    "id": "deeper_8m_r1",
+    "bytes": 8388608,
+    "mode": "random",
+    "reuse": 1,
+    "case": "deeper_8m",
+    "repeat": 0,
+    "seed": 86006,
+    "pmu": false
+  },
+  {
+    "id": "deeper_8m_r1",
+    "bytes": 8388608,
+    "mode": "random",
+    "reuse": 1,
+    "case": "deeper_8m",
+    "repeat": 0,
+    "seed": 86006,
+    "pmu": true
+  },
+  {
+    "id": "boundary_48k_r2",
+    "bytes": 49152,
+    "mode": "random",
+    "reuse": 1,
+    "case": "boundary_48k",
+    "repeat": 1,
+    "seed": 86101,
+    "pmu": true
+  },
+  {
+    "id": "boundary_48k_r2",
+    "bytes": 49152,
+    "mode": "random",
+    "reuse": 1,
+    "case": "boundary_48k",
+    "repeat": 1,
+    "seed": 86101,
+    "pmu": false
+  },
+  {
+    "id": "reuse2_256k_r2",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 2,
+    "case": "reuse2_256k",
+    "repeat": 1,
+    "seed": 86103,
+    "pmu": true
+  },
+  {
+    "id": "reuse2_256k_r2",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 2,
+    "case": "reuse2_256k",
+    "repeat": 1,
+    "seed": 86103,
+    "pmu": false
+  },
+  {
+    "id": "nonresident_128k_r2",
+    "bytes": 131072,
+    "mode": "random",
+    "reuse": 1,
+    "case": "nonresident_128k",
+    "repeat": 1,
+    "seed": 86102,
+    "pmu": true
+  },
+  {
+    "id": "nonresident_128k_r2",
+    "bytes": 131072,
+    "mode": "random",
+    "reuse": 1,
+    "case": "nonresident_128k",
+    "repeat": 1,
+    "seed": 86102,
+    "pmu": false
+  },
+  {
+    "id": "reuse8_256k_r2",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 8,
+    "case": "reuse8_256k",
+    "repeat": 1,
+    "seed": 86105,
+    "pmu": true
+  },
+  {
+    "id": "reuse8_256k_r2",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 8,
+    "case": "reuse8_256k",
+    "repeat": 1,
+    "seed": 86105,
+    "pmu": false
+  },
+  {
+    "id": "reuse4_256k_r2",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 4,
+    "case": "reuse4_256k",
+    "repeat": 1,
+    "seed": 86104,
+    "pmu": true
+  },
+  {
+    "id": "reuse4_256k_r2",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 4,
+    "case": "reuse4_256k",
+    "repeat": 1,
+    "seed": 86104,
+    "pmu": false
+  },
+  {
+    "id": "deeper_8m_r2",
+    "bytes": 8388608,
+    "mode": "random",
+    "reuse": 1,
+    "case": "deeper_8m",
+    "repeat": 1,
+    "seed": 86106,
+    "pmu": true
+  },
+  {
+    "id": "deeper_8m_r2",
+    "bytes": 8388608,
+    "mode": "random",
+    "reuse": 1,
+    "case": "deeper_8m",
+    "repeat": 1,
+    "seed": 86106,
+    "pmu": false
+  },
+  {
+    "id": "resident_16k_r2",
+    "bytes": 16384,
+    "mode": "random",
+    "reuse": 1,
+    "case": "resident_16k",
+    "repeat": 1,
+    "seed": 86100,
+    "pmu": true
+  },
+  {
+    "id": "resident_16k_r2",
+    "bytes": 16384,
+    "mode": "random",
+    "reuse": 1,
+    "case": "resident_16k",
+    "repeat": 1,
+    "seed": 86100,
+    "pmu": false
+  },
+  {
+    "id": "large_128m_r2",
+    "bytes": 134217728,
+    "mode": "random",
+    "reuse": 1,
+    "case": "large_128m",
+    "repeat": 1,
+    "seed": 86107,
+    "pmu": true
+  },
+  {
+    "id": "large_128m_r2",
+    "bytes": 134217728,
+    "mode": "random",
+    "reuse": 1,
+    "case": "large_128m",
+    "repeat": 1,
+    "seed": 86107,
+    "pmu": false
+  },
+  {
+    "id": "large_128m_r3",
+    "bytes": 134217728,
+    "mode": "random",
+    "reuse": 1,
+    "case": "large_128m",
+    "repeat": 2,
+    "seed": 86207,
+    "pmu": false
+  },
+  {
+    "id": "large_128m_r3",
+    "bytes": 134217728,
+    "mode": "random",
+    "reuse": 1,
+    "case": "large_128m",
+    "repeat": 2,
+    "seed": 86207,
+    "pmu": true
+  },
+  {
+    "id": "reuse2_256k_r3",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 2,
+    "case": "reuse2_256k",
+    "repeat": 2,
+    "seed": 86203,
+    "pmu": false
+  },
+  {
+    "id": "reuse2_256k_r3",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 2,
+    "case": "reuse2_256k",
+    "repeat": 2,
+    "seed": 86203,
+    "pmu": true
+  },
+  {
+    "id": "deeper_8m_r3",
+    "bytes": 8388608,
+    "mode": "random",
+    "reuse": 1,
+    "case": "deeper_8m",
+    "repeat": 2,
+    "seed": 86206,
+    "pmu": false
+  },
+  {
+    "id": "deeper_8m_r3",
+    "bytes": 8388608,
+    "mode": "random",
+    "reuse": 1,
+    "case": "deeper_8m",
+    "repeat": 2,
+    "seed": 86206,
+    "pmu": true
+  },
+  {
+    "id": "resident_16k_r3",
+    "bytes": 16384,
+    "mode": "random",
+    "reuse": 1,
+    "case": "resident_16k",
+    "repeat": 2,
+    "seed": 86200,
+    "pmu": false
+  },
+  {
+    "id": "resident_16k_r3",
+    "bytes": 16384,
+    "mode": "random",
+    "reuse": 1,
+    "case": "resident_16k",
+    "repeat": 2,
+    "seed": 86200,
+    "pmu": true
+  },
+  {
+    "id": "boundary_48k_r3",
+    "bytes": 49152,
+    "mode": "random",
+    "reuse": 1,
+    "case": "boundary_48k",
+    "repeat": 2,
+    "seed": 86201,
+    "pmu": false
+  },
+  {
+    "id": "boundary_48k_r3",
+    "bytes": 49152,
+    "mode": "random",
+    "reuse": 1,
+    "case": "boundary_48k",
+    "repeat": 2,
+    "seed": 86201,
+    "pmu": true
+  },
+  {
+    "id": "reuse4_256k_r3",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 4,
+    "case": "reuse4_256k",
+    "repeat": 2,
+    "seed": 86204,
+    "pmu": false
+  },
+  {
+    "id": "reuse4_256k_r3",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 4,
+    "case": "reuse4_256k",
+    "repeat": 2,
+    "seed": 86204,
+    "pmu": true
+  },
+  {
+    "id": "nonresident_128k_r3",
+    "bytes": 131072,
+    "mode": "random",
+    "reuse": 1,
+    "case": "nonresident_128k",
+    "repeat": 2,
+    "seed": 86202,
+    "pmu": false
+  },
+  {
+    "id": "nonresident_128k_r3",
+    "bytes": 131072,
+    "mode": "random",
+    "reuse": 1,
+    "case": "nonresident_128k",
+    "repeat": 2,
+    "seed": 86202,
+    "pmu": true
+  },
+  {
+    "id": "reuse8_256k_r3",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 8,
+    "case": "reuse8_256k",
+    "repeat": 2,
+    "seed": 86205,
+    "pmu": false
+  },
+  {
+    "id": "reuse8_256k_r3",
+    "bytes": 262144,
+    "mode": "random",
+    "reuse": 8,
+    "case": "reuse8_256k",
+    "repeat": 2,
+    "seed": 86205,
+    "pmu": true
+  }
+]

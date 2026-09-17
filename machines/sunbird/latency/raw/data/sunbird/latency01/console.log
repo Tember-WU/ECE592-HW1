@@ -1,0 +1,61 @@
+30 configurations, 30,000,000 batches, 39,000,000 recorded timer intervals
+[1/30] l1_miss__alternate: paired, W=131072, batch=256
+  first median=12.15625; reread=4.43750; 1.8s
+[2/30] l2_miss__repeat: paired, W=4194304, batch=256
+  first median=41.70312; reread=4.53125; 4.9s
+[3/30] calibration__l1_independent: independent, W=8192, batch=256
+  first median=1.17188; 0.2s
+[4/30] calibration__l1_sequential: sequential, W=8192, batch=256
+  first median=4.15625; 0.5s
+[5/30] l1_hit__alternate: chase, W=16384, batch=256
+  first median=4.15625; 0.5s
+[6/30] calibration__timer: empty, W=8192, batch=256
+  first median=58.00000; 0.1s
+[7/30] calibration__memory_sequential: sequential, W=268435456, batch=256
+  first median=26.73438; 3.2s
+[8/30] calibration__l1_long: chase, W=8192, batch=1024
+  first median=4.03906; 1.7s
+[9/30] calibration__l2_long: chase, W=65536, batch=1024
+  first median=12.03906; 5.0s
+[10/30] calibration__llc_long: chase, W=4194304, batch=1024
+  first median=41.59375; 17.2s
+[11/30] llc_hit__alternate: chase, W=8388608, batch=256
+  first median=41.70312; 4.4s
+[12/30] llc_miss__alternate: paired, W=536870912, batch=256
+  first median=211.00000; reread=11.59375; 26.9s
+[13/30] llc_hit__repeat: chase, W=4194304, batch=256
+  first median=41.71875; 4.4s
+[14/30] l2_miss__alternate: paired, W=8388608, batch=256
+  first median=41.71875; reread=4.50000; 4.9s
+[15/30] l2_hit__alternate: chase, W=131072, batch=256
+  first median=12.15625; 1.3s
+[16/30] l2_hit__repeat: chase, W=65536, batch=256
+  first median=12.14062; 1.3s
+[17/30] l1_hit__primary: chase, W=8192, batch=256
+  first median=4.15625; 0.5s
+[18/30] calibration__memory_independent: independent, W=268435456, batch=256
+  first median=55.65625; 7.6s
+[19/30] l2_hit__primary: chase, W=65536, batch=256
+  first median=12.15625; 1.3s
+[20/30] calibration__llc_sequential: sequential, W=4194304, batch=256
+  first median=9.07812; 1.0s
+[21/30] l1_miss__repeat: paired, W=65536, batch=256
+  first median=12.12500; reread=4.43750; 1.8s
+[22/30] llc_miss__repeat: paired, W=268435456, batch=256
+  first median=209.81250; reread=10.59375; 24.7s
+[23/30] calibration__l2_independent: independent, W=65536, batch=256
+  first median=3.28125; 0.4s
+[24/30] calibration__l2_sequential: sequential, W=65536, batch=256
+  first median=6.53125; 0.7s
+[25/30] llc_miss__primary: paired, W=268435456, batch=256
+  first median=209.79688; reread=10.59375; 24.7s
+[26/30] l2_miss__primary: paired, W=4194304, batch=256
+  first median=41.71875; reread=4.48438; 4.9s
+[27/30] llc_hit__primary: chase, W=4194304, batch=256
+  first median=41.73438; 4.4s
+[28/30] l1_hit__repeat: chase, W=8192, batch=256
+  first median=4.15625; 0.5s
+[29/30] l1_miss__primary: paired, W=65536, batch=256
+  first median=12.17188; reread=4.15625; 1.8s
+[30/30] calibration__llc_independent: independent, W=4194304, batch=256
+  first median=11.26562; 1.2s

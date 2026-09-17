@@ -1,0 +1,20 @@
+Machine: sunbird; CPU: 32; NUMA node: 0
+39 points; 39,000,000 timed batches; 312,000,000 raw bytes before compression
+Raw data: /home/swu35/ECE592-HW1/timing-only/capacity/data/sunbird/round1
+Analysis output: /home/swu35/ECE592-HW1/timing-only/capacity/results/sunbird/round1
+[1/39] running coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000
+  median=9.1094, p05–p95=8.7969–9.4688, elapsed=1.0s; saved all 1,000,000 samples
+[2/39] running coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000
+  median=9.0781, p05–p95=8.7969–9.4688, elapsed=1.0s; saved all 1,000,000 samples
+[3/39] running coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000
+  median=4.1562, p05–p95=4.1562–4.5000, elapsed=0.5s; saved all 1,000,000 samples
+[4/39] running coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000
+Traceback (most recent call last):
+  File "/home/swu35/ECE592-HW1/timing-only/capacity/scripts/run_capacity.py", line 276, in <module>
+    main()
+  File "/home/swu35/ECE592-HW1/timing-only/capacity/scripts/run_capacity.py", line 191, in main
+    collect(config, jobs, out, manifest)
+  File "/home/swu35/ECE592-HW1/timing-only/capacity/scripts/run_capacity.py", line 249, in collect
+    raise RuntimeError(process.stderr)
+RuntimeError: MADV_COLLAPSE: Cannot allocate memory
+

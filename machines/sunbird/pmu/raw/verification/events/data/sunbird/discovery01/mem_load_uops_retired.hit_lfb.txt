@@ -1,0 +1,1 @@
+8096,,mem_load_uops_retired.hit_lfb:u,2144732,100.00,,

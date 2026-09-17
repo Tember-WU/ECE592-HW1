@@ -1,0 +1,17 @@
+mkdir -p build/sunbird
+gcc -O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer src/hit_rate.c -o build/sunbird/hit_rate
+objdump -d build/sunbird/hit_rate > build/sunbird/hit_rate.dis
+mkdir -p build/sunbird
+gcc -O0 -g -std=c11 -Wall -Wextra -Werror -fno-omit-frame-pointer -DWITH_PMU src/hit_rate.c -o build/sunbird/verify_hit_rate
+objdump -d build/sunbird/verify_hit_rate > build/sunbird/verify_hit_rate.dis
+python3 -m unittest discover -s tests -v
+test_bad_calibration_is_rejected (test_estimator.EstimatorTests) ... ok
+test_binary_kernel_matches_and_estimator_has_no_pmu_interface (test_estimator.EstimatorTests) ... ok
+test_incomplete_raw_is_rejected (test_estimator.EstimatorTests) ... ok
+test_reference_rejects_polluted_denominator_and_multiplexing (test_estimator.EstimatorTests) ... ok
+test_unseen_mixture_uses_timing_only (test_estimator.EstimatorTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.067s
+
+OK

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/sunbird/counters01/source/bench",
+    "1",
+    "125829120",
+    "64",
+    "1000000",
+    "64",
+    "59286",
+    "0",
+    "0x2",
+    "/home/pgpatel/ECE592-HW1/PMU_Counter_Analysis/results/sunbird/counters01/raw/beyond_llc__r2__cache_references",
+    "0"
+  ],
+  "returncode": 0,
+  "output": ""
+}

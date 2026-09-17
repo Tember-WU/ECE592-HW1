@@ -1,0 +1,8 @@
+# Preserve recorded bytes and source hashes across Git line-ending settings.
+data/** -text
+
+# Preserve objdump's generated instruction padding.
+data/**/disassembly.txt -whitespace
+
+# Preserve the CSV writer's output, including standard CRLF row endings.
+results/**/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

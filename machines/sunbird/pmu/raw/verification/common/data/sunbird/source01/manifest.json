@@ -1,0 +1,228 @@
+{
+  "recorded_utc": "2026-09-14T15:42:49.809502+00:00",
+  "files": [
+    {
+      "path": "capacity/Makefile",
+      "bytes": 428,
+      "sha256": "671e76de26198a8af05db0e1ff124c7558894f2b57f06832d47b40cad779427c",
+      "stored_path": "capacity/Makefile"
+    },
+    {
+      "path": "capacity/configs/sunbird.json",
+      "bytes": 1491,
+      "sha256": "bb9b430c444642d1342831a61b0b88ca0855691892bad1f898031cceb992a28a",
+      "stored_path": "capacity/configs/sunbird.json"
+    },
+    {
+      "path": "capacity/scripts/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_path": "capacity/scripts/.gitkeep"
+    },
+    {
+      "path": "capacity/scripts/analyze_capacity.py",
+      "bytes": 10061,
+      "sha256": "25352514414065f17af9edc73579e50e0b9a08df437d5e9c7c0022c95a829ebd",
+      "stored_path": "capacity/scripts/analyze_capacity.py"
+    },
+    {
+      "path": "capacity/scripts/common.py",
+      "bytes": 5593,
+      "sha256": "17f7f88f263376c3753e6d92969915424c8a4777cc954818650899d756db6bcf",
+      "stored_path": "capacity/scripts/common.py"
+    },
+    {
+      "path": "capacity/scripts/run_capacity.py",
+      "bytes": 8509,
+      "sha256": "ee7a789b35b0d51ab0af131e41a33254ebdd46fed318acae8badac103b760caa",
+      "stored_path": "capacity/scripts/run_capacity.py"
+    },
+    {
+      "path": "capacity/src/cache_bench.c",
+      "bytes": 7577,
+      "sha256": "e6be345e4ac5be4d73405a675f61f1eb5ee9f78acb9e5cfd4f4cb35b2d2ddae2",
+      "stored_path": "capacity/src/cache_bench.c"
+    },
+    {
+      "path": "capacity/src/pmu.h",
+      "bytes": 3856,
+      "sha256": "f2b66ae595516be22188affdd3bffd3725b194c05fe869a0be74a0b09a0f6cb4",
+      "stored_path": "capacity/src/pmu.h"
+    },
+    {
+      "path": "capacity/tests/test_capacity.py",
+      "bytes": 4517,
+      "sha256": "ad26f43d2e7900ff5228632535915cf2284729de66bbda745a8d6d873d8ded1d",
+      "stored_path": "capacity/tests/test_capacity.py"
+    },
+    {
+      "path": "capacity/build/sunbird/cache_capacity_pmu",
+      "bytes": 36712,
+      "sha256": "b1e443169fdebacf2ff52065d76a0dac4756afa5415c18e35c88735835e3fcbf",
+      "stored_path": "capacity/compiled/sunbird/cache_capacity_pmu"
+    },
+    {
+      "path": "capacity/build/sunbird/cache_capacity_pmu.dis",
+      "bytes": 80357,
+      "sha256": "6ca359bac25743794c244c550d09a5aa07387023609933efd85004c9d9d53e10",
+      "stored_path": "capacity/compiled/sunbird/cache_capacity_pmu.dis"
+    },
+    {
+      "path": "line_size/Makefile",
+      "bytes": 423,
+      "sha256": "6daf7373f5126b0bf8150450786681cb32708a72c0c71443948c9ecacafbff8b",
+      "stored_path": "line_size/Makefile"
+    },
+    {
+      "path": "line_size/configs/sunbird.json",
+      "bytes": 3420,
+      "sha256": "a11e6d366388d0f5231d7af1504ce4fae2d22c07acb44e3e523d4ecdf63c787d",
+      "stored_path": "line_size/configs/sunbird.json"
+    },
+    {
+      "path": "line_size/scripts/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_path": "line_size/scripts/.gitkeep"
+    },
+    {
+      "path": "line_size/scripts/analyze_line_size.py",
+      "bytes": 312,
+      "sha256": "38a5797dc9c54fef26cd1317e42f69f30912b653942149c58a1b5dc9f3d954af",
+      "stored_path": "line_size/scripts/analyze_line_size.py"
+    },
+    {
+      "path": "line_size/scripts/run_line_size.py",
+      "bytes": 304,
+      "sha256": "3d320b6dc1d8b96a4346da2b034fbdbcea63290ea786504daf77994c85b8c860",
+      "stored_path": "line_size/scripts/run_line_size.py"
+    },
+    {
+      "path": "line_size/src/line_size_bench.cpp",
+      "bytes": 10224,
+      "sha256": "2175b036a78dc8acf49822eddc95d1051e3761b36b3ed98c83c6aeb85db8365e",
+      "stored_path": "line_size/src/line_size_bench.cpp"
+    },
+    {
+      "path": "line_size/src/timer_compat.h",
+      "bytes": 2419,
+      "sha256": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+      "stored_path": "line_size/src/timer_compat.h"
+    },
+    {
+      "path": "line_size/build/sunbird/line_size_pmu",
+      "bytes": 166656,
+      "sha256": "7da90a0044f49690b404aebb8047239d62274ea93be05e645f460cb89bfefacc",
+      "stored_path": "line_size/compiled/sunbird/line_size_pmu"
+    },
+    {
+      "path": "line_size/build/sunbird/line_size_pmu.dis",
+      "bytes": 256086,
+      "sha256": "87e5becf0f0dafa77d9428026b2a4b36ee788267eacc5eb763834fdae0278d24",
+      "stored_path": "line_size/compiled/sunbird/line_size_pmu.dis"
+    },
+    {
+      "path": "associativity/Makefile",
+      "bytes": 443,
+      "sha256": "0dbbe14408ac4a5246b6a4f52131a0bfdc3b9498b0031edd2999a522530b6ea1",
+      "stored_path": "associativity/Makefile"
+    },
+    {
+      "path": "associativity/configs/sunbird.json",
+      "bytes": 2959,
+      "sha256": "d66421484819f965b15cdc4de7d1e0b606bfa7997b325d4c2e1bd349982c4491",
+      "stored_path": "associativity/configs/sunbird.json"
+    },
+    {
+      "path": "associativity/scripts/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_path": "associativity/scripts/.gitkeep"
+    },
+    {
+      "path": "associativity/scripts/analyze_associativity.py",
+      "bytes": 320,
+      "sha256": "3bcc91ba79cdc0d46a5d4df91f1836a8f9e5c3d38c453e8ee67f4df940363020",
+      "stored_path": "associativity/scripts/analyze_associativity.py"
+    },
+    {
+      "path": "associativity/scripts/run_associativity.py",
+      "bytes": 312,
+      "sha256": "becefa36e0ded19881e986dfcab886631ecfd943d64e22178b0a8a508d69779d",
+      "stored_path": "associativity/scripts/run_associativity.py"
+    },
+    {
+      "path": "associativity/src/associativity_bench.cpp",
+      "bytes": 15601,
+      "sha256": "0f9b7c8c891729990a91fa2310a096e038094da60a7d7cdc7a270b2fd147d79b",
+      "stored_path": "associativity/src/associativity_bench.cpp"
+    },
+    {
+      "path": "associativity/src/timer_compat.h",
+      "bytes": 2419,
+      "sha256": "fe6285537d899b6e3480abab5c3978010cf48c3b0bf3748b3c2fee05507eb78e",
+      "stored_path": "associativity/src/timer_compat.h"
+    },
+    {
+      "path": "associativity/build/sunbird/associativity_pmu",
+      "bytes": 262064,
+      "sha256": "b034920aa09b6a8f106fcdea4a13f889cfd65eb65f6f186b3bfb00f36cda3bd0",
+      "stored_path": "associativity/compiled/sunbird/associativity_pmu"
+    },
+    {
+      "path": "associativity/build/sunbird/associativity_pmu.dis",
+      "bytes": 567474,
+      "sha256": "47e205a66c75f2fa6e9f04b478417242164f30463258a6dc91f9bb438ec6e7da",
+      "stored_path": "associativity/compiled/sunbird/associativity_pmu.dis"
+    },
+    {
+      "path": "common/analyze_verification.py",
+      "bytes": 13157,
+      "sha256": "4a8a6ab564245100962fbc61c03793d3ef4a4713a74e5fdcb5878c9c8ed2afd5",
+      "stored_path": "common/analyze_verification.py"
+    },
+    {
+      "path": "common/measurement.hpp",
+      "bytes": 1801,
+      "sha256": "606f58fad2048c893cac3f8ca209b951ae123e55a2fa56e29fad28ef48361060",
+      "stored_path": "common/measurement.hpp"
+    },
+    {
+      "path": "common/pmu.hpp",
+      "bytes": 4101,
+      "sha256": "e991455caf7883d58c3663488df10a64b43a804a73fa2e2fad7095b608551090",
+      "stored_path": "common/pmu.hpp"
+    },
+    {
+      "path": "common/run_verification.py",
+      "bytes": 11715,
+      "sha256": "3ca5dff1ff67533b3ced454826a8addb0be2a29245c265d9601ef32143929bf7",
+      "stored_path": "common/run_verification.py"
+    },
+    {
+      "path": "common/test_verification.py",
+      "bytes": 4276,
+      "sha256": "f6c7072585ee495a502981bc56ad5a2922cc346a2ef2f3ae7c02f57d376b8ea2",
+      "stored_path": "common/test_verification.py"
+    },
+    {
+      "path": "events/configs/sunbird.json",
+      "bytes": 700,
+      "sha256": "3d97e13fcf4be15d1118d780a9765da8bb49f37516a34d89f950f62fb4184dee",
+      "stored_path": "events/configs/sunbird.json"
+    },
+    {
+      "path": "events/scripts/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_path": "events/scripts/.gitkeep"
+    },
+    {
+      "path": "events/scripts/discover_events.py",
+      "bytes": 7964,
+      "sha256": "1166a3278ca6093f8c58136951f0c1c300c8c699439f533d1ff546cc5990b523",
+      "stored_path": "events/scripts/discover_events.py"
+    }
+  ],
+  "note": "Pre-run PMU implementation and build snapshot; Phase-I has a separate freeze."
+}

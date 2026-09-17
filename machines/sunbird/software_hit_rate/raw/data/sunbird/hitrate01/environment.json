@@ -1,0 +1,32 @@
+{
+  "host": "sunbird.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "5.14.0-611.54.1.el9_7.x86_64",
+  "identity": {
+    "vendor_id": "GenuineIntel",
+    "cpu family": "6",
+    "model": "63",
+    "model name": "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz"
+  },
+  "recorded_utc": "2026-09-14T20:43:01.407624+00:00",
+  "python": "3.9.25 (main, Jul 13 2026, 00:00:00) \n[GCC 11.5.0 20240719 (Red Hat 11.5.0-14)]",
+  "parent_git_commit": "c44c3c4ef75e06e49a42885a86755abf5f44e36a",
+  "git_status_before_run": " M scripts/analyze.py\n?? configs/sunbird.json\n?? data/sunbird/\n?? preparation/\n",
+  "affinity": [
+    0,
+    1,
+    2,
+    24,
+    25,
+    26
+  ],
+  "cpu": 32,
+  "numa_node": 0,
+  "placement": "sched_setaffinity plus numactl --membind; prefaulted base pages",
+  "sample_unit": "one fenced target load; never a batch average",
+  "topology": {
+    "core_id": "4",
+    "physical_package_id": "0",
+    "thread_siblings_list": "8,32"
+  }
+}

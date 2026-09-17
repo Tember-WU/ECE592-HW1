@@ -1,0 +1,23 @@
+{
+  "hostname": "sunbird",
+  "arch": "x86_64",
+  "cpu_config_note": "2x Intel Xeon E5-2680 v3 (Haswell, server) -- Table 1: 2014, x86-64, TWO SOCKETS",
+  "pinned_cpu": null,
+  "pinned_core": null,
+  "pinned_socket": null,
+  "pinned_node": null,
+  "smt_sibling_note": null,
+  "line_size_group_window": 512,
+  "notes": "TEMPLATE -- fill in before running. 1) Run 'lscpu -e=CPU,CORE,SOCKET,NODE' on sunbird and set pinned_cpu/core/socket/node from a core that is idle (check SMT sibling too). Two-socket box: after running lscpu -e on this host, double check pinned_cpu's SOCKET/NODE columns match each other and stay on socket 0 -- do not assume core numbering mirrors Skylark's 0-31/32-63 split. 2) Run the line-size and capacity experiments on THIS host first; only after that, derive assoc_l1_num_sets / assoc_l2_num_sets empirically for THIS host's cache geometry. Do NOT copy skylark.json's values (64/1024) -- 2x Intel Xeon E5-2680 v3 (Haswell, server) -- Table 1: 2014, x86-64, TWO SOCKETS may have a different L1/L2 size or associativity than Zen 2. | Candidate num_sets lists are STARTING POINTS to test empirically, derived from the team's own capacity measurements plus plausible power-of-two way-counts -- they are not looked-up vendor specs and must not be reported as the Phase-I associativity answer until a candidate actually produces a clean eviction-probability edge in your own data (see run_associativity.py auto-selection + l2_candidate_selection.txt).",
+  "assoc_l1_num_sets_candidates": [
+    64
+  ],
+  "assoc_l2_num_sets_candidates": [
+    256,
+    512,
+    1024
+  ],
+  "assoc_llc_num_sets_candidates": [],
+  "assoc_llc_max_k": 24,
+  "llc_notes": "EMPTY until a real LLC capacity plateau exists from Experiment 1 (partner's current capacity sweep only found 3 residency regions -- L1D/L2/DRAM -- with no distinct LLC step reported; extend that sweep past L2 out to 32-64MB and confirm a real plateau before filling this in). Note: Thunderbird (Ampere Altra/Neoverse N1) may not have a traditional shared LLC at all -- verify rather than assume a candidate list is even applicable there. LLC is sliced/hashed (TA Slide 16), so even with real candidates this may only resolve to an effective associativity or a bound, not an exact ways count."
+}

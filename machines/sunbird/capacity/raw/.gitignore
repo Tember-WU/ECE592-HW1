@@ -1,0 +1,12 @@
+# Rebuildable working binaries and disassembly; keep machine directories.
+/build/*/*
+!/build/*/.gitkeep
+
+# The runner compresses completed samples. Commit the .u64.gz archives.
+*.u64
+
+# Keep per-run binary/source snapshots, configs, logs, statistics, and figures.
+# Only local Python caches and virtual environments are excluded below.
+__pycache__/
+*.pyc
+.venv/

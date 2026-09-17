@@ -1,0 +1,57 @@
+{
+  "machine": "sunbird",
+  "source_runs": [
+    "round1_retry1",
+    "round2"
+  ],
+  "scope": "Timing-only two-round capacity interpretation; empirical estimates, not vendor-specification validation",
+  "interpreted_at_utc": "2026-09-10T16:42:54.411936+00:00",
+  "measurable_data_cache_levels": 3,
+  "capacity_estimates": [
+    {
+      "level": "L1D",
+      "approximate_bytes": 32768,
+      "sampled_major_transition_interval_bytes": [
+        32768,
+        36864
+      ],
+      "evidence": "64 B huge-page random chains: round-2 32 KiB medians 4.625 and 4.71875; 36 KiB 11.6875; 40 KiB 12.09375 TSC ticks/load. Coarse 32 KiB was 4.40625."
+    },
+    {
+      "level": "L2",
+      "approximate_bytes": 262144,
+      "sampled_major_transition_interval_bytes": [
+        262144,
+        294912
+      ],
+      "evidence": "64 B huge-page random chains: round-2 256 KiB medians 12.53125 and 12.75; 288 KiB 41.515625; 320 KiB 41.578125 TSC ticks/load."
+    },
+    {
+      "level": "LLC/L3",
+      "approximate_bytes": null,
+      "nominal_physical_capacity_bytes": null,
+      "observed_effective_transition_region_bytes": [
+        16777216,
+        67108864
+      ],
+      "evidence": "Round-2 primary layout: 16 MiB 41.71875; 28 MiB 49.953125; 40 MiB 156.375; 52 MiB 194.9375; 64 MiB 202.1875 TSC ticks/load. Compact layout at 40 MiB gives 95.453125/97.484375, while base pages at 40 MiB give 181.5.",
+      "interpretation": "Broad layout- and page-dependent effective transition; this interval does not bound nominal physical capacity."
+    }
+  ],
+  "timer_unit": "TSC ticks / dependent load",
+  "cpu": 32,
+  "numa_node": 0,
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "caveats": [
+    "The incomplete initial round1 attempt is preserved but excluded from both formal rounds.",
+    "The coarse 32 MiB point has block medians 89.890625-162.40625; all samples and tails are retained.",
+    "Measurement regions contain 138 involuntary context switches in total (at most 7 in one configuration), with no measured faults or voluntary switches; this does not rule out shared-machine or frequency effects.",
+    "Different layouts, page policies, batch lengths, and runs are kept separate. Consecutive timed batches are not independent experiment repetitions.",
+    "lscpu host inspection included cache specifications; the evidence and selected follow-up intervals come from new timing data, but this execution was not blind to hardware specifications."
+  ],
+  "third_round": {
+    "executed": false,
+    "assessment": "The requested two-round procedure is complete. Optional narrower L1/L2 sampling could refine 32-36 KiB and 256-288 KiB if needed. Exact LLC capacity remains unresolved and no further LLC search was performed."
+  }
+}

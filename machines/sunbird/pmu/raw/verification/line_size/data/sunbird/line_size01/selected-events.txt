@@ -1,0 +1,20 @@
+
+cache:
+  mem_load_uops_retired.l1_miss
+       [Retired load uops misses in L1 cache as data sources Supports address
+        when precise. Spec update: HSM30 (Precise event). Unit: cpu]
+        cpu/event=0xd1,period=0x186a3,umask=0x8/
+  mem_load_uops_retired.l2_miss
+       [Miss in mid-level (L2) cache. Excludes Unknown data-source Supports
+        address when precise. Spec update: HSD29,HSM30 (Precise event). Unit:
+        cpu]
+        cpu/event=0xd1,period=0xc365,umask=0x10/
+  mem_load_uops_retired.l3_miss
+       [Miss in last-level (L3) cache. Excludes Unknown data-source Supports
+        address when precise. Spec update: HSD74,HSD29,HSD25,HSM26,HSM30
+        (Precise event). Unit: cpu]
+        cpu/event=0xd1,period=0x186a3,umask=0x20/
+  mem_uops_retired.all_loads
+       [Retired load uops Supports address when precise. Spec update: HSD29,
+        HSM30 (Precise event). Unit: cpu]
+        cpu/event=0xd0,period=0x1e8483,umask=0x81/

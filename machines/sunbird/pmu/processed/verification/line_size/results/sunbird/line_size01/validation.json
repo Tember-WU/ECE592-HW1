@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "configurations": 24,
+  "timed_batches": 24000000,
+  "unique_workloads": 12,
+  "event_passes": [
+    {
+      "name": "l1_l2",
+      "event_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "l3_loads",
+      "event_indices": [
+        2,
+        3
+      ]
+    }
+  ],
+  "phase1_freeze": {
+    "manifest": "phase1-freeze/sunbird/freeze01/manifest.json",
+    "git_head": "f86eecbb6fce590f3d40b64487620888b33dcd93"
+  },
+  "raw_hashes_lengths_and_statistics_verified": true,
+  "actual_load_denominators_verified": true,
+  "all_pmu_groups_without_multiplexing": true,
+  "note": "Integrity checks, not proof of exact physical geometry."
+}

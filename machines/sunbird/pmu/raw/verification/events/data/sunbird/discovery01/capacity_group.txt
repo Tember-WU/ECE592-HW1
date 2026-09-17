@@ -1,0 +1,4 @@
+<not counted>,,mem_load_uops_retired.l1_miss:u,0,0.00,,
+<not counted>,,mem_load_uops_retired.l2_miss:u,0,0.00,,
+<not counted>,,mem_load_uops_retired.l3_miss:u,0,0.00,,
+<not counted>,,mem_uops_retired.all_loads:u,0,0.00,,

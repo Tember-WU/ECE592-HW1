@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-09-10T16:31:01.606454+00:00",
+  "python": "3.9.25",
+  "numactl_source_url": "https://dl.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/Packages/n/numactl-2.0.19-3.el9.x86_64.rpm",
+  "numactl_installation": "Extracted into build/sunbird/deps, prepended usr/bin to PATH; system packages unchanged",
+  "numactl_version": "2.0.19",
+  "sha256": {
+    "data/sunbird/setup/numactl": "78b354422e1b5359f3a8dab3cc3c7b3f930e5f46f5804504fc6e0cb544ad6dd8",
+    "data/sunbird/setup/numactl-2.0.19-3.el9.x86_64.rpm": "f05ed4e2690a3f03a7c3b648799e9a54b1ad0b1480c77e6dd00fb7fbaaa3921c",
+    "/usr/lib64/libnuma.so.1": "49ca4e1bc4a0c103989aac979b7aa930f961517105a925013d82134490dfd1d4"
+  },
+  "validation": "make MACHINE=sunbird capacity assembly; make check: all 10 tests passed; original benchmark and scripts unchanged",
+  "preflight_note": "lscpu output included cache specifications while checking host ISA/topology. Follow-up intervals and capacity interpretations use newly collected timing data; this was not a blind hardware-specification study."
+}

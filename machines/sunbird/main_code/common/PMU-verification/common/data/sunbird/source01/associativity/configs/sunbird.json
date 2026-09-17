@@ -1,0 +1,139 @@
+{
+  "machine": "sunbird",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 0,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "mem_load_uops_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_uops_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_uops_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_uops_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "associativity",
+  "batch": 128,
+  "line_size": 64,
+  "seed": 701,
+  "points": [
+    {
+      "name": "L1_k6",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 6,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k7",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 7,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k8",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k9",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k10",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k12",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 12,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k6",
+      "group": "L2_candidate",
+      "num_sets": 512,
+      "k": 6,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k7",
+      "group": "L2_candidate",
+      "num_sets": 512,
+      "k": 7,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k8",
+      "group": "L2_candidate",
+      "num_sets": 512,
+      "k": 8,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k9",
+      "group": "L2_candidate",
+      "num_sets": 512,
+      "k": 9,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k10",
+      "group": "L2_candidate",
+      "num_sets": 512,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k12",
+      "group": "L2_candidate",
+      "num_sets": 512,
+      "k": 12,
+      "max_k": 16
+    }
+  ],
+  "placement_note": "Frozen Sunbird Phase-I manifest reports CPU 4/node 0. CPU 4 was observed 100% busy at preparation; use idle CPU 32/node 0, a different physical core on the same socket. Actual CPU 32 SMT sibling is CPU 8.",
+  "event_passes": [
+    {
+      "name": "l1_l2",
+      "event_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "l3_loads",
+      "event_indices": [
+        2,
+        3
+      ]
+    }
+  ],
+  "phase1_freeze": {
+    "manifest": "phase1-freeze/sunbird/freeze01/manifest.json",
+    "git_head": "f86eecbb6fce590f3d40b64487620888b33dcd93"
+  },
+  "selection_note": "Preserve the frozen selected candidates: L1 64 sets (4 KiB spacing) and L2 512 sets (32 KiB spacing). K=6,7,8,9,10,12 spans both timing changes around 8-10. Frozen automated inference says L1=9 ways, L2=8; retain it for disagreement analysis. No new K or geometry selected from PMU counts."
+}

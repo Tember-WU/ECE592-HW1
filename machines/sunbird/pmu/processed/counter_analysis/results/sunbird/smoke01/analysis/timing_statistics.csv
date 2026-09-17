@@ -1,0 +1,4 @@
+host,vendor,year,workload,repeat,bytes,unit,n,mean,std,p5,q1,median,q3,p95,outliers
+sunbird,Intel,2014,beyond_llc,0,125829120,TSC_ticks/access,2000,389.50775,29.42943086223381,364.125,376.5,386.3125,396.75,414.75,41
+sunbird,Intel,2014,l1_resident,0,16384,TSC_ticks/access,2000,5.411,0.7046115507852535,5.125,5.25,5.375,5.5,5.6875,34
+sunbird,Intel,2014,llc_sized,0,31457280,TSC_ticks/access,2000,373.579125,33.79970877763779,346.4375,360.875,370.1875,380.75,398.690625,46

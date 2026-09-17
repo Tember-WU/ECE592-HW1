@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-09-10T20:52:52.625203+00:00",
+  "isa": "x86_64",
+  "binary_sha256": "9eff190d42254c954f79be28ec643e5e18701ddf76d018c006906e5a5ae6b715",
+  "disassembly_sha256": "c6322fa495d221aff23c1c1c9f205e621a15ab7aeb0e848459acebd673de92f0",
+  "timer": {
+    "timer_unit": "TSC ticks",
+    "timer_frequency_hz": null,
+    "timer": "LFENCE/RDTSC/LFENCE ... RDTSCP/LFENCE"
+  },
+  "checks": [
+    {
+      "function": "time_batch",
+      "loads_per_unrolled_iteration": 16,
+      "dependent_loads_by_register": {
+        "rdi": 16
+      },
+      "stack_references_between_timestamps": false,
+      "calls_between_timestamps": false,
+      "passed": true
+    },
+    {
+      "function": "time_independent",
+      "loads_per_unrolled_iteration": 16,
+      "dependent_loads_by_register": {
+        "r11": 4,
+        "r10": 4,
+        "r9": 4,
+        "rdi": 4
+      },
+      "stack_references_between_timestamps": false,
+      "calls_between_timestamps": false,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

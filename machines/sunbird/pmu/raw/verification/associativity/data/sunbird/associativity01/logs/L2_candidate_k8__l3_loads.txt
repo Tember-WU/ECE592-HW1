@@ -1,0 +1,14 @@
+Hit threshold (95%): 2875 ticks (batch size 128)
+Miss threshold (5%): 7685 ticks
+mapping_before base=0x7fbeb6000000 cpu=32
+Size:               2048 kB
+KernelPageSize:        4 kB
+AnonHugePages:      2048 kB
+numa_mapping: 7fbeb6000000 bind:0 anon=512 dirty=512 active=0 N0=512 kernelpagesize_kB=4
+cpu_end=32 minor_faults=0 major_faults=0 voluntary_switches=0 involuntary_switches=1
+mapping_after base=0x7fbeb6000000 cpu=32
+Size:               2048 kB
+KernelPageSize:        4 kB
+AnonHugePages:      2048 kB
+numa_mapping: 7fbeb6000000 bind:0 anon=512 dirty=512 active=0 N0=512 kernelpagesize_kB=4
+K=8 P=0.000558 med=10.8438

@@ -1,0 +1,1036 @@
+{
+  "recorded_utc": "2026-09-14T20:42:23.375654+00:00",
+  "git_head": "c44c3c4ef75e06e49a42885a86755abf5f44e36a",
+  "files": [
+    {
+      "path": "data/artemisia/hitrate01/config.json",
+      "bytes": 2050,
+      "sha256": "3fdaea264ac851cfc1705ac27508393122c472c14789dfea2578747b2ca23069"
+    },
+    {
+      "path": "data/artemisia/hitrate01/environment.json",
+      "bytes": 1246,
+      "sha256": "36d06fd3a0e1b227792a1940ec4fef62c0d71f68acf93415b9dba984b1b86aaf"
+    },
+    {
+      "path": "data/artemisia/hitrate01/manifest.json",
+      "bytes": 234769,
+      "sha256": "944d4dfb6d0e0722ce96238b56eb31434338295949fc9e0ddf5f792c15f9e123"
+    },
+    {
+      "path": "data/artemisia/hitrate01/model.json",
+      "bytes": 2884,
+      "sha256": "eff9942d3321acf99692660e809503738cf0fe0cf1277aa8dfb45819449bf9c7"
+    },
+    {
+      "path": "data/artemisia/hitrate01/threshold-checkpoint.json",
+      "bytes": 267,
+      "sha256": "5b0e81b15c622a15e9cc33388b8947ced5ad3ebab6fae942fcfb282979e5c9b5"
+    },
+    {
+      "path": "data/artemisia/hitrate01/validation-plan.json",
+      "bytes": 8487,
+      "sha256": "10d8aba81aa80d80e6c74848d33914010387847fc1494756c4263304de04a4e8"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/boundary_48k_r1_pmu.txt",
+      "bytes": 168,
+      "sha256": "ab696b40a66d561bfecf13ea61012eeb19f00027b1550367006f1ff88890ce1e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/boundary_48k_r1_software.txt",
+      "bytes": 168,
+      "sha256": "5befe533612721b380faf8591fa4c2fe3909eb89304f16f960ae8b2184541f8d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/boundary_48k_r2_pmu.txt",
+      "bytes": 168,
+      "sha256": "cde3194885aa85f3f035fb1db964e2c9f46c65c9090da258ec4475b9383dcc76"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/boundary_48k_r2_software.txt",
+      "bytes": 168,
+      "sha256": "aeb1fbc3577df30407e0b2136f69aadfe9e89142e9a7686d9fa5519ac5209697"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/boundary_48k_r3_pmu.txt",
+      "bytes": 168,
+      "sha256": "e6d87fecb6e0caa10b49ab213ec2e87f5fd6993b6025a3c16c64d37ff9ad8fd1"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/boundary_48k_r3_software.txt",
+      "bytes": 168,
+      "sha256": "739e61a949b6201eb2061ebe8bbdf1895380331e84e70dac3ce949e7cc3e10c6"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/counter_overhead_pmu.txt",
+      "bytes": 165,
+      "sha256": "cbb0daf9e31634c278794aca9ac4f604557ad2f5d45e0ce9768e6a896e88aa49"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/deeper_8m_r1_pmu.txt",
+      "bytes": 87,
+      "sha256": "a82faaef128574aefea1c9f7e86578aebabc418e927942f3822eb34a30b0fe13"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/deeper_8m_r1_software.txt",
+      "bytes": 87,
+      "sha256": "0e30f648cbbac993b0d57ed4f03ddc4176dc87195b01b94bd17857cb93af0260"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/deeper_8m_r2_pmu.txt",
+      "bytes": 87,
+      "sha256": "f2fb43c4999bc413f465c0a42db0b5da753ff5e1c0204c6e2f36992901ca13bb"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/deeper_8m_r2_software.txt",
+      "bytes": 87,
+      "sha256": "c596b12bc37efdaed49333871afc285c1eae54452fdbae07cb611e5a797d49e6"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/deeper_8m_r3_pmu.txt",
+      "bytes": 87,
+      "sha256": "511f060d9d73d565eec3401e6088019e9147a54190a2315c7cf7c75b80758da0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/deeper_8m_r3_software.txt",
+      "bytes": 87,
+      "sha256": "aa799bb7b391a57873e58211ad1edff7f67d7f1e10d56894212b369ab99faf14"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/hit_check_software.txt",
+      "bytes": 165,
+      "sha256": "e9fcd032d1f4fe96b4dbcc7404cd84be0230188e534d4dad40fcd2f1e1c8bbe9"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/hit_fit_software.txt",
+      "bytes": 165,
+      "sha256": "65341d1de145587e545b4dbcbe740b4ca0b5ea59f413c6b96939720962b04a2b"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/large_128m_r1_pmu.txt",
+      "bytes": 90,
+      "sha256": "86db036f582529bd5b1fa06b77085ad90d673e16fda81dcb1d25b963d7beca1b"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/large_128m_r1_software.txt",
+      "bytes": 90,
+      "sha256": "b73113fb5b62dfeb659ffe1c6b8e2c084b5e64d1d60294a8796fd92f6ae3ce95"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/large_128m_r2_pmu.txt",
+      "bytes": 90,
+      "sha256": "5ae39219b140fc6bcda1f5a13caeb0737db2bc234045fa605e10e534fd414602"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/large_128m_r2_software.txt",
+      "bytes": 90,
+      "sha256": "29d1bf1645ffd9ec42184fbc6b41999f346702ec0d80c75177bd96a63c82420a"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/large_128m_r3_pmu.txt",
+      "bytes": 90,
+      "sha256": "d52831b5c0c855be93f0c84c1725a66d46674fd62e114bce63afa2f997342fd4"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/large_128m_r3_software.txt",
+      "bytes": 90,
+      "sha256": "69f9497b604cd0b73c4f69167b3dfb3c72ac0c29d105aa22844e0f42aab0d018"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/miss_check_software.txt",
+      "bytes": 87,
+      "sha256": "fb1b48ee8376a48bc6756d29913c9818b4b259c06774287c55b0c1d4eede5f25"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/miss_fit_software.txt",
+      "bytes": 171,
+      "sha256": "9bc8a3d6a4686d3a35176dc50de9563b2a0b5cb2619df314362d945e17007a83"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/nonresident_128k_r1_pmu.txt",
+      "bytes": 168,
+      "sha256": "3930fcf582f247bad687873bad9b4c8774b8e8c73344f82cf5b6bfa748bede4b"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/nonresident_128k_r1_software.txt",
+      "bytes": 168,
+      "sha256": "53e831555d61b393976e94eca6afa16a7ed6b423f8d81fc1473d5b2ee50c3131"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/nonresident_128k_r2_pmu.txt",
+      "bytes": 168,
+      "sha256": "36b5a7f82392dd1a91955339130529723ce9e4e09fe97386b8263c3245ce7d7f"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/nonresident_128k_r2_software.txt",
+      "bytes": 168,
+      "sha256": "8a5c8c0340f61890051510a671251fb890b74e453f78f73bd20292c2569b3f71"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/nonresident_128k_r3_pmu.txt",
+      "bytes": 168,
+      "sha256": "e89a0e512c9a9e1a720752e50e0e6c32124494464fce92d436154873856c584e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/nonresident_128k_r3_software.txt",
+      "bytes": 168,
+      "sha256": "107fb1ca3abaa1e5644c890815089fabb1de383c7add6925e1d3a247f70f5ae1"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/resident_16k_r1_pmu.txt",
+      "bytes": 165,
+      "sha256": "39d00fbe95382a0b94b9fe1040fb6606c8d7e52d18619d8e5fe287bb0b3f3840"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/resident_16k_r1_software.txt",
+      "bytes": 165,
+      "sha256": "8b27872ee75b1a21557203254119ad0a20f3968052c730639dfdf4fdfcec01cf"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/resident_16k_r2_pmu.txt",
+      "bytes": 165,
+      "sha256": "1a9393d3570fa79daa6a59381ecef5a14f3d079f629756f6a2b694911e2bac22"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/resident_16k_r2_software.txt",
+      "bytes": 165,
+      "sha256": "af5186710bb2d7d54c12183413819070cfbbb6ff9b3d680a59f23c45b5d1a5ee"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/resident_16k_r3_pmu.txt",
+      "bytes": 165,
+      "sha256": "244e4e36571a1f532c8a87754de7e8e72f5e83e119d1be910706b8506a6f2069"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/resident_16k_r3_software.txt",
+      "bytes": 165,
+      "sha256": "6f67c3a927e4b1f287c0080efe24f9cf2a4b8b430dbd2378f281cd89dab19f17"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse2_256k_r1_pmu.txt",
+      "bytes": 168,
+      "sha256": "4b741b1dff9a3938514ac637134730b1c45ab0a0ff8492e352cf8cc197f14f09"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse2_256k_r1_software.txt",
+      "bytes": 168,
+      "sha256": "1df457a0cc1e9b7c8b2e50a60fd69796f25ff67de952714c100b39f33ea352b4"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse2_256k_r2_pmu.txt",
+      "bytes": 168,
+      "sha256": "8bdebb795a46f4e15c3745406e61ac9971c9d7539696aba47241a1f3d8ebedc8"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse2_256k_r2_software.txt",
+      "bytes": 168,
+      "sha256": "8187a19cd8d2f5db36053b7b764d6cfdf0105490b1e6dfe467e7a3a448c064cf"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse2_256k_r3_pmu.txt",
+      "bytes": 87,
+      "sha256": "b254ed020adf6cccf615cf9c20349bca27a3e3fd2a605978ca2d557839a438d4"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse2_256k_r3_software.txt",
+      "bytes": 168,
+      "sha256": "d4171406ec8963e4f364b9e425de48f2bbf645c82a4dbd105124f5a8e7e37550"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse4_256k_r1_pmu.txt",
+      "bytes": 168,
+      "sha256": "01a8a4c50d474bbad73d960b09b3c40da82bee387bd80ede65875c61928893c7"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse4_256k_r1_software.txt",
+      "bytes": 168,
+      "sha256": "c511f59b8818c662df7411d2748f590589f9a38dc2f077ca0526df1175c880b7"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse4_256k_r2_pmu.txt",
+      "bytes": 168,
+      "sha256": "795512248654a0f8b5d88b2ffa1f037d4cbb37e13dcbea41053ddf928548f367"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse4_256k_r2_software.txt",
+      "bytes": 168,
+      "sha256": "71e754b0058488de458a4acd883094ebea9179e3cd31bad9958b45249e2bf570"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse4_256k_r3_pmu.txt",
+      "bytes": 168,
+      "sha256": "71a65acfaadf1c2738602c3bbe051d418d83acbe31747697c96aa77ffaaa23ae"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse4_256k_r3_software.txt",
+      "bytes": 87,
+      "sha256": "6a2d3e564df425e562be014c1cc8810253f7a1e21bcb83ad80329f9e658fb90c"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse8_256k_r1_pmu.txt",
+      "bytes": 168,
+      "sha256": "0ff45abb3aa9e42ca036754789c4c58895ed05bcf642e2559327425772804482"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse8_256k_r1_software.txt",
+      "bytes": 168,
+      "sha256": "cdc3ee27d18e7d203df47ae7853417bee2f9d93476e220d3a6c7a29808096082"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse8_256k_r2_pmu.txt",
+      "bytes": 168,
+      "sha256": "9436302504d4c6ae48fa37c58d07269016a389ba9194ac989af55bda751a99b5"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse8_256k_r2_software.txt",
+      "bytes": 168,
+      "sha256": "2411a2fe76955849f14b7d60b8e0a84aa857f8ec62f5e052dc9f73c74de855a4"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse8_256k_r3_pmu.txt",
+      "bytes": 168,
+      "sha256": "82da133af7f7745b0e3a491319fe2298d0338bbc4cfd198f8b0af89de0e6a555"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/reuse8_256k_r3_software.txt",
+      "bytes": 168,
+      "sha256": "68773faae4a48d1cb4045cfdfa2bf000b55b3d0da8bff3d0a07d3d93706c93cd"
+    },
+    {
+      "path": "data/artemisia/hitrate01/logs/timer_software.txt",
+      "bytes": 165,
+      "sha256": "0d9bc32c09bfc519f76c97f12d4958311700962ea2601453ba8cf5d85c82d1f8"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/boundary_48k_r1_pmu.json",
+      "bytes": 371,
+      "sha256": "b852af55f0df913ac0c8643a88d51ddad859f476817910d33f1fd508db512890"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/boundary_48k_r1_software.json",
+      "bytes": 277,
+      "sha256": "4a1d870d8947626e5b662921cb8a3ed3e330dfe3f9cc1236d7c7059510987742"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/boundary_48k_r2_pmu.json",
+      "bytes": 371,
+      "sha256": "3a6487f9843ff04964f1d23b36fe8204bc4361e53dc608b105650181efb8d382"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/boundary_48k_r2_software.json",
+      "bytes": 277,
+      "sha256": "5ddb31e4706d0b072200a57fbef53377d4061954e94e4ceca971e32fdc0ddda0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/boundary_48k_r3_pmu.json",
+      "bytes": 371,
+      "sha256": "d6614b60289f10116f91a224602cdb9d14aaae7ed1967a981d6543233855bc96"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/boundary_48k_r3_software.json",
+      "bytes": 277,
+      "sha256": "84e134942653c8e6cf4b263190d7b2eff5e3c4602c0c0afdcb028e8208b12a7d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/counter_overhead_pmu.json",
+      "bytes": 356,
+      "sha256": "283215e3a9c0c28485b98ae8510e3f77bbce910883b1dbde19b63635844e0e3c"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/deeper_8m_r1_pmu.json",
+      "bytes": 367,
+      "sha256": "4002d1e6d97e6cad461364f5b08ecee4828674f6816568a2ca5a850e1d27c9d8"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/deeper_8m_r1_software.json",
+      "bytes": 273,
+      "sha256": "c0574a50235be8a95a2991418f3431cb6f529c7676123148ab3fc0065c133ca0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/deeper_8m_r2_pmu.json",
+      "bytes": 367,
+      "sha256": "1bb66499315eac8b4b146fbaa21a73d433d3d99a680aefd6321b6416b6c8ae05"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/deeper_8m_r2_software.json",
+      "bytes": 273,
+      "sha256": "c0574a50235be8a95a2991418f3431cb6f529c7676123148ab3fc0065c133ca0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/deeper_8m_r3_pmu.json",
+      "bytes": 367,
+      "sha256": "3abab30541d81095be77751f265a3408bdeed99c3d9579cbd5000ba15d218b0e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/deeper_8m_r3_software.json",
+      "bytes": 273,
+      "sha256": "c0574a50235be8a95a2991418f3431cb6f529c7676123148ab3fc0065c133ca0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/hit_check_software.json",
+      "bytes": 272,
+      "sha256": "f1210233923bab76d34042b28a3b017d97569923718200ae58f6dd81e701740d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/hit_fit_software.json",
+      "bytes": 272,
+      "sha256": "f1210233923bab76d34042b28a3b017d97569923718200ae58f6dd81e701740d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/large_128m_r1_pmu.json",
+      "bytes": 369,
+      "sha256": "ebd7fe59a550949a38c051a3bf532e073f30a4288b934a279b2a64b5a309e975"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/large_128m_r1_software.json",
+      "bytes": 273,
+      "sha256": "c0574a50235be8a95a2991418f3431cb6f529c7676123148ab3fc0065c133ca0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/large_128m_r2_pmu.json",
+      "bytes": 369,
+      "sha256": "bd5447c3d54b1afa4e8b7e416f60a1f79c24552778d90a21b2a1e299219e8fa9"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/large_128m_r2_software.json",
+      "bytes": 273,
+      "sha256": "c0574a50235be8a95a2991418f3431cb6f529c7676123148ab3fc0065c133ca0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/large_128m_r3_pmu.json",
+      "bytes": 370,
+      "sha256": "664d8954195dba1c40a684d8fb43ea3425079cab83eccc92348f99f206e172a1"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/large_128m_r3_software.json",
+      "bytes": 273,
+      "sha256": "c0574a50235be8a95a2991418f3431cb6f529c7676123148ab3fc0065c133ca0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/miss_check_software.json",
+      "bytes": 272,
+      "sha256": "f1210233923bab76d34042b28a3b017d97569923718200ae58f6dd81e701740d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/miss_fit_software.json",
+      "bytes": 272,
+      "sha256": "f1210233923bab76d34042b28a3b017d97569923718200ae58f6dd81e701740d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/nonresident_128k_r1_pmu.json",
+      "bytes": 370,
+      "sha256": "1a678621a1e10c826a9224a99b0212b00f537b6d92fa1923b8bb9f8c29906cdb"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/nonresident_128k_r1_software.json",
+      "bytes": 276,
+      "sha256": "0cf94d079ebf90298eed6890d10460c355fb1a54b35239fbdbd648aa806b627e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/nonresident_128k_r2_pmu.json",
+      "bytes": 370,
+      "sha256": "ee7d1854f7bcb15b83d51587d174b70f0ab1b96b69bdf18e2395e4dac47557bb"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/nonresident_128k_r2_software.json",
+      "bytes": 276,
+      "sha256": "60da61c6eef5bb37da630de8d215be3fbfe61ad8c7323faeb0a2301da44e48c2"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/nonresident_128k_r3_pmu.json",
+      "bytes": 370,
+      "sha256": "4013cfd820e07959b675aae411eb9c4e980000ba353cabc7448ba9ea5e153b46"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/nonresident_128k_r3_software.json",
+      "bytes": 276,
+      "sha256": "61185a66f791effe6ed891645cf2c05f1018fe2b8eb7a327a12445028fe8ccfe"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/resident_16k_r1_pmu.json",
+      "bytes": 369,
+      "sha256": "dd6e37c670347bdd710031b393e92afb77dfbbf5aad8c97a9d7585894101471e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/resident_16k_r1_software.json",
+      "bytes": 278,
+      "sha256": "6fd38e1bd8b9cd0da10db51ca95ec2f430e7f1dd251d76b9da6ab66e102c915a"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/resident_16k_r2_pmu.json",
+      "bytes": 369,
+      "sha256": "761c4c5a335a5d7132486c7bf2ccf82f1a88f7d98b26063a60527cd6f6944d47"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/resident_16k_r2_software.json",
+      "bytes": 278,
+      "sha256": "32e76ef46e66b4bcec275d9e5a919b73b4872c1a8d542e0e05e83c1b5f12c889"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/resident_16k_r3_pmu.json",
+      "bytes": 369,
+      "sha256": "2604e53161de35f9c09c2c575f7a16bbd43fbd9ed642fe90a3f5bdf0ff354339"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/resident_16k_r3_software.json",
+      "bytes": 278,
+      "sha256": "78c08a0bcd573b12d3007efb2585eb249c0ed5a6f30c344eadee92dff0bcca02"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse2_256k_r1_pmu.json",
+      "bytes": 372,
+      "sha256": "4eb0f40afaaab7b69d847ae0557d2ac65adc08965a42c4e6f40bc3c856d4cec9"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse2_256k_r1_software.json",
+      "bytes": 278,
+      "sha256": "2442fb59b0b2c6463c10e4be7ca95b41ec260bb633f1eb7e1b70e85c6426a448"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse2_256k_r2_pmu.json",
+      "bytes": 372,
+      "sha256": "d191a177d65f3e83646972c227d1fec63f1aa089cb5542192315b26ea925401a"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse2_256k_r2_software.json",
+      "bytes": 278,
+      "sha256": "8899f05ab33c300e59ee190c7f463b2f2fd337f5e55a399baa4b7be05c2cb9f7"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse2_256k_r3_pmu.json",
+      "bytes": 372,
+      "sha256": "8da481b0c734a776b4c929cf6ec0cae80ae9f1102331e3290d73aa86dae646d1"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse2_256k_r3_software.json",
+      "bytes": 278,
+      "sha256": "9d0eabe09132f4927bfd66511b83671510f57406b8e3e4d652d55bf56214e14f"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse4_256k_r1_pmu.json",
+      "bytes": 372,
+      "sha256": "b42f0fa60c4c8a509da17211ccd065bc77341839e43966a8c2fb5517dc577250"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse4_256k_r1_software.json",
+      "bytes": 278,
+      "sha256": "ed18d0246a66382a152f65624eaba469666f476a68aeab32c9118242d8d42918"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse4_256k_r2_pmu.json",
+      "bytes": 372,
+      "sha256": "5d54c2293086947c79a55a1cd5f2e0abda3701211a500d2212d749254cce1cbf"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse4_256k_r2_software.json",
+      "bytes": 278,
+      "sha256": "672115e7b7fab49facc3f79341c51ecb360df9946faeb8f02d7e0acf80faa9bc"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse4_256k_r3_pmu.json",
+      "bytes": 372,
+      "sha256": "686bffa1ebb68e1220da71aa9bb28e327120b462783cf91c0c79fa6d66fce991"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse4_256k_r3_software.json",
+      "bytes": 278,
+      "sha256": "13dae848bec5de73dd01cc733332b1226fecb67b2d166cb549b4dc6ec61e4c6a"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse8_256k_r1_pmu.json",
+      "bytes": 372,
+      "sha256": "9697997785713c099ba5b73df1075a6e4f1e872ce6dbcad50cc9fe2deeb78e8f"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse8_256k_r1_software.json",
+      "bytes": 278,
+      "sha256": "f7de096164b61ab208d3fea26ddb0147c4dce81fbc0232a9fcb7772440a8bad3"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse8_256k_r2_pmu.json",
+      "bytes": 372,
+      "sha256": "bc7bf6dbbad3d8601e06dcc9b4a18015444cf992192add03409e63683ebcc56c"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse8_256k_r2_software.json",
+      "bytes": 278,
+      "sha256": "76aadbfdc8f2c64e10ade6ffefeecf46a2ccfc182a34c04fa02731b27d00adb7"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse8_256k_r3_pmu.json",
+      "bytes": 372,
+      "sha256": "4bb73a6a8f8735c3e33597f45cc5c867ea5dfb72d0a59e06f16c27f4614ed043"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/reuse8_256k_r3_software.json",
+      "bytes": 278,
+      "sha256": "1bdf4fac91008434ad9ced9d1fbc8ab7bf8ae2c612569e99fbfd1fb523f5d5ec"
+    },
+    {
+      "path": "data/artemisia/hitrate01/metadata/timer_software.json",
+      "bytes": 266,
+      "sha256": "7b333f7cc4c07a0640347f2a7bb0d6a9f409953d66789b1ae234a734bacd1bbb"
+    },
+    {
+      "path": "data/artemisia/hitrate01/preflight/compiler.txt",
+      "bytes": 248,
+      "sha256": "fd00e11585995e1a29ac81f3fb25347cc61ae17f924e135727f8961add849de0"
+    },
+    {
+      "path": "data/artemisia/hitrate01/preflight/perf-list-details.txt",
+      "bytes": 773594,
+      "sha256": "4fb405865eb5c31793be9d0765294cddbbe07d42ed215c3706dcf5a305865894"
+    },
+    {
+      "path": "data/artemisia/hitrate01/preflight/topology.txt",
+      "bytes": 3164,
+      "sha256": "2e2fc28d672355a40bf4eaee9435e49fa92a0510a1fe27dec0861bb63213c694"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/boundary_48k_r1_pmu.u64.gz",
+      "bytes": 350744,
+      "sha256": "169b35775b5948922a1ade65d198f8b4b1fe8345dbbb880aae41f119c84cb823"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/boundary_48k_r1_software.u64.gz",
+      "bytes": 351566,
+      "sha256": "217546341320bcbb791fd6f789b86f5543842337ce7b762599283e3f8abffe8e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/boundary_48k_r2_pmu.u64.gz",
+      "bytes": 354603,
+      "sha256": "63f8c26dfb0e021cc1846d81cec4d3797bd8e57611a2b2960d1272cd6c2b1004"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/boundary_48k_r2_software.u64.gz",
+      "bytes": 352482,
+      "sha256": "be875b8ac912c05fc1febb8abfed88f26c2742ae2ec6fdb3b1d7531ceaa2a6f8"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/boundary_48k_r3_pmu.u64.gz",
+      "bytes": 362210,
+      "sha256": "f23479124fa38abe1a56b505f12ce47b6312a3326eb2ce9263684bff3627f2a7"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/boundary_48k_r3_software.u64.gz",
+      "bytes": 361855,
+      "sha256": "8ad5b540c71a0426b9584bbb70d744ee2f10fda751940c174fc1b525b78fadac"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/counter_overhead_pmu.u64.gz",
+      "bytes": 279864,
+      "sha256": "c4e035c4a5c71ec34d318bf2f286fc67002925666d8c7c4798ce9a686bda0f31"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/deeper_8m_r1_pmu.u64.gz",
+      "bytes": 917963,
+      "sha256": "5cbd368c3648252ab6d8d4faaec694e063e00c9f2fadc5fbc7c89712650fe6b3"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/deeper_8m_r1_software.u64.gz",
+      "bytes": 921376,
+      "sha256": "57569da94e5d03235347f028cff6cb21529b40a8d23ac71f1f92327763f43fc1"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/deeper_8m_r2_pmu.u64.gz",
+      "bytes": 903507,
+      "sha256": "121aab38601d93b66c5483bb2260ac09f59297199bf9e5c0a3ddc92d3cc90d58"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/deeper_8m_r2_software.u64.gz",
+      "bytes": 915894,
+      "sha256": "317c02148901d76fbbf9fad35a2bfedbd1efb2460e9c80410b4afb2ea4a7ae04"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/deeper_8m_r3_pmu.u64.gz",
+      "bytes": 918099,
+      "sha256": "c7b6074066d65d84856b28a044de4f49b0602df8ba923717faf6aec514730fda"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/deeper_8m_r3_software.u64.gz",
+      "bytes": 916495,
+      "sha256": "68f65adac3cafbf22bae6db75d4e2b0877abffb16a07d9073d6c574aff2cd817"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/hit_check_software.u64.gz",
+      "bytes": 289897,
+      "sha256": "381b97ca74ad39d9298c4e2160424d236bea0f71bb2c08b5a1e48473432e3e79"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/hit_fit_software.u64.gz",
+      "bytes": 291200,
+      "sha256": "916fbcb93d09cc580ad27c4702036d0f9da301e20e3e0e3b1963a07808376e61"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/large_128m_r1_pmu.u64.gz",
+      "bytes": 1225251,
+      "sha256": "dae36fc060e70118c6413eb49b7bd4085b9cb5e9014dce4c50f94d815b854068"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/large_128m_r1_software.u64.gz",
+      "bytes": 1204723,
+      "sha256": "872256c3c5a6257dbc18af17375495dd05a85dbf9020f2b4b1f32dcbd7844dc3"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/large_128m_r2_pmu.u64.gz",
+      "bytes": 1209248,
+      "sha256": "3cef0fa1ae612799e2071e41c575c189be86ba48f3c2249c35256bcf5dd4ccb4"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/large_128m_r2_software.u64.gz",
+      "bytes": 1220196,
+      "sha256": "1b175636570c770e0b2490c68bf4d2c6bfa824a3b0234e492278c0236da94a8b"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/large_128m_r3_pmu.u64.gz",
+      "bytes": 1241638,
+      "sha256": "9f85f8e395b354a41107897e50506295653704db8ee2f087f82e2059e7cfc832"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/large_128m_r3_software.u64.gz",
+      "bytes": 1240080,
+      "sha256": "7fe00bb7a7b2824ba000ced66e491aacf6744569e5d0715a13dd0d523ff9fb09"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/miss_check_software.u64.gz",
+      "bytes": 522527,
+      "sha256": "fac78abc287aa48acf099d9af664db5f799db1bc9bf85d15fefb4822d087eb20"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/miss_fit_software.u64.gz",
+      "bytes": 524121,
+      "sha256": "14de281a2aaa58529f17fe730e8ec594dc9c5697d151d508c17a8a9b42e588ea"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/nonresident_128k_r1_pmu.u64.gz",
+      "bytes": 315599,
+      "sha256": "c4f5ce79970ffb06a2daed39cee135165fae92c715efb00d47f6da77bd96e835"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/nonresident_128k_r1_software.u64.gz",
+      "bytes": 309414,
+      "sha256": "e28dfdf5e55b0db81c4ae2921aecf50e11072f90bbeab296cb64641aa3fda9c2"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/nonresident_128k_r2_pmu.u64.gz",
+      "bytes": 312315,
+      "sha256": "6033abbf8e2a9eed7f9fab616b75ba86995906a127f0f5943beb42e91f16cb06"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/nonresident_128k_r2_software.u64.gz",
+      "bytes": 311711,
+      "sha256": "c9412a222f2ac5e17a9be7bbb46b0f8de02abf92a1f0cc20414d019976905135"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/nonresident_128k_r3_pmu.u64.gz",
+      "bytes": 313257,
+      "sha256": "dfdc55b09f0d6ab5a90c2ece94e861a82804755ae0ba5de3f142fb072d2ab9e5"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/nonresident_128k_r3_software.u64.gz",
+      "bytes": 311971,
+      "sha256": "fc53a7537f00d06ecfb6783ab8dad8adfba0e431eb490553ab174104e5d3f090"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/resident_16k_r1_pmu.u64.gz",
+      "bytes": 291302,
+      "sha256": "c444317b7e22bd9d184f08c467dc62563a2d4bb4072bd29db64472ce1710682d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/resident_16k_r1_software.u64.gz",
+      "bytes": 290358,
+      "sha256": "dc75a99781b96cd3138e00d450d970aa3fde42329631b40d2f5eeb8ccd7fd90e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/resident_16k_r2_pmu.u64.gz",
+      "bytes": 291423,
+      "sha256": "a29dda5967373544fa194b23e3b2cac684504f77e3fb05991133b79d0f8b485d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/resident_16k_r2_software.u64.gz",
+      "bytes": 291004,
+      "sha256": "567c29c4e42b8ebf8c497846814f6b7f01d0aca57d579af5bb8c08d428873444"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/resident_16k_r3_pmu.u64.gz",
+      "bytes": 291642,
+      "sha256": "2d3c465bd54b34531e64a675707b07bc7b22d4def28aef06246e6cbb8a9a46cd"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/resident_16k_r3_software.u64.gz",
+      "bytes": 291061,
+      "sha256": "586fbc88e8c4469e8dac42e0c6548d847ff9851f7b6319e8d0f56d770494db4e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse2_256k_r1_pmu.u64.gz",
+      "bytes": 334400,
+      "sha256": "d61cdbe9ca6924010e32fe7f46026c28f41f980a60cd23016237e9fef9a8a086"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse2_256k_r1_software.u64.gz",
+      "bytes": 329993,
+      "sha256": "cc10c6b3e10ad5b89866874bf367e54f76118cc7007903ed1dc905c6752e613b"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse2_256k_r2_pmu.u64.gz",
+      "bytes": 336099,
+      "sha256": "14b303851631a7bff45cccc6b125377f0c6e633e076fc392bd8c802dceae20a4"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse2_256k_r2_software.u64.gz",
+      "bytes": 329218,
+      "sha256": "1ffbceaedf17d78ca77f0940cf90f92e657bbf2b6ff8321bd8affc86f10c5e98"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse2_256k_r3_pmu.u64.gz",
+      "bytes": 335004,
+      "sha256": "dea29d1c88793bd78cf00d160dfb416c9bf61f9d88d6b378498ad3f3b4c87d39"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse2_256k_r3_software.u64.gz",
+      "bytes": 333228,
+      "sha256": "e30cd9c901464c526e593c013ced8a959f37fabad1ce2bec4a360d1b169d9d62"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse4_256k_r1_pmu.u64.gz",
+      "bytes": 365064,
+      "sha256": "705224b2f4a960276f9dbfca3944fc091143484d581b905d317208e9ec50d970"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse4_256k_r1_software.u64.gz",
+      "bytes": 360188,
+      "sha256": "4dcdcfbdde3519fe2c200b2225d398dcfd2d2c55e607d2bf61ad8f5dd353a6c4"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse4_256k_r2_pmu.u64.gz",
+      "bytes": 366735,
+      "sha256": "33832bcd40c332680fc34196591af2cffc5b48864d88738b5b85f3fd2b08b4df"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse4_256k_r2_software.u64.gz",
+      "bytes": 361855,
+      "sha256": "8e44a12df7090ee3214ab6f5987c920f063589a48bb986515661000b5bdae1fe"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse4_256k_r3_pmu.u64.gz",
+      "bytes": 367918,
+      "sha256": "2a215c87fdc87afdecfcb019966be0e6a509b57e79f4221cb8e169ab9345f8ba"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse4_256k_r3_software.u64.gz",
+      "bytes": 361213,
+      "sha256": "914e5724b7e986d3627775f8d506e4be7d001f15a521160e2fc3ee1c3943d13d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse8_256k_r1_pmu.u64.gz",
+      "bytes": 394108,
+      "sha256": "fa4897049391632684fab43437b7c1ec87b8037408b0a4b3b65e84446d037c7d"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse8_256k_r1_software.u64.gz",
+      "bytes": 389852,
+      "sha256": "7e08759ae394d027435eea3c3f022c338c80e907ef849cad5afda9c2828c30d1"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse8_256k_r2_pmu.u64.gz",
+      "bytes": 393451,
+      "sha256": "b4a14de46f5b7923360205b6603aa80f60fd5409d6372bfe21d347409128e5d3"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse8_256k_r2_software.u64.gz",
+      "bytes": 388759,
+      "sha256": "fa53a2f6aa5455641e83578bce3e74f882492cf39eb435d7aba00ff9c8b65907"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse8_256k_r3_pmu.u64.gz",
+      "bytes": 396231,
+      "sha256": "56db06cd28f957019cc9efddc85ffbbd84ab8aab0112e0f11d0b2718cdb9dc34"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/reuse8_256k_r3_software.u64.gz",
+      "bytes": 388937,
+      "sha256": "57cc0b11954564b094a3019fad72ae6441b466bebda0849053bfef397fdf237b"
+    },
+    {
+      "path": "data/artemisia/hitrate01/raw/timer_software.u64.gz",
+      "bytes": 280861,
+      "sha256": "51f035bc269aab4efd4506cab57a893ba0f51598644ea27eeaf9312cdbf4e7e2"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/Makefile",
+      "bytes": 563,
+      "sha256": "79b5a504548a5683f54d58deef0a5598a739602291e5118354794cb4164c9fb8"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/requirements.txt",
+      "bytes": 28,
+      "sha256": "1025ee9f2d530a2a9505aabde96e98334447b114b71a615ce651715f7d12833e"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/sha256.json",
+      "bytes": 1296,
+      "sha256": "c8afaf6e88742e391328d6fc93622d7b48863deb9ef1dab0fc33a349b3fee338"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/compiled/hit_rate",
+      "bytes": 26536,
+      "sha256": "e22b43ac55a22fce30c8ddcd36be76c2a290d90ba3e16f0e7de7ab26699cc532"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/compiled/hit_rate.dis",
+      "bytes": 48121,
+      "sha256": "50525866765286cfd8d11a6beb986cec11c0b550a12ee790281a69d22abbd774"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/compiled/verify_hit_rate",
+      "bytes": 35744,
+      "sha256": "93c7a247745f308b83b6f2d1599d0f30e626c515f978d4f8feb9741248b896a8"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/compiled/verify_hit_rate.dis",
+      "bytes": 62727,
+      "sha256": "f947c9110f87ed5a07eaca6ce95c26736f35c32f8c209e14fa3babf563ed0086"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/configs/artemisia.json",
+      "bytes": 1630,
+      "sha256": "0630a42e3b3164ece8f8beb762b8296305d0192f4fa625b71510217d903fc74b"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/scripts/analyze.py",
+      "bytes": 19473,
+      "sha256": "c5c5fa64f20c0b84611b96740b35841655a28c7801ea60c78995e7f2ddb91af1"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/scripts/estimator.py",
+      "bytes": 3517,
+      "sha256": "6275156517966e32976cfb6533790f9a2a25b5b5f8e630ce5a1e533cc70a89ae"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/scripts/run_experiment.py",
+      "bytes": 11120,
+      "sha256": "90ef5e21f0d17f9c92c642a53db19a116b0ca42f5cb76e74a8ca4b26057c14ec"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/src/hit_rate.c",
+      "bytes": 6012,
+      "sha256": "dbd405aa7132d1862ff42e55ca881612753fe5d63f92fe2b3370d3d7699965d2"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/src/kernel.h",
+      "bytes": 3208,
+      "sha256": "d4868149a28b7241fabf449cb8c48b45be5fd3af2b9493ece781d56734640036"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/src/pmu.h",
+      "bytes": 1922,
+      "sha256": "d52dd7a33e279e473386630e04c566c89074afbd2422226a53906bde8196bb44"
+    },
+    {
+      "path": "data/artemisia/hitrate01/source/tests/test_estimator.py",
+      "bytes": 2793,
+      "sha256": "29d36e4f3a65700094396fc5a5b367ab8e1c5c75d11293681b9932d0bf59a911"
+    },
+    {
+      "path": "results/artemisia/hitrate01/RUN_NOTES.md",
+      "bytes": 6975,
+      "sha256": "275e61ba06de086a345a6e156b01f036ac7a80c54309e512186033c41d5419f8"
+    },
+    {
+      "path": "results/artemisia/hitrate01/comparison.csv",
+      "bytes": 5293,
+      "sha256": "677c1cb4fbceb7ec75c2bfb739718b8f963cf1841940e9c963cdbde0379858e9"
+    },
+    {
+      "path": "results/artemisia/hitrate01/statistics.csv",
+      "bytes": 12616,
+      "sha256": "ccec6d8c7471e54f790e7842b05b7fda742694b5da991e9cc5d762c6cc2fcf49"
+    },
+    {
+      "path": "results/artemisia/hitrate01/validation.json",
+      "bytes": 854,
+      "sha256": "cf77e5bfdc57296f5197c3c5039fcb5d0d15b32ff79c186ee31f98827f0bcd0e"
+    },
+    {
+      "path": "results/artemisia/hitrate01/analysis_source/analyze.py",
+      "bytes": 22008,
+      "sha256": "c83bb4fe25299d8f3e31208560917bf2c46fe1482d6669b5b9a3981ff3d86598"
+    },
+    {
+      "path": "results/artemisia/hitrate01/analysis_source/estimator.py",
+      "bytes": 3517,
+      "sha256": "6275156517966e32976cfb6533790f9a2a25b5b5f8e630ce5a1e533cc70a89ae"
+    },
+    {
+      "path": "results/artemisia/hitrate01/analysis_source/sha256.json",
+      "bytes": 173,
+      "sha256": "88d60023a34f60f9cc23971b119084e1af98cfc0ffc19e0cc3a6070ef537a816"
+    },
+    {
+      "path": "results/artemisia/hitrate01/figures/calibration.pdf",
+      "bytes": 17463,
+      "sha256": "f07ef5b76bcaaf479649e5a363ad40725b733a77f92d24aa40552cbc094281e3"
+    },
+    {
+      "path": "results/artemisia/hitrate01/figures/calibration.png",
+      "bytes": 71203,
+      "sha256": "36f524732aee0561031dcaeebb9643f8dea36d2d37c445767ab137ef6504ba40"
+    },
+    {
+      "path": "results/artemisia/hitrate01/figures/hit_rate_comparison.pdf",
+      "bytes": 21055,
+      "sha256": "cf86fe24d178de4312900707503df6169d209af5ac137c1e4104596c7448ab43"
+    },
+    {
+      "path": "results/artemisia/hitrate01/figures/hit_rate_comparison.png",
+      "bytes": 105697,
+      "sha256": "7c5596b5568eadf14bd4f7d1fced56e46e36aba0b51f7af11e13726147ec9a67"
+    },
+    {
+      "path": "results/artemisia/hitrate01/figures/methodology.pdf",
+      "bytes": 18805,
+      "sha256": "7bd218ab47d1a99e2ff51d9663bba9508ca5ae51a2b8f803c1ec9618c9ecad83"
+    },
+    {
+      "path": "results/artemisia/hitrate01/figures/methodology.png",
+      "bytes": 141505,
+      "sha256": "8e006f7b4b3ce02386a213fe75a79fe60207c73c90b8e94f91390b7bd5ef40dc"
+    },
+    {
+      "path": "results/artemisia/hitrate01/figures/validation_boxplots.pdf",
+      "bytes": 16353,
+      "sha256": "d2084a79923b5913eb164ff7fbed88e9015cf6ccbd2dfe476c5203e454e128f6"
+    },
+    {
+      "path": "results/artemisia/hitrate01/figures/validation_boxplots.png",
+      "bytes": 68505,
+      "sha256": "ae0bdc5474b305c85c66ad110730c892a91e6c30b29b09bad477d84bc8e3962d"
+    },
+    {
+      "path": "configs/artemisia.json",
+      "bytes": 1630,
+      "sha256": "0630a42e3b3164ece8f8beb762b8296305d0192f4fa625b71510217d903fc74b"
+    },
+    {
+      "path": "src/hit_rate.c",
+      "bytes": 6012,
+      "sha256": "dbd405aa7132d1862ff42e55ca881612753fe5d63f92fe2b3370d3d7699965d2"
+    },
+    {
+      "path": "src/kernel.h",
+      "bytes": 3208,
+      "sha256": "d4868149a28b7241fabf449cb8c48b45be5fd3af2b9493ece781d56734640036"
+    },
+    {
+      "path": "src/pmu.h",
+      "bytes": 1922,
+      "sha256": "d52dd7a33e279e473386630e04c566c89074afbd2422226a53906bde8196bb44"
+    },
+    {
+      "path": "scripts/estimator.py",
+      "bytes": 3517,
+      "sha256": "6275156517966e32976cfb6533790f9a2a25b5b5f8e630ce5a1e533cc70a89ae"
+    }
+  ]
+}

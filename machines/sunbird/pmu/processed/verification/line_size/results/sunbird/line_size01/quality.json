@@ -1,0 +1,135 @@
+{
+  "preflight_busy_percent": {
+    "8": 0.0,
+    "32": 0.0
+  },
+  "max_sibling_busy_percent": 0.0,
+  "total_involuntary_switches": 64,
+  "total_minor_faults": 3,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "random_s64_a16__l1_l2": 1.0049864949096199,
+    "random_s64_a16__l3_loads": 1.003954132068011,
+    "random_s96_a0__l1_l2": 1.0032408345148875,
+    "random_s96_a0__l3_loads": 1.003835499680375,
+    "random_s64_a0__l1_l2": 1.0038297872340425,
+    "random_s64_a0__l3_loads": 1.0025806451612904,
+    "random_s56_a16__l1_l2": 1.0034246575342465,
+    "random_s56_a16__l3_loads": 1.0025641025641026,
+    "fully_random_s64__l1_l2": 1.0018619084561675,
+    "fully_random_s64__l3_loads": 1.0047964186740568,
+    "sequential_s72__l1_l2": 1.0012367054167697,
+    "sequential_s72__l3_loads": 1.00146484375,
+    "sequential_s64__l1_l2": 1.0012376237623761,
+    "sequential_s64__l3_loads": 1.0005045408678104,
+    "random_s72_a0__l1_l2": 1.003185347401951,
+    "random_s72_a0__l3_loads": 1.0028771064529387,
+    "random_s56_a0__l1_l2": 1.0046136101499423,
+    "random_s56_a0__l3_loads": 1.0030197444831592,
+    "random_s32_a0__l1_l2": 1.0041256743890827,
+    "random_s32_a0__l3_loads": 1.003650745360511,
+    "random_s72_a16__l1_l2": 1.0028830313014827,
+    "random_s72_a16__l3_loads": 1.0022779043280183,
+    "sequential_s56__l1_l2": 1.001079525008996,
+    "sequential_s56__l3_loads": 1.000718132854578
+  },
+  "huge_kib": {
+    "random_s64_a16__l1_l2": [
+      0,
+      0
+    ],
+    "random_s64_a16__l3_loads": [
+      0,
+      0
+    ],
+    "random_s96_a0__l1_l2": [
+      0,
+      0
+    ],
+    "random_s96_a0__l3_loads": [
+      0,
+      0
+    ],
+    "random_s64_a0__l1_l2": [
+      0,
+      0
+    ],
+    "random_s64_a0__l3_loads": [
+      0,
+      0
+    ],
+    "random_s56_a16__l1_l2": [
+      0,
+      0
+    ],
+    "random_s56_a16__l3_loads": [
+      0,
+      0
+    ],
+    "fully_random_s64__l1_l2": [
+      0,
+      0
+    ],
+    "fully_random_s64__l3_loads": [
+      0,
+      0
+    ],
+    "sequential_s72__l1_l2": [
+      0,
+      0
+    ],
+    "sequential_s72__l3_loads": [
+      0,
+      0
+    ],
+    "sequential_s64__l1_l2": [
+      0,
+      0
+    ],
+    "sequential_s64__l3_loads": [
+      0,
+      0
+    ],
+    "random_s72_a0__l1_l2": [
+      0,
+      0
+    ],
+    "random_s72_a0__l3_loads": [
+      0,
+      0
+    ],
+    "random_s56_a0__l1_l2": [
+      0,
+      0
+    ],
+    "random_s56_a0__l3_loads": [
+      0,
+      0
+    ],
+    "random_s32_a0__l1_l2": [
+      0,
+      0
+    ],
+    "random_s32_a0__l3_loads": [
+      0,
+      0
+    ],
+    "random_s72_a16__l1_l2": [
+      0,
+      0
+    ],
+    "random_s72_a16__l3_loads": [
+      0,
+      0
+    ],
+    "sequential_s56__l1_l2": [
+      0,
+      0
+    ],
+    "sequential_s56__l3_loads": [
+      0,
+      0
+    ]
+  },
+  "caveat": "Frozen Sunbird Phase-I manifest reports CPU 4/node 0. CPU 4 was observed 100% busy at preparation; use idle CPU 32/node 0, a different physical core on the same socket. Actual CPU 32 SMT sibling is CPU 8. PMU loop totals include helper loads."
+}
