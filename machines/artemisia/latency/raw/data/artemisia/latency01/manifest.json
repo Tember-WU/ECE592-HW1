@@ -1,0 +1,998 @@
+{
+  "machine": "artemisia",
+  "experiment": "latency",
+  "run_id": "latency01",
+  "phase": "timing-only",
+  "started_utc": "2026-09-10T20:10:04.205037+00:00",
+  "status": "complete",
+  "command": [
+    "scripts/run_latency.py",
+    "--machine",
+    "artemisia",
+    "--run-id",
+    "latency01"
+  ],
+  "jobs": [
+    {
+      "name": "l1_miss__alternate",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "1048576",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l1_miss__alternate.u64"
+      ],
+      "raw_sha256": "45fe0f954a376567cdcb4f80c7a3d66e395daf15cff6848cf8eec267def3876f"
+    },
+    {
+      "name": "l2_miss__repeat",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l2_miss__repeat.u64"
+      ],
+      "raw_sha256": "13ad9764c2deee287997632132fe6d6c7fd769fa0c7cf05c797d045db39794b3"
+    },
+    {
+      "name": "calibration__l1_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__l1_independent.u64"
+      ],
+      "raw_sha256": "249ddf6752f2aed49f0fb07b18938c55f39a84b5772c640854bf2df7a61c3a24"
+    },
+    {
+      "name": "calibration__l1_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__l1_sequential.u64"
+      ],
+      "raw_sha256": "ace9d53d8abe23dcd37f6785f04ed15a1d8ab5fc701481b0f28c35b64f0cf45b"
+    },
+    {
+      "name": "l1_hit__alternate",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "16384",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l1_hit__alternate.u64"
+      ],
+      "raw_sha256": "b2c2140740f8cf001a1be6cae36322b3c2ffd42c0a85c51831bdf273782d7681"
+    },
+    {
+      "name": "calibration__timer",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "empty",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "empty",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__timer.u64"
+      ],
+      "raw_sha256": "5b9e05097376f3b755e46f055380c8529c0af4fe200df2b9d2e163d2e819f3b6"
+    },
+    {
+      "name": "calibration__memory_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__memory_sequential.u64"
+      ],
+      "raw_sha256": "55319e6c0c1d96ceeecd81ad5c93cc24d973735502860c0ef45208a1b4141d9a"
+    },
+    {
+      "name": "calibration__l1_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__l1_long.u64"
+      ],
+      "raw_sha256": "9ac74775af6bb0e5e1d21fda2b7349e4c988c139b430e96f511d48fc148e419f"
+    },
+    {
+      "name": "calibration__l2_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 524288
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__l2_long.u64"
+      ],
+      "raw_sha256": "05de2428f69bb0b6f6cb8fdb9a477fee2b08e879622097e298e7d61b67702822"
+    },
+    {
+      "name": "calibration__llc_long",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 1024,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "chase",
+        "1000000",
+        "1024",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__llc_long.u64"
+      ],
+      "raw_sha256": "5aade654f74e0f654fb976f67c401cc05a24923cff961665116e93ea7ccd4ff9"
+    },
+    {
+      "name": "llc_hit__alternate",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 16777216
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "16777216",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/llc_hit__alternate.u64"
+      ],
+      "raw_sha256": "ccecdb2ad91b5b33d2a96a1659bf5bb8837c9eab410542c73bd3e4e278e0c4b7"
+    },
+    {
+      "name": "llc_miss__alternate",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 536870912
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "536870912",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/llc_miss__alternate.u64"
+      ],
+      "raw_sha256": "10faac66f69a11b73c40bcca69e5c414b7f1597dd2c31f3f50eab3d784012d20"
+    },
+    {
+      "name": "llc_hit__repeat",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/llc_hit__repeat.u64"
+      ],
+      "raw_sha256": "e3492b8899eb5f1ef4fc910869b65744b32e294258e6822da87d6049a536292f"
+    },
+    {
+      "name": "l2_miss__alternate",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 16777216
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "16777216",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l2_miss__alternate.u64"
+      ],
+      "raw_sha256": "2f62749d8926deaff6575882ff5208a2e319caa91bac08e7b797933dafe72736"
+    },
+    {
+      "name": "l2_hit__alternate",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "1048576",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l2_hit__alternate.u64"
+      ],
+      "raw_sha256": "c8738a5e083046b5a3826a19a5777b28f9602f96318718169eab9aec23f993cb"
+    },
+    {
+      "name": "l2_hit__repeat",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 524288
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l2_hit__repeat.u64"
+      ],
+      "raw_sha256": "0ec5e36f7562ee61a1ca8a51a1ed08bcd2aebaba8fac0aa657c1fd1a26ec252d"
+    },
+    {
+      "name": "l1_hit__primary",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l1_hit__primary.u64"
+      ],
+      "raw_sha256": "2ccf0bdf47425b0a035a5568ea50fd56ab39d5234b0c0b5086679ca8184f150f"
+    },
+    {
+      "name": "calibration__memory_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__memory_independent.u64"
+      ],
+      "raw_sha256": "cdfd3074de548fd53ecb02cd1cb486129fa6bf3d69a8d076a33cdd9d718e7c95"
+    },
+    {
+      "name": "l2_hit__primary",
+      "group": "l2_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 524288
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l2_hit__primary.u64"
+      ],
+      "raw_sha256": "8651220fe7e3f30c2e3b5a83affcd2409aae33046ad33a1a4396cda8a2ce4183"
+    },
+    {
+      "name": "calibration__llc_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__llc_sequential.u64"
+      ],
+      "raw_sha256": "cc525427658588f49f05fcfb5ed8ae943fddb823d6dfe4624db2e071a9213fec"
+    },
+    {
+      "name": "l1_miss__repeat",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 524288
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l1_miss__repeat.u64"
+      ],
+      "raw_sha256": "3969445a7d732e116ab255ae03344b7bfc343c170cbf49cf8e1d8ead4bac929a"
+    },
+    {
+      "name": "llc_miss__repeat",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/llc_miss__repeat.u64"
+      ],
+      "raw_sha256": "30c1ea96ab1167fc2b95dc528b9745462e2bac9c6eb29edc046c64fca097db56"
+    },
+    {
+      "name": "calibration__l2_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 524288
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__l2_independent.u64"
+      ],
+      "raw_sha256": "1234e1ed097e9e46754caf132688290370094d7f5bd79c6a0d477768f8b276ed"
+    },
+    {
+      "name": "calibration__l2_sequential",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "sequential",
+        "bytes": 524288
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "sequential",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__l2_sequential.u64"
+      ],
+      "raw_sha256": "7bce613d77cce6653aec465f00ff82bac060f9c190ccab91f79a621dbb94c2d5"
+    },
+    {
+      "name": "llc_miss__primary",
+      "group": "llc_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "268435456",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/llc_miss__primary.u64"
+      ],
+      "raw_sha256": "01c3825cf786c80900593925dd02f318ec032c9826f3ca0a8daefefc28fdaade"
+    },
+    {
+      "name": "l2_miss__primary",
+      "group": "l2_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l2_miss__primary.u64"
+      ],
+      "raw_sha256": "c4fe4b2bf254edbce65facb1fcfe3f0cfcc8db3375b6a9b1112dd80fa70715ba"
+    },
+    {
+      "name": "llc_hit__primary",
+      "group": "llc_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/llc_hit__primary.u64"
+      ],
+      "raw_sha256": "20f4c23b20ce4fc19a05a93c67600890b6f11b0a3c5e7df3c12ce3007e1957f7"
+    },
+    {
+      "name": "l1_hit__repeat",
+      "group": "l1_hit",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59222,
+        "pages": "huge",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8192",
+        "64",
+        "chase",
+        "1000000",
+        "256",
+        "59222",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l1_hit__repeat.u64"
+      ],
+      "raw_sha256": "5a94eb6411b2263525ceb725ebe5677ab1a5c9ab1e8b80dc2d94a92741cf2992"
+    },
+    {
+      "name": "l1_miss__primary",
+      "group": "l1_miss",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "paired",
+        "bytes": 524288
+      },
+      "columns": [
+        "first",
+        "reread"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "524288",
+        "64",
+        "paired",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/l1_miss__primary.u64"
+      ],
+      "raw_sha256": "13827a26b12dc8bb69903a341c298f4e38dad1de1de1d277ed5349eda44e1b4a"
+    },
+    {
+      "name": "calibration__llc_independent",
+      "group": "calibration",
+      "parameters": {
+        "samples": 1000000,
+        "batch": 256,
+        "spacing": 64,
+        "seed": 59221,
+        "pages": "huge",
+        "mode": "independent",
+        "bytes": 8388608
+      },
+      "columns": [
+        "first"
+      ],
+      "status": "complete",
+      "command": [
+        "numactl",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/latency_bench.bin",
+        "8388608",
+        "64",
+        "independent",
+        "1000000",
+        "256",
+        "59221",
+        "32",
+        "huge",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/timing-only/latency/data/artemisia/latency01/raw/calibration__llc_independent.u64"
+      ],
+      "raw_sha256": "424ada583b072ed2b08df86632b95fded16b6e2b4e959efd101d2c8b9aa0abb5"
+    }
+  ],
+  "source_snapshot_hashes": {
+    "Makefile": "580dba2b0895ba4a7e6e4c66f619c0ca4c76308834468f4c7ca3752da0b7ca49",
+    "requirements.txt": "14837165ff167dbb618c482f7f53181b3411d41e27533a7ca33582ee9e03ab5e",
+    "README.md": "55aeafbcc3310d5aeca289876d2879eb9bb4189dd8e19e2f2089d6038622d3ff",
+    "src/timing.h": "d113914931cdb805a20248de3c3b11455268f92e11f950abcc72835b71681093",
+    "src/latency_bench.c": "f7d6dd96772fe7b0ddc9ff18ba6f4e67150128ff4a4d9bbc71bb03940d8ff8d4",
+    "scripts/common.py": "bacb509745fc0a41c8c00d5cb946e279ceb8887c465c5d263702452942908e86",
+    "scripts/run_latency.py": "36882314f22a52d2c29ae7afaf8e9654cb3ded6c968311a622ce4ea6808681ba",
+    "scripts/analyze_latency.py": "743ad4007ded761b7b5b4e382f3a6f493fb88f4056d653672f13e7790bed8704"
+  },
+  "environment_sha256": "ba98046fb22dd3aacc781b2526b8b09223b1555381788f113c9e9b111faddc3f",
+  "finished_utc": "2026-09-10T20:15:06.517681+00:00"
+}

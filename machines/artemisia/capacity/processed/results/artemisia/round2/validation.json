@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "validation_scope": "Data integrity, source/binary provenance, CPU/NUMA binding and configured page backing; this does not certify absence of interference.",
+  "errors": [],
+  "quality_caveats": [
+    "Substantial involuntary context switching: 115454 total, up to 16359 per point.",
+    "LLC timing varies with layout, run, and time; no unique physical LLC capacity inferred."
+  ],
+  "run_id": "round2",
+  "machine": "artemisia",
+  "checked_at_utc": "2026-09-10T15:39:19.562036+00:00",
+  "collection_status": "complete",
+  "expected_configurations": 57,
+  "complete_configurations": 57,
+  "total_timed_batches": 57000000,
+  "raw_checksums_and_statistics": "All 57 raw files verified and statistics recomputed by analyze_capacity.py; see provenance.json",
+  "raw_bytes": 456000000,
+  "raw_gzip_bytes": 90435636,
+  "started_utc": "2026-09-10T15:28:44.589131+00:00",
+  "finished_utc": "2026-09-10T15:36:47.021201+00:00",
+  "wall_seconds": 482.43207,
+  "cpu": 32,
+  "numa_node": 1,
+  "smt_sibling": 88,
+  "configured_page_counts": {
+    "huge": 54,
+    "base": 3
+  },
+  "smt_busy_percent_range": [
+    0.0,
+    0.0
+  ],
+  "prelaunch_cpu32_busy_percent_samples": [
+    8.08,
+    9.0
+  ],
+  "all_mappings_local_and_matching_page_policy": true,
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "minimum": 0,
+      "maximum": 1,
+      "total": 2
+    },
+    "major_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "voluntary_switches": {
+      "minimum": 0,
+      "maximum": 1,
+      "total": 2
+    },
+    "involuntary_switches": {
+      "minimum": 0,
+      "maximum": 16359,
+      "total": 115454
+    }
+  },
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+  "binary_sha256": "78e92b04a430701b1deafccf41103498e021790191b7caa27f8d85e18ef2b8b5"
+}

@@ -1,0 +1,51 @@
+{
+  "machine": "artemisia",
+  "source_runs": [
+    "round1",
+    "round2"
+  ],
+  "scope": "Timing-only cache levels and capacity; post-round-2 interpretation, not a final specification validation",
+  "interpreted_at_utc": "2026-09-10T15:42:41.852372+00:00",
+  "measurable_data_cache_levels": 3,
+  "capacity_estimates": [
+    {
+      "level": "L1D",
+      "approximate_bytes": 49152,
+      "sampled_transition_neighborhood_bytes": [
+        45056,
+        53248
+      ],
+      "evidence": "64 B random: 44 KiB 5.2031; 48 KiB repeat medians 5.7812-5.8828; 52 KiB 15.9922 TSC ticks/load."
+    },
+    {
+      "level": "L2",
+      "approximate_bytes": 2097152,
+      "sampled_onset_interval_bytes": [
+        2097152,
+        2359296
+      ],
+      "evidence": "64 B random: 2 MiB repeat medians 16.4141-16.4375; 2.25 MiB 34.0312; 4 MiB about 62.8-62.9 TSC ticks/load."
+    },
+    {
+      "level": "LLC/L3",
+      "approximate_bytes": null,
+      "nominal_physical_capacity_bytes": null,
+      "observed_effective_transition_region_bytes": [
+        33554432,
+        67108864
+      ],
+      "interpretation": "Broad, layout- and run-dependent effective transition under shared-machine interference. Not a bound on nominal physical capacity."
+    }
+  ],
+  "timer_unit": "TSC ticks / dependent load",
+  "cpu": 32,
+  "numa_node": 1,
+  "complete_configurations": 96,
+  "total_timed_batches": 96000000,
+  "caveats": [
+    "Round 2 contains 115454 involuntary context switches, up to 16359 in one point; all samples retained.",
+    "LLC repeat medians and temporal behavior vary; page/layout controls do not isolate a unique cause.",
+    "Intervals are empirical sampling neighborhoods, not statistical confidence intervals or vendor specifications."
+  ],
+  "third_round": "Optional focused L1/L2 refinement or confirmation in a quieter interval. No further LLC precision search required by this run plan."
+}

@@ -1,0 +1,467 @@
+{
+  "machine": "artemisia",
+  "hostname": "artemisia",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 1,
+  "capacity": {
+    "defaults": {
+      "samples": 1000000,
+      "batch": 256,
+      "spacing": 64,
+      "seed": 59201,
+      "pages": "huge",
+      "mode": "random"
+    },
+    "sweeps": {
+      "round2": {
+        "order_seed": 594,
+        "points": [
+          {
+            "bytes": 32768,
+            "seed": 59202
+          },
+          {
+            "bytes": 36864,
+            "seed": 59202
+          },
+          {
+            "bytes": 40960,
+            "seed": 59202
+          },
+          {
+            "bytes": 45056,
+            "seed": 59202
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202
+          },
+          {
+            "bytes": 53248,
+            "seed": 59202
+          },
+          {
+            "bytes": 57344,
+            "seed": 59202
+          },
+          {
+            "bytes": 61440,
+            "seed": 59202
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202
+          },
+          {
+            "bytes": 32768,
+            "seed": 59203
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 49152,
+            "seed": 59203
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 49152,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 65536,
+            "seed": 59203
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 65536,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 32768,
+            "seed": 59202,
+            "batch": 1024
+          },
+          {
+            "bytes": 2097152,
+            "seed": 59202
+          },
+          {
+            "bytes": 2359296,
+            "seed": 59202
+          },
+          {
+            "bytes": 2621440,
+            "seed": 59202
+          },
+          {
+            "bytes": 2883584,
+            "seed": 59202
+          },
+          {
+            "bytes": 3145728,
+            "seed": 59202
+          },
+          {
+            "bytes": 3407872,
+            "seed": 59202
+          },
+          {
+            "bytes": 3670016,
+            "seed": 59202
+          },
+          {
+            "bytes": 3932160,
+            "seed": 59202
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202
+          },
+          {
+            "bytes": 2097152,
+            "seed": 59203
+          },
+          {
+            "bytes": 2097152,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 2097152,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 3145728,
+            "seed": 59203
+          },
+          {
+            "bytes": 3145728,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 3145728,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59203
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 4194304,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 2097152,
+            "seed": 59202,
+            "batch": 1024
+          },
+          {
+            "bytes": 33554432,
+            "seed": 59202
+          },
+          {
+            "bytes": 41943040,
+            "seed": 59202
+          },
+          {
+            "bytes": 50331648,
+            "seed": 59202
+          },
+          {
+            "bytes": 58720256,
+            "seed": 59202
+          },
+          {
+            "bytes": 67108864,
+            "seed": 59202
+          },
+          {
+            "bytes": 33554432,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 41943040,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 50331648,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 58720256,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 67108864,
+            "seed": 59202,
+            "spacing": 8
+          },
+          {
+            "bytes": 33554432,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 33554432,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 33554432,
+            "seed": 59202,
+            "pages": "base"
+          },
+          {
+            "bytes": 50331648,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 50331648,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 50331648,
+            "seed": 59202,
+            "pages": "base"
+          },
+          {
+            "bytes": 67108864,
+            "seed": 59203,
+            "spacing": 8
+          },
+          {
+            "bytes": 67108864,
+            "seed": 59202,
+            "mode": "sequential"
+          },
+          {
+            "bytes": 67108864,
+            "seed": 59202,
+            "pages": "base"
+          }
+        ]
+      }
+    }
+  },
+  "planning": {
+    "round": 2,
+    "intervals_bytes": {
+      "l1": [
+        32768,
+        65536
+      ],
+      "l2": [
+        2097152,
+        4194304
+      ],
+      "llc": [
+        33554432,
+        67108864
+      ]
+    },
+    "extension_bytes": [],
+    "interpretation": "Intervals select measurements, not final capacity estimates.",
+    "created_utc": "2026-09-10T15:28:04.257087+00:00",
+    "note": "Selected from round1 random-chain observations: 32 to 64 KiB rises from 5.1875 to 16.1172 TSC ticks/load; 2 to 4 MiB rises from 16.4141 to 62.9141; 32 to 64 MiB rises from 62.9297 to 101.0469. LLC is a bounded effective-transition check, not a search for exact physical capacity.",
+    "source_runs": [
+      {
+        "run_id": "round1",
+        "config_sha256": "8669425a42224efaa67be60fb26415ed78ef708cbdae3487f65cd75cecb33078",
+        "manifest_sha256": "30a1e864389353026a93e04a942b1624f3a9d9281dc3ed6150943ff00e519d9f"
+      }
+    ],
+    "planner_sha256": "3723f74a3d97063c8af6a9311c290de97807680d4d817f4b898e7f583c67339a",
+    "evidence": [
+      {
+        "record_id": "round1/coarse_w1048576_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "017075e476c26dfba77948853e84b1aab599c2463a0bba62af2228a9c9a5da61"
+      },
+      {
+        "record_id": "round1/coarse_w1048576_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "6eff367ac228f9a1fb2595637eb5692002789ba5d5a38feeca9d7bcc540142ef"
+      },
+      {
+        "record_id": "round1/coarse_w131072_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "fa50c199ddcac81705e1e90ae1dd21d803db417b996ebc3bbe5e7f58f7f7818d"
+      },
+      {
+        "record_id": "round1/coarse_w131072_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "3435dba0f0b9c7e198f81c7bc3732a04c647594ff50be147d0415eafb75ee66b"
+      },
+      {
+        "record_id": "round1/coarse_w134217728_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "0352c97653c5e052f8077851344a66dcf87fd9393e026df3dc104f6af775c152"
+      },
+      {
+        "record_id": "round1/coarse_w134217728_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "2fbb1c945ac8b0adc603a57a0cc0c1b096ab3073621a780d2515e1a48ba2bf2b"
+      },
+      {
+        "record_id": "round1/coarse_w16384_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "b65aa3f06af36f50a0309819a69a94840312fed76134039215d4dae4d5914a9e"
+      },
+      {
+        "record_id": "round1/coarse_w16384_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "8cf18f28ca86063e531d464519f6d5d8499153f9b2ed70093dc418e331d7015e"
+      },
+      {
+        "record_id": "round1/coarse_w16777216_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "7d5ff15575273ad507b02ce97f4584bdc9c05444a22fb317c5f6dcd235509236"
+      },
+      {
+        "record_id": "round1/coarse_w16777216_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "6e15830c3c45d07b21c7eac3b7322983d84573a29bfd988e2188771b004289fe"
+      },
+      {
+        "record_id": "round1/coarse_w2048_s64_empty_b256_seed59201_huge_n1000000",
+        "raw_sha256": "93b65391f213586d7211a6f45014605c7836c89bf704d0b2fae40ee5b16aa0eb"
+      },
+      {
+        "record_id": "round1/coarse_w2048_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "c5c74dacd34de31a0208d369afb95d87160f31268080c13a91ba7fab5653226f"
+      },
+      {
+        "record_id": "round1/coarse_w2048_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "3fdec4c574fd00aa8c76cad7393a659c956c23c99d7a8c0d12fbdc150cef7d08"
+      },
+      {
+        "record_id": "round1/coarse_w2097152_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "8a20ca56456588b2d61c80bb28f85e3a1426d938840c375e1b0b203b09fac834"
+      },
+      {
+        "record_id": "round1/coarse_w2097152_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "33369413c6362acc5d07ff0f0d74e8b9ee1655cca79b43c8304cbd86138e5d7f"
+      },
+      {
+        "record_id": "round1/coarse_w262144_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "73055ffb0048dcf926a6fa676b86a0a7035cd19178377662c128e803d87d7472"
+      },
+      {
+        "record_id": "round1/coarse_w262144_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "82b2931fa839a6b1b7c9c885b5a042cd2f35c85115720c84e1bce303b21b147c"
+      },
+      {
+        "record_id": "round1/coarse_w268435456_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "6d37efc39c98a9926b7c8bd3f5dd921328ed1fdadc9caae3f043afb62b438ca6"
+      },
+      {
+        "record_id": "round1/coarse_w268435456_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "715c1d04c5e906ba45fe7398b84c07c1ce6a109969ba3703d5c018dd91cce5dd"
+      },
+      {
+        "record_id": "round1/coarse_w32768_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "aa0a092ce95236a15a79ddac13dd24249f178a1b6341a9e40dfd6f7a6bcd9572"
+      },
+      {
+        "record_id": "round1/coarse_w32768_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "f0a2ba2eb95b184cf3f2d8f2b15c9debe8a1d7355faca1075aaf05edc0763436"
+      },
+      {
+        "record_id": "round1/coarse_w33554432_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "aa252b79cff20ce67631d27008eda49c263962011840881927c06f7b040003ff"
+      },
+      {
+        "record_id": "round1/coarse_w33554432_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "43808b67ee6720be2e38ee5e82562544b4ab80596e8815cb7e05df06adb910ac"
+      },
+      {
+        "record_id": "round1/coarse_w4096_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "1481ee9344b0389500825f3a4dbbd36606e79c096db3c536fc1bde93f16064c6"
+      },
+      {
+        "record_id": "round1/coarse_w4096_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "3ed1efe325ce7fef04ecfa8d9fde33d3606aff64f8146bc1946b6a2fbb5e31f5"
+      },
+      {
+        "record_id": "round1/coarse_w4194304_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "9920fb617e87e28db5a2941a6239224c730982d8d8bc1390052ac11149c55591"
+      },
+      {
+        "record_id": "round1/coarse_w4194304_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "0cb302e790913d91fd8619ba3b60ffc7d74702da6e39ebbf76d4c6409c467b5c"
+      },
+      {
+        "record_id": "round1/coarse_w524288_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "4e6f2a3188f01714226b393a776a648fc85940f360728e17c8d63f0375e4a836"
+      },
+      {
+        "record_id": "round1/coarse_w524288_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "e2a42707db6055cddbfdd22098658b4c38f9d6d7e549e4741e63508876eee20d"
+      },
+      {
+        "record_id": "round1/coarse_w536870912_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "1f841fdcbbd3505c9ec8000b8e32c416f64f21796f16b1d25f810f5dd431ffce"
+      },
+      {
+        "record_id": "round1/coarse_w536870912_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "318988119526283ca0cffdc7cb0a68491b5bb211dc0db76b21a3f40c4296e050"
+      },
+      {
+        "record_id": "round1/coarse_w65536_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "df8493ce3bd62d1f13d045800be5549d43af1629c7db73a1e6eb72cce4f8ec99"
+      },
+      {
+        "record_id": "round1/coarse_w65536_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "2009bc15932febbeab8233bf9d9a4ffe229d90375dcb185d596eb3a614972180"
+      },
+      {
+        "record_id": "round1/coarse_w67108864_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "d4e350913755652f984a949593f3d6c926cf2c240151bc74b23ab0d319c2736d"
+      },
+      {
+        "record_id": "round1/coarse_w67108864_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "83cd14bf0463db0836cb0cad920a1cd29a5f59527467d8770ef9dc35355c5ed7"
+      },
+      {
+        "record_id": "round1/coarse_w8192_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "a8a1e3242ed01fe46a29acfd2964d5af3eeeb5c7af32aff2f0d20410695076dd"
+      },
+      {
+        "record_id": "round1/coarse_w8192_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "ae5f379ccb012b9739d06154cf84d5a920487e6dac297deca91ed657e9d0f371"
+      },
+      {
+        "record_id": "round1/coarse_w8388608_s64_random_b256_seed59201_huge_n1000000",
+        "raw_sha256": "09186df4109d368e2738402e253ef161c89027b3eab386a5c9af70c4d1727101"
+      },
+      {
+        "record_id": "round1/coarse_w8388608_s64_sequential_b256_seed59201_huge_n1000000",
+        "raw_sha256": "a0aa044bd8db04de7749bd171edbfde9859da122cf0b78bf9478a1eb427806f5"
+      }
+    ]
+  }
+}

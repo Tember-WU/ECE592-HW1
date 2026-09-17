@@ -1,0 +1,75 @@
+{
+  "preflight_busy_percent": {
+    "32": 0.0,
+    "88": 0.0
+  },
+  "max_sibling_busy_percent": 0.0,
+  "total_involuntary_switches": 8,
+  "total_minor_faults": 0,
+  "total_major_faults": 0,
+  "temporal_max_min": {
+    "L2_candidate_k12": 1.259946949602122,
+    "L1_k14": 1.0009267840593141,
+    "L1_k12": 1.2240000000000002,
+    "L2_candidate_k11": 1.168,
+    "L2_candidate_k18": 1.0173611111111112,
+    "L2_candidate_k17": 1.0223398001175779,
+    "L2_candidate_k16": 1.0018552875695732,
+    "L1_k13": 1.0018552875695732,
+    "L1_k11": 1.2154255319148937,
+    "L1_k10": 1.2367021276595747,
+    "L2_candidate_k13": 1.0009276437847867,
+    "L2_candidate_k14": 1.00278293135436
+  },
+  "huge_kib": {
+    "L2_candidate_k12": [
+      4096,
+      4096
+    ],
+    "L1_k14": [
+      2048,
+      2048
+    ],
+    "L1_k12": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k11": [
+      4096,
+      4096
+    ],
+    "L2_candidate_k18": [
+      4096,
+      4096
+    ],
+    "L2_candidate_k17": [
+      4096,
+      4096
+    ],
+    "L2_candidate_k16": [
+      4096,
+      4096
+    ],
+    "L1_k13": [
+      2048,
+      2048
+    ],
+    "L1_k11": [
+      2048,
+      2048
+    ],
+    "L1_k10": [
+      2048,
+      2048
+    ],
+    "L2_candidate_k13": [
+      4096,
+      4096
+    ],
+    "L2_candidate_k14": [
+      4096,
+      4096
+    ]
+  },
+  "caveat": "Different CPU/socket from the original timing-only run; PMU loop totals include helper loads."
+}

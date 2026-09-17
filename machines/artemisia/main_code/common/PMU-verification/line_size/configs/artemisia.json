@@ -1,0 +1,130 @@
+{
+  "machine": "artemisia",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 1,
+  "samples": 1000000,
+  "warmup": 1000,
+  "events": [
+    {
+      "name": "mem_load_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_inst_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "order_seed": 59284,
+  "experiment": "line_size",
+  "footprint": 262144,
+  "batch": 1024,
+  "group_window": 512,
+  "points": [
+    {
+      "name": "random_s32_a0",
+      "group": "random_alignment0",
+      "stride": 32,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 701
+    },
+    {
+      "name": "random_s56_a0",
+      "group": "random_alignment0",
+      "stride": 56,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s64_a0",
+      "group": "random_alignment0",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s72_a0",
+      "group": "random_alignment0",
+      "stride": 72,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s96_a0",
+      "group": "random_alignment0",
+      "stride": 96,
+      "alignment": 0,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s56_a16",
+      "group": "random_alignment16",
+      "stride": 56,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s64_a16",
+      "group": "random_alignment16",
+      "stride": 64,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "random_s72_a16",
+      "group": "random_alignment16",
+      "stride": 72,
+      "alignment": 16,
+      "mode": "random_lines",
+      "seed": 711
+    },
+    {
+      "name": "sequential_s56",
+      "group": "sequential_control",
+      "stride": 56,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "sequential_s64",
+      "group": "sequential_control",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "sequential_s72",
+      "group": "sequential_control",
+      "stride": 72,
+      "alignment": 0,
+      "mode": "sequential_lines",
+      "seed": 731
+    },
+    {
+      "name": "fully_random_s64",
+      "group": "fully_random_control",
+      "stride": 64,
+      "alignment": 0,
+      "mode": "fully_random",
+      "seed": 721
+    }
+  ],
+  "placement_note": "Original timing-only config used CPU 4/node 0. CPU 4 was busy; use CPU 32/node 1."
+}

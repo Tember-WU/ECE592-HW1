@@ -1,0 +1,53 @@
+{
+  "machine": "artemisia",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 1,
+  "samples": 1000000,
+  "batch": 256,
+  "spacing": 64,
+  "seed": 59202,
+  "pages": "huge",
+  "mode": "random",
+  "order_seed": 59283,
+  "events": [
+    {
+      "name": "mem_load_retired.l1_miss",
+      "config": "0x08d1"
+    },
+    {
+      "name": "mem_load_retired.l2_miss",
+      "config": "0x10d1"
+    },
+    {
+      "name": "mem_load_retired.l3_miss",
+      "config": "0x20d1"
+    },
+    {
+      "name": "mem_inst_retired.all_loads",
+      "config": "0x81d0"
+    }
+  ],
+  "regions": {
+    "L1": [
+      32768,
+      45056,
+      49152,
+      53248,
+      65536
+    ],
+    "L2": [
+      2097152,
+      2359296,
+      3145728,
+      4194304
+    ],
+    "LLC": [
+      33554432,
+      41943040,
+      50331648,
+      58720256,
+      67108864
+    ]
+  }
+}

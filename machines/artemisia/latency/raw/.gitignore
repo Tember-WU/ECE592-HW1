@@ -1,0 +1,5 @@
+/build/
+*.u64
+__pycache__/
+*.pyc
+.venv/

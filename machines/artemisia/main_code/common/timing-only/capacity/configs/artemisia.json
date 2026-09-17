@@ -1,0 +1,8 @@
+{
+  "machine": "artemisia",
+  "hostname": "artemisia",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 1,
+  "capacity": "common/round1.json"
+}

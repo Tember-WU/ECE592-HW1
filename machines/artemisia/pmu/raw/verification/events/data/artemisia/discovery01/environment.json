@@ -1,0 +1,16 @@
+{
+  "hostname": "artemisia.ece.ncsu.edu",
+  "isa": "x86_64",
+  "kernel": "6.17.8-1.el9.elrepo.x86_64",
+  "cpu": 32,
+  "collected_utc": "2026-09-11T15:27:19.678410+00:00",
+  "perf_version": "perf version 5.14.0-687.30.1.el9_8.x86_64",
+  "perf_event_paranoid": "1",
+  "processor_identification": [
+    "vendor_id\t: GenuineIntel",
+    "cpu family\t: 6",
+    "model\t\t: 143",
+    "model name\t: Intel(R) Xeon(R) Gold 5420+",
+    "stepping\t: 8"
+  ]
+}

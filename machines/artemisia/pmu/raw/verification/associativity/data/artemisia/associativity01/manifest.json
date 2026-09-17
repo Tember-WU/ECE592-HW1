@@ -1,0 +1,156 @@
+{
+  "status": "failed",
+  "experiment": "associativity",
+  "machine": "artemisia",
+  "run_id": "associativity01",
+  "started_utc": "2026-09-14T15:02:13.772590+00:00",
+  "jobs": [
+    {
+      "name": "L2_candidate_k12",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 12,
+      "max_k": 16,
+      "status": "failed",
+      "command": [
+        "numactl",
+        "--physcpubind=32",
+        "--membind=1",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/PMU-verification/associativity/build/artemisia/associativity_pmu",
+        "--samples",
+        "1000000",
+        "--batch",
+        "128",
+        "--warmup",
+        "1000",
+        "--num_sets",
+        "2048",
+        "--line_size",
+        "64",
+        "--max_k",
+        "16",
+        "--seed",
+        "701",
+        "--only_ks",
+        "12",
+        "--output",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/PMU-verification/associativity/data/artemisia/associativity01/legacy/L2_candidate_k12.csv",
+        "--ticks-output",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/PMU-verification/associativity/data/artemisia/associativity01/raw/L2_candidate_k12.u64",
+        "--pmu-events",
+        "0x08d1,0x10d1,0x20d1,0x81d0",
+        "--pmu-output",
+        "/home/swu35/ECE592-Project1/ECE592-HW1/PMU-verification/associativity/data/artemisia/associativity01/counts/L2_candidate_k12.json"
+      ],
+      "started_utc": "2026-09-14T15:02:16.095219+00:00",
+      "frequency_before": {
+        "scaling_governor": "performance",
+        "scaling_cur_freq": "2000000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "2000000"
+      },
+      "returncode": 1,
+      "elapsed_seconds": 0.0026144273579120636,
+      "cpu_busy_percent": {
+        "32": 0,
+        "88": 0
+      },
+      "frequency_after": {
+        "scaling_governor": "performance",
+        "scaling_cur_freq": "2000000",
+        "scaling_min_freq": "800000",
+        "scaling_max_freq": "2000000"
+      },
+      "error": "Benchmark failed: /home/swu35/ECE592-Project1/ECE592-HW1/PMU-verification/associativity/data/artemisia/associativity01/logs/L2_candidate_k12.txt"
+    },
+    {
+      "name": "L1_k14",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 14,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k12",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 12,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k11",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 11,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k18",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 18,
+      "max_k": 18
+    },
+    {
+      "name": "L2_candidate_k17",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 17,
+      "max_k": 17
+    },
+    {
+      "name": "L2_candidate_k16",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 16,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k13",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 13,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k11",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 11,
+      "max_k": 16
+    },
+    {
+      "name": "L1_k10",
+      "group": "L1",
+      "num_sets": 64,
+      "k": 10,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k13",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 13,
+      "max_k": 16
+    },
+    {
+      "name": "L2_candidate_k14",
+      "group": "L2_candidate",
+      "num_sets": 2048,
+      "k": 14,
+      "max_k": 16
+    }
+  ],
+  "command": [
+    "common/run_verification.py",
+    "--experiment",
+    "associativity",
+    "--machine",
+    "artemisia",
+    "--run-id",
+    "associativity01"
+  ],
+  "error": "Benchmark failed: /home/swu35/ECE592-Project1/ECE592-HW1/PMU-verification/associativity/data/artemisia/associativity01/logs/L2_candidate_k12.txt",
+  "finished_utc": "2026-09-14T15:02:16.099786+00:00",
+  "elapsed_seconds": 2.3271952141076326
+}

@@ -1,0 +1,202 @@
+{
+  "machine": "artemisia",
+  "hostname": "artemisia",
+  "isa": "x86_64",
+  "cpu": 32,
+  "numa_node": 1,
+  "experiment": "latency",
+  "defaults": {
+    "samples": 1000000,
+    "batch": 256,
+    "spacing": 64,
+    "seed": 59221,
+    "pages": "huge"
+  },
+  "order_seed": 59280,
+  "groups": {
+    "calibration": [
+      {
+        "id": "timer",
+        "mode": "empty",
+        "bytes": 8192
+      },
+      {
+        "id": "l1_long",
+        "mode": "chase",
+        "bytes": 8192,
+        "batch": 1024
+      },
+      {
+        "id": "l1_sequential",
+        "mode": "sequential",
+        "bytes": 8192
+      },
+      {
+        "id": "l1_independent",
+        "mode": "independent",
+        "bytes": 8192
+      },
+      {
+        "id": "l2_long",
+        "mode": "chase",
+        "bytes": 524288,
+        "batch": 1024
+      },
+      {
+        "id": "l2_sequential",
+        "mode": "sequential",
+        "bytes": 524288
+      },
+      {
+        "id": "l2_independent",
+        "mode": "independent",
+        "bytes": 524288
+      },
+      {
+        "id": "llc_long",
+        "mode": "chase",
+        "bytes": 8388608,
+        "batch": 1024
+      },
+      {
+        "id": "llc_sequential",
+        "mode": "sequential",
+        "bytes": 8388608
+      },
+      {
+        "id": "llc_independent",
+        "mode": "independent",
+        "bytes": 8388608
+      },
+      {
+        "id": "memory_sequential",
+        "mode": "sequential",
+        "bytes": 268435456
+      },
+      {
+        "id": "memory_independent",
+        "mode": "independent",
+        "bytes": 268435456
+      }
+    ],
+    "l1_hit": [
+      {
+        "id": "primary",
+        "mode": "chase",
+        "bytes": 8192
+      },
+      {
+        "id": "alternate",
+        "mode": "chase",
+        "bytes": 16384
+      },
+      {
+        "id": "repeat",
+        "mode": "chase",
+        "bytes": 8192,
+        "seed": 59222
+      }
+    ],
+    "l2_hit": [
+      {
+        "id": "primary",
+        "mode": "chase",
+        "bytes": 524288
+      },
+      {
+        "id": "alternate",
+        "mode": "chase",
+        "bytes": 1048576
+      },
+      {
+        "id": "repeat",
+        "mode": "chase",
+        "bytes": 524288,
+        "seed": 59222
+      }
+    ],
+    "llc_hit": [
+      {
+        "id": "primary",
+        "mode": "chase",
+        "bytes": 8388608
+      },
+      {
+        "id": "alternate",
+        "mode": "chase",
+        "bytes": 16777216
+      },
+      {
+        "id": "repeat",
+        "mode": "chase",
+        "bytes": 8388608,
+        "seed": 59222
+      }
+    ],
+    "l1_miss": [
+      {
+        "id": "primary",
+        "mode": "paired",
+        "bytes": 524288
+      },
+      {
+        "id": "alternate",
+        "mode": "paired",
+        "bytes": 1048576
+      },
+      {
+        "id": "repeat",
+        "mode": "paired",
+        "bytes": 524288,
+        "seed": 59222
+      }
+    ],
+    "l2_miss": [
+      {
+        "id": "primary",
+        "mode": "paired",
+        "bytes": 8388608
+      },
+      {
+        "id": "alternate",
+        "mode": "paired",
+        "bytes": 16777216
+      },
+      {
+        "id": "repeat",
+        "mode": "paired",
+        "bytes": 8388608,
+        "seed": 59222
+      }
+    ],
+    "llc_miss": [
+      {
+        "id": "primary",
+        "mode": "paired",
+        "bytes": 268435456
+      },
+      {
+        "id": "alternate",
+        "mode": "paired",
+        "bytes": 536870912
+      },
+      {
+        "id": "repeat",
+        "mode": "paired",
+        "bytes": 268435456,
+        "seed": 59222
+      }
+    ]
+  },
+  "capacity_basis": {
+    "inference_file": "capacity/results/artemisia/combined12/inference.json",
+    "inference_sha256": "2178f46671a9133c913b4c73f1f848c07c96661439f27f6cf6b80f6d7bb6f309",
+    "source_runs": [
+      "round1",
+      "round2"
+    ],
+    "selection": "Resident points inside observed plateaus; paired footprints set full-cycle reuse distance. Intended levels are timing hypotheses, not verified per-access hit classes.",
+    "spacing_note": "64 bytes is an access-layout parameter inherited from capacity, not a measured line size.",
+    "memory_note": "256/512 MiB are observed large-footprint regions. Their first-pass timings need not be pure DRAM latency."
+  }
+}

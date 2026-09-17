@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "errors": [],
+  "run_id": "round1",
+  "machine": "artemisia",
+  "checked_at_utc": "2026-09-10T15:04:16.735827+00:00",
+  "collection_status": "complete",
+  "expected_configurations": 39,
+  "complete_configurations": 39,
+  "total_timed_batches": 39000000,
+  "raw_checksums_and_statistics": "All 39 raw files verified and statistics recomputed by analyze_capacity.py; see provenance.json",
+  "raw_bytes": 312000000,
+  "raw_gzip_bytes": 47283532,
+  "started_utc": "2026-09-10T14:56:11.564043+00:00",
+  "finished_utc": "2026-09-10T15:01:43.586476+00:00",
+  "wall_seconds": 332.022433,
+  "cpu": 32,
+  "numa_node": 1,
+  "smt_sibling": 88,
+  "smt_busy_percent_range": [
+    0.0,
+    0.0
+  ],
+  "all_mappings_fully_huge_and_local": true,
+  "runtime_events": {
+    "measurement_minor_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "major_faults": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "voluntary_switches": {
+      "minimum": 0,
+      "maximum": 0,
+      "total": 0
+    },
+    "involuntary_switches": {
+      "minimum": 0,
+      "maximum": 38,
+      "total": 136
+    }
+  },
+  "source_sha256": "5cf5653625c28888dbf907e2120088cb8145c2248ac49ac26e172d1be4893c6d",
+  "binary_sha256": "78e92b04a430701b1deafccf41103498e021790191b7caa27f8d85e18ef2b8b5"
+}
